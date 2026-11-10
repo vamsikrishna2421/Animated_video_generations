@@ -1,0 +1,1274 @@
+{
+ "id": "ep50v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Your first AI API call",
+ "musicVol": [
+  0.2,
+  0.42
+ ],
+ "title": "₹47 vs ₹8,600 (EP50: your first AI API call)",
+ "handle": "@ai_maastaaru",
+ "label": "EP50",
+ "fps": 30,
+ "musicDrops": [
+  [
+   20,
+   50
+  ],
+  [
+   802,
+   832
+  ],
+  [
+   1329,
+   1353
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   656,
+   1.0
+  ],
+  [
+   656,
+   1514,
+   1.3
+  ],
+  [
+   1514,
+   1929,
+   1.7
+  ],
+  [
+   1514,
+   1929,
+   1.6,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1929,
+ "music": "reel/ep50v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_api",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "suresh",
+      "shot": "suresh",
+      "prop": "oops",
+      "n": 2
+     },
+     {
+      "who": "ai",
+      "shot": "leak",
+      "prop": "leak",
+      "n": 3
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "what",
+      "n": 4
+     },
+     {
+      "who": "ai",
+      "shot": "call",
+      "prop": "call",
+      "n": 5
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "trust",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "₹47 vs ₹8,600",
+     "title": "₹47 vs ₹8,600",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 656,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep50v1/line_01.wav",
+     "from": 10,
+     "frames": 111,
+     "words": [
+      {
+       "w": "₹47?!",
+       "from": 14,
+       "to": 34
+      },
+      {
+       "w": "The",
+       "from": 34,
+       "to": 51
+      },
+      {
+       "w": "bill",
+       "from": 51,
+       "to": 74
+      },
+      {
+       "w": "is",
+       "from": 74,
+       "to": 89
+      },
+      {
+       "w": "₹8,600!",
+       "from": 89,
+       "to": 115
+      }
+     ],
+     "cues": {
+      "1": 44
+     }
+    },
+    {
+     "who": "suresh",
+     "name": "Suresh",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/ep50v1/line_02.wav",
+     "from": 127,
+     "frames": 90,
+     "words": [
+      {
+       "w": "I",
+       "from": 128,
+       "to": 131
+      },
+      {
+       "w": "only",
+       "from": 131,
+       "to": 138
+      },
+      {
+       "w": "posted",
+       "from": 138,
+       "to": 148
+      },
+      {
+       "w": "a",
+       "from": 148,
+       "to": 151
+      },
+      {
+       "w": "photo",
+       "from": 151,
+       "to": 160
+      },
+      {
+       "w": "of",
+       "from": 160,
+       "to": 164
+      },
+      {
+       "w": "my",
+       "from": 164,
+       "to": 168
+      },
+      {
+       "w": "code...",
+       "from": 168,
+       "to": 180
+      },
+      {
+       "w": "in",
+       "from": 180,
+       "to": 193
+      },
+      {
+       "w": "a",
+       "from": 193,
+       "to": 196
+      },
+      {
+       "w": "help",
+       "from": 196,
+       "to": 203
+      },
+      {
+       "w": "group.",
+       "from": 203,
+       "to": 213
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep50v1/line_03.wav",
+     "from": 224,
+     "frames": 116,
+     "words": [
+      {
+       "w": "With",
+       "from": 224,
+       "to": 230
+      },
+      {
+       "w": "our",
+       "from": 230,
+       "to": 236
+      },
+      {
+       "w": "API",
+       "from": 236,
+       "to": 241
+      },
+      {
+       "w": "key",
+       "from": 241,
+       "to": 246
+      },
+      {
+       "w": "in",
+       "from": 246,
+       "to": 254
+      },
+      {
+       "w": "it.",
+       "from": 254,
+       "to": 270
+      },
+      {
+       "w": "Whoever",
+       "from": 270,
+       "to": 281
+      },
+      {
+       "w": "copies",
+       "from": 281,
+       "to": 290
+      },
+      {
+       "w": "it",
+       "from": 290,
+       "to": 300
+      },
+      {
+       "w": "can",
+       "from": 300,
+       "to": 305
+      },
+      {
+       "w": "run",
+       "from": 305,
+       "to": 310
+      },
+      {
+       "w": "AI",
+       "from": 310,
+       "to": 314
+      },
+      {
+       "w": "on",
+       "from": 314,
+       "to": 318
+      },
+      {
+       "w": "your",
+       "from": 318,
+       "to": 325
+      },
+      {
+       "w": "money.",
+       "from": 325,
+       "to": 334
+      }
+     ],
+     "cues": {
+      "1": 270
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep50v1/line_04.wav",
+     "from": 349,
+     "frames": 65,
+     "words": [
+      {
+       "w": "API",
+       "from": 349,
+       "to": 358
+      },
+      {
+       "w": "key?",
+       "from": 358,
+       "to": 368
+      },
+      {
+       "w": "What",
+       "from": 368,
+       "to": 387
+      },
+      {
+       "w": "is",
+       "from": 387,
+       "to": 393
+      },
+      {
+       "w": "all",
+       "from": 393,
+       "to": 401
+      },
+      {
+       "w": "this?",
+       "from": 401,
+       "to": 414
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep50v1/line_05.wav",
+     "from": 420,
+     "frames": 180,
+     "words": [
+      {
+       "w": "Each",
+       "from": 420,
+       "to": 428
+      },
+      {
+       "w": "reply",
+       "from": 428,
+       "to": 438
+      },
+      {
+       "w": "I",
+       "from": 438,
+       "to": 441
+      },
+      {
+       "w": "give",
+       "from": 441,
+       "to": 449
+      },
+      {
+       "w": "is",
+       "from": 449,
+       "to": 454
+      },
+      {
+       "w": "one",
+       "from": 454,
+       "to": 460
+      },
+      {
+       "w": "API",
+       "from": 460,
+       "to": 467
+      },
+      {
+       "w": "call:",
+       "from": 467,
+       "to": 477
+      },
+      {
+       "w": "the",
+       "from": 477,
+       "to": 483
+      },
+      {
+       "w": "laptop",
+       "from": 483,
+       "to": 502
+      },
+      {
+       "w": "sends",
+       "from": 502,
+       "to": 512
+      },
+      {
+       "w": "the",
+       "from": 512,
+       "to": 518
+      },
+      {
+       "w": "message,",
+       "from": 518,
+       "to": 533
+      },
+      {
+       "w": "with",
+       "from": 533,
+       "to": 548
+      },
+      {
+       "w": "the",
+       "from": 548,
+       "to": 554
+      },
+      {
+       "w": "key,",
+       "from": 554,
+       "to": 568
+      },
+      {
+       "w": "to",
+       "from": 568,
+       "to": 573
+      },
+      {
+       "w": "the",
+       "from": 573,
+       "to": 580
+      },
+      {
+       "w": "AI",
+       "from": 580,
+       "to": 585
+      },
+      {
+       "w": "company.",
+       "from": 585,
+       "to": 599
+      }
+     ],
+     "cues": {
+      "1": 477
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep50v1/line_06.wav",
+     "from": 608,
+     "frames": 42,
+     "words": [
+      {
+       "w": "And",
+       "from": 609,
+       "to": 615
+      },
+      {
+       "w": "it",
+       "from": 615,
+       "to": 620
+      },
+      {
+       "w": "just",
+       "from": 620,
+       "to": 627
+      },
+      {
+       "w": "trusts",
+       "from": 627,
+       "to": 637
+      },
+      {
+       "w": "the",
+       "from": 637,
+       "to": 643
+      },
+      {
+       "w": "key?",
+       "from": 643,
+       "to": 650
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_api",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "doors",
+      "prop": "doors",
+      "n": 7
+     },
+     {
+      "who": "suresh",
+      "shot": "suresh",
+      "prop": "ask",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "cost",
+      "prop": "cost",
+      "n": 9
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "pin",
+      "n": 10
+     },
+     {
+      "who": "suresh",
+      "shot": "quiz",
+      "prop": "quiz",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "quiz",
+      "prop": "answer",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "One API call",
+     "title": "One API call",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 656,
+   "frames": 858,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep50v1/line_07.wav",
+     "from": 0,
+     "frames": 228,
+     "words": [
+      {
+       "w": "We",
+       "from": 0,
+       "to": 5
+      },
+      {
+       "w": "locked",
+       "from": 5,
+       "to": 17
+      },
+      {
+       "w": "our",
+       "from": 17,
+       "to": 24
+      },
+      {
+       "w": "own",
+       "from": 24,
+       "to": 30
+      },
+      {
+       "w": "AI,",
+       "from": 30,
+       "to": 37
+      },
+      {
+       "w": "on",
+       "from": 37,
+       "to": 46
+      },
+      {
+       "w": "our",
+       "from": 46,
+       "to": 52
+      },
+      {
+       "w": "own",
+       "from": 52,
+       "to": 59
+      },
+      {
+       "w": "computer.",
+       "from": 59,
+       "to": 84
+      },
+      {
+       "w": "No",
+       "from": 84,
+       "to": 89
+      },
+      {
+       "w": "key:",
+       "from": 89,
+       "to": 97
+      },
+      {
+       "w": "refused.",
+       "from": 97,
+       "to": 120
+      },
+      {
+       "w": "1",
+       "from": 120,
+       "to": 131
+      },
+      {
+       "w": "letter",
+       "from": 131,
+       "to": 143
+      },
+      {
+       "w": "wrong:",
+       "from": 143,
+       "to": 154
+      },
+      {
+       "w": "refused.",
+       "from": 154,
+       "to": 169
+      },
+      {
+       "w": "The",
+       "from": 169,
+       "to": 176
+      },
+      {
+       "w": "right",
+       "from": 176,
+       "to": 194
+      },
+      {
+       "w": "key:",
+       "from": 194,
+       "to": 202
+      },
+      {
+       "w": "it",
+       "from": 202,
+       "to": 212
+      },
+      {
+       "w": "answered.",
+       "from": 212,
+       "to": 228
+      }
+     ],
+     "cues": {
+      "1": 170
+     }
+    },
+    {
+     "who": "suresh",
+     "name": "Suresh",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/ep50v1/line_08.wav",
+     "from": 237,
+     "frames": 42,
+     "words": [
+      {
+       "w": "And",
+       "from": 239,
+       "to": 244
+      },
+      {
+       "w": "each",
+       "from": 244,
+       "to": 251
+      },
+      {
+       "w": "answer",
+       "from": 251,
+       "to": 259
+      },
+      {
+       "w": "costs...?",
+       "from": 259,
+       "to": 276
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep50v1/line_09.wav",
+     "from": 286,
+     "frames": 166,
+     "words": [
+      {
+       "w": "About",
+       "from": 286,
+       "to": 300
+      },
+      {
+       "w": "3",
+       "from": 300,
+       "to": 304
+      },
+      {
+       "w": "paise,",
+       "from": 304,
+       "to": 326
+      },
+      {
+       "w": "at",
+       "from": 326,
+       "to": 331
+      },
+      {
+       "w": "a",
+       "from": 331,
+       "to": 334
+      },
+      {
+       "w": "small",
+       "from": 334,
+       "to": 344
+      },
+      {
+       "w": "model's",
+       "from": 344,
+       "to": 374
+      },
+      {
+       "w": "price.",
+       "from": 374,
+       "to": 386
+      },
+      {
+       "w": "50",
+       "from": 386,
+       "to": 391
+      },
+      {
+       "w": "replies",
+       "from": 391,
+       "to": 412
+      },
+      {
+       "w": "a",
+       "from": 412,
+       "to": 416
+      },
+      {
+       "w": "day:",
+       "from": 416,
+       "to": 424
+      },
+      {
+       "w": "₹47",
+       "from": 424,
+       "to": 430
+      },
+      {
+       "w": "a",
+       "from": 430,
+       "to": 434
+      },
+      {
+       "w": "month.",
+       "from": 434,
+       "to": 445
+      }
+     ],
+     "cues": {
+      "1": 375
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep50v1/line_10.wav",
+     "from": 460,
+     "frames": 60,
+     "words": [
+      {
+       "w": "So",
+       "from": 461,
+       "to": 466
+      },
+      {
+       "w": "this",
+       "from": 466,
+       "to": 480
+      },
+      {
+       "w": "key",
+       "from": 480,
+       "to": 487
+      },
+      {
+       "w": "is",
+       "from": 487,
+       "to": 493
+      },
+      {
+       "w": "my",
+       "from": 493,
+       "to": 498
+      },
+      {
+       "w": "ATM",
+       "from": 498,
+       "to": 505
+      },
+      {
+       "w": "PIN!",
+       "from": 505,
+       "to": 514
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "suresh",
+     "name": "Suresh",
+     "color": "#FCD34D",
+     "sub": null,
+     "audio": "reel/ep50v1/line_11.wav",
+     "from": 528,
+     "frames": 97,
+     "words": [
+      {
+       "w": "Then",
+       "from": 529,
+       "to": 536
+      },
+      {
+       "w": "where",
+       "from": 536,
+       "to": 543
+      },
+      {
+       "w": "do",
+       "from": 543,
+       "to": 547
+      },
+      {
+       "w": "I",
+       "from": 547,
+       "to": 550
+      },
+      {
+       "w": "keep",
+       "from": 550,
+       "to": 572
+      },
+      {
+       "w": "it?",
+       "from": 572,
+       "to": 577
+      },
+      {
+       "w": "In",
+       "from": 577,
+       "to": 581
+      },
+      {
+       "w": "the",
+       "from": 581,
+       "to": 586
+      },
+      {
+       "w": "code?",
+       "from": 586,
+       "to": 607
+      },
+      {
+       "w": "In",
+       "from": 607,
+       "to": 611
+      },
+      {
+       "w": "our",
+       "from": 611,
+       "to": 616
+      },
+      {
+       "w": "group?",
+       "from": 616,
+       "to": 625
+      }
+     ],
+     "cues": {
+      "1": 577
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep50v1/line_12.wav",
+     "from": 697,
+     "frames": 151,
+     "words": [
+      {
+       "w": "C:",
+       "from": 701,
+       "to": 706
+      },
+      {
+       "w": "a",
+       "from": 706,
+       "to": 709
+      },
+      {
+       "w": "locked",
+       "from": 709,
+       "to": 729
+      },
+      {
+       "w": "setting",
+       "from": 729,
+       "to": 741
+      },
+      {
+       "w": "only",
+       "from": 741,
+       "to": 749
+      },
+      {
+       "w": "the",
+       "from": 749,
+       "to": 756
+      },
+      {
+       "w": "app",
+       "from": 756,
+       "to": 762
+      },
+      {
+       "w": "reads.",
+       "from": 762,
+       "to": 786
+      },
+      {
+       "w": "Never",
+       "from": 786,
+       "to": 796
+      },
+      {
+       "w": "in",
+       "from": 796,
+       "to": 801
+      },
+      {
+       "w": "code,",
+       "from": 801,
+       "to": 817
+      },
+      {
+       "w": "a",
+       "from": 817,
+       "to": 821
+      },
+      {
+       "w": "photo",
+       "from": 821,
+       "to": 830
+      },
+      {
+       "w": "or",
+       "from": 830,
+       "to": 835
+      },
+      {
+       "w": "a",
+       "from": 835,
+       "to": 838
+      },
+      {
+       "w": "chat.",
+       "from": 838,
+       "to": 848
+      }
+     ],
+     "cues": {
+      "1": 786
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_api",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "money",
+      "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 15
+     }
+    ],
+    "captionTop": 1500,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "The key is your PIN",
+     "title": "The key is your PIN",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1514,
+   "frames": 415,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep50v1/line_13.wav",
+     "from": 15,
+     "frames": 53,
+     "words": [
+      {
+       "w": "And",
+       "from": 15,
+       "to": 28
+      },
+      {
+       "w": "my",
+       "from": 28,
+       "to": 42
+      },
+      {
+       "w": "₹8,600?",
+       "from": 42,
+       "to": 68
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/ep50v1/line_14.wav",
+     "from": 74,
+     "frames": 167,
+     "words": [
+      {
+       "w": "Ask",
+       "from": 74,
+       "to": 80
+      },
+      {
+       "w": "their",
+       "from": 80,
+       "to": 89
+      },
+      {
+       "w": "support;",
+       "from": 89,
+       "to": 101
+      },
+      {
+       "w": "no",
+       "from": 101,
+       "to": 113
+      },
+      {
+       "w": "promise.",
+       "from": 113,
+       "to": 125
+      },
+      {
+       "w": "Then",
+       "from": 125,
+       "to": 144
+      },
+      {
+       "w": "delete",
+       "from": 144,
+       "to": 154
+      },
+      {
+       "w": "that",
+       "from": 154,
+       "to": 161
+      },
+      {
+       "w": "key,",
+       "from": 161,
+       "to": 175
+      },
+      {
+       "w": "make",
+       "from": 175,
+       "to": 182
+      },
+      {
+       "w": "another,",
+       "from": 182,
+       "to": 201
+      },
+      {
+       "w": "and",
+       "from": 201,
+       "to": 207
+      },
+      {
+       "w": "set",
+       "from": 207,
+       "to": 213
+      },
+      {
+       "w": "a",
+       "from": 213,
+       "to": 215
+      },
+      {
+       "w": "hard",
+       "from": 215,
+       "to": 223
+      },
+      {
+       "w": "spend",
+       "from": 223,
+       "to": 231
+      },
+      {
+       "w": "limit.",
+       "from": 231,
+       "to": 241
+      }
+     ],
+     "cues": {
+      "1": 125
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/ep50v1/line_15.wav",
+     "from": 253,
+     "frames": 117,
+     "words": [
+      {
+       "w": "Key",
+       "from": 255,
+       "to": 260
+      },
+      {
+       "w": "changed!",
+       "from": 260,
+       "to": 273
+      },
+      {
+       "w": "I'll",
+       "from": 273,
+       "to": 280
+      },
+      {
+       "w": "keep",
+       "from": 280,
+       "to": 295
+      },
+      {
+       "w": "it",
+       "from": 295,
+       "to": 299
+      },
+      {
+       "w": "safe...",
+       "from": 299,
+       "to": 310
+      },
+      {
+       "w": "in",
+       "from": 310,
+       "to": 323
+      },
+      {
+       "w": "the",
+       "from": 323,
+       "to": 329
+      },
+      {
+       "w": "family",
+       "from": 329,
+       "to": 339
+      },
+      {
+       "w": "WhatsApp",
+       "from": 339,
+       "to": 351
+      },
+      {
+       "w": "group!",
+       "from": 351,
+       "to": 364
+      }
+     ],
+     "cues": {
+      "1": 310
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,389 @@
+{
+ "id": "ep50te",
+ "title": "₹47 vs ₹8,600 (EP50: your first AI API call) (Telugu audio)",
+ "label": "EP50",
+ "banner": "Your first AI API call",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.2,
+  0.42
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   250,
+   -8,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 1.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_api",
+   "tail": 0.0,
+   "boost": 1.0,
+   "drop_at": [
+    [
+     0,
+     1,
+     0.2
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "suresh",
+      "shot": "suresh",
+      "prop": "oops",
+      "n": 2
+     },
+     {
+      "who": "ai",
+      "shot": "leak",
+      "prop": "leak",
+      "n": 3
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "what",
+      "n": 4
+     },
+     {
+      "who": "ai",
+      "shot": "call",
+      "prop": "call",
+      "n": 5
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "trust",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "₹47 vs ₹8,600",
+     "title": "₹47 vs ₹8,600",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "నలభై ఏడు రూపాయలన్నావ్?! [1] బిల్లు ఎనిమిది వేల ఆరు వందలు!",
+     "show": "You said ₹47?! The bill is ₹8,600!",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "suresh",
+     "file": "02_suresh.wav",
+     "text": "హెల్ప్ గ్రూప్ లో, నా కోడ్ ఫోటో పెట్టా, అంతే...",
+     "show": "I just posted a photo of my code in a help group...",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "03_ai.wav",
+     "text": "అందులో మన కీ ఉంది. [1] అది కాపీ చేసిన ఎవరైనా, మీ డబ్బుతో వాడేయొచ్చు.",
+     "show": "Our key is in it. Anyone who copies it can use your money.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "04_ravi.wav",
+     "text": "ఏ పీ ఐ కీయా? ఇదంతా ఏంటి?",
+     "show": "An API key? What is all this?",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "05_ai.wav",
+     "text": "నేను ఇచ్చే ప్రతి జవాబు, ఒక ఏ పీ ఐ కాల్. [1] ల్యాప్ టాప్, మెసేజ్ తో పాటు కీ ని, చాట్ జీపీటీ లాంటి కంపెనీకి పంపుతుంది.",
+     "show": "Every reply I give is an API call. The laptop sends the message, with the key, to a company like ChatGPT's.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "06_ravi.wav",
+     "text": "అది కీ ని అలా నమ్మేస్తుందా?",
+     "show": "It just trusts the key like that?",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_api",
+   "tail": 0.0,
+   "boost": 1.3,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     0,
+     1,
+     0.2
+    ]
+   ],
+   "drop_pre": [
+    [
+     5,
+     0.0,
+     0.8
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "doors",
+      "prop": "doors",
+      "n": 7
+     },
+     {
+      "who": "suresh",
+      "shot": "suresh",
+      "prop": "ask",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "cost",
+      "prop": "cost",
+      "n": 9
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "pin",
+      "n": 10
+     },
+     {
+      "who": "suresh",
+      "shot": "quiz",
+      "prop": "quiz",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "quiz",
+      "prop": "answer",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "One API call",
+     "title": "One API call",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "07_ai.wav",
+     "text": "మా కంప్యూటర్ లో, మా సొంత చాట్ బాట్ కి తాళం వేశాం. కీ లేకపోతే: నో. ఒక్క అక్షరం తప్పైనా: నో. <pause 0.8> [1] సరైన కీ తో: జవాబు వచ్చింది.",
+     "show": "On our computer, we locked our own chatbot. No key: no. Even 1 letter wrong: no. The right key: it answered.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.12,
+     "gain_db": -1.0,
+     "tts": "మా కంప్యూటర్ లో, మా సొంత చాట్ బాట్ కి తాళం వేశాం. కీ లేకపోతే: నో. ఒక్క అక్షరం తప్పైనా: నో.",
+     "file2": "07b_ai.wav",
+     "tts2": "సరైన కీ తో: జవాబు వచ్చింది.",
+     "pause": 0.8
+    },
+    {
+     "who": "suresh",
+     "file": "08_suresh.wav",
+     "text": "ఒక్కో జవాబుకి ఖర్చు ఎంత?",
+     "show": "How much does each answer cost?",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "09_ai.wav",
+     "text": "ఒక చిన్న మోడల్ ధరకి, దాదాపు మూడు పైసలు. [1] రోజుకి యాభై జవాబులు అంటే, నెలకి నలభై ఏడు రూపాయలు.",
+     "show": "At a small model's price, about 3 paise. 50 replies a day: ₹47 a month.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "10_ravi.wav",
+     "text": "అంటే ఈ కీ, నా ఏటీఎం పిన్ లాంటిది!",
+     "show": "So this key is like my ATM PIN!",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "suresh",
+     "file": "11_suresh.wav",
+     "text": "మరి కీ ఎక్కడ దాచాలి? [1] కోడ్ లోనా? గ్రూప్ లోనా?",
+     "show": "So where should I keep the key? In the code? In the group?",
+     "maxgap": 0.25,
+     "gap": 2.4,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "సి: యాప్ మాత్రమే చూసే, లాక్ సెట్టింగ్ లో. [1] కోడ్ లో, ఫోటోలో, చాట్ లో, ఎప్పుడూ వద్దు.",
+     "show": "C: in a locked setting only the app sees. In code, a photo, a chat: never.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_api",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.5,
+   "boost": 1.6,
+   "lift": 0.8,
+   "rise": 1.45,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "money",
+      "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 15
+     }
+    ],
+    "captionTop": 1500,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "The key is your PIN",
+     "title": "The key is your PIN",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "13_ravi.wav",
+     "text": "మరి నా ఎనిమిది వేల ఆరు వందలు?",
+     "show": "And my ₹8,600?",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "14_ai.wav",
+     "text": "వాళ్ళ సపోర్ట్ ని అడగండి, గ్యారంటీ లేదు. [1] ఆ కీ డిలీట్ చేసి, వేరే కీ తీసుకోండి. ఖర్చుకి గట్టి లిమిట్ పెట్టండి.",
+     "show": "Ask their support, no guarantee. Delete that key, get another one. Put a firm limit on spending.",
+     "maxgap": 0.25,
+     "gap": 0.4,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "15_ravi.wav",
+     "text": "కీ మార్చేశా! జాగ్రత్తగా దాస్తా... [1] ఫ్యామిలీ వాట్సాప్ గ్రూప్ లో!",
+     "show": "Key changed! I'll keep it safe... in the family WhatsApp group!",
+     "maxgap": 0.25,
+     "gap": 0.0,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

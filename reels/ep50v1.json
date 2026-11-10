@@ -1,0 +1,381 @@
+{
+ "id": "ep50v1",
+ "title": "₹47 vs ₹8,600 (EP50: your first AI API call)",
+ "label": "EP50",
+ "banner": "Your first AI API call",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.2,
+  0.42
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.5,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   250,
+   -8,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.5,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_api",
+   "tail": 0.0,
+   "boost": 1.0,
+   "drop_at": [
+    [
+     0,
+     1,
+     0.2
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "suresh",
+      "shot": "suresh",
+      "prop": "oops",
+      "n": 2
+     },
+     {
+      "who": "ai",
+      "shot": "leak",
+      "prop": "leak",
+      "n": 3
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "what",
+      "n": 4
+     },
+     {
+      "who": "ai",
+      "shot": "call",
+      "prop": "call",
+      "n": 5
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "trust",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "₹47 vs ₹8,600",
+     "title": "₹47 vs ₹8,600",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "Forty-seven rupees?! [1] The bill is eight thousand six hundred!",
+     "show": "₹47?! The bill is ₹8,600!",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "suresh",
+     "file": "02_suresh.wav",
+     "text": "I only posted a photo of my code... in a help group.",
+     "show": "I only posted a photo of my code... in a help group.",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "03_ai.wav",
+     "text": "With our API key in it. [1] Whoever copies it can run AI on your money.",
+     "show": "With our API key in it. Whoever copies it can run AI on your money.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "04_ravi.wav",
+     "text": "API key? What is all this?",
+     "show": "API key? What is all this?",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "05_ai.wav",
+     "text": "Each reply I give is one API call: [1] the laptop sends the message, with the key, to the AI company.",
+     "show": "Each reply I give is one API call: the laptop sends the message, with the key, to the AI company.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "06_ravi.wav",
+     "text": "And it just trusts the key?",
+     "show": "And it just trusts the key?",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_api",
+   "tail": 0.0,
+   "boost": 1.3,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     0,
+     1,
+     0.2
+    ]
+   ],
+   "drop_pre": [
+    [
+     5,
+     0.0,
+     0.8
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "shot": "doors",
+      "prop": "doors",
+      "n": 7
+     },
+     {
+      "who": "suresh",
+      "shot": "suresh",
+      "prop": "ask",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "cost",
+      "prop": "cost",
+      "n": 9
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "pin",
+      "n": 10
+     },
+     {
+      "who": "suresh",
+      "shot": "quiz",
+      "prop": "quiz",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "quiz",
+      "prop": "answer",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "One API call",
+     "title": "One API call",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ai",
+     "file": "07_ai.wav",
+     "text": "We locked our own AI, on our own computer. No key: refused. One letter wrong: refused. [1] The right key: it answered.",
+     "show": "We locked our own AI, on our own computer. No key: refused. 1 letter wrong: refused. The right key: it answered.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    },
+    {
+     "who": "suresh",
+     "file": "08_suresh.wav",
+     "text": "And each answer costs...?",
+     "show": "And each answer costs...?",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "09_ai.wav",
+     "text": "About three paise, at a small model's price. [1] Fifty replies a day: forty-seven rupees a month.",
+     "show": "About 3 paise, at a small model's price. 50 replies a day: ₹47 a month.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": -1.0,
+     "tts": "About three pie-say, at a small model's price. Fifty replies a day: forty-seven rupees a month."
+    },
+    {
+     "who": "ravi",
+     "file": "10_ravi.wav",
+     "text": "So this key is my ATM PIN!",
+     "show": "So this key is my ATM PIN!",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "suresh",
+     "file": "11_suresh.wav",
+     "text": "Then where do I keep it? [1] In the code? In our group?",
+     "show": "Then where do I keep it? In the code? In our group?",
+     "maxgap": 0.25,
+     "gap": 2.4,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "C: a locked setting only the app reads. [1] Never in code, a photo or a chat.",
+     "show": "C: a locked setting only the app reads. Never in code, a photo or a chat.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_api",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.5,
+   "boost": 1.7,
+   "lift": 0.8,
+   "rise": 1.6,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "money",
+      "n": 13
+     },
+     {
+      "who": "ai",
+      "shot": "rule",
+      "prop": "rule",
+      "n": 14
+     },
+     {
+      "who": "ravi",
+      "shot": "wide",
+      "prop": "loop",
+      "n": 15
+     }
+    ],
+    "captionTop": 1500,
+    "tagSide": {
+     "suresh": "left",
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "The key is your PIN",
+     "title": "The key is your PIN",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "13_ravi.wav",
+     "text": "And my eight thousand six hundred?",
+     "show": "And my ₹8,600?",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "14_ai.wav",
+     "text": "Ask their support; no promise. [1] Then delete that key, make another, and set a hard spend limit.",
+     "show": "Ask their support; no promise. Then delete that key, make another, and set a hard spend limit.",
+     "maxgap": 0.25,
+     "gap": 0.4,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "15_ravi.wav",
+     "text": "Key changed! I'll keep it safe... [1] in the family WhatsApp group!",
+     "show": "Key changed! I'll keep it safe... in the family WhatsApp group!",
+     "maxgap": 0.25,
+     "gap": 0.0,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}
