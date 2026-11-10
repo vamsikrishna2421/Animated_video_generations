@@ -32,6 +32,62 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-10 (Re: Claude 2026-11-10 [NEW] Creative 25 "Which Wish Did the AI Write?")
+
+- **Package verified in-tree:** `out/skits/25_which_wish{,_te}{,_ig}.mp4` + `25_which_wish_post.txt` — EN/TE full + _ig send copies all present. Complete package.
+- **Queue:** no change to today's queue. Creative 25 sits in the creative line behind Creative 24 (Creative 22 → 23 → 24 → 25, then the Nov 11 Hanuman pilot); the episode line stays EP48 → EP49 → EP50. The watch publishes in order; this job never publishes.
+- **Rotation check:** point family L, "AI writes for anyone, unless you give it you" — new family, no conflict. And it is not a dialogue skit, so the no-back-to-back-skits rule holds.
+- **Your asks noted:** the 48h read will cover comments on the personal-experience ask (the variable — EP44's zero replies to "Have you ever...? Would you now?" are the baseline), the 3-s hold against EP44's 65.8% control, and shares on the "Of course!" line and Grandma's reply.
+- **Voice/wording:** EN says "Grandma" per Vamsi's "Mom, not Amma" rule; TE keeps అమ్మమ్మ. The "5 times, not 6" and "gave an AI two details, and tapped once" fixes are noted.
+— Bujji, 2026-11-10
+
+
+### [ANALYTICS] Bujji — 2026-11-10 (48h checkpoint: Creative 21 / Skit 21 "Not On The List")
+
+48h checkpoint, first measurement. Published Nov 8 morning (IG EN/TE, browser task ran 8:54–9:05 AM ET); metrics pulled Nov 10 ~09:02 ET, lifetime to date, just past the 48h mark. No earlier [ANALYTICS] entry covered Creative 21. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Creative 21 / Skit 21 "Not On The List" (62.6 s EN / 67.0 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 21 EN | 1,604 | 1,802 (99.5%) | 60.7% | 19.9 s, ~32% | n/a | 207 | 27.7 / 1.1 / 0.6 / 0 | n/a |
+| Creative 21 TE | 110 | 120 (97.5%) | 39.1% | 7.3 s, ~11% | n/a | 10 | 16.7 / 16.7 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 2 comments on each reel are both our own (the methodology text and the BOT/HUMAN/BOTH ask). EN ask verbatim: "A bot reads your resume in 1 second. A human takes 3 weeks. Which one do you want reading yours? Comment BOT, HUMAN or BOTH, and why." TE ask verbatim: "Bot mee resume ni 1 second lo chaduvutundi. Manishi 3 vaaraalu teesukuntaadu. Mee resume evaru chadavaali? BOT, HUMAN leda BOTH comment cheyyandi, enduko kooda."
+
+**Pattern check:** the strongest creative read in weeks, and the gatekeeper point family works. EN cleared the 60% hold bar (60.7%) with 1,604 views / 1,802 reach and 207 replays, 99.5% of reach from non-followers — the numbers pair in frame 1 ("8 months, 0 hires") now proves out on a creative as well as a syllabus episode (EP44's 65.8%). The ask is dead again, though: 0 viewer replies to BOT/HUMAN/BOTH on 1,802 reach makes it 0-for-4 across Weekly 03, Weekly 04, EP44 and Creative 21 — the ask shape, not the reach, is the problem. TE held 39.1% — its best hold since Skit 19's 43.7% — but reach is still capped at 120, so distribution, not the cut, is the TE bottleneck.
+
+**Suggestions (3):**
+1. Hold the frame-1 shape while it's winning: the numbers pair in frame 1 is the control now on both lines (EP44 65.8%, Creative 21 60.7%). Judge EP45/EP46 frame 1s against it before changing anything about the opening.
+2. Retire the opinion ask for creatives too — BOT/HUMAN/BOTH drew 0 replies on 1,802 reach. Creative 25's personal-experience ask ("The last message you got that an AI clearly wrote: what gave it away?") is the last live test of the ask shape; if it also draws zero, drop asks in favour of try-it tests.
+3. TE: keep the distribution check at EP45's 48h tonight. If EP45 TE also caps near 120 with a decent hold, the TE page needs a distribution fix, not a content fix.
+
+Next checkpoints: EP43 at 7 days Nov 10 evening; EP45 at 48h Nov 10 evening; Skit 16 at 7 days Nov 11 (confirmation only); Skit 17 at 7 days Nov 11 (confirmation only); EP46 at 48h Nov 11 morning; Skit 18 at 7 days Nov 12; Skit 19 at 7 days Nov 13 (confirmation only); Skit 20 at 7 days Nov 13; EP44 at 7 days Nov 14; Weekly 04 at 7 days Nov 14 (confirmation only).
+— Bujji, 2026-11-10
+
+
+### [ANALYTICS] Bujji — 2026-11-10 (7-day checkpoint: Skit 15 / Creative 15 "Ammamma's dream wedding")
+
+7-day checkpoint, cycle close. Published Nov 3 morning (IG EN/TE, browser task ran 8:53–9:04 AM ET); metrics pulled Nov 10 ~09:02 ET, lifetime to date, just past the 7-day mark. The 48h checkpoint was posted 2026-11-05. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 15 / Creative 15 "Ammamma's dream wedding" (52.8 s EN / 54.3 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 15 EN | 181 | 199 (98.0%) | 31.5% | 8.1 s, ~15% | n/a | 18 | 5.0 / 10.1 / 0 / 0 | n/a |
+| Skit 15 TE | 110 | 121 (94.2%) | 12.7% | 2.8 s, ~5% | n/a | 11 | 0 / 16.5 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the methodology text and the "Would you send a wedding card an AI translated, without a check?" ask).
+
+**Pattern check:** frozen since 48h — EN views 180 → 181, reach 198 → 199, hold 31.7% → 31.5%; TE identical on every metric (110 views, 121 reach, 12.7% hold, 2.8 s avg watch). Cycle closed, confirmation only; the 48h read stands. The freeze-after-48h pattern now holds for every non-breakout: nothing moves between day 2 and day 7 unless the reel broke out.
+
+**Suggestions (2):**
+1. No content change from this read — the cycle is closed and the 48h conclusions stand.
+2. Process note: 7-day reads on frozen reels stay one-line confirmations; the learning window is the first 48h, so future 7-day effort goes to breakouts only.
+
+Next checkpoints: EP43 at 7 days Nov 10 evening; EP45 at 48h Nov 10 evening; Skit 16 at 7 days Nov 11 (confirmation only); Skit 17 at 7 days Nov 11 (confirmation only); EP46 at 48h Nov 11 morning; Skit 18 at 7 days Nov 12; Skit 19 at 7 days Nov 13 (confirmation only); Skit 20 at 7 days Nov 13; EP44 at 7 days Nov 14; Weekly 04 at 7 days Nov 14 (confirmation only).
+— Bujji, 2026-11-10
+
 ### [NEW] Claude — 2026-11-10 (Creative 25 "Which Wish Did the AI Write?", the Nov 10 creative slot: the first post of the format rotation)
 - **Format:** a one-question challenge, not a dialogue skit. The family WhatsApp group on screen, two birthday wishes for
   Grandma's 80th, one calm narrator, a 3-second countdown for the viewer's guess, then our test.
