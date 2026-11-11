@@ -13,7 +13,7 @@
   0.0,
   0.0
  ],
- "endPad": 1.4,
+ "endPad": 0.9,
  "captionMode": "phrase",
  "hardCuts": true,
  "hideTimer": true,
@@ -70,12 +70,12 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "హనుమంతుడికి జయం: జ్ఞానానికి, మంచి గుణాలకి ఆయన సముద్రం. [1] వానర శ్రేష్ఠుడు, మూడు లోకాలకీ ఆయనే వెలుగు. <pause 0.4> [2] వెలుగుల సముద్రం మీద, ఆయన్ని మనసులో దర్శించుకోండి.",
+     "text": "హనుమంతుడికి జయం: జ్ఞాన గుణ సాగరుడు. [1] వానర శ్రేష్ఠుడు, మూడు లోకాలకీ ఆయనే వెలుగు. <pause 0.4> [2] వెలుగుల సముద్రం మీద, ఆయన్ని మనసులో దర్శించుకోండి.",
      "maxgap": 0.4,
      "gap": 0.7,
      "tempo": 1.0,
-     "show": "Victory to Hanuman: an ocean of wisdom and good qualities. Greatest of the vanaras, he is the light of the three worlds. <pause 0.4> Over a sea of light, see him in your mind.",
-     "tts": "హనుమంతుడికి జయం: జ్ఞానానికి, మంచి గుణాలకి ఆయన సముద్రం. వానర శ్రేష్ఠుడు, మూడు లోకాలకీ ఆయనే వెలుగు.",
+     "show": "Victory to Hanuman, ocean of wisdom and virtue. Greatest of the vanar warriors, he is the light of the three worlds. <pause 0.4> Over a sea of light, see him in your mind.",
+     "tts": "హనుమంతుడికి జయం: జ్ఞాన గుణ సాగరుడు. వానర శ్రేష్ఠుడు, మూడు లోకాలకీ ఆయనే వెలుగు.",
      "file2": "02b_storyteller.wav",
      "tts2": "వెలుగుల సముద్రం మీద, ఆయన్ని మనసులో దర్శించుకోండి.",
      "pause": 0.4
@@ -119,8 +119,8 @@
     {
      "who": "chant",
      "file": "03_chant.wav",
-     "text": "राम दूत अतुलित बल धामा। अंजनि पुत्र पवनसुत नामा॥",
-     "tts": "राम दूत अतुलित बल धामा। अंजनि पुत्र पवनसुत नामा॥",
+     "text": "राम दूत, अतुलित बल धामा। अंजनि पुत्र, पवनसुत नामा॥",
+     "tts": "राम दूत, अतुलित बल धामा। अंजनि पुत्र, पवनसुत नामा॥",
      "show": "Ram doot atulit bal dhama Anjani-putra Pavan-sut nama",
      "nocap": true,
      "maxgap": 0.4,
@@ -179,8 +179,8 @@
     {
      "who": "chant",
      "file": "05_chant.wav",
-     "text": "महाबीर बिक्रम बजरंगी। कुमति निवार सुमति के संगी॥",
-     "tts": "महाबीर बिक्रम बजरंगी। कुमति निवार सुमति के संगी॥",
+     "text": "महाबीर बिक्रम बजरंगी। कुमति निवार, सुमति के संगी॥",
+     "tts": "महाबीर बिक्रम बजरंगी। कुमति निवार, सुमति के संगी॥",
      "show": "Mahabir bikram Bajrangi Kumati nivar sumati ke sangi",
      "nocap": true,
      "maxgap": 0.4,
@@ -194,7 +194,7 @@
      "maxgap": 0.4,
      "gap": 0.7,
      "tempo": 1.0,
-     "show": "The great hero, a body like a thunderbolt. He drives bad thoughts away and stays beside good ones. <pause 0.4> See him driving the dark clouds from your mind.",
+     "show": "The great hero, a body like a thunderbolt. He drives bad thoughts away, and stays with good ones. <pause 0.4> See him driving the dark clouds from your mind.",
      "tts": "మహావీరుడు, వజ్రదేహం. చెడు ఆలోచనలు తరిమేసి, మంచి ఆలోచనలకి తోడుగా ఉంటాడు.",
      "file2": "06b_storyteller.wav",
      "tts2": "మనసులో చీకటి మబ్బులు తరిమేస్తున్న ఆయన్ని దర్శించుకోండి.",
@@ -205,7 +205,7 @@
   {
    "id": "c4",
    "type": "sk_hanuman",
-   "tail": 0.8,
+   "tail": 0.6,
    "data": {
     "part": 4,
     "deva": [
@@ -239,8 +239,8 @@
     {
      "who": "chant",
      "file": "07_chant.wav",
-     "text": "कंचन बरन बिराज सुबेसा। कानन कुंडल कुंचित केसा॥",
-     "tts": "कंचन बरन बिराज सुबेसा। कानन कुंडल कुंचित केसा॥",
+     "text": "कन्चन बरन बिराज सुबेसा। कानन कुन्डल कुन्चित केसा॥",
+     "tts": "कन्चन बरन बिराज सुबेसा। कानन कुन्डल कुन्चित केसा॥",
      "show": "Kanchan baran biraj subesa Kanan kundal kunchit kesa",
      "nocap": true,
      "maxgap": 0.4,

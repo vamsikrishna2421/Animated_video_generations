@@ -25,7 +25,7 @@ type Arm = [Pt, Pt];   // elbow, hand (local units; the figure stands about 1150
 const POSES: Record<Pose, { mace: Arm; flag: Arm; legs: [Pt, Pt, Pt, Pt] | null; maceAng: number; poleAng: number; ground: number }> = {
   // mace arm on the viewer's left (his right hand), flag arm on the viewer's right
   stand: { mace: [[-215, -45], [-160, -150]], flag: [[218, -40], [238, 110]], legs: [[-68, 330], [-78, 540], [68, 330], [78, 540]], maceAng: -1.78, poleAng: -Math.PI / 2, ground: 560 },
-  raise: { mace: [[-255, -255], [-235, -380]], flag: [[218, -40], [238, 110]], legs: [[-80, 330], [-105, 540], [80, 330], [105, 540]], maceAng: -2.1, poleAng: -Math.PI / 2, ground: 560 },
+  raise: { mace: [[-255, -255], [-235, -380]], flag: [[218, -40], [238, 110]], legs: [[-80, 330], [-105, 540], [80, 330], [105, 540]], maceAng: -2.45, poleAng: -Math.PI / 2, ground: 560 },
   fly: { mace: [[-200, -330], [-170, -480]], flag: [[205, -40], [190, 90]], legs: [[-60, 330], [-60, 540], [80, 310], [40, 470]], maceAng: -1.6, poleAng: 2.06, ground: 9999 },
   kneel: { mace: [[-175, -40], [-35, -130]], flag: [[175, -40], [35, -130]], legs: null, maceAng: 0, poleAng: -Math.PI / 2, ground: 345 },
 };
@@ -251,15 +251,15 @@ const StHanuman: React.FC<SP> = ({ s }) => {
   const cue = (n: number, frac: number) => cueAt(L1, n, /^$/, L1.from + Math.round(L1.frames * frac));
   const bells = (
     <>
-      <Bell at={0} deep={part === 1} vol={part === 1 ? 0.7 : 0.55} />
-      {part === 4 ? <Bell at={s.frames - 10} deep vol={0.6} /> : null}
+      <Bell at={0} deep={part === 1 || part === 4} vol={part === 1 || part === 4 ? 0.36 : 0.3} />   {/* render review: the bells sat as loud as the chant */}
+      {part === 4 ? <Bell at={s.frames - 10} deep vol={0.4} /> : null}
     </>
   );
   if (!ready) return bells;
   return (
     <>
       {bells}
-      <CrayonCanvas grainAmt={0.12} vig={0.5} draw={(c, W, H, f, boil) => {
+      <CrayonCanvas grainAmt={0.05} vig={0.5} draw={(c, W, H, f, boil) => {   // light grain: 0.12 made a 35 MB file
         const r = rng(2600 + part * 31 + boil);
         const tM = L1.from, c1 = cue(1, 0.45), c2 = cue(2, 0.8), end = s.frames;
         // ---- the picture ----
@@ -278,47 +278,47 @@ const StHanuman: React.FC<SP> = ({ s }) => {
           g.addColorStop(0, mix("#1e3266", "#e8b85a", kSea)); g.addColorStop(0.3, mix("#16285a", "#3f6ea6", kSea)); g.addColorStop(1, mix("#0b1433", "#4b3f86", kBelow));
           c.fillStyle = g; c.fillRect(0, 1170, W, H - 1170);
           for (let k = 0; k < 9; k++) { const wy = 1200 + k * 34; const pts: Pt[] = []; for (let x = -20; x <= W + 20; x += 40) pts.push([x, wy + Math.sin(x / 70 + f / 12 + k) * 6]); stroke(c, pts, kSea > 0.3 ? "#fff1b8" : "#6b86c9", 3, r, { passes: 1, alpha: 0.35 + 0.4 * kSea }); }
-          if (kSky > 0) chip(c, "the sky", 190, 560, kSky, 30); if (kEarth > 0) chip(c, "the earth", 880, 1040, kEarth, 30); if (kBelow > 0) chip(c, "the world below", 540, 1440, kBelow, 30);
+          if (kSky > 0) chip(c, "the sky", 170, 600, kSky, 40); if (kEarth > 0) chip(c, "the earth", 910, 1080, kEarth, 40); if (kBelow > 0) chip(c, "the world below", 540, 1470, kBelow, 40);
           // the rock and Hanuman, glowing more as the line goes on
-          c.fillStyle = "#3b3226"; c.beginPath(); c.ellipse(540, 1215, 210, 50, 0, 0, 7); c.fill();
+          c.fillStyle = "#3b3226"; c.beginPath(); c.ellipse(540, 1392, 250, 56, 0, 0, 7); c.fill();
           const glow = 0.5 + 0.5 * seg(f, tM, c2);
-          hanuman(c, 540, 860, 0.62, "stand", f, r, { glow });
+          hanuman(c, 540, 935, 0.8, "stand", f, r, { glow });   // render review: too small before the close-up
           if (f > c2) { c.save(); c.globalAlpha = 0.25 * seg(f, c2, c2 + 20); c.fillStyle = "#ffd86b"; c.fillRect(0, 440, W, 1060); c.restore(); }
         } else if (part === 2) {   // Ram's messenger, son of the Wind: flying
           sky(c, W, H, "#7dc3f0", "#f7d9a0");
           for (let i = 0; i < 5; i++) cloud(c, ((i * 300 - f * (2 + i % 2)) % 1500 + 1500) % 1500 - 200, 620 + i * 170, 0.9, "#ffffff", 0.85);
           const t = seg(f, 0, end), bob = Math.sin(f / 10) * 14;
-          const hx = 280 + 520 * ease(t), hy = 980 + bob - 80 * t;
+          const hx = 330 + 370 * ease(t), hy = 1200 + bob - 190 * ease(t);   // render review: rising, in frame, not reclining; the mace below the verse band
           const kW = seg(f, c1 - 6, c1 + 14);   // the wind wraps around him
           for (let k = 0; k < 4; k++) {
             const pts = circlePts(hx - 40, hy - 10, 230 + k * 40, 120 + k * 22, f / 8 + k, f / 8 + k + 4.2 * Math.max(0.15, kW), 28);
             stroke(c, pts, "#ffffff", 7 - k, r, { passes: 1, alpha: 0.35 + 0.5 * kW });
           }
-          hanuman(c, hx, hy, 0.5, "fly", f, r, { rot: 1.42, glow: 0.45 + 0.35 * seg(f, tM, tM + 30) });
-          chip(c, "Ram's messenger", 540, 560, seg(f, tM, tM + 10) * (1 - seg(f, c1 - 4, c1 + 2)), 40);
-          chip(c, "son of Anjani · son of the Wind", 540, 560, seg(f, c1, c1 + 10), 36);
+          hanuman(c, hx, hy, 0.62, "fly", f, r, { rot: 0.95, glow: 0.45 + 0.35 * seg(f, tM, tM + 30) });
+          chip(c, "Ram's messenger · matchless strength", 540, 580, seg(f, tM, tM + 10) * (1 - seg(f, c1 - 4, c1 + 2)), 40);
+          chip(c, "son of Anjani · son of the Wind", 540, 580, seg(f, c1, c1 + 10), 40);
         } else if (part === 3) {   // the thunderbolt body; bad thoughts driven away, good ones kept
           const clear = seg(f, c2 - 10, c2 + 30);
           sky(c, W, H, clear > 0 ? `rgb(${40 + 150 * clear},${40 + 150 * clear},${70 + 160 * clear})` : "#28283f", clear > 0 ? `rgb(${120 + 120 * clear},${90 + 110 * clear},${90 + 60 * clear})` : "#4a3a40");
           const drift = seg(f, c1, c1 + 60);
           for (let i = 0; i < 5; i++) { const cx = -60 - drift * 800 + (i % 2) * 120, cy = 540 + i * 120; cloud(c, cx, cy + 18, 1.25, "#231d2e", 0.96 * (1 - drift)); cloud(c, cx, cy, 1.25, "#6a6380", 0.96 * (1 - drift)); }   // storm clouds lighter than the sky, dark undersides
-          if (drift < 0.9) chip(c, "bad thoughts", 260 - drift * 520, 1010, seg(f, tM + 20, tM + 30) * (1 - drift), 34);
+          if (drift < 0.9) chip(c, "bad thoughts", 250 - drift * 520, 1010, seg(f, tM + 20, tM + 30) * (1 - drift), 40);
           // the lamp (good thoughts), brighter as he stays with it
           const lk = 0.4 + 0.6 * seg(f, c1 + 10, c1 + 40);
-          c.fillStyle = "#8a5a2b"; c.fillRect(838, 1080, 24, 160); c.beginPath(); c.ellipse(850, 1075, 70, 22, 0, 0, 7); c.fillStyle = "#b8742e"; c.fill();
-          const lg = c.createRadialGradient(850, 1010, 5, 850, 1010, 200 * lk); lg.addColorStop(0, "rgba(255,230,150,0.9)"); lg.addColorStop(1, "rgba(255,200,80,0)");
-          c.fillStyle = lg; c.beginPath(); c.arc(850, 1010, 200 * lk, 0, 7); c.fill();
-          c.fillStyle = "#ffcf4a"; c.beginPath(); c.ellipse(850, 1035 - 6 * Math.sin(f / 4), 16, 34 * (0.7 + lk * 0.4), 0, 0, 7); c.fill();
-          chip(c, "good thoughts", 850, 1300, seg(f, c1 + 14, c1 + 24), 32);
-          c.fillStyle = "#3b3226"; c.fillRect(0, 1240, W, 260);
+          c.fillStyle = "#8a5a2b"; c.fillRect(888, 1180, 24, 170); c.beginPath(); c.ellipse(900, 1175, 70, 22, 0, 0, 7); c.fillStyle = "#b8742e"; c.fill();
+          const lg = c.createRadialGradient(900, 1110, 5, 900, 1110, 200 * lk); lg.addColorStop(0, "rgba(255,230,150,0.9)"); lg.addColorStop(1, "rgba(255,200,80,0)");
+          c.fillStyle = lg; c.beginPath(); c.arc(900, 1110, 200 * lk, 0, 7); c.fill();
+          c.fillStyle = "#ffcf4a"; c.beginPath(); c.ellipse(900, 1135 - 6 * Math.sin(f / 4), 16, 34 * (0.7 + lk * 0.4), 0, 0, 7); c.fill();
+          chip(c, "good thoughts", 880, 1440, seg(f, c1 + 14, c1 + 24), 40);
+          c.fillStyle = "#3b3226"; c.fillRect(0, 1350, W, 200);
           const pose: Pose = f > c1 - 4 ? "raise" : "stand";
-          hanuman(c, 500, 930, 0.52, pose, f, r, { glow: 0.55 + 0.3 * clear });
-          const fl = seg(f, tM, tM + 4) * (1 - seg(f, tM + 6, tM + 16));   // the thunderbolt flash
+          hanuman(c, 470, 960, 0.7, pose, f, r, { glow: 0.55 + 0.3 * clear });
+          const fl = seg(f, tM, tM + 4) * (1 - seg(f, tM + 14, tM + 30));   // the thunderbolt flash (longer: it went unseen)
           if (fl > 0) {
             c.save(); c.globalAlpha = fl; stroke(c, [[640, 420], [520, 640], [600, 660], [450, 900], [530, 910], [380, 1150]], "#fffbe0", 16, r, { passes: 2 });
             c.fillStyle = `rgba(255,250,220,${0.35 * fl})`; c.fillRect(0, 0, W, H); c.restore();
           }
-          chip(c, "strong as a thunderbolt", 540, 560, seg(f, tM + 4, tM + 14) * (1 - seg(f, c1 - 6, c1)), 38);
+          chip(c, "a body strong as a thunderbolt", 540, 580, seg(f, tM + 4, tM + 14) * (1 - seg(f, c1 - 6, c1)), 40);
         } else {   // the portrait: golden colour, fine clothes, earrings, curly hair
           sky(c, W, H, "#3a1d06", "#9a5a12");
           const hg = c.createRadialGradient(540, 860, 60, 540, 860, 640); hg.addColorStop(0, "rgba(255,214,120,0.85)"); hg.addColorStop(1, "rgba(255,170,60,0)");
@@ -334,14 +334,14 @@ const StHanuman: React.FC<SP> = ({ s }) => {
         // ---- the line band at the top (the chant) ----
         const kb = seg(f, 2, 14);
         c.save(); c.globalAlpha = kb;
-        const bg = c.createLinearGradient(0, 120, 0, 470); bg.addColorStop(0, "rgba(12,6,2,0.78)"); bg.addColorStop(1, "rgba(12,6,2,0.0)");
-        c.fillStyle = bg; c.fillRect(0, 110, W, 360);
-        c.font = SANS(28, 800); c.fillStyle = "#f6c453"; c.textAlign = "center"; c.fillText(`HANUMAN CHALISA · CHAUPAI ${part} OF 4`, W / 2, 172);
+        const bg = c.createLinearGradient(0, 110, 0, 500); bg.addColorStop(0, "rgba(12,6,2,0.86)"); bg.addColorStop(0.75, "rgba(12,6,2,0.62)"); bg.addColorStop(1, "rgba(12,6,2,0.0)");
+        c.fillStyle = bg; c.fillRect(0, 110, W, 390);   // render: the Roman line went faint on the light skies (chaupais 2, 3)
+        c.font = SANS(34, 800); c.fillStyle = "#f6c453"; c.textAlign = "center"; c.fillText(`HANUMAN CHALISA · CHAUPAI ${part} OF 4`, W / 2, 172);
         const dv: string[] = d.deva, ro: string[] = d.roman;
         dv.forEach((t, i) => { let fs = 64; c.font = DEVA(fs); while (c.measureText(t).width > W - 90 && fs > 40) { fs -= 2; c.font = DEVA(fs); } c.fillStyle = "#fff4d6"; c.fillText(t, W / 2, 256 + i * 82); });
         ro.forEach((t, i) => { let fs = 34; c.font = `italic ${SANS(fs, 600)}`; while (c.measureText(t).width > W - 90 && fs > 24) { fs -= 2; c.font = `italic ${SANS(fs, 600)}`; } c.fillStyle = "#e7d7b6"; c.fillText(t, W / 2, 404 + i * 42); });
         c.restore();
-        if (part === 1 && d.hook) chip(c, d.hook, W / 2, 1600, seg(f, 4, 14) * (1 - seg(f, tM - 8, tM)), 40);   // frame 1's question, while the chant plays
+        if (part === 1 && d.hook) chip(c, d.hook, W / 2, 1560, seg(f, 4, 14) * (1 - seg(f, tM - 8, tM)), 44);   // above Instagram's username strip   // frame 1's question, while the chant plays
         void L0;
       }} />
     </>

@@ -740,3 +740,9 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
   - A Telugu negative carried by one syllable (పెట్టొద్దు) can be heard as the positive (పెట్టు): add a word that
     carries it too ("అస్సలు పెట్టొద్దు") and read the take's whole transcript.
   - A voice result the screen doesn't show is wasted: every spoken test result gets its picture (the ask, the reply).
+- Nov 11 (Creative 26, the Hanuman Chalisa pilot):
+  - A chant on Parler Hindi: judge it with Whisper in Roman letters too (`language="en"`): the Hindi transcript spelt a
+    clean "Kanchan" as "खन्चन". Commas in the line ("कुमति निवार, सुमति के संगी") fixed "kumti"; pick by ear-check
+    transcripts across 3-5 tries; the same takes on both pages (`video/public/reel/creative26/chant_takes`).
+  - The locked Hanuman is `hanuman()` in `HanumanCrayon.tsx`; Parts 2-5 reuse it unchanged (pose + scale only).
+  - Film grain on full-frame gradients makes a 35 MB render; keep `grainAmt` at 0.05 on these.

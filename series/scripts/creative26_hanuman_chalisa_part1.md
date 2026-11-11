@@ -62,7 +62,7 @@ call), a tanpura drone (Vamsi's no-bed rule; offered as an option), word-by-word
 | # | Who | Line | Picture |
 |---|---|---|---|
 | 1 | chant | जय हनुमान ज्ञान गुन सागर। जय कपीस तिहुँ लोक उजागर॥ | Hanuman standing on a rock over a dark sea; the sea turns to light |
-| 2 | narrator | Victory to Hanuman, ocean of wisdom and goodness. [1] Greatest of the vanaras, his light fills all three worlds. [2] Picture him shining over a sea of light. | the waves glow gold; [1] three bands light up: the sky, the earth, the world below; [2] his glow fills the frame |
+| 2 | narrator | Victory to Hanuman, ocean of wisdom and goodness. [1] Greatest of the vanar warriors, his light fills all three worlds. [2] Picture him shining over a sea of light. | the waves glow gold; [1] three bands light up: the sky, the earth, the world below; [2] his glow fills the frame |
 | 3 | chant | राम दूत अतुलित बल धामा। अंजनि-पुत्र पवनसुत नामा॥ | he rises into a sky of clouds |
 | 4 | narrator | Ram's messenger, with strength no one can match. [1] Son of Anjani, son of the Wind. [2] Picture him riding the wind. | flying across the sky; [1] the wind wraps around him in swirls; [2] he flies on, the flag streaming |
 | 5 | chant | महाबीर बिक्रम बजरंगी। कुमति निवार सुमति के संगी॥ | standing firm; dark clouds gather on one side, a lamp glows on the other |
@@ -73,11 +73,26 @@ call), a tanpura drone (Vamsi's no-bed rule; offered as an option), word-by-word
 ## Script (Telugu page; the same chant lines, the narrator in Telugu)
 | # | Telugu (narrator) |
 |---|---|
-| 2 | హనుమంతుడికి జయం: జ్ఞానానికి, మంచి గుణాలకి ఆయన సముద్రం. [1] వానర శ్రేష్ఠుడు, మూడు లోకాలకీ ఆయనే వెలుగు. / [2] వెలుగుల సముద్రం మీద, ఆయన్ని మనసులో దర్శించుకోండి. |
+| 2 | హనుమంతుడికి జయం: జ్ఞాన గుణ సాగరుడు. [1] వానర శ్రేష్ఠుడు, మూడు లోకాలకీ ఆయనే వెలుగు. / [2] వెలుగుల సముద్రం మీద, ఆయన్ని మనసులో దర్శించుకోండి. |
 | 4 | శ్రీరాముని దూత, ఎవరికీ లేనంత బలం. [1] అంజనీ పుత్రుడు, వాయు పుత్రుడు. / [2] గాలి మీద ఎగురుతున్న ఆయన్ని, మనసులో దర్శించుకోండి. |
 | 6 | మహావీరుడు, వజ్రదేహం. [1] చెడు ఆలోచనలు తరిమేసి, మంచి ఆలోచనలకి తోడుగా ఉంటాడు. / [2] మనసులో చీకటి మబ్బులు తరిమేస్తున్న ఆయన్ని దర్శించుకోండి. |
 | 8 | బంగారు రంగు, అందమైన వస్త్రాలు. [1] చెవులకు కుండలాలు, ఉంగరాల ముంగురులు. / [2] చాలీసా చదివేటప్పుడు, ఈ రూపాన్నే దర్శించుకోండి. |
 On-screen text in English on both pages (the channel rule); the chant lines in Devanagari with the Roman line.
+
+## Render review (human-viewer, v2 render) and what changed (v3)
+Both: the first words make the hook; the close-up face is right ("a vanara face with lowered eyes, tilak, kundalas and
+curls... our Anjaneya Swamy, not a cartoon"); the chant's pronunciation is the blocker ("Kapis" heard "Kabis", "kumati"
+"kumti", "kesa" split; the devotee won't share it until every word is right); Hanuman too small before the 0:47
+close-up. Also: the bells as loud as the chant; the flying pose read as reclining; labels too small; 2.6 s of silence
+at the end; the Telugu "జ్ఞానానికి, మంచి గుణాలకి ఆయన సముద్రం" clunky ("జ్ఞాన గుణ సాగరుడు").
+Changed (v3): new chant takes picked by Whisper in Roman letters ("Jai Hanuman gyan gun saagar. Jai kapis tihulok
+ujagar."; "Mahabir Vikram, Bajrangi, Kumati Nivar, Sumati ke Sanghi"; "Ramdhut Atulit Baladhama, Anjani Putra..."; chaupai
+4 kept: "Kanchanbaran, Biraj Subesa, Kanan Kundal, Kunchit Kesa"; the Hindi transcript's "ख" was the recogniser's
+spelling), commas in chaupais 2 and 3 for the voice, all four slowed 10%; Hanuman bigger in chaupais 1-3 (0.62 -> 0.8,
+0.5 -> 0.62, 0.52 -> 0.7); a rising diagonal flight (not reclining, in frame); bells about 6 dB under the voice, a deep
+bell on the close-up and on the loop; bigger labels, a longer thunderbolt flash; the end hold 2.6 -> 1.9 s; Telugu line
+1 "జ్ఞాన గుణ సాగరుడు"; the post caption says "vanar warriors" as the voice does. Not changed: the body's tube arms (kept for
+the pilot; Vamsi judges the design first), the traditional sung tune (an AI voice can't sing it: a recitation).
 
 ## Caption (no ask: a devotional explainer)
 EN: "Hanuman Chalisa, Part 1: see his form. Chaupais 1-4, the line, its meaning, and the picture to hold when you chant
