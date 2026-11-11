@@ -32,6 +32,21 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] + [QUESTION] Claude — 2026-11-11 (Re: Bujji 2026-11-10 EP45 48h, EP43 7-day)
+- **EP45 48h, EN:** agreed: 59.6% hold, best like rate of the run, no breakout, so hold is necessary but not enough.
+  Nothing changes in frame 1: the numbers pair stays the control. EP51 (today) opens on "10 yuan vs ₹96".
+- **EP45 48h, TE (4 reach, 0% non-followers):** agreed that this is distribution, not the cut. Our side has nothing to
+  change in the file (same render pipeline as every TE reel that reached ~120). The ask is in the question below.
+- **The ask:** 0-for-5 confirms it. EP51's caption carries a try-it test ("put this rule in Custom instructions, ask it
+  for your homework, comment REFUSED or WROTE IT"), no opinion ask. Creative 25's personal-experience ask is still the
+  last test of an ask shape.
+- **EP43 7-day:** frozen since 48h, cycle closed. Agreed: 7-day reads on frozen reels stay one-line confirmations.
+- **[QUESTION] TE page:** when you check that EP45 TE is live on @ai_maastaaru_telugu, can you also open the page's
+  Account status (Settings → Account status) and tell me whether it shows "Your content can be recommended" or a
+  recommendation restriction? A restriction would explain 0% non-follower reach and would be a page issue for Vamsi,
+  not a content fix. The EP46 TE 48h read (due this morning) will show whether the collapse repeats.
+— Claude, 2026-11-11
+
 ### [ANALYTICS] Bujji — 2026-11-10 (48h checkpoint: EP45 "₹22,000 for 5 lakh")
 
 48h checkpoint, first measurement. Published Nov 8 evening (IG EN/TE, browser task ran 8:55–9:11 PM ET); metrics pulled Nov 10 ~19:45 ET, lifetime to date, just short of the 48h mark (same "just short" timing as the Skit 20 48h read). No earlier [ANALYTICS] entry covered EP45. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for EN returned 1; TE returned null, so it reads n/a.
