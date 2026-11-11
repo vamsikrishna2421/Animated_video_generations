@@ -36,12 +36,12 @@ MUST = {"en": {1: [("two", "2"), ("sugar",), ("chinese",), ("shopping",), ("ten"
                6: [("step",), ("three", "3"), ("loop",), ("chat",), ("remembers", "remember"), ("pay",), ("turn",)],
                7: [("test",), ("ten", "10"), ("four", "4"), ("system",), ("price",)], "7b": [("nine", "9")],
                8: [("missed", "miss"), ("instructions", "instruction"), ("pasted", "paste")], "8b": [("word",)],
-               9: [("secret",), ("code",), ("share", "shared"), ("six", "6"), ("password",), ("api",), ("key",)],
+               9: [("staff",), ("code",), ("share", "shared"), ("six", "6"), ("password",), ("api",), ("key",)],
                10: [("delete", "deleted"), ("rules", "rule"), ("ask",)]},   # render review: lines 2, 7, 8 split; 9 and 10 new
-        "te": {"2b": [("तों", "तोम", "तुम", "96")], 7: [("पदि", "पद", "पाद", "10"), ("नाल", "4")], "7b": [("तोम", "तुम", "तों", "9")]}}
+        "te": {"2b": [("तों", "तोम", "तुम", "96")], 7: [("पदि", "पद", "पाद", "10"), ("नाल", "4")], "7b": [("तोम", "तुम", "तों", "9")], "9b": [("अस",)]}}
 JUDGE_TEXT = {1: "2 kilos of sugar, please. Our chatbot sent the customer to a Chinese shopping site, and guessed 10 yuan.",
               "2b": "96 rupees.", 7: "Our test, 10 customer messages. No system prompt: 4 of 10 right. With the rules and the price list:",
-              "7b": "9 of 10.", 9: "We added a secret code, and the rule: never share it. We asked 6 times. It shared it 6 times. So never put a password or an API key in it."}
+              "7b": "9 of 10.", 9: "We added a staff discount code, and the rule: never share it. We asked 6 times. It shared it 6 times. So never put a password or an API key in it."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

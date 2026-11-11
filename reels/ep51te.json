@@ -117,15 +117,15 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "అదే చాట్‌బాట్ కి, కొన్ని లైన్ల రూల్స్, షాప్ ధరల లిస్ట్ ఇస్తే: <pause 0.5> [1] తొంభై ఆరు రూపాయలు.",
-     "show": "Give the same chatbot a few lines of rules and the shop's price list: <pause 0.5> ₹96.",
+     "text": "అదే చాట్‌బాట్ కి, కొన్ని లైన్ల రూల్స్, షాప్ ధరల లిస్ట్ ఇస్తే: <pause 0.7> [1] తొంభై ఆరు రూపాయలు.",
+     "show": "Give the same chatbot a few lines of rules and the shop's price list: <pause 0.7> ₹96.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.05,
      "tts": "అదే చాట్‌బాట్ కి, కొన్ని లైన్ల రూల్స్, షాప్ ధరల లిస్ట్ ఇస్తే:",
      "file2": "02b_storyteller.wav",
      "tts2": "తొంభై ఆరు రూపాయలు.",
-     "pause": 0.5
+     "pause": 0.7
     },
     {
      "who": "storyteller",
@@ -215,7 +215,7 @@
      "who": "storyteller",
      "file": "06_storyteller.wav",
      "text": "స్టెప్ త్రీ: ఒక లూప్. <pause 0.3> [1] ప్రతిసారీ మొత్తం చాట్ మళ్ళీ వెళ్తుంది: అందుకే గుర్తుంటుంది, ప్రతిసారీ దానికంతా డబ్బు కూడా పడుతుంది.",
-     "show": "Step 3: a loop. Every time the whole chat goes again: that's why it remembers, and you pay for all of it every time.",
+     "show": "Step 3: a loop. Each time, the whole chat is sent again: that's why it remembers, and you pay for all of it every time.",
      "maxgap": 0.3,
      "gap": 0.6,
      "tempo": 1.05,
@@ -288,15 +288,15 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "మా టెస్ట్, పది కస్టమర్ మెసేజ్‌లు. [1] సిస్టమ్ ప్రాంప్ట్ లేకుండా: పదిలో నాలుగే సరిగ్గా. రూల్స్, ధరల లిస్ట్ ఉంటే: <pause 0.5> [2] పదికి తొమ్మిది.",
-     "show": "Our test, 10 customer messages. Without the system prompt: only 4 of 10 right. With rules and the price list: <pause 0.5> 9 of 10.",
+     "text": "మా టెస్ట్, పది కస్టమర్ మెసేజ్‌లు. [1] సిస్టమ్ ప్రాంప్ట్ లేకుండా: పదిలో నాలుగే సరిగ్గా. రూల్స్, ధరల లిస్ట్ ఉంటే: <pause 0.6> [2] పదికి తొమ్మిది.",
+     "show": "Our test, 10 customer messages. Without the system prompt: only 4 of 10 right. With rules and the price list: <pause 0.6> 9 of 10.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.05,
      "tts": "మా టెస్ట్, పది కస్టమర్ మెసేజ్‌లు. సిస్టమ్ ప్రాంప్ట్ లేకుండా: పదిలో నాలుగే సరిగ్గా. రూల్స్, ధరల లిస్ట్ ఉంటే:",
      "file2": "07b_storyteller.wav",
      "tts2": "పదికి తొమ్మిది.",
-     "pause": 0.5
+     "pause": 0.6
     },
     {
      "who": "storyteller",
@@ -362,14 +362,14 @@
     {
      "who": "storyteller",
      "file": "09_storyteller.wav",
-     "text": "మేము ఒక సీక్రెట్ కోడ్ పెట్టి, ఎవరికీ చెప్పకు అని రాశాం. <pause 0.3> [1] ఆరుసార్లు అడిగితే, ఆరుసార్లూ చెప్పేసింది. [2] అందుకే పాస్‌వర్డ్ గానీ, కీ గానీ అందులో పెట్టొద్దు.",
-     "show": "We added a secret code and wrote \"never share it\". <pause 0.3> We asked 6 times; it shared it 6 times. So never put a password or a key in it.",
+     "text": "మేము ఒక సీక్రెట్ కోడ్ పెట్టి, ఎవరికీ చెప్పకు అని రాశాం. <pause 0.3> [1] ఆరుసార్లు అడిగితే, ఆరుసార్లూ చెప్పేసింది. [2] అందుకే పాస్‌వర్డ్ గానీ, కీ గానీ అందులో అస్సలు పెట్టొద్దు.",
+     "show": "We added a secret code and wrote \"never share it\". <pause 0.3> We asked 6 times; it shared it 6 times. So never, ever put a password or a key in it.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.05,
      "tts": "మేము ఒక సీక్రెట్ కోడ్ పెట్టి, ఎవరికీ చెప్పకు అని రాశాం.",
      "file2": "09b_storyteller.wav",
-     "tts2": "ఆరుసార్లు అడిగితే, ఆరుసార్లూ చెప్పేసింది. అందుకే పాస్‌వర్డ్ గానీ, కీ గానీ అందులో పెట్టొద్దు.",
+     "tts2": "ఆరుసార్లు అడిగితే, ఆరుసార్లూ చెప్పేసింది. అందుకే పాస్‌వర్డ్ గానీ, కీ గానీ అందులో అస్సలు పెట్టొద్దు.",
      "pause": 0.3
     },
     {

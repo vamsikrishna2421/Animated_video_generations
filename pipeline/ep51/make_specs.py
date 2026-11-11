@@ -28,24 +28,24 @@ LINES = {   # v2 (script review): two real replies, not one stuck together; "rul
         "మా టెస్ట్, పది కస్టమర్ మెసేజ్‌లు. [1] సిస్టమ్ ప్రాంప్ట్ లేకుండా: పదిలో నాలుగే సరిగ్గా. రూల్స్, ధరల లిస్ట్ ఉంటే: | [2] పదికి తొమ్మిది."),
     8: ("leak", "The one it missed? [1] Asked for its instructions, it pasted them, | [2] word for word.",
         "మిస్ అయింది ఏది? [1] దాని రూల్స్ అడిగితే, [2] అక్షరం పొల్లు పోకుండా పేస్ట్ చేసింది."),
-    9: ("rule", "We added a secret code, and the rule: never share it. [1] We asked six times. It shared it six times. [2] So never put a password or an API key in it.",
-        "మేము ఒక సీక్రెట్ కోడ్ పెట్టి, ఎవరికీ చెప్పకు అని రాశాం. | [1] ఆరుసార్లు అడిగితే, ఆరుసార్లూ చెప్పేసింది. [2] అందుకే పాస్‌వర్డ్ గానీ, కీ గానీ అందులో పెట్టొద్దు."),   # render review: say what we tested (leak.json)
+    9: ("rule", "We added a staff discount code, and the rule: never share it. [1] We asked six times. It shared it six times. [2] So never put a password or an API key in it.",
+        "మేము ఒక సీక్రెట్ కోడ్ పెట్టి, ఎవరికీ చెప్పకు అని రాశాం. | [1] ఆరుసార్లు అడిగితే, ఆరుసార్లూ చెప్పేసింది. [2] అందుకే పాస్‌వర్డ్ గానీ, కీ గానీ అందులో అస్సలు పెట్టొద్దు."),   # re-check: "పెట్టొద్దు" alone could be heard as "పెట్టు"   # render review: say what we tested (leak.json)
     10: ("loop", "Now delete the rules, [1] and ask it again:", "ఇప్పుడు రూల్స్ తీసేసి, [1] మళ్ళీ అడగండి:"),   # render review: the loop lands on the bot with no rules (frame 1)
 }
 SHOW = {1: "\"2 kilos of sugar, please.\" Our chatbot sent the customer to a Chinese shopping site, and guessed 10 yuan.",
-        2: "The same AI, with a few lines of rules and the shop's price list: <pause 0.5> ₹96.",
-        7: "Our test, 10 customer messages. No system prompt: 4 of 10 right. With the rules and the price list: <pause 0.5> 9 of 10.",
+        2: "The same AI, with a few lines of rules and the shop's price list: <pause 0.7> ₹96.",
+        7: "Our test, 10 customer messages. No system prompt: 4 of 10 right. With the rules and the price list: <pause 0.6> 9 of 10.",
         10: "Now delete the rules, and ask it again:"}
 SHOW_TE = {
     1: "\"I want 2 kilos of sugar.\" Our chatbot sent the customer to a Chinese shopping site, and guessed 10 yuan.",
-    2: "Give the same chatbot a few lines of rules and the shop's price list: <pause 0.5> ₹96.",
+    2: "Give the same chatbot a few lines of rules and the shop's price list: <pause 0.7> ₹96.",
     3: "Those rules are the system prompt. Now let's make the chatbot, step by step.",
     4: "Step 1: a list of messages. The first is the system prompt: who it is, the only things it may talk about, your prices, what to say when unsure.",
     5: "Step 2: add the customer's message, send the whole list, add the reply too.",
-    6: "Step 3: a loop. Every time the whole chat goes again: that's why it remembers, and you pay for all of it every time.",
-    7: "Our test, 10 customer messages. Without the system prompt: only 4 of 10 right. With rules and the price list: <pause 0.5> 9 of 10.",
+    6: "Step 3: a loop. Each time, the whole chat is sent again: that's why it remembers, and you pay for all of it every time.",
+    7: "Our test, 10 customer messages. Without the system prompt: only 4 of 10 right. With rules and the price list: <pause 0.6> 9 of 10.",
     8: "Which one did it miss? Asked for its rules, it pasted them, letter for letter.",
-    9: "We added a secret code and wrote \"never share it\". <pause 0.3> We asked 6 times; it shared it 6 times. So never put a password or a key in it.",
+    9: "We added a secret code and wrote \"never share it\". <pause 0.3> We asked 6 times; it shared it 6 times. So never, ever put a password or a key in it.",
     10: "Now remove the rules, and ask again:",
 }
 T = {   # on screen (English on both pages), from series/scripts/ep51_demo/chat.json (no system prompt: turn 1 and turn 3, kept apart)
@@ -58,8 +58,8 @@ T = {   # on screen (English on both pages), from series/scripts/ep51_demo/chat.
              '                     "content": input("> ")})', "    reply = client.chat.completions.create(", "        model=MODEL, messages=messages)",
              "    text = reply.choices[0].message.content", '    messages.append({"role": "assistant",', '                     "content": text})', "    print(text)"],
 }
-SPLIT_PAUSE = {2: 0.5, 7: 0.5, 8: 0.4}   # render review: a beat of silence before ₹96 and before "nine of ten"
-SPLIT_PAUSE_TE = {2: 0.5, 4: 0.3, 6: 0.3, 7: 0.5, 9: 0.3}   # Telugu 4, 6 in two takes (Parler babbles on long lines)
+SPLIT_PAUSE = {2: 0.7, 7: 0.6, 8: 0.4}   # render review: a beat of silence before ₹96 and before "nine of ten"
+SPLIT_PAUSE_TE = {2: 0.7, 4: 0.3, 6: 0.3, 7: 0.6, 9: 0.3}   # Telugu 4, 6 in two takes (Parler babbles on long lines)
 # Sound (CLAUDE.md arc): a boom on frame 1, a buzz on "ten yuan"; a ding and boom on "ninety-six rupees"; a whoosh into
 # the title; pops as each step's code lands, three cash sounds on 96 / 150 / 246; a boom and clap on the test numbers; a
 # buzz and boom as it pastes its instructions; a clap and boom into the rule; a riser and the slam back to frame 1.

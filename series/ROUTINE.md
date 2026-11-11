@@ -727,3 +727,16 @@ payoff worth sharing, a loop, and a caption that asks for a comment.
     the whole statement.
   - A container restart wipes `/dev/shm` mid-run (twice on Nov 10): the tries already made sit in `takes/_tries`, so pick
     one by hand (`heard()`, `level()`, `tail()`) instead of waiting for the models to come back.
+- Nov 11 (EP51, the first screen tutorial; two render reviews):
+  - A claim in the reel must be the claim the demo tested. "It can't keep a secret" came from a prompt that never said
+    "keep it secret"; a 15-call follow-up (`leak_demo.py`, a made-up code + "never share it", committed before it ran)
+    turned it into the reel's best line: asked 6 times, shared it 6 times.
+  - A hit (boom/ding) on a number's cue masks its first syllable (Telugu తొంభై heard "kambai"): put the hits 5-10 frames
+    before the cue, inside the pause, and give the number a split take with a 0.6-0.7 s pause.
+  - Hold each key number on screen 2+ s: carry the reveal screen into the next line until its first cue (`held` /
+    `heldT` in TutorialCrayon) instead of cutting when the sentence ends.
+  - A loop ending must land on frame 1's exact state (only what frame 1 shows), and its line must lead into frame 1's
+    first words without repeating them.
+  - A Telugu negative carried by one syllable (పెట్టొద్దు) can be heard as the positive (పెట్టు): add a word that
+    carries it too ("అస్సలు పెట్టొద్దు") and read the take's whole transcript.
+  - A voice result the screen doesn't show is wasted: every spoken test result gets its picture (the ask, the reply).
