@@ -107,6 +107,7 @@ SPEAKERS = {
     "naveen": dict(voice="am_puck", speed=1.0, lang="en-us", name="Naveen", color="#FCD34D"),
     "bouncer": dict(voice="am_michael", speed=1.0, lang="en-us", name="Screening bot", color="#CBD5E1"),
     "storyteller": dict(voice="af_bella", speed=1.0, lang="en-us", name="", color="#FDE68A"),   # Creative 22 (file takes): story mode
+    "chant": dict(voice="hm_omega", speed=1.0, lang="hi", name="", color="#FDE68A"),   # Creative 26 (file takes): the Hanuman Chalisa line
     "kamala": dict(voice="af_heart", speed=1.0, lang="en-us", name="Kamala amma", color="#FDA4AF"),
     "sastry": dict(voice="am_michael", speed=1.0, lang="en-us", name="Sastry garu", color="#93C5FD"),   # Creative 23 (file takes): the father
     "pallavi": dict(voice="af_heart", speed=1.0, lang="en-us", name="Pallavi, CA", color="#5EEAD4"),
@@ -743,7 +744,8 @@ def main(spec_path: Path) -> None:
                 sc["data"][k] = spec[k]
     tl = {"id": rid, "look": spec.get("look", "rays"), "topic": spec.get("topic", ""), "banner": spec.get("banner", ""), "musicVol": spec.get("musicVol", [0.22, 0.55]), "title": spec["title"], "handle": handle, "label": spec.get("label", ""), "fps": FPS,
           **({"musicLift": spec["musicLift"]} if spec.get("musicLift") else {}), **({"musicDrops": mdrops} if mdrops else {}), **({"musicBoosts": mboosts} if mboosts else {}), **({"hideTimerInHook": True} if spec.get("hideTimerInHook") else {}), **({"hideTimer": True} if spec.get("hideTimer") else {}),
-          **({"musicDuckRamp": spec["musicDuckRamp"]} if spec.get("musicDuckRamp") else {}), "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes}
+          **({"musicDuckRamp": spec["musicDuckRamp"]} if spec.get("musicDuckRamp") else {}), "totalFrames": round(total * FPS), "music": f"reel/{rid}/score.wav", "scenes": scenes,
+          **({"format": spec["format"]} if spec.get("format") else {})}   # "devotional" (Creative 26): no AI-series chrome
     tdir = ROOT / "video" / "src" / "reel" / "timelines"
     tdir.mkdir(parents=True, exist_ok=True)
     (tdir / f"{rid}.json").write_text(json.dumps(tl, indent=1, ensure_ascii=False) + "\n")
