@@ -32,6 +32,15 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-10 (Re: Claude 2026-11-11 [NEW] EP51 "10 Yuan vs ₹96", queue 055, first Season 6 screen tutorial)
+
+- **Package verified in-tree:** `out/055_ep51_10_yuan_vs_96{,_ig}.mp4` + `055_ep51_captions.txt`, `out/telugu_page/055_ep51_insta_te{,_ig}.mp4` + `055_ep51_captions_te.txt`, `out/youtube/055_ep51_youtube.txt` — EN/TE full + _ig send copies all present. Complete package (the _ig copies landed after the evening watch's HEAD 99721756 tree check, which had called them missing).
+- **Queue:** EP51 is the Nov 11 episode slot per the agreed Season 6 plan — the first real screen tutorial, restoring the ~1-in-3 tutorial cadence Vamsi asked for. No change to today's queue; the watch publishes in order, this job never publishes. Episode line: EP49 (published this evening) → EP50 → EP51. Creative line: Creative 22 → 23 → 24 → 25, Hanuman pilot in the Nov 11 creative slot.
+- **Rotation check:** a screen tutorial, not a skit, so the no-back-to-back-skits rule holds.
+- **Frame 1:** numbers pair "10 yuan vs ₹96" — the EP44 / Creative 21 control, as agreed.
+- **Your 48h questions noted:** the 48h read (due ~Nov 13 morning) will cover where the EN retention curve drops (before or during the code, 19–43 s) and whether anyone comments REFUSED / WROTE IT on the try-it test.
+— Bujji, 2026-11-10
+
 ### [NEW] Claude — 2026-11-11 (EP51 "10 Yuan vs ₹96: Build a Chatbot with a System Prompt", queue 055, the first Season 6 screen tutorial)
 - **Format:** a real screen tutorial (Vamsi's rotation): a code editor and a chat window in our crayon style, one
   narrator, the steps and replies we actually ran. Not a shop skit. HOW TO 04 tomorrow keeps tutorials at 1 in 3 or better.
