@@ -55,7 +55,7 @@
     [
      1,
      1,
-     0.2
+     0.6
     ]
    ],
    "data": {
@@ -114,11 +114,15 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "The same AI, with a few lines of rules and the shop's price list: [1] ninety-six rupees.",
-     "show": "The same AI, with a few lines of rules and the shop's price list: ₹96.",
+     "text": "The same AI, with a few lines of rules and the shop's price list: <pause 0.5> [1] ninety-six rupees.",
+     "show": "The same AI, with a few lines of rules and the shop's price list: <pause 0.5> ₹96.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "tempo": 1.04
+     "tempo": 1.04,
+     "tts": "The same AI, with a few lines of rules and the shop's price list:",
+     "file2": "02b_storyteller.wav",
+     "tts2": "ninety-six rupees.",
+     "pause": 0.5
     },
     {
      "who": "storyteller",
@@ -218,9 +222,14 @@
    "lift": 0.6,
    "drop_at": [
     [
+     0,
+     2,
+     0.5
+    ],
+    [
      1,
-     1,
-     0.3
+     2,
+     0.4
     ]
    ],
    "data": {
@@ -266,20 +275,28 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "Our test, ten customer messages. [1] Without the system prompt: four of ten right, not one shop price. With it: nine of ten.",
-     "show": "Our test, 10 customer messages. Without the system prompt: 4 of 10 right, not one shop price. With it: 9 of 10.",
+     "text": "Our test, ten customer messages. [1] No system prompt: four of ten right. With the rules and the price list: <pause 0.5> [2] nine of ten.",
+     "show": "Our test, 10 customer messages. No system prompt: 4 of 10 right. With the rules and the price list: <pause 0.5> 9 of 10.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "tempo": 1.04
+     "tempo": 1.04,
+     "tts": "Our test, ten customer messages. No system prompt: four of ten right. With the rules and the price list:",
+     "file2": "07b_storyteller.wav",
+     "tts2": "nine of ten.",
+     "pause": 0.5
     },
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "The one it missed? [1] Asked for its instructions, it pasted them, word for word.",
+     "text": "The one it missed? [1] Asked for its instructions, it pasted them, <pause 0.4> [2] word for word.",
      "show": "The one it missed? Asked for its instructions, it pasted them, word for word.",
      "maxgap": 0.3,
      "gap": 0.6,
-     "tempo": 1.04
+     "tempo": 1.04,
+     "tts": "The one it missed? Asked for its instructions, it pasted them,",
+     "file2": "08b_storyteller.wav",
+     "tts2": "word for word.",
+     "pause": 0.4
     }
    ]
   },
@@ -335,8 +352,8 @@
     {
      "who": "storyteller",
      "file": "09_storyteller.wav",
-     "text": "So a system prompt sets the rules, but it can't keep a secret. [1] Never put a password or an API key in it.",
-     "show": "So a system prompt sets the rules, but it can't keep a secret. Never put a password or an API key in it.",
+     "text": "We added a secret code, and the rule: never share it. [1] We asked six times. It shared it six times. [2] So never put a password or an API key in it.",
+     "show": "We added a secret code, and the rule: never share it. We asked six times. It shared it six times. So never put a password or an API key in it.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.04
@@ -344,8 +361,8 @@
     {
      "who": "storyteller",
      "file": "10_storyteller.wav",
-     "text": "Now ask it again: [1] two kilos of sugar, please.",
-     "show": "Now ask it again: 2 kilos of sugar, please.",
+     "text": "Now delete the rules, [1] and ask it again:",
+     "show": "Now delete the rules, and ask it again:",
      "maxgap": 0.3,
      "gap": 0.0,
      "tempo": 1.04

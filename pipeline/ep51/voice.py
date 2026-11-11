@@ -30,18 +30,18 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
 MUST = {"en": {1: [("two", "2"), ("sugar",), ("chinese",), ("shopping",), ("ten", "10"), ("yuan", "you", "yen", "uan")],
-               2: [("same",), ("rules", "rule"), ("price",), ("ninety", "96")], 3: [("system",), ("prompt",), ("step",)],
+               2: [("same",), ("rules", "rule"), ("price",)], "2b": [("ninety", "96")], 3: [("system",), ("prompt",), ("step",)],
                4: [("step",), ("one", "1"), ("list",), ("messages", "message"), ("system",), ("prices", "price"), ("unsure",)],
                5: [("step",), ("two", "2"), ("customer",), ("send",), ("list",), ("reply",)],
                6: [("step",), ("three", "3"), ("loop",), ("chat",), ("remembers", "remember"), ("pay",), ("turn",)],
-               7: [("test",), ("ten", "10"), ("four", "4"), ("shop",), ("price",), ("nine", "9")],
-               8: [("missed", "miss"), ("instructions", "instruction"), ("pasted", "paste"), ("word",)],
-               9: [("system",), ("rules", "rule"), ("secret",), ("password",), ("api",), ("key",)], 10: [("ask",), ("two", "2"), ("sugar",)]},
-        "te": {2: [("तों", "तोम", "96")], 7: [("पदि", "पद", "पाद", "10")], "7b": [("नाल", "4")]}}
+               7: [("test",), ("ten", "10"), ("four", "4"), ("system",), ("price",)], "7b": [("nine", "9")],
+               8: [("missed", "miss"), ("instructions", "instruction"), ("pasted", "paste")], "8b": [("word",)],
+               9: [("secret",), ("code",), ("share", "shared"), ("six", "6"), ("password",), ("api",), ("key",)],
+               10: [("delete", "deleted"), ("rules", "rule"), ("ask",)]},   # render review: lines 2, 7, 8 split; 9 and 10 new
+        "te": {"2b": [("तों", "तोम", "तुम", "96")], 7: [("पदि", "पद", "पाद", "10"), ("नाल", "4")], "7b": [("तोम", "तुम", "तों", "9")]}}
 JUDGE_TEXT = {1: "2 kilos of sugar, please. Our chatbot sent the customer to a Chinese shopping site, and guessed 10 yuan.",
-              2: "The same AI, with a few lines of rules and the shop's price list: 96 rupees.",
-              7: "Our test, 10 customer messages. Without the system prompt: 4 of 10 right, not one shop price. With it: 9 of 10.",
-              10: "Now ask it again: 2 kilos of sugar, please."}
+              "2b": "96 rupees.", 7: "Our test, 10 customer messages. No system prompt: 4 of 10 right. With the rules and the price list:",
+              "7b": "9 of 10.", 9: "We added a secret code, and the rule: never share it. We asked 6 times. It shared it 6 times. So never put a password or an API key in it."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
