@@ -1,0 +1,344 @@
+{
+ "id": "ep51v1",
+ "title": "10 Yuan vs ₹96: Build a Chatbot with a System Prompt (EP51)",
+ "label": "EP51",
+ "banner": "Build a chatbot with a system prompt",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.6,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_tutorial",
+   "tail": 0.0,
+   "boost": 1.0,
+   "drop_at": [
+    [
+     1,
+     1,
+     0.2
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "withsys",
+      "n": 2
+     },
+     {
+      "prop": "title",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "ask": "2 kg sugar please",
+     "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
+     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
+     "code": [
+      "messages = [{\"role\": \"system\", \"content\": SHOP_RULES}]",
+      "while True:",
+      "    messages.append({\"role\": \"user\",",
+      "                     \"content\": input(\"> \")})",
+      "    reply = client.chat.completions.create(",
+      "        model=MODEL, messages=messages)",
+      "    text = reply.choices[0].message.content",
+      "    messages.append({\"role\": \"assistant\",",
+      "                     \"content\": text})",
+      "    print(text)"
+     ]
+    },
+    "yt": {
+     "chapter": "10 yuan vs ₹96",
+     "title": "10 yuan vs ₹96",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "\"Two kilos of sugar, please.\" [1] Our chatbot: \"Order it on Taobao. About ten yuan.\"",
+     "show": "\"2 kilos of sugar, please.\" Our chatbot: \"Order it on Taobao. About 10 yuan.\"",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "The same AI, with four lines of instructions: [1] ninety-six rupees.",
+     "show": "The same AI, with 4 lines of instructions: ₹96.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "Those four lines are a system prompt. [1] Let's build the chatbot, step by step.",
+     "show": "Those 4 lines are a system prompt. Let's build the chatbot, step by step.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_tutorial",
+   "tail": 0.0,
+   "boost": 1.15,
+   "lift": 0.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "step1",
+      "n": 4
+     },
+     {
+      "prop": "step2",
+      "n": 5
+     },
+     {
+      "prop": "step3",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "ask": "2 kg sugar please",
+     "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
+     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
+     "code": [
+      "messages = [{\"role\": \"system\", \"content\": SHOP_RULES}]",
+      "while True:",
+      "    messages.append({\"role\": \"user\",",
+      "                     \"content\": input(\"> \")})",
+      "    reply = client.chat.completions.create(",
+      "        model=MODEL, messages=messages)",
+      "    text = reply.choices[0].message.content",
+      "    messages.append({\"role\": \"assistant\",",
+      "                     \"content\": text})",
+      "    print(text)"
+     ]
+    },
+    "yt": {
+     "chapter": "Build it: 3 steps",
+     "title": "Build it: 3 steps",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "Step one: a list of messages. [1] The first is the system prompt: who it is, what it answers, your prices, and what to say when unsure.",
+     "show": "Step one: a list of messages. The first is the system prompt: who it is, what it answers, your prices, and what to say when unsure.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "Step two: add the customer's message, [1] send the whole list, and add the reply.",
+     "show": "Step two: add the customer's message, send the whole list, and add the reply.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "Step three: a loop. [1] Every turn sends the whole chat again, so it remembers: ninety-six, one fifty, total two forty-six.",
+     "show": "Step 3: a loop. Every turn sends the whole chat again, so it remembers: ₹96, ₹150, total ₹246.",
+     "maxgap": 0.3,
+     "gap": 0.6,
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_tutorial",
+   "tail": 0.0,
+   "boost": 1.35,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     1,
+     1,
+     0.3
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "prop": "leak",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "ask": "2 kg sugar please",
+     "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
+     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
+     "code": [
+      "messages = [{\"role\": \"system\", \"content\": SHOP_RULES}]",
+      "while True:",
+      "    messages.append({\"role\": \"user\",",
+      "                     \"content\": input(\"> \")})",
+      "    reply = client.chat.completions.create(",
+      "        model=MODEL, messages=messages)",
+      "    text = reply.choices[0].message.content",
+      "    messages.append({\"role\": \"assistant\",",
+      "                     \"content\": text})",
+      "    print(text)"
+     ]
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "Our test: ten customer messages. [1] Without the system prompt, zero of four prices right, and it wrote a school essay. With it, nine of ten.",
+     "show": "Our test: 10 customer messages. Without the system prompt, 0 of 4 prices right, and it wrote a school essay. With it, 9 of 10.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "The one it missed? [1] Asked for its instructions, it pasted them. Word for word.",
+     "show": "The one it missed? Asked for its instructions, it pasted them. Word for word.",
+     "maxgap": 0.3,
+     "gap": 0.6,
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_tutorial",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.5,
+   "boost": 1.6,
+   "lift": 0.7,
+   "rise": 1.6,
+   "data": {
+    "beats": [
+     {
+      "prop": "rule",
+      "n": 9
+     },
+     {
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "ask": "2 kg sugar please",
+     "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
+     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
+     "code": [
+      "messages = [{\"role\": \"system\", \"content\": SHOP_RULES}]",
+      "while True:",
+      "    messages.append({\"role\": \"user\",",
+      "                     \"content\": input(\"> \")})",
+      "    reply = client.chat.completions.create(",
+      "        model=MODEL, messages=messages)",
+      "    text = reply.choices[0].message.content",
+      "    messages.append({\"role\": \"assistant\",",
+      "                     \"content\": text})",
+      "    print(text)"
+     ]
+    },
+    "yt": {
+     "chapter": "Not a safe",
+     "title": "Not a safe",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "09_storyteller.wav",
+     "text": "So a system prompt sets the rules, but it isn't a safe. [1] Never put a key or a secret in it.",
+     "show": "So a system prompt sets the rules, but it isn't a safe. Never put a key or a secret in it.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "10_storyteller.wav",
+     "text": "Now ask it again: [1] two kilos of sugar, please.",
+     "show": "Now ask it again: 2 kilos of sugar, please.",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "tempo": 1.04
+    }
+   ]
+  }
+ ]
+}

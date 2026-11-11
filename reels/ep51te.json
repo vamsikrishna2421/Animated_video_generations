@@ -1,0 +1,350 @@
+{
+ "id": "ep51te",
+ "title": "10 Yuan vs ₹96: Build a Chatbot with a System Prompt (EP51) (Telugu audio)",
+ "label": "EP51",
+ "banner": "Build a chatbot with a system prompt",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.6,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.5,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_tutorial",
+   "tail": 0.0,
+   "boost": 1.0,
+   "drop_at": [
+    [
+     1,
+     1,
+     0.2
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "withsys",
+      "n": 2
+     },
+     {
+      "prop": "title",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "ask": "2 kg sugar please",
+     "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
+     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
+     "code": [
+      "messages = [{\"role\": \"system\", \"content\": SHOP_RULES}]",
+      "while True:",
+      "    messages.append({\"role\": \"user\",",
+      "                     \"content\": input(\"> \")})",
+      "    reply = client.chat.completions.create(",
+      "        model=MODEL, messages=messages)",
+      "    text = reply.choices[0].message.content",
+      "    messages.append({\"role\": \"assistant\",",
+      "                     \"content\": text})",
+      "    print(text)"
+     ]
+    },
+    "yt": {
+     "chapter": "10 yuan vs ₹96",
+     "title": "10 yuan vs ₹96",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "\"రెండు కిలోల చక్కెర కావాలి.\" [1] మా చాట్‌బాట్: \"టావోబావో లో ఆర్డర్ చేయండి. దాదాపు పది యువాన్.\"",
+     "show": "\"I want 2 kilos of sugar.\" Our chatbot: \"Order it on Taobao. About 10 yuan.\"",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.05
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "అదే చాట్‌బాట్ కి, నాలుగు లైన్ల సూచనలు ఇస్తే: [1] తొంభై ఆరు రూపాయలు.",
+     "show": "Give the same chatbot 4 lines of instructions: ₹96.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.05
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "ఆ నాలుగు లైన్లే సిస్టమ్ ప్రాంప్ట్. [1] ఇప్పుడు చాట్‌బాట్ ని, స్టెప్ బై స్టెప్ తయారు చేద్దాం.",
+     "show": "Those 4 lines are the system prompt. Now let's make the chatbot, step by step.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.05
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_tutorial",
+   "tail": 0.0,
+   "boost": 1.15,
+   "lift": 0.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "step1",
+      "n": 4
+     },
+     {
+      "prop": "step2",
+      "n": 5
+     },
+     {
+      "prop": "step3",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "ask": "2 kg sugar please",
+     "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
+     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
+     "code": [
+      "messages = [{\"role\": \"system\", \"content\": SHOP_RULES}]",
+      "while True:",
+      "    messages.append({\"role\": \"user\",",
+      "                     \"content\": input(\"> \")})",
+      "    reply = client.chat.completions.create(",
+      "        model=MODEL, messages=messages)",
+      "    text = reply.choices[0].message.content",
+      "    messages.append({\"role\": \"assistant\",",
+      "                     \"content\": text})",
+      "    print(text)"
+     ]
+    },
+    "yt": {
+     "chapter": "Build it: 3 steps",
+     "title": "Build it: 3 steps",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "స్టెప్ వన్: మెసేజ్ ల లిస్ట్. [1] మొదటిది సిస్టమ్ ప్రాంప్ట్: అది ఎవరు, ఏం చెప్పాలి, మీ ధరలు, తెలియకపోతే ఏం చెప్పాలి.",
+     "show": "Step 1: a list of messages. The first is the system prompt: who it is, what to say, your prices, what to say when unsure.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.05
+    },
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "స్టెప్ టూ: కస్టమర్ మెసేజ్ కలపండి, [1] మొత్తం లిస్ట్ పంపండి, జవాబు కూడా కలపండి.",
+     "show": "Step 2: add the customer's message, send the whole list, add the reply too.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.05
+    },
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "స్టెప్ త్రీ: ఒక లూప్. [1] ప్రతిసారీ మొత్తం చాట్ మళ్ళీ వెళ్తుంది, అందుకే గుర్తుంటుంది: తొంభై ఆరు, నూట యాభై, మొత్తం రెండు వందల నలభై ఆరు.",
+     "show": "Step 3: a loop. Every time the whole chat goes again, so it remembers: ₹96, ₹150, total ₹246.",
+     "maxgap": 0.3,
+     "gap": 0.6,
+     "tempo": 1.05
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_tutorial",
+   "tail": 0.0,
+   "boost": 1.35,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     1,
+     1,
+     0.3
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "prop": "leak",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "ask": "2 kg sugar please",
+     "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
+     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
+     "code": [
+      "messages = [{\"role\": \"system\", \"content\": SHOP_RULES}]",
+      "while True:",
+      "    messages.append({\"role\": \"user\",",
+      "                     \"content\": input(\"> \")})",
+      "    reply = client.chat.completions.create(",
+      "        model=MODEL, messages=messages)",
+      "    text = reply.choices[0].message.content",
+      "    messages.append({\"role\": \"assistant\",",
+      "                     \"content\": text})",
+      "    print(text)"
+     ]
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "మా టెస్ట్: పది కస్టమర్ మెసేజ్ లు. [1] సిస్టమ్ ప్రాంప్ట్ లేకుండా, నాలుగు ధరల్లో ఒక్కటీ సరిగ్గా లేదు, స్కూల్ వ్యాసం కూడా రాసింది. ఉంటే, పదిలో తొమ్మిది.",
+     "show": "Our test: 10 customer messages. Without the system prompt, not 1 of 4 prices right, and it wrote a school essay too. With it, 9 of 10.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.05
+    },
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "మిస్ అయింది ఏది? [1] దాని సూచనలు అడిగితే, అలాగే పేస్ట్ చేసింది. అక్షరం అక్షరం.",
+     "show": "Which one did it miss? Asked for its instructions, it pasted them as they are. Letter for letter.",
+     "maxgap": 0.3,
+     "gap": 0.6,
+     "tempo": 1.05
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_tutorial",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.5,
+   "boost": 1.5,
+   "lift": 0.7,
+   "rise": 1.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "rule",
+      "n": 9
+     },
+     {
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "ask": "2 kg sugar please",
+     "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
+     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
+     "code": [
+      "messages = [{\"role\": \"system\", \"content\": SHOP_RULES}]",
+      "while True:",
+      "    messages.append({\"role\": \"user\",",
+      "                     \"content\": input(\"> \")})",
+      "    reply = client.chat.completions.create(",
+      "        model=MODEL, messages=messages)",
+      "    text = reply.choices[0].message.content",
+      "    messages.append({\"role\": \"assistant\",",
+      "                     \"content\": text})",
+      "    print(text)"
+     ]
+    },
+    "yt": {
+     "chapter": "Not a safe",
+     "title": "Not a safe",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "09_storyteller.wav",
+     "text": "అంటే సిస్టమ్ ప్రాంప్ట్ రూల్స్ పెడుతుంది, కానీ అది లాకర్ కాదు. [1] అందులో కీ గానీ, సీక్రెట్ గానీ పెట్టకండి.",
+     "show": "So the system prompt sets rules, but it isn't a locker. Don't put a key or a secret in it.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.05
+    },
+    {
+     "who": "storyteller",
+     "file": "10_storyteller.wav",
+     "text": "ఇప్పుడు మళ్ళీ అడగండి: [1] రెండు కిలోల చక్కెర కావాలి.",
+     "show": "Now ask again: I want 2 kilos of sugar.",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "tempo": 1.05
+    }
+   ]
+  }
+ ]
+}
