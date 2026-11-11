@@ -64,7 +64,7 @@ SPLIT_PAUSE_TE = {2: 0.5, 4: 0.3, 6: 0.3, 7: 0.5, 9: 0.3}   # Telugu 4, 6 in two
 # the title; pops as each step's code lands, three cash sounds on 96 / 150 / 246; a boom and clap on the test numbers; a
 # buzz and boom as it pastes its instructions; a clap and boom into the rule; a riser and the slam back to frame 1.
 SCENES = [("s_a", (1, 2, 3), {"boost": 1.0, "drop_at": [[1, 1, 0.6]], "tail": 0.0}),   # render review: the bed out before ₹96, back on the hit
-          ("s_b", (4, 5, 6), {"boost": 1.15, "lift": 0.5, "tail": 0.0}),
+          ("s_b", (4, 5, 6), {"boost": 1.3, "lift": 0.5, "tail": 0.0}),   # render review: Q2 (the code) sat 2.5 dB under the rest
           ("s_c", (7, 8), {"boost": 1.35, "lift": 0.6, "drop_at": [[0, 2, 0.5], [1, 2, 0.4]], "tail": 0.0}),   # drops before "nine of ten" and "word for word"
           ("s_d", (9, 10), {"outro": True, "pre": 0.5, "boost": 1.6, "lift": 0.7, "rise": 1.6, "tail": 0.0})]
 GAP = {1: 0.4, 2: 0.4, 3: 0.4, 4: 0.4, 5: 0.4, 6: 0.6, 7: 0.4, 8: 0.6, 9: 0.4, 10: 0.0}

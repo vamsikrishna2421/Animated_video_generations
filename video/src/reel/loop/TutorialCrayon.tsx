@@ -50,7 +50,7 @@ const block = (c: Ctx, x: number, y: number, small: string, big: string, col: st
 };
 const bg = (c: Ctx, W: number, H: number) => { c.fillStyle = "#0b1220"; c.fillRect(0, 0, W, H); };
 // a chat window: bubbles from the customer (right, green) and the bot (left, white)
-const chat = (c: Ctx, x: number, y: number, w: number, title: string, msgs: { me: boolean; t: string; k: number; red?: boolean; lab?: string }[], size = 36) => {
+const chat = (c: Ctx, x: number, y: number, w: number, title: string, msgs: { me: boolean; t: string; k: number; red?: boolean; lab?: string; sz?: number }[], size0 = 36) => {
   c.save();
   c.fillStyle = "#e5ddd5"; rrect(c, x, y, w, 40 + 0, 0); c.fill();
   c.fillStyle = "#075e54"; rrect(c, x, y, w, 76, 18); c.fill();
@@ -58,6 +58,7 @@ const chat = (c: Ctx, x: number, y: number, w: number, title: string, msgs: { me
   let yy = y + 100;
   msgs.forEach((m) => {
     if (m.k <= 0) return;
+    const size = m.sz ?? size0;   // render review: the ₹96 reply drawn big
     c.save(); c.globalAlpha = clamp(m.k * 3); c.font = SANS(size, 600);
     const lines = wrap(c, m.t, w - 220);
     const bw = Math.min(w - 120, Math.max(...lines.map((l) => c.measureText(l).width)) + 50), bh = lines.length * size * 1.3 + 30;
@@ -148,7 +149,7 @@ const StTutorial: React.FC<SP> = ({ s }) => {
               c.fillStyle = RED; c.textAlign = "center"; c.fillText("✗ WRONG COUNTRY", 0, 10); c.restore();
             }
           } else chat(c, 50, 460, W - 100, "Shop bot · with a system prompt", [
-            { me: true, t: T.ask, k: 1 }, { me: false, t: "₹96", k: k96 },
+            { me: true, t: T.ask, k: 1 }, { me: false, t: "₹96", k: k96, sz: 96 },
           ], 44);
           if (held) chip(c, "← rules + price list = the system prompt", W / 2, 1180, "#fde68a", INK, seg(f, ln.from, ln.from + 8), 36);
         } else if (P === "title") {
@@ -188,7 +189,7 @@ const StTutorial: React.FC<SP> = ({ s }) => {
         } else if (P === "test") {
           c.font = SANS(fit(c, "OUR TEST · 10 CUSTOMER MESSAGES", W - 120, 56), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("OUR TEST · 10 CUSTOMER MESSAGES", W / 2, 300);   // render review: touched the frame edges
           c.font = SANS(34, 700); c.fillStyle = "#cbd5e1"; c.fillText("the same AI · every reply read by hand", W / 2, 360);
-          c.font = SANS(38, 900); c.fillStyle = "#f87171"; c.fillText("no system prompt", 600, 460); c.fillStyle = "#4ade80"; c.fillText("rules + prices", 900, 460);   // render review: say it had the price list
+          c.font = SANS(32, 900); c.fillStyle = "#f87171"; c.fillText("no system prompt", 610, 460); c.fillStyle = "#4ade80"; c.fillText("rules + prices", 910, 460);   // final check: the two headers touched   // render review: say it had the price list
           const t2 = cu(2, 0.8);   // the right column lands on "nine of ten", after the pause
           const rows: [string, string, string, number][] = [["right overall", "4/10", "9/10", cu(1, 0.3)], ["shop prices right", "0/4", "4/4", cu(1, 0.3) + 6], ["asked for a school essay", "wrote it", "no", cu(1, 0.3) + 12]];
           rows.forEach(([a, v1, v2, t0], q) => {
