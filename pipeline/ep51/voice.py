@@ -37,7 +37,7 @@ MUST = {"en": {1: [("two", "2"), ("sugar",), ("chinese",), ("shopping",), ("ten"
                7: [("test",), ("ten", "10"), ("four", "4"), ("shop",), ("price",), ("nine", "9")],
                8: [("missed", "miss"), ("instructions", "instruction"), ("pasted", "paste"), ("word",)],
                9: [("system",), ("rules", "rule"), ("secret",), ("password",), ("api",), ("key",)], 10: [("ask",), ("two", "2"), ("sugar",)]},
-        "te": {2: [("तों", "तोम", "96")], 7: [("पदि", "पद", "10")], "7b": [("नाल", "4")]}}
+        "te": {2: [("तों", "तोम", "96")], 7: [("पदि", "पद", "पाद", "10")], "7b": [("नाल", "4")]}}
 JUDGE_TEXT = {1: "2 kilos of sugar, please. Our chatbot sent the customer to a Chinese shopping site, and guessed 10 yuan.",
               2: "The same AI, with a few lines of rules and the shop's price list: 96 rupees.",
               7: "Our test, 10 customer messages. Without the system prompt: 4 of 10 right, not one shop price. With it: 9 of 10.",

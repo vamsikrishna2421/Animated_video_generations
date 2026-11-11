@@ -159,8 +159,8 @@ const StTutorial: React.FC<SP> = ({ s }) => {
           const code: string[] = T.code;
           const shown = P === "step1" ? 4 * seg(f, ln.from + 2, ln.from + 40) : P === "step2" ? 4 + 9 * seg(f, ln.from + 2, cu(1, 0.9)) : code.length;
           const hi = P === "step1" ? [2, 3] : P === "step2" ? [5, 6, 7, 8, 9, 10, 11] : [4];
-          chip(c, P === "step1" ? "STEP 1 · a list of messages" : P === "step2" ? "STEP 2 · send it, keep the reply" : "STEP 3 · loop", W / 2, 250, "#fde68a", INK, 1, 42);
-          const yE = editor(c, 40, 320, W - 80, code, shown, hi, 29);
+          chip(c, P === "step1" ? "STEP 1 · a list of messages" : P === "step2" ? "STEP 2 · send it, keep the reply" : "STEP 3 · loop: while True", W / 2, 300, "#fde68a", INK, 1, 42);   // stills: below the banner
+          const yE = P === "step3" ? 330 : editor(c, 40, 370, W - 80, code, shown, hi, 29);   // step 3: the chat alone (it ran under the captions)
           if (P === "step1") {   // SHOP_RULES, the system prompt itself
             const k = seg(f, cu(1, 0.3), cu(1, 0.3) + 10);
             if (k > 0) {
@@ -179,19 +179,19 @@ const StTutorial: React.FC<SP> = ({ s }) => {
               { me: true, t: "Add 1 litre sunflower oil", k: ks[0] }, { me: false, t: "₹150", k: ks[1] },
               { me: true, t: "What's my total?", k: ks[1] }, { me: false, t: "₹246", k: ks[2] },
             ], 34);
-            chip(c, "tokens sent each turn: 225 → 245 → 264 · you pay for each", W / 2, 1790, "#e0e7ff", "#1e3a8a", ks[2], 32);
+            chip(c, "tokens sent each turn: 225 → 245 → 264 · you pay for each", W / 2, 1180, "#e0e7ff", "#1e3a8a", ks[2], 34);
           }
         } else if (P === "test") {
           c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("OUR TEST · 10 CUSTOMER MESSAGES", W / 2, 300);
           c.font = SANS(34, 700); c.fillStyle = "#cbd5e1"; c.fillText("the same AI · every reply read by hand", W / 2, 360);
-          c.font = SANS(38, 900); c.fillStyle = "#f87171"; c.fillText("no system prompt", 390, 460); c.fillStyle = "#4ade80"; c.fillText("with it", 870, 460);
+          c.font = SANS(38, 900); c.fillStyle = "#f87171"; c.fillText("no system prompt", 600, 460); c.fillStyle = "#4ade80"; c.fillText("with it", 910, 460);
           const rows: [string, string, string, number][] = [["right overall", "4/10", "9/10", cu(1, 0.3)], ["shop prices right", "0/4", "4/4", cu(1, 0.55)], ["wrote the school essay", "yes", "no", cu(1, 0.7)]];
           rows.forEach(([a, v1, v2, t0], q) => {
             const k = seg(f, t0 - 2, t0 + 6); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 500 + q * 200;
             c.fillStyle = "#1e293b"; rrect(c, 40, y, W - 80, 170, 22); c.fill();
-            const fs = fit(c, a, 300, 38, 800); c.font = SANS(fs, 800); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(a, 70, y + 100);
-            c.font = SANS(66, 900); c.textAlign = "center"; c.fillStyle = "#f87171"; c.fillText(v1, 520, y + 110); c.fillStyle = "#4ade80"; c.fillText(v2, 870, y + 110);
+            const fs = fit(c, a, 400, 40, 800); c.font = SANS(fs, 800); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(a, 70, y + 100);
+            c.font = SANS(66, 900); c.textAlign = "center"; c.fillStyle = "#f87171"; c.fillText(v1, 620, y + 110); c.fillStyle = "#4ade80"; c.fillText(v2, 900, y + 110);
             c.restore();
           });
           chip(c, "a small test: Qwen2.5 7B on our computer", W / 2, 1220, "#fde68a", INK, seg(f, ln.from + 6, ln.from + 14), 38);

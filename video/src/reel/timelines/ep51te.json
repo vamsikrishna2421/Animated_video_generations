@@ -1,0 +1,1322 @@
+{
+ "id": "ep51te",
+ "look": "classic",
+ "topic": "",
+ "banner": "Build a chatbot with a system prompt",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "title": "10 Yuan vs ₹96: Build a Chatbot with a System Prompt (EP51) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "EP51",
+ "fps": 30,
+ "musicDrops": [
+  [
+   376,
+   406
+  ],
+  [
+   1659,
+   1692
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   616,
+   1.0
+  ],
+  [
+   616,
+   1350,
+   1.15
+  ],
+  [
+   1351,
+   1821,
+   1.35
+  ],
+  [
+   1820,
+   2209,
+   1.5
+  ],
+  [
+   1820,
+   2209,
+   1.5,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 2209,
+ "music": "reel/ep51te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_tutorial",
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "withsys",
+      "n": 2
+     },
+     {
+      "prop": "title",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "ask": "2 kg sugar please",
+     "noneA": "...If you prefer, you can order it online from platforms like Taobao, JD.com, or Tmall.",
+     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
+     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
+     "code": [
+      "client = OpenAI(base_url=SERVER,",
+      "                api_key=os.environ[\"AI_KEY\"])",
+      "messages = [{\"role\": \"system\",",
+      "             \"content\": SHOP_RULES}]",
+      "while True:",
+      "    messages.append({\"role\": \"user\",",
+      "                     \"content\": input(\"> \")})",
+      "    reply = client.chat.completions.create(",
+      "        model=MODEL, messages=messages)",
+      "    text = reply.choices[0].message.content",
+      "    messages.append({\"role\": \"assistant\",",
+      "                     \"content\": text})",
+      "    print(text)"
+     ]
+    },
+    "yt": {
+     "chapter": "10 yuan vs ₹96",
+     "title": "10 yuan vs ₹96",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 616,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep51te/line_01.wav",
+     "from": 15,
+     "frames": 229,
+     "words": [
+      {
+       "w": "\"I",
+       "from": 16,
+       "to": 21
+      },
+      {
+       "w": "want",
+       "from": 21,
+       "to": 29
+      },
+      {
+       "w": "2",
+       "from": 29,
+       "to": 33
+      },
+      {
+       "w": "kilos",
+       "from": 33,
+       "to": 43
+      },
+      {
+       "w": "of",
+       "from": 43,
+       "to": 48
+      },
+      {
+       "w": "sugar.\"",
+       "from": 48,
+       "to": 71
+      },
+      {
+       "w": "Our",
+       "from": 71,
+       "to": 78
+      },
+      {
+       "w": "chatbot",
+       "from": 78,
+       "to": 102
+      },
+      {
+       "w": "sent",
+       "from": 102,
+       "to": 110
+      },
+      {
+       "w": "the",
+       "from": 110,
+       "to": 117
+      },
+      {
+       "w": "customer",
+       "from": 117,
+       "to": 137
+      },
+      {
+       "w": "to",
+       "from": 137,
+       "to": 148
+      },
+      {
+       "w": "a",
+       "from": 148,
+       "to": 151
+      },
+      {
+       "w": "Chinese",
+       "from": 151,
+       "to": 165
+      },
+      {
+       "w": "shopping",
+       "from": 165,
+       "to": 181
+      },
+      {
+       "w": "site,",
+       "from": 181,
+       "to": 200
+      },
+      {
+       "w": "and",
+       "from": 200,
+       "to": 207
+      },
+      {
+       "w": "guessed",
+       "from": 207,
+       "to": 228
+      },
+      {
+       "w": "10",
+       "from": 228,
+       "to": 233
+      },
+      {
+       "w": "yuan.",
+       "from": 233,
+       "to": 244
+      }
+     ],
+     "cues": {
+      "1": 72
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep51te/line_02.wav",
+     "from": 256,
+     "frames": 172,
+     "words": [
+      {
+       "w": "Give",
+       "from": 257,
+       "to": 265
+      },
+      {
+       "w": "the",
+       "from": 265,
+       "to": 271
+      },
+      {
+       "w": "same",
+       "from": 271,
+       "to": 283
+      },
+      {
+       "w": "chatbot",
+       "from": 283,
+       "to": 309
+      },
+      {
+       "w": "a",
+       "from": 309,
+       "to": 312
+      },
+      {
+       "w": "few",
+       "from": 312,
+       "to": 318
+      },
+      {
+       "w": "lines",
+       "from": 318,
+       "to": 342
+      },
+      {
+       "w": "of",
+       "from": 342,
+       "to": 354
+      },
+      {
+       "w": "rules",
+       "from": 354,
+       "to": 363
+      },
+      {
+       "w": "and",
+       "from": 363,
+       "to": 374
+      },
+      {
+       "w": "the",
+       "from": 374,
+       "to": 381
+      },
+      {
+       "w": "shop's",
+       "from": 381,
+       "to": 401
+      },
+      {
+       "w": "price",
+       "from": 401,
+       "to": 410
+      },
+      {
+       "w": "list:",
+       "from": 410,
+       "to": 420
+      },
+      {
+       "w": "₹96.",
+       "from": 420,
+       "to": 427
+      }
+     ],
+     "cues": {
+      "1": 400
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep51te/line_03.wav",
+     "from": 440,
+     "frames": 165,
+     "words": [
+      {
+       "w": "Those",
+       "from": 440,
+       "to": 449
+      },
+      {
+       "w": "rules",
+       "from": 449,
+       "to": 458
+      },
+      {
+       "w": "are",
+       "from": 458,
+       "to": 474
+      },
+      {
+       "w": "the",
+       "from": 474,
+       "to": 480
+      },
+      {
+       "w": "system",
+       "from": 480,
+       "to": 490
+      },
+      {
+       "w": "prompt.",
+       "from": 490,
+       "to": 512
+      },
+      {
+       "w": "Now",
+       "from": 512,
+       "to": 527
+      },
+      {
+       "w": "let's",
+       "from": 527,
+       "to": 535
+      },
+      {
+       "w": "make",
+       "from": 535,
+       "to": 543
+      },
+      {
+       "w": "the",
+       "from": 543,
+       "to": 558
+      },
+      {
+       "w": "chatbot,",
+       "from": 558,
+       "to": 584
+      },
+      {
+       "w": "step",
+       "from": 584,
+       "to": 591
+      },
+      {
+       "w": "by",
+       "from": 591,
+       "to": 595
+      },
+      {
+       "w": "step.",
+       "from": 595,
+       "to": 604
+      }
+     ],
+     "cues": {
+      "1": 489
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_tutorial",
+   "data": {
+    "beats": [
+     {
+      "prop": "step1",
+      "n": 4
+     },
+     {
+      "prop": "step2",
+      "n": 5
+     },
+     {
+      "prop": "step3",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "ask": "2 kg sugar please",
+     "noneA": "...If you prefer, you can order it online from platforms like Taobao, JD.com, or Tmall.",
+     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
+     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
+     "code": [
+      "client = OpenAI(base_url=SERVER,",
+      "                api_key=os.environ[\"AI_KEY\"])",
+      "messages = [{\"role\": \"system\",",
+      "             \"content\": SHOP_RULES}]",
+      "while True:",
+      "    messages.append({\"role\": \"user\",",
+      "                     \"content\": input(\"> \")})",
+      "    reply = client.chat.completions.create(",
+      "        model=MODEL, messages=messages)",
+      "    text = reply.choices[0].message.content",
+      "    messages.append({\"role\": \"assistant\",",
+      "                     \"content\": text})",
+      "    print(text)"
+     ]
+    },
+    "yt": {
+     "chapter": "Build it: 3 steps",
+     "title": "Build it: 3 steps",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 616,
+   "frames": 734,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep51te/line_04.wav",
+     "from": 0,
+     "frames": 277,
+     "words": [
+      {
+       "w": "Step",
+       "from": 2,
+       "to": 9
+      },
+      {
+       "w": "1:",
+       "from": 9,
+       "to": 18
+      },
+      {
+       "w": "a",
+       "from": 18,
+       "to": 30
+      },
+      {
+       "w": "list",
+       "from": 30,
+       "to": 37
+      },
+      {
+       "w": "of",
+       "from": 37,
+       "to": 41
+      },
+      {
+       "w": "messages.",
+       "from": 41,
+       "to": 54
+      },
+      {
+       "w": "The",
+       "from": 70,
+       "to": 76
+      },
+      {
+       "w": "first",
+       "from": 76,
+       "to": 85
+      },
+      {
+       "w": "is",
+       "from": 85,
+       "to": 89
+      },
+      {
+       "w": "the",
+       "from": 89,
+       "to": 95
+      },
+      {
+       "w": "system",
+       "from": 95,
+       "to": 118
+      },
+      {
+       "w": "prompt:",
+       "from": 118,
+       "to": 130
+      },
+      {
+       "w": "who",
+       "from": 130,
+       "to": 144
+      },
+      {
+       "w": "it",
+       "from": 144,
+       "to": 149
+      },
+      {
+       "w": "is,",
+       "from": 149,
+       "to": 155
+      },
+      {
+       "w": "what",
+       "from": 155,
+       "to": 162
+      },
+      {
+       "w": "only",
+       "from": 162,
+       "to": 170
+      },
+      {
+       "w": "it",
+       "from": 170,
+       "to": 174
+      },
+      {
+       "w": "should",
+       "from": 174,
+       "to": 185
+      },
+      {
+       "w": "talk",
+       "from": 185,
+       "to": 192
+      },
+      {
+       "w": "about,",
+       "from": 192,
+       "to": 210
+      },
+      {
+       "w": "your",
+       "from": 210,
+       "to": 218
+      },
+      {
+       "w": "prices,",
+       "from": 218,
+       "to": 239
+      },
+      {
+       "w": "what",
+       "from": 239,
+       "to": 247
+      },
+      {
+       "w": "to",
+       "from": 247,
+       "to": 251
+      },
+      {
+       "w": "say",
+       "from": 251,
+       "to": 257
+      },
+      {
+       "w": "when",
+       "from": 257,
+       "to": 265
+      },
+      {
+       "w": "unsure.",
+       "from": 265,
+       "to": 277
+      }
+     ],
+     "cues": {
+      "1": 70
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep51te/line_05.wav",
+     "from": 289,
+     "frames": 179,
+     "words": [
+      {
+       "w": "Step",
+       "from": 294,
+       "to": 317
+      },
+      {
+       "w": "2:",
+       "from": 317,
+       "to": 326
+      },
+      {
+       "w": "add",
+       "from": 326,
+       "to": 332
+      },
+      {
+       "w": "the",
+       "from": 332,
+       "to": 338
+      },
+      {
+       "w": "customer's",
+       "from": 338,
+       "to": 359
+      },
+      {
+       "w": "message,",
+       "from": 359,
+       "to": 382
+      },
+      {
+       "w": "send",
+       "from": 382,
+       "to": 390
+      },
+      {
+       "w": "the",
+       "from": 390,
+       "to": 400
+      },
+      {
+       "w": "whole",
+       "from": 400,
+       "to": 419
+      },
+      {
+       "w": "list,",
+       "from": 419,
+       "to": 429
+      },
+      {
+       "w": "add",
+       "from": 429,
+       "to": 435
+      },
+      {
+       "w": "the",
+       "from": 435,
+       "to": 441
+      },
+      {
+       "w": "reply",
+       "from": 441,
+       "to": 455
+      },
+      {
+       "w": "too.",
+       "from": 455,
+       "to": 463
+      }
+     ],
+     "cues": {
+      "1": 380
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep51te/line_06.wav",
+     "from": 480,
+     "frames": 237,
+     "words": [
+      {
+       "w": "Step",
+       "from": 485,
+       "to": 507
+      },
+      {
+       "w": "3:",
+       "from": 507,
+       "to": 511
+      },
+      {
+       "w": "a",
+       "from": 511,
+       "to": 513
+      },
+      {
+       "w": "loop.",
+       "from": 513,
+       "to": 521
+      },
+      {
+       "w": "Every",
+       "from": 531,
+       "to": 540
+      },
+      {
+       "w": "time",
+       "from": 540,
+       "to": 548
+      },
+      {
+       "w": "the",
+       "from": 548,
+       "to": 555
+      },
+      {
+       "w": "whole",
+       "from": 555,
+       "to": 573
+      },
+      {
+       "w": "chat",
+       "from": 573,
+       "to": 580
+      },
+      {
+       "w": "goes",
+       "from": 580,
+       "to": 588
+      },
+      {
+       "w": "again:",
+       "from": 588,
+       "to": 599
+      },
+      {
+       "w": "that's",
+       "from": 599,
+       "to": 619
+      },
+      {
+       "w": "why",
+       "from": 619,
+       "to": 626
+      },
+      {
+       "w": "it",
+       "from": 626,
+       "to": 630
+      },
+      {
+       "w": "remembers,",
+       "from": 630,
+       "to": 656
+      },
+      {
+       "w": "and",
+       "from": 656,
+       "to": 662
+      },
+      {
+       "w": "you",
+       "from": 662,
+       "to": 669
+      },
+      {
+       "w": "pay",
+       "from": 669,
+       "to": 675
+      },
+      {
+       "w": "for",
+       "from": 675,
+       "to": 681
+      },
+      {
+       "w": "all",
+       "from": 681,
+       "to": 688
+      },
+      {
+       "w": "of",
+       "from": 688,
+       "to": 693
+      },
+      {
+       "w": "it",
+       "from": 693,
+       "to": 697
+      },
+      {
+       "w": "every",
+       "from": 697,
+       "to": 707
+      },
+      {
+       "w": "time.",
+       "from": 707,
+       "to": 716
+      }
+     ],
+     "cues": {
+      "1": 531
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_tutorial",
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "prop": "leak",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "ask": "2 kg sugar please",
+     "noneA": "...If you prefer, you can order it online from platforms like Taobao, JD.com, or Tmall.",
+     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
+     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
+     "code": [
+      "client = OpenAI(base_url=SERVER,",
+      "                api_key=os.environ[\"AI_KEY\"])",
+      "messages = [{\"role\": \"system\",",
+      "             \"content\": SHOP_RULES}]",
+      "while True:",
+      "    messages.append({\"role\": \"user\",",
+      "                     \"content\": input(\"> \")})",
+      "    reply = client.chat.completions.create(",
+      "        model=MODEL, messages=messages)",
+      "    text = reply.choices[0].message.content",
+      "    messages.append({\"role\": \"assistant\",",
+      "                     \"content\": text})",
+      "    print(text)"
+     ]
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1351,
+   "frames": 470,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep51te/line_07.wav",
+     "from": 0,
+     "frames": 291,
+     "words": [
+      {
+       "w": "Our",
+       "from": 2,
+       "to": 9
+      },
+      {
+       "w": "test,",
+       "from": 9,
+       "to": 30
+      },
+      {
+       "w": "10",
+       "from": 30,
+       "to": 35
+      },
+      {
+       "w": "customer",
+       "from": 35,
+       "to": 50
+      },
+      {
+       "w": "messages.",
+       "from": 50,
+       "to": 67
+      },
+      {
+       "w": "Without",
+       "from": 79,
+       "to": 95
+      },
+      {
+       "w": "the",
+       "from": 95,
+       "to": 103
+      },
+      {
+       "w": "system",
+       "from": 103,
+       "to": 125
+      },
+      {
+       "w": "prompt:",
+       "from": 125,
+       "to": 148
+      },
+      {
+       "w": "only",
+       "from": 148,
+       "to": 158
+      },
+      {
+       "w": "4",
+       "from": 158,
+       "to": 162
+      },
+      {
+       "w": "of",
+       "from": 162,
+       "to": 171
+      },
+      {
+       "w": "10",
+       "from": 171,
+       "to": 185
+      },
+      {
+       "w": "right,",
+       "from": 185,
+       "to": 199
+      },
+      {
+       "w": "not",
+       "from": 199,
+       "to": 206
+      },
+      {
+       "w": "one",
+       "from": 206,
+       "to": 214
+      },
+      {
+       "w": "shop",
+       "from": 214,
+       "to": 234
+      },
+      {
+       "w": "price.",
+       "from": 234,
+       "to": 248
+      },
+      {
+       "w": "With",
+       "from": 248,
+       "to": 257
+      },
+      {
+       "w": "it:",
+       "from": 257,
+       "to": 273
+      },
+      {
+       "w": "9",
+       "from": 273,
+       "to": 277
+      },
+      {
+       "w": "of",
+       "from": 277,
+       "to": 283
+      },
+      {
+       "w": "10.",
+       "from": 283,
+       "to": 291
+      }
+     ],
+     "cues": {
+      "1": 79
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep51te/line_08.wav",
+     "from": 303,
+     "frames": 147,
+     "words": [
+      {
+       "w": "Which",
+       "from": 303,
+       "to": 313
+      },
+      {
+       "w": "one",
+       "from": 313,
+       "to": 319
+      },
+      {
+       "w": "did",
+       "from": 319,
+       "to": 326
+      },
+      {
+       "w": "it",
+       "from": 326,
+       "to": 331
+      },
+      {
+       "w": "miss?",
+       "from": 331,
+       "to": 351
+      },
+      {
+       "w": "Asked",
+       "from": 351,
+       "to": 361
+      },
+      {
+       "w": "for",
+       "from": 361,
+       "to": 367
+      },
+      {
+       "w": "its",
+       "from": 367,
+       "to": 374
+      },
+      {
+       "w": "rules,",
+       "from": 374,
+       "to": 393
+      },
+      {
+       "w": "it",
+       "from": 393,
+       "to": 398
+      },
+      {
+       "w": "pasted",
+       "from": 398,
+       "to": 409
+      },
+      {
+       "w": "them,",
+       "from": 409,
+       "to": 419
+      },
+      {
+       "w": "letter",
+       "from": 419,
+       "to": 430
+      },
+      {
+       "w": "for",
+       "from": 430,
+       "to": 436
+      },
+      {
+       "w": "letter.",
+       "from": 436,
+       "to": 449
+      }
+     ],
+     "cues": {
+      "1": 332
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_tutorial",
+   "data": {
+    "beats": [
+     {
+      "prop": "rule",
+      "n": 9
+     },
+     {
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "ask": "2 kg sugar please",
+     "noneA": "...If you prefer, you can order it online from platforms like Taobao, JD.com, or Tmall.",
+     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
+     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
+     "code": [
+      "client = OpenAI(base_url=SERVER,",
+      "                api_key=os.environ[\"AI_KEY\"])",
+      "messages = [{\"role\": \"system\",",
+      "             \"content\": SHOP_RULES}]",
+      "while True:",
+      "    messages.append({\"role\": \"user\",",
+      "                     \"content\": input(\"> \")})",
+      "    reply = client.chat.completions.create(",
+      "        model=MODEL, messages=messages)",
+      "    text = reply.choices[0].message.content",
+      "    messages.append({\"role\": \"assistant\",",
+      "                     \"content\": text})",
+      "    print(text)"
+     ]
+    },
+    "yt": {
+     "chapter": "It can't keep a secret",
+     "title": "It can't keep a secret",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1820,
+   "frames": 389,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep51te/line_09.wav",
+     "from": 15,
+     "frames": 223,
+     "words": [
+      {
+       "w": "So",
+       "from": 16,
+       "to": 20
+      },
+      {
+       "w": "the",
+       "from": 20,
+       "to": 37
+      },
+      {
+       "w": "system",
+       "from": 37,
+       "to": 48
+      },
+      {
+       "w": "prompt",
+       "from": 48,
+       "to": 59
+      },
+      {
+       "w": "sets",
+       "from": 59,
+       "to": 67
+      },
+      {
+       "w": "rules,",
+       "from": 67,
+       "to": 78
+      },
+      {
+       "w": "but",
+       "from": 78,
+       "to": 93
+      },
+      {
+       "w": "it",
+       "from": 93,
+       "to": 107
+      },
+      {
+       "w": "can't",
+       "from": 107,
+       "to": 116
+      },
+      {
+       "w": "keep",
+       "from": 116,
+       "to": 124
+      },
+      {
+       "w": "a",
+       "from": 124,
+       "to": 127
+      },
+      {
+       "w": "secret.",
+       "from": 127,
+       "to": 159
+      },
+      {
+       "w": "Don't",
+       "from": 159,
+       "to": 178
+      },
+      {
+       "w": "put",
+       "from": 178,
+       "to": 185
+      },
+      {
+       "w": "a",
+       "from": 185,
+       "to": 188
+      },
+      {
+       "w": "password",
+       "from": 188,
+       "to": 212
+      },
+      {
+       "w": "or",
+       "from": 212,
+       "to": 217
+      },
+      {
+       "w": "a",
+       "from": 217,
+       "to": 220
+      },
+      {
+       "w": "key",
+       "from": 220,
+       "to": 227
+      },
+      {
+       "w": "in",
+       "from": 227,
+       "to": 232
+      },
+      {
+       "w": "it.",
+       "from": 232,
+       "to": 238
+      }
+     ],
+     "cues": {
+      "1": 155
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep51te/line_10.wav",
+     "from": 250,
+     "frames": 91,
+     "words": [
+      {
+       "w": "Now",
+       "from": 251,
+       "to": 259
+      },
+      {
+       "w": "ask",
+       "from": 259,
+       "to": 267
+      },
+      {
+       "w": "again:",
+       "from": 267,
+       "to": 281
+      },
+      {
+       "w": "I",
+       "from": 281,
+       "to": 295
+      },
+      {
+       "w": "want",
+       "from": 295,
+       "to": 305
+      },
+      {
+       "w": "2",
+       "from": 305,
+       "to": 309
+      },
+      {
+       "w": "kilos",
+       "from": 309,
+       "to": 321
+      },
+      {
+       "w": "of",
+       "from": 321,
+       "to": 327
+      },
+      {
+       "w": "sugar.",
+       "from": 327,
+       "to": 341
+      }
+     ],
+     "cues": {
+      "1": 297
+     }
+    }
+   ]
+  }
+ ]
+}
