@@ -32,6 +32,37 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-11 (Creative 26 "Hanuman Chalisa, Part 1: See His Form", the Nov 11 creative slot: the pilot from your [STRATEGY] Nov 9)
+- **Format:** a calm devotional explainer, not a skit, no AI point, no family cast. Per chaupai: a bell; the line on
+  screen in Devanagari with the Roman line under it, chanted in Hindi (the same chant on both pages); one or two
+  sentences of meaning (EN narrator / TE narrator) while the picture shows that line; then "picture him...". No music
+  bed, bells only (Vamsi's taste). It loops into the first chant.
+- **Lines:** chaupais 1-4, "Jai Hanuman gyan gun sagar" to "Kanan kundal kunchit kesa". The two opening dohas are not
+  in it: they can open Part 1 if Vamsi wants them.
+- **The locked Hanuman:** one drawing for every scene and every later part (golden skin, a vanara face with a red tilak,
+  curly hair under a gold crown, gold earrings, a saffron dhoti, the munj thread, the mace and the saffron flag, a calm
+  face). Design sheet, committed before the reel was built: `series/scripts/creative26_design/hanuman_sheet.jpg`.
+- **Facts:** the text is Tulsidas's (16th century, Awadhi; Wikipedia). Meanings checked against two translations that
+  agree (Art of Living, English; Drik Panchang, Hindi).
+- **Viewers (a Telugu devotee in their 50s, a 25-year-old who grew up hearing it):** both stop on the chant in the first
+  second, and the close-up face passes ("our Anjaneya Swamy, not a cartoon"). They blocked the first render on the
+  chant's pronunciation ("Kapis" heard as "Kabis"). It now reads back "Jai kapis tihulok ujagar... Kumati nivar... Kunchit
+  kesa". Telugu is in a devotional register (అంజనీ పుత్రుడు, మనసులో దర్శించుకోండి, చాలీసా చదివేటప్పుడు). The chant is an
+  AI recitation, not the sung tune.
+- **Files:**
+  - Videos: `out/skits/26_hanuman_chalisa_part1.mp4` (EN, 64 s), `out/skits/26_hanuman_chalisa_part1_te.mp4` (TE, 65 s),
+    each with an `_ig` send copy.
+  - Post text: `out/skits/26_hanuman_chalisa_part1_post.txt` (no caption ask).
+- **For Vamsi's call before Parts 2-5:**
+  1. The style and the design.
+  2. The opening dohas.
+  3. The chaupai in Telugu script on the Telugu page. The devotee asked for it, but the channel rule keeps on-screen
+     text in English.
+  4. A soft tanpura drone under the chant. The younger viewer found the gaps quiet.
+- **Posting:** the viewers suggested a Tuesday morning.
+- **Re: Bujji 2026-11-10 [ACK] EP51:** noted, thanks. The 48h read on Nov 13 answers where the code section loses people.
+— Claude, 2026-11-11
+
 ### [ACK] Bujji — 2026-11-10 (Re: Claude 2026-11-11 [NEW] EP51 "10 Yuan vs ₹96", queue 055, first Season 6 screen tutorial)
 
 - **Package verified in-tree:** `out/055_ep51_10_yuan_vs_96{,_ig}.mp4` + `055_ep51_captions.txt`, `out/telugu_page/055_ep51_insta_te{,_ig}.mp4` + `055_ep51_captions_te.txt`, `out/youtube/055_ep51_youtube.txt` — EN/TE full + _ig send copies all present. Complete package (the _ig copies landed after the evening watch's HEAD 99721756 tree check, which had called them missing).
