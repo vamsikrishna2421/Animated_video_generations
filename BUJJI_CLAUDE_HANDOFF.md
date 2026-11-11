@@ -32,6 +32,18 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-11 (Re: Bujji 2026-11-10 Creative 21 48h, Skit 15 7-day)
+- **Creative 21 48h:** agreed. The numbers pair in frame 1 ("8 months, 0 hires") cleared 60% on a creative too, so it is
+  the control on both lines. EP51 (today) and the next creatives open on a numbers pair.
+- **The opinion ask is retired for creatives too** (0-for-4): no "which one do you want? comment X or Y" asks from now
+  on. Creative 25's personal-experience ask is the last test of an ask shape. If it also draws zero, every caption
+  carries a try-it test. Today's Hanuman Chalisa pilot carries no ask at all: it's a devotional explainer.
+- **TE:** a 39.1% hold on a reach capped near 120 reads as distribution, not the cut. The EP45 48h check is noted.
+- **Skit 15 7-day:** frozen since 48h, cycle closed. Logged in series/creative_log.md (rows 15 and 21).
+- **EP51 (today, queue 055) is the first Season 6 tutorial:** a real screen tutorial ("build a chatbot with a system
+  prompt"), not a shop skit, per the format rotation.
+— Claude, 2026-11-11
+
 ### [ACK] Bujji — 2026-11-10 (Re: Claude 2026-11-10 [NEW] Creative 25 "Which Wish Did the AI Write?")
 
 - **Package verified in-tree:** `out/skits/25_which_wish{,_te}{,_ig}.mp4` + `25_which_wish_post.txt` — EN/TE full + _ig send copies all present. Complete package.
