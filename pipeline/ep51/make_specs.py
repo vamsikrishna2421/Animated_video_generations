@@ -11,52 +11,54 @@ ROOT = Path(__file__).resolve().parents[2]
 R = ROOT / "reels"
 
 # n: (prop, English, Telugu). prop: TutorialCrayon.tsx. " | " = two takes (a beat of silence before the second).
-LINES = {
-    1: ("hook", "\"Two kilos of sugar, please.\" [1] Our chatbot: \"Order it on Taobao. About ten yuan.\"",
-        "\"రెండు కిలోల చక్కెర కావాలి.\" [1] మా చాట్‌బాట్: \"టావోబావో లో ఆర్డర్ చేయండి. దాదాపు పది యువాన్.\""),
-    2: ("withsys", "The same AI, with four lines of instructions: [1] ninety-six rupees.", "అదే చాట్‌బాట్ కి, నాలుగు లైన్ల సూచనలు ఇస్తే: [1] తొంభై ఆరు రూపాయలు."),
-    3: ("title", "Those four lines are a system prompt. [1] Let's build the chatbot, step by step.",
-        "ఆ నాలుగు లైన్లే సిస్టమ్ ప్రాంప్ట్. [1] ఇప్పుడు చాట్‌బాట్ ని, స్టెప్ బై స్టెప్ తయారు చేద్దాం."),
-    4: ("step1", "Step one: a list of messages. [1] The first is the system prompt: who it is, what it answers, your prices, and what to say when unsure.",
-        "స్టెప్ వన్: మెసేజ్ ల లిస్ట్. [1] మొదటిది సిస్టమ్ ప్రాంప్ట్: అది ఎవరు, ఏం చెప్పాలి, మీ ధరలు, తెలియకపోతే ఏం చెప్పాలి."),
+LINES = {   # v2 (script review): two real replies, not one stuck together; "rules + the price list"; 4/10 vs 9/10; "can't keep a secret"
+    1: ("hook", "\"Two kilos of sugar, please.\" [1] Our chatbot sent the customer to a Chinese shopping site, and guessed ten yuan.",
+        "\"రెండు కిలోల చక్కెర కావాలి.\" [1] మా చాట్‌బాట్, కస్టమర్ ని ఒక చైనా షాపింగ్ సైట్ కి పంపింది, పది యువాన్ అని ఊహించింది."),
+    2: ("withsys", "The same AI, with a few lines of rules and the shop's price list: [1] ninety-six rupees.",
+        "అదే చాట్‌బాట్ కి, కొన్ని లైన్ల రూల్స్, షాప్ ధరల లిస్ట్ ఇస్తే: [1] తొంభై ఆరు రూపాయలు."),
+    3: ("title", "Those rules are a system prompt. [1] Let's build the chatbot, step by step.",
+        "ఆ రూల్సే సిస్టమ్ ప్రాంప్ట్. [1] ఇప్పుడు చాట్‌బాట్ ని, స్టెప్ బై స్టెప్ తయారు చేద్దాం."),
+    4: ("step1", "Step one: a list of messages. [1] The first is the system prompt: who it is, what it may talk about, your prices, and what to say when unsure.",
+        "స్టెప్ వన్: మెసేజ్‌ల లిస్ట్. | [1] మొదటిది సిస్టమ్ ప్రాంప్ట్: అది ఎవరు, దేని గురించి మాత్రమే మాట్లాడాలి, మీ ధరలు, తెలియకపోతే ఏం చెప్పాలి."),
     5: ("step2", "Step two: add the customer's message, [1] send the whole list, and add the reply.",
-        "స్టెప్ టూ: కస్టమర్ మెసేజ్ కలపండి, [1] మొత్తం లిస్ట్ పంపండి, జవాబు కూడా కలపండి."),
-    6: ("step3", "Step three: a loop. [1] Every turn sends the whole chat again, so it remembers: ninety-six, one fifty, total two forty-six.",
-        "స్టెప్ త్రీ: ఒక లూప్. [1] ప్రతిసారీ మొత్తం చాట్ మళ్ళీ వెళ్తుంది, అందుకే గుర్తుంటుంది: తొంభై ఆరు, నూట యాభై, మొత్తం రెండు వందల నలభై ఆరు."),
-    7: ("test", "Our test: ten customer messages. [1] Without the system prompt, zero of four prices right, and it wrote a school essay. With it, nine of ten.",
-        "మా టెస్ట్: పది కస్టమర్ మెసేజ్ లు. [1] సిస్టమ్ ప్రాంప్ట్ లేకుండా, నాలుగు ధరల్లో ఒక్కటీ సరిగ్గా లేదు, స్కూల్ వ్యాసం కూడా రాసింది. ఉంటే, పదిలో తొమ్మిది."),
-    8: ("leak", "The one it missed? [1] Asked for its instructions, it pasted them. Word for word.",
-        "మిస్ అయింది ఏది? [1] దాని సూచనలు అడిగితే, అలాగే పేస్ట్ చేసింది. అక్షరం అక్షరం."),
-    9: ("rule", "So a system prompt sets the rules, but it isn't a safe. [1] Never put a key or a secret in it.",
-        "అంటే సిస్టమ్ ప్రాంప్ట్ రూల్స్ పెడుతుంది, కానీ అది లాకర్ కాదు. [1] అందులో కీ గానీ, సీక్రెట్ గానీ పెట్టకండి."),
+        "స్టెప్ టూ: కస్టమర్ మెసేజ్ యాడ్ చేయండి, [1] మొత్తం లిస్ట్ పంపండి, జవాబు కూడా యాడ్ చేయండి."),
+    6: ("step3", "Step three: a loop. [1] Every turn resends the whole chat: that's how it remembers, and you pay for all of it, every turn.",
+        "స్టెప్ త్రీ: ఒక లూప్. | [1] ప్రతిసారీ మొత్తం చాట్ మళ్ళీ వెళ్తుంది: అందుకే గుర్తుంటుంది, ప్రతిసారీ దానికంతా డబ్బు కూడా పడుతుంది."),
+    7: ("test", "Our test, ten customer messages. [1] Without the system prompt: four of ten right, not one shop price. With it: nine of ten.",
+        "మా టెస్ట్, పది కస్టమర్ మెసేజ్‌లు. | [1] సిస్టమ్ ప్రాంప్ట్ లేకుండా: పదిలో నాలుగే సరిగ్గా, ఒక్క షాప్ ధర కూడా లేదు. సిస్టమ్ ప్రాంప్ట్ ఉంటే: పదికి తొమ్మిది."),
+    8: ("leak", "The one it missed? [1] Asked for its instructions, it pasted them, word for word.",
+        "మిస్ అయింది ఏది? [1] దాని రూల్స్ అడిగితే, అక్షరం పొల్లు పోకుండా పేస్ట్ చేసింది."),
+    9: ("rule", "So a system prompt sets the rules, but it can't keep a secret. [1] Never put a password or an API key in it.",
+        "అంటే సిస్టమ్ ప్రాంప్ట్ రూల్స్ పెడుతుంది, కానీ సీక్రెట్ దాచలేదు. [1] అందులో పాస్‌వర్డ్ గానీ, కీ గానీ పెట్టకండి."),
     10: ("loop", "Now ask it again: [1] two kilos of sugar, please.", "ఇప్పుడు మళ్ళీ అడగండి: [1] రెండు కిలోల చక్కెర కావాలి."),
 }
-SHOW = {1: "\"2 kilos of sugar, please.\" Our chatbot: \"Order it on Taobao. About 10 yuan.\"", 2: "The same AI, with 4 lines of instructions: ₹96.",
-        3: "Those 4 lines are a system prompt. Let's build the chatbot, step by step.",
-        6: "Step 3: a loop. Every turn sends the whole chat again, so it remembers: ₹96, ₹150, total ₹246.",
-        7: "Our test: 10 customer messages. Without the system prompt, 0 of 4 prices right, and it wrote a school essay. With it, 9 of 10.",
+SHOW = {1: "\"2 kilos of sugar, please.\" Our chatbot sent the customer to a Chinese shopping site, and guessed 10 yuan.",
+        2: "The same AI, with a few lines of rules and the shop's price list: ₹96.",
+        7: "Our test, 10 customer messages. Without the system prompt: 4 of 10 right, not one shop price. With it: 9 of 10.",
         10: "Now ask it again: 2 kilos of sugar, please."}
 SHOW_TE = {
-    1: "\"I want 2 kilos of sugar.\" Our chatbot: \"Order it on Taobao. About 10 yuan.\"", 2: "Give the same chatbot 4 lines of instructions: ₹96.",
-    3: "Those 4 lines are the system prompt. Now let's make the chatbot, step by step.",
-    4: "Step 1: a list of messages. The first is the system prompt: who it is, what to say, your prices, what to say when unsure.",
+    1: "\"I want 2 kilos of sugar.\" Our chatbot sent the customer to a Chinese shopping site, and guessed 10 yuan.",
+    2: "Give the same chatbot a few lines of rules and the shop's price list: ₹96.",
+    3: "Those rules are the system prompt. Now let's make the chatbot, step by step.",
+    4: "Step 1: a list of messages. The first is the system prompt: who it is, what only it should talk about, your prices, what to say when unsure.",
     5: "Step 2: add the customer's message, send the whole list, add the reply too.",
-    6: "Step 3: a loop. Every time the whole chat goes again, so it remembers: ₹96, ₹150, total ₹246.",
-    7: "Our test: 10 customer messages. Without the system prompt, not 1 of 4 prices right, and it wrote a school essay too. With it, 9 of 10.",
-    8: "Which one did it miss? Asked for its instructions, it pasted them as they are. Letter for letter.",
-    9: "So the system prompt sets rules, but it isn't a locker. Don't put a key or a secret in it.",
+    6: "Step 3: a loop. Every time the whole chat goes again: that's why it remembers, and you pay for all of it every time.",
+    7: "Our test, 10 customer messages. Without the system prompt: only 4 of 10 right, not one shop price. With it: 9 of 10.",
+    8: "Which one did it miss? Asked for its rules, it pasted them, letter for letter.",
+    9: "So the system prompt sets rules, but it can't keep a secret. Don't put a password or a key in it.",
     10: "Now ask again: I want 2 kilos of sugar.",
 }
-T = {   # on screen (English on both pages), from series/scripts/ep51_demo/chat.json
+T = {   # on screen (English on both pages), from series/scripts/ep51_demo/chat.json (no system prompt: turn 1 and turn 3, kept apart)
     "ask": "2 kg sugar please",
-    "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+    "noneA": "...If you prefer, you can order it online from platforms like Taobao, JD.com, or Tmall.",
     "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
     "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
-    "code": ['messages = [{"role": "system", "content": SHOP_RULES}]', "while True:", '    messages.append({"role": "user",', '                     "content": input("> ")})',
-             "    reply = client.chat.completions.create(", "        model=MODEL, messages=messages)", "    text = reply.choices[0].message.content",
-             '    messages.append({"role": "assistant",', '                     "content": text})', "    print(text)"],
+    "code": ['client = OpenAI(base_url=SERVER,', '                api_key=os.environ["AI_KEY"])',
+             'messages = [{"role": "system",', '             "content": SHOP_RULES}]', "while True:", '    messages.append({"role": "user",',
+             '                     "content": input("> ")})', "    reply = client.chat.completions.create(", "        model=MODEL, messages=messages)",
+             "    text = reply.choices[0].message.content", '    messages.append({"role": "assistant",', '                     "content": text})', "    print(text)"],
 }
-SPLIT_PAUSE = {}
+SPLIT_PAUSE = {4: 0.3, 6: 0.3, 7: 0.3}   # Telugu lines 4, 6, 7 in two takes (Parler babbles on long lines)
 # Sound (CLAUDE.md arc): a boom on frame 1, a buzz on "ten yuan"; a ding and boom on "ninety-six rupees"; a whoosh into
 # the title; pops as each step's code lands, three cash sounds on 96 / 150 / 246; a boom and clap on the test numbers; a
 # buzz and boom as it pastes its instructions; a clap and boom into the rule; a riser and the slam back to frame 1.
@@ -68,7 +70,7 @@ GAP = {1: 0.4, 2: 0.4, 3: 0.4, 4: 0.4, 5: 0.4, 6: 0.6, 7: 0.4, 8: 0.6, 9: 0.4, 1
 GAP_TE = {}
 TEMPO_TE = {}
 FLAGS_TE = {"s_d": {"boost": 1.5, "rise": 1.5}}
-YT = {"s_a": "10 yuan vs ₹96", "s_b": "Build it: 3 steps", "s_c": "Our test", "s_d": "Not a safe"}
+YT = {"s_a": "10 yuan vs ₹96", "s_b": "Build it: 3 steps", "s_c": "Our test", "s_d": "It can't keep a secret"}
 MARK = re.compile(r"\[\d+\]\s*")
 
 

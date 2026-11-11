@@ -78,11 +78,14 @@
     "captionTop": 1500,
     "t": {
      "ask": "2 kg sugar please",
-     "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+     "noneA": "...If you prefer, you can order it online from platforms like Taobao, JD.com, or Tmall.",
      "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
      "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
      "code": [
-      "messages = [{\"role\": \"system\", \"content\": SHOP_RULES}]",
+      "client = OpenAI(base_url=SERVER,",
+      "                api_key=os.environ[\"AI_KEY\"])",
+      "messages = [{\"role\": \"system\",",
+      "             \"content\": SHOP_RULES}]",
       "while True:",
       "    messages.append({\"role\": \"user\",",
       "                     \"content\": input(\"> \")})",
@@ -105,8 +108,8 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "\"రెండు కిలోల చక్కెర కావాలి.\" [1] మా చాట్‌బాట్: \"టావోబావో లో ఆర్డర్ చేయండి. దాదాపు పది యువాన్.\"",
-     "show": "\"I want 2 kilos of sugar.\" Our chatbot: \"Order it on Taobao. About 10 yuan.\"",
+     "text": "\"రెండు కిలోల చక్కెర కావాలి.\" [1] మా చాట్‌బాట్, కస్టమర్ ని ఒక చైనా షాపింగ్ సైట్ కి పంపింది, పది యువాన్ అని ఊహించింది.",
+     "show": "\"I want 2 kilos of sugar.\" Our chatbot sent the customer to a Chinese shopping site, and guessed 10 yuan.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.05
@@ -114,8 +117,8 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "అదే చాట్‌బాట్ కి, నాలుగు లైన్ల సూచనలు ఇస్తే: [1] తొంభై ఆరు రూపాయలు.",
-     "show": "Give the same chatbot 4 lines of instructions: ₹96.",
+     "text": "అదే చాట్‌బాట్ కి, కొన్ని లైన్ల రూల్స్, షాప్ ధరల లిస్ట్ ఇస్తే: [1] తొంభై ఆరు రూపాయలు.",
+     "show": "Give the same chatbot a few lines of rules and the shop's price list: ₹96.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.05
@@ -123,8 +126,8 @@
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "ఆ నాలుగు లైన్లే సిస్టమ్ ప్రాంప్ట్. [1] ఇప్పుడు చాట్‌బాట్ ని, స్టెప్ బై స్టెప్ తయారు చేద్దాం.",
-     "show": "Those 4 lines are the system prompt. Now let's make the chatbot, step by step.",
+     "text": "ఆ రూల్సే సిస్టమ్ ప్రాంప్ట్. [1] ఇప్పుడు చాట్‌బాట్ ని, స్టెప్ బై స్టెప్ తయారు చేద్దాం.",
+     "show": "Those rules are the system prompt. Now let's make the chatbot, step by step.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.05
@@ -155,11 +158,14 @@
     "captionTop": 1500,
     "t": {
      "ask": "2 kg sugar please",
-     "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+     "noneA": "...If you prefer, you can order it online from platforms like Taobao, JD.com, or Tmall.",
      "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
      "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
      "code": [
-      "messages = [{\"role\": \"system\", \"content\": SHOP_RULES}]",
+      "client = OpenAI(base_url=SERVER,",
+      "                api_key=os.environ[\"AI_KEY\"])",
+      "messages = [{\"role\": \"system\",",
+      "             \"content\": SHOP_RULES}]",
       "while True:",
       "    messages.append({\"role\": \"user\",",
       "                     \"content\": input(\"> \")})",
@@ -182,16 +188,20 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "స్టెప్ వన్: మెసేజ్ ల లిస్ట్. [1] మొదటిది సిస్టమ్ ప్రాంప్ట్: అది ఎవరు, ఏం చెప్పాలి, మీ ధరలు, తెలియకపోతే ఏం చెప్పాలి.",
-     "show": "Step 1: a list of messages. The first is the system prompt: who it is, what to say, your prices, what to say when unsure.",
+     "text": "స్టెప్ వన్: మెసేజ్‌ల లిస్ట్. <pause 0.3> [1] మొదటిది సిస్టమ్ ప్రాంప్ట్: అది ఎవరు, దేని గురించి మాత్రమే మాట్లాడాలి, మీ ధరలు, తెలియకపోతే ఏం చెప్పాలి.",
+     "show": "Step 1: a list of messages. The first is the system prompt: who it is, what only it should talk about, your prices, what to say when unsure.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "tempo": 1.05
+     "tempo": 1.05,
+     "tts": "స్టెప్ వన్: మెసేజ్‌ల లిస్ట్.",
+     "file2": "04b_storyteller.wav",
+     "tts2": "మొదటిది సిస్టమ్ ప్రాంప్ట్: అది ఎవరు, దేని గురించి మాత్రమే మాట్లాడాలి, మీ ధరలు, తెలియకపోతే ఏం చెప్పాలి.",
+     "pause": 0.3
     },
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "స్టెప్ టూ: కస్టమర్ మెసేజ్ కలపండి, [1] మొత్తం లిస్ట్ పంపండి, జవాబు కూడా కలపండి.",
+     "text": "స్టెప్ టూ: కస్టమర్ మెసేజ్ యాడ్ చేయండి, [1] మొత్తం లిస్ట్ పంపండి, జవాబు కూడా యాడ్ చేయండి.",
      "show": "Step 2: add the customer's message, send the whole list, add the reply too.",
      "maxgap": 0.3,
      "gap": 0.4,
@@ -200,11 +210,15 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "స్టెప్ త్రీ: ఒక లూప్. [1] ప్రతిసారీ మొత్తం చాట్ మళ్ళీ వెళ్తుంది, అందుకే గుర్తుంటుంది: తొంభై ఆరు, నూట యాభై, మొత్తం రెండు వందల నలభై ఆరు.",
-     "show": "Step 3: a loop. Every time the whole chat goes again, so it remembers: ₹96, ₹150, total ₹246.",
+     "text": "స్టెప్ త్రీ: ఒక లూప్. <pause 0.3> [1] ప్రతిసారీ మొత్తం చాట్ మళ్ళీ వెళ్తుంది: అందుకే గుర్తుంటుంది, ప్రతిసారీ దానికంతా డబ్బు కూడా పడుతుంది.",
+     "show": "Step 3: a loop. Every time the whole chat goes again: that's why it remembers, and you pay for all of it every time.",
      "maxgap": 0.3,
      "gap": 0.6,
-     "tempo": 1.05
+     "tempo": 1.05,
+     "tts": "స్టెప్ త్రీ: ఒక లూప్.",
+     "file2": "06b_storyteller.wav",
+     "tts2": "ప్రతిసారీ మొత్తం చాట్ మళ్ళీ వెళ్తుంది: అందుకే గుర్తుంటుంది, ప్రతిసారీ దానికంతా డబ్బు కూడా పడుతుంది.",
+     "pause": 0.3
     }
    ]
   },
@@ -235,11 +249,14 @@
     "captionTop": 1500,
     "t": {
      "ask": "2 kg sugar please",
-     "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+     "noneA": "...If you prefer, you can order it online from platforms like Taobao, JD.com, or Tmall.",
      "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
      "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
      "code": [
-      "messages = [{\"role\": \"system\", \"content\": SHOP_RULES}]",
+      "client = OpenAI(base_url=SERVER,",
+      "                api_key=os.environ[\"AI_KEY\"])",
+      "messages = [{\"role\": \"system\",",
+      "             \"content\": SHOP_RULES}]",
       "while True:",
       "    messages.append({\"role\": \"user\",",
       "                     \"content\": input(\"> \")})",
@@ -262,17 +279,21 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "మా టెస్ట్: పది కస్టమర్ మెసేజ్ లు. [1] సిస్టమ్ ప్రాంప్ట్ లేకుండా, నాలుగు ధరల్లో ఒక్కటీ సరిగ్గా లేదు, స్కూల్ వ్యాసం కూడా రాసింది. ఉంటే, పదిలో తొమ్మిది.",
-     "show": "Our test: 10 customer messages. Without the system prompt, not 1 of 4 prices right, and it wrote a school essay too. With it, 9 of 10.",
+     "text": "మా టెస్ట్, పది కస్టమర్ మెసేజ్‌లు. <pause 0.3> [1] సిస్టమ్ ప్రాంప్ట్ లేకుండా: పదిలో నాలుగే సరిగ్గా, ఒక్క షాప్ ధర కూడా లేదు. సిస్టమ్ ప్రాంప్ట్ ఉంటే: పదికి తొమ్మిది.",
+     "show": "Our test, 10 customer messages. Without the system prompt: only 4 of 10 right, not one shop price. With it: 9 of 10.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "tempo": 1.05
+     "tempo": 1.05,
+     "tts": "మా టెస్ట్, పది కస్టమర్ మెసేజ్‌లు.",
+     "file2": "07b_storyteller.wav",
+     "tts2": "సిస్టమ్ ప్రాంప్ట్ లేకుండా: పదిలో నాలుగే సరిగ్గా, ఒక్క షాప్ ధర కూడా లేదు. సిస్టమ్ ప్రాంప్ట్ ఉంటే: పదికి తొమ్మిది.",
+     "pause": 0.3
     },
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "మిస్ అయింది ఏది? [1] దాని సూచనలు అడిగితే, అలాగే పేస్ట్ చేసింది. అక్షరం అక్షరం.",
-     "show": "Which one did it miss? Asked for its instructions, it pasted them as they are. Letter for letter.",
+     "text": "మిస్ అయింది ఏది? [1] దాని రూల్స్ అడిగితే, అక్షరం పొల్లు పోకుండా పేస్ట్ చేసింది.",
+     "show": "Which one did it miss? Asked for its rules, it pasted them, letter for letter.",
      "maxgap": 0.3,
      "gap": 0.6,
      "tempo": 1.05
@@ -302,11 +323,14 @@
     "captionTop": 1500,
     "t": {
      "ask": "2 kg sugar please",
-     "noneA": "Certainly! ... You can order it from platforms like Taobao, JD.com, or Tmall.",
+     "noneA": "...If you prefer, you can order it online from platforms like Taobao, JD.com, or Tmall.",
      "noneB": "2 kg Sugar: Let's say it costs around 10 yuan.",
      "rules": "You are the WhatsApp helper of Ravi's kirana shop. Answer only questions about the shop, in one short line. Use only this price list; never guess a price. If an item is not on the list, say you'll ask Ravi. No discounts.",
      "code": [
-      "messages = [{\"role\": \"system\", \"content\": SHOP_RULES}]",
+      "client = OpenAI(base_url=SERVER,",
+      "                api_key=os.environ[\"AI_KEY\"])",
+      "messages = [{\"role\": \"system\",",
+      "             \"content\": SHOP_RULES}]",
       "while True:",
       "    messages.append({\"role\": \"user\",",
       "                     \"content\": input(\"> \")})",
@@ -319,8 +343,8 @@
      ]
     },
     "yt": {
-     "chapter": "Not a safe",
-     "title": "Not a safe",
+     "chapter": "It can't keep a secret",
+     "title": "It can't keep a secret",
      "notes": []
     },
     "handle": "@ai_maastaaru_telugu"
@@ -329,8 +353,8 @@
     {
      "who": "storyteller",
      "file": "09_storyteller.wav",
-     "text": "అంటే సిస్టమ్ ప్రాంప్ట్ రూల్స్ పెడుతుంది, కానీ అది లాకర్ కాదు. [1] అందులో కీ గానీ, సీక్రెట్ గానీ పెట్టకండి.",
-     "show": "So the system prompt sets rules, but it isn't a locker. Don't put a key or a secret in it.",
+     "text": "అంటే సిస్టమ్ ప్రాంప్ట్ రూల్స్ పెడుతుంది, కానీ సీక్రెట్ దాచలేదు. [1] అందులో పాస్‌వర్డ్ గానీ, కీ గానీ పెట్టకండి.",
+     "show": "So the system prompt sets rules, but it can't keep a secret. Don't put a password or a key in it.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.05

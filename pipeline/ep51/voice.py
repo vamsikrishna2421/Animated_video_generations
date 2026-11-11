@@ -1,4 +1,4 @@
-# EP51 voices: one narrator (as Creative 24). English on Fish with Creative 22's American storyteller clip (Kokoro af_bella; the
+# EP51 voices: one narrator (as Creative 24 and 25). English on Fish with Creative 22's American storyteller clip (Kokoro af_bella; the
 # Creative 21 voice standard: generic American English); Telugu on Parler (Lalitha, a calm teacher). One judged take per
 # line, cached by text + voice; MUST groups in Whisper's spellings; silent tails cut to 0.12 s.
 #   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep51/voice.py en|te [--keep] [line numbers ...]
@@ -29,18 +29,19 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("eighty", "80"), ("grandsons", "grandson"), ("next",), ("door",), ("ten", "10"), ("minutes",), ("details", "detail"), ("once",)],
-               2: [("which",), ("write", "wrote"), ("one", "1"), ("two", "2")], 3: [("two", "2", "too", "to"), ("miss",), ("next",), ("door",)],
-               4: [("used", "use"), ("both",), ("details", "detail"), ("guessed", "guess")],
-               5: [("small",), ("free",), ("laptop",), ("chatgpt", "gpt"), ("ten", "10"), ("special",), ("course",), ("sweet",)],
-               6: [("details", "detail"), ("both",), ("five", "5"), ("miss",)],
-               7: [("facts", "fact"), ("matter",), ("read",), ("line",), ("fix",), ("true",)],
-               8: [("reply",)], "8b": [("miss",), ("ten", "10"), ("steps", "step"), ("eat",)]},
-        "te": {1: [("एन", "येन", "80")], "1b": [("पद", "पाद", "10")], "5b": [("पद", "पाद", "10")], 6: [("ऐदु", "ऐद", "5")], "8b": [("पद", "पाद", "10")]}}
-JUDGE_TEXT = {1: "Grandma turns 80. Both grandsons live next door. One typed his wish for 10 minutes. One gave an AI 2 details, and tapped once.",
-              5: "We tested a small free AI on our laptop. Not ChatGPT. With no details, 10 tries: all 10 said May this special day. One even began, Of course! Here's a sweet birthday wish.",
-              6: "With the 2 details, it used both, every time. But 5 times, it guessed I miss you.",
-              "8b": "Miss me? You're 10 steps away. Come and eat!"}
+MUST = {"en": {1: [("two", "2"), ("sugar",), ("chinese",), ("shopping",), ("ten", "10"), ("yuan", "you", "yen", "uan")],
+               2: [("same",), ("rules", "rule"), ("price",), ("ninety", "96")], 3: [("system",), ("prompt",), ("step",)],
+               4: [("step",), ("one", "1"), ("list",), ("messages", "message"), ("system",), ("prices", "price"), ("unsure",)],
+               5: [("step",), ("two", "2"), ("customer",), ("send",), ("list",), ("reply",)],
+               6: [("step",), ("three", "3"), ("loop",), ("chat",), ("remembers", "remember"), ("pay",), ("turn",)],
+               7: [("test",), ("ten", "10"), ("four", "4"), ("shop",), ("price",), ("nine", "9")],
+               8: [("missed", "miss"), ("instructions", "instruction"), ("pasted", "paste"), ("word",)],
+               9: [("system",), ("rules", "rule"), ("secret",), ("password",), ("api",), ("key",)], 10: [("ask",), ("two", "2"), ("sugar",)]},
+        "te": {2: [("तों", "तोम", "96")], 7: [("पदि", "पद", "10")], "7b": [("नाल", "4")]}}
+JUDGE_TEXT = {1: "2 kilos of sugar, please. Our chatbot sent the customer to a Chinese shopping site, and guessed 10 yuan.",
+              2: "The same AI, with a few lines of rules and the shop's price list: 96 rupees.",
+              7: "Our test, 10 customer messages. Without the system prompt: 4 of 10 right, not one shop price. With it: 9 of 10.",
+              10: "Now ask it again: 2 kilos of sugar, please."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

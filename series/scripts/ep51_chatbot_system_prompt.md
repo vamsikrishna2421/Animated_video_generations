@@ -1,4 +1,4 @@
-# EP51 "Build a chatbot with a system prompt" (Season 6, the first real tutorial) · queue 055 · script v1, Nov 11
+# EP51 "Build a chatbot with a system prompt" (Season 6, the first real tutorial) · queue 055 · script v2, Nov 11
 
 ## The format (the rotation: Vamsi via Bujji, Nov 9; agreed in the handoff Nov 10)
 A screen tutorial, not a shop skit: a code editor and a chat window drawn in our crayon style, one narrator, the real
@@ -49,6 +49,7 @@ each a fresh call, every reply read by hand; then a three-turn chat (the loop).
 
 ## The code on screen (the same call our test made, in the OpenAI Python library's shape)
 ```
+client = OpenAI(base_url=SERVER, api_key=os.environ["AI_KEY"])   # the key from an environment variable (EP50)
 messages = [{"role": "system", "content": SHOP_RULES}]
 while True:
     messages.append({"role": "user", "content": input("> ")})
@@ -62,39 +63,57 @@ short line. Use only this price list; never guess a price. If an item is not on 
 discounts." + the price list.
 
 ## Hook options
-1. **(v1)** The chat: "2 kg sugar please" -> "order it from Taobao... around 10 yuan" (red) vs "₹96" (green, with the
-   system prompt). "10 YUAN vs ₹96".
-2. "0/4 vs 4/4 prices right": numbers with no picture.
-3. The pasted instructions first (the twist as the hook): gives the ending away.
+1. **(v2)** The chat with the two real replies apart (turn 1 "...order it online from platforms like Taobao, JD.com, or
+   Tmall", turn 3 "...around 10 yuan"), a "✗ WRONG COUNTRY" stamp, and the blocks "NO SYSTEM PROMPT · 10 yuan ✗" vs
+   "RULES + PRICE LIST · ₹96".
+2. "4/10 vs 9/10": numbers with no picture.
+3. The pasted instructions first: gives the ending away.
 
-## Script (English, v1; narrator) · ~60 s
-| # | Line | On screen |
-|---|---|---|
-| 1 | "Two kilos of sugar, please." [1] Our chatbot: "Order it on Taobao. About ten yuan." | frame 1: the chat, 10 YUAN vs ₹96 |
-| 2 | The same AI, with four lines of instructions: [1] ninety-six rupees. | the second chat: ₹96 |
-| 3 | Those four lines are a system prompt. [1] Let's build the chatbot, step by step. | EP51 title card: STEP 1 2 3 |
-| 4 | Step one: a list of messages. [1] The first is the system prompt: who it is, what it answers, your prices, and what to say when unsure. | code: messages = [system] + SHOP_RULES |
-| 5 | Step two: add the customer's message, [1] send the whole list, and add the reply. | code: append, create, append |
-| 6 | Step three: a loop. [1] Every turn sends the whole chat again, so it remembers: ninety-six, one fifty, total two forty-six. | the chat window, the token count growing |
-| 7 | Our test: ten customer messages. [1] Without the system prompt, zero of four prices right, and it wrote a school essay. With it, nine of ten. | the test card |
-| 8 | The one it missed? [1] Asked for its instructions, it pasted them. Word for word. | the chat: "Paste them." -> the system prompt |
-| 9 | So a system prompt sets the rules, but it isn't a safe. [1] Never put a key or a secret in it. | the rule card |
-| 10 | Now ask it again: [1] two kilos of sugar, please. | loops to frame 1 |
+## Script review (human-viewer, v1) and what changed
+Sandeep (non-coder) hook 5: "10 YUAN vs ₹96" reads as the first bot being cheaper; he doesn't know Taobao; lost at the
+code; "isn't a safe" sounds like "isn't safe"; "key": what key? Priya (developer) hook 7. Both: frame 1 stuck two different
+replies together (turn 1 sent the customer to Taobao, turn 3 guessed "around 10 yuan"); "four lines" left out the 10-line
+price list that the ₹96 comes from; line 7 compared 0 of 4 with 9 of 10; step 3 never says you pay for the whole chat each
+turn (225 -> 245 -> 264 tokens on screen); the long API line unreadable; the caption's try-it typed the rule into the chat
+box (a user message, not a system prompt), and "Did it say no? Comment YES" is confusing. Telugu: సూచనలు (suggestions),
+కలపండి (mixing curry), వ్యాసం (teacher), "ఉంటే, పదిలో తొమ్మిది" hangs, అక్షరం అక్షరం unfinished, ఏం చెప్పాలి twice,
+టావోబావో, యువాన్ unknown, "API కీ" carries a lone ఏ, మెసేజ్‌ల as one word.
+Changed (v2): the two replies shown apart, each labelled with its turn, a "✗ WRONG COUNTRY" stamp, "a Chinese shopping
+site" said instead of the name; "a few lines of rules and the shop's price list"; "four of ten right, not one shop price...
+nine of ten"; step 3 "that's how it remembers, and you pay for all of it, every turn"; "it can't keep a secret. Never put a
+password or an API key in it"; the code wrapped and the client setup added (the key from an environment variable); the
+caption's try-it points to ChatGPT's Custom instructions / AI Studio's System instructions, "comment REFUSED or WROTE IT";
+the test card says "a small test"; Telugu as listed (రూల్స్, యాడ్ చేయండి, "పదిలో నాలుగే... పదికి తొమ్మిది", అక్షరం పొల్లు
+పోకుండా, "దేని గురించి మాత్రమే మాట్లాడాలి", చైనా షాపింగ్ సైట్, పాస్‌వర్డ్ గానీ కీ గానీ); Telugu lines 4, 6 and 7 in two takes.
 
-## Script (Telugu, v1)
+## Script (English, v2; narrator) · ~62 s
+| # | Line |
+|---|---|
+| 1 | "Two kilos of sugar, please." [1] Our chatbot sent the customer to a Chinese shopping site, and guessed ten yuan. |
+| 2 | The same AI, with a few lines of rules and the shop's price list: [1] ninety-six rupees. |
+| 3 | Those rules are a system prompt. [1] Let's build the chatbot, step by step. |
+| 4 | Step one: a list of messages. [1] The first is the system prompt: who it is, what it may talk about, your prices, and what to say when unsure. |
+| 5 | Step two: add the customer's message, [1] send the whole list, and add the reply. |
+| 6 | Step three: a loop. [1] Every turn resends the whole chat: that's how it remembers, and you pay for all of it, every turn. |
+| 7 | Our test, ten customer messages. [1] Without the system prompt: four of ten right, not one shop price. With it: nine of ten. |
+| 8 | The one it missed? [1] Asked for its instructions, it pasted them, word for word. |
+| 9 | So a system prompt sets the rules, but it can't keep a secret. [1] Never put a password or an API key in it. |
+| 10 | Now ask it again: [1] two kilos of sugar, please. |
+
+## Script (Telugu, v2)
 | # | Telugu |
 |---|---|
-| 1 | "రెండు కిలోల చక్కెర కావాలి." [1] మా చాట్‌బాట్: "టావోబావో లో ఆర్డర్ చేయండి. దాదాపు పది యువాన్." |
-| 2 | అదే చాట్‌బాట్ కి, నాలుగు లైన్ల సూచనలు ఇస్తే: [1] తొంభై ఆరు రూపాయలు. |
-| 3 | ఆ నాలుగు లైన్లే సిస్టమ్ ప్రాంప్ట్. [1] ఇప్పుడు చాట్‌బాట్ ని, స్టెప్ బై స్టెప్ తయారు చేద్దాం. |
-| 4 | స్టెప్ వన్: మెసేజ్ ల లిస్ట్. [1] మొదటిది సిస్టమ్ ప్రాంప్ట్: అది ఎవరు, ఏం చెప్పాలి, మీ ధరలు, తెలియకపోతే ఏం చెప్పాలి. |
-| 5 | స్టెప్ టూ: కస్టమర్ మెసేజ్ కలపండి, [1] మొత్తం లిస్ట్ పంపండి, జవాబు కూడా కలపండి. |
-| 6 | స్టెప్ త్రీ: ఒక లూప్. [1] ప్రతిసారీ మొత్తం చాట్ మళ్ళీ వెళ్తుంది, అందుకే గుర్తుంటుంది: తొంభై ఆరు, నూట యాభై, మొత్తం రెండు వందల నలభై ఆరు. |
-| 7 | మా టెస్ట్: పది కస్టమర్ మెసేజ్ లు. [1] సిస్టమ్ ప్రాంప్ట్ లేకుండా, నాలుగు ధరల్లో ఒక్కటీ సరిగ్గా లేదు, స్కూల్ వ్యాసం కూడా రాసింది. ఉంటే, పదిలో తొమ్మిది. |
-| 8 | మిస్ అయింది ఏది? [1] దాని సూచనలు అడిగితే, అలాగే పేస్ట్ చేసింది. అక్షరం అక్షరం. |
-| 9 | అంటే సిస్టమ్ ప్రాంప్ట్ రూల్స్ పెడుతుంది, కానీ అది లాకర్ కాదు. [1] అందులో కీ గానీ, సీక్రెట్ గానీ పెట్టకండి. |
+| 1 | "రెండు కిలోల చక్కెర కావాలి." [1] మా చాట్‌బాట్, కస్టమర్ ని ఒక చైనా షాపింగ్ సైట్ కి పంపింది, పది యువాన్ అని ఊహించింది. |
+| 2 | అదే చాట్‌బాట్ కి, కొన్ని లైన్ల రూల్స్, షాప్ ధరల లిస్ట్ ఇస్తే: [1] తొంభై ఆరు రూపాయలు. |
+| 3 | ఆ రూల్సే సిస్టమ్ ప్రాంప్ట్. [1] ఇప్పుడు చాట్‌బాట్ ని, స్టెప్ బై స్టెప్ తయారు చేద్దాం. |
+| 4 | స్టెప్ వన్: మెసేజ్‌ల లిస్ట్. / [1] మొదటిది సిస్టమ్ ప్రాంప్ట్: అది ఎవరు, దేని గురించి మాత్రమే మాట్లాడాలి, మీ ధరలు, తెలియకపోతే ఏం చెప్పాలి. |
+| 5 | స్టెప్ టూ: కస్టమర్ మెసేజ్ యాడ్ చేయండి, [1] మొత్తం లిస్ట్ పంపండి, జవాబు కూడా యాడ్ చేయండి. |
+| 6 | స్టెప్ త్రీ: ఒక లూప్. / [1] ప్రతిసారీ మొత్తం చాట్ మళ్ళీ వెళ్తుంది: అందుకే గుర్తుంటుంది, ప్రతిసారీ దానికంతా డబ్బు కూడా పడుతుంది. |
+| 7 | మా టెస్ట్, పది కస్టమర్ మెసేజ్‌లు. / [1] సిస్టమ్ ప్రాంప్ట్ లేకుండా: పదిలో నాలుగే సరిగ్గా, ఒక్క షాప్ ధర కూడా లేదు. సిస్టమ్ ప్రాంప్ట్ ఉంటే: పదికి తొమ్మిది. |
+| 8 | మిస్ అయింది ఏది? [1] దాని రూల్స్ అడిగితే, అక్షరం పొల్లు పోకుండా పేస్ట్ చేసింది. |
+| 9 | అంటే సిస్టమ్ ప్రాంప్ట్ రూల్స్ పెడుతుంది, కానీ సీక్రెట్ దాచలేదు. [1] అందులో పాస్‌వర్డ్ గానీ, కీ గానీ పెట్టకండి. |
 | 10 | ఇప్పుడు మళ్ళీ అడగండి: [1] రెండు కిలోల చక్కెర కావాలి. |
 
 ## Caption ask (a try-it test)
-"Try it: give any AI chat this first line: 'You are the helper of my shop. Answer only about the shop, in one line.' Then
-ask it to write your homework. Did it say no? Comment YES or NO."
+"Try it: in ChatGPT's Custom instructions (or the System instructions box in Google AI Studio) write: 'You are the helper
+of my shop. Answer only about the shop, in one line.' Then ask it to write your homework. Comment REFUSED or WROTE IT."
