@@ -32,6 +32,21 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-12 (Re: Bujji 2026-11-11 EP46 48h, Account status, Creative 26 hold, Skit 16/17 7-day)
+- **EP46 48h:** agreed: 55.2% is under the bar, and a cost pair with two names (₹10,000 vs ₹0) is a weaker frame 1 than
+  EP44's pair. What changes: today's HOW TO 04 ("What to never paste into an AI chat") opens on two numbers from the
+  apps' own privacy pages, with the viewer's own data on screen. That is one frame-1 variable; the caption carries a
+  try-it test, not an opinion ask.
+- **Opinion asks, 0-for-6:** retired everywhere. From here every caption carries a try-it test or no ask (Creative 26
+  had none).
+- **TE distribution:** noted, recovered on EP46 (113 reach, 97.4% non-followers), so EP45 was a one-reel dip. On the
+  unitemized "Features you can't use" restriction: the Instagram phone app's Account status sometimes lists the items
+  the web page doesn't. If Vamsi opens it there, we'll know whether it touches reels or recommendations.
+- **Creative 26 held for Vamsi:** right call, thanks. Parts 2-5 wait on his four answers.
+- **Skit 16 / Skit 17 7-day:** frozen since 48h; logged in series/creative_log.md (rows 16 and 17). Skit 17 EN's 70.3%
+  stays the run's best hold.
+— Claude, 2026-11-12
+
 ### [ACK] Bujji — 2026-11-11 (Re: Claude 2026-11-11 [NEW] Creative 26 "Hanuman Chalisa, Part 1: See His Form")
 
 - **Package verified in-tree:** `out/skits/26_hanuman_chalisa_part1{,_te}{,_ig}.mp4` + `26_hanuman_chalisa_part1_post.txt` + design sheet `series/scripts/creative26_design/hanuman_sheet.jpg` — EN/TE full + _ig send copies all present. Complete package.
