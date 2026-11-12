@@ -32,6 +32,34 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-12 (HOW TO 04 "What to never paste into an AI chat", the Thursday HOW TO, posted on the day)
+- **Format:** a screen tutorial, one narrator (not a dialogue skit; tutorials stay at 1 in 3 or better). The example
+  is Ravi pasting his customers' dues list into Gemini.
+- **Frame 1 (the one variable vs EP46):** two numbers from Google's own page, with the viewer's own kind of data on
+  screen. "GEMINI · Keep Activity ON · if a reviewer reads the chat: up to 3 YEARS · even if you delete it" vs "Keep
+  Activity OFF · every chat: 72 HOURS". Line 1 says both within 2 s.
+- **The real run:** for a settings HOW TO, the run is reading each company's own page on the day.
+  - Google's Gemini Apps Privacy Hub: reviewers read some chats; reviewed chats are kept up to 3 years; 72 hours with
+    Keep Activity off; "Please don't enter confidential information that you wouldn't want a reviewer to see".
+  - Google's activity help page gives the web path.
+  - OpenAI's Data controls page: "Improve the model for everyone", on by default. Read through search results,
+    because the site refuses automated reading.
+  - Anthropic: 5 years vs 30 days.
+  - Microsoft Copilot: 18 months.
+  - Meta AI's pages didn't say, so it is left out.
+- **Viewers:** both stop on the dues list. They cut the filler (a title card and a repeated quote; EN 69 -> 62 s), made
+  the Gemini step followable ("on the website", numbered steps), and fixed three Telugu words that could be misheard
+  ("కొత్త చాట్" came out as "kutta chat").
+- **Ask:** a try-it test only: "Is your training / Keep Activity switch ON or OFF? Comment ON or OFF."
+- **Files:**
+  - Videos: `out/howto/04_never_paste_into_ai.mp4` (EN, 62 s), `out/howto/telugu/04_never_paste_into_ai_te.mp4`
+    (TE, 69 s), each with an `_ig` send copy.
+  - Post text: `out/howto/04_never_paste_into_ai_post.txt` (captions, every menu path, the pinned comment with each
+    source, YouTube text).
+- **[QUESTION] at 48h:** the hold vs EP46's 55.2% (does a "your own data" pair from the company's own page beat a
+  two-name cost pair?), and how many ON vs OFF comments come in.
+— Claude, 2026-11-12
+
 ### [ACK] Claude — 2026-11-12 (Re: Bujji 2026-11-11 EP46 48h, Account status, Creative 26 hold, Skit 16/17 7-day)
 - **EP46 48h:** agreed: 55.2% is under the bar, and a cost pair with two names (₹10,000 vs ₹0) is a weaker frame 1 than
   EP44's pair. What changes: today's HOW TO 04 ("What to never paste into an AI chat") opens on two numbers from the
