@@ -1,0 +1,460 @@
+{
+ "id": "howto04v1",
+ "title": "HOW TO 04: What to Never Paste into an AI Chat",
+ "label": "HOW TO 04",
+ "banner": "What to never paste into AI",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.6,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_neverpaste",
+   "tail": 0.0,
+   "boost": 1.0,
+   "drop_at": [
+    [
+     1,
+     2,
+     0.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "review",
+      "n": 2
+     },
+     {
+      "prop": "title",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "rows": [
+      [
+       "Lakshmi",
+       "98480 •••••",
+       "₹4,200"
+      ],
+      [
+       "Suresh",
+       "99120 •••••",
+       "₹1,850"
+      ],
+      [
+       "Anwar",
+       "90003 •••••",
+       "₹650"
+      ],
+      [
+       "Padma",
+       "97010 •••••",
+       "₹3,100"
+      ]
+     ],
+     "anon": [
+      [
+       "Customer 1",
+       "",
+       "₹4,200"
+      ],
+      [
+       "Customer 2",
+       "",
+       "₹1,850"
+      ],
+      [
+       "Customer 3",
+       "",
+       "₹650"
+      ],
+      [
+       "Customer 4",
+       "",
+       "₹3,100"
+      ]
+     ],
+     "gReview": "Human reviewers (including trained reviewers from our service providers) review some of the data",
+     "gYears": "Reviewed chats are retained for up to three years.",
+     "gNever": "Please don't enter confidential information that you wouldn't want a reviewer to see"
+    },
+    "yt": {
+     "chapter": "3 years vs 72 hours",
+     "title": "3 years vs 72 hours",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "Three years, or seventy-two hours. [1] Ravi just pasted his customers' dues list into Gemini.",
+     "show": "3 years, or 72 hours. Ravi just pasted his customers' dues list into Gemini.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "Google's own page: a person may read some chats, [1] and keeps those up to three years, even if you delete them. <pause 0.5> [2] With Keep Activity off: seventy-two hours.",
+     "show": "Google's own page: a person may read some chats, and keeps those up to 3 years, even if you delete them. <pause 0.5> With Keep Activity off: 72 hours.",
+     "maxgap": 0.3,
+     "gap": 0.5,
+     "tempo": 1.04,
+     "tts": "Google's own page: a person may read some chats, and keeps those up to three years, even if you delete them.",
+     "file2": "02b_storyteller.wav",
+     "tts2": "With Keep Activity off: seventy-two hours.",
+     "pause": 0.5
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "So: what never to paste, [1] and the one switch to check.",
+     "show": "So: what never to paste, and the one switch to check.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_neverpaste",
+   "tail": 0.0,
+   "boost": 1.0,
+   "lift": 0.5,
+   "drop_at": [
+    [
+     1,
+     1,
+     0.3
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "never",
+      "n": 4
+     },
+     {
+      "prop": "quotes",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "rows": [
+      [
+       "Lakshmi",
+       "98480 •••••",
+       "₹4,200"
+      ],
+      [
+       "Suresh",
+       "99120 •••••",
+       "₹1,850"
+      ],
+      [
+       "Anwar",
+       "90003 •••••",
+       "₹650"
+      ],
+      [
+       "Padma",
+       "97010 •••••",
+       "₹3,100"
+      ]
+     ],
+     "anon": [
+      [
+       "Customer 1",
+       "",
+       "₹4,200"
+      ],
+      [
+       "Customer 2",
+       "",
+       "₹1,850"
+      ],
+      [
+       "Customer 3",
+       "",
+       "₹650"
+      ],
+      [
+       "Customer 4",
+       "",
+       "₹3,100"
+      ]
+     ],
+     "gReview": "Human reviewers (including trained reviewers from our service providers) review some of the data",
+     "gYears": "Reviewed chats are retained for up to three years.",
+     "gNever": "Please don't enter confidential information that you wouldn't want a reviewer to see"
+    },
+    "yt": {
+     "chapter": "Never paste these",
+     "title": "Never paste these",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "Never paste passwords or OTPs, [1] Aadhaar, PAN or bank numbers, [2] or other people's details: phone numbers, dues, medical reports.",
+     "show": "Never paste passwords or OTPs, Aadhaar, PAN or bank numbers, or other people's details: phone numbers, dues, medical reports.",
+     "maxgap": 0.3,
+     "gap": 0.5,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "Google says it plainly: [1] don't enter anything you wouldn't want a reviewer to see.",
+     "show": "Google says it plainly: don't enter anything you wouldn't want a reviewer to see.",
+     "maxgap": 0.3,
+     "gap": 0.5,
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_neverpaste",
+   "tail": 0.0,
+   "boost": 1.45,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "prop": "gemini",
+      "n": 6
+     },
+     {
+      "prop": "chatgpt",
+      "n": 7
+     },
+     {
+      "prop": "delete",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "rows": [
+      [
+       "Lakshmi",
+       "98480 •••••",
+       "₹4,200"
+      ],
+      [
+       "Suresh",
+       "99120 •••••",
+       "₹1,850"
+      ],
+      [
+       "Anwar",
+       "90003 •••••",
+       "₹650"
+      ],
+      [
+       "Padma",
+       "97010 •••••",
+       "₹3,100"
+      ]
+     ],
+     "anon": [
+      [
+       "Customer 1",
+       "",
+       "₹4,200"
+      ],
+      [
+       "Customer 2",
+       "",
+       "₹1,850"
+      ],
+      [
+       "Customer 3",
+       "",
+       "₹650"
+      ],
+      [
+       "Customer 4",
+       "",
+       "₹3,100"
+      ]
+     ],
+     "gReview": "Human reviewers (including trained reviewers from our service providers) review some of the data",
+     "gYears": "Reviewed chats are retained for up to three years.",
+     "gNever": "Please don't enter confidential information that you wouldn't want a reviewer to see"
+    },
+    "yt": {
+     "chapter": "The switch in each app",
+     "title": "The switch in each app",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "In Gemini: Settings and help, Activity, [1] click On, then Turn off. [2] Your history stops saving. Or use a temporary chat.",
+     "show": "In Gemini: Settings and help, Activity, click On, then Turn off. Your history stops saving. Or use a temporary chat.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "In ChatGPT: Settings, Data controls, [1] turn off \"Improve the model for everyone\". It's on by default. [2] Temporary Chat works there too.",
+     "show": "In ChatGPT: Settings, Data controls, turn off \"Improve the model for everyone\". It's on by default. Temporary Chat works there too.",
+     "maxgap": 0.3,
+     "gap": 0.5,
+     "tempo": 1.04,
+     "tts": "In Chat G P T: Settings, Data controls, turn off \"Improve the model for everyone\". It's on by default. Temporary Chat works there too."
+    },
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "The switch covers new chats, and a chat already reviewed stays. [1] So the real fix: paste \"Customer 1\", never the names and numbers.",
+     "show": "The switch covers new chats, and a chat already reviewed stays. So the real fix: paste \"Customer 1\", never the names and numbers.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_neverpaste",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.4,
+   "boost": 2.0,
+   "lift": 0.7,
+   "rise": 2.0,
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "rows": [
+      [
+       "Lakshmi",
+       "98480 •••••",
+       "₹4,200"
+      ],
+      [
+       "Suresh",
+       "99120 •••••",
+       "₹1,850"
+      ],
+      [
+       "Anwar",
+       "90003 •••••",
+       "₹650"
+      ],
+      [
+       "Padma",
+       "97010 •••••",
+       "₹3,100"
+      ]
+     ],
+     "anon": [
+      [
+       "Customer 1",
+       "",
+       "₹4,200"
+      ],
+      [
+       "Customer 2",
+       "",
+       "₹1,850"
+      ],
+      [
+       "Customer 3",
+       "",
+       "₹650"
+      ],
+      [
+       "Customer 4",
+       "",
+       "₹3,100"
+      ]
+     ],
+     "gReview": "Human reviewers (including trained reviewers from our service providers) review some of the data",
+     "gYears": "Reviewed chats are retained for up to three years.",
+     "gNever": "Please don't enter confidential information that you wouldn't want a reviewer to see"
+    },
+    "yt": {
+     "chapter": "Your last chat",
+     "title": "Your last chat",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "09_storyteller.wav",
+     "text": "Open your settings now: [1] ON, or OFF?",
+     "show": "Open your settings now: ON, or OFF?",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "tempo": 1.04
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1280 @@
+{
+ "id": "howto04v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "What to never paste into AI",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "title": "HOW TO 04: What to Never Paste into an AI Chat",
+ "handle": "@ai_maastaaru",
+ "label": "HOW TO 04",
+ "fps": 30,
+ "musicDrops": [
+  [
+   385,
+   424
+  ],
+  [
+   953,
+   986
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   1087,
+   1.0
+  ],
+  [
+   1088,
+   1923,
+   1.45
+  ],
+  [
+   1923,
+   2071,
+   2.0
+  ],
+  [
+   1923,
+   2071,
+   2.0,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 2071,
+ "music": "reel/howto04v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_neverpaste",
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "review",
+      "n": 2
+     },
+     {
+      "prop": "title",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "rows": [
+      [
+       "Lakshmi",
+       "98480 •••••",
+       "₹4,200"
+      ],
+      [
+       "Suresh",
+       "99120 •••••",
+       "₹1,850"
+      ],
+      [
+       "Anwar",
+       "90003 •••••",
+       "₹650"
+      ],
+      [
+       "Padma",
+       "97010 •••••",
+       "₹3,100"
+      ]
+     ],
+     "anon": [
+      [
+       "Customer 1",
+       "",
+       "₹4,200"
+      ],
+      [
+       "Customer 2",
+       "",
+       "₹1,850"
+      ],
+      [
+       "Customer 3",
+       "",
+       "₹650"
+      ],
+      [
+       "Customer 4",
+       "",
+       "₹3,100"
+      ]
+     ],
+     "gReview": "Human reviewers (including trained reviewers from our service providers) review some of the data",
+     "gYears": "Reviewed chats are retained for up to three years.",
+     "gNever": "Please don't enter confidential information that you wouldn't want a reviewer to see"
+    },
+    "yt": {
+     "chapter": "3 years vs 72 hours",
+     "title": "3 years vs 72 hours",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 636,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto04v1/line_01.wav",
+     "from": 10,
+     "frames": 170,
+     "words": [
+      {
+       "w": "3",
+       "from": 12,
+       "to": 15
+      },
+      {
+       "w": "years,",
+       "from": 15,
+       "to": 29
+      },
+      {
+       "w": "or",
+       "from": 29,
+       "to": 42
+      },
+      {
+       "w": "72",
+       "from": 42,
+       "to": 47
+      },
+      {
+       "w": "hours.",
+       "from": 47,
+       "to": 60
+      },
+      {
+       "w": "Ravi",
+       "from": 60,
+       "to": 70
+      },
+      {
+       "w": "just",
+       "from": 70,
+       "to": 89
+      },
+      {
+       "w": "pasted",
+       "from": 89,
+       "to": 102
+      },
+      {
+       "w": "his",
+       "from": 102,
+       "to": 114
+      },
+      {
+       "w": "customers'",
+       "from": 114,
+       "to": 134
+      },
+      {
+       "w": "dues",
+       "from": 134,
+       "to": 144
+      },
+      {
+       "w": "list",
+       "from": 144,
+       "to": 157
+      },
+      {
+       "w": "into",
+       "from": 157,
+       "to": 166
+      },
+      {
+       "w": "Gemini.",
+       "from": 166,
+       "to": 181
+      }
+     ],
+     "cues": {
+      "1": 85
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto04v1/line_02.wav",
+     "from": 193,
+     "frames": 306,
+     "words": [
+      {
+       "w": "Google's",
+       "from": 193,
+       "to": 207
+      },
+      {
+       "w": "own",
+       "from": 207,
+       "to": 213
+      },
+      {
+       "w": "page:",
+       "from": 213,
+       "to": 221
+      },
+      {
+       "w": "a",
+       "from": 221,
+       "to": 224
+      },
+      {
+       "w": "person",
+       "from": 224,
+       "to": 248
+      },
+      {
+       "w": "may",
+       "from": 248,
+       "to": 254
+      },
+      {
+       "w": "read",
+       "from": 254,
+       "to": 261
+      },
+      {
+       "w": "some",
+       "from": 261,
+       "to": 269
+      },
+      {
+       "w": "chats,",
+       "from": 269,
+       "to": 279
+      },
+      {
+       "w": "and",
+       "from": 279,
+       "to": 299
+      },
+      {
+       "w": "keeps",
+       "from": 299,
+       "to": 308
+      },
+      {
+       "w": "those",
+       "from": 308,
+       "to": 317
+      },
+      {
+       "w": "up",
+       "from": 317,
+       "to": 321
+      },
+      {
+       "w": "to",
+       "from": 321,
+       "to": 326
+      },
+      {
+       "w": "3",
+       "from": 326,
+       "to": 333
+      },
+      {
+       "w": "years,",
+       "from": 333,
+       "to": 344
+      },
+      {
+       "w": "even",
+       "from": 344,
+       "to": 360
+      },
+      {
+       "w": "if",
+       "from": 360,
+       "to": 365
+      },
+      {
+       "w": "you",
+       "from": 365,
+       "to": 371
+      },
+      {
+       "w": "delete",
+       "from": 371,
+       "to": 385
+      },
+      {
+       "w": "them.",
+       "from": 385,
+       "to": 394
+      },
+      {
+       "w": "With",
+       "from": 409,
+       "to": 425
+      },
+      {
+       "w": "Keep",
+       "from": 425,
+       "to": 434
+      },
+      {
+       "w": "Activity",
+       "from": 434,
+       "to": 465
+      },
+      {
+       "w": "off:",
+       "from": 465,
+       "to": 475
+      },
+      {
+       "w": "72",
+       "from": 475,
+       "to": 481
+      },
+      {
+       "w": "hours.",
+       "from": 481,
+       "to": 495
+      }
+     ],
+     "cues": {
+      "1": 276,
+      "2": 409
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto04v1/line_03.wav",
+     "from": 514,
+     "frames": 111,
+     "words": [
+      {
+       "w": "So:",
+       "from": 518,
+       "to": 522
+      },
+      {
+       "w": "what",
+       "from": 522,
+       "to": 537
+      },
+      {
+       "w": "never",
+       "from": 537,
+       "to": 544
+      },
+      {
+       "w": "to",
+       "from": 544,
+       "to": 548
+      },
+      {
+       "w": "paste,",
+       "from": 548,
+       "to": 576
+      },
+      {
+       "w": "and",
+       "from": 576,
+       "to": 581
+      },
+      {
+       "w": "the",
+       "from": 581,
+       "to": 585
+      },
+      {
+       "w": "one",
+       "from": 585,
+       "to": 590
+      },
+      {
+       "w": "switch",
+       "from": 590,
+       "to": 603
+      },
+      {
+       "w": "to",
+       "from": 603,
+       "to": 606
+      },
+      {
+       "w": "check.",
+       "from": 606,
+       "to": 615
+      }
+     ],
+     "cues": {
+      "1": 576
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_neverpaste",
+   "data": {
+    "beats": [
+     {
+      "prop": "never",
+      "n": 4
+     },
+     {
+      "prop": "quotes",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "rows": [
+      [
+       "Lakshmi",
+       "98480 •••••",
+       "₹4,200"
+      ],
+      [
+       "Suresh",
+       "99120 •••••",
+       "₹1,850"
+      ],
+      [
+       "Anwar",
+       "90003 •••••",
+       "₹650"
+      ],
+      [
+       "Padma",
+       "97010 •••••",
+       "₹3,100"
+      ]
+     ],
+     "anon": [
+      [
+       "Customer 1",
+       "",
+       "₹4,200"
+      ],
+      [
+       "Customer 2",
+       "",
+       "₹1,850"
+      ],
+      [
+       "Customer 3",
+       "",
+       "₹650"
+      ],
+      [
+       "Customer 4",
+       "",
+       "₹3,100"
+      ]
+     ],
+     "gReview": "Human reviewers (including trained reviewers from our service providers) review some of the data",
+     "gYears": "Reviewed chats are retained for up to three years.",
+     "gNever": "Please don't enter confidential information that you wouldn't want a reviewer to see"
+    },
+    "yt": {
+     "chapter": "Never paste these",
+     "title": "Never paste these",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 636,
+   "frames": 451,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto04v1/line_04.wav",
+     "from": 0,
+     "frames": 287,
+     "words": [
+      {
+       "w": "Never",
+       "from": 0,
+       "to": 10
+      },
+      {
+       "w": "paste",
+       "from": 10,
+       "to": 25
+      },
+      {
+       "w": "passwords",
+       "from": 25,
+       "to": 44
+      },
+      {
+       "w": "or",
+       "from": 44,
+       "to": 49
+      },
+      {
+       "w": "OTPs,",
+       "from": 49,
+       "to": 58
+      },
+      {
+       "w": "Aadhaar,",
+       "from": 58,
+       "to": 87
+      },
+      {
+       "w": "PAN",
+       "from": 87,
+       "to": 93
+      },
+      {
+       "w": "or",
+       "from": 93,
+       "to": 108
+      },
+      {
+       "w": "bank",
+       "from": 108,
+       "to": 116
+      },
+      {
+       "w": "numbers,",
+       "from": 116,
+       "to": 130
+      },
+      {
+       "w": "or",
+       "from": 130,
+       "to": 134
+      },
+      {
+       "w": "other",
+       "from": 134,
+       "to": 154
+      },
+      {
+       "w": "people's",
+       "from": 154,
+       "to": 168
+      },
+      {
+       "w": "details:",
+       "from": 168,
+       "to": 182
+      },
+      {
+       "w": "phone",
+       "from": 182,
+       "to": 205
+      },
+      {
+       "w": "numbers,",
+       "from": 205,
+       "to": 219
+      },
+      {
+       "w": "dues,",
+       "from": 219,
+       "to": 237
+      },
+      {
+       "w": "medical",
+       "from": 237,
+       "to": 258
+      },
+      {
+       "w": "reports.",
+       "from": 258,
+       "to": 275
+      }
+     ],
+     "cues": {
+      "1": 58,
+      "2": 130
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto04v1/line_05.wav",
+     "from": 302,
+     "frames": 134,
+     "words": [
+      {
+       "w": "Google",
+       "from": 302,
+       "to": 312
+      },
+      {
+       "w": "says",
+       "from": 312,
+       "to": 319
+      },
+      {
+       "w": "it",
+       "from": 319,
+       "to": 328
+      },
+      {
+       "w": "plainly:",
+       "from": 328,
+       "to": 341
+      },
+      {
+       "w": "don't",
+       "from": 341,
+       "to": 358
+      },
+      {
+       "w": "enter",
+       "from": 358,
+       "to": 367
+      },
+      {
+       "w": "anything",
+       "from": 367,
+       "to": 380
+      },
+      {
+       "w": "you",
+       "from": 380,
+       "to": 385
+      },
+      {
+       "w": "wouldn't",
+       "from": 385,
+       "to": 398
+      },
+      {
+       "w": "want",
+       "from": 398,
+       "to": 405
+      },
+      {
+       "w": "a",
+       "from": 405,
+       "to": 408
+      },
+      {
+       "w": "reviewer",
+       "from": 408,
+       "to": 421
+      },
+      {
+       "w": "to",
+       "from": 421,
+       "to": 429
+      },
+      {
+       "w": "see.",
+       "from": 429,
+       "to": 436
+      }
+     ],
+     "cues": {
+      "1": 341
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_neverpaste",
+   "data": {
+    "beats": [
+     {
+      "prop": "gemini",
+      "n": 6
+     },
+     {
+      "prop": "chatgpt",
+      "n": 7
+     },
+     {
+      "prop": "delete",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "rows": [
+      [
+       "Lakshmi",
+       "98480 •••••",
+       "₹4,200"
+      ],
+      [
+       "Suresh",
+       "99120 •••••",
+       "₹1,850"
+      ],
+      [
+       "Anwar",
+       "90003 •••••",
+       "₹650"
+      ],
+      [
+       "Padma",
+       "97010 •••••",
+       "₹3,100"
+      ]
+     ],
+     "anon": [
+      [
+       "Customer 1",
+       "",
+       "₹4,200"
+      ],
+      [
+       "Customer 2",
+       "",
+       "₹1,850"
+      ],
+      [
+       "Customer 3",
+       "",
+       "₹650"
+      ],
+      [
+       "Customer 4",
+       "",
+       "₹3,100"
+      ]
+     ],
+     "gReview": "Human reviewers (including trained reviewers from our service providers) review some of the data",
+     "gYears": "Reviewed chats are retained for up to three years.",
+     "gNever": "Please don't enter confidential information that you wouldn't want a reviewer to see"
+    },
+    "yt": {
+     "chapter": "The switch in each app",
+     "title": "The switch in each app",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1088,
+   "frames": 835,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto04v1/line_06.wav",
+     "from": 0,
+     "frames": 249,
+     "words": [
+      {
+       "w": "In",
+       "from": 0,
+       "to": 4
+      },
+      {
+       "w": "Gemini:",
+       "from": 4,
+       "to": 16
+      },
+      {
+       "w": "Settings",
+       "from": 16,
+       "to": 41
+      },
+      {
+       "w": "and",
+       "from": 41,
+       "to": 46
+      },
+      {
+       "w": "help,",
+       "from": 46,
+       "to": 55
+      },
+      {
+       "w": "Activity,",
+       "from": 55,
+       "to": 81
+      },
+      {
+       "w": "click",
+       "from": 81,
+       "to": 98
+      },
+      {
+       "w": "On,",
+       "from": 98,
+       "to": 104
+      },
+      {
+       "w": "then",
+       "from": 104,
+       "to": 117
+      },
+      {
+       "w": "Turn",
+       "from": 117,
+       "to": 124
+      },
+      {
+       "w": "off.",
+       "from": 124,
+       "to": 131
+      },
+      {
+       "w": "Your",
+       "from": 131,
+       "to": 152
+      },
+      {
+       "w": "history",
+       "from": 152,
+       "to": 170
+      },
+      {
+       "w": "stops",
+       "from": 170,
+       "to": 185
+      },
+      {
+       "w": "saving.",
+       "from": 185,
+       "to": 205
+      },
+      {
+       "w": "Or",
+       "from": 205,
+       "to": 209
+      },
+      {
+       "w": "use",
+       "from": 209,
+       "to": 215
+      },
+      {
+       "w": "a",
+       "from": 215,
+       "to": 218
+      },
+      {
+       "w": "temporary",
+       "from": 218,
+       "to": 233
+      },
+      {
+       "w": "chat.",
+       "from": 233,
+       "to": 241
+      }
+     ],
+     "cues": {
+      "1": 81,
+      "2": 131
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto04v1/line_07.wav",
+     "from": 261,
+     "frames": 283,
+     "words": [
+      {
+       "w": "In",
+       "from": 261,
+       "to": 266
+      },
+      {
+       "w": "ChatGPT:",
+       "from": 266,
+       "to": 281
+      },
+      {
+       "w": "Settings,",
+       "from": 281,
+       "to": 301
+      },
+      {
+       "w": "Data",
+       "from": 301,
+       "to": 319
+      },
+      {
+       "w": "controls,",
+       "from": 319,
+       "to": 345
+      },
+      {
+       "w": "turn",
+       "from": 345,
+       "to": 353
+      },
+      {
+       "w": "off",
+       "from": 353,
+       "to": 360
+      },
+      {
+       "w": "\"Improve",
+       "from": 360,
+       "to": 387
+      },
+      {
+       "w": "the",
+       "from": 387,
+       "to": 399
+      },
+      {
+       "w": "model",
+       "from": 399,
+       "to": 409
+      },
+      {
+       "w": "for",
+       "from": 409,
+       "to": 416
+      },
+      {
+       "w": "everyone\".",
+       "from": 416,
+       "to": 434
+      },
+      {
+       "w": "It's",
+       "from": 434,
+       "to": 451
+      },
+      {
+       "w": "on",
+       "from": 451,
+       "to": 456
+      },
+      {
+       "w": "by",
+       "from": 456,
+       "to": 461
+      },
+      {
+       "w": "default.",
+       "from": 461,
+       "to": 490
+      },
+      {
+       "w": "Temporary",
+       "from": 490,
+       "to": 507
+      },
+      {
+       "w": "Chat",
+       "from": 507,
+       "to": 515
+      },
+      {
+       "w": "works",
+       "from": 515,
+       "to": 526
+      },
+      {
+       "w": "there",
+       "from": 526,
+       "to": 536
+      },
+      {
+       "w": "too.",
+       "from": 536,
+       "to": 544
+      }
+     ],
+     "cues": {
+      "1": 345,
+      "2": 490
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto04v1/line_08.wav",
+     "from": 559,
+     "frames": 253,
+     "words": [
+      {
+       "w": "The",
+       "from": 559,
+       "to": 565
+      },
+      {
+       "w": "switch",
+       "from": 565,
+       "to": 577
+      },
+      {
+       "w": "covers",
+       "from": 577,
+       "to": 586
+      },
+      {
+       "w": "new",
+       "from": 586,
+       "to": 591
+      },
+      {
+       "w": "chats,",
+       "from": 591,
+       "to": 617
+      },
+      {
+       "w": "and",
+       "from": 617,
+       "to": 622
+      },
+      {
+       "w": "a",
+       "from": 622,
+       "to": 625
+      },
+      {
+       "w": "chat",
+       "from": 625,
+       "to": 631
+      },
+      {
+       "w": "already",
+       "from": 631,
+       "to": 642
+      },
+      {
+       "w": "reviewed",
+       "from": 642,
+       "to": 653
+      },
+      {
+       "w": "stays.",
+       "from": 653,
+       "to": 666
+      },
+      {
+       "w": "So",
+       "from": 666,
+       "to": 688
+      },
+      {
+       "w": "the",
+       "from": 688,
+       "to": 693
+      },
+      {
+       "w": "real",
+       "from": 693,
+       "to": 699
+      },
+      {
+       "w": "fix:",
+       "from": 699,
+       "to": 727
+      },
+      {
+       "w": "paste",
+       "from": 727,
+       "to": 739
+      },
+      {
+       "w": "\"Customer",
+       "from": 739,
+       "to": 752
+      },
+      {
+       "w": "1\",",
+       "from": 752,
+       "to": 757
+      },
+      {
+       "w": "never",
+       "from": 757,
+       "to": 772
+      },
+      {
+       "w": "the",
+       "from": 772,
+       "to": 778
+      },
+      {
+       "w": "names",
+       "from": 778,
+       "to": 785
+      },
+      {
+       "w": "and",
+       "from": 785,
+       "to": 791
+      },
+      {
+       "w": "numbers.",
+       "from": 791,
+       "to": 802
+      }
+     ],
+     "cues": {
+      "1": 666
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_neverpaste",
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "rows": [
+      [
+       "Lakshmi",
+       "98480 •••••",
+       "₹4,200"
+      ],
+      [
+       "Suresh",
+       "99120 •••••",
+       "₹1,850"
+      ],
+      [
+       "Anwar",
+       "90003 •••••",
+       "₹650"
+      ],
+      [
+       "Padma",
+       "97010 •••••",
+       "₹3,100"
+      ]
+     ],
+     "anon": [
+      [
+       "Customer 1",
+       "",
+       "₹4,200"
+      ],
+      [
+       "Customer 2",
+       "",
+       "₹1,850"
+      ],
+      [
+       "Customer 3",
+       "",
+       "₹650"
+      ],
+      [
+       "Customer 4",
+       "",
+       "₹3,100"
+      ]
+     ],
+     "gReview": "Human reviewers (including trained reviewers from our service providers) review some of the data",
+     "gYears": "Reviewed chats are retained for up to three years.",
+     "gNever": "Please don't enter confidential information that you wouldn't want a reviewer to see"
+    },
+    "yt": {
+     "chapter": "Your last chat",
+     "title": "Your last chat",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1923,
+   "frames": 148,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto04v1/line_09.wav",
+     "from": 12,
+     "frames": 88,
+     "words": [
+      {
+       "w": "Open",
+       "from": 12,
+       "to": 21
+      },
+      {
+       "w": "your",
+       "from": 21,
+       "to": 30
+      },
+      {
+       "w": "settings",
+       "from": 30,
+       "to": 47
+      },
+      {
+       "w": "now:",
+       "from": 47,
+       "to": 65
+      },
+      {
+       "w": "ON,",
+       "from": 65,
+       "to": 79
+      },
+      {
+       "w": "or",
+       "from": 79,
+       "to": 84
+      },
+      {
+       "w": "OFF?",
+       "from": 84,
+       "to": 94
+      }
+     ],
+     "cues": {
+      "1": 65
+     }
+    }
+   ]
+  }
+ ]
+}

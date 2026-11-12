@@ -23,24 +23,24 @@ const GREEN = "#16a34a", RED = "#dc2626";
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, "Noto Color Emoji", sans-serif`;
 const MONO = (s: number, w = 700) => `${w} ${s}px "Courier New", monospace`;
 
-const fit = (c: Ctx, t: string, max: number, size: number, w = 900, min = 22) => {
+export const fit = (c: Ctx, t: string, max: number, size: number, w = 900, min = 22) => {
   let fs = size; c.font = SANS(fs, w); while (c.measureText(t).width > max && fs > min) { fs -= 2; c.font = SANS(fs, w); }
   return fs;
 };
-const wrap = (c: Ctx, text: string, max: number) => {
+export const wrap = (c: Ctx, text: string, max: number) => {
   const out: string[] = []; let cur = "";
   text.split(" ").forEach((w) => { const t = cur ? cur + " " + w : w; if (c.measureText(t).width > max && cur) { out.push(cur); cur = w; } else cur = t; });
   if (cur) out.push(cur);
   return out;
 };
-const chip = (c: Ctx, t: string, x: number, y: number, bg: string, fg: string, k: number, size = 36) => {
+export const chip = (c: Ctx, t: string, x: number, y: number, bg: string, fg: string, k: number, size = 36) => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3); c.font = SANS(size, 800);
   const w = c.measureText(t).width + 44;
   c.fillStyle = bg; rrect(c, x - w / 2, y - size, w, size * 1.6, 16); c.fill();
   c.fillStyle = fg; c.textAlign = "center"; c.fillText(t, x, y + size * 0.18); c.restore();
 };
-const block = (c: Ctx, x: number, y: number, small: string, big: string, col: string, k = 1) => {
+export const block = (c: Ctx, x: number, y: number, small: string, big: string, col: string, k = 1) => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3);
   c.fillStyle = "#111827"; rrect(c, x, y, 470, 160, 22); c.fill();
@@ -48,9 +48,9 @@ const block = (c: Ctx, x: number, y: number, small: string, big: string, col: st
   const fs = fit(c, big, 430, 76); c.font = SANS(fs, 900); c.fillStyle = col; c.fillText(big, x + 235, y + 128);
   c.restore();
 };
-const bg = (c: Ctx, W: number, H: number) => { c.fillStyle = "#0b1220"; c.fillRect(0, 0, W, H); };
+export const bg = (c: Ctx, W: number, H: number) => { c.fillStyle = "#0b1220"; c.fillRect(0, 0, W, H); };
 // a chat window: bubbles from the customer (right, green) and the bot (left, white)
-const chat = (c: Ctx, x: number, y: number, w: number, title: string, msgs: { me: boolean; t: string; k: number; red?: boolean; lab?: string; sz?: number }[], size0 = 36) => {
+export const chat = (c: Ctx, x: number, y: number, w: number, title: string, msgs: { me: boolean; t: string; k: number; red?: boolean; lab?: string; sz?: number }[], size0 = 36) => {
   c.save();
   c.fillStyle = "#e5ddd5"; rrect(c, x, y, w, 40 + 0, 0); c.fill();
   c.fillStyle = "#075e54"; rrect(c, x, y, w, 76, 18); c.fill();
