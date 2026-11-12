@@ -1,0 +1,393 @@
+{
+ "id": "creative27v1",
+ "title": "₹5,000 for 10 Grams, Says the AI (Creative 27)",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.14,
+ "lead": 0.3,
+ "music": "lofi",
+ "names": {
+  "amma": "Mom",
+  "chinnu": "Chinnu",
+  "ai": "the AI"
+ },
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.4,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1520,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_gold",
+   "tail": 0.0,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "who": "amma",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "chinnu",
+      "prop": "plain",
+      "n": 2
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "ask": "What is the price of 10 grams of 22-carat gold in India today?",
+     "chunks": [
+      "The price of gold can fluctuate daily ... I recommend checking a local or online gold dealer in India.",
+      "However, as of my last update in October 2023, the price per gram of 22-carat gold in India is typically around INR 450 to INR 500",
+      "10 grams would be approximately INR 4,500 ... INR 5,000.",
+      "Please note that these prices are illustrative and may not reflect current market values."
+     ],
+     "dateReply": "Today's date is [current date].",
+     "rate": "₹1,28,150",
+     "date": "12 NOV 2026"
+    },
+    "yt": {
+     "chapter": "₹5,000 vs ₹1,28,150",
+     "title": "₹5,000 vs ₹1,28,150",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "amma",
+     "file": "01_amma.wav",
+     "text": "Five thousand rupees for ten grams, says the AI! [1] And your board says one lakh twenty-eight thousand?!",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "₹5,000 for 10 grams, says the AI! And your board says ₹1,28,150?!",
+     "tempo": 1.04,
+     "tts": "Five thousand rupees for ten grams, says the AI! And your board says one laakh, twenty-eight thousand?!"
+    },
+    {
+     "who": "chinnu",
+     "file": "02_chinnu.wav",
+     "text": "Mom, it's Divya's wedding necklace, not a fight. [1] Show me.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Mom, it's Divya's wedding necklace, not a fight. Show me.",
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_gold",
+   "tail": 0.0,
+   "boost": 1.2,
+   "lift": 0.5,
+   "drop_at": [
+    [
+     2,
+     2,
+     0.4
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "prop": "chat1",
+      "n": 3
+     },
+     {
+      "who": "amma",
+      "prop": "chat2",
+      "n": 4
+     },
+     {
+      "who": "chinnu",
+      "prop": "compare",
+      "n": 5
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "ask": "What is the price of 10 grams of 22-carat gold in India today?",
+     "chunks": [
+      "The price of gold can fluctuate daily ... I recommend checking a local or online gold dealer in India.",
+      "However, as of my last update in October 2023, the price per gram of 22-carat gold in India is typically around INR 450 to INR 500",
+      "10 grams would be approximately INR 4,500 ... INR 5,000.",
+      "Please note that these prices are illustrative and may not reflect current market values."
+     ],
+     "dateReply": "Today's date is [current date].",
+     "rate": "₹1,28,150",
+     "date": "12 NOV 2026"
+    },
+    "yt": {
+     "chapter": "Read the AI's own lines",
+     "title": "Read the AI's own lines",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "chinnu",
+     "file": "03_chinnu.wav",
+     "text": "Its first line: [1] \"check a local gold dealer.\" You're at one.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "Its first line: \"check a local gold dealer.\" You're at one.",
+     "tempo": 1.04
+    },
+    {
+     "who": "amma",
+     "file": "04_amma.wav",
+     "text": "But then it says [1] five thousand!",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "But then it says five thousand!",
+     "tempo": 1.04
+    },
+    {
+     "who": "chinnu",
+     "file": "05_chinnu.wav",
+     "text": "\"As of my last update in October 2023.\" [1] Even then, ten grams was about fifty-five thousand. <pause 0.5> [2] A zero short!",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "\"As of my last update in October 2023.\" Even then, 10 grams was about ₹55,000. <pause 0.5> A zero short!",
+     "tempo": 1.04,
+     "tts": "\"As of my last update in October 2023.\" Even then, ten grams was about fifty-five thousand.",
+     "file2": "05b_chinnu.wav",
+     "tts2": "A zero short!",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_gold",
+   "tail": 0.0,
+   "boost": 1.0,
+   "duck_lines": [
+    [
+     1,
+     0.0
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "amma",
+      "prop": "plain",
+      "n": 6
+     },
+     {
+      "who": "ai",
+      "prop": "date",
+      "n": 7
+     },
+     {
+      "who": "chinnu",
+      "prop": "label",
+      "n": 8
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "ask": "What is the price of 10 grams of 22-carat gold in India today?",
+     "chunks": [
+      "The price of gold can fluctuate daily ... I recommend checking a local or online gold dealer in India.",
+      "However, as of my last update in October 2023, the price per gram of 22-carat gold in India is typically around INR 450 to INR 500",
+      "10 grams would be approximately INR 4,500 ... INR 5,000.",
+      "Please note that these prices are illustrative and may not reflect current market values."
+     ],
+     "dateReply": "Today's date is [current date].",
+     "rate": "₹1,28,150",
+     "date": "12 NOV 2026"
+    },
+    "yt": {
+     "chapter": "Today's date: [current date]",
+     "title": "Today's date: [current date]",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "amma",
+     "file": "06_amma.wav",
+     "text": "Then ask it today's date!",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Then ask it today's date!",
+     "tempo": 1.04
+    },
+    {
+     "who": "ai",
+     "file": "07_ai.wav",
+     "text": "Today's date is: [1] current date.",
+     "maxgap": 0.3,
+     "gap": 0.6,
+     "show": "Today's date is: [current date].",
+     "tempo": 1.04
+    },
+    {
+     "who": "chinnu",
+     "file": "08_chinnu.wav",
+     "text": "This one's a small free AI with no internet: [1] no calendar, no live rates.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "This one's a small free AI with no internet: no calendar, no live rates.",
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_gold",
+   "tail": 0.0,
+   "boost": 1.45,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     0,
+     2,
+     0.4
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "prop": "test",
+      "n": 9
+     },
+     {
+      "who": "chinnu",
+      "prop": "rule",
+      "n": 10
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "ask": "What is the price of 10 grams of 22-carat gold in India today?",
+     "chunks": [
+      "The price of gold can fluctuate daily ... I recommend checking a local or online gold dealer in India.",
+      "However, as of my last update in October 2023, the price per gram of 22-carat gold in India is typically around INR 450 to INR 500",
+      "10 grams would be approximately INR 4,500 ... INR 5,000.",
+      "Please note that these prices are illustrative and may not reflect current market values."
+     ],
+     "dateReply": "Today's date is [current date].",
+     "rate": "₹1,28,150",
+     "date": "12 NOV 2026"
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "chinnu",
+     "file": "09_chinnu.wav",
+     "text": "We asked it ten times. [1] Nine times: \"check today's rate.\" Once, it guessed. <pause 0.4> [2] You got the once.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "We asked it 10 times. 9 times: \"check today's rate.\" Once, it guessed. <pause 0.4> You got the once.",
+     "tempo": 1.04,
+     "tts": "We asked it ten times. Nine times: \"check today's rate.\" Once, it guessed.",
+     "file2": "09b_chinnu.wav",
+     "tts2": "You got the once.",
+     "pause": 0.4
+    },
+    {
+     "who": "chinnu",
+     "file": "10_chinnu.wav",
+     "text": "\"As of my last update\" means a memory, not a price. [1] Check a live rate with today's date: it matches the board.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "\"As of my last update\" means a memory, not a price. Check a live rate with today's date: it matches the board.",
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_gold",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.9,
+   "lift": 0.7,
+   "rise": 1.9,
+   "data": {
+    "beats": [
+     {
+      "who": "amma",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "ask": "What is the price of 10 grams of 22-carat gold in India today?",
+     "chunks": [
+      "The price of gold can fluctuate daily ... I recommend checking a local or online gold dealer in India.",
+      "However, as of my last update in October 2023, the price per gram of 22-carat gold in India is typically around INR 450 to INR 500",
+      "10 grams would be approximately INR 4,500 ... INR 5,000.",
+      "Please note that these prices are illustrative and may not reflect current market values."
+     ],
+     "dateReply": "Today's date is [current date].",
+     "rate": "₹1,28,150",
+     "date": "12 NOV 2026"
+    },
+    "yt": {
+     "chapter": "Once more",
+     "title": "Once more",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "amma",
+     "file": "11_amma.wav",
+     "text": "Fine. [1] But let me ask it once more...",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "show": "Fine. But let me ask it once more...",
+     "tempo": 1.04
+    }
+   ]
+  }
+ ]
+}

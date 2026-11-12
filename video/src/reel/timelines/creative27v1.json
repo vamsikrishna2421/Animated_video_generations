@@ -1,0 +1,1082 @@
+{
+ "id": "creative27v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "title": "₹5,000 for 10 Grams, Says the AI (Creative 27)",
+ "handle": "@ai_maastaaru",
+ "label": "",
+ "fps": 30,
+ "musicDrops": [
+  [
+   662,
+   698
+  ],
+  [
+   790,
+   860,
+   0.0
+  ],
+  [
+   1166,
+   1202
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   309,
+   1.0
+  ],
+  [
+   309,
+   736,
+   1.2
+  ],
+  [
+   736,
+   1022,
+   1.0
+  ],
+  [
+   1023,
+   1432,
+   1.45
+  ],
+  [
+   1432,
+   1547,
+   1.9
+  ],
+  [
+   1432,
+   1547,
+   1.9,
+   1
+  ]
+ ],
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1547,
+ "music": "reel/creative27v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_gold",
+   "data": {
+    "beats": [
+     {
+      "who": "amma",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "chinnu",
+      "prop": "plain",
+      "n": 2
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "ask": "What is the price of 10 grams of 22-carat gold in India today?",
+     "chunks": [
+      "The price of gold can fluctuate daily ... I recommend checking a local or online gold dealer in India.",
+      "However, as of my last update in October 2023, the price per gram of 22-carat gold in India is typically around INR 450 to INR 500",
+      "10 grams would be approximately INR 4,500 ... INR 5,000.",
+      "Please note that these prices are illustrative and may not reflect current market values."
+     ],
+     "dateReply": "Today's date is [current date].",
+     "rate": "₹1,28,150",
+     "date": "12 NOV 2026"
+    },
+    "yt": {
+     "chapter": "₹5,000 vs ₹1,28,150",
+     "title": "₹5,000 vs ₹1,28,150",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 309,
+   "lines": [
+    {
+     "who": "amma",
+     "name": "Mom",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative27v1/line_01.wav",
+     "from": 9,
+     "frames": 180,
+     "words": [
+      {
+       "w": "₹5,000",
+       "from": 11,
+       "to": 27
+      },
+      {
+       "w": "for",
+       "from": 27,
+       "to": 35
+      },
+      {
+       "w": "10",
+       "from": 35,
+       "to": 42
+      },
+      {
+       "w": "grams,",
+       "from": 42,
+       "to": 57
+      },
+      {
+       "w": "says",
+       "from": 57,
+       "to": 77
+      },
+      {
+       "w": "the",
+       "from": 77,
+       "to": 86
+      },
+      {
+       "w": "AI!",
+       "from": 86,
+       "to": 95
+      },
+      {
+       "w": "And",
+       "from": 95,
+       "to": 113
+      },
+      {
+       "w": "your",
+       "from": 113,
+       "to": 124
+      },
+      {
+       "w": "board",
+       "from": 124,
+       "to": 137
+      },
+      {
+       "w": "says",
+       "from": 137,
+       "to": 159
+      },
+      {
+       "w": "₹1,28,150?!",
+       "from": 159,
+       "to": 186
+      }
+     ],
+     "cues": {
+      "1": 90
+     }
+    },
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/creative27v1/line_02.wav",
+     "from": 200,
+     "frames": 100,
+     "words": [
+      {
+       "w": "Mom,",
+       "from": 201,
+       "to": 208
+      },
+      {
+       "w": "it's",
+       "from": 208,
+       "to": 215
+      },
+      {
+       "w": "Divya's",
+       "from": 215,
+       "to": 227
+      },
+      {
+       "w": "wedding",
+       "from": 227,
+       "to": 238
+      },
+      {
+       "w": "necklace,",
+       "from": 238,
+       "to": 253
+      },
+      {
+       "w": "not",
+       "from": 253,
+       "to": 262
+      },
+      {
+       "w": "a",
+       "from": 262,
+       "to": 265
+      },
+      {
+       "w": "fight.",
+       "from": 265,
+       "to": 275
+      },
+      {
+       "w": "Show",
+       "from": 275,
+       "to": 290
+      },
+      {
+       "w": "me.",
+       "from": 290,
+       "to": 296
+      }
+     ],
+     "cues": {
+      "1": 275
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_gold",
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "prop": "chat1",
+      "n": 3
+     },
+     {
+      "who": "amma",
+      "prop": "chat2",
+      "n": 4
+     },
+     {
+      "who": "chinnu",
+      "prop": "compare",
+      "n": 5
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "ask": "What is the price of 10 grams of 22-carat gold in India today?",
+     "chunks": [
+      "The price of gold can fluctuate daily ... I recommend checking a local or online gold dealer in India.",
+      "However, as of my last update in October 2023, the price per gram of 22-carat gold in India is typically around INR 450 to INR 500",
+      "10 grams would be approximately INR 4,500 ... INR 5,000.",
+      "Please note that these prices are illustrative and may not reflect current market values."
+     ],
+     "dateReply": "Today's date is [current date].",
+     "rate": "₹1,28,150",
+     "date": "12 NOV 2026"
+    },
+    "yt": {
+     "chapter": "Read the AI's own lines",
+     "title": "Read the AI's own lines",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 309,
+   "frames": 427,
+   "lines": [
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/creative27v1/line_03.wav",
+     "from": 0,
+     "frames": 103,
+     "words": [
+      {
+       "w": "Its",
+       "from": 1,
+       "to": 7
+      },
+      {
+       "w": "first",
+       "from": 7,
+       "to": 15
+      },
+      {
+       "w": "line:",
+       "from": 15,
+       "to": 24
+      },
+      {
+       "w": "\"check",
+       "from": 24,
+       "to": 43
+      },
+      {
+       "w": "a",
+       "from": 43,
+       "to": 46
+      },
+      {
+       "w": "local",
+       "from": 46,
+       "to": 55
+      },
+      {
+       "w": "gold",
+       "from": 55,
+       "to": 62
+      },
+      {
+       "w": "dealer.\"",
+       "from": 62,
+       "to": 82
+      },
+      {
+       "w": "You're",
+       "from": 82,
+       "to": 92
+      },
+      {
+       "w": "at",
+       "from": 92,
+       "to": 96
+      },
+      {
+       "w": "one.",
+       "from": 96,
+       "to": 103
+      }
+     ],
+     "cues": {
+      "1": 24
+     }
+    },
+    {
+     "who": "amma",
+     "name": "Mom",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative27v1/line_04.wav",
+     "from": 114,
+     "frames": 50,
+     "words": [
+      {
+       "w": "But",
+       "from": 114,
+       "to": 119
+      },
+      {
+       "w": "then",
+       "from": 119,
+       "to": 125
+      },
+      {
+       "w": "it",
+       "from": 125,
+       "to": 128
+      },
+      {
+       "w": "says",
+       "from": 128,
+       "to": 138
+      },
+      {
+       "w": "five",
+       "from": 138,
+       "to": 147
+      },
+      {
+       "w": "thousand!",
+       "from": 147,
+       "to": 159
+      }
+     ],
+     "cues": {
+      "1": 138
+     }
+    },
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/creative27v1/line_05.wav",
+     "from": 173,
+     "frames": 234,
+     "words": [
+      {
+       "w": "\"As",
+       "from": 173,
+       "to": 181
+      },
+      {
+       "w": "of",
+       "from": 181,
+       "to": 188
+      },
+      {
+       "w": "my",
+       "from": 188,
+       "to": 194
+      },
+      {
+       "w": "last",
+       "from": 194,
+       "to": 204
+      },
+      {
+       "w": "update",
+       "from": 204,
+       "to": 219
+      },
+      {
+       "w": "in",
+       "from": 219,
+       "to": 225
+      },
+      {
+       "w": "October",
+       "from": 225,
+       "to": 242
+      },
+      {
+       "w": "2023.\"",
+       "from": 242,
+       "to": 257
+      },
+      {
+       "w": "Even",
+       "from": 257,
+       "to": 281
+      },
+      {
+       "w": "then,",
+       "from": 281,
+       "to": 294
+      },
+      {
+       "w": "10",
+       "from": 294,
+       "to": 300
+      },
+      {
+       "w": "grams",
+       "from": 300,
+       "to": 313
+      },
+      {
+       "w": "was",
+       "from": 313,
+       "to": 321
+      },
+      {
+       "w": "about",
+       "from": 321,
+       "to": 338
+      },
+      {
+       "w": "₹55,000.",
+       "from": 338,
+       "to": 357
+      },
+      {
+       "w": "A",
+       "from": 377,
+       "to": 381
+      },
+      {
+       "w": "zero",
+       "from": 381,
+       "to": 389
+      },
+      {
+       "w": "short!",
+       "from": 389,
+       "to": 402
+      }
+     ],
+     "cues": {
+      "1": 245,
+      "2": 377
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_gold",
+   "data": {
+    "beats": [
+     {
+      "who": "amma",
+      "prop": "plain",
+      "n": 6
+     },
+     {
+      "who": "ai",
+      "prop": "date",
+      "n": 7
+     },
+     {
+      "who": "chinnu",
+      "prop": "label",
+      "n": 8
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "ask": "What is the price of 10 grams of 22-carat gold in India today?",
+     "chunks": [
+      "The price of gold can fluctuate daily ... I recommend checking a local or online gold dealer in India.",
+      "However, as of my last update in October 2023, the price per gram of 22-carat gold in India is typically around INR 450 to INR 500",
+      "10 grams would be approximately INR 4,500 ... INR 5,000.",
+      "Please note that these prices are illustrative and may not reflect current market values."
+     ],
+     "dateReply": "Today's date is [current date].",
+     "rate": "₹1,28,150",
+     "date": "12 NOV 2026"
+    },
+    "yt": {
+     "chapter": "Today's date: [current date]",
+     "title": "Today's date: [current date]",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 736,
+   "frames": 286,
+   "lines": [
+    {
+     "who": "amma",
+     "name": "Mom",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative27v1/line_06.wav",
+     "from": 0,
+     "frames": 45,
+     "words": [
+      {
+       "w": "Then",
+       "from": 0,
+       "to": 9
+      },
+      {
+       "w": "ask",
+       "from": 9,
+       "to": 16
+      },
+      {
+       "w": "it",
+       "from": 16,
+       "to": 21
+      },
+      {
+       "w": "today's",
+       "from": 21,
+       "to": 35
+      },
+      {
+       "w": "date!",
+       "from": 35,
+       "to": 45
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "the AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/creative27v1/line_07.wav",
+     "from": 54,
+     "frames": 70,
+     "words": [
+      {
+       "w": "Today's",
+       "from": 55,
+       "to": 68
+      },
+      {
+       "w": "date",
+       "from": 68,
+       "to": 76
+      },
+      {
+       "w": "is:",
+       "from": 76,
+       "to": 82
+      },
+      {
+       "w": "[current",
+       "from": 82,
+       "to": 108
+      },
+      {
+       "w": "date].",
+       "from": 108,
+       "to": 124
+      }
+     ],
+     "cues": {
+      "1": 84
+     }
+    },
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/creative27v1/line_08.wav",
+     "from": 143,
+     "frames": 131,
+     "words": [
+      {
+       "w": "This",
+       "from": 145,
+       "to": 153
+      },
+      {
+       "w": "one's",
+       "from": 153,
+       "to": 163
+      },
+      {
+       "w": "a",
+       "from": 163,
+       "to": 166
+      },
+      {
+       "w": "small",
+       "from": 166,
+       "to": 180
+      },
+      {
+       "w": "free",
+       "from": 180,
+       "to": 188
+      },
+      {
+       "w": "AI",
+       "from": 188,
+       "to": 193
+      },
+      {
+       "w": "with",
+       "from": 193,
+       "to": 201
+      },
+      {
+       "w": "no",
+       "from": 201,
+       "to": 206
+      },
+      {
+       "w": "internet:",
+       "from": 206,
+       "to": 227
+      },
+      {
+       "w": "no",
+       "from": 227,
+       "to": 232
+      },
+      {
+       "w": "calendar,",
+       "from": 232,
+       "to": 249
+      },
+      {
+       "w": "no",
+       "from": 249,
+       "to": 254
+      },
+      {
+       "w": "live",
+       "from": 254,
+       "to": 262
+      },
+      {
+       "w": "rates.",
+       "from": 262,
+       "to": 273
+      }
+     ],
+     "cues": {
+      "1": 227
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_gold",
+   "data": {
+    "beats": [
+     {
+      "who": "chinnu",
+      "prop": "test",
+      "n": 9
+     },
+     {
+      "who": "chinnu",
+      "prop": "rule",
+      "n": 10
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "ask": "What is the price of 10 grams of 22-carat gold in India today?",
+     "chunks": [
+      "The price of gold can fluctuate daily ... I recommend checking a local or online gold dealer in India.",
+      "However, as of my last update in October 2023, the price per gram of 22-carat gold in India is typically around INR 450 to INR 500",
+      "10 grams would be approximately INR 4,500 ... INR 5,000.",
+      "Please note that these prices are illustrative and may not reflect current market values."
+     ],
+     "dateReply": "Today's date is [current date].",
+     "rate": "₹1,28,150",
+     "date": "12 NOV 2026"
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1023,
+   "frames": 409,
+   "lines": [
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/creative27v1/line_09.wav",
+     "from": 0,
+     "frames": 198,
+     "words": [
+      {
+       "w": "We",
+       "from": 0,
+       "to": 5
+      },
+      {
+       "w": "asked",
+       "from": 5,
+       "to": 14
+      },
+      {
+       "w": "it",
+       "from": 14,
+       "to": 19
+      },
+      {
+       "w": "10",
+       "from": 19,
+       "to": 24
+      },
+      {
+       "w": "times.",
+       "from": 24,
+       "to": 35
+      },
+      {
+       "w": "9",
+       "from": 35,
+       "to": 48
+      },
+      {
+       "w": "times:",
+       "from": 48,
+       "to": 58
+      },
+      {
+       "w": "\"check",
+       "from": 58,
+       "to": 79
+      },
+      {
+       "w": "today's",
+       "from": 79,
+       "to": 91
+      },
+      {
+       "w": "rate.\"",
+       "from": 91,
+       "to": 102
+      },
+      {
+       "w": "Once,",
+       "from": 102,
+       "to": 122
+      },
+      {
+       "w": "it",
+       "from": 122,
+       "to": 127
+      },
+      {
+       "w": "guessed.",
+       "from": 127,
+       "to": 148
+      },
+      {
+       "w": "You",
+       "from": 167,
+       "to": 173
+      },
+      {
+       "w": "got",
+       "from": 173,
+       "to": 179
+      },
+      {
+       "w": "the",
+       "from": 179,
+       "to": 185
+      },
+      {
+       "w": "once.",
+       "from": 185,
+       "to": 193
+      }
+     ],
+     "cues": {
+      "1": 34,
+      "2": 167
+     }
+    },
+    {
+     "who": "chinnu",
+     "name": "Chinnu",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/creative27v1/line_10.wav",
+     "from": 210,
+     "frames": 185,
+     "words": [
+      {
+       "w": "\"As",
+       "from": 211,
+       "to": 217
+      },
+      {
+       "w": "of",
+       "from": 217,
+       "to": 221
+      },
+      {
+       "w": "my",
+       "from": 221,
+       "to": 226
+      },
+      {
+       "w": "last",
+       "from": 226,
+       "to": 233
+      },
+      {
+       "w": "update\"",
+       "from": 233,
+       "to": 245
+      },
+      {
+       "w": "means",
+       "from": 245,
+       "to": 253
+      },
+      {
+       "w": "a",
+       "from": 253,
+       "to": 256
+      },
+      {
+       "w": "memory,",
+       "from": 256,
+       "to": 268
+      },
+      {
+       "w": "not",
+       "from": 268,
+       "to": 274
+      },
+      {
+       "w": "a",
+       "from": 274,
+       "to": 277
+      },
+      {
+       "w": "price.",
+       "from": 277,
+       "to": 287
+      },
+      {
+       "w": "Check",
+       "from": 287,
+       "to": 307
+      },
+      {
+       "w": "a",
+       "from": 307,
+       "to": 310
+      },
+      {
+       "w": "live",
+       "from": 310,
+       "to": 318
+      },
+      {
+       "w": "rate",
+       "from": 318,
+       "to": 325
+      },
+      {
+       "w": "with",
+       "from": 325,
+       "to": 332
+      },
+      {
+       "w": "today's",
+       "from": 332,
+       "to": 344
+      },
+      {
+       "w": "date:",
+       "from": 344,
+       "to": 353
+      },
+      {
+       "w": "it",
+       "from": 353,
+       "to": 361
+      },
+      {
+       "w": "matches",
+       "from": 361,
+       "to": 373
+      },
+      {
+       "w": "the",
+       "from": 373,
+       "to": 379
+      },
+      {
+       "w": "board.",
+       "from": 379,
+       "to": 389
+      }
+     ],
+     "cues": {
+      "1": 287
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_gold",
+   "data": {
+    "beats": [
+     {
+      "who": "amma",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "ask": "What is the price of 10 grams of 22-carat gold in India today?",
+     "chunks": [
+      "The price of gold can fluctuate daily ... I recommend checking a local or online gold dealer in India.",
+      "However, as of my last update in October 2023, the price per gram of 22-carat gold in India is typically around INR 450 to INR 500",
+      "10 grams would be approximately INR 4,500 ... INR 5,000.",
+      "Please note that these prices are illustrative and may not reflect current market values."
+     ],
+     "dateReply": "Today's date is [current date].",
+     "rate": "₹1,28,150",
+     "date": "12 NOV 2026"
+    },
+    "yt": {
+     "chapter": "Once more",
+     "title": "Once more",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1432,
+   "frames": 115,
+   "lines": [
+    {
+     "who": "amma",
+     "name": "Mom",
+     "color": "#86EFAC",
+     "sub": null,
+     "audio": "reel/creative27v1/line_11.wav",
+     "from": 9,
+     "frames": 65,
+     "words": [
+      {
+       "w": "Fine.",
+       "from": 11,
+       "to": 19
+      },
+      {
+       "w": "But",
+       "from": 19,
+       "to": 34
+      },
+      {
+       "w": "let",
+       "from": 34,
+       "to": 39
+      },
+      {
+       "w": "me",
+       "from": 39,
+       "to": 43
+      },
+      {
+       "w": "ask",
+       "from": 43,
+       "to": 48
+      },
+      {
+       "w": "it",
+       "from": 48,
+       "to": 53
+      },
+      {
+       "w": "once",
+       "from": 53,
+       "to": 59
+      },
+      {
+       "w": "more...",
+       "from": 59,
+       "to": 70
+      }
+     ],
+     "cues": {
+      "1": 19
+     }
+    }
+   ]
+  }
+ ]
+}
