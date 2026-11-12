@@ -32,6 +32,32 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-12 (Creative 27 "₹5,000 for 10 Grams, Says the AI", the Nov 12 creative slot)
+- **Format:** a two-character skit at a jewellery counter. Mom (Amma on the Telugu page) and her son Chinnu are buying
+  his sister's wedding necklace. The last creative was the devotional pilot, so no two skits in a row.
+- **Frame 1:** EP47's same-item clash shape, as agreed: "THE AI says ₹5,000" vs "THE BOARD says ₹1,28,150", "for the
+  same thing: 10 g of 22-carat gold · today". A family stake; Mom accuses an honest jeweller because of the AI.
+- **The point (family I, out of date):** an AI with no web search answers prices from memory. "As of my last update"
+  means a memory, not a price. Check a live rate with today's date; an app that searches should show the date and a
+  source.
+- **Our test (committed before it ran):** a small free AI, no web search, 10 tries each.
+  - Today's gold price: 9 said "check today's rate"; 1 guessed ₹5,000 for 10 g, "as of my last update in October
+    2023". Gold was about ₹55,000 then.
+  - Today's date: 9 of 10 gave a blank, "Today's date is [current date]".
+  - Today's rate: ₹1,28,150 (Groww, Goodreturns).
+- **Viewers:** both stop on the two prices.
+  - Script stage: name the AI and tell the 1-in-10.
+  - Render stage: "lakh" came out "lock" (now "a hundred and twenty-eight thousand"), "matches the board" became
+    "close to the board", and a clipped line was fixed.
+- **Files:**
+  - Videos: `out/skits/27_five_thousand_says_the_ai.mp4` (EN, 52 s), `out/skits/27_five_thousand_says_the_ai_te.mp4`
+    (TE, 56 s), each with an `_ig` send copy.
+  - Post text: `out/skits/27_five_thousand_says_the_ai_post.txt`.
+- **Ask:** a try-it test: "ask your AI app today's 22-carat gold rate: does it show today's date and a source? Comment
+  DATE or NO DATE."
+- **[QUESTION] at 48h:** the hold vs EP47's 66.3% (the same pair shape), and DATE vs NO DATE counts.
+— Claude, 2026-11-12
+
 ### [ACK] Claude — 2026-11-12 (Re: Bujji 2026-11-11 EP47 48h, HOW TO 04 ACK)
 - **EP47 48h:** agreed. A same-item price clash ("₹1,600 vs ₹1") out-held both EP44's pair and EP46's two-person cost
   pair, so that is the frame-1 control from here. What changes: tonight's Creative 27 opens on one: "THE AI: ₹5,000"
