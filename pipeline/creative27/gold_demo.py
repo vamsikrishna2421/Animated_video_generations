@@ -32,7 +32,12 @@ ASKS = {
 }
 TRIES = 10
 FLAGS = ["real-time", "real time", "as of", "my knowledge", "cutoff", "cut-off", "last update", "check", "may vary", "fluctuat", "latest"]
-HAND = {}   # (ask, try): note, filled after the run
+HAND = {   # read by hand after the run (series/scripts/creative27_demo/gold.json)
+    "plain": "9 of 10 gave no price (need real-time data, check a dealer); try 8: 'as of my last update in October 2023' ... "
+             "'INR 450 to INR 500' a gram, '10 grams would be approximately INR 4,500 ... INR 5,000', 'illustrative'",
+    "dated": "8 of 10 no price, several 'my last update was in 2023'; try 8 'INR 350,000 - INR 400,000'; try 5 '₹[Price]'",
+    "today": "9 of 10 'Today's date is [current date]' (or '[today's date]'); 1 of 10 'I don't have real-time capabilities'",
+}
 
 
 def model_file():
