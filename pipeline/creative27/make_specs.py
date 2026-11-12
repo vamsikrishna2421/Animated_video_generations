@@ -13,10 +13,10 @@ R = ROOT / "reels"
 # n: (who, prop, English, Telugu). v2 (script review): the AI named (a small free AI, no web search); its real first
 # line ("check a local gold dealer") and its date line; the 1-in-10; the payoff a live rate with today's date
 LINES = {
-    1: ("amma", "hook", "Five thousand rupees for ten grams, says the AI! [1] And your board says one lakh twenty-eight thousand?!",
+    1: ("amma", "hook", "Five thousand rupees for ten grams, says the AI! [1] And your board says a hundred and twenty-eight thousand?!",   # render review: "lakh" came out "lock"
         "పది గ్రాములకి ఐదు వేలు అంటోంది చాట్‌బాట్! [1] మీ బోర్డు మీద లక్షా ఇరవై ఎనిమిది వేలా?!"),
     2: ("chinnu", "plain", "Mom, it's Divya's wedding necklace, not a fight. [1] Show me.",
-        "అమ్మా, ఇది దివ్య పెళ్ళి నెక్లెస్, గొడవ కాదు. [1] ఫోన్ ఇవ్వమ్మా."),
+        "అమ్మా, ఇది దివ్య పెళ్ళి నెక్లెస్, గొడవ పెట్టకు. [1] ఫోన్ ఇవ్వమ్మా."),
     3: ("chinnu", "chat1", "Its first line: [1] \"check a local gold dealer.\" You're at one.",
         "మొదటి లైనే చూడు: [1] దగ్గర్లో బంగారం షాప్ లో కనుక్కోండి, అంటోంది. నువ్వు ఉన్నది అక్కడే."),
     4: ("amma", "chat2", "But then it says [1] five thousand!",
@@ -27,20 +27,21 @@ LINES = {
     7: ("ai", "date", "Today's date is: [1] current date.", "Today's date is: [1] current date."),
     8: ("chinnu", "label", "This one's a small free AI with no internet: [1] no calendar, no live rates.",
         "ఇది ఇంటర్నెట్ లేని చిన్న ఫ్రీ చాట్‌బాట్: [1] క్యాలెండర్ లేదు, లైవ్ రేట్లు లేవు."),
-    9: ("chinnu", "test", "We asked it ten times. [1] Nine times: \"check today's rate.\" Once, it guessed. | [2] You got the once.",
-        "పది సార్లు అడిగాం. [1] తొమ్మిది సార్లు, ఈరోజు రేట్ చూసుకోండి అంది. ఒక్కసారే ఊహించింది. | [2] నీకు వచ్చింది అదే."),
-    10: ("chinnu", "rule", "\"As of my last update\" means a memory, not a price. [1] Check a live rate with today's date: it matches the board.",
-         "లాస్ట్ అప్‌డేట్ అంటే, అది పాత లెక్క, ఈరోజు ధర కాదు. | [1] ఈరోజు తేదీ ఉన్న లైవ్ రేట్ చూడు: బోర్డు తో సరిపోతుంది."),
+    9: ("chinnu", "test", "We asked it ten times. [1] Nine times: \"check today's rate.\" Once, it guessed. | [2] You got that one.",
+        "పది సార్లు అడిగాం. [1] తొమ్మిది సార్లు, ఈరోజు రేట్ చూసుకోండి అంది. ఒక్కసారే గెస్ చేసింది. | [2] నీకు వచ్చింది అదే."),
+    10: ("chinnu", "rule", "\"As of my last update\" means a memory, not a price. [1] Check a live rate with today's date: it's close to the board.",
+         "లాస్ట్ అప్‌డేట్ అంటే, అది పాత లెక్క, ఈరోజు ధర కాదు. | [1] ఈరోజు తేదీ ఉన్న లైవ్ రేట్ చూడు: బోర్డు కి దగ్గరగా ఉంటుంది."),
     11: ("amma", "loop", "Fine. [1] But let me ask it once more...", "సరేలే. [1] కానీ ఇంకోసారి అడిగి చూస్తా..."),
 }
-TTS_EN = {1: "Five thousand rupees for ten grams, says the AI! And your board says one laakh, twenty-eight thousand?!"}   # "lakh" came out "lack"
+TTS_EN = {}
 SHOW = {1: "₹5,000 for 10 grams, says the AI! And your board says ₹1,28,150?!",
+        10: "\"As of my last update\" means a memory, not a price. Check a live rate with today's date: it's close to the board.",
         5: "\"As of my last update in October 2023.\" Even then, 10 grams was about ₹55,000. <pause 0.5> A zero short!",
-        9: "We asked it 10 times. 9 times: \"check today's rate.\" Once, it guessed. <pause 0.4> You got the once.",
+        9: "We asked it 10 times. 9 times: \"check today's rate.\" Once, it guessed. <pause 0.4> You got that one.",
         7: "Today's date is: [current date]."}
 SHOW_TE = {
     1: "₹5,000 for 10 grams, says the chatbot! And your board says ₹1,28,150?!",
-    2: "Amma, this is Divya's wedding necklace, not a fight. Give me the phone.",
+    2: "Amma, this is Divya's wedding necklace, don't start a fight. Give me the phone.",
     3: "Look at its first line: \"check at a gold shop near you\". That's where you are.",
     4: "But then it said ₹5,000!",
     5: "That's an October 2023 figure. Even then, 10 grams was ₹55,000. <pause 0.5> One zero short!",
@@ -48,7 +49,7 @@ SHOW_TE = {
     7: "Today's date is: [current date].",
     8: "This is a small free chatbot with no internet: no calendar, no live rates.",
     9: "We asked 10 times. 9 times it said: check today's rate. Only once it guessed. <pause 0.4> You got that one.",
-    10: "\"Last update\" means an old figure, not today's price. <pause 0.3> Check a live rate with today's date: it matches the board.",
+    10: "\"Last update\" means an old figure, not today's price. <pause 0.3> Check a live rate with today's date: it's close to the board.",
     11: "Fine. But let me ask it once more...",
 }
 SPLIT_PAUSE = {5: 0.5, 9: 0.4}

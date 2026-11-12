@@ -39,14 +39,14 @@ VOICE_TE = {
 }
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = {"ai"}   # the AI's line through the phone sound
-MUST = {"en": {1: [("five", "5"), ("thousand", "000"), ("ten", "10"), ("grams", "gram"), ("board",), ("lakh", "lac", "lack", "laak", "lah")],
+MUST = {"en": {1: [("five", "5"), ("thousand", "000"), ("ten", "10"), ("grams", "gram"), ("board",), ("hundred", "128"), ("twenty", "28")],
                2: [("divya",), ("wedding",), ("necklace",)], 3: [("first",), ("local",), ("gold",), ("dealer",)], 4: [("five", "5")],
                5: [("update",), ("october",), ("2023", "twenty"), ("fifty", "55")], "5b": [("zero",), ("short",)],
                6: [("today",), ("date",)], 7: [("today",), ("date",), ("current",)], 8: [("small",), ("free",), ("internet",), ("calendar",), ("live",)],
-               9: [("ten", "10"), ("nine", "9"), ("rate",), ("guessed", "guess")], "9b": [("once",)],
+               9: [("ten", "10"), ("nine", "9"), ("rate",), ("guessed", "guess")], "9b": [("got",), ("one", "1")],
                10: [("update",), ("memory",), ("price",), ("live",), ("board",)], 11: [("once",), ("more",)]},
         "te": {}}
-JUDGE_TEXT = {1: "5,000 rupees for 10 grams, says the AI! And your board says 1 lakh, 28,000?!", 5: "As of my last update in October 2023. Even then, 10 grams was about 55,000.",
+JUDGE_TEXT = {1: "5,000 rupees for 10 grams, says the AI! And your board says 128,000?!", 5: "As of my last update in October 2023. Even then, 10 grams was about 55,000.",
               9: "We asked it 10 times. 9 times: check today's rate. Once, it guessed."}
 
 TELUGU = re.compile(r"[ఀ-౿]")

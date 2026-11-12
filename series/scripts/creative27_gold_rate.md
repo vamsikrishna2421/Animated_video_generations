@@ -44,15 +44,27 @@ twice (its first line says "check a local or online gold dealer", its last "thes
 1-in-10 wasn't told; the payoff read as "trust the shop"; "[current date]" needs to read without sound.
 Changed (v2): "a small free AI, no web search" on every chat screen and said in line 8; line 3 reads its real first line
 ("check a local gold dealer. You're at one."); line 9 "We asked it ten times. Nine times: 'check today's rate.' Once,
-it guessed. You got the once."; line 10 "Check a live rate with today's date: it matches the board." (a live rate page,
+it guessed. You got the once."; line 10 "Check a live rate with today's date: it's close to the board." (a live rate page,
 12 Nov 2026, ₹1,28,150, beside the board); "[current date]" big and held, the bed out under it; a beat before "a zero
 short" and "you got the once"; Telugu "ఫోన్ ఇవ్వమ్మా", "మరి ఈరోజు తేదీ", "పాత లెక్క" (not జ్ఞాపకం). The caption adds: an app that
 searches the web should show today's date and a source; check for both.
 
-## Script (English, v2)
+## Render review (human-viewer, v2 render) and what changed (v3)
+Both: Mom and the big red "[current date]" carry it; 0:30-0:47 sags into explaining. Must-fix: "lakh" came out
+"lock"; "9 of 10 times, word for word" was wrong (8 "[current date]" + 1 "[today's date]"); "it matches the board / same
+price" overclaimed (5paisa ₹1,30,140 the same day; boards vary by city); the "for the same thing" line was clipped by
+the insert card. Also: an empty dark test frame; tiles said "can't see it" while the voice said "check today's rate";
+"on our computer" while Mom holds a phone; "a zero short" sat under ₹1,28,150; "You got the once" clunky.
+Changed (v3): line 1 "a hundred and twenty-eight thousand"; "9 of 10 times, a blank like this"; "it's close to the
+board" / "✓ today's date · close to the board"; the card below the line; the tiles from the line's start, labelled
+"check today's rate"; "a small free AI · no web search"; the AI row first, "↑ a zero short, even for 2023" under it;
+"You got that one."; Telugu "గొడవ పెట్టకు", "గెస్ చేసింది", "బోర్డు కి దగ్గరగా ఉంటుంది"; a hit on "a zero short", a riser into the
+payoff.
+
+## Script (English, v3)
 | # | Who | Line |
 |---|---|---|
-| 1 | amma | Five thousand rupees for ten grams, says the AI! [1] And your board says one lakh twenty-eight thousand?! |
+| 1 | amma | Five thousand rupees for ten grams, says the AI! [1] And your board says a hundred and twenty-eight thousand?! |
 | 2 | chinnu | Mom, it's Divya's wedding necklace, not a fight. [1] Show me. |
 | 3 | chinnu | Its first line: [1] "check a local gold dealer." You're at one. |
 | 4 | amma | But then it says [1] five thousand! |
@@ -60,23 +72,23 @@ searches the web should show today's date and a source; check for both.
 | 6 | amma | Then ask it today's date! |
 | 7 | ai | Today's date is: [1] current date. |
 | 8 | chinnu | This one's a small free AI with no internet: [1] no calendar, no live rates. |
-| 9 | chinnu | We asked it ten times. [1] Nine times: "check today's rate." Once, it guessed. / [2] You got the once. |
-| 10 | chinnu | "As of my last update" means a memory, not a price. [1] Check a live rate with today's date: it matches the board. |
+| 9 | chinnu | We asked it ten times. [1] Nine times: "check today's rate." Once, it guessed. / [2] You got that one. |
+| 10 | chinnu | "As of my last update" means a memory, not a price. [1] Check a live rate with today's date: it's close to the board. |
 | 11 | amma | Fine. [1] But let me ask it once more... |
 
-## Script (Telugu, v2; the AI in English)
+## Script (Telugu, v3; the AI in English)
 | # | Who | Telugu |
 |---|---|---|
 | 1 | amma | పది గ్రాములకి ఐదు వేలు అంటోంది చాట్‌బాట్! [1] మీ బోర్డు మీద లక్షా ఇరవై ఎనిమిది వేలా?! |
-| 2 | chinnu | అమ్మా, ఇది దివ్య పెళ్ళి నెక్లెస్, గొడవ కాదు. [1] ఫోన్ ఇవ్వమ్మా. |
+| 2 | chinnu | అమ్మా, ఇది దివ్య పెళ్ళి నెక్లెస్, గొడవ పెట్టకు. [1] ఫోన్ ఇవ్వమ్మా. |
 | 3 | chinnu | మొదటి లైనే చూడు: [1] దగ్గర్లో బంగారం షాప్ లో కనుక్కోండి, అంటోంది. నువ్వు ఉన్నది అక్కడే. |
 | 4 | amma | కానీ తర్వాత [1] ఐదు వేలు అంది కదా! |
 | 5 | chinnu | అది అక్టోబర్ రెండు వేల ఇరవై మూడు నాటి లెక్క. [1] అప్పుడు కూడా పది గ్రాములు యాభై ఐదు వేలు. / [2] ఒక సున్నా తక్కువ! |
 | 6 | amma | మరి ఈరోజు తేదీ ఎంతో అడుగు! |
 | 7 | ai | Today's date is: [1] current date. |
 | 8 | chinnu | ఇది ఇంటర్నెట్ లేని చిన్న ఫ్రీ చాట్‌బాట్: [1] క్యాలెండర్ లేదు, లైవ్ రేట్లు లేవు. |
-| 9 | chinnu | పది సార్లు అడిగాం. [1] తొమ్మిది సార్లు, ఈరోజు రేట్ చూసుకోండి అంది. ఒక్కసారే ఊహించింది. / [2] నీకు వచ్చింది అదే. |
-| 10 | chinnu | లాస్ట్ అప్‌డేట్ అంటే, అది పాత లెక్క, ఈరోజు ధర కాదు. / [1] ఈరోజు తేదీ ఉన్న లైవ్ రేట్ చూడు: బోర్డు తో సరిపోతుంది. |
+| 9 | chinnu | పది సార్లు అడిగాం. [1] తొమ్మిది సార్లు, ఈరోజు రేట్ చూసుకోండి అంది. ఒక్కసారే గెస్ చేసింది. / [2] నీకు వచ్చింది అదే. |
+| 10 | chinnu | లాస్ట్ అప్‌డేట్ అంటే, అది పాత లెక్క, ఈరోజు ధర కాదు. / [1] ఈరోజు తేదీ ఉన్న లైవ్ రేట్ చూడు: బోర్డు కి దగ్గరగా ఉంటుంది. |
 | 11 | amma | సరేలే. [1] కానీ ఇంకోసారి అడిగి చూస్తా... |
 
 ## Caption ask (a try-it test)

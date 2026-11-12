@@ -63,8 +63,8 @@ const counter = (c: Ctx, W: number, r: () => number) => {
   stroke(c, circlePts(540, 1110, 120, 60, 0.15, Math.PI - 0.15, 18), GOLD, 10, r, { passes: 2 });
   c.fillStyle = "#16a34a"; c.beginPath(); c.arc(540, 1170, 12, 0, 7); c.fill();
 };
-const card = (c: Ctx, W: number, k: number) => {   // a dark card over the shop for inserts
-  c.save(); c.globalAlpha = clamp(k * 3) * 0.92; c.fillStyle = "#0b1220"; c.fillRect(0, 440, W, 1060); c.restore();
+const card = (c: Ctx, W: number, k: number) => {   // a dark card over the shop for inserts (below the "same thing" line: it was clipped)
+  c.save(); c.globalAlpha = clamp(k * 3) * 0.92; c.fillStyle = "#0b1220"; c.fillRect(0, 472, W, 1028); c.restore();
 };
 const bubble = (c: Ctx, x: number, y: number, w: number, text: string, me: boolean, k: number, size = 36, hiFrom = -1, hiK = 0) => {
   if (k <= 0) return y;
@@ -94,10 +94,10 @@ const StGold: React.FC<SP> = ({ s }) => {
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={cue(i, 1, 0.5) - 6} src="audio/sfx_chaching.wav" vol={0.5} />);
     if (b.prop === "line") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.4} />, <Sfx key={k("p")} at={cue(i, 1, 0.4) - 4} src="audio/sfx_pop.wav" vol={0.5} />);
-    if (b.prop === "compare") sfx.push(<Sfx key={k("b")} at={cue(i, 1, 0.4) - 8} src="reel/sfx_boom.wav" vol={0.8} />);
+    if (b.prop === "compare") sfx.push(<Sfx key={k("b")} at={cue(i, 1, 0.4) - 8} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("z")} at={cue(i, 2, 0.8) - 8} src="reel/sfx_boom.wav" vol={0.9} />);
     if (b.prop === "date") sfx.push(<Sfx key={k("z")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.5} />);
     if (b.prop === "test") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 10)} src="audio/sfx_whoosh.wav" vol={0.45} />, <Sfx key={k("n")} at={cue(i, 1, 0.4) - 6} src="audio/sfx_pop.wav" vol={0.5} />);
-    if (b.prop === "rule") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.6) - 4} src="audio/gag_ding.wav" vol={0.5} />);
+    if (b.prop === "rule") sfx.push(<Sfx key={k("r")} at={Math.max(0, at - 24)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("d")} at={cue(i, 1, 0.6) - 4} src="audio/gag_ding.wav" vol={0.5} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 20)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />); }
   });
   return (
@@ -151,36 +151,36 @@ const StGold: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, "[current date].", W - 200, 96), 900); c.fillStyle = RED; c.fillText("[current date].", W / 2, 990);
             c.restore();
           }
-          chip(c, "9 of 10 times, word for word", W / 2, 1180, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.5) + 8, cu(1, 0.5) + 16), 38);
+          chip(c, "9 of 10 times, a blank like this", W / 2, 1180, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.5) + 8, cu(1, 0.5) + 16), 38);   // 8 "[current date]" + 1 "[today's date]"
         } else if (P === "label") {
-          chip(c, "a small free AI on our computer", W / 2, 1360, "#1e293b", "#f8fafc", seg(f, ln.from, ln.from + 8), 36);
+          chip(c, "a small free AI · no web search", W / 2, 1360, "#1e293b", "#f8fafc", seg(f, ln.from, ln.from + 8), 36);
           chip(c, "no internet · no calendar · no live rates", W / 2, 1440, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), 36);
         } else if (P === "compare") {
           card(c, W, 1);
           c.textAlign = "center"; c.font = SANS(50, 900); c.fillStyle = "#fde68a"; c.fillText("10 g of 22-carat gold", W / 2, 560);
-          const rows: [string, string, string, number][] = [["Oct 2023 (Business Standard)", "about ₹55,000", "#e2e8f0", ln.from + 4], ["the AI, \"as of Oct 2023\"", "₹5,000", "#f87171", cu(1, 0.3)], ["today, 12 Nov 2026 (Groww)", T.rate, "#4ade80", cu(1, 0.6)]];
+          const rows: [string, string, string, number][] = [["the AI, \"as of Oct 2023\"", "₹5,000", "#f87171", ln.from + 4], ["Oct 2023, really (Business Standard)", "about ₹55,000", "#e2e8f0", cu(1, 0.3)], ["today, 12 Nov 2026 (Groww)", T.rate, "#4ade80", cu(1, 0.6)]];
           rows.forEach(([a, v, col, t0], q) => {
             const k = seg(f, t0, t0 + 8); if (k <= 0) return;
-            c.save(); c.globalAlpha = clamp(k * 3); const y = 640 + q * 210;
+            c.save(); c.globalAlpha = clamp(k * 3); const y = 620 + q * 240;
             c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, 180, 22); c.fill();
             c.font = SANS(fit(c, a, W - 200, 36, 800), 800); c.fillStyle = "#cbd5e1"; c.fillText(a, W / 2, y + 60);
             c.font = SANS(80, 900); c.fillStyle = col; c.fillText(v, W / 2, y + 150); c.restore();
           });
-          chip(c, "3 years old, and a zero short", W / 2, 1330, "#fee2e2", "#7f1d1d", seg(f, cu(2, 0.8) - 2, cu(2, 0.8) + 6), 44);
+          chip(c, "↑ a zero short, even for 2023", W / 2, 838, "#fee2e2", "#7f1d1d", seg(f, cu(2, 0.8) - 2, cu(2, 0.8) + 6), 40);
         } else if (P === "test") {
           card(c, W, seg(f, ln.from - 2, ln.from + 4));
           c.textAlign = "center"; c.font = SANS(fit(c, "OUR TEST · asked today's gold price 10 times", W - 100, 46), 900); c.fillStyle = "#fde68a"; c.fillText("OUR TEST · asked today's gold price 10 times", W / 2, 560);
           c.font = SANS(32, 700); c.fillStyle = "#cbd5e1"; c.fillText("a small free AI on our computer, no web search", W / 2, 612);
           for (let q = 0; q < 10; q++) {
-            const k = seg(f, cu(1, 0.3) + q * 3, cu(1, 0.3) + q * 3 + 6); if (k <= 0) continue;
+            const k = seg(f, ln.from + 2 + q * 3, ln.from + 8 + q * 3); if (k <= 0) continue;   // render review: the empty frame
             const x = 120 + (q % 5) * 210, y = 700 + Math.floor(q / 5) * 230, bad = q === 8;
             c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = bad ? "#fee2e2" : "#dcfce7"; rrect(c, x - 90, y, 180, 190, 20); c.fill();
-            c.font = SANS(bad ? 40 : 30, 900); c.fillStyle = bad ? RED : GREEN; c.fillText(bad ? "₹5,000" : "can't", x, y + (bad ? 110 : 90));
-            if (!bad) c.fillText("see it", x, y + 130); else { c.font = SANS(24, 800); c.fillText("(2023)", x, y + 150); }
+            c.font = SANS(bad ? 40 : 28, 900); c.fillStyle = bad ? RED : GREEN; c.fillText(bad ? "₹5,000" : "check", x, y + (bad ? 110 : 80));
+            if (!bad) { c.fillText("today's", x, y + 116); c.fillText("rate", x, y + 152); } else { c.font = SANS(24, 800); c.fillText("(guessed)", x, y + 150); }
             c.restore();
           }
           chip(c, "9 of 10: \"check today's rate\"", W / 2, 1230, "#dcfce7", "#14532d", seg(f, cu(1, 0.6), cu(1, 0.6) + 8), 40);
-          chip(c, "you got the 1", W / 2, 1340, "#fee2e2", "#7f1d1d", seg(f, cu(2, 0.85) - 2, cu(2, 0.85) + 6), 46);
+          chip(c, "Mom got that one", W / 2, 1340, "#fee2e2", "#7f1d1d", seg(f, cu(2, 0.85) - 2, cu(2, 0.85) + 6), 46);
         } else if (P === "rule") {
           card(c, W, seg(f, ln.from - 2, ln.from + 4));
           c.fillStyle = "#fffbeb"; rrect(c, 60, 500, W - 120, 330, 26); c.fill();
@@ -195,7 +195,7 @@ const StGold: React.FC<SP> = ({ s }) => {
             c.font = SANS(22, 700); c.fillStyle = "#94a3b8"; c.fillText("(Groww, Goodreturns)", 295, 1110);
             c.fillStyle = GOLD; rrect(c, 550, 880, 470, 300, 22); c.fill(); c.fillStyle = "#3b1d0a"; c.font = SANS(28, 900); c.fillText("THE BOARD · " + T.date, 785, 930);
             c.font = SANS(26, 700); c.fillText("22 carat · 10 g", 785, 975); c.font = SANS(60, 900); c.fillText(T.rate, 785, 1060);
-            c.font = SANS(fit(c, "✓ same price, same date", W - 200, 52), 900); c.fillStyle = "#4ade80"; c.fillText("✓ same price, same date", W / 2, 1270);
+            c.font = SANS(fit(c, "✓ today's date · close to the board", W - 200, 50), 900); c.fillStyle = "#4ade80"; c.fillText("✓ today's date · close to the board", W / 2, 1270);
             c.restore();
           }
         }
