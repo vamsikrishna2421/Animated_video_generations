@@ -32,6 +32,26 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-12 (7-day checkpoint: HOW TO 03 "Test 3 AIs on your question before you pay")
+
+7-day checkpoint, cycle close. Published Nov 5 morning (IG EN/TE, browser task ran 8:55–9:09 AM ET); metrics pulled Nov 12 ~17:59 ET, lifetime to date, just past the 7-day mark. The 48h checkpoint was posted 2026-11-07. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**HOW TO 03 "Test 3 AIs on your question before you pay" (66.7 s EN / 76.4 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| HOW TO 03 EN | 154 | 162 (96.3%) | 56.5% | 9.0 s, ~13% | n/a | 10 | 0 / 12.3 / 0 / 0 | n/a |
+| HOW TO 03 TE | 104 | 107 (96.3%) | 36.5% | 3.5 s, ~5% | n/a | 3 | 9.3 / 18.7 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the methodology text and the ask), so the per-1,000 comment figures above are own-post counts, not viewer engagement.
+
+**Pattern check (sub-1,000 scrutiny):** frozen since 48h — EN views 151 → 154, reach 159 → 162, hold 57.0% → 56.5%, avg watch 9.1 s → 9.0 s; TE views 103 → 104, reach 106 → 107, hold 36.9% → 36.5%, avg watch 3.5 s unchanged. No late growth: 5 days added 3 views EN, 1 TE. Cycle closed, confirmation only; the 48h read stands. Root cause, unchanged: the hook works — the frame-1 ₹428 vs ₹518 clash earned a 57.0% EN hold — but the middle loses them (five shop questions across three AIs before the verdict: EN averages ~13% watched, TE ~5%). The EN/TE hold gap is now a 7-day-confirmed fact on the same creative (56.5% vs 36.5%) — a TE frame-1/line-1 problem, not a topic problem. The open recall ask drew zero viewer comments across the full 7 days; the ask format is already retired (one-word asks from Creative 22 on), so this closes the evidence, it does not reopen the question.
+
+**Suggestions (2):** 1. No new change from this read — verdict-first (the fix for the losing middle) and Telugu line 1 back on the clash are already adopted and live in HOW TO 04, published this morning; HOW TO 04's 48h read (Nov 14) is the test of both. 2. Keep judging tutorials at 48h: the 7-day read added nothing to the 48h verdict, same as EP43, Skit 16 and Skit 17 before it.
+
+Next checkpoints: Skit 18 at 7 days Nov 12 evening; EP49 at 48h Nov 12 evening; Skit 19 at 7 days Nov 13 morning (confirmation only); EP50 at 48h Nov 13 morning; Skit 20 at 7 days Nov 13 evening; EP51 at 48h Nov 13 evening; HOW TO 04 at 48h Nov 14 morning; Weekly 04 at 7 days Nov 14 morning (confirmation only); EP44 at 7 days Nov 14 evening; Creative 21 at 7 days Nov 15 morning; EP45 at 7 days Nov 15 evening; EP46 at 7 days Nov 16 morning; EP47 at 7 days Nov 16 evening; EP48 at 7 days Nov 17 morning.
+— Bujji, 2026-11-12
+
 ### [ANALYTICS] Bujji — 2026-11-12 (48h checkpoint: EP48 "No label needed")
 
 48h checkpoint, first measurement. Published Nov 10 morning (IG EN/TE, browser task ran 8:55–9:08 AM ET); metrics pulled Nov 12 ~09:01 ET, lifetime to date, at the 48h mark. No earlier [ANALYTICS] entry covered EP48. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
