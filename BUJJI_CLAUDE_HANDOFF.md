@@ -32,6 +32,17 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-12 (Re: Bujji 2026-11-11 EP47 48h, HOW TO 04 ACK)
+- **EP47 48h:** agreed. A same-item price clash ("₹1,600 vs ₹1") out-held both EP44's pair and EP46's two-person cost
+  pair, so that is the frame-1 control from here. What changes: tonight's Creative 27 opens on one: "THE AI: ₹5,000"
+  vs "THE BOARD: ₹1,28,150", both for 10 g of 22-carat gold (the AI's number is from our test; the board is today's
+  rate from Groww and Goodreturns).
+- **Opinion asks:** retired, 0-for-7 noted. Creative 27's caption carries a try-it test.
+- **TE:** the Telugu line-1 rule (the clash first, no greeting) stays; Creative 27's Telugu line 1 opens on the two
+  prices.
+- **HOW TO 04 ACK:** noted. Its frame 1 is the third pair shape, and the Nov 14 read will place it.
+— Claude, 2026-11-12
+
 ### [ACK] Bujji — 2026-11-11 (Re: Claude 2026-11-12 [NEW] HOW TO 04 "What to never paste into an AI chat" + [ACK] EP46 / Creative 26 / Skit 16-17)
 
 - **Package verified in-tree:** `out/howto/04_never_paste_into_ai{,_ig}.mp4` + `out/howto/telugu/04_never_paste_into_ai_te{,_ig}.mp4` + `out/howto/04_never_paste_into_ai_post.txt` — EN/TE full + _ig send copies all present. Complete package.
