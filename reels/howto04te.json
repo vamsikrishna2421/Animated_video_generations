@@ -34,7 +34,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 0.5,
+ "musicGapGain": 0.0,
  "musicEndRamp": [
   0.9,
   3.0
@@ -69,10 +69,6 @@
      {
       "prop": "review",
       "n": 2
-     },
-     {
-      "prop": "title",
-      "n": 3
      }
     ],
     "captionTop": 1500,
@@ -145,24 +141,15 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "కొన్ని చాట్ లను మనుషులు చదవొచ్చు అని, గూగుల్ పేజీయే చెప్తోంది. <pause 0.3> [1] అలా చదివిన చాట్ లు, డిలీట్ చేసినా, మూడేళ్ల దాకా ఉంటాయి. [2] కీప్ యాక్టివిటీ ఆఫ్ చేస్తే: డెబ్బై రెండు గంటలు.",
+     "text": "కొన్ని చాట్ లను మనుషులు చదవొచ్చు అని, గూగల్ పేజీయే చెప్తోంది. <pause 0.3> [1] అలా చదివిన చాట్ లు, డిలీట్ చేసినా, మూడేళ్ల దాకా ఉంటాయి. [2] కీప్ యాక్టివిటీ ఆఫ్ చేస్తే: డెబ్బై రెండు గంటలు.",
      "show": "Google's own page says people may read some chats. <pause 0.3> Chats read like that stay up to 3 years, even if you delete them. With Keep Activity off: 72 hours.",
      "maxgap": 0.3,
      "gap": 0.5,
      "tempo": 1.05,
-     "tts": "కొన్ని చాట్ లను మనుషులు చదవొచ్చు అని, గూగుల్ పేజీయే చెప్తోంది.",
+     "tts": "కొన్ని చాట్ లను మనుషులు చదవొచ్చు అని, గూగల్ పేజీయే చెప్తోంది.",
      "file2": "02b_storyteller.wav",
      "tts2": "అలా చదివిన చాట్ లు, డిలీట్ చేసినా, మూడేళ్ల దాకా ఉంటాయి. కీప్ యాక్టివిటీ ఆఫ్ చేస్తే: డెబ్బై రెండు గంటలు.",
      "pause": 0.3
-    },
-    {
-     "who": "storyteller",
-     "file": "03_storyteller.wav",
-     "text": "కాబట్టి, ఏం పేస్ట్ చేయకూడదో, [1] ఆ ఒక్క స్విచ్ ఎక్కడుందో చూద్దాం.",
-     "show": "So let's see what not to paste, and where that one switch is.",
-     "maxgap": 0.3,
-     "gap": 0.4,
-     "tempo": 1.05
     }
    ]
   },
@@ -172,22 +159,11 @@
    "tail": 0.0,
    "boost": 1.0,
    "lift": 0.5,
-   "drop_at": [
-    [
-     1,
-     1,
-     0.3
-    ]
-   ],
    "data": {
     "beats": [
      {
       "prop": "never",
       "n": 4
-     },
-     {
-      "prop": "quotes",
-      "n": 5
      }
     ],
     "captionTop": 1500,
@@ -260,15 +236,6 @@
      "file2": "04b_storyteller.wav",
      "tts2": "ఇతరుల వివరాలు: ఫోన్ నంబర్లు, బాకీలు, మెడికల్ రిపోర్టులు. ఇవి ఎప్పుడూ పేస్ట్ చేయకండి.",
      "pause": 0.3
-    },
-    {
-     "who": "storyteller",
-     "file": "05_storyteller.wav",
-     "text": "గూగుల్ సూటిగా చెప్తోంది: [1] ఒక మనిషి చదవకూడదని మీరు అనుకునేది, ఏదీ ఎంటర్ చేయకండి.",
-     "show": "Google says it straight: don't enter anything you wouldn't want a person to read.",
-     "maxgap": 0.3,
-     "gap": 0.5,
-     "tempo": 1.05
     }
    ]
   },
@@ -354,40 +321,40 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "జెమిని లో: సెట్టింగ్స్ అండ్ హెల్ప్, యాక్టివిటీ, [1] ఆన్ నొక్కి, టర్న్ ఆఫ్ నొక్కండి. <pause 0.3> [2] హిస్టరీ సేవ్ అవ్వదు. లేదా టెంపరరీ చాట్ వాడండి.",
-     "show": "In Gemini: Settings & help, Activity, click On, then Turn off. <pause 0.3> History stops saving. Or use a temporary chat.",
+     "text": "జెమిని వెబ్‌సైట్ లో: సెట్టింగ్స్ అండ్ హెల్ప్, తర్వాత యాక్టివిటీ. <pause 0.3> [1] ఆన్ అనే బటన్ నొక్కి, ఆఫ్ చేయండి. [2] హిస్టరీ సేవ్ అవ్వదు. లేదా టెంపరరీ చాట్ వాడండి.",
+     "show": "On the Gemini website: Settings & help, then Activity. <pause 0.3> Click the On button, turn it off. History stops saving. Or use a temporary chat.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.05,
-     "tts": "జెమిని లో: సెట్టింగ్స్ అండ్ హెల్ప్, యాక్టివిటీ, ఆన్ నొక్కి, టర్న్ ఆఫ్ నొక్కండి.",
+     "tts": "జెమిని వెబ్‌సైట్ లో: సెట్టింగ్స్ అండ్ హెల్ప్, తర్వాత యాక్టివిటీ.",
      "file2": "06b_storyteller.wav",
-     "tts2": "హిస్టరీ సేవ్ అవ్వదు. లేదా టెంపరరీ చాట్ వాడండి.",
+     "tts2": "ఆన్ అనే బటన్ నొక్కి, ఆఫ్ చేయండి. హిస్టరీ సేవ్ అవ్వదు. లేదా టెంపరరీ చాట్ వాడండి.",
      "pause": 0.3
     },
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "చాట్ జీపీటీ లో: సెట్టింగ్స్, డేటా కంట్రోల్స్, <pause 0.3> [1] ఇంప్రూవ్ ద మోడల్ ఫర్ ఎవ్రీవన్ ఆఫ్ చేయండి. అది మొదటి నుంచీ ఆన్ లోనే ఉంటుంది. [2] అక్కడ కూడా టెంపరరీ చాట్ ఉంది.",
+     "text": "చాట్ జీపీటీ లో: సెట్టింగ్స్, డేటా కంట్రోల్స్, <pause 0.3> [1] ఇంప్రూవ్ ద మోడల్ ఫర్ ఎవ్రీవన్ ఆఫ్ చేయండి. మొదటి నుంచీ అది ఆన్ లోనే ఉంటుంది. [2] అక్కడ కూడా టెంపరరీ చాట్ ఉంది.",
      "show": "In ChatGPT: Settings, Data controls, <pause 0.3> turn off \"Improve the model for everyone\". It is on from the start. Temporary Chat is there too.",
      "maxgap": 0.3,
      "gap": 0.5,
      "tempo": 1.05,
      "tts": "చాట్ జీపీటీ లో: సెట్టింగ్స్, డేటా కంట్రోల్స్,",
      "file2": "07b_storyteller.wav",
-     "tts2": "ఇంప్రూవ్ ద మోడల్ ఫర్ ఎవ్రీవన్ ఆఫ్ చేయండి. అది మొదటి నుంచీ ఆన్ లోనే ఉంటుంది. అక్కడ కూడా టెంపరరీ చాట్ ఉంది.",
+     "tts2": "ఇంప్రూవ్ ద మోడల్ ఫర్ ఎవ్రీవన్ ఆఫ్ చేయండి. మొదటి నుంచీ అది ఆన్ లోనే ఉంటుంది. అక్కడ కూడా టెంపరరీ చాట్ ఉంది.",
      "pause": 0.3
     },
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "ఈ స్విచ్ కొత్త చాట్ లకే, ఇప్పటికే చదివిన చాట్ అలాగే ఉంటుంది. <pause 0.3> [1] కాబట్టి అసలు మార్గం: పేర్లు, నంబర్లకి బదులు కస్టమర్ వన్ అని రాయండి.",
-     "show": "This switch is only for new chats; a chat already read stays. <pause 0.3> So the real fix: write \"Customer 1\" instead of names and numbers.",
+     "text": "ఈ స్విచ్ ఇకపై చేసే చాట్ లకే. ఇప్పటికే చదివిన చాట్ పోదు. <pause 0.3> [1] కాబట్టి అసలు ఫిక్స్: పేర్లు, ఫోన్ నంబర్లకి బదులు కస్టమర్ వన్ అని రాయండి.",
+     "show": "This switch is only for chats from now on; a chat already read stays. <pause 0.3> So the real fix: write \"Customer 1\" instead of names and phone numbers.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.05,
-     "tts": "ఈ స్విచ్ కొత్త చాట్ లకే, ఇప్పటికే చదివిన చాట్ అలాగే ఉంటుంది.",
+     "tts": "ఈ స్విచ్ ఇకపై చేసే చాట్ లకే. ఇప్పటికే చదివిన చాట్ పోదు.",
      "file2": "08b_storyteller.wav",
-     "tts2": "కాబట్టి అసలు మార్గం: పేర్లు, నంబర్లకి బదులు కస్టమర్ వన్ అని రాయండి.",
+     "tts2": "కాబట్టి అసలు ఫిక్స్: పేర్లు, ఫోన్ నంబర్లకి బదులు కస్టమర్ వన్ అని రాయండి.",
      "pause": 0.3
     }
    ]

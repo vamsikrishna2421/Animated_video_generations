@@ -67,10 +67,6 @@
      {
       "prop": "review",
       "n": 2
-     },
-     {
-      "prop": "title",
-      "n": 3
      }
     ],
     "captionTop": 1500,
@@ -142,24 +138,15 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "Google's own page: a person may read some chats, [1] and keeps those up to three years, even if you delete them. <pause 0.5> [2] With Keep Activity off: seventy-two hours.",
-     "show": "Google's own page: a person may read some chats, and keeps those up to 3 years, even if you delete them. <pause 0.5> With Keep Activity off: 72 hours.",
+     "text": "Google's own page: a person may read some chats, [1] and keeps those up to three years, even if you delete them. <pause 0.5> [2] With the Keep Activity switch off: seventy-two hours.",
+     "show": "Google's own page: a person may read some chats, and keeps those up to 3 years, even if you delete them. <pause 0.5> With the Keep Activity switch off: 72 hours.",
      "maxgap": 0.3,
      "gap": 0.5,
      "tempo": 1.04,
      "tts": "Google's own page: a person may read some chats, and keeps those up to three years, even if you delete them.",
      "file2": "02b_storyteller.wav",
-     "tts2": "With Keep Activity off: seventy-two hours.",
+     "tts2": "With the Keep Activity switch off: seventy-two hours.",
      "pause": 0.5
-    },
-    {
-     "who": "storyteller",
-     "file": "03_storyteller.wav",
-     "text": "So: what never to paste, [1] and the one switch to check.",
-     "show": "So: what never to paste, and the one switch to check.",
-     "maxgap": 0.3,
-     "gap": 0.4,
-     "tempo": 1.04
     }
    ]
   },
@@ -169,22 +156,11 @@
    "tail": 0.0,
    "boost": 1.0,
    "lift": 0.5,
-   "drop_at": [
-    [
-     1,
-     1,
-     0.3
-    ]
-   ],
    "data": {
     "beats": [
      {
       "prop": "never",
       "n": 4
-     },
-     {
-      "prop": "quotes",
-      "n": 5
      }
     ],
     "captionTop": 1500,
@@ -249,15 +225,6 @@
      "file": "04_storyteller.wav",
      "text": "Never paste passwords or OTPs, [1] Aadhaar, PAN or bank numbers, [2] or other people's details: phone numbers, dues, medical reports.",
      "show": "Never paste passwords or OTPs, Aadhaar, PAN or bank numbers, or other people's details: phone numbers, dues, medical reports.",
-     "maxgap": 0.3,
-     "gap": 0.5,
-     "tempo": 1.04
-    },
-    {
-     "who": "storyteller",
-     "file": "05_storyteller.wav",
-     "text": "Google says it plainly: [1] don't enter anything you wouldn't want a reviewer to see.",
-     "show": "Google says it plainly: don't enter anything you wouldn't want a reviewer to see.",
      "maxgap": 0.3,
      "gap": 0.5,
      "tempo": 1.04
@@ -345,8 +312,8 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "In Gemini: Settings and help, Activity, [1] click On, then Turn off. [2] Your history stops saving. Or use a temporary chat.",
-     "show": "In Gemini: Settings and help, Activity, click On, then Turn off. Your history stops saving. Or use a temporary chat.",
+     "text": "Gemini, on the website: Settings and help, then Activity. [1] Click the word On, then Turn off. [2] Your history stops saving. Or use a temporary chat.",
+     "show": "Gemini, on the website: Settings and help, then Activity. Click the word On, then Turn off. Your history stops saving. Or use a temporary chat.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.04
@@ -364,8 +331,8 @@
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "The switch covers new chats, and a chat already reviewed stays. [1] So the real fix: paste \"Customer 1\", never the names and numbers.",
-     "show": "The switch covers new chats, and a chat already reviewed stays. So the real fix: paste \"Customer 1\", never the names and numbers.",
+     "text": "The switch covers new chats, and a chat already reviewed stays. [1] So the real fix: paste \"Customer 1\", never names or phone numbers.",
+     "show": "The switch covers new chats, and a chat already reviewed stays. So the real fix: paste \"Customer 1\", never names or phone numbers.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.04

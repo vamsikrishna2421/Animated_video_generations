@@ -63,32 +63,43 @@ ChatGPT's Temporary Chat; line 8 "The switch covers new chats, and a chat alread
 paste 'Customer 1', never the names and numbers."; line 9 "Open your settings now: ON, or OFF?" (loops into "Three
 years, or seventy-two hours"); no Microsoft line (in the caption); Telugu as listed.
 
-## Script (English, v2; narrator) · ~68 s
+## Render review (human-viewer, v2 render) and what changed (v3)
+Both: the hook is honest and works; 0:17-0:36 was filler (the title card, then "Google says it plainly" repeating the
+hook); the Gemini step can't be followed on a phone (the path is the website's, and only a tiny footer said so). Also:
+"no names, no numbers" on screen vs "Customer 1, ₹4,200" in the caption; Telugu sound risks (గూగుల్ heard "Kungul";
+"కొత్త చాట్" heard "kutta chat"; "టర్న్ ఆఫ్ నొక్కండి" heard "tannuk", kick; a hum on "ఉంటుంది"); English "Keep" heard
+"key"; the Telugu gaps 1.2 dB over the voice; the frame-1 qualifier the smallest text. Priya asked for a source for
+"Keep Activity off: not used to train": Google's page, "Your future chats won't appear in your Activity, and won't be
+used to train our AI models" (now in the pinned comment).
+Changed (v3): no title card and no repeated Google line (EN 69 -> 62 s); "Gemini, on the website: Settings and help,
+then Activity. Click the word On, then Turn off." with big numbered steps (gemini.google.com · Settings & help ›
+Activity · click On › Turn off) and an "On ▾" button as on Google's page; "never names or phone numbers"; Telugu
+గూగల్, "ఇకపై చేసే చాట్ లకే. ఇప్పటికే చదివిన చాట్ పోదు.", "ఆన్ అనే బటన్ నొక్కి, ఆఫ్ చేయండి", "అసలు ఫిక్స్"; English "With the
+Keep Activity switch off"; the Telugu gap gain off; the frame-1 qualifier bigger and gold; the comment ask "training /
+Keep Activity switch: ON or OFF?".
+
+## Script (English, v3; narrator) · 62 s
 | # | Line |
 |---|---|
 | 1 | Three years, or seventy-two hours. [1] Ravi just pasted his customers' dues list into Gemini. |
-| 2 | Google's own page: a person may read some chats, [1] and keeps those up to three years, even if you delete them. / [2] With Keep Activity off: seventy-two hours. |
-| 3 | So: what never to paste, [1] and the one switch to check. |
+| 2 | Google's own page: a person may read some chats, [1] and keeps those up to three years, even if you delete them. / [2] With the Keep Activity switch off: seventy-two hours. |
 | 4 | Never paste passwords or OTPs, [1] Aadhaar, PAN or bank numbers, [2] or other people's details: phone numbers, dues, medical reports. |
-| 5 | Google says it plainly: [1] don't enter anything you wouldn't want a reviewer to see. |
-| 6 | In Gemini: Settings and help, Activity, [1] click On, then Turn off. [2] Your history stops saving. Or use a temporary chat. |
+| 6 | Gemini, on the website: Settings and help, then Activity. [1] Click the word On, then Turn off. [2] Your history stops saving. Or use a temporary chat. |
 | 7 | In ChatGPT: Settings, Data controls, [1] turn off "Improve the model for everyone". It's on by default. [2] Temporary Chat works there too. |
-| 8 | The switch covers new chats, and a chat already reviewed stays. [1] So the real fix: paste "Customer 1", never the names and numbers. |
+| 8 | The switch covers new chats, and a chat already reviewed stays. [1] So the real fix: paste "Customer 1", never names or phone numbers. |
 | 9 | Open your settings now: [1] ON, or OFF? |
 
-## Script (Telugu, v2)
+## Script (Telugu, v3) · 69 s
 | # | Telugu |
 |---|---|
 | 1 | మూడేళ్లు, లేదా డెబ్బై రెండు గంటలు. [1] రవి అన్న, కస్టమర్ల బాకీల లిస్ట్ ని, జెమిని లో పేస్ట్ చేశాడు. |
-| 2 | కొన్ని చాట్ లను మనుషులు చదవొచ్చు అని, గూగుల్ పేజీయే చెప్తోంది. / [1] అలా చదివిన చాట్ లు, డిలీట్ చేసినా, మూడేళ్ల దాకా ఉంటాయి. [2] కీప్ యాక్టివిటీ ఆఫ్ చేస్తే: డెబ్బై రెండు గంటలు. |
-| 3 | కాబట్టి, ఏం పేస్ట్ చేయకూడదో, [1] ఆ ఒక్క స్విచ్ ఎక్కడుందో చూద్దాం. |
+| 2 | కొన్ని చాట్ లను మనుషులు చదవొచ్చు అని, గూగల్ పేజీయే చెప్తోంది. / [1] అలా చదివిన చాట్ లు, డిలీట్ చేసినా, మూడేళ్ల దాకా ఉంటాయి. [2] కీప్ యాక్టివిటీ ఆఫ్ చేస్తే: డెబ్బై రెండు గంటలు. |
 | 4 | పాస్‌వర్డ్‌లు, ఓటీపీలు, [1] ఆధార్, పాన్, బ్యాంక్ నంబర్లు, / [2] ఇతరుల వివరాలు: ఫోన్ నంబర్లు, బాకీలు, మెడికల్ రిపోర్టులు. ఇవి ఎప్పుడూ పేస్ట్ చేయకండి. |
-| 5 | గూగుల్ సూటిగా చెప్తోంది: [1] ఒక మనిషి చదవకూడదని మీరు అనుకునేది, ఏదీ ఎంటర్ చేయకండి. |
-| 6 | జెమిని లో: సెట్టింగ్స్ అండ్ హెల్ప్, యాక్టివిటీ, [1] ఆన్ నొక్కి, టర్న్ ఆఫ్ నొక్కండి. / [2] హిస్టరీ సేవ్ అవ్వదు. లేదా టెంపరరీ చాట్ వాడండి. |
-| 7 | చాట్ జీపీటీ లో: సెట్టింగ్స్, డేటా కంట్రోల్స్, / [1] ఇంప్రూవ్ ద మోడల్ ఫర్ ఎవ్రీవన్ ఆఫ్ చేయండి. అది మొదటి నుంచీ ఆన్ లోనే ఉంటుంది. [2] అక్కడ కూడా టెంపరరీ చాట్ ఉంది. |
-| 8 | ఈ స్విచ్ కొత్త చాట్ లకే, ఇప్పటికే చదివిన చాట్ అలాగే ఉంటుంది. / [1] కాబట్టి అసలు మార్గం: పేర్లు, నంబర్లకి బదులు కస్టమర్ వన్ అని రాయండి. |
+| 6 | జెమిని వెబ్‌సైట్ లో: సెట్టింగ్స్ అండ్ హెల్ప్, తర్వాత యాక్టివిటీ. / [1] ఆన్ అనే బటన్ నొక్కి, ఆఫ్ చేయండి. [2] హిస్టరీ సేవ్ అవ్వదు. లేదా టెంపరరీ చాట్ వాడండి. |
+| 7 | చాట్ జీపీటీ లో: సెట్టింగ్స్, డేటా కంట్రోల్స్, / [1] ఇంప్రూవ్ ద మోడల్ ఫర్ ఎవ్రీవన్ ఆఫ్ చేయండి. మొదటి నుంచీ అది ఆన్ లోనే ఉంటుంది. [2] అక్కడ కూడా టెంపరరీ చాట్ ఉంది. |
+| 8 | ఈ స్విచ్ ఇకపై చేసే చాట్ లకే. ఇప్పటికే చదివిన చాట్ పోదు. / [1] కాబట్టి అసలు ఫిక్స్: పేర్లు, ఫోన్ నంబర్లకి బదులు కస్టమర్ వన్ అని రాయండి. |
 | 9 | ఇప్పుడే మీ సెట్టింగ్ చూడండి: [1] ఆన్ లో ఉందా, ఆఫ్ లో ఉందా? |
 
 ## Caption ask (a try-it test)
-"Open your AI app's settings now (ChatGPT: Settings > Data controls; Gemini: Settings & help > Activity). Is training ON or
-OFF? Comment ON or OFF."
+"Open your AI app's settings now (ChatGPT: Settings > Data controls; Gemini website: Settings & help > Activity). Is your
+training / Keep Activity switch ON or OFF? Comment ON or OFF."

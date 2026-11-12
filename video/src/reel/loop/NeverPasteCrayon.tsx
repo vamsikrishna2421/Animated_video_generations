@@ -42,7 +42,7 @@ const block2 = (c: Ctx, x: number, y: number, l1: string, l2: string, big: strin
   c.fillStyle = "#111827"; rrect(c, x, y, 470, 230, 22); c.fill();
   c.textAlign = "center";
   c.font = SANS(fit(c, l1, 430, 30, 900), 900); c.fillStyle = "#93c5fd"; c.fillText(l1, x + 235, y + 44);
-  c.font = SANS(fit(c, l2, 430, 30, 900), 900); c.fillStyle = "#e2e8f0"; c.fillText(l2, x + 235, y + 84);
+  c.font = SANS(fit(c, l2, 440, 36, 900), 900); c.fillStyle = "#fde68a"; c.fillText(l2, x + 235, y + 88);   // render review: the qualifier was the smallest text
   c.font = SANS(fit(c, big, 430, 74), 900); c.fillStyle = col; c.fillText(big, x + 235, y + 162);
   c.font = SANS(26, 700); c.fillStyle = "#94a3b8"; c.fillText(small, x + 235, y + 206);
 };
@@ -147,18 +147,28 @@ const StNeverPaste: React.FC<SP> = ({ s }) => {
           quote(c, 50, 480, W - 100, T.gNever, "Google · Gemini Apps Privacy Hub", seg(f, cu(1, 0.3) - 6, cu(1, 0.3) + 4), 54);
         } else if (P === "gemini" || P === "chatgpt") {
           const gem = P === "gemini";
-          screen(c, 60, 260, W - 120, 760, gem ? "Gemini" : "ChatGPT", gem ? "Settings & help  ›  Activity" : "Settings  ›  Data controls");
+          screen(c, 60, 260, W - 120, 760, gem ? "Gemini · on the WEBSITE" : "ChatGPT", gem ? "" : "Settings  ›  Data controls");
+          if (gem) {   // render review: the path is the website's (Google's help page); big numbered steps
+            [["1", "gemini.google.com"], ["2", "Settings & help  ›  Activity"]].forEach(([nn, t], q) => {
+              c.font = SANS(40, 900); c.fillStyle = "#1d4ed8"; c.textAlign = "left"; c.fillText(nn + ".", 110, 1080 + q * 70);
+              c.font = SANS(fit(c, t, W - 330, 40, 800), 800); c.fillStyle = "#f8fafc"; c.fillText(t, 170, 1080 + q * 70);
+            });
+            c.font = SANS(40, 900); c.fillStyle = "#1d4ed8"; c.fillText("3.", 110, 1220); c.font = SANS(40, 800); c.fillStyle = "#f8fafc"; c.fillText("click On  ›  Turn off", 170, 1220);
+          }
           const on = 1 - seg(f, cu(1, 0.5), cu(1, 0.5) + 8);
           c.fillStyle = "#ffffff"; rrect(c, 100, 420, W - 200, 200, 20); c.fill();
           const label = gem ? "Keep Activity" : "Improve the model for everyone";
           c.font = SANS(fit(c, label, W - 440, 46, 800), 800); c.fillStyle = INK; c.textAlign = "left"; c.fillText(label, 140, 505);
           c.font = SANS(28, 600); c.fillStyle = "#64748b"; c.fillText(gem ? "click On, then Turn off" : "your chats can be used to train models", 140, 560);
-          toggle(c, W - 270, 470, on);
+          if (gem) {   // Google's page: an "On" button near the top, then "Turn off"
+            c.fillStyle = on > 0.5 ? "#dbeafe" : "#e2e8f0"; rrect(c, W - 330, 468, 210, 76, 38); c.fill();
+            c.font = SANS(38, 900); c.fillStyle = on > 0.5 ? "#1d4ed8" : "#475569"; c.textAlign = "center"; c.fillText(on > 0.5 ? "On ▾" : "Off", W - 225, 520); c.textAlign = "left";
+          } else toggle(c, W - 270, 470, on);
           if (on < 0.5) { c.font = SANS(fit(c, gem ? "OFF: kept 72 hours, not used to train" : "OFF: new chats not used to train", W - 240, 38, 800), 800); c.fillStyle = GREEN; c.fillText(gem ? "OFF: kept 72 hours, not used to train" : "OFF: new chats not used to train", 120, 700); }
           if (gem) {
             chip(c, "the catch: your chat history stops saving", W / 2, 820, "#fef3c7", "#78350f", seg(f, cu(2, 0.6), cu(2, 0.6) + 8), 36);
             chip(c, "or: Temporary chat (next to New chat)", W / 2, 940, "#e0e7ff", "#1e3a8a", seg(f, cu(2, 0.85), cu(2, 0.85) + 8), 36);
-            chip(c, "web: gemini.google.com · or myactivity.google.com/product/gemini", W / 2, 1150, "#1e293b", "#e2e8f0", 1, 28);
+            chip(c, "or: myactivity.google.com/product/gemini", W / 2, 1320, "#1e293b", "#e2e8f0", 1, 30);
           } else {
             chip(c, "ON by default (Free, Plus, Pro)", W / 2, 840, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.8), cu(1, 0.8) + 8), 40);
             chip(c, "or: Temporary Chat · not used to train", W / 2, 960, "#e0e7ff", "#1e3a8a", seg(f, cu(2, 0.8), cu(2, 0.8) + 8), 38);
@@ -174,7 +184,7 @@ const StNeverPaste: React.FC<SP> = ({ s }) => {
           if (kn > 0) {
             c.save(); c.globalAlpha = clamp(kn * 3);
             dues(c, 150, 680, W - 200, (T.anon as string[][]), 1, false);
-            chip(c, "✓ the real fix: no names, no numbers", W / 2, 1120, "#dcfce7", "#14532d", 1, 42);
+            chip(c, "✓ the real fix: no names, no phone numbers", W / 2, 1120, "#dcfce7", "#14532d", 1, 40);
             c.restore();
           }
         } else if (P === "loop") {
