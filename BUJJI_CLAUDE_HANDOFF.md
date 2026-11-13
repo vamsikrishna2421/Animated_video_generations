@@ -32,6 +32,48 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-13 (EP52 "5 Years or ₹1,450? Build RAG Over Your PDFs, Part 1", the Friday syllabus episode, queue 056)
+- **Format:** a screen tutorial (Season 6), one narrator. After Creative 27's skit, no two skits in a row, and tutorials
+  stay at 1 in 3 or better.
+- **Frame 1 (the control shape, EP47/EP49):** a same-item money clash from our own test: "OUR FIRST BOT: 'not in it'
+  ₹1,450?" vs "PAGE 3: THE MOTOR · 5 YEARS". The real question ("How long is the warranty on the motor of my MG-750
+  mixer grinder?") and our first bot's real reply, "Not in the document. (page 1)". Verdict first. Telugu line 1 opens
+  on the clash.
+- **The lesson:** read the PDF page by page; for a short PDF, don't search: send every page, numbered; rules: answer
+  only from the document, say the page, or say it isn't there. Then open the page it gives. Part 2: PDFs too big to
+  send with every question (search by meaning).
+- **Our test (each script committed before it ran):** a 5-page warranty card we wrote for a made-up mixer, ten
+  questions, a small free AI on our computer, every reply read by hand.
+  - no PDF: 0 of 10
+  - the first search: 1 of 10 (it picked the cover 9 times)
+  - all 5 pages, numbered: 9 of 10, with the right page on 7 and a wrong page on 1. The miss said "Not in the
+    document" when page 4 had it.
+- **Viewers:** both stopped on the hook. At the render stage both asked when to switch from "send every page" to
+  search; they said the miss scene didn't land, the code stretch sagged, and "don't search" clashed with Part 2. What
+  changed:
+  - added the switch rule on screen, Part 2 named "search by meaning", and a no-code chip;
+  - line 2 now says the ₹1,450 stake;
+  - line 9 adds "when it says it's not there, check the PDF", with a "MISSED: THE ANSWER WAS ON PAGE 4" stamp (a
+    confirmation pass caught a red "NOT COVERED" that read as if the motor wasn't covered);
+  - a 0.6 s drop and a hit on 9/10.
+  - Telugu: "మా మొదటి" became "మా ఫస్ట్" (it could be heard as a vulgar word), "అది పార్ట్ టూ" (heard as "a song")
+    became "రెండో భాగంలో", and "తెరిచి చూడండి" became "ఓపెన్ చేసి చెక్ చేయండి".
+- **Files:**
+  - Videos: `out/056_ep52_5_years_or_1450.mp4` (EN, 78 s), `out/telugu_page/056_ep52_insta_te.mp4` (TE, 81 s), each
+    with an `_ig` send copy.
+  - Captions: `out/056_ep52_captions.txt`, `out/telugu_page/056_ep52_captions_te.txt`.
+  - YouTube: `out/youtube/056_ep52_youtube.txt`.
+- **Feedback applied:** the same-item money clash as frame 1 (your EP49 48h: two-episode control); the try-it test kept,
+  not retired on one 0; Telugu line 1 on the clash; verdict-first; no opinion or one-word ask.
+- **Ask:** a try-it test: "paste 2-3 pages of your own warranty card or bill into an AI chat, each labelled 'page 1',
+  'page 2'..., and ask with 'answer only from this, say the page'. Did it give the right page? Comment PAGE or NO PAGE."
+- **[QUESTION] at 48h:**
+  - EN hold vs EP47's 66.3% and EP49's 64.2%; this is the first clash on a tutorial topic.
+  - TE hold vs EN.
+  - PAGE vs NO PAGE counts.
+  - Avg % watched vs EP51 at 78 s: does the 15-s tutorial middle still lose them?
+— Claude, 2026-11-13
+
 ### [ACK] Claude — 2026-11-13 (Re: Bujji 2026-11-12 EP49 48h, Skit 18 7-day, ACK)
 - **EP49 48h, frame 1:** agreed. With EP47 and EP49 behind it, the same-item price clash is the control. What changes:
   nothing new. EP52 (pushed today) opens on the control shape: "Five years or ₹1,450?", the same mixer repair, our first
