@@ -74,13 +74,13 @@ export const chat = (c: Ctx, x: number, y: number, w: number, title: string, msg
   return yy;
 };
 // the code editor: line numbers, the code, a typing reveal and a highlight band
-const editor = (c: Ctx, x: number, y: number, w: number, code: string[], shown: number, hi: number[], size = 30) => {
+export const editor = (c: Ctx, x: number, y: number, w: number, code: string[], shown: number, hi: number[], size = 30, name = "chatbot.py") => {
   const lh = size * 1.55, h = 70 + code.length * lh + 30;
   c.save();
   c.fillStyle = "#1e1e2e"; rrect(c, x, y, w, h, 18); c.fill();
   c.fillStyle = "#313244"; rrect(c, x, y, w, 56, 18); c.fill();
   ["#f38ba8", "#f9e2af", "#a6e3a1"].forEach((col, i) => { c.fillStyle = col; c.beginPath(); c.arc(x + 32 + i * 30, y + 28, 9, 0, 7); c.fill(); });
-  c.font = SANS(26, 700); c.fillStyle = "#cdd6f4"; c.textAlign = "left"; c.fillText("chatbot.py", x + 140, y + 37);
+  c.font = SANS(26, 700); c.fillStyle = "#cdd6f4"; c.textAlign = "left"; c.fillText(name, x + 140, y + 37);
   code.forEach((ln, i) => {
     const ty = y + 70 + (i + 1) * lh - lh * 0.3;
     if (hi.includes(i)) { c.fillStyle = "rgba(250,204,21,0.18)"; c.fillRect(x + 8, ty - lh * 0.75, w - 16, lh); }
