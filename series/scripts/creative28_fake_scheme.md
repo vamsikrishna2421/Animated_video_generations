@@ -61,6 +61,19 @@ the laptop chip "'free laptop' messages: PIB Fact Check says FAKE"; three stamp 
 "చెక్ చేసే దారి లేదు", "జీ ఓ వీ". Length: the first English cut ran 70 s: lines 2, 3, 6 trimmed, tempo 1.1 (61 s).
 Telugu voicing: "మేమే" came out "me me me" (now "మేం పెట్టిందే / పెట్టినవి"); line 1 split into two takes.
 
+## Render review (human-viewer, first render) and what changed
+Both: the hook works; the 6-vs-2 counts now compare the same thing; PM-KISAN (₹24,000 vs ₹6,000 a year) is the
+strongest beat; the fix order is clear; the end was flat and the small text unreadable on a phone. Sandeep (Telugu):
+"మూడు వేలా" swallowed twice; "లేదా?" heard as "or"; the ending heard as "చేయం" (we won't check); the row labels too
+small; the MYTH stamp covered the tiles just counted. Priya: "Yojana" said "yoyuna"; the forward showed ₹3,000, so did
+the AI just copy it?; "money wrong all 4 times" (the 4th reply was cut off); no lift into FACT or the loop.
+Changed: Telugu "నెలకి మూడు వేల రూపాయలా", "అక్కడ లేకపోతే", "ముందు చెక్ చేసుకోండి" (checked by ear-proxy: Whisper's
+English pass hears "check it first"); English "Yo-jah-nah" (heard "Digital Dadi Pension Yojana"); the forward shows only
+the name, with a chip "the AI got only the name: the amount came from the AI"; ₹0 on frame 1; large VIRAL FAKE / MADE
+UP BY US labels; the stamp on the claim; bigger chips; the caption "money wrong in 3 of 4 replies, the 4th cut off";
+the full rule in the pinned comment; a lift into FACT (boost 2.0) and a bigger rise into the loop (Q4 now level with Q1).
+Lengths: 61 s EN, 65 s TE.
+
 ## Script (English, v2; narrator)
 | # | Line |
 |---|---|

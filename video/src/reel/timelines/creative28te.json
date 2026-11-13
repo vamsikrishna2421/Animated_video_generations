@@ -13,47 +13,47 @@
  "fps": 30,
  "musicDrops": [
   [
-   1224,
-   1266
+   1244,
+   1286
   ]
  ],
  "musicBoosts": [
   [
    0,
-   552,
+   573,
    1.0
   ],
   [
-   552,
-   982,
+   573,
+   1003,
    1.2
   ],
   [
-   982,
-   1330,
+   1002,
+   1350,
    1.25
   ],
   [
-   1330,
-   1597,
-   1.5
+   1350,
+   1698,
+   2.0
   ],
   [
-   1597,
-   1830,
-   1.7
+   1698,
+   1938,
+   2.1
   ],
   [
-   1597,
-   1830,
-   1.7,
+   1698,
+   1938,
+   1.8,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1830,
+ "totalFrames": 1938,
  "music": "reel/creative28te/score.wav",
  "scenes": [
   {
@@ -75,7 +75,8 @@
      "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
      "ask": "How much does the Digital Dadi Pension Yojana give?",
      "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
-     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "forward": "Digital Dadi Pension Yojana for every grandmother! Register today!",
+     "onlyName": "the AI got only the name: the amount came from the AI",
      "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
      "myth1": "If the AI gives amounts and steps, the scheme is real.",
      "myth2": "Just tell it not to guess.",
@@ -151,9 +152,9 @@
      "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
      "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
      "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
-     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
-     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
-     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+     "vayas": "it filed Digital Dadi under \"PM-VAYAS\": also made up",
+     "pension": "real pensions are there, like the old-age pension",
+     "apy": "Atal Pension: it said ₹6,000/month · real ₹1,000-5,000"
     },
     "yt": {
      "chapter": "₹3,000 a month, or zero?",
@@ -165,7 +166,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 552,
+   "frames": 573,
    "lines": [
     {
      "who": "storyteller",
@@ -174,96 +175,96 @@
      "sub": null,
      "audio": "reel/creative28te/line_01.wav",
      "from": 15,
-     "frames": 275,
+     "frames": 294,
      "words": [
       {
        "w": "₹3,000",
        "from": 16,
-       "to": 27
+       "to": 28
       },
       {
        "w": "a",
-       "from": 27,
+       "from": 28,
        "to": 31
       },
       {
        "w": "month,",
        "from": 31,
-       "to": 42
+       "to": 43
       },
       {
        "w": "or",
-       "from": 42,
-       "to": 47
+       "from": 43,
+       "to": 48
       },
       {
        "w": "zero?",
-       "from": 47,
+       "from": 48,
        "to": 57
       },
       {
        "w": "Grandma",
        "from": 57,
-       "to": 80
+       "to": 71
       },
       {
        "w": "asked",
-       "from": 80,
-       "to": 90
+       "from": 71,
+       "to": 103
       },
       {
        "w": "a",
-       "from": 90,
-       "to": 94
+       "from": 103,
+       "to": 106
       },
       {
        "w": "chatbot",
-       "from": 94,
-       "to": 116
+       "from": 106,
+       "to": 127
       },
       {
        "w": "with",
-       "from": 116,
-       "to": 137
+       "from": 127,
+       "to": 136
       },
       {
        "w": "no",
-       "from": 137,
-       "to": 142
+       "from": 136,
+       "to": 140
       },
       {
        "w": "web",
-       "from": 142,
-       "to": 149
+       "from": 140,
+       "to": 157
       },
       {
        "w": "search",
-       "from": 149,
-       "to": 160
+       "from": 157,
+       "to": 168
       },
       {
        "w": "about",
-       "from": 160,
-       "to": 170
+       "from": 168,
+       "to": 178
       },
       {
        "w": "the",
-       "from": 170,
-       "to": 177
+       "from": 178,
+       "to": 184
       },
       {
        "w": "Digital",
-       "from": 177,
-       "to": 190
+       "from": 184,
+       "to": 198
       },
       {
        "w": "Dadi",
-       "from": 190,
-       "to": 205
+       "from": 198,
+       "to": 206
       },
       {
        "w": "Pension",
-       "from": 205,
+       "from": 206,
        "to": 219
       },
       {
@@ -273,42 +274,42 @@
       },
       {
        "w": "It",
-       "from": 244,
-       "to": 249
+       "from": 247,
+       "to": 253
       },
       {
        "w": "said:",
-       "from": 249,
-       "to": 258
+       "from": 253,
+       "to": 263
       },
       {
        "w": "up",
-       "from": 258,
-       "to": 262
+       "from": 263,
+       "to": 269
       },
       {
        "w": "to",
-       "from": 262,
-       "to": 266
+       "from": 269,
+       "to": 274
       },
       {
        "w": "₹3,000",
-       "from": 266,
-       "to": 276
+       "from": 274,
+       "to": 287
       },
       {
        "w": "a",
-       "from": 276,
-       "to": 279
+       "from": 287,
+       "to": 290
       },
       {
        "w": "month.",
-       "from": 279,
-       "to": 289
+       "from": 290,
+       "to": 303
       }
      ],
      "cues": {
-      "1": 62
+      "1": 70
      }
     },
     {
@@ -317,112 +318,112 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative28te/line_02.wav",
-     "from": 306,
+     "from": 326,
      "frames": 224,
      "words": [
       {
        "w": "There's",
-       "from": 307,
-       "to": 320
+       "from": 327,
+       "to": 340
       },
       {
        "w": "no",
-       "from": 320,
-       "to": 325
+       "from": 340,
+       "to": 345
       },
       {
        "w": "such",
-       "from": 325,
-       "to": 333
+       "from": 345,
+       "to": 353
       },
       {
        "w": "scheme.",
-       "from": 333,
-       "to": 355
+       "from": 353,
+       "to": 374
       },
       {
        "w": "We",
-       "from": 355,
-       "to": 368
-      },
-      {
-       "w": "made",
-       "from": 368,
-       "to": 376
-      },
-      {
-       "w": "up",
-       "from": 376,
-       "to": 381
-      },
-      {
-       "w": "the",
-       "from": 381,
+       "from": 374,
        "to": 388
       },
       {
-       "w": "name.",
+       "w": "made",
        "from": 388,
-       "to": 406
+       "to": 396
+      },
+      {
+       "w": "up",
+       "from": 396,
+       "to": 401
+      },
+      {
+       "w": "the",
+       "from": 401,
+       "to": 407
+      },
+      {
+       "w": "name.",
+       "from": 407,
+       "to": 426
       },
       {
        "w": "Still,",
-       "from": 406,
-       "to": 427
-      },
-      {
-       "w": "the",
-       "from": 427,
-       "to": 434
-      },
-      {
-       "w": "chatbot",
-       "from": 434,
+       "from": 426,
        "to": 447
       },
       {
-       "w": "gave",
+       "w": "the",
        "from": 447,
-       "to": 455
+       "to": 453
+      },
+      {
+       "w": "chatbot",
+       "from": 453,
+       "to": 466
+      },
+      {
+       "w": "gave",
+       "from": 466,
+       "to": 474
       },
       {
        "w": "the",
-       "from": 455,
-       "to": 461
+       "from": 474,
+       "to": 481
       },
       {
        "w": "amount,",
-       "from": 461,
-       "to": 485
+       "from": 481,
+       "to": 504
       },
       {
        "w": "and",
-       "from": 485,
-       "to": 491
+       "from": 504,
+       "to": 511
       },
       {
        "w": "a",
-       "from": 491,
-       "to": 494
+       "from": 511,
+       "to": 514
       },
       {
        "w": "list",
-       "from": 494,
-       "to": 503
+       "from": 514,
+       "to": 522
       },
       {
        "w": "of",
-       "from": 503,
-       "to": 512
+       "from": 522,
+       "to": 531
       },
       {
        "w": "documents.",
-       "from": 512,
-       "to": 530
+       "from": 531,
+       "to": 549
       }
      ],
      "cues": {
-      "1": 337
+      "1": 357
      }
     }
    ]
@@ -446,7 +447,8 @@
      "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
      "ask": "How much does the Digital Dadi Pension Yojana give?",
      "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
-     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "forward": "Digital Dadi Pension Yojana for every grandmother! Register today!",
+     "onlyName": "the AI got only the name: the amount came from the AI",
      "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
      "myth1": "If the AI gives amounts and steps, the scheme is real.",
      "myth2": "Just tell it not to guess.",
@@ -522,9 +524,9 @@
      "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
      "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
      "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
-     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
-     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
-     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+     "vayas": "it filed Digital Dadi under \"PM-VAYAS\": also made up",
+     "pension": "real pensions are there, like the old-age pension",
+     "apy": "Atal Pension: it said ₹6,000/month · real ₹1,000-5,000"
     },
     "yt": {
      "chapter": "Myths 1 and 2",
@@ -535,7 +537,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 552,
+   "from": 573,
    "frames": 430,
    "lines": [
     {
@@ -555,95 +557,90 @@
       {
        "w": "1:",
        "from": 7,
-       "to": 10
+       "to": 11
       },
       {
        "w": "if",
-       "from": 10,
-       "to": 17
+       "from": 11,
+       "to": 18
       },
       {
        "w": "it",
-       "from": 17,
-       "to": 32
+       "from": 18,
+       "to": 33
       },
       {
        "w": "gives",
-       "from": 32,
-       "to": 39
+       "from": 33,
+       "to": 41
       },
       {
        "w": "amounts",
-       "from": 39,
-       "to": 49
+       "from": 41,
+       "to": 52
       },
       {
        "w": "and",
-       "from": 49,
-       "to": 54
+       "from": 52,
+       "to": 57
       },
       {
        "w": "steps,",
-       "from": 54,
-       "to": 62
+       "from": 57,
+       "to": 66
       },
       {
        "w": "it's",
-       "from": 62,
-       "to": 78
+       "from": 66,
+       "to": 81
       },
       {
        "w": "real.",
-       "from": 78,
-       "to": 85
-      },
-      {
-       "w": "We",
-       "from": 85,
+       "from": 81,
        "to": 89
       },
       {
-       "w": "asked",
+       "w": "We",
        "from": 89,
-       "to": 101
+       "to": 98
+      },
+      {
+       "w": "asked",
+       "from": 98,
+       "to": 106
       },
       {
        "w": "about",
-       "from": 101,
-       "to": 108
+       "from": 106,
+       "to": 113
       },
       {
        "w": "10",
-       "from": 108,
-       "to": 112
-      },
-      {
-       "w": "fake",
-       "from": 112,
+       "from": 113,
        "to": 133
       },
       {
-       "w": "schemes.",
+       "w": "fake",
        "from": 133,
-       "to": 152
+       "to": 139
       },
       {
-       "w": "6,",
-       "from": 152,
-       "to": 156
+       "w": "schemes.",
+       "from": 139,
+       "to": 159
       },
       {
-       "w": "it",
-       "from": 156,
-       "to": 160
+       "w": "It",
+       "from": 159,
+       "to": 163
       },
       {
-       "w": "described",
-       "from": 160,
+       "w": "called",
+       "from": 163,
        "to": 172
       },
       {
-       "w": "as",
+       "w": "6",
        "from": 172,
        "to": 175
       },
@@ -783,7 +780,8 @@
      "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
      "ask": "How much does the Digital Dadi Pension Yojana give?",
      "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
-     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "forward": "Digital Dadi Pension Yojana for every grandmother! Register today!",
+     "onlyName": "the AI got only the name: the amount came from the AI",
      "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
      "myth1": "If the AI gives amounts and steps, the scheme is real.",
      "myth2": "Just tell it not to guess.",
@@ -859,9 +857,9 @@
      "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
      "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
      "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
-     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
-     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
-     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+     "vayas": "it filed Digital Dadi under \"PM-VAYAS\": also made up",
+     "pension": "real pensions are there, like the old-age pension",
+     "apy": "Atal Pension: it said ₹6,000/month · real ₹1,000-5,000"
     },
     "yt": {
      "chapter": "Myth 3",
@@ -872,7 +870,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 982,
+   "from": 1002,
    "frames": 348,
    "lines": [
     {
@@ -1022,7 +1020,8 @@
      "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
      "ask": "How much does the Digital Dadi Pension Yojana give?",
      "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
-     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "forward": "Digital Dadi Pension Yojana for every grandmother! Register today!",
+     "onlyName": "the AI got only the name: the amount came from the AI",
      "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
      "myth1": "If the AI gives amounts and steps, the scheme is real.",
      "myth2": "Just tell it not to guess.",
@@ -1098,9 +1097,9 @@
      "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
      "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
      "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
-     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
-     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
-     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+     "vayas": "it filed Digital Dadi under \"PM-VAYAS\": also made up",
+     "pension": "real pensions are there, like the old-age pension",
+     "apy": "Atal Pension: it said ₹6,000/month · real ₹1,000-5,000"
     },
     "yt": {
      "chapter": "Fact: check here",
@@ -1111,8 +1110,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1330,
-   "frames": 267,
+   "from": 1350,
+   "frames": 348,
    "lines": [
     {
      "who": "storyteller",
@@ -1120,117 +1119,117 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative28te/line_06.wav",
-     "from": 0,
-     "frames": 243,
+     "from": 9,
+     "frames": 298,
      "words": [
       {
        "w": "Fact:",
-       "from": 1,
-       "to": 10
+       "from": 10,
+       "to": 31
       },
       {
        "w": "with",
-       "from": 10,
-       "to": 28
+       "from": 31,
+       "to": 42
       },
       {
        "w": "no",
-       "from": 28,
-       "to": 32
+       "from": 42,
+       "to": 47
       },
       {
        "w": "web",
-       "from": 32,
-       "to": 39
+       "from": 47,
+       "to": 53
       },
       {
        "w": "search,",
-       "from": 39,
-       "to": 56
+       "from": 53,
+       "to": 80
       },
       {
        "w": "there's",
-       "from": 56,
-       "to": 73
+       "from": 80,
+       "to": 92
       },
       {
        "w": "no",
-       "from": 73,
-       "to": 78
-      },
-      {
-       "w": "way",
-       "from": 78,
-       "to": 84
-      },
-      {
-       "w": "to",
-       "from": 84,
+       "from": 92,
        "to": 97
       },
       {
-       "w": "check.",
+       "w": "way",
        "from": 97,
-       "to": 108
-      },
-      {
-       "w": "Search",
-       "from": 108,
-       "to": 124
-      },
-      {
-       "w": "on",
-       "from": 124,
-       "to": 129
-      },
-      {
-       "w": "myscheme.gov.in.",
-       "from": 129,
-       "to": 156
-      },
-      {
-       "w": "Not",
-       "from": 156,
-       "to": 162
-      },
-      {
-       "w": "there?",
-       "from": 162,
-       "to": 182
-      },
-      {
-       "w": "Send",
-       "from": 182,
-       "to": 199
-      },
-      {
-       "w": "it",
-       "from": 199,
-       "to": 204
+       "to": 112
       },
       {
        "w": "to",
-       "from": 204,
-       "to": 209
+       "from": 112,
+       "to": 122
+      },
+      {
+       "w": "check.",
+       "from": 122,
+       "to": 151
+      },
+      {
+       "w": "Search",
+       "from": 151,
+       "to": 174
+      },
+      {
+       "w": "on",
+       "from": 174,
+       "to": 178
+      },
+      {
+       "w": "myscheme.gov.in.",
+       "from": 178,
+       "to": 222
+      },
+      {
+       "w": "Not",
+       "from": 222,
+       "to": 229
+      },
+      {
+       "w": "there?",
+       "from": 229,
+       "to": 239
+      },
+      {
+       "w": "Send",
+       "from": 239,
+       "to": 256
+      },
+      {
+       "w": "it",
+       "from": 256,
+       "to": 261
+      },
+      {
+       "w": "to",
+       "from": 261,
+       "to": 265
       },
       {
        "w": "PIB",
-       "from": 209,
-       "to": 220
+       "from": 265,
+       "to": 284
       },
       {
        "w": "Fact",
-       "from": 220,
-       "to": 232
+       "from": 284,
+       "to": 296
       },
       {
        "w": "Check.",
-       "from": 232,
-       "to": 243
+       "from": 296,
+       "to": 307
       }
      ],
      "cues": {
-      "1": 96
+      "1": 111
      }
     }
    ]
@@ -1250,7 +1249,8 @@
      "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
      "ask": "How much does the Digital Dadi Pension Yojana give?",
      "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
-     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "forward": "Digital Dadi Pension Yojana for every grandmother! Register today!",
+     "onlyName": "the AI got only the name: the amount came from the AI",
      "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
      "myth1": "If the AI gives amounts and steps, the scheme is real.",
      "myth2": "Just tell it not to guess.",
@@ -1326,9 +1326,9 @@
      "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
      "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
      "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
-     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
-     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
-     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+     "vayas": "it filed Digital Dadi under \"PM-VAYAS\": also made up",
+     "pension": "real pensions are there, like the old-age pension",
+     "apy": "Atal Pension: it said ₹6,000/month · real ₹1,000-5,000"
     },
     "yt": {
      "chapter": "Ask first",
@@ -1339,8 +1339,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1597,
-   "frames": 233,
+   "from": 1698,
+   "frames": 240,
    "lines": [
     {
      "who": "storyteller",
@@ -1349,76 +1349,81 @@
      "sub": null,
      "audio": "reel/creative28te/line_07.wav",
      "from": 9,
-     "frames": 198,
+     "frames": 204,
      "words": [
       {
        "w": "Grandma",
        "from": 10,
-       "to": 34
+       "to": 31
       },
       {
        "w": "checks",
-       "from": 34,
-       "to": 48
+       "from": 31,
+       "to": 52
       },
       {
        "w": "first",
-       "from": 48,
-       "to": 67
+       "from": 52,
+       "to": 64
       },
       {
        "w": "now.",
-       "from": 67,
-       "to": 77
+       "from": 64,
+       "to": 74
       },
       {
        "w": "So",
-       "from": 77,
-       "to": 92
+       "from": 74,
+       "to": 88
       },
       {
        "w": "when",
-       "from": 92,
-       "to": 110
+       "from": 88,
+       "to": 107
       },
       {
        "w": "a",
-       "from": 110,
-       "to": 114
+       "from": 107,
+       "to": 112
       },
       {
        "w": "message",
-       "from": 114,
-       "to": 130
+       "from": 112,
+       "to": 128
       },
       {
        "w": "says",
-       "from": 130,
-       "to": 140
+       "from": 128,
+       "to": 138
       },
       {
        "w": "₹3,000",
-       "from": 140,
-       "to": 161
+       "from": 138,
+       "to": 153
       },
       {
        "w": "a",
-       "from": 161,
-       "to": 165
+       "from": 153,
+       "to": 157
       },
       {
        "w": "month,",
-       "from": 165,
-       "to": 179
+       "from": 157,
+       "to": 172
       },
       {
-       "w": "check...",
-       "from": 179,
-       "to": 207
+       "w": "check",
+       "from": 172,
+       "to": 191
+      },
+      {
+       "w": "first...",
+       "from": 191,
+       "to": 213
       }
      ],
      "cues": {
-      "1": 92
+      "1": 87
      }
     }
    ]

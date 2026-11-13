@@ -67,7 +67,8 @@
      "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
      "ask": "How much does the Digital Dadi Pension Yojana give?",
      "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
-     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "forward": "Digital Dadi Pension Yojana for every grandmother! Register today!",
+     "onlyName": "the AI got only the name: the amount came from the AI",
      "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
      "myth1": "If the AI gives amounts and steps, the scheme is real.",
      "myth2": "Just tell it not to guess.",
@@ -143,9 +144,9 @@
      "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
      "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
      "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
-     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
-     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
-     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+     "vayas": "it filed Digital Dadi under \"PM-VAYAS\": also made up",
+     "pension": "real pensions are there, like the old-age pension",
+     "apy": "Atal Pension: it said ₹6,000/month · real ₹1,000-5,000"
     },
     "yt": {
      "chapter": "₹3,000 a month, or zero?",
@@ -162,7 +163,7 @@
      "gap": 0.55,
      "show": "₹3,000 a month, or zero? Grandma asked a free AI with no web search about the Digital Dadi Pension Yojana. It said: up to ₹3,000 a month.",
      "tempo": 1.1,
-     "tts": "Three thousand a month, or zero? Grandma asked a free AI with no web search about the Digital Dah-dee Pension Yojna. It said: up to three thousand rupees a month."
+     "tts": "Three thousand a month, or zero? Grandma asked a free AI with no web search about the Digital Dah-dee Pension Yo-jah-nah. It said: up to three thousand rupees a month."
     },
     {
      "who": "storyteller",
@@ -197,7 +198,8 @@
      "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
      "ask": "How much does the Digital Dadi Pension Yojana give?",
      "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
-     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "forward": "Digital Dadi Pension Yojana for every grandmother! Register today!",
+     "onlyName": "the AI got only the name: the amount came from the AI",
      "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
      "myth1": "If the AI gives amounts and steps, the scheme is real.",
      "myth2": "Just tell it not to guess.",
@@ -273,9 +275,9 @@
      "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
      "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
      "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
-     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
-     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
-     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+     "vayas": "it filed Digital Dadi under \"PM-VAYAS\": also made up",
+     "pension": "real pensions are there, like the old-age pension",
+     "apy": "Atal Pension: it said ₹6,000/month · real ₹1,000-5,000"
     },
     "yt": {
      "chapter": "Myths 1 and 2",
@@ -328,7 +330,8 @@
      "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
      "ask": "How much does the Digital Dadi Pension Yojana give?",
      "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
-     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "forward": "Digital Dadi Pension Yojana for every grandmother! Register today!",
+     "onlyName": "the AI got only the name: the amount came from the AI",
      "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
      "myth1": "If the AI gives amounts and steps, the scheme is real.",
      "myth2": "Just tell it not to guess.",
@@ -404,9 +407,9 @@
      "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
      "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
      "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
-     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
-     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
-     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+     "vayas": "it filed Digital Dadi under \"PM-VAYAS\": also made up",
+     "pension": "real pensions are there, like the old-age pension",
+     "apy": "Atal Pension: it said ₹6,000/month · real ₹1,000-5,000"
     },
     "yt": {
      "chapter": "Myth 3",
@@ -434,8 +437,9 @@
    "id": "s_d",
    "type": "sk_scheme",
    "tail": 0.0,
-   "boost": 1.5,
-   "lift": 0.6,
+   "boost": 2.0,
+   "lift": 0.8,
+   "pre": 0.3,
    "data": {
     "beats": [
      {
@@ -448,7 +452,8 @@
      "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
      "ask": "How much does the Digital Dadi Pension Yojana give?",
      "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
-     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "forward": "Digital Dadi Pension Yojana for every grandmother! Register today!",
+     "onlyName": "the AI got only the name: the amount came from the AI",
      "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
      "myth1": "If the AI gives amounts and steps, the scheme is real.",
      "myth2": "Just tell it not to guess.",
@@ -524,9 +529,9 @@
      "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
      "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
      "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
-     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
-     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
-     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+     "vayas": "it filed Digital Dadi under \"PM-VAYAS\": also made up",
+     "pension": "real pensions are there, like the old-age pension",
+     "apy": "Atal Pension: it said ₹6,000/month · real ₹1,000-5,000"
     },
     "yt": {
      "chapter": "Fact: check here",
@@ -553,9 +558,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 1.9,
-   "lift": 0.7,
-   "rise": 1.9,
+   "boost": 2.3,
+   "lift": 0.8,
+   "rise": 2.0,
    "data": {
     "beats": [
      {
@@ -568,7 +573,8 @@
      "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
      "ask": "How much does the Digital Dadi Pension Yojana give?",
      "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
-     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "forward": "Digital Dadi Pension Yojana for every grandmother! Register today!",
+     "onlyName": "the AI got only the name: the amount came from the AI",
      "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
      "myth1": "If the AI gives amounts and steps, the scheme is real.",
      "myth2": "Just tell it not to guess.",
@@ -644,9 +650,9 @@
      "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
      "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
      "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
-     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
-     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
-     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+     "vayas": "it filed Digital Dadi under \"PM-VAYAS\": also made up",
+     "pension": "real pensions are there, like the old-age pension",
+     "apy": "Atal Pension: it said ₹6,000/month · real ₹1,000-5,000"
     },
     "yt": {
      "chapter": "Ask first",

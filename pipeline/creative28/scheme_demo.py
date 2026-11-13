@@ -68,7 +68,7 @@ HAND = {   # read by hand after the run (series/scripts/creative28_demo/schemes.
              "r1": "WRONG: 'Prime Minister's Farmers' Crop Insurance Scheme', 'Rs 2,000 to Rs 3,000 per farmer per year'",
              "r2": "WRONG: 'enrol between 40 and 50: Rs 6,000' a month (APY: ages 18-40, Rs 1,000-5,000 a month)"},
 }   # fake schemes, plain: 6 of 10 described as real (+1 both ways), 3 not sure; with the rule: 2 invented, 3 both ways,
-    # 5 not sure. The 2 real schemes: the money wrong in all 4 replies.
+    # 5 not sure. The 2 real schemes: the money wrong in 3 of 4 replies; plain APY was cut off after an old co-contribution.
 
 
 def main():

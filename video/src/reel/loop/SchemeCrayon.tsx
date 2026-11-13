@@ -86,7 +86,7 @@ const tiles = (c: Ctx, W: number, f: number, t0: number, names: [string, string]
     const k = seg(f, t0 + q * 3, t0 + q * 3 + 6); if (k <= 0) return;
     const x = 118 + (q % 5) * 211, y = y0 + Math.floor(q / 5) * 250, [bgc, fg, lab] = col[res[q]];
     c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = bgc; rrect(c, x - 98, y, 196, 226, 18); c.fill();
-    c.textAlign = "center"; c.fillStyle = "#475569"; c.font = SANS(17, 800); c.fillText(kind === "viral_fake" ? "VIRAL FAKE" : "MADE UP BY US", x, y + 30);
+    c.textAlign = "center"; c.fillStyle = kind === "viral_fake" ? "#7c2d12" : "#1e3a8a"; c.font = SANS(fit(c, kind === "viral_fake" ? "VIRAL FAKE" : "MADE UP BY US", 180, 24, 900), 900); c.fillText(kind === "viral_fake" ? "VIRAL FAKE" : "MADE UP BY US", x, y + 32);
     c.fillStyle = INK; c.font = SANS(25, 800); wrap(c, nm, 176).slice(0, 3).forEach((l, i) => c.fillText(l, x, y + 72 + i * 30));
     c.fillStyle = fg; c.font = SANS(fit(c, lab, 176, 30, 900), 900); c.fillText(lab, x, y + 200); c.restore();
   });
@@ -124,7 +124,7 @@ const StScheme: React.FC<SP> = ({ s }) => {
         c.fillStyle = "#1c1410"; c.fillRect(0, 0, W, H);
         // the two numbers, always on top (frame 1 reads with the sound off)
         block(c, 50, 245, "THE AI says", "up to ₹3,000/month", "#f87171");
-        block(c, 560, 245, "THE SCHEME (a made-up name)", "doesn't exist", "#f8fafc");
+        block(c, 560, 245, "THE SCHEME", "₹0 · doesn't exist", "#f8fafc");
         c.fillStyle = "#fde68a"; c.textAlign = "center"; c.font = SANS(fit(c, T.name, W - 120, 34, 800), 800); c.fillText(T.name, W / 2, 452);
         if (P === "hook" || P === "made" || P === "loop") {
           room(c, W, r);
@@ -142,6 +142,7 @@ const StScheme: React.FC<SP> = ({ s }) => {
             c.font = SANS(40, 800); wrap(c, T.forward, W - 260).forEach((l, q) => c.fillText(l, 120, 670 + q * 50));
             c.restore();
             stamp(c, "NAME MADE UP BY US", W / 2, 890, seg(f, cu(1, 0.05), cu(1, 0.05) + 6));
+            chip(c, T.onlyName, W / 2, 1390, "#fde68a", INK, seg(f, cu(1, 0.35), cu(1, 0.35) + 8), fit(c, T.onlyName, 1000, 34, 800));
             const kd = seg(f, cu(1, 0.6), cu(1, 0.6) + 8);
             if (kd > 0) {
               c.save(); c.globalAlpha = clamp(kd * 3); c.fillStyle = "#ffffff"; rrect(c, 90, 980, W - 180, 330, 22); c.fill();
@@ -163,10 +164,10 @@ const StScheme: React.FC<SP> = ({ s }) => {
           if (!m1) chip(c, T.ruleChip, W / 2, 700, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.05), cu(1, 0.05) + 8), 26);
           tiles(c, W, f, cu(1, 0.15), T.names, m1 ? T.plain : T.rule, 760);
           const kc = seg(f, cu(1, 0.7), cu(1, 0.7) + 8);
-          chip(c, m1 ? T.count1 : T.count2, W / 2, 1300, "#fee2e2", "#7f1d1d", kc, 40);
-          if (m1) chip(c, T.laptop, W / 2, 1400, "#1e293b", "#fde68a", seg(f, cu(1, 0.85), cu(1, 0.85) + 8), 30);
-          else chip(c, T.vayas, W / 2, 1400, "#1e293b", "#fde68a", seg(f, cu(1, 0.85), cu(1, 0.85) + 8), 30);
-          stamp(c, "✗ MYTH", W / 2, 1180, seg(f, endL - 10, endL - 4), RED, -0.12, 90);
+          chip(c, m1 ? T.count1 : T.count2, W / 2, 1300, "#fee2e2", "#7f1d1d", kc, fit(c, m1 ? T.count1 : T.count2, 1000, 42, 800));
+          if (m1) chip(c, T.laptop, W / 2, 1400, "#1e293b", "#fde68a", seg(f, cu(1, 0.85), cu(1, 0.85) + 8), fit(c, T.laptop, 1000, 36, 800));
+          else chip(c, T.vayas, W / 2, 1400, "#1e293b", "#fde68a", seg(f, cu(1, 0.85), cu(1, 0.85) + 8), fit(c, T.vayas, 1000, 38, 800));
+          stamp(c, "✗ MYTH", 860, 640, seg(f, endL - 10, endL - 4), RED, -0.12, 60);
         } else if (P === "myth3") {
           card(c, W, 1);
           stamp(c, "MYTH 3", 190, 560, seg(f, ln.from + 2, ln.from + 8), AMBER, -0.08, 50);
@@ -176,7 +177,7 @@ const StScheme: React.FC<SP> = ({ s }) => {
           const ka = seg(f, cu(1, 0.3), cu(1, 0.3) + 8), kb = seg(f, cu(2, 0.1), cu(2, 0.1) + 8);
           if (ka > 0) { c.save(); c.globalAlpha = clamp(ka * 3); c.fillStyle = "#1e293b"; rrect(c, 60, 780, W - 120, 200, 22); c.fill(); c.font = SANS(36, 800); c.fillStyle = "#cbd5e1"; c.fillText("THE AI", W / 2, 840); c.font = SANS(fit(c, "₹2,000 a month = ₹24,000 a year ✗", W - 180, 64, 900), 900); c.fillStyle = "#f87171"; c.fillText("₹2,000 a month = ₹24,000 a year ✗", W / 2, 935); c.restore(); }
           if (kb > 0) { c.save(); c.globalAlpha = clamp(kb * 3); c.fillStyle = "#1e293b"; rrect(c, 60, 1010, W - 120, 240, 22); c.fill(); c.font = SANS(36, 800); c.fillStyle = "#cbd5e1"; c.fillText("THE REAL FIGURE", W / 2, 1070); c.font = SANS(84, 900); c.fillStyle = "#4ade80"; c.fillText("₹6,000 a year ✓", W / 2, 1172); c.font = SANS(26, 700); c.fillStyle = "#94a3b8"; c.fillText("(Digital India, PIB)", W / 2, 1222); c.restore(); }
-          chip(c, T.apy, W / 2, 1330, "#1e293b", "#e2e8f0", seg(f, cu(2, 0.5), cu(2, 0.5) + 8), 28);
+          chip(c, T.apy, W / 2, 1340, "#1e293b", "#e2e8f0", seg(f, cu(2, 0.5), cu(2, 0.5) + 8), fit(c, T.apy, 1000, 36, 800));
         } else if (P === "fact") {
           card(c, W, 1);
           stamp(c, "FACT", 160, 560, seg(f, ln.from + 2, ln.from + 8), GREEN, -0.08, 54);
@@ -198,7 +199,7 @@ const StScheme: React.FC<SP> = ({ s }) => {
             c.font = SANS(44, 900); c.fillText("2 · not there? send it to PIB Fact Check", W / 2, 1130); c.font = SANS(40, 800); c.fillText("WhatsApp +91 87997 11259", W / 2, 1195);
             c.font = SANS(26, 700); c.fillText("(the government's fact-check unit)", W / 2, 1245); c.restore();
           }
-          chip(c, T.pension, W / 2, 1345, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), 28);
+          chip(c, T.pension, W / 2, 1355, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), fit(c, T.pension, 1000, 36, 800));
         }
       }} />
     </>
