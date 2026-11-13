@@ -43,7 +43,7 @@ const pdfPage = (c: Ctx, x: number, y: number, w: number, h: number, n: number, 
 const stamp = (c: Ctx, t: string, x: number, y: number, k: number, rot = -0.08) => {
   if (k <= 0) return;
   c.save(); c.translate(x, y); c.rotate(rot); c.globalAlpha = clamp(k * 3);
-  c.font = SANS(52, 900); const w = c.measureText(t).width + 50;
+  c.font = SANS(fit(c, t, 960, 52, 900), 900); const w = c.measureText(t).width + 50;
   c.fillStyle = "rgba(255,255,255,0.94)"; rrect(c, -w / 2, -52, w, 82, 14); c.fill();
   c.strokeStyle = RED; c.lineWidth = 7; rrect(c, -w / 2, -52, w, 82, 14); c.stroke();
   c.fillStyle = RED; c.textAlign = "center"; c.fillText(t, 0, 8); c.restore();
@@ -63,7 +63,7 @@ const StRag: React.FC<SP> = ({ s }) => {
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("z")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.4} />);
     if (b.prop === "cover") sfx.push(<Sfx key={k("d")} at={at + 4} src="audio/gag_ding.wav" vol={0.5} />, <Sfx key={k("z")} at={cue(i, 1, 0.4)} src="reel/sfx_buzz.wav" vol={0.4} />);
     if (["step1", "step2", "step2b", "step3"].includes(b.prop)) sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_pop.wav" vol={0.45} />, <Sfx key={k("t")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.35} />);
-    if (b.prop === "test") sfx.push(<Sfx key={k("n")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.5} />, <Sfx key={k("b")} at={cue(i, 2, 0.75) - 8} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={cue(i, 2, 0.75) - 4} src={CLAP} vol={0.45} />);
+    if (b.prop === "test") sfx.push(<Sfx key={k("n")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.5} />, <Sfx key={k("b")} at={cue(i, 2, 0.3) - 4} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={cue(i, 2, 0.3)} src={CLAP} vol={0.45} />);
     if (b.prop === "miss") sfx.push(<Sfx key={k("z")} at={at + 6} src="reel/sfx_buzz.wav" vol={0.45} />, <Sfx key={k("d")} at={cue(i, 1, 0.4) - 4} src="audio/gag_ding.wav" vol={0.5} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 24)} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />); }
   });
@@ -108,13 +108,16 @@ const StRag: React.FC<SP> = ({ s }) => {
           const shown = P === "step1" ? 3 * seg(f, ln.from + 2, cu(1, 0.6)) : P === "step2b" ? 3 + 2 * seg(f, ln.from + 2, cu(1, 0.6)) : 5 + 5 * seg(f, ln.from + 2, cu(1, 0.7));
           const hi = P === "step1" ? [0, 1, 2] : P === "step2b" ? [3, 4] : [5, 6, 7, 8, 9];
           const yE = editor(c, 30, 360, W - 60, code, shown, hi, 25, "warranty_bot.py");
+          if (P === "step1") chip(c, "no code? paste the pages into any AI chat, marked page 1, page 2…", W / 2, yE + 80, "#dcfce7", "#14532d", seg(f, ln.from + 24, ln.from + 32), 30);   // render review
           if (P === "step2b") {
-            chip(c, "--- page 1 --- ... --- page 5 ---", W / 2, yE + 70, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), 34);
-            chip(c, "5 pages ≈ 450 tokens a question", W / 2, yE + 170, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.7), cu(1, 0.7) + 8), 34);
+            chip(c, "--- page 1 --- ... --- page 5 ---", W / 2, yE + 70, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.1), cu(1, 0.1) + 8), 34);
+            chip(c, "5 pages ≈ 450 tokens a question", W / 2, yE + 170, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 34);
+            chip(c, "short = it fits the AI's limit with room to spare", W / 2, yE + 270, "#fde68a", INK, seg(f, ln.from + 18, ln.from + 26), 34);   // render review: the switch point
+            chip(c, "too big for every question? search by meaning: Part 2", W / 2, yE + 370, "#1e293b", "#fde68a", seg(f, ln.from + 34, ln.from + 42), 32);
           }
           if (P === "step3") chip(c, "answer only from it · say the page · or \"Not in the document\"", W / 2, yE + 80, "#dcfce7", "#14532d", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), 30);
         } else if (P === "step2") {   // the first try: "the page with the most words in common" picked the cover
-          chip(c, "STEP 2 · our first try: search for the best page", W / 2, 300, "#fde68a", INK, 1, 36);
+          chip(c, "OUR FIRST TRY (it failed): search for the best page", W / 2, 300, "#fecaca", "#7f1d1d", 1, 36);   // render review: not "STEP 2"
           pg.forEach((p, q) => { const x = 40 + q * 205; pdfPage(c, x, 380, 190, 270, q + 1, p[0], [], -1, 0, q === 0 ? "#fee2e2" : "#ffffff"); });
           const k9 = seg(f, cu(1, 0.4), cu(1, 0.4) + 10);
           if (k9 > 0) {
@@ -126,7 +129,7 @@ const StRag: React.FC<SP> = ({ s }) => {
         } else if (P === "test") {
           c.font = SANS(fit(c, "OUR TEST · 10 QUESTIONS ON THE PDF", W - 100, 54), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("OUR TEST · 10 QUESTIONS ON THE PDF", W / 2, 320);
           c.font = SANS(30, 700); c.fillStyle = "#cbd5e1"; c.fillText("a small free AI on our computer · every reply read by hand", W / 2, 370);
-          const rows: [string, string, string, number][] = [["no PDF", "0/10", "#f87171", cu(1, 0.2)], ["first search (read the cover)", "1/10", "#f87171", cu(1, 0.6)], ["all 5 pages, numbered", "9/10", "#4ade80", cu(2, 0.75)]];
+          const rows: [string, string, string, number][] = [["no PDF", "0/10", "#f87171", cu(1, 0.2)], ["first search (read the cover)", "1/10", "#f87171", cu(1, 0.6)], ["all 5 pages, numbered", "9/10", "#4ade80", cu(2, 0.3) + 2]];
           rows.forEach(([a, v, col, t0], q) => {
             const k = seg(f, t0 - 2, t0 + 6); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 430 + q * 210;
@@ -134,16 +137,17 @@ const StRag: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, a, 600, 40, 800), 800); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(a, 80, y + 108);
             c.font = SANS(76, 900); c.textAlign = "right"; c.fillStyle = col; c.fillText(v, W - 80, y + 118); c.restore();
           });
-          chip(c, "the right page on 7 · a wrong page on 1", W / 2, 1150, "#e0e7ff", "#1e3a8a", seg(f, cu(2, 0.9), cu(2, 0.9) + 8), 36);
+          chip(c, "the 9: right page on 7 · wrong page on 1 · 1 rightly \"not in it\"", W / 2, 1150, "#e0e7ff", "#1e3a8a", seg(f, cu(2, 0.6), cu(2, 0.6) + 8), 32);   // render review: 7 + 1 + 1
         } else if (P === "miss") {
           const y = chat(c, 50, 300, W - 100, "Warranty bot · all 5 pages", [{ me: true, t: T.q3, k: 1 }, { me: false, t: "Not in the document.", k: 1, red: true }], 36);
-          pdfPage(c, 260, y + 30, 560, 380, 4, pg[3][0], pg[3].slice(1), 0, seg(f, cu(1, 0.3), cu(1, 0.3) + 8), "#fefce8");
-          chip(c, "open the page it gives, every time", W / 2, y + 470, "#dcfce7", "#14532d", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 38);
-          chip(c, "\"not there\"? open the PDF yourself", W / 2, y + 570, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.8), cu(1, 0.8) + 8), 36);
+          pdfPage(c, 260, y + 30, 560, 380, 4, pg[3][0], pg[3].slice(1), 0, seg(f, ln.from + 10, ln.from + 18), "#fefce8");
+          stamp(c, "✗ IT WAS ON PAGE 4: NOT COVERED", W / 2, y + 480, seg(f, ln.from + 20, ln.from + 28));   // render review: what it got wrong
+          chip(c, "open the page it gives", W / 2, y + 590, "#dcfce7", "#14532d", seg(f, cu(1, 0.2), cu(1, 0.2) + 8), 38);
+          chip(c, "\"not there\"? check the PDF yourself", W / 2, y + 690, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.6), cu(1, 0.6) + 8), 38);
         } else if (P === "loop") {
-          c.font = SANS(fit(c, "300 pages? That's Part 2.", W - 120, 66), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("300 pages? That's Part 2.", W / 2, 400);
+          c.font = SANS(fit(c, "300 pages? Part 2: search by meaning", W - 120, 62), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("300 pages? Part 2: search by meaning", W / 2, 400);
           c.font = SANS(36, 800); c.fillStyle = "#e2e8f0"; c.fillText("too big to send with every question", W / 2, 470);
-          const kf = seg(f, cu(1, 0.3), cu(1, 0.3) + 8);   // script review: the fixed bot answers the hook question
+          const kf = seg(f, cu(1, 0.02), cu(1, 0.02) + 8);   // render review: on screen 3 s+   // script review: the fixed bot answers the hook question
           if (kf > 0) {
             c.save(); c.globalAlpha = clamp(kf * 3);
             chat(c, 50, 560, W - 100, "Warranty bot · all 5 pages", [{ me: true, t: T.q1, k: 1 }, { me: false, t: T.fixedReply, k: 1 }], 36);

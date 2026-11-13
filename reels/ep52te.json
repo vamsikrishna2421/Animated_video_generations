@@ -131,7 +131,7 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "ఐదేళ్ళ వారంటీయా, లేక పద్నాలుగు వందల యాభై రూపాయలా? [1] మిక్సీ మోటార్ గురించి మా మొదటి పీడీఎఫ్ బాట్ ని అడిగాం. డాక్యుమెంట్ లో లేదు అంది.",
+     "text": "ఐదేళ్ళ వారంటీయా, లేక పద్నాలుగు వందల యాభై రూపాయలా? [1] మిక్సీ మోటార్ గురించి మా ఫస్ట్ పీడీఎఫ్ బాట్ ని అడిగాం. డాక్యుమెంట్ లో లేదు అంది.",
      "maxgap": 0.3,
      "gap": 0.35,
      "show": "5 years of warranty, or ₹1,450? We asked our first PDF bot about a mixie's motor. It said: not in the document.",
@@ -140,11 +140,15 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "మూడో పేజీలో ఉంది: మోటార్ కి ఐదేళ్ళ వారంటీ. [1] అది చదివింది కవర్ పేజీ.",
+     "text": "మూడో పేజీలో ఉంది: మోటార్ కి ఐదేళ్ళ వారంటీ. <pause 0.3> [1] దాన్ని నమ్మితే, పద్నాలుగు వందల యాభై కట్టేవాళ్ళం. అది చదివింది కవర్ పేజీ.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Page 3 has it: the motor has a 5-year warranty. The bot read the cover page.",
-     "tempo": 1.05
+     "show": "Page 3 has it: the motor has a 5-year warranty. <pause 0.3> Trust it, and we'd pay ₹1,450. It read the cover page.",
+     "tempo": 1.05,
+     "tts": "మూడో పేజీలో ఉంది: మోటార్ కి ఐదేళ్ళ వారంటీ.",
+     "file2": "02b_storyteller.wav",
+     "tts2": "దాన్ని నమ్మితే, పద్నాలుగు వందల యాభై కట్టేవాళ్ళం. అది చదివింది కవర్ పేజీ.",
+     "pause": 0.3
     },
     {
      "who": "storyteller",
@@ -163,6 +167,13 @@
    "tail": 0.0,
    "boost": 1.2,
    "lift": 0.5,
+   "drop_at": [
+    [
+     2,
+     1,
+     0.3
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -247,7 +258,7 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "మా మొదటి ప్రయత్నం బెస్ట్ పేజీ కోసం వెతికింది, [1] పదిలో తొమ్మిది సార్లు కవర్ పేజీనే తీసుకుంది.",
+     "text": "మా ఫస్ట్ ట్రై బెస్ట్ పేజీ కోసం వెతికింది, [1] పదిలో తొమ్మిది సార్లు కవర్ పేజీనే తీసుకుంది.",
      "maxgap": 0.3,
      "gap": 0.35,
      "show": "Our first try searched for the best page, took the cover page 9 times out of 10.",
@@ -258,21 +269,21 @@
      "file": "06_storyteller.wav",
      "text": "స్టెప్ టూ, చిన్న పీడీఎఫ్ అయితే: వెతకొద్దు. [1] ప్రతి పేజీని నంబర్ తో పంపండి.",
      "maxgap": 0.3,
-     "gap": 0.3,
+     "gap": 0.8,
      "show": "Step 2, for a short PDF: don't search. Send every page with its number.",
      "tempo": 1.05
     },
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "స్టెప్ త్రీ: దానికి ఇలా చెప్పండి: <pause 0.3> [1] డాక్యుమెంట్ లో ఉన్నదే చెప్పాలి, పేజీ నంబర్ చెప్పాలి, లేకపోతే లేదని చెప్పాలి.",
+     "text": "స్టెప్ త్రీ: దానికి ఇలా చెప్పండి: <pause 0.3> [1] డాక్యుమెంట్ లో ఉన్నదే చెప్పాలి, పేజీ నంబర్ తో; లేకపోతే లేదు అనాలి.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Step 3: tell the bot this: <pause 0.3> answer only from the document, give the page number, otherwise say it isn't there.",
+     "show": "Step 3: tell it this: <pause 0.3> answer only from the document, with the page number; otherwise say it isn't there.",
      "tempo": 1.05,
      "tts": "స్టెప్ త్రీ: దానికి ఇలా చెప్పండి:",
      "file2": "07b_storyteller.wav",
-     "tts2": "డాక్యుమెంట్ లో ఉన్నదే చెప్పాలి, పేజీ నంబర్ చెప్పాలి, లేకపోతే లేదని చెప్పాలి.",
+     "tts2": "డాక్యుమెంట్ లో ఉన్నదే చెప్పాలి, పేజీ నంబర్ తో; లేకపోతే లేదు అనాలి.",
      "pause": 0.3
     }
    ]
@@ -287,7 +298,7 @@
     [
      0,
      2,
-     0.5
+     0.6
     ]
    ],
    "data": {
@@ -357,27 +368,27 @@
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "మా టెస్ట్, పది ప్రశ్నలు. [1] పీడీఎఫ్ లేకుండా: సున్నా. మొదటి సెర్చ్: ఒకటి. <pause 0.5> [2] ఐదు పేజీలూ ఇస్తే: తొమ్మిది సరైనవి, ఏడింటిలో పేజీ కూడా సరైనదే.",
+     "text": "మా టెస్ట్, పది ప్రశ్నలు. [1] పీడీఎఫ్ లేకుండా: సున్నా. ఫస్ట్ సెర్చ్: ఒకటి. <pause 0.6> [2] ఐదు పేజీలూ ఇస్తే: తొమ్మిది సరైనవి, ఏడింటిలో పేజీ కూడా సరైనదే.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Our test, 10 questions. No PDF: 0. First search: 1. <pause 0.5> All 5 pages: 9 right, the page right in 7.",
+     "show": "Our test, 10 questions. No PDF: 0. First search: 1. <pause 0.6> All 5 pages: 9 right, the page right in 7.",
      "tempo": 1.05,
-     "tts": "మా టెస్ట్, పది ప్రశ్నలు. పీడీఎఫ్ లేకుండా: సున్నా. మొదటి సెర్చ్: ఒకటి.",
+     "tts": "మా టెస్ట్, పది ప్రశ్నలు. పీడీఎఫ్ లేకుండా: సున్నా. ఫస్ట్ సెర్చ్: ఒకటి.",
      "file2": "08b_storyteller.wav",
      "tts2": "ఐదు పేజీలూ ఇస్తే: తొమ్మిది సరైనవి, ఏడింటిలో పేజీ కూడా సరైనదే.",
-     "pause": 0.5
+     "pause": 0.6
     },
     {
      "who": "storyteller",
      "file": "09_storyteller.wav",
-     "text": "ఒక జవాబు డాక్యుమెంట్ లో లేదు అంది, కానీ నాలుగో పేజీలో ఉంది. <pause 0.3> [1] అందుకే, అది చెప్పిన పేజీ ప్రతిసారీ తెరిచి చూడండి.",
+     "text": "ఒక జవాబు డాక్యుమెంట్ లో లేదు అంది, కానీ నాలుగో పేజీలో ఉంది. <pause 0.3> [1] అందుకే, అది చెప్పిన పేజీ ఓపెన్ చేసి చెక్ చేయండి; లేదు అంటే, పీడీఎఫ్ మీరే చెక్ చేయండి.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "One answer said not in the document, but page 4 had it. <pause 0.3> So open the page it gives, every time.",
+     "show": "One answer said not in the document, but page 4 had it. <pause 0.3> So open the page it gives and check; if it says not there, check the PDF yourself.",
      "tempo": 1.05,
      "tts": "ఒక జవాబు డాక్యుమెంట్ లో లేదు అంది, కానీ నాలుగో పేజీలో ఉంది.",
      "file2": "09b_storyteller.wav",
-     "tts2": "అందుకే, అది చెప్పిన పేజీ ప్రతిసారీ తెరిచి చూడండి.",
+     "tts2": "అందుకే, అది చెప్పిన పేజీ ఓపెన్ చేసి చెక్ చేయండి; లేదు అంటే, పీడీఎఫ్ మీరే చెక్ చేయండి.",
      "pause": 0.3
     }
    ]
@@ -454,12 +465,12 @@
     {
      "who": "storyteller",
      "file": "10_storyteller.wav",
-     "text": "మూడొందల పేజీల మాన్యువల్ ని ప్రతి ప్రశ్నకీ పంపలేం: అది పార్ట్ టూ. <pause 0.3> [1] ఇప్పుడు మోటార్ ప్రశ్న? ఐదేళ్ళు, మూడో పేజీ.",
+     "text": "మూడొందల పేజీల మాన్యువల్ ని ప్రతి ప్రశ్నకీ పంపలేం: రెండో భాగంలో, అర్థం బట్టి వెతుకుదాం. <pause 0.3> [1] ఇప్పుడు మోటార్ ప్రశ్న? ఐదేళ్ళు, మూడో పేజీ.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "A 300-page manual can't be sent with every question: that's Part 2. <pause 0.3> The motor question now? 5 years, page 3.",
+     "show": "A 300-page manual can't be sent with every question: search by meaning, in Part 2. <pause 0.3> The motor question now? 5 years, page 3.",
      "tempo": 1.05,
-     "tts": "మూడొందల పేజీల మాన్యువల్ ని ప్రతి ప్రశ్నకీ పంపలేం: అది పార్ట్ టూ.",
+     "tts": "మూడొందల పేజీల మాన్యువల్ ని ప్రతి ప్రశ్నకీ పంపలేం: రెండో భాగంలో, అర్థం బట్టి వెతుకుదాం.",
      "file2": "10b_storyteller.wav",
      "tts2": "ఇప్పుడు మోటార్ ప్రశ్న? ఐదేళ్ళు, మూడో పేజీ.",
      "pause": 0.3

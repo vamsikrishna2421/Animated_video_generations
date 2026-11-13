@@ -74,6 +74,22 @@ Telugu "బాట్ కి ఇలా చెప్పండి: ... చెప్
 - Telugu: Parler said "బాట్" as "bod"/"vaad" (the review transcript), so line 2 says "అది చదివింది కవర్ పేజీ" and line 7
   "దానికి ఇలా చెప్పండి".
 
+## Render review (human-viewer, v3 render) and what changed (v4)
+Both: the hook works; neither knew when to switch from "send every page" to search; the code stretch (0:30-0:47) sagged
+in picture and sound; the miss scene didn't land ("not in it" and "not covered" both mean I pay: what was wrong?); "don't
+search" vs a Part 2 that searches. Sandeep: say where ₹1,450 comes from; "STEP 2 · our first try" then "STEP 2 · don't
+search"; a no-code way; Telugu "మా మొదటి" heard close to a vulgar word, "అది పార్ట్ టూ" heard as "adi paattu" (a song),
+the clipped "తెరిచి చూడండి". Priya: the miss was a "not in the document", so "open the page it gives" doesn't catch it;
+9 = 7 + 1 + 1; a 0.6 s drop before "All five pages" and a hit on 9/10.
+Changed (v4): line 2 says "Trust the bot, and you'd pay fourteen hundred and fifty rupees"; the first try is labelled
+"OUR FIRST TRY (it failed)"; chips "no code? paste the pages into any AI chat, marked page 1, page 2…", "short = it fits
+the AI's limit with room to spare", "too big for every question? search by meaning: Part 2"; line 9 "...and when it says
+it's not there, check the PDF" with a large stamp "IT WAS ON PAGE 4: NOT COVERED"; the test chip "the 9: right page on 7
+· wrong page on 1 · 1 rightly 'not in it'"; 9/10 lands on "nine right" with the boom; a 0.6 s pause and music drop before
+"All five pages"; a music drop before "Send every page, numbered"; line 10 "Part 2 searches it by meaning"; the fixed bot's
+answer from the first word of "And the motor question now?". Telugu: "మా ఫస్ట్" for "మా మొదటి" (lines 1, 5, 8), "రెండో
+పార్ట్ లో", "ఓపెన్ చేసి చెక్ చేయండి", one "చెప్పాలి" in line 7, a breath in line 2.
+
 ## Script (English, v3; narrator)
 | # | Line |
 |---|---|

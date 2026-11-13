@@ -7,9 +7,9 @@ UPLOAD: 056 (YouTube Shorts: upload the same vertical files as Instagram, 056_ep
 === DESCRIPTION ===
 Our first PDF bot said the mixer's motor warranty was "Not in the document". Page 3 of the same PDF: covered for 5 years. It had read the cover page. Build it right in 3 steps: read the PDF page by page (pypdf); for a short PDF, don't search, send every page marked with its number; give it the rules (answer only from the document, say the page, or say it isn't there).
 
-Our test, 10 questions on a 5-page warranty card we wrote: no PDF 0 of 10; the first search (it picked the cover 9 times) 1 of 10; all 5 pages, numbered, 9 of 10, with the right page on 7. The miss said "Not in the document" when page 4 had it. So open the page it gives, every time. (A small test on one small model, Qwen2.5-7B-Instruct, on our computer.)
+Our test, 10 questions on a 5-page warranty card we wrote: no PDF 0 of 10; the first search (it picked the cover 9 times) 1 of 10; all 5 pages, numbered, 9 of 10, with the right page on 7. The miss said "Not in the document" when page 4 had it. So open the page it gives, and check the PDF yourself when it says it's not there. (A small test on one small model, Qwen2.5-7B-Instruct, on our computer.)
 
-Next: Part 2, PDFs too big to send whole.
+Next: Part 2, PDFs too big to send with every question: search by meaning.
 
 === TAGS ===
 RAG, chat with PDF, RAG python, pypdf, AI for beginners, retrieval augmented generation, AI From Scratch
@@ -19,7 +19,7 @@ RAG, chat with PDF, RAG python, pypdf, AI for beginners, retrieval augmented gen
 5 Years or ₹1,450? PDF meeda RAG, Part 1 | AI From Scratch Ep 52 Telugu #Shorts
 
 === DESCRIPTION ===
-Maa modati PDF bot mixie motor warranty "Not in the document" andi. Ade PDF page 3 lo: 5 years. Adi cover page chadivindi. 3 steps: PDF ni page page ga chadavandi; chinna PDF aite vetakoddu, prati page ni number tho pampandi; rules ivvandi (document lo unnade, page number tho). Test: PDF lekunda 10 lo 0, modati search 10 lo 1, 5 pages number tho 10 lo 9 (7 lo correct page). Adi cheppina page prati saari choodandi.
+Maa first PDF bot mixie motor warranty "Not in the document" andi. Ade PDF page 3 lo: 5 years. Adi cover page chadivindi. 3 steps: PDF ni page page ga chadavandi; chinna PDF aite vetakoddu, prati page ni number tho pampandi; rules ivvandi (document lo unnade, page number tho). Test: PDF lekunda 10 lo 0, first search 10 lo 1, 5 pages number tho 10 lo 9 (7 lo correct page). Adi cheppina page open chesi check cheyyandi.
 
 === TAGS ===
 RAG Telugu, chat with PDF Telugu, AI in Telugu, AI From Scratch Telugu

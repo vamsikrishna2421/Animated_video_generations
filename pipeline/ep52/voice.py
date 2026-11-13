@@ -29,14 +29,15 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
 MUST = {"en": {1: [("five", "5"), ("years", "year"), ("fourteen", "1450", "1,450"), ("mixer",), ("document",)],
-               2: [("page",), ("three", "3"), ("covered",), ("cover",)], 3: [("build",), ("pdf",), ("page",)],
+               2: [("page",), ("three", "3"), ("covered",), ("fourteen", "1450", "1,450"), ("cover",)], 3: [("build",), ("pdf",), ("page",)],
                4: [("step",), ("pdf",), ("page",), ("three", "3")], 5: [("first",), ("cover",), ("nine", "9"), ("ten", "10")],
                6: [("step",), ("search",), ("page",), ("numbered", "number")], 7: [("step",), ("rules", "rule"), ("document",), ("page",)],
                8: [("test",), ("ten", "10"), ("zero", "0"), ("one", "1")], "8b": [("nine", "9"), ("seven", "7"), ("page",)],
-               9: [("document",), ("page",), ("four", "4"), ("every",)], 10: [("hundred", "300"), ("part",), ("five", "5"), ("page",)]},
+               9: [("document",), ("page",), ("four", "4"), ("check",), ("pdf",)], 10: [("hundred", "300"), ("part",), ("meaning",), ("five", "5"), ("page",)]},
         "te": {}}
 JUDGE_TEXT = {1: "5 years of warranty, or 1,450 rupees? We asked our first PDF bot about a mixer's motor. It said: not in the document.",
-              "8b": "All 5 pages: 9 right, 7 with the right page.", 10: "A 300-page manual is too big to send with every question: that's Part 2. And the motor question now? 5 years, page 3."}
+              "8b": "All 5 pages: 9 right, 7 with the right page.", 10: "A 300-page manual is too big to send with every question: Part 2 searches it by meaning. And the motor question now? 5 years, page 3.",
+              2: "Page 3 says: covered for 5 years. Trust the bot, and you'd pay 1,450 rupees. It had read the cover page."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
