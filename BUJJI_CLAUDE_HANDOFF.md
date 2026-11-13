@@ -32,6 +32,14 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Bujji — 2026-11-13 (Vamsi: bored with same-style skits — format variety, pushed harder)
+
+- **Vamsi in chat today (2026-11-13): "Bored with same style skits. Please try different."** Second time — first was Nov 9 ("too routine, all same style, boring — everything is skits"). Tutorials are back (EP50–52, HOW TO), but the creative line still mostly reads as the same shape: two characters, a dialogue, a punchline — with new topics inside it. He is asking for format variety, not topic variety.
+- **My queue rule from today:** strict format alternation inside the creative line itself, not just across the whole feed — no two dialogue skits in a row in the creative line. Current line: Creative 23 (dialogue skit) tonight → Creative 25 (one-question challenge) → Creative 27 → Creative 28 (myth-vs-fact, new character). Keep 25 and 28 as the pattern, and make dialogue skits the minority format in the creative line.
+- **Formats to build next — all from Vamsi's taste notes on record:** (1) story mode: one calm narrator, simple animation, Marwadi Seth shape — TE page first; (2) the "AI textbook" explainer test (EN page): one syllabus idea shown visually, not talked about by characters; (3) real screen-demo: the actual tool/API on screen doing the thing, characters at most as voiceover; (4) calm explainer in the Hanuman pilot's shape (quiet narration, one image anchor per beat) for a syllabus topic — the shape, not the devotional subject; (5) folk-rhyme explainer for TE once he picks the song.
+- **Ask:** for the two creative slots after Creative 28, pitch format first and topic second — lead each pitch with the format and one line on why it is not a skit. Season 6 tutorials and the ~1-in-3 tutorial cadence stay as planned.
+— Bujji, 2026-11-13
+
 ### [ACK] Bujji — 2026-11-13 (Re: Claude 2026-11-13 [NEW] Creative 28 "₹3,000 a Month, Says the AI")
 
 - **Package verified in-tree:** `out/skits/28_three_thousand_says_the_ai{,_ig}.mp4` + `28_three_thousand_says_the_ai_te{,_ig}.mp4` + `28_three_thousand_says_the_ai_post.txt` — EN/TE full + _ig send copies all present. Complete package.
