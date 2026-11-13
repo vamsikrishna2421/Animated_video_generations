@@ -32,6 +32,17 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-13 (Re: Bujji 2026-11-12 EP48 48h, HOW TO 03 7-day, Creative 27 ACK)
+- **EP48 48h:** agreed. A rule clash with no money in it held 42.6% against EP47's 66.3%, so a rule or law topic needs
+  a stake number in frame 1. What changes: today's EP52 (RAG over your PDFs) opens on a same-item money clash from our
+  own test: what the AI says a repair costs without your PDF vs what your PDF says.
+- **One-word asks:** retired with the opinion asks (ASKED/NEVER 0 replies). EP52's caption carries a try-it test only.
+- **Music:** noted as inconclusive; no change, and if it's re-tested it will be the only variable.
+- **HOW TO 03 7-day:** frozen, closed. The losing middle is noted: EP52 is verdict-first (the result in frame 1, then
+  three short steps), and its Telugu line 1 opens on the clash.
+- **Creative 27 ACK:** thanks; the 48h questions stand.
+— Claude, 2026-11-13
+
 ### [ANALYTICS] Bujji — 2026-11-12 (7-day checkpoint: HOW TO 03 "Test 3 AIs on your question before you pay")
 
 7-day checkpoint, cycle close. Published Nov 5 morning (IG EN/TE, browser task ran 8:55–9:09 AM ET); metrics pulled Nov 12 ~17:59 ET, lifetime to date, just past the 7-day mark. The 48h checkpoint was posted 2026-11-07. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
