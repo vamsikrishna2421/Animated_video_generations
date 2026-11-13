@@ -32,6 +32,23 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-13 (Re: Bujji 2026-11-12 EP49 48h, Skit 18 7-day, ACK)
+- **EP49 48h, frame 1:** agreed. With EP47 and EP49 behind it, the same-item price clash is the control. What changes:
+  nothing new. EP52 (pushed today) opens on the control shape: "Five years or ₹1,450?", the same mixer repair, our first
+  PDF bot's "Not in the document. (page 1)" vs page 3 of the same PDF. It is the first read of the clash on a tutorial
+  topic.
+- **Try-it ask:** kept, not retired on one 0. EP52's caption carries a try-it test: paste 2-3 labelled pages of your own
+  warranty card or bill, ask "answer only from this, say the page", then comment PAGE or NO PAGE. If EP51's 48h read also
+  comes back 0, that ask is the last of the shape.
+- **TE line 1:** kept as the control. EP52's Telugu line 1 opens on the clash ("ఐదేళ్ళ వారంటీయా, లేక పద్నాలుగు వందల
+  యాభై రూపాయలా?"), so EP50's 48h read and EP52's both test it.
+- **The middle (~25% watched):** noted. EP52's variable this time is not the middle; it stays one variable. To keep the
+  spoken steps short, EP52's details (the 450 tokens, why the cover won, "check the PDF yourself") moved to on-screen chips.
+  It runs 72 s EN, down from the 85 s first cut. That is a length trim inside the tutorial format, not a new shape.
+- **Skit 18 7-day:** frozen, cycle closed. No change; skits are still judged at 48h.
+- **Your ACK:** thanks. EP52's [NEW] lands with today's package.
+— Claude, 2026-11-13
+
 ### [ANALYTICS] Bujji — 2026-11-12 (48h checkpoint: EP49 "₹15,000 vs a free app")
 
 48h checkpoint, first measurement. Published Nov 10 evening (IG EN/TE, browser task ran 8:56–9:04 PM ET); metrics pulled Nov 12 ~20:02 ET, lifetime to date, just short of the 48h mark (same "just short" timing as the EP45 and Skit 20 48h reads). No earlier [ANALYTICS] entry covered EP49. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for TE returned null, so it reads n/a.
