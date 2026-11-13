@@ -1,0 +1,679 @@
+{
+ "id": "creative28te",
+ "title": "₹3,000 a Month, Says the AI (Creative 28) (Telugu audio)",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.9,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_scheme",
+   "tail": 0.0,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "made",
+      "n": 2
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
+     "ask": "How much does the Digital Dadi Pension Yojana give?",
+     "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
+     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
+     "myth1": "If the AI gives amounts and steps, the scheme is real.",
+     "myth2": "Just tell it not to guess.",
+     "myth3": "At least it knows the real schemes.",
+     "fact": "A chatbot with no web search has no way to check a scheme.",
+     "ruleChip": "\"If you are not sure a scheme exists, say so. Don't guess amounts.\"",
+     "names": [
+      [
+       "Free Laptop Yojana 2026",
+       "viral_fake"
+      ],
+      [
+       "One Student One Laptop",
+       "viral_fake"
+      ],
+      [
+       "Free Smart Tablet Scheme",
+       "viral_fake"
+      ],
+      [
+       "Berozgari Bhatta Yojana",
+       "viral_fake"
+      ],
+      [
+       "Free Mobile Recharge",
+       "viral_fake"
+      ],
+      [
+       "Mixer Grinder Sahayata",
+       "made_up"
+      ],
+      [
+       "Digital Dadi Pension",
+       "made_up"
+      ],
+      [
+       "Free Cooler Yojana",
+       "made_up"
+      ],
+      [
+       "Bicycle Repair Yojana",
+       "made_up"
+      ],
+      [
+       "Tiffin Box Scheme",
+       "made_up"
+      ]
+     ],
+     "plain": [
+      "R",
+      "R",
+      "N",
+      "R",
+      "N",
+      "R",
+      "R",
+      "R",
+      "N",
+      "B"
+     ],
+     "rule": [
+      "B",
+      "B",
+      "N",
+      "B",
+      "N",
+      "N",
+      "R",
+      "R",
+      "N",
+      "N"
+     ],
+     "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
+     "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
+     "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
+     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
+     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
+     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+    },
+    "yt": {
+     "chapter": "₹3,000 a month, or zero?",
+     "title": "₹3,000 a month, or zero?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "నెలకి మూడు వేలా, లేక సున్నా? [1] వెబ్ సెర్చ్ లేని చాట్‌బాట్ ని, డిజిటల్ దాదీ పెన్షన్ యోజన గురించి నానమ్మ అడిగింది. <pause 0.3> నెలకి మూడు వేల వరకు అంది.",
+     "maxgap": 0.3,
+     "gap": 0.55,
+     "show": "₹3,000 a month, or zero? Grandma asked a chatbot with no web search about the Digital Dadi Pension Yojana. <pause 0.3> It said: up to ₹3,000 a month.",
+     "tempo": 1.1,
+     "tts": "నెలకి మూడు వేలా, లేక సున్నా? వెబ్ సెర్చ్ లేని చాట్‌బాట్ ని, డిజిటల్ దాదీ పెన్షన్ యోజన గురించి నానమ్మ అడిగింది.",
+     "file2": "01b_storyteller.wav",
+     "tts2": "నెలకి మూడు వేల వరకు అంది.",
+     "pause": 0.3
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "అలాంటి స్కీమే లేదు. [1] ఆ పేరు మేం పెట్టిందే. అయినా చాట్‌బాట్ డబ్బు ఎంతో చెప్పింది, డాక్యుమెంట్ల లిస్ట్ కూడా ఇచ్చింది.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "There's no such scheme. We made up the name. Still, the chatbot gave the amount, and a list of documents.",
+     "tempo": 1.1
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_scheme",
+   "tail": 0.0,
+   "boost": 1.2,
+   "lift": 0.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "myth1",
+      "n": 3
+     },
+     {
+      "prop": "myth2",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
+     "ask": "How much does the Digital Dadi Pension Yojana give?",
+     "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
+     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
+     "myth1": "If the AI gives amounts and steps, the scheme is real.",
+     "myth2": "Just tell it not to guess.",
+     "myth3": "At least it knows the real schemes.",
+     "fact": "A chatbot with no web search has no way to check a scheme.",
+     "ruleChip": "\"If you are not sure a scheme exists, say so. Don't guess amounts.\"",
+     "names": [
+      [
+       "Free Laptop Yojana 2026",
+       "viral_fake"
+      ],
+      [
+       "One Student One Laptop",
+       "viral_fake"
+      ],
+      [
+       "Free Smart Tablet Scheme",
+       "viral_fake"
+      ],
+      [
+       "Berozgari Bhatta Yojana",
+       "viral_fake"
+      ],
+      [
+       "Free Mobile Recharge",
+       "viral_fake"
+      ],
+      [
+       "Mixer Grinder Sahayata",
+       "made_up"
+      ],
+      [
+       "Digital Dadi Pension",
+       "made_up"
+      ],
+      [
+       "Free Cooler Yojana",
+       "made_up"
+      ],
+      [
+       "Bicycle Repair Yojana",
+       "made_up"
+      ],
+      [
+       "Tiffin Box Scheme",
+       "made_up"
+      ]
+     ],
+     "plain": [
+      "R",
+      "R",
+      "N",
+      "R",
+      "N",
+      "R",
+      "R",
+      "R",
+      "N",
+      "B"
+     ],
+     "rule": [
+      "B",
+      "B",
+      "N",
+      "B",
+      "N",
+      "N",
+      "R",
+      "R",
+      "N",
+      "N"
+     ],
+     "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
+     "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
+     "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
+     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
+     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
+     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+    },
+    "yt": {
+     "chapter": "Myths 1 and 2",
+     "title": "Myths 1 and 2",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "అపోహ ఒకటి: డబ్బు, స్టెప్స్ చెప్తే, నిజమే. [1] పది ఫేక్ స్కీములు అడిగాం. ఆరు, నిజమైనవిలా చెప్పింది.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "Myth 1: if it gives amounts and steps, it's real. We asked about 10 fake schemes. 6, it described as real.",
+     "tempo": 1.1
+    },
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "అపోహ రెండు: గెస్ చేయొద్దు అంటే చాలు. [1] అన్నాం. అయినా రెండు, నిజమైనవి అంది. మూడు, మధ్యలో వెనక్కి తగ్గింది.",
+     "maxgap": 0.3,
+     "gap": 0.45,
+     "show": "Myth 2: just tell it not to guess. We did. Still, it called 2 real. 3 backed off halfway.",
+     "tempo": 1.1
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_scheme",
+   "tail": 0.0,
+   "boost": 1.25,
+   "drop_at": [
+    [
+     0,
+     2,
+     0.6
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "myth3",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
+     "ask": "How much does the Digital Dadi Pension Yojana give?",
+     "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
+     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
+     "myth1": "If the AI gives amounts and steps, the scheme is real.",
+     "myth2": "Just tell it not to guess.",
+     "myth3": "At least it knows the real schemes.",
+     "fact": "A chatbot with no web search has no way to check a scheme.",
+     "ruleChip": "\"If you are not sure a scheme exists, say so. Don't guess amounts.\"",
+     "names": [
+      [
+       "Free Laptop Yojana 2026",
+       "viral_fake"
+      ],
+      [
+       "One Student One Laptop",
+       "viral_fake"
+      ],
+      [
+       "Free Smart Tablet Scheme",
+       "viral_fake"
+      ],
+      [
+       "Berozgari Bhatta Yojana",
+       "viral_fake"
+      ],
+      [
+       "Free Mobile Recharge",
+       "viral_fake"
+      ],
+      [
+       "Mixer Grinder Sahayata",
+       "made_up"
+      ],
+      [
+       "Digital Dadi Pension",
+       "made_up"
+      ],
+      [
+       "Free Cooler Yojana",
+       "made_up"
+      ],
+      [
+       "Bicycle Repair Yojana",
+       "made_up"
+      ],
+      [
+       "Tiffin Box Scheme",
+       "made_up"
+      ]
+     ],
+     "plain": [
+      "R",
+      "R",
+      "N",
+      "R",
+      "N",
+      "R",
+      "R",
+      "R",
+      "N",
+      "B"
+     ],
+     "rule": [
+      "B",
+      "B",
+      "N",
+      "B",
+      "N",
+      "N",
+      "R",
+      "R",
+      "N",
+      "N"
+     ],
+     "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
+     "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
+     "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
+     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
+     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
+     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+    },
+    "yt": {
+     "chapter": "Myth 3",
+     "title": "Myth 3",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "అపోహ మూడు: కనీసం నిజమైన స్కీములు అయినా తెలుసు. [1] పీఎం కిసాన్? నెలకి రెండు వేలు అంది: అంటే ఏడాదికి ఇరవై నాలుగు వేలు. <pause 0.6> [2] అసలు, ఏడాదికి ఆరు వేలే.",
+     "maxgap": 0.3,
+     "gap": 0.6,
+     "show": "Myth 3: at least it knows the real schemes. PM-KISAN? It said ₹2,000 a month: ₹24,000 a year. <pause 0.6> Really, just ₹6,000 a year.",
+     "tempo": 1.1,
+     "tts": "అపోహ మూడు: కనీసం నిజమైన స్కీములు అయినా తెలుసు. పీఎం కిసాన్? నెలకి రెండు వేలు అంది: అంటే ఏడాదికి ఇరవై నాలుగు వేలు.",
+     "file2": "05b_storyteller.wav",
+     "tts2": "అసలు, ఏడాదికి ఆరు వేలే.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_scheme",
+   "tail": 0.0,
+   "boost": 1.5,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "prop": "fact",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
+     "ask": "How much does the Digital Dadi Pension Yojana give?",
+     "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
+     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
+     "myth1": "If the AI gives amounts and steps, the scheme is real.",
+     "myth2": "Just tell it not to guess.",
+     "myth3": "At least it knows the real schemes.",
+     "fact": "A chatbot with no web search has no way to check a scheme.",
+     "ruleChip": "\"If you are not sure a scheme exists, say so. Don't guess amounts.\"",
+     "names": [
+      [
+       "Free Laptop Yojana 2026",
+       "viral_fake"
+      ],
+      [
+       "One Student One Laptop",
+       "viral_fake"
+      ],
+      [
+       "Free Smart Tablet Scheme",
+       "viral_fake"
+      ],
+      [
+       "Berozgari Bhatta Yojana",
+       "viral_fake"
+      ],
+      [
+       "Free Mobile Recharge",
+       "viral_fake"
+      ],
+      [
+       "Mixer Grinder Sahayata",
+       "made_up"
+      ],
+      [
+       "Digital Dadi Pension",
+       "made_up"
+      ],
+      [
+       "Free Cooler Yojana",
+       "made_up"
+      ],
+      [
+       "Bicycle Repair Yojana",
+       "made_up"
+      ],
+      [
+       "Tiffin Box Scheme",
+       "made_up"
+      ]
+     ],
+     "plain": [
+      "R",
+      "R",
+      "N",
+      "R",
+      "N",
+      "R",
+      "R",
+      "R",
+      "N",
+      "B"
+     ],
+     "rule": [
+      "B",
+      "B",
+      "N",
+      "B",
+      "N",
+      "N",
+      "R",
+      "R",
+      "N",
+      "N"
+     ],
+     "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
+     "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
+     "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
+     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
+     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
+     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+    },
+    "yt": {
+     "chapter": "Fact: check here",
+     "title": "Fact: check here",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "నిజం: వెబ్ సెర్చ్ లేకపోతే, చెక్ చేసే దారి లేదు. [1] మై స్కీమ్ డాట్ జీ ఓ వీ డాట్ ఇన్ లో వెతకండి. లేదా? పీఐబీ ఫ్యాక్ట్ చెక్ కి పంపండి.",
+     "maxgap": 0.3,
+     "gap": 0.8,
+     "show": "Fact: with no web search, there's no way to check. Search on myscheme.gov.in. Not there? Send it to PIB Fact Check.",
+     "tempo": 1.1
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_scheme",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.7,
+   "lift": 0.7,
+   "rise": 1.7,
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "name": "\"Digital Dadi Pension Yojana\" (a name we made up)",
+     "ask": "How much does the Digital Dadi Pension Yojana give?",
+     "reply": "\"...It can range from ₹500 to ₹3,000 per month.\"",
+     "forward": "Digital Dadi Pension Yojana! ₹3,000 every month for every grandmother. Register today!",
+     "docs": "\"proof of age (like a birth certificate), identity (like a passport or Aadhaar card), and address\"",
+     "myth1": "If the AI gives amounts and steps, the scheme is real.",
+     "myth2": "Just tell it not to guess.",
+     "myth3": "At least it knows the real schemes.",
+     "fact": "A chatbot with no web search has no way to check a scheme.",
+     "ruleChip": "\"If you are not sure a scheme exists, say so. Don't guess amounts.\"",
+     "names": [
+      [
+       "Free Laptop Yojana 2026",
+       "viral_fake"
+      ],
+      [
+       "One Student One Laptop",
+       "viral_fake"
+      ],
+      [
+       "Free Smart Tablet Scheme",
+       "viral_fake"
+      ],
+      [
+       "Berozgari Bhatta Yojana",
+       "viral_fake"
+      ],
+      [
+       "Free Mobile Recharge",
+       "viral_fake"
+      ],
+      [
+       "Mixer Grinder Sahayata",
+       "made_up"
+      ],
+      [
+       "Digital Dadi Pension",
+       "made_up"
+      ],
+      [
+       "Free Cooler Yojana",
+       "made_up"
+      ],
+      [
+       "Bicycle Repair Yojana",
+       "made_up"
+      ],
+      [
+       "Tiffin Box Scheme",
+       "made_up"
+      ]
+     ],
+     "plain": [
+      "R",
+      "R",
+      "N",
+      "R",
+      "N",
+      "R",
+      "R",
+      "R",
+      "N",
+      "B"
+     ],
+     "rule": [
+      "B",
+      "B",
+      "N",
+      "B",
+      "N",
+      "N",
+      "R",
+      "R",
+      "N",
+      "N"
+     ],
+     "count1": "no rule: 6 as real · 1 backed off · 3 not sure",
+     "count2": "with the rule: 2 as real · 3 backed off · 5 not sure",
+     "laptop": "\"free laptop\" messages: PIB Fact Check says FAKE",
+     "vayas": "Digital Dadi became \"part of the PM-VAYAS scheme\": also made up",
+     "pension": "real pensions are listed there, like the national old-age pension (IGNOAPS)",
+     "apy": "Atal Pension: it said ₹6,000 a month · real: ₹1,000-5,000 (PFRDA)"
+    },
+    "yt": {
+     "chapter": "Ask first",
+     "title": "Ask first",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "నానమ్మ ఇప్పుడు ముందే చెక్ చేస్తుంది. [1] అందుకే, ఏదైనా మెసేజ్ నెలకి మూడు వేలు అంటే, చెక్ చేయండి...",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "show": "Grandma checks first now. So when a message says ₹3,000 a month, check...",
+     "tempo": 1.1
+    }
+   ]
+  }
+ ]
+}
