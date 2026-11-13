@@ -40,6 +40,7 @@ const pdfPage = (c: Ctx, x: number, y: number, w: number, h: number, n: number, 
   c.font = SANS(18, 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText(`page ${n}`, x + w / 2, y + h - 14);
   c.restore();
 };
+const big = (c: Ctx, t: string, size: number) => fit(c, t, 1000, size, 800);
 const stamp = (c: Ctx, t: string, x: number, y: number, k: number, rot = -0.08) => {
   if (k <= 0) return;
   c.save(); c.translate(x, y); c.rotate(rot); c.globalAlpha = clamp(k * 3);
@@ -92,7 +93,7 @@ const StRag: React.FC<SP> = ({ s }) => {
           pdfPage(c, 570, 300, 450, 560, 3, pg[2][0], pg[2].slice(1), 0, seg(f, ln.from, ln.from + 10), "#fefce8");
           chip(c, "what the bot read", 285, 930, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 34);
           chip(c, "where the answer was", 795, 930, "#dcfce7", "#14532d", 1, 34);
-          chip(c, "trust the bot → pay ₹1,450 for a covered repair", W / 2, 1060, "#1e293b", "#fca5a5", seg(f, cu(1, 0.7), cu(1, 0.7) + 8), 34);   // v3: line 2 trimmed, the stake moved on screen
+          chip(c, "trust the bot → pay ₹1,450 for a covered repair", W / 2, 1070, "#1e293b", "#fca5a5", seg(f, cu(1, 0.7), cu(1, 0.7) + 8), big(c, "trust the bot → pay ₹1,450 for a covered repair", 46));   // v3: line 2 trimmed, the stake moved on screen
         } else if (P === "title") {
           c.font = SANS(fit(c, "BUILD IT RIGHT", W - 120, 76), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("BUILD IT RIGHT", W / 2, 420);
           c.font = SANS(40, 800); c.fillStyle = "#e2e8f0"; c.fillText("answers from your own PDF, with the page", W / 2, 490);
@@ -108,12 +109,13 @@ const StRag: React.FC<SP> = ({ s }) => {
           const shown = P === "step1" ? 3 * seg(f, ln.from + 2, cu(1, 0.6)) : P === "step2b" ? 3 + 2 * seg(f, ln.from + 2, cu(1, 0.6)) : 5 + 5 * seg(f, ln.from + 2, cu(1, 0.7));
           const hi = P === "step1" ? [0, 1, 2] : P === "step2b" ? [3, 4] : [5, 6, 7, 8, 9];
           const yE = editor(c, 30, 360, W - 60, code, shown, hi, 25, "warranty_bot.py");
-          if (P === "step1") chip(c, "no code? paste the pages into any AI chat, marked page 1, page 2…", W / 2, yE + 80, "#dcfce7", "#14532d", seg(f, ln.from + 24, ln.from + 32), 30);   // render review
+          if (P === "step1") chip(c, "no code? paste the pages into any AI chat", W / 2, yE + 90, "#dcfce7", "#14532d", seg(f, ln.from + 24, ln.from + 32), big(c, "no code? paste the pages into any AI chat", 46));
+          if (P === "step1") chip(c, "marked page 1, page 2…", W / 2, yE + 180, "#dcfce7", "#14532d", seg(f, ln.from + 30, ln.from + 38), 44);   // render review
           if (P === "step2b") {
             chip(c, "--- page 1 --- ... --- page 5 ---", W / 2, yE + 70, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.1), cu(1, 0.1) + 8), 34);
             chip(c, "5 pages ≈ 450 tokens a question", W / 2, yE + 170, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 34);
-            chip(c, "short = it fits the AI's limit with room to spare", W / 2, yE + 270, "#fde68a", INK, seg(f, ln.from + 18, ln.from + 26), 34);   // render review: the switch point
-            chip(c, "too big for every question? search by meaning: Part 2", W / 2, yE + 370, "#1e293b", "#fde68a", seg(f, ln.from + 34, ln.from + 42), 32);
+            chip(c, "short = it fits the AI's limit with room to spare", W / 2, yE + 295, "#fde68a", INK, seg(f, ln.from + 18, ln.from + 26), big(c, "short = it fits the AI's limit with room to spare", 44));   // render review: the switch point
+            chip(c, "too big for every question? search by meaning: Part 2", W / 2, yE + 405, "#1e293b", "#fde68a", seg(f, ln.from + 34, ln.from + 42), big(c, "too big for every question? search by meaning: Part 2", 44));
           }
           if (P === "step3") chip(c, "answer only from it · say the page · or \"Not in the document\"", W / 2, yE + 80, "#dcfce7", "#14532d", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), 30);
         } else if (P === "step2") {   // the first try: "the page with the most words in common" picked the cover
@@ -137,13 +139,14 @@ const StRag: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, a, 600, 40, 800), 800); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(a, 80, y + 108);
             c.font = SANS(76, 900); c.textAlign = "right"; c.fillStyle = col; c.fillText(v, W - 80, y + 118); c.restore();
           });
-          chip(c, "the 9: right page on 7 · wrong page on 1 · 1 rightly \"not in it\"", W / 2, 1150, "#e0e7ff", "#1e3a8a", seg(f, cu(2, 0.6), cu(2, 0.6) + 8), 32);   // render review: 7 + 1 + 1
+          chip(c, "the 9: right page on 7 · wrong page on 1 · 1 rightly \"not in it\"", W / 2, 1160, "#e0e7ff", "#1e3a8a", seg(f, cu(2, 0.6), cu(2, 0.6) + 8), big(c, "the 9: right page on 7 · wrong page on 1 · 1 rightly \"not in it\"", 44));   // render review: 7 + 1 + 1
         } else if (P === "miss") {
           const y = chat(c, 50, 300, W - 100, "Warranty bot · all 5 pages", [{ me: true, t: T.q3, k: 1 }, { me: false, t: "Not in the document.", k: 1, red: true }], 36);
           pdfPage(c, 260, y + 30, 560, 380, 4, pg[3][0], pg[3].slice(1), 0, seg(f, ln.from + 10, ln.from + 18), "#fefce8");
-          stamp(c, "✗ IT WAS ON PAGE 4: NOT COVERED", W / 2, y + 480, seg(f, ln.from + 20, ln.from + 28));   // render review: what it got wrong
-          chip(c, "open the page it gives", W / 2, y + 590, "#dcfce7", "#14532d", seg(f, cu(1, 0.2), cu(1, 0.2) + 8), 38);
-          chip(c, "\"not there\"? check the PDF yourself", W / 2, y + 690, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.6), cu(1, 0.6) + 8), 38);
+          stamp(c, "✗ MISSED: THE ANSWER WAS ON PAGE 4", W / 2, y + 480, seg(f, ln.from + 20, ln.from + 28));   // what it got wrong
+          chip(c, "the real answer: a 10-minute run isn't covered", W / 2, y + 605, "#1e293b", "#e2e8f0", seg(f, ln.from + 34, ln.from + 42), big(c, "the real answer: a 10-minute run isn't covered", 40));
+          chip(c, "open the page it gives", W / 2, y + 700, "#dcfce7", "#14532d", seg(f, cu(1, 0.2), cu(1, 0.2) + 8), 38);
+          chip(c, "\"not there\"? check the PDF yourself", W / 2, y + 795, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.6), cu(1, 0.6) + 8), 38);
         } else if (P === "loop") {
           c.font = SANS(fit(c, "300 pages? Part 2: search by meaning", W - 120, 62), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("300 pages? Part 2: search by meaning", W / 2, 400);
           c.font = SANS(36, 800); c.fillStyle = "#e2e8f0"; c.fillText("too big to send with every question", W / 2, 470);

@@ -62,7 +62,7 @@ T = {   # on screen, from series/scripts/ep52_demo/ (rag.json, rag_full.json) an
     "pages": [["MG-750 Mixer Grinder", "User Guide and Warranty Card", "750 watt motor, three jars"],
               ["Using your mixer", "Do not run it for more than 3 minutes at a time."],
               ["Warranty", "The motor is covered for 5 years from the date of purchase.", "Jars and blades: 1 year. Coupler: 6 months."],
-              ["Not covered", "Damage from running the mixer for more than 3 minutes at a time.", "Motor rewinding Rs 1,450."],
+              ["Not covered", "Damage from running the mixer for more than 3 minutes at a time.", "Jars that are dropped or broken."],   # confirmation pass: no second ₹1,450 on screen
               ["How to claim", "A technician visits within 72 hours.", "Register within 30 days: one more year."]],
     "code": ["from pypdf import PdfReader", "reader = PdfReader(\"warranty.pdf\")", "pages = [p.extract_text() for p in reader.pages]",
              "doc = \"\".join(f\"--- page {i+1} ---\\n{t}\\n\"", "              for i, t in enumerate(pages))",

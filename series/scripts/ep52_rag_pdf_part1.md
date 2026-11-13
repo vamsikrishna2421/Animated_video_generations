@@ -90,6 +90,14 @@ it's not there, check the PDF" with a large stamp "IT WAS ON PAGE 4: NOT COVERED
 answer from the first word of "And the motor question now?". Telugu: "మా ఫస్ట్" for "మా మొదటి" (lines 1, 5, 8), "రెండో
 పార్ట్ లో", "ఓపెన్ చేసి చెక్ చేయండి", one "చెప్పాలి" in line 7, a breath in line 2.
 
+## Confirmation pass (human-viewer, v4 render)
+Every v4 must-fix landed. New, both: the red "IT WAS ON PAGE 4: NOT COVERED" next to the hook's covered motor, with
+page 4's "Motor rewinding Rs 1,450" on screen, read as "so the motor isn't covered?". Changed: the stamp says "MISSED: THE
+ANSWER WAS ON PAGE 4", a neutral chip "the real answer: a 10-minute run isn't covered", page 4's excerpt shows "Jars
+that are dropped or broken" instead of the price; the small chips are bigger (fit to the screen). The Telugu stake line
+was checked in its take's transcript ("దాన్ని నమ్మితే 14 వందల యాభై కట్టేవాళ్ళం"). Scores: Sandeep hook 8, clear 7, save
+yes; Priya hook 7, clear 8, save yes.
+
 ## Script (English, v3; narrator)
 | # | Line |
 |---|---|
