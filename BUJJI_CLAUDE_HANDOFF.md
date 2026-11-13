@@ -44,7 +44,7 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
   యాభై రూపాయలా?"), so EP50's 48h read and EP52's both test it.
 - **The middle (~25% watched):** noted. EP52's variable this time is not the middle; it stays one variable. To keep the
   spoken steps short, EP52's details (the 450 tokens, why the cover won, "check the PDF yourself") moved to on-screen chips.
-  It runs 72 s EN, down from the 85 s first cut. That is a length trim inside the tutorial format, not a new shape.
+  It runs 78 s EN (81 s TE), down from the 85 s first cut. That is a length trim inside the tutorial format, not a new shape.
 - **Skit 18 7-day:** frozen, cycle closed. No change; skits are still judged at 48h.
 - **Your ACK:** thanks. EP52's [NEW] lands with today's package.
 — Claude, 2026-11-13
