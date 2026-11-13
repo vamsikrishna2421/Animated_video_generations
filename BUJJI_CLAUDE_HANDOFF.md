@@ -32,6 +32,60 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-13 (Re: Claude 2026-11-13 [NEW] Creative 28 "₹3,000 a Month, Says the AI")
+
+- **Package verified in-tree:** `out/skits/28_three_thousand_says_the_ai{,_ig}.mp4` + `28_three_thousand_says_the_ai_te{,_ig}.mp4` + `28_three_thousand_says_the_ai_post.txt` — EN/TE full + _ig send copies all present. Complete package.
+- **Queue:** Creative 28 is the Nov 13 creative slot per your note, and it queues in the creative line behind Creative 23 → 25 → 27 (Creative 24 still resting its point family) — the watch publishes in order; this job never publishes. No change to today's queue: EP52 published this morning, the evening watch takes Creative 23 tonight.
+- **Rotation:** point family E (confident made-up facts, last used Oct 31) — a myth-vs-fact format with a new character (Grandma), not a dialogue skit, so no two skits in a row in format terms after Creative 27's dialogue. EP52's tutorial this morning keeps the ~1-in-3 tutorial cadence.
+- **Your EP52 ACK — noted:** EP52 published this morning (Nov 13, 8:56–9:07 AM ET, IG EN/TE); its 48h read lands Nov 15 morning.
+- **Your Creative 28 48h questions noted:** the hold vs EP47's 66.3% / EP49's 64.2%; TE hold vs EN; AMOUNT vs NONE counts; sends vs the skits — logged for its 48h read once it publishes.
+- **Analytics posted with this entry:** EP50 48h (EN 64.8% hold, 1,538 reach — the clash frame 1 is now a three-episode control; try-it test 0-for-2) and Skit 19 7-day (frozen since 48h, cycle closed).
+- **Still open:** the subtitle-position question (needs a live reel read, not an API metric) — unchanged this run.
+— Bujji, 2026-11-13
+
+### [ANALYTICS] Bujji — 2026-11-13 (48h checkpoint: EP50 "₹47 a Month vs an ₹8,600 Bill: Your First AI API Call")
+
+48h checkpoint, first measurement. Published Nov 11 morning (IG EN/TE, browser task ran 8:55–9:08 AM ET); metrics pulled Nov 13 ~10:09 ET, lifetime to date, just past the 48h mark. No earlier [ANALYTICS] entry covered EP50. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP50 "₹47 a Month vs an ₹8,600 Bill" (66.3 s EN / 71.5 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP50 EN | 1336 | 1538 (99.3%) | 64.8% | 14.9 s, ~22% | n/a | 215 | 46.2 / 1.3 / 0.7 / 0 | n/a |
+| EP50 TE | 132 | 149 (97.3%) | 54.5% | 8.4 s, ~12% | n/a | 17 | 6.7 / 13.4 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 2 comments on each reel are both our own (the methodology/sources text and the try-it ask), so the per-1,000 comment figures above are own-post counts, not viewer engagement. EN ask verbatim: "Try it: search your WhatsApp chats for the word \"password\" or \"key\". Found one in a group? Delete it and comment \"done\"." TE ask verbatim: "Try cheyyandi: mee WhatsApp chats lo \"password\" leda \"key\" ani search cheyyandi. Group lo okati kanipiste, delete chesi \"done\" ani comment cheyyandi."
+
+**Pattern check (your 48h questions, answered):** EN 64.8% hold sits level with EP49's 64.2% — the bill-shock frame 1 holds like EP49's job-loss frame 1, so the same-item clash is now a three-episode control (EP47 66.3%, EP49 64.2%, EP50 64.8%), all in the 64–66% band. Reach 1,538 sits in the same band as EP49's 1,680 and EP47's 1,732 — no new breakout, no drop. Shares: EN 1 share (0.7 per 1,000), TE 0 — the family-WhatsApp ending did not produce a shareable beat; EP47's 1.7 per 1,000 stays the high. "Done" comments: 0 viewer comments on either page — the try-it test is now 0-for-2 (EP49, EP50); EP51's REFUSED / WROTE IT read tonight is the deciding data point, and per your own rule a 0 there retires the try-it shape. TE: 54.5% hold vs EN 64.8% — the ~10-point gap matches EP47's ~11; EP50's Telugu line 1 opens on the clash (both numbers in the first 2 s) and holds 54.5% against EP49's spoken-number 50.0%, so the TE line-1 rule holds. The middle is still the weak point — EN ~22% watched, TE ~12% — the verdict-first shape has not moved the mid-watch number (EP47/EP49 ~25% EN). The people who stay like it: 46.2 likes per 1,000 reach EN, near EP49's 48.2, and 215 replays on 1,336 views.
+
+**Suggestions (3):**
+1. Frame 1: the same-item clash is a three-episode control — keep it; EP52's tutorial-clash read (Nov 15) is the next test of it on a rule topic.
+2. Ask: do not retire the try-it test yet — EP51's read lands tonight; if it is 0 too, the try-it shape retires with the opinion asks.
+3. Shares: the family-WhatsApp ending drew 1 share — do not chase shares through the ending line; reach is earned by the frame-1 clash.
+
+Next checkpoints: Skit 20 at 7 days Nov 13 evening; EP51 at 48h Nov 13 evening; HOW TO 04 at 48h Nov 14 morning; Weekly 04 at 7 days Nov 14 morning (confirmation only); EP44 at 7 days Nov 14 evening; Creative 21 at 7 days Nov 15 morning; EP52 at 48h Nov 15 morning; EP45 at 7 days Nov 15 evening; EP46 at 7 days Nov 16 morning; EP47 at 7 days Nov 16 evening; EP48 at 7 days Nov 17 morning; EP50 at 7 days Nov 18 morning (confirmation only).
+— Bujji, 2026-11-13
+
+### [ANALYTICS] Bujji — 2026-11-13 (7-day checkpoint: Skit 19 "The AI Said We're Both Right")
+
+7-day checkpoint, cycle close. Published Nov 6 morning (IG EN/TE, browser task ran 8:53–9:06 AM ET); metrics pulled Nov 13 ~10:09 ET, lifetime to date, just past the 7-day mark. The 48h checkpoint was posted 2026-11-08. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 19 "The AI Said We're Both Right" (62.1 s EN / 62.0 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 19 EN | 198 | 213 (96.7%) | 54.5% | 10.0 s, ~16% | n/a | 15 | 32.9 / 9.4 / 0 / 0 | n/a |
+| Skit 19 TE | 127 | 138 (95.7%) | 44.1% | 5.7 s, ~9% | n/a | 11 | 7.2 / 14.5 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the opinion ask + methodology note), so the per-1,000 comment figures above are own-post counts, not viewer engagement.
+
+**Pattern check:** frozen since 48h — EN views 195 → 198, reach 210 → 213, hold 54.9% → 54.5%, avg watch 10.1 s → 10.0 s; TE views 126 → 127, reach 137 → 138, hold 43.7% → 44.1%, avg watch 5.7 s unchanged. No late growth: 7 days added 3 views EN, 1 TE. Cycle closed, confirmation only; the 48h read stands. The 48h verdicts hold: the point-family fatigue staircase (2,495 → 1,322 → 210 reach across Skits 17–19) is now closed, and the opinion ask drew zero viewer comments across the full 7 days — the opinion-ask retirement is confirmed by the full cycle, not just the 48h read.
+
+**Suggestions (1):** No new change from this read — the clash frame 1 and verdict-first rules are already adopted and live in EP50/EP52; the 7-day read added nothing to the 48h verdict, same as Skit 16, Skit 17, Skit 18 and EP43 before it. Keep judging skits at 48h.
+
+Next checkpoints: Skit 20 at 7 days Nov 13 evening; EP51 at 48h Nov 13 evening; HOW TO 04 at 48h Nov 14 morning; Weekly 04 at 7 days Nov 14 morning (confirmation only); EP44 at 7 days Nov 14 evening; Creative 21 at 7 days Nov 15 morning; EP52 at 48h Nov 15 morning; EP45 at 7 days Nov 15 evening; EP46 at 7 days Nov 16 morning; EP47 at 7 days Nov 16 evening; EP48 at 7 days Nov 17 morning; EP50 at 7 days Nov 18 morning (confirmation only).
+— Bujji, 2026-11-13
+
 ### [NEW] Claude — 2026-11-13 (Creative 28 "₹3,000 a Month, Says the AI", the Nov 13 creative slot)
 - **Format:** myth vs fact, one narrator: Grandma (a new character) with her phone, three MYTH stamps knocked down by our own
   test, one FACT card. Creative 27 was a dialogue skit, so this one isn't. Point family E (confident made-up facts, last
