@@ -60,7 +60,7 @@ Already posted: `out/posted/`.
 | 053 | q05 | Quiz #5: Episodes 41–49 | ready |
 | 054 | ep50 | ₹47 a Month vs an ₹8,600 Bill (EP50: your first AI API call; skit, AI voices) | ready |
 | 055 | ep51 | 10 Yuan vs ₹96: Build a Chatbot with a System Prompt (EP51; a screen tutorial, AI voice) | ready |
-| 056 | ep52 | Build RAG Over Your PDFs, Part 1 | ready |
+| 056 | ep52 | 5 Years or ₹1,450? Build RAG Over Your PDFs, Part 1 (EP52; a screen tutorial, AI voice) | ready |
 | 057 | ep53 | Build RAG Over Your PDFs, Part 2 | ready |
 | 058 | ep54 | Build an AI Agent with Tools | ready |
 | 059 | ep55 | Build Your Own MCP Server | ready |

@@ -80,32 +80,33 @@ const StRag: React.FC<SP> = ({ s }) => {
         const P = loopOn ? "hook" : b.prop;
         const pg: string[][] = T.pages;   // [title, line, line...] per page
         if (P === "hook") {
-          block(c, 50, 250, "OUR FIRST BOT", "pay ₹1,450", "#f87171");
-          block(c, 560, 250, "PAGE 3 OF YOUR PDF", "₹0", "#4ade80");
+          block(c, 50, 250, "OUR FIRST BOT: \"not in it\"", "₹1,450?", "#f87171");   // script review: the bot never said "pay"
+          block(c, 560, 250, "PAGE 3: THE MOTOR", "5 YEARS", "#4ade80");
           const y = chat(c, 50, 450, W - 100, "Warranty bot · reads your PDF", [
             { me: true, t: T.q1, k: 1 }, { me: false, t: T.firstReply, k: 1, red: true },
           ], 36);
-          stamp(c, "✗ IT READ THE COVER", W / 2, y + 60, loopOn ? 1 : seg(f, cu(1, 0.6), cu(1, 0.6) + 8));
-          pdfPage(c, 300, y + 140, 480, 330, 3, pg[2][0], pg[2].slice(1), 0, 1, "#fefce8");
+          stamp(c, "✗ IT READ THE COVER", W / 2, y + 60, loopOn ? 0 : seg(f, cu(1, 0.6), cu(1, 0.6) + 8));
+          if (!loopOn) pdfPage(c, 300, y + 140, 480, 330, 3, pg[2][0], pg[2].slice(1), 0, 1, "#fefce8");
         } else if (P === "cover") {
           pdfPage(c, 60, 300, 450, 560, 1, pg[0][0], pg[0].slice(1), -1, 0);
           pdfPage(c, 570, 300, 450, 560, 3, pg[2][0], pg[2].slice(1), 0, seg(f, ln.from, ln.from + 10), "#fefce8");
           chip(c, "what the bot read", 285, 930, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 34);
           chip(c, "where the answer was", 795, 930, "#dcfce7", "#14532d", 1, 34);
+          chip(c, "trust the bot → pay ₹1,450 for a covered repair", W / 2, 1060, "#1e293b", "#fca5a5", seg(f, cu(1, 0.7), cu(1, 0.7) + 8), 34);   // v3: line 2 trimmed, the stake moved on screen
         } else if (P === "title") {
           c.font = SANS(fit(c, "BUILD IT RIGHT", W - 120, 76), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("BUILD IT RIGHT", W / 2, 420);
           c.font = SANS(40, 800); c.fillStyle = "#e2e8f0"; c.fillText("answers from your own PDF, with the page", W / 2, 490);
-          ["1 · read the PDF, page by page", "2 · give it the right pages", "3 · the rules"].forEach((t, q) => {
+          ["1 · read the PDF, page by page", "2 · send every page, numbered", "3 · the rules"].forEach((t, q) => {
             const k = seg(f, cu(1, 0.2) + q * 8, cu(1, 0.2) + q * 8 + 8); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 600 + q * 180; c.fillStyle = "#1e293b"; rrect(c, 100, y, W - 200, 140, 22); c.fill();
             c.font = SANS(fit(c, t, W - 260, 46, 900), 900); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText(t, W / 2, y + 88); c.restore();
           });
         } else if (P === "step1" || P === "step2b" || P === "step3") {
           const code: string[] = T.code;
-          const label = P === "step1" ? "STEP 1 · read the PDF" : P === "step2b" ? "STEP 2 · short PDF: send every page" : "STEP 3 · the rules";
+          const label = P === "step1" ? "STEP 1 · read the PDF" : P === "step2b" ? "STEP 2 · short PDF: send every page, numbered" : "STEP 3 · the rules";
           chip(c, label, W / 2, 300, "#fde68a", INK, 1, 40);
-          const shown = P === "step1" ? 2 * seg(f, ln.from + 2, cu(1, 0.6)) : P === "step2b" ? 2 + seg(f, ln.from + 2, cu(1, 0.6)) : 3 + 3 * seg(f, ln.from + 2, cu(1, 0.7));
-          const hi = P === "step1" ? [0, 1] : P === "step2b" ? [2] : [3, 4, 5];
+          const shown = P === "step1" ? 3 * seg(f, ln.from + 2, cu(1, 0.6)) : P === "step2b" ? 3 + 2 * seg(f, ln.from + 2, cu(1, 0.6)) : 5 + 5 * seg(f, ln.from + 2, cu(1, 0.7));
+          const hi = P === "step1" ? [0, 1, 2] : P === "step2b" ? [3, 4] : [5, 6, 7, 8, 9];
           const yE = editor(c, 30, 360, W - 60, code, shown, hi, 25, "warranty_bot.py");
           if (P === "step2b") {
             chip(c, "--- page 1 --- ... --- page 5 ---", W / 2, yE + 70, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), 34);
@@ -125,7 +126,7 @@ const StRag: React.FC<SP> = ({ s }) => {
         } else if (P === "test") {
           c.font = SANS(fit(c, "OUR TEST · 10 QUESTIONS ON THE PDF", W - 100, 54), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("OUR TEST · 10 QUESTIONS ON THE PDF", W / 2, 320);
           c.font = SANS(30, 700); c.fillStyle = "#cbd5e1"; c.fillText("a small free AI on our computer · every reply read by hand", W / 2, 370);
-          const rows: [string, string, string, number][] = [["no PDF", "0/10", "#f87171", cu(1, 0.2)], ["first search (read the cover)", "1/10", "#f87171", cu(1, 0.6)], ["all 5 pages, with page numbers", "9/10", "#4ade80", cu(2, 0.75)]];
+          const rows: [string, string, string, number][] = [["no PDF", "0/10", "#f87171", cu(1, 0.2)], ["first search (read the cover)", "1/10", "#f87171", cu(1, 0.6)], ["all 5 pages, numbered", "9/10", "#4ade80", cu(2, 0.75)]];
           rows.forEach(([a, v, col, t0], q) => {
             const k = seg(f, t0 - 2, t0 + 6); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 430 + q * 210;
@@ -133,15 +134,21 @@ const StRag: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, a, 600, 40, 800), 800); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(a, 80, y + 108);
             c.font = SANS(76, 900); c.textAlign = "right"; c.fillStyle = col; c.fillText(v, W - 80, y + 118); c.restore();
           });
-          chip(c, "the page right on 7 of 8 answers that gave one", W / 2, 1150, "#e0e7ff", "#1e3a8a", seg(f, cu(2, 0.9), cu(2, 0.9) + 8), 32);
+          chip(c, "the right page on 7 · a wrong page on 1", W / 2, 1150, "#e0e7ff", "#1e3a8a", seg(f, cu(2, 0.9), cu(2, 0.9) + 8), 36);
         } else if (P === "miss") {
           const y = chat(c, 50, 300, W - 100, "Warranty bot · all 5 pages", [{ me: true, t: T.q3, k: 1 }, { me: false, t: "Not in the document.", k: 1, red: true }], 36);
           pdfPage(c, 260, y + 30, 560, 380, 4, pg[3][0], pg[3].slice(1), 0, seg(f, cu(1, 0.3), cu(1, 0.3) + 8), "#fefce8");
-          chip(c, "it says \"not there\"? open the PDF yourself", W / 2, y + 480, "#dcfce7", "#14532d", seg(f, cu(1, 0.7), cu(1, 0.7) + 8), 36);
+          chip(c, "open the page it gives, every time", W / 2, y + 470, "#dcfce7", "#14532d", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 38);
+          chip(c, "\"not there\"? open the PDF yourself", W / 2, y + 570, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.8), cu(1, 0.8) + 8), 36);
         } else if (P === "loop") {
-          c.font = SANS(fit(c, "300 pages? That's Part 2.", W - 120, 70), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("300 pages? That's Part 2.", W / 2, 620);
-          c.font = SANS(40, 800); c.fillStyle = "#e2e8f0"; c.fillText("search by meaning", W / 2, 700);
-          c.font = SANS(fit(c, "₹1,450, or free?", W - 120, 90), 900); c.fillStyle = "#f8fafc"; c.fillText("₹1,450, or free?", W / 2, 950);
+          c.font = SANS(fit(c, "300 pages? That's Part 2.", W - 120, 66), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("300 pages? That's Part 2.", W / 2, 400);
+          c.font = SANS(36, 800); c.fillStyle = "#e2e8f0"; c.fillText("too big to send with every question", W / 2, 470);
+          const kf = seg(f, cu(1, 0.3), cu(1, 0.3) + 8);   // script review: the fixed bot answers the hook question
+          if (kf > 0) {
+            c.save(); c.globalAlpha = clamp(kf * 3);
+            chat(c, 50, 560, W - 100, "Warranty bot · all 5 pages", [{ me: true, t: T.q1, k: 1 }, { me: false, t: T.fixedReply, k: 1 }], 36);
+            c.restore();
+          }
         }
       }} />
     </>

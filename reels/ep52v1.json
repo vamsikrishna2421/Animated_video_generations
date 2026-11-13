@@ -1,0 +1,452 @@
+{
+ "id": "ep52v1",
+ "title": "5 Years or ₹1,450? Build RAG Over Your PDFs, Part 1 (EP52)",
+ "label": "EP52",
+ "banner": "Build RAG over your PDFs, Part 1",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.2,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_rag52",
+   "tail": 0.0,
+   "boost": 1.0,
+   "drop_at": [
+    [
+     1,
+     1,
+     0.3
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "cover",
+      "n": 2
+     },
+     {
+      "prop": "title",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q1": "How long is the warranty on the motor of my MG-750 mixer grinder?",
+     "firstReply": "Not in the document. (page 1)",
+     "fixedReply": "The motor is covered for 5 years from the date of purchase. (page 3)",
+     "q3": "My MG-750 mixer stopped after I ran it for 10 minutes without a break. Is that covered by the warranty?",
+     "pages": [
+      [
+       "MG-750 Mixer Grinder",
+       "User Guide and Warranty Card",
+       "750 watt motor, three jars"
+      ],
+      [
+       "Using your mixer",
+       "Do not run it for more than 3 minutes at a time."
+      ],
+      [
+       "Warranty",
+       "The motor is covered for 5 years from the date of purchase.",
+       "Jars and blades: 1 year. Coupler: 6 months."
+      ],
+      [
+       "Not covered",
+       "Damage from running the mixer for more than 3 minutes at a time.",
+       "Motor rewinding Rs 1,450."
+      ],
+      [
+       "How to claim",
+       "A technician visits within 72 hours.",
+       "Register within 30 days: one more year."
+      ]
+     ],
+     "code": [
+      "from pypdf import PdfReader",
+      "reader = PdfReader(\"warranty.pdf\")",
+      "pages = [p.extract_text() for p in reader.pages]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{t}\\n\"",
+      "              for i, t in enumerate(pages))",
+      "rules = (\"Answer only from the document. \"",
+      "         \"Say the page. If it isn't there, \"",
+      "         \"say: Not in the document.\")",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Not in the document?",
+     "title": "Not in the document?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "Five years of warranty, or fourteen hundred and fifty rupees? [1] We asked our first PDF bot about a mixer's motor. It said: not in the document.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "5 years of warranty, or ₹1,450? We asked our first PDF bot about a mixer's motor. It said: not in the document.",
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "Page three says: covered for five years. [1] The bot had read the cover page.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "Page three says: covered for five years. The bot had read the cover page.",
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "Let's build it right: [1] a bot that answers from your own PDF, and shows the page.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Let's build it right: a bot that answers from your own PDF, and shows the page.",
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_rag52",
+   "tail": 0.0,
+   "boost": 1.2,
+   "lift": 0.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "step1",
+      "n": 4
+     },
+     {
+      "prop": "step2",
+      "n": 5
+     },
+     {
+      "prop": "step2b",
+      "n": 6
+     },
+     {
+      "prop": "step3",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q1": "How long is the warranty on the motor of my MG-750 mixer grinder?",
+     "firstReply": "Not in the document. (page 1)",
+     "fixedReply": "The motor is covered for 5 years from the date of purchase. (page 3)",
+     "q3": "My MG-750 mixer stopped after I ran it for 10 minutes without a break. Is that covered by the warranty?",
+     "pages": [
+      [
+       "MG-750 Mixer Grinder",
+       "User Guide and Warranty Card",
+       "750 watt motor, three jars"
+      ],
+      [
+       "Using your mixer",
+       "Do not run it for more than 3 minutes at a time."
+      ],
+      [
+       "Warranty",
+       "The motor is covered for 5 years from the date of purchase.",
+       "Jars and blades: 1 year. Coupler: 6 months."
+      ],
+      [
+       "Not covered",
+       "Damage from running the mixer for more than 3 minutes at a time.",
+       "Motor rewinding Rs 1,450."
+      ],
+      [
+       "How to claim",
+       "A technician visits within 72 hours.",
+       "Register within 30 days: one more year."
+      ]
+     ],
+     "code": [
+      "from pypdf import PdfReader",
+      "reader = PdfReader(\"warranty.pdf\")",
+      "pages = [p.extract_text() for p in reader.pages]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{t}\\n\"",
+      "              for i, t in enumerate(pages))",
+      "rules = (\"Answer only from the document. \"",
+      "         \"Say the page. If it isn't there, \"",
+      "         \"say: Not in the document.\")",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Build it: 3 steps",
+     "title": "Build it: 3 steps",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "Step one: read the PDF, page by page. [1] Three lines of code.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Step one: read the PDF, page by page. Three lines of code.",
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "Our first try searched for the best page, [1] and picked the cover nine times out of ten.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "Our first try searched for the best page, and picked the cover nine times out of ten.",
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "Step two, for a short PDF: don't search. [1] Send every page, numbered.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Step two, for a short PDF: don't search. Send every page, numbered.",
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "Step three: give it the rules. [1] Answer only from the document, say the page, and if it isn't there, say so.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "Step three: give it the rules. Answer only from the document, say the page, and if it isn't there, say so.",
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_rag52",
+   "tail": 0.0,
+   "boost": 1.4,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     0,
+     2,
+     0.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 8
+     },
+     {
+      "prop": "miss",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q1": "How long is the warranty on the motor of my MG-750 mixer grinder?",
+     "firstReply": "Not in the document. (page 1)",
+     "fixedReply": "The motor is covered for 5 years from the date of purchase. (page 3)",
+     "q3": "My MG-750 mixer stopped after I ran it for 10 minutes without a break. Is that covered by the warranty?",
+     "pages": [
+      [
+       "MG-750 Mixer Grinder",
+       "User Guide and Warranty Card",
+       "750 watt motor, three jars"
+      ],
+      [
+       "Using your mixer",
+       "Do not run it for more than 3 minutes at a time."
+      ],
+      [
+       "Warranty",
+       "The motor is covered for 5 years from the date of purchase.",
+       "Jars and blades: 1 year. Coupler: 6 months."
+      ],
+      [
+       "Not covered",
+       "Damage from running the mixer for more than 3 minutes at a time.",
+       "Motor rewinding Rs 1,450."
+      ],
+      [
+       "How to claim",
+       "A technician visits within 72 hours.",
+       "Register within 30 days: one more year."
+      ]
+     ],
+     "code": [
+      "from pypdf import PdfReader",
+      "reader = PdfReader(\"warranty.pdf\")",
+      "pages = [p.extract_text() for p in reader.pages]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{t}\\n\"",
+      "              for i, t in enumerate(pages))",
+      "rules = (\"Answer only from the document. \"",
+      "         \"Say the page. If it isn't there, \"",
+      "         \"say: Not in the document.\")",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "Our test, ten questions. [1] No PDF: zero. First search: one. <pause 0.5> [2] All five pages: nine right, seven with the right page.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "Our test, 10 questions. No PDF: 0. First search: 1. <pause 0.5> All 5 pages: 9 right, 7 with the right page.",
+     "tempo": 1.04,
+     "tts": "Our test, ten questions. No PDF: zero. First search: one.",
+     "file2": "08b_storyteller.wav",
+     "tts2": "All five pages: nine right, seven with the right page.",
+     "pause": 0.5
+    },
+    {
+     "who": "storyteller",
+     "file": "09_storyteller.wav",
+     "text": "One said not in the document, but page four had it. [1] So open the page it gives, every time.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "One said not in the document, but page four had it. So open the page it gives, every time.",
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_rag52",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.4,
+   "boost": 1.9,
+   "lift": 0.7,
+   "rise": 1.9,
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q1": "How long is the warranty on the motor of my MG-750 mixer grinder?",
+     "firstReply": "Not in the document. (page 1)",
+     "fixedReply": "The motor is covered for 5 years from the date of purchase. (page 3)",
+     "q3": "My MG-750 mixer stopped after I ran it for 10 minutes without a break. Is that covered by the warranty?",
+     "pages": [
+      [
+       "MG-750 Mixer Grinder",
+       "User Guide and Warranty Card",
+       "750 watt motor, three jars"
+      ],
+      [
+       "Using your mixer",
+       "Do not run it for more than 3 minutes at a time."
+      ],
+      [
+       "Warranty",
+       "The motor is covered for 5 years from the date of purchase.",
+       "Jars and blades: 1 year. Coupler: 6 months."
+      ],
+      [
+       "Not covered",
+       "Damage from running the mixer for more than 3 minutes at a time.",
+       "Motor rewinding Rs 1,450."
+      ],
+      [
+       "How to claim",
+       "A technician visits within 72 hours.",
+       "Register within 30 days: one more year."
+      ]
+     ],
+     "code": [
+      "from pypdf import PdfReader",
+      "reader = PdfReader(\"warranty.pdf\")",
+      "pages = [p.extract_text() for p in reader.pages]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{t}\\n\"",
+      "              for i, t in enumerate(pages))",
+      "rules = (\"Answer only from the document. \"",
+      "         \"Say the page. If it isn't there, \"",
+      "         \"say: Not in the document.\")",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Part 2 next",
+     "title": "Part 2 next",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "10_storyteller.wav",
+     "text": "A three-hundred-page manual is too big to send with every question: that's Part 2. [1] And the motor question now? Five years, page three.",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "show": "A 300-page manual is too big to send with every question: that's Part 2. And the motor question now? 5 years, page 3.",
+     "tempo": 1.04
+    }
+   ]
+  }
+ ]
+}

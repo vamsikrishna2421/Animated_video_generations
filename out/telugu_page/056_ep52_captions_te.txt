@@ -1,0 +1,28 @@
+UPLOAD: 056 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/056_ep52_insta_te.mp4  (a screen tutorial, Telugu voice on our TTS, English on-screen text; send copy: telugu_page/056_ep52_insta_te_ig.mp4). It loops: "ఇప్పుడు మోటార్ ప్రశ్న? ఐదేళ్ళు, మూడో పేజీ." taruvaata frame 1 (modati bot: "Not in the document. (page 1)").
+
+=== CAPTION ===
+"Naa mixie motor ki warranty enni samvatsaraalu?" Maa modati PDF bot: "Not in the document. (page 1)". Ade PDF lo page 3: motor ki 5 years warranty. Bot ni nammite, warranty unna repair ki ₹1,450 kadataam.
+
+AI From Scratch Episode 52: mee PDFs meeda RAG build cheyyadam, Part 1 (Season 6, screen tutorial)
+1. PDF ni page page ga chadavandi (Python lo 3 lines, pypdf).
+2. Chinna PDF aite vetakoddu: prati page ni "--- page N ---" ani number tho pampandi. Maa modati try "best page" kosam vetiki, 10 lo 9 saarlu cover page ne teesukundi. 5 pages: prati prashnaki daadaapu 450 tokens.
+3. Rules: document lo unnade cheppaali, page number cheppaali, lekapote "Not in the document" ani cheppaali.
+
+Maa test, maa sontha 5-page warranty card (oka made-up mixie), 10 prashnalu, prati javaabu chadivaam (maa computer lo oka chinna free model tho chinna test):
+- PDF lekunda: 10 lo 0
+- modati search (cover chadivindi): 10 lo 1
+- 5 pages number tho: 10 lo 9; 7 lo page kooda correct, 1 lo wrong page
+Miss: "10 nimishaalu aapakunda tippaanu, covered aa?" ante "Not in the document" andi; page 4 lo covered kaadu ani undi. Anduke adi cheppina page prati saari terichi choodandi; "ledu" ante PDF meere choodandi.
+
+Next: Part 2, 300 pages manual (prati prashnaki mottam pampalem).
+Follow @ai_maastaaru_telugu.
+
+=== COMMENT PROMPT ===
+Try cheyyandi: mee warranty card leda bill lo 2-3 pages ni AI chat lo paste cheyyandi, prati daaniki "page 1", "page 2"... ani label petti, "answer only from this, say the page" ani oka prashna adagandi. Correct page cheppinda? PAGE leda NO PAGE ani comment cheyyandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #RAG #ChatWithPDF #LearnAI
+
+=== PINNED_COMMENT ===
+Code (Python, pypdf): reader = PdfReader("warranty.pdf"); pages = [p.extract_text() for p in reader.pages]; doc = prati page ki "--- page N ---" marker; rules = "Answer only from the document. Say the page. If it isn't there, say: Not in the document."; messages lo system = rules, user = doc + question (pages modata, prashna taruvaata). Test (Nov 13, 2026): made-up "MG-750" mixie warranty card (5 pages), Qwen2.5-7B-Instruct (4-bit), llama.cpp server, temperature 0.2, 10 prashnalu, prati javaabu chadivaam. Modati search 10 lo 9 saarlu cover; 5 pages pampite 9/10, 7 lo correct page, q8 page 3 annadi (asalu page 4), q3 miss. Source: Anthropic prompting guide ("Place your long documents and inputs near the top of your prompt, above your query").

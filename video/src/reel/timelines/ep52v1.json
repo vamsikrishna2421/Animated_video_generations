@@ -1,0 +1,1380 @@
+{
+ "id": "ep52v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Build RAG over your PDFs, Part 1",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "title": "5 Years or ₹1,450? Build RAG Over Your PDFs, Part 1 (EP52)",
+ "handle": "@ai_maastaaru",
+ "label": "EP52",
+ "fps": 30,
+ "musicDrops": [
+  [
+   344,
+   377
+  ],
+  [
+   1468,
+   1507
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   614,
+   1.0
+  ],
+  [
+   614,
+   1309,
+   1.2
+  ],
+  [
+   1309,
+   1841,
+   1.4
+  ],
+  [
+   1841,
+   2144,
+   1.9
+  ],
+  [
+   1841,
+   2144,
+   1.9,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 2144,
+ "music": "reel/ep52v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_rag52",
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "cover",
+      "n": 2
+     },
+     {
+      "prop": "title",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q1": "How long is the warranty on the motor of my MG-750 mixer grinder?",
+     "firstReply": "Not in the document. (page 1)",
+     "fixedReply": "The motor is covered for 5 years from the date of purchase. (page 3)",
+     "q3": "My MG-750 mixer stopped after I ran it for 10 minutes without a break. Is that covered by the warranty?",
+     "pages": [
+      [
+       "MG-750 Mixer Grinder",
+       "User Guide and Warranty Card",
+       "750 watt motor, three jars"
+      ],
+      [
+       "Using your mixer",
+       "Do not run it for more than 3 minutes at a time."
+      ],
+      [
+       "Warranty",
+       "The motor is covered for 5 years from the date of purchase.",
+       "Jars and blades: 1 year. Coupler: 6 months."
+      ],
+      [
+       "Not covered",
+       "Damage from running the mixer for more than 3 minutes at a time.",
+       "Motor rewinding Rs 1,450."
+      ],
+      [
+       "How to claim",
+       "A technician visits within 72 hours.",
+       "Register within 30 days: one more year."
+      ]
+     ],
+     "code": [
+      "from pypdf import PdfReader",
+      "reader = PdfReader(\"warranty.pdf\")",
+      "pages = [p.extract_text() for p in reader.pages]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{t}\\n\"",
+      "              for i, t in enumerate(pages))",
+      "rules = (\"Answer only from the document. \"",
+      "         \"Say the page. If it isn't there, \"",
+      "         \"say: Not in the document.\")",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Not in the document?",
+     "title": "Not in the document?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 614,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep52v1/line_01.wav",
+     "from": 10,
+     "frames": 276,
+     "words": [
+      {
+       "w": "5",
+       "from": 14,
+       "to": 18
+      },
+      {
+       "w": "years",
+       "from": 18,
+       "to": 29
+      },
+      {
+       "w": "of",
+       "from": 29,
+       "to": 34
+      },
+      {
+       "w": "warranty,",
+       "from": 34,
+       "to": 62
+      },
+      {
+       "w": "or",
+       "from": 62,
+       "to": 73
+      },
+      {
+       "w": "₹1,450?",
+       "from": 73,
+       "to": 88
+      },
+      {
+       "w": "We",
+       "from": 88,
+       "to": 93
+      },
+      {
+       "w": "asked",
+       "from": 93,
+       "to": 105
+      },
+      {
+       "w": "our",
+       "from": 105,
+       "to": 112
+      },
+      {
+       "w": "first",
+       "from": 112,
+       "to": 141
+      },
+      {
+       "w": "PDF",
+       "from": 141,
+       "to": 149
+      },
+      {
+       "w": "bot",
+       "from": 149,
+       "to": 160
+      },
+      {
+       "w": "about",
+       "from": 160,
+       "to": 171
+      },
+      {
+       "w": "a",
+       "from": 171,
+       "to": 179
+      },
+      {
+       "w": "mixer's",
+       "from": 179,
+       "to": 194
+      },
+      {
+       "w": "motor.",
+       "from": 194,
+       "to": 207
+      },
+      {
+       "w": "It",
+       "from": 207,
+       "to": 212
+      },
+      {
+       "w": "said:",
+       "from": 212,
+       "to": 232
+      },
+      {
+       "w": "not",
+       "from": 232,
+       "to": 240
+      },
+      {
+       "w": "in",
+       "from": 240,
+       "to": 254
+      },
+      {
+       "w": "the",
+       "from": 254,
+       "to": 262
+      },
+      {
+       "w": "document.",
+       "from": 262,
+       "to": 280
+      }
+     ],
+     "cues": {
+      "1": 137
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep52v1/line_02.wav",
+     "from": 297,
+     "frames": 138,
+     "words": [
+      {
+       "w": "Page",
+       "from": 298,
+       "to": 305
+      },
+      {
+       "w": "three",
+       "from": 305,
+       "to": 314
+      },
+      {
+       "w": "says:",
+       "from": 314,
+       "to": 323
+      },
+      {
+       "w": "covered",
+       "from": 323,
+       "to": 344
+      },
+      {
+       "w": "for",
+       "from": 344,
+       "to": 350
+      },
+      {
+       "w": "five",
+       "from": 350,
+       "to": 357
+      },
+      {
+       "w": "years.",
+       "from": 357,
+       "to": 368
+      },
+      {
+       "w": "The",
+       "from": 368,
+       "to": 385
+      },
+      {
+       "w": "bot",
+       "from": 385,
+       "to": 391
+      },
+      {
+       "w": "had",
+       "from": 391,
+       "to": 397
+      },
+      {
+       "w": "read",
+       "from": 397,
+       "to": 404
+      },
+      {
+       "w": "the",
+       "from": 404,
+       "to": 410
+      },
+      {
+       "w": "cover",
+       "from": 410,
+       "to": 419
+      },
+      {
+       "w": "page.",
+       "from": 419,
+       "to": 427
+      }
+     ],
+     "cues": {
+      "1": 368
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep52v1/line_03.wav",
+     "from": 445,
+     "frames": 154,
+     "words": [
+      {
+       "w": "Let's",
+       "from": 445,
+       "to": 457
+      },
+      {
+       "w": "build",
+       "from": 457,
+       "to": 465
+      },
+      {
+       "w": "it",
+       "from": 465,
+       "to": 470
+      },
+      {
+       "w": "right:",
+       "from": 470,
+       "to": 492
+      },
+      {
+       "w": "a",
+       "from": 492,
+       "to": 495
+      },
+      {
+       "w": "bot",
+       "from": 495,
+       "to": 504
+      },
+      {
+       "w": "that",
+       "from": 504,
+       "to": 511
+      },
+      {
+       "w": "answers",
+       "from": 511,
+       "to": 522
+      },
+      {
+       "w": "from",
+       "from": 522,
+       "to": 529
+      },
+      {
+       "w": "your",
+       "from": 529,
+       "to": 535
+      },
+      {
+       "w": "own",
+       "from": 535,
+       "to": 541
+      },
+      {
+       "w": "PDF,",
+       "from": 541,
+       "to": 548
+      },
+      {
+       "w": "and",
+       "from": 548,
+       "to": 567
+      },
+      {
+       "w": "shows",
+       "from": 567,
+       "to": 575
+      },
+      {
+       "w": "the",
+       "from": 575,
+       "to": 580
+      },
+      {
+       "w": "page.",
+       "from": 580,
+       "to": 589
+      }
+     ],
+     "cues": {
+      "1": 492
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_rag52",
+   "data": {
+    "beats": [
+     {
+      "prop": "step1",
+      "n": 4
+     },
+     {
+      "prop": "step2",
+      "n": 5
+     },
+     {
+      "prop": "step2b",
+      "n": 6
+     },
+     {
+      "prop": "step3",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q1": "How long is the warranty on the motor of my MG-750 mixer grinder?",
+     "firstReply": "Not in the document. (page 1)",
+     "fixedReply": "The motor is covered for 5 years from the date of purchase. (page 3)",
+     "q3": "My MG-750 mixer stopped after I ran it for 10 minutes without a break. Is that covered by the warranty?",
+     "pages": [
+      [
+       "MG-750 Mixer Grinder",
+       "User Guide and Warranty Card",
+       "750 watt motor, three jars"
+      ],
+      [
+       "Using your mixer",
+       "Do not run it for more than 3 minutes at a time."
+      ],
+      [
+       "Warranty",
+       "The motor is covered for 5 years from the date of purchase.",
+       "Jars and blades: 1 year. Coupler: 6 months."
+      ],
+      [
+       "Not covered",
+       "Damage from running the mixer for more than 3 minutes at a time.",
+       "Motor rewinding Rs 1,450."
+      ],
+      [
+       "How to claim",
+       "A technician visits within 72 hours.",
+       "Register within 30 days: one more year."
+      ]
+     ],
+     "code": [
+      "from pypdf import PdfReader",
+      "reader = PdfReader(\"warranty.pdf\")",
+      "pages = [p.extract_text() for p in reader.pages]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{t}\\n\"",
+      "              for i, t in enumerate(pages))",
+      "rules = (\"Answer only from the document. \"",
+      "         \"Say the page. If it isn't there, \"",
+      "         \"say: Not in the document.\")",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Build it: 3 steps",
+     "title": "Build it: 3 steps",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 614,
+   "frames": 695,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep52v1/line_04.wav",
+     "from": 0,
+     "frames": 145,
+     "words": [
+      {
+       "w": "Step",
+       "from": 4,
+       "to": 13
+      },
+      {
+       "w": "one:",
+       "from": 13,
+       "to": 31
+      },
+      {
+       "w": "read",
+       "from": 31,
+       "to": 40
+      },
+      {
+       "w": "the",
+       "from": 40,
+       "to": 48
+      },
+      {
+       "w": "PDF,",
+       "from": 48,
+       "to": 69
+      },
+      {
+       "w": "page",
+       "from": 69,
+       "to": 78
+      },
+      {
+       "w": "by",
+       "from": 78,
+       "to": 84
+      },
+      {
+       "w": "page.",
+       "from": 84,
+       "to": 95
+      },
+      {
+       "w": "Three",
+       "from": 95,
+       "to": 117
+      },
+      {
+       "w": "lines",
+       "from": 117,
+       "to": 128
+      },
+      {
+       "w": "of",
+       "from": 128,
+       "to": 134
+      },
+      {
+       "w": "code.",
+       "from": 134,
+       "to": 145
+      }
+     ],
+     "cues": {
+      "1": 95
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep52v1/line_05.wav",
+     "from": 154,
+     "frames": 138,
+     "words": [
+      {
+       "w": "Our",
+       "from": 155,
+       "to": 159
+      },
+      {
+       "w": "first",
+       "from": 159,
+       "to": 172
+      },
+      {
+       "w": "try",
+       "from": 172,
+       "to": 176
+      },
+      {
+       "w": "searched",
+       "from": 176,
+       "to": 193
+      },
+      {
+       "w": "for",
+       "from": 193,
+       "to": 197
+      },
+      {
+       "w": "the",
+       "from": 197,
+       "to": 208
+      },
+      {
+       "w": "best",
+       "from": 208,
+       "to": 214
+      },
+      {
+       "w": "page,",
+       "from": 214,
+       "to": 231
+      },
+      {
+       "w": "and",
+       "from": 231,
+       "to": 240
+      },
+      {
+       "w": "picked",
+       "from": 240,
+       "to": 248
+      },
+      {
+       "w": "the",
+       "from": 248,
+       "to": 253
+      },
+      {
+       "w": "cover",
+       "from": 253,
+       "to": 260
+      },
+      {
+       "w": "nine",
+       "from": 260,
+       "to": 266
+      },
+      {
+       "w": "times",
+       "from": 266,
+       "to": 273
+      },
+      {
+       "w": "out",
+       "from": 273,
+       "to": 277
+      },
+      {
+       "w": "of",
+       "from": 277,
+       "to": 281
+      },
+      {
+       "w": "ten.",
+       "from": 281,
+       "to": 287
+      }
+     ],
+     "cues": {
+      "1": 231
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep52v1/line_06.wav",
+     "from": 302,
+     "frames": 157,
+     "words": [
+      {
+       "w": "Step",
+       "from": 304,
+       "to": 312
+      },
+      {
+       "w": "two,",
+       "from": 312,
+       "to": 320
+      },
+      {
+       "w": "for",
+       "from": 320,
+       "to": 336
+      },
+      {
+       "w": "a",
+       "from": 336,
+       "to": 339
+      },
+      {
+       "w": "short",
+       "from": 339,
+       "to": 353
+      },
+      {
+       "w": "PDF:",
+       "from": 353,
+       "to": 361
+      },
+      {
+       "w": "don't",
+       "from": 361,
+       "to": 383
+      },
+      {
+       "w": "search.",
+       "from": 383,
+       "to": 411
+      },
+      {
+       "w": "Send",
+       "from": 411,
+       "to": 419
+      },
+      {
+       "w": "every",
+       "from": 419,
+       "to": 428
+      },
+      {
+       "w": "page,",
+       "from": 428,
+       "to": 443
+      },
+      {
+       "w": "numbered.",
+       "from": 443,
+       "to": 459
+      }
+     ],
+     "cues": {
+      "1": 411
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep52v1/line_07.wav",
+     "from": 468,
+     "frames": 207,
+     "words": [
+      {
+       "w": "Step",
+       "from": 469,
+       "to": 480
+      },
+      {
+       "w": "three:",
+       "from": 480,
+       "to": 500
+      },
+      {
+       "w": "give",
+       "from": 500,
+       "to": 507
+      },
+      {
+       "w": "it",
+       "from": 507,
+       "to": 511
+      },
+      {
+       "w": "the",
+       "from": 511,
+       "to": 517
+      },
+      {
+       "w": "rules.",
+       "from": 517,
+       "to": 538
+      },
+      {
+       "w": "Answer",
+       "from": 538,
+       "to": 548
+      },
+      {
+       "w": "only",
+       "from": 548,
+       "to": 555
+      },
+      {
+       "w": "from",
+       "from": 555,
+       "to": 562
+      },
+      {
+       "w": "the",
+       "from": 562,
+       "to": 568
+      },
+      {
+       "w": "document,",
+       "from": 568,
+       "to": 593
+      },
+      {
+       "w": "say",
+       "from": 593,
+       "to": 603
+      },
+      {
+       "w": "the",
+       "from": 603,
+       "to": 608
+      },
+      {
+       "w": "page,",
+       "from": 608,
+       "to": 626
+      },
+      {
+       "w": "and",
+       "from": 626,
+       "to": 632
+      },
+      {
+       "w": "if",
+       "from": 632,
+       "to": 636
+      },
+      {
+       "w": "it",
+       "from": 636,
+       "to": 640
+      },
+      {
+       "w": "isn't",
+       "from": 640,
+       "to": 649
+      },
+      {
+       "w": "there,",
+       "from": 649,
+       "to": 664
+      },
+      {
+       "w": "say",
+       "from": 664,
+       "to": 670
+      },
+      {
+       "w": "so.",
+       "from": 670,
+       "to": 675
+      }
+     ],
+     "cues": {
+      "1": 538
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_rag52",
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 8
+     },
+     {
+      "prop": "miss",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q1": "How long is the warranty on the motor of my MG-750 mixer grinder?",
+     "firstReply": "Not in the document. (page 1)",
+     "fixedReply": "The motor is covered for 5 years from the date of purchase. (page 3)",
+     "q3": "My MG-750 mixer stopped after I ran it for 10 minutes without a break. Is that covered by the warranty?",
+     "pages": [
+      [
+       "MG-750 Mixer Grinder",
+       "User Guide and Warranty Card",
+       "750 watt motor, three jars"
+      ],
+      [
+       "Using your mixer",
+       "Do not run it for more than 3 minutes at a time."
+      ],
+      [
+       "Warranty",
+       "The motor is covered for 5 years from the date of purchase.",
+       "Jars and blades: 1 year. Coupler: 6 months."
+      ],
+      [
+       "Not covered",
+       "Damage from running the mixer for more than 3 minutes at a time.",
+       "Motor rewinding Rs 1,450."
+      ],
+      [
+       "How to claim",
+       "A technician visits within 72 hours.",
+       "Register within 30 days: one more year."
+      ]
+     ],
+     "code": [
+      "from pypdf import PdfReader",
+      "reader = PdfReader(\"warranty.pdf\")",
+      "pages = [p.extract_text() for p in reader.pages]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{t}\\n\"",
+      "              for i, t in enumerate(pages))",
+      "rules = (\"Answer only from the document. \"",
+      "         \"Say the page. If it isn't there, \"",
+      "         \"say: Not in the document.\")",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1309,
+   "frames": 532,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep52v1/line_08.wav",
+     "from": 0,
+     "frames": 303,
+     "words": [
+      {
+       "w": "Our",
+       "from": 0,
+       "to": 7
+      },
+      {
+       "w": "test,",
+       "from": 7,
+       "to": 34
+      },
+      {
+       "w": "10",
+       "from": 34,
+       "to": 39
+      },
+      {
+       "w": "questions.",
+       "from": 39,
+       "to": 73
+      },
+      {
+       "w": "No",
+       "from": 73,
+       "to": 82
+      },
+      {
+       "w": "PDF:",
+       "from": 82,
+       "to": 97
+      },
+      {
+       "w": "0.",
+       "from": 97,
+       "to": 102
+      },
+      {
+       "w": "First",
+       "from": 102,
+       "to": 137
+      },
+      {
+       "w": "search:",
+       "from": 137,
+       "to": 162
+      },
+      {
+       "w": "1.",
+       "from": 162,
+       "to": 167
+      },
+      {
+       "w": "All",
+       "from": 183,
+       "to": 192
+      },
+      {
+       "w": "5",
+       "from": 192,
+       "to": 196
+      },
+      {
+       "w": "pages:",
+       "from": 196,
+       "to": 211
+      },
+      {
+       "w": "9",
+       "from": 211,
+       "to": 216
+      },
+      {
+       "w": "right,",
+       "from": 216,
+       "to": 242
+      },
+      {
+       "w": "7",
+       "from": 242,
+       "to": 246
+      },
+      {
+       "w": "with",
+       "from": 246,
+       "to": 268
+      },
+      {
+       "w": "the",
+       "from": 268,
+       "to": 277
+      },
+      {
+       "w": "right",
+       "from": 277,
+       "to": 290
+      },
+      {
+       "w": "page.",
+       "from": 290,
+       "to": 303
+      }
+     ],
+     "cues": {
+      "1": 70,
+      "2": 183
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep52v1/line_09.wav",
+     "from": 315,
+     "frames": 191,
+     "words": [
+      {
+       "w": "One",
+       "from": 315,
+       "to": 321
+      },
+      {
+       "w": "said",
+       "from": 321,
+       "to": 333
+      },
+      {
+       "w": "not",
+       "from": 333,
+       "to": 339
+      },
+      {
+       "w": "in",
+       "from": 339,
+       "to": 344
+      },
+      {
+       "w": "the",
+       "from": 344,
+       "to": 350
+      },
+      {
+       "w": "document,",
+       "from": 350,
+       "to": 365
+      },
+      {
+       "w": "but",
+       "from": 365,
+       "to": 385
+      },
+      {
+       "w": "page",
+       "from": 385,
+       "to": 398
+      },
+      {
+       "w": "four",
+       "from": 398,
+       "to": 406
+      },
+      {
+       "w": "had",
+       "from": 406,
+       "to": 412
+      },
+      {
+       "w": "it.",
+       "from": 412,
+       "to": 431
+      },
+      {
+       "w": "So",
+       "from": 431,
+       "to": 435
+      },
+      {
+       "w": "open",
+       "from": 435,
+       "to": 443
+      },
+      {
+       "w": "the",
+       "from": 443,
+       "to": 449
+      },
+      {
+       "w": "page",
+       "from": 449,
+       "to": 457
+      },
+      {
+       "w": "it",
+       "from": 457,
+       "to": 465
+      },
+      {
+       "w": "gives,",
+       "from": 465,
+       "to": 488
+      },
+      {
+       "w": "every",
+       "from": 488,
+       "to": 497
+      },
+      {
+       "w": "time.",
+       "from": 497,
+       "to": 506
+      }
+     ],
+     "cues": {
+      "1": 431
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_rag52",
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q1": "How long is the warranty on the motor of my MG-750 mixer grinder?",
+     "firstReply": "Not in the document. (page 1)",
+     "fixedReply": "The motor is covered for 5 years from the date of purchase. (page 3)",
+     "q3": "My MG-750 mixer stopped after I ran it for 10 minutes without a break. Is that covered by the warranty?",
+     "pages": [
+      [
+       "MG-750 Mixer Grinder",
+       "User Guide and Warranty Card",
+       "750 watt motor, three jars"
+      ],
+      [
+       "Using your mixer",
+       "Do not run it for more than 3 minutes at a time."
+      ],
+      [
+       "Warranty",
+       "The motor is covered for 5 years from the date of purchase.",
+       "Jars and blades: 1 year. Coupler: 6 months."
+      ],
+      [
+       "Not covered",
+       "Damage from running the mixer for more than 3 minutes at a time.",
+       "Motor rewinding Rs 1,450."
+      ],
+      [
+       "How to claim",
+       "A technician visits within 72 hours.",
+       "Register within 30 days: one more year."
+      ]
+     ],
+     "code": [
+      "from pypdf import PdfReader",
+      "reader = PdfReader(\"warranty.pdf\")",
+      "pages = [p.extract_text() for p in reader.pages]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{t}\\n\"",
+      "              for i, t in enumerate(pages))",
+      "rules = (\"Answer only from the document. \"",
+      "         \"Say the page. If it isn't there, \"",
+      "         \"say: Not in the document.\")",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Part 2 next",
+     "title": "Part 2 next",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1841,
+   "frames": 303,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep52v1/line_10.wav",
+     "from": 12,
+     "frames": 256,
+     "words": [
+      {
+       "w": "A",
+       "from": 12,
+       "to": 15
+      },
+      {
+       "w": "300-page",
+       "from": 15,
+       "to": 30
+      },
+      {
+       "w": "manual",
+       "from": 30,
+       "to": 41
+      },
+      {
+       "w": "is",
+       "from": 41,
+       "to": 46
+      },
+      {
+       "w": "too",
+       "from": 46,
+       "to": 52
+      },
+      {
+       "w": "big",
+       "from": 52,
+       "to": 58
+      },
+      {
+       "w": "to",
+       "from": 58,
+       "to": 63
+      },
+      {
+       "w": "send",
+       "from": 63,
+       "to": 71
+      },
+      {
+       "w": "with",
+       "from": 71,
+       "to": 79
+      },
+      {
+       "w": "every",
+       "from": 79,
+       "to": 89
+      },
+      {
+       "w": "question:",
+       "from": 89,
+       "to": 109
+      },
+      {
+       "w": "that's",
+       "from": 109,
+       "to": 134
+      },
+      {
+       "w": "Part",
+       "from": 134,
+       "to": 151
+      },
+      {
+       "w": "2.",
+       "from": 151,
+       "to": 167
+      },
+      {
+       "w": "And",
+       "from": 167,
+       "to": 173
+      },
+      {
+       "w": "the",
+       "from": 173,
+       "to": 180
+      },
+      {
+       "w": "motor",
+       "from": 180,
+       "to": 193
+      },
+      {
+       "w": "question",
+       "from": 193,
+       "to": 219
+      },
+      {
+       "w": "now?",
+       "from": 219,
+       "to": 227
+      },
+      {
+       "w": "5",
+       "from": 227,
+       "to": 230
+      },
+      {
+       "w": "years,",
+       "from": 230,
+       "to": 251
+      },
+      {
+       "w": "page",
+       "from": 251,
+       "to": 259
+      },
+      {
+       "w": "3.",
+       "from": 259,
+       "to": 267
+      }
+     ],
+     "cues": {
+      "1": 155
+     }
+    }
+   ]
+  }
+ ]
+}
