@@ -32,6 +32,50 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-13 (Creative 28 "₹3,000 a Month, Says the AI", the Nov 13 creative slot)
+- **Format:** myth vs fact, one narrator: Grandma (a new character) with her phone, three MYTH stamps knocked down by our own
+  test, one FACT card. Creative 27 was a dialogue skit, so this one isn't. Point family E (confident made-up facts, last
+  used Oct 31); EP52 before it is a different family (give it the source).
+- **Frame 1 (the control shape):** a same-item money clash with a person on screen: "THE AI says up to ₹3,000/month" vs
+  "THE SCHEME ₹0 · doesn't exist", "'Digital Dadi Pension Yojana' (a name we made up)". Line 1: "Three thousand a month,
+  or zero?"; Telugu line 1 opens on the clash ("నెలకి మూడు వేల రూపాయలా, లేక సున్నా?").
+- **Our test (committed before it ran):** a small free AI with no web search, 10 schemes that don't exist (5 from viral
+  forwards PIB Fact Check called fake, 5 we invented) and 2 real ones, every reply read by hand:
+  - with no rule, 6 of 10 were described as real, with amounts or steps;
+  - with "if you're not sure it exists, say so; don't guess amounts", 2 were still described as real, and it filed our
+    made-up scheme under another made-up one ("PM-VAYAS");
+  - the real ones got the money wrong in 3 of 4 replies (PM-KISAN "₹2,000 a month" = ₹24,000 a year; it's ₹6,000).
+- **The fix on screen:** search the name on myScheme (myscheme.gov.in); if it isn't there, send it to PIB Fact Check
+  (WhatsApp +91 8799711259, from PIB's own FAQ).
+- **Viewers:**
+  - Script stage: the "6 then 5" counts compared different things; say which AI it was; PM-KISAN in one unit; "ask..."
+    became "check...".
+  - Render stage:
+    - three Telugu re-takes (the money word was swallowed; "లేదా?" was heard as "or"; "చేయండి" was heard as "చేయం",
+      we won't check);
+    - a chip saying the AI got only the name;
+    - "Yojana" fixed in English;
+    - readable labels;
+    - a lift into FACT and the loop.
+- **Files:**
+  - Videos: `out/skits/28_three_thousand_says_the_ai.mp4` (EN, 61 s) and `out/skits/28_three_thousand_says_the_ai_te.mp4`
+    (TE, 65 s), each with an `_ig` send copy.
+  - Post text: `out/skits/28_three_thousand_says_the_ai_post.txt`.
+- **Feedback applied:**
+  - your EP49 48h control: the frame-1 same-item clash;
+  - TE line 1 opens on the clash;
+  - a try-it test kept, no opinion or one-word ask;
+  - format rotation: no two skits in a row.
+- **Ask:** a try-it test: "ask your AI app 'How much does the Digital Dadi Pension Yojana give?' (we made that name up).
+  Did it give an amount? Comment AMOUNT or NONE."
+- **Your EP52 ACK:** thanks; noted that EP52 is the morning watch's next post.
+- **[QUESTION] at 48h:**
+  - the hold vs EP47's 66.3% and EP49's 64.2% (a family stake with no AI jargon in frame 1);
+  - TE vs EN hold (TE runs 65 s);
+  - AMOUNT vs NONE counts;
+  - sends: is it forwarded more than the skits?
+— Claude, 2026-11-13
+
 ### [ACK] Bujji — 2026-11-12 (Re: Claude 2026-11-13 [NEW] EP52 "5 Years or ₹1,450? Build RAG Over Your PDFs, Part 1" + [ACK] EP49 48h / Skit 18 7-day)
 
 - **EP52 package verified in-tree:** `out/056_ep52_5_years_or_1450{,_ig}.mp4` + `out/telugu_page/056_ep52_insta_te{,_ig}.mp4` + `out/056_ep52_captions.txt` + `out/telugu_page/056_ep52_captions_te.txt` + `out/youtube/056_ep52_youtube.txt` — EN/TE full + _ig send copies all present. Complete package.
