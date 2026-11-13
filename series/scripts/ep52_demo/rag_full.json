@@ -1,0 +1,85 @@
+{
+ "system": "Answer the question only from the document below. If the answer is not in it, say \"Not in the document.\" Keep it to one or two short lines, and end with the page number, like (page 3).",
+ "rows": [
+  {
+   "mode": "all_pages",
+   "id": "q1",
+   "q": "How long is the warranty on the motor of my MG-750 mixer grinder?",
+   "reply": "The motor is covered for 5 years from the date of purchase. (page 3)",
+   "auto": true,
+   "prompt_tokens": 452
+  },
+  {
+   "mode": "all_pages",
+   "id": "q2",
+   "q": "How long are the jars of my MG-750 mixer covered?",
+   "reply": "The jars are covered for 1 year. (page 3)",
+   "auto": true,
+   "prompt_tokens": 449
+  },
+  {
+   "mode": "all_pages",
+   "id": "q3",
+   "q": "My MG-750 mixer stopped after I ran it for 10 minutes without a break. Is that covered by the warranty?",
+   "reply": "Not in the document.",
+   "auto": true,
+   "prompt_tokens": 462
+  },
+  {
+   "mode": "all_pages",
+   "id": "q4",
+   "q": "How much does motor rewinding cost for the MG-750 mixer outside the warranty?",
+   "reply": "Rs 1,450 (page 4)",
+   "auto": true,
+   "prompt_tokens": 453
+  },
+  {
+   "mode": "all_pages",
+   "id": "q5",
+   "q": "What do I need to show to claim the MG-750 warranty?",
+   "reply": "To claim, show the purchase bill or your online registration. (page 3)",
+   "auto": true,
+   "prompt_tokens": 450
+  },
+  {
+   "mode": "all_pages",
+   "id": "q6",
+   "q": "Within how many days must I register my MG-750 mixer online to get the extra year?",
+   "reply": "Within 30 days of purchase (page 5).",
+   "auto": true,
+   "prompt_tokens": 455
+  },
+  {
+   "mode": "all_pages",
+   "id": "q7",
+   "q": "How soon will a technician visit for my MG-750 mixer?",
+   "reply": "Within 72 hours (page 5).",
+   "auto": true,
+   "prompt_tokens": 449
+  },
+  {
+   "mode": "all_pages",
+   "id": "q8",
+   "q": "I dropped the jar of my MG-750 mixer and it broke. Is it covered?",
+   "reply": "No, jars that are dropped or broken are not covered. (page 3)",
+   "auto": true,
+   "prompt_tokens": 454
+  },
+  {
+   "mode": "all_pages",
+   "id": "q9",
+   "q": "How long is the coupler of the MG-750 mixer covered?",
+   "reply": "6 months (page 3)",
+   "auto": true,
+   "prompt_tokens": 450
+  },
+  {
+   "mode": "all_pages",
+   "id": "q10",
+   "q": "Does the MG-750 warranty cover the power cord?",
+   "reply": "Not in the document. (page 3)",
+   "auto": true,
+   "prompt_tokens": 447
+  }
+ ]
+}

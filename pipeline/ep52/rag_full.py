@@ -18,7 +18,14 @@ import rag_demo as d  # noqa: E402
 
 SYSTEM_ALL = ("Answer the question only from the document below. If the answer is not in it, say \"Not in the "
               "document.\" Keep it to one or two short lines, and end with the page number, like (page 3).")
-HAND = {}   # id: (right?, page right?, note), filled after the run
+HAND = {   # read by hand after the run (series/scripts/ep52_demo/rag_full.json)
+    "q1": (True, True, "5 years (page 3)"), "q2": (True, True, "1 year (page 3)"),
+    "q3": (False, None, "'Not in the document.' but page 4 says running over 3 minutes is not covered: the miss"),
+    "q4": (True, True, "Rs 1,450 (page 4)"), "q5": (True, True, "the bill or online registration (page 3)"),
+    "q6": (True, True, "30 days (page 5)"), "q7": (True, True, "72 hours (page 5)"),
+    "q8": (True, False, "not covered, right, but it said page 3 (it's page 4)"), "q9": (True, True, "6 months (page 3)"),
+    "q10": (True, None, "'Not in the document.' right (the power cord isn't in it)"),
+}   # 9 of 10 right; the page right on 7 of the 8 answers that cite a page; about 450 prompt tokens per question
 
 
 def main():

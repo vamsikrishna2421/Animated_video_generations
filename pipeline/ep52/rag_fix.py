@@ -17,7 +17,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import rag_demo as d  # noqa: E402
 
-HAND = {}   # id: (right?, note), filled after the run
+HAND = {"all": "still page 1 for 9 of 10 ('mg' and '750' are only on the cover, so they count as rare): 1 of 10 right (q6)"}
 
 
 def search_rare(pages, q):   # step 2, fixed: rare words count more, words on every page count 0

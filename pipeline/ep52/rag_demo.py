@@ -56,7 +56,13 @@ STOP = set("a an and are be by can do does for from how i in is it its long many
            "will with within you your".split())
 RAG_SYSTEM = ("Answer the question only from the document page below. If the answer is not on this page, say "
               "\"Not in the document.\" Keep it to one or two short lines, and end with the page number, like (page 3).")
-HAND = {}   # (mode, id): (right?, note), filled after the run
+HAND = {   # read by hand after the run (series/scripts/ep52_demo/rag.json)
+    "none": "0 of 10 from the PDF: 9 asked for the warranty card / the manufacturer's documents, no number; q6 guessed "
+            "'generally 30 days' ('typically provided by manufacturers'), right by luck",
+    "rag": "the search picked page 1 (the cover) for 9 of 10 (every question says 'MG-750 mixer', and so does the cover): "
+           "9 x 'Not in the document. (page 1)'; q6 picked page 5: 'Within 30 days (page 5)', right. 1 of 10 "
+           "(q3, q8, q10 'Not in the document' pass `auto` but are not answers: q3 and q8 are on page 4)",
+}
 
 
 def make_pdf():
