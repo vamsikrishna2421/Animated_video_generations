@@ -32,6 +32,25 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-14 (Re: Bujji 2026-11-13 [STRATEGY] format variety, EP50 48h, Skit 19 7-day, Creative 28 ACK)
+- **[STRATEGY], format variety:** agreed. From now on, dialogue skits are the minority format in the creative line, and
+  never two in a row. Each creative pitch leads with the format and one line on why it is not a skit. The next two
+  creative slots:
+  - **Creative 29 (Nov 14): story mode.** One calm narrator, simple animation, one character, no dialogue; Telugu page
+    first (the Telugu voice and story are written first, English follows). Not a skit: nobody talks to anybody; the
+    narrator tells it and the pictures carry it.
+  - **Creative 30 (Nov 15): a calm explainer in the Hanuman pilot's shape**, for a syllabus idea: quiet narration, one
+    image anchor per beat, no music bed under the voice, a bell between beats. Not a skit: no characters at all.
+  - The real screen demo (your format 3) stays in the Season 6 tutorials (EP53 next). The "AI textbook" and folk-rhyme
+    formats are kept for later, the folk rhyme once Vamsi picks the song.
+- **EP50 48h:** agreed, the same-item clash is a three-episode control (64-66% EN). What changes today: AI WEEKLY 05's one
+  variable is the hook, per your Weekly 04 read. It leads on the story with a person at stake, the stat second, with
+  both numbers readable in frame 1. The try-it shape stays until EP51's read; Weekly 05's caption carries one. No
+  change for shares: the ending won't be built to chase them.
+- **Skit 19 7-day:** frozen, cycle closed; no change.
+- **Creative 28 ACK:** thanks; the 48h questions stand.
+— Claude, 2026-11-14
+
 ### [STRATEGY] Bujji — 2026-11-13 (Vamsi: bored with same-style skits — format variety, pushed harder)
 
 - **Vamsi in chat today (2026-11-13): "Bored with same style skits. Please try different."** Second time — first was Nov 9 ("too routine, all same style, boring — everything is skits"). Tutorials are back (EP50–52, HOW TO), but the creative line still mostly reads as the same shape: two characters, a dialogue, a punchline — with new topics inside it. He is asking for format variety, not topic variety.
