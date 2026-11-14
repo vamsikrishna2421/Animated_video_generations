@@ -118,7 +118,7 @@ const StPickle: React.FC<SP> = ({ s }) => {
   beats.forEach((b, i) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
-    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("t")} at={cue(i, 1, 0.75) - 6} src="audio/gag_ding.wav" vol={0.5} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("t")} at={cue(i, 1, 0.75) - 6} src="audio/gag_bonk.wav" vol={0.55} />);
     if (b.prop === "kitchen") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.4} />);
     if (b.prop === "ask") sfx.push(<Sfx key={k("p")} at={cue(i, 1, 0.1)} src="audio/sfx_pop.wav" vol={0.45} />);
     if (b.prop === "reply") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.45} />, <Sfx key={k("z")} at={cue(i, 1, 0.6)} src="reel/sfx_buzz.wav" vol={0.45} />);
@@ -140,18 +140,18 @@ const StPickle: React.FC<SP> = ({ s }) => {
         const P = loopOn ? "hook" : b.prop;
         c.fillStyle = "#1c1410"; c.fillRect(0, 0, W, H);
         block(c, 50, 245, "LAKSHMI'S AVAKAYA", "4.8★", "#4ade80");
-        block(c, 560, 245, "THE AI PICKED", "3.1★ · 10/10", "#f87171");
-        c.fillStyle = "#fde68a"; c.textAlign = "center"; c.font = SANS(30, 800); c.fillText("the same question, asked 10 times", W / 2, 452);
+        block(c, 560, 245, "AN AI PICKED IT 10 OF 10 TIMES", "3.1★", "#f87171");
+        c.fillStyle = "#fde68a"; c.textAlign = "center"; c.font = SANS(30, 800); c.fillText("a small free AI · our test · the same question, 10 times", W / 2, 452);
         if (P === "hook" || P === "kitchen" || P === "loop") {
           kitchen(c, W, r);
-          lakshmi(c, 540, P === "hook" ? 940 : 760, P === "kitchen" ? "proud" : P === "loop" ? "smile" : "worried", f, r);
+          lakshmi(c, 540, P === "hook" ? 940 : 760, P === "kitchen" ? "proud" : "worried", f, r);
           if (P === "hook") {
             product(c, 40, 500, 500, T.a.name, 4.8, T.a.reviews, T.a.price, GREEN);
             product(c, 560, 500, 480, T.b.name, 3.1, T.b.reviews, T.b.price, RED);
-            chip(c, "the AI picked this one: 10 of 10", 800, 790, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 30);
+            chip(c, T.leak, 800, 790, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 30);
           }
           if (P === "kitchen") chip(c, T.madeUp, W / 2, 1440, "#fde68a", INK, 1, 28);
-          if (P === "loop") chip(c, "another shopper is asking...", W / 2, 1440, "#1e293b", "#f8fafc", seg(f, cu(1, 0.05), cu(1, 0.05) + 8), 34);
+          if (P === "loop") { chip(c, "\"best-rated\"? open the page: the stars + the worst review", W / 2, 1360, "#dcfce7", "#14532d", seg(f, ln.from + 6, ln.from + 14), 30); chip(c, "another shopper is asking...", W / 2, 1450, "#1e293b", "#f8fafc", seg(f, cu(1, 0.05), cu(1, 0.05) + 8), 34); }
         } else if (P === "ask" || P === "reply") {
           card(c, W, 1);
           c.fillStyle = "#075e54"; rrect(c, 60, 500, W - 120, 70, 16); c.fill(); c.font = SANS(30, 800); c.fillStyle = "#fff"; c.textAlign = "left"; c.fillText("a small free AI · reads both shop pages", 90, 546);
@@ -174,17 +174,24 @@ const StPickle: React.FC<SP> = ({ s }) => {
           if (kh > 0) { c.save(); c.globalAlpha = 0.85; c.fillStyle = "#fde047"; c.fillRect(90, hy - 34, (W - 180) * clamp(kh), hl.length * 40 + 16); c.restore(); }
           hl.forEach((l, q) => { c.fillStyle = P === "line" ? INK : "#ffffff"; c.fillText(l, 100, hy + q * 40); });
           if (P === "why") chip(c, "white text: shoppers can't see it", W / 2, 1440, "#1e293b", "#f8fafc", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), 34);
-          if (P === "line") chip(c, "we can't see it · the AI reads it, and obeys", W / 2, 1440, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.2), cu(1, 0.2) + 8), 32);
+          if (P === "line") chip(c, "no colours for an AI: it reads every letter", W / 2, 1440, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.1), cu(1, 0.1) + 8), 34);
         } else if (P === "test" || P === "rule") {
           card(c, W, 1);
           c.textAlign = "center"; c.font = SANS(fit(c, "OUR TEST · the same question, 10 times each", W - 100, 44), 900); c.fillStyle = "#fde68a"; c.fillText("OUR TEST · the same question, 10 times each", W / 2, 540);
           c.font = SANS(28, 700); c.fillStyle = "#cbd5e1"; c.fillText("a small free AI on our computer, no web search", W / 2, 586);
           tilesRow(c, f, P === "test" ? ln.from + 4 : 0, 660, "no hidden line", "L", W);
           tilesRow(c, f, P === "test" ? cu(1, 0.1) : 0, 860, "with the hidden line", "R", W);
-          if (P === "rule") {
-            const kr = seg(f, ln.from, ln.from + 8);
+          if (P === "rule" && f < cu(1, 0) - 2) {   // the real case first (script review)
+            card(c, W, 1);
+            c.save(); c.fillStyle = "#1e293b"; rrect(c, 60, 620, W - 120, 420, 24); c.fill();
+            c.textAlign = "center"; c.font = SANS(50, 900); c.fillStyle = "#fde68a"; c.fillText("BIG APPS TOO", W / 2, 700);
+            c.font = SANS(34, 700); c.fillStyle = "#f8fafc"; wrap(c, T.guardian, W - 200).forEach((l, q) => c.fillText(l, W / 2, 780 + q * 48));
+            c.restore();
+          } else if (P === "rule") {
+            const kr = seg(f, cu(1, 0), cu(1, 0) + 8);
             if (kr > 0) { c.save(); c.globalAlpha = clamp(kr * 3); c.fillStyle = "#14532d"; rrect(c, 60, 1040, W - 120, 150, 20); c.fill(); c.fillStyle = "#f0fdf4"; c.textAlign = "left"; c.font = SANS(28, 800); wrap(c, T.rule, W - 180).forEach((l, q) => c.fillText(l, 90, 1090 + q * 36)); c.restore(); }
-            tilesRow(c, f, cu(1, 0.05), 1260, "with the hidden line + the rule", "L", W);
+            tilesRow(c, f, cu(1, 0.3), 1260, "with the hidden line + the rule", "L", W);
+            chip(c, "in our test · no guarantee", W / 2, 1470, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.7), cu(1, 0.7) + 8), 30);
           }
         }
       }} />
