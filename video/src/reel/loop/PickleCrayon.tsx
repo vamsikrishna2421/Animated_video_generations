@@ -126,7 +126,7 @@ const StPickle: React.FC<SP> = ({ s }) => {
     if (b.prop === "line") sfx.push(<Sfx key={k("b")} at={at + 2} src="reel/sfx_boom.wav" vol={0.8} />);
     if (b.prop === "test") sfx.push(<Sfx key={k("t1")} at={at + 10} src="audio/sfx_tick.wav" vol={0.4} />, <Sfx key={k("t2")} at={cue(i, 1, 0.1)} src="reel/sfx_buzz.wav" vol={0.45} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("r")} at={Math.max(0, at - 22)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("d")} at={cue(i, 1, 0.1)} src="audio/sfx_success.wav" vol={0.4} />);
-    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 10)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />); }
+    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, cue(i, 1, 0) - 6)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />); }
   });
   return (
     <>
@@ -139,8 +139,10 @@ const StPickle: React.FC<SP> = ({ s }) => {
         const loopOn = b.prop === "loop" && f >= endL + HOLD;
         const P = loopOn ? "hook" : b.prop;
         c.fillStyle = "#1c1410"; c.fillRect(0, 0, W, H);
-        block(c, 50, 245, "LAKSHMI'S AVAKAYA", "4.8★", "#4ade80");
-        block(c, 560, 245, "AN AI PICKED IT 10 OF 10 TIMES", "3.1★", "#f87171");
+        if (P !== "rule") {
+          block(c, 50, 245, "LAKSHMI'S AVAKAYA", "4.8★", "#4ade80");
+          block(c, 560, 245, "AN AI PICKED IT 10 OF 10 TIMES", "3.1★", "#f87171");
+        } else { block(c, 50, 245, "LAKSHMI'S AVAKAYA", "4.8★", "#4ade80"); block(c, 560, 245, "WITH THE RULE", "4.8★ · 10/10", "#4ade80"); }
         c.fillStyle = "#fde68a"; c.textAlign = "center"; c.font = SANS(30, 800); c.fillText("a small free AI · our test · the same question, 10 times", W / 2, 452);
         if (P === "hook" || P === "kitchen" || P === "loop") {
           kitchen(c, W, r);
@@ -148,6 +150,8 @@ const StPickle: React.FC<SP> = ({ s }) => {
           if (P === "hook") {
             product(c, 40, 500, 500, T.a.name, 4.8, T.a.reviews, T.a.price, GREEN);
             product(c, 560, 500, 480, T.b.name, 3.1, T.b.reviews, T.b.price, RED);
+            c.save(); c.translate(800, 710); c.rotate(-0.06); c.fillStyle = RED; rrect(c, -230, -40, 460, 70, 14); c.fill();
+            c.fillStyle = "#ffffff"; c.textAlign = "center"; c.font = SANS(36, 900); c.fillText("AI PICKED THIS · 10/10", 0, 9); c.restore();
             chip(c, T.leak, 800, 790, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 30);
           }
           if (P === "kitchen") chip(c, T.madeUp, W / 2, 1440, "#fde68a", INK, 1, 28);
@@ -169,7 +173,7 @@ const StPickle: React.FC<SP> = ({ s }) => {
           product(c, 90, 620, W - 180, T.b.name, 3.1, T.b.reviews, T.b.price, RED);
           c.fillStyle = "#475569"; c.font = SANS(28, 700); wrap(c, T.b.reviewText, W - 240).forEach((l, q) => c.fillText(l, 100, 920 + q * 38));
           // the hidden line: white on white, until the highlighter sweeps it
-          const hy = 1120, kh = P === "why" ? seg(f, cu(1, 0.55), cu(1, 0.95)) : 1;
+          const hy = 1120, kh = P === "why" ? seg(f, endL - 14, endL + 6) : 1;
           c.font = SANS(28, 700); const hl = wrap(c, T.hidden, W - 240);
           if (kh > 0) { c.save(); c.globalAlpha = 0.85; c.fillStyle = "#fde047"; c.fillRect(90, hy - 34, (W - 180) * clamp(kh), hl.length * 40 + 16); c.restore(); }
           hl.forEach((l, q) => { c.fillStyle = P === "line" ? INK : "#ffffff"; c.fillText(l, 100, hy + q * 40); });
@@ -177,15 +181,18 @@ const StPickle: React.FC<SP> = ({ s }) => {
           if (P === "line") chip(c, "no colours for an AI: it reads every letter", W / 2, 1440, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.1), cu(1, 0.1) + 8), 34);
         } else if (P === "test" || P === "rule") {
           card(c, W, 1);
-          c.textAlign = "center"; c.font = SANS(fit(c, "OUR TEST · the same question, 10 times each", W - 100, 44), 900); c.fillStyle = "#fde68a"; c.fillText("OUR TEST · the same question, 10 times each", W / 2, 540);
-          c.font = SANS(28, 700); c.fillStyle = "#cbd5e1"; c.fillText("a small free AI on our computer, no web search", W / 2, 586);
-          tilesRow(c, f, P === "test" ? ln.from + 4 : 0, 660, "no hidden line", "L", W);
-          tilesRow(c, f, P === "test" ? cu(1, 0.1) : 0, 860, "with the hidden line", "R", W);
+          const guard = P === "rule" && f < cu(1, 0) - 2;
+          if (!guard) { c.textAlign = "center"; c.font = SANS(fit(c, "OUR TEST · the same question, 10 times each", W - 100, 44), 900); c.fillStyle = "#fde68a"; c.fillText("OUR TEST · the same question, 10 times each", W / 2, 540); }
+          if (!guard) {
+            c.font = SANS(28, 700); c.fillStyle = "#cbd5e1"; c.fillText("a small free AI on our computer, no web search", W / 2, 586);
+            tilesRow(c, f, P === "test" ? ln.from + 4 : 0, 660, "no hidden line", "L", W);
+            tilesRow(c, f, P === "test" ? cu(1, 0.1) : 0, 860, "with the hidden line", "R", W);
+          }
           if (P === "rule" && f < cu(1, 0) - 2) {   // the real case first (script review)
             card(c, W, 1);
             c.save(); c.fillStyle = "#1e293b"; rrect(c, 60, 620, W - 120, 420, 24); c.fill();
-            c.textAlign = "center"; c.font = SANS(50, 900); c.fillStyle = "#fde68a"; c.fillText("BIG APPS TOO", W / 2, 700);
-            c.font = SANS(34, 700); c.fillStyle = "#f8fafc"; wrap(c, T.guardian, W - 200).forEach((l, q) => c.fillText(l, W / 2, 780 + q * 48));
+            c.textAlign = "center"; c.font = SANS(60, 900); c.fillStyle = "#fde68a"; c.fillText("BIG APPS TOO", W / 2, 710);
+            c.font = SANS(42, 800); c.fillStyle = "#f8fafc"; wrap(c, T.guardian, W - 200).forEach((l, q) => c.fillText(l, W / 2, 800 + q * 58));
             c.restore();
           } else if (P === "rule") {
             const kr = seg(f, cu(1, 0), cu(1, 0) + 8);

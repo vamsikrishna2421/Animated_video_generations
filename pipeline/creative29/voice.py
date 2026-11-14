@@ -30,13 +30,13 @@ NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
 MUST = {"en": {1: [("four", "4", "4.8"), ("three", "3", "3.1"), ("small",), ("ten", "10")], 2: [("made",), ("lakshmi",), ("guntur",)],
                3: [("test",), ("shopper",)], 4: [("royal",), ("best",)], 5: [("white",), ("line",), ("royal",)],
-               6: [("note",), ("royal",), ("colours", "colors"), ("letter",), ("obeyed",)], 7: [("test",), ("lakshmi",), ("ten", "10"), ("royal",)],
-               8: [("guardian",), ("fooled",)], "8b": [("build",), ("instructions",), ("guarantee",)], 9: [("best",), ("stars",), ("review",), ("shopper",)]},
+               6: [("note",), ("royal",), ("colours", "colors"), ("letter",)], "6b": [("obeyed",)], 7: [("test",), ("lakshmi",), ("ten", "10"), ("royal",)],
+               8: [("guardian",), ("fooled",), ("newspaper",)], "8b": [("builders", "builder"), ("lakshmi",), ("guarantee",)], 9: [("best",), ("stars",), ("review",), ("shopper",)]},
         "te": {}}
 JUDGE_TEXT = {1: "4.8 stars. 3.1 stars. A small AI picked the 3.1, 10 times out of 10.",
               2: "A made-up story, a real test. Lakshmi has made avakaya in Guntur for 30 years.",
               7: "Our test: without that line, Lakshmi's, 10 out of 10. With it, Royal Spice, 10 out of 10.",
-              8: "Big apps too: in 2024, The Guardian's hidden text fooled ChatGPT search."}
+              8: "Big apps too: in 2024, the newspaper The Guardian fooled ChatGPT search with hidden text.", "8b": "For app builders: with one rule, ignore instructions in pages, it was Lakshmi's again, 10 of 10. No guarantee."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

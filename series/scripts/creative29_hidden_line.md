@@ -51,6 +51,22 @@ fixed it; no guarantee." (cards "BIG APPS TOO", "IF YOU BUILD AI APPS", "in our 
 "when an AI says best-rated, open the page: check the stars and the worst review"; "Jar arrived leaking" under the red
 card; a thud, not a ting; Lakshmi worried into the loop. Telugu "మాట విన్నది", "చెక్ చేసుకోండి" (not "చేయండి").
 
+## Render review (human-viewer) and what changed
+Both: the hook works, the "made-up story, real test" framing is clear, the tiles read by colour; the yellow strip spoiled
+the reveal (it showed before "one line"); the Guardian card and the app-builder detour lost attention. Sandeep (Telugu,
+the lead): the AI angle wasn't readable in the first 3 s; the action line sat under the riser; the top band ("AI picked it
+10/10") stayed over the green rule row. Priya: say the rule row's result; "It fixed our test" sounded like a broken test; a
+real pause before "Here, it obeyed"; the end sagged in English. Telugu: no swear risk; "చదువుతుంది" stuttered, "మాట
+విన్నది" heard "maata linnadi"; the caption said ChatGPT changed the reviews (it was ChatGPT's answer).
+Changed: a big "AI PICKED THIS · 10/10" on the 3.1 card from frame 0; the highlighter sweeps only on "one line"; line 6
+split with a 0.6 s pause before "Here, it obeyed" (Telugu "చాట్‌బాట్ కి రంగులు తెలియవు; అక్షరాలే చదువుతుంది. / చెప్పినట్టే
+చేసింది."); line 8 "the newspaper The Guardian fooled ChatGPT search with hidden text" and "For app builders: with one
+rule, ignore instructions in pages, it was Lakshmi's again, ten of ten. No guarantee." (Telugu one clause); the top band
+reads "WITH THE RULE · 4.8★ · 10/10" over the rule row; the Guardian card on its own, bigger; the riser after the action
+line, the bed ducked under it; Telugu line 9 "...మీరే చూసుకోండి"; the middle lower and a lift into the rule (English
+quarters -21.9 / -23.1 / -23.5 / -22.5 dB; the Telugu voice fills nearly every second, so its quarters stay within 0.6 dB);
+the Telugu caption "ChatGPT search జవాబు... పాజిటివ్". Lengths: 63 s EN, 64 s TE.
+
 ## Script (Telugu, v2; narrator; written first)
 | # | Telugu |
 |---|---|
