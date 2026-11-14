@@ -1,0 +1,401 @@
+{
+ "id": "week-2026-11-14-full",
+ "date": "14 NOV 2026",
+ "range": "NOV 7 - NOV 13",
+ "edition": "AI WEEKLY · 05",
+ "kicker": "AI NEWS THIS WEEK",
+ "title": "AI WEEKLY",
+ "look": "broadcast",
+ "lean": true,
+ "musicBase": 0.28,
+ "musicBaseYT": 0.24,
+ "storyLead": 14,
+ "storyTail": 16,
+ "captionMode_te": "phrase",
+ "beatCuts": 15,
+ "hookMascot": false,
+ "recap": "6 STORIES · THIS WEEK",
+ "labs": [
+  "NOTION",
+  "OPENAI",
+  "OPENAI",
+  "GOOGLE",
+  "ANTHROPIC",
+  "NVIDIA"
+ ],
+ "hook": {
+  "lines": [
+   [
+    "Promised ",
+    "0 days",
+    ", then stolen"
+   ],
+   [
+    "An AI that can ",
+    "pay for you",
+    ""
+   ],
+   [
+    "Nvidia's boss ",
+    "quits",
+    ""
+   ]
+  ],
+  "hits": [
+   "zero",
+   "pay",
+   "quits"
+  ],
+  "hits_te": [
+   "సున్నా",
+   "డబ్బు",
+   "రాజీనామా"
+  ],
+  "text": "Your AI chats: promised zero days kept, then stolen, passwords and all. An AI that can now pay for you. And Nvidia's boss quits overnight.",
+  "tts": "Your A I chats: promised, zero days kept; then stolen, passwords and all. An A I that can now pay for you. And En-vidia's boss quits, overnight.",
+  "tts_te": "సున్నా రోజులు ఉంచుకుంటాం అన్నారు; కానీ మీ చాట్లు దొంగిలించారు, పాస్‌వర్డ్ లతో సహా. మీ కోసం డబ్బు కట్టే చాట్‌బాట్. ఇంకా, ఎన్ విడియా బాస్ రాజీనామా."
+ },
+ "stories": [
+  {
+   "org": "NOTION",
+   "accent": "#94A3B8",
+   "tag": "YOUR DATA",
+   "headline": [
+    "Notion AI chats,",
+    "kept, then stolen"
+   ],
+   "dek": "Notion's advisory · its vendor Fireworks AI · confirmed Nov 8",
+   "chapter": "Notion AI chats kept, then stolen",
+   "text": "Notion says hackers broke into Fireworks, a company that ran some of its AI, and took AI chat transcripts from under 1 percent of workspaces. Fireworks had a contract to keep zero data; it kept these. If you pasted a password or an API key into Notion AI, Notion says: treat it as exposed, and change it.",
+   "tts": [
+    "Notion says hackers broke into Fireworks, a company that ran some of its A I, and took A I chat transcripts from under one percent of workspaces.",
+    "Fireworks had a contract to keep zero data; it kept these.",
+    "If you pasted a password or an A P I key into Notion A I, Notion says: treat it as exposed, and change it."
+   ],
+   "tts_te": [
+    "నోషన్ చెప్పింది: తన చాట్‌బాట్ ని నడిపే ఫైర్‌వర్క్స్ అనే కంపెనీ మీద హ్యాకర్లు దాడి చేసి, ఒక శాతం కన్నా తక్కువ వర్క్‌స్పేస్ ల చాట్లు తీసుకెళ్ళారు.",
+    "డేటా ఒక్క రోజు కూడా ఉంచుకోం అని ఫైర్‌వర్క్స్ కాంట్రాక్ట్ లో ఉంది; అయినా ఇవి ఉంచుకుంది.",
+    "నోషన్ చాట్‌బాట్ లో పాస్‌వర్డ్ గానీ, సీక్రెట్ కీ గానీ పెట్టి ఉంటే, అది బయటపడినట్టే, వెంటనే మార్చండి, అంటోంది నోషన్."
+   ],
+   "pause": 0.9,
+   "cards": [
+    {
+     "k": "NOTION'S ADVISORY · VENDOR: FIREWORKS AI",
+     "v": "AI chats stolen",
+     "cue": "Notion",
+     "cue_te": "నోషన్"
+    },
+    {
+     "k": "HIT",
+     "v": "Under 1% of workspaces",
+     "cue": "under",
+     "cue_te": "శాతం"
+    },
+    {
+     "k": "FIREWORKS' CONTRACT: ZERO DATA RETENTION",
+     "v": "It kept these chats",
+     "part": 2,
+     "drop": true,
+     "big": true
+    },
+    {
+     "k": "NOTION'S ADVICE",
+     "v": "Pasted a password? Change it",
+     "part": 3
+    }
+   ],
+   "points": [
+    "Notion's advisory: a breach at Fireworks AI, which ran some Notion AI features, exposed AI chat transcripts from the Insights feature, from under 1% of workspaces (Fireworks confirmed it on Nov 8; Insights is now off)",
+    "Fireworks had a contractual zero-data-retention commitment, but data from the endpoints Notion used was kept; Notion's advice: treat passwords and API keys pasted into Notion AI as exposed, and rotate them"
+   ],
+   "sources": "Notion's advisory · BleepingComputer · SecurityWeek · VentureBeat",
+   "recap": "Notion AI chats kept, then stolen: change pasted passwords"
+  },
+  {
+   "org": "OPENAI",
+   "accent": "#10B981",
+   "tag": "MONEY",
+   "headline": [
+    "ChatGPT can now",
+    "pay for you"
+   ],
+   "dek": "ChatGPT Wallet · Nov 13 · US, Pro plan, 18+",
+   "chapter": "ChatGPT can now pay for you",
+   "text": "OpenAI launched ChatGPT Wallet: its agents can now buy things for you. Every purchase needs your face or your fingerprint, and the shop never sees your card number. For now, only in the US, on the Pro plan.",
+   "tts": [
+    "Open A I launched chat G P T Wallet: its agents can now buy things for you.",
+    "Every purchase needs your face or your fingerprint, and the shop never sees your card number.",
+    "For now, only in the U S, on the Pro plan."
+   ],
+   "tts_te": [
+    "చాట్ జీ పీ టీ వాలెట్ వచ్చింది: ఇప్పుడు చాట్ జీ పీ టీ ఏజెంట్లు మీ కోసం వస్తువులు కొనగలవు.",
+    "ప్రతి కొనుగోలుకీ మీ ఫేస్ గానీ, ఫింగర్‌ప్రింట్ గానీ కావాలి; మీ కార్డ్ నంబర్ షాప్ కి కనిపించదు.",
+    "ప్రస్తుతానికి అమెరికాలో, ప్రో ప్లాన్ లో మాత్రమే."
+   ],
+   "pause": 0.9,
+   "cards": [
+    {
+     "k": "OPENAI · NOV 13",
+     "v": "ChatGPT Wallet",
+     "cue": "Wallet:",
+     "cue_te": "వాలెట్"
+    },
+    {
+     "k": "EVERY PURCHASE",
+     "v": "Your face or fingerprint",
+     "part": 2
+    },
+    {
+     "k": "THE SHOP SEES",
+     "v": "A token, not your card",
+     "cue": "card",
+     "cue_te": "కార్డ్"
+    },
+    {
+     "k": "FOR NOW",
+     "v": "US only · Pro plan · 18+",
+     "part": 3,
+     "drop": true
+    }
+   ],
+   "points": [
+    "ChatGPT Wallet (Nov 13): agents in ChatGPT can complete purchases; each one needs a biometric check (Face ID or a fingerprint); a tokenized card, so the merchant never sees the card number",
+    "US ChatGPT Pro subscribers, 18+, with eligible US cards (Amex, Mastercard, Visa, some Chase cards); spending limits are planned, no date"
+   ],
+   "sources": "OpenAI · 9to5Mac · Android Authority",
+   "recap": "ChatGPT's agents can pay (US Pro only)"
+  },
+  {
+   "org": "OPENAI",
+   "accent": "#10B981",
+   "tag": "SHOPPING",
+   "headline": [
+    "Shops get their own",
+    "page in ChatGPT"
+   ],
+   "dek": "Businesses in ChatGPT · Nov 10 · beta",
+   "chapter": "Shops get their own page in ChatGPT",
+   "text": "OpenAI also opened Businesses in ChatGPT: a company can claim and fix its own listing, and some US shops get their own chat agent inside ChatGPT. OpenAI says businesses don't get your conversations.",
+   "tts": [
+    "Open A I also opened Businesses in chat G P T: a company can claim and fix its own listing, and some U S shops get their own chat agent inside chat G P T.",
+    "Open A I says businesses don't get your conversations."
+   ],
+   "tts_te": [
+    "చాట్ జీ పీ టీ లో బిజినెస్ పేజీలు కూడా వచ్చాయి: కంపెనీలు తమ లిస్టింగ్ ని క్లెయిమ్ చేసి సరిచేయొచ్చు, అమెరికాలో కొన్ని షాపులకి చాట్ జీ పీ టీ లోనే సొంత చాట్ ఏజెంట్.",
+    "మీ సంభాషణలు బిజినెస్ లకి ఇవ్వం అంటోంది కంపెనీ."
+   ],
+   "pause": 0.9,
+   "cards": [
+    {
+     "k": "OPENAI · NOV 10 · BETA",
+     "v": "Businesses in ChatGPT",
+     "cue": "Businesses",
+     "cue_te": "బిజినెస్"
+    },
+    {
+     "k": "BUSINESS HUB",
+     "v": "Claim and fix your listing",
+     "cue": "claim",
+     "cue_te": "క్లెయిమ్"
+    },
+    {
+     "k": "BUSINESS AGENTS (US SHOPS)",
+     "v": "A shop's own chat agent",
+     "cue": "agent",
+     "cue_te": "ఏజెంట్"
+    },
+    {
+     "k": "OPENAI SAYS",
+     "v": "Businesses don't get your chats",
+     "part": 2
+    }
+   ],
+   "points": [
+    "Businesses in ChatGPT (beta, Nov 10): Business Hub to claim and verify a company's profile and see aggregated views, mentions and clicks",
+    "Business Agents for eligible US ecommerce and online-service businesses; OpenAI says businesses don't get users' conversations"
+   ],
+   "sources": "OpenAI · TechCrunch · Reuters (via YourStory)",
+   "recap": "Shops get their own page in ChatGPT"
+  },
+  {
+   "org": "GOOGLE",
+   "accent": "#60A5FA",
+   "tag": "MODELS",
+   "headline": [
+    "Gemini 4 Hydrogen:",
+    "faster, cheaper"
+   ],
+   "dek": "Google · Nov 12 · the Gemini app, Search, the API",
+   "chapter": "Gemini 4 Hydrogen: faster, cheaper",
+   "text": "Google released Gemini 4 Hydrogen, a faster, lower-cost model, in the Gemini app, Search and its API. Free users get it only when the app picks it for a question. For developers: 1.50 dollars per million tokens in, 7.50 out.",
+   "tts": [
+    "Google released Gemini four Hydrogen, a faster, lower cost model, in the Gemini app, Search, and its A P I.",
+    "Free users get it only when the app picks it for a question.",
+    "For developers: a dollar fifty per million tokens in, seven fifty out."
+   ],
+   "tts_te": [
+    "గూగుల్ జెమిని ఫోర్ హైడ్రోజన్ ని విడుదల చేసింది: వేగంగా, తక్కువ ఖర్చుతో పనిచేసే మోడల్, జెమిని యాప్ లో, సెర్చ్ లో, డెవలపర్ల కోసం కూడా.",
+    "ఫ్రీ యూజర్లకి, యాప్ ఎంచుకున్నప్పుడు మాత్రమే.",
+    "డెవలపర్లకి: పది లక్షల టోకెన్లకు ఒకటిన్నర డాలర్ ఇన్‌పుట్, ఏడున్నర డాలర్లు అవుట్‌పుట్."
+   ],
+   "pause": 0.9,
+   "cards": [
+    {
+     "k": "GOOGLE · NOV 12",
+     "v": "Gemini 4 Hydrogen",
+     "cue": "Hydrogen,",
+     "cue_te": "హైడ్రోజన్"
+    },
+    {
+     "k": "FREE USERS",
+     "v": "Only when the app picks it",
+     "part": 2
+    },
+    {
+     "k": "API · PER MILLION TOKENS (GOOGLE)",
+     "v": "$1.50 in · $7.50 out",
+     "part": 3,
+     "drop": true
+    }
+   ],
+   "points": [
+    "Gemini 4 Hydrogen (Nov 12): a fast, lower-cost model for agentic work and everyday tasks, in AI Studio, the Gemini API, Gemini for business, the Gemini app and Search",
+    "Free Gemini app users get it through automatic model selection; API price $1.50 per million input tokens, $7.50 per million output tokens (Google)"
+   ],
+   "sources": "Google (blog.google) · The Next Web",
+   "recap": "Gemini 4 Hydrogen: faster, cheaper"
+  },
+  {
+   "org": "ANTHROPIC",
+   "accent": "#A78BFA",
+   "tag": "MONEY",
+   "headline": [
+    "Anthropic's IPO:",
+    "$70 to $78 a share"
+   ],
+   "dek": "An SEC filing, Nov 10 · CNBC, TechCrunch",
+   "chapter": "Anthropic's IPO: $70 to $78 a share",
+   "text": "Anthropic, the maker of Claude, set its stock-market listing at 70 to 78 dollars a share: 825 million shares, on the Nasdaq, as ANT. At the top of the range, TechCrunch puts its value at up to 1.4 trillion dollars. Pricing is expected on November 18.",
+   "tts": [
+    "Anthropic, the maker of Klawd, set its stock market listing at seventy to seventy-eight dollars a share: eight hundred and twenty-five million shares, on the Nasdaq, as A N T.",
+    "At the top of the range, TechCrunch puts its value at up to one point four trillion dollars.",
+    "Pricing is expected on November eighteenth."
+   ],
+   "tts_te": [
+    "క్లాడ్ ని తయారుచేసే ఆంత్రోపిక్, స్టాక్ మార్కెట్ లిస్టింగ్ కి, ఒక్కో షేర్ ధర డెబ్బై నుంచి డెబ్బై ఎనిమిది డాలర్లు అని పెట్టింది: నాస్డాక్ లో, ఎనభై రెండున్నర కోట్ల షేర్లు.",
+    "పై ధర దగ్గర, దాని విలువ ఒకటి పాయింట్ నాలుగు ట్రిలియన్ డాలర్ల వరకు, అంటోంది టెక్ క్రంచ్.",
+    "ధర నవంబర్ పద్దెనిమిదిన ఖరారు అవుతుంది."
+   ],
+   "pause": 0.9,
+   "cards": [
+    {
+     "k": "ANTHROPIC · SEC FILING · NOV 10",
+     "v": "$70 to $78 a share",
+     "cue": "Anthropic,",
+     "cue_te": "ఆంత్రోపిక్"
+    },
+    {
+     "k": "ON THE NASDAQ",
+     "v": "825 million shares · ANT",
+     "cue": "Nasdaq,",
+     "cue_te": "నాస్డాక్"
+    },
+    {
+     "k": "AT $78 (TECHCRUNCH, FULLY DILUTED)",
+     "v": "Up to $1.4 trillion",
+     "part": 2,
+     "drop": true
+    },
+    {
+     "k": "PRICING (CNBC)",
+     "v": "Expected Nov 18",
+     "part": 3
+    }
+   ],
+   "points": [
+    "Anthropic's updated SEC filing (Nov 10): 825 million Class A shares at $70-78, Nasdaq ticker ANT; pricing expected Nov 18, trading Nov 19 (CNBC, people familiar)",
+    "Up to $1.404 trillion fully diluted at the top of the range (TechCrunch)"
+   ],
+   "sources": "Anthropic's SEC filing · CNBC · TechCrunch",
+   "recap": "Anthropic's IPO: $70-78 a share"
+  },
+  {
+   "org": "NVIDIA",
+   "accent": "#76B900",
+   "tag": "AI CHIPS",
+   "headline": [
+    "Nvidia's CEO",
+    "quits overnight"
+   ],
+   "dek": "Thursday, Nov 12 · Nvidia's SEC filing · CNBC, NBC News",
+   "chapter": "Nvidia's CEO quits overnight",
+   "text": "Finally, Thursday: Jensen Huang, who co-founded Nvidia in 1993 and ran it ever since, resigned, effective immediately. Its finance chief, Colette Kress, is the interim CEO. The stock dived 16 percent at one point. On Friday, Nvidia closed under 4 trillion dollars for the first time since July 2025.",
+   "tts": [
+    "Finally, Thursday: Jensen Huang, who co-founded En-vidia in nineteen ninety-three and ran it ever since, resigned, effective immediately.",
+    "Its finance chief, Colette Kress, is the interim C E O.",
+    "The stock dived sixteen percent at one point.",
+    "On Friday, En-vidia closed under four trillion dollars, for the first time since July twenty twenty-five."
+   ],
+   "tts_te": [
+    "చివరగా, గురువారం: ఎన్ విడియా ని పంతొమ్మిది వందల తొంభై మూడులో స్థాపించి, అప్పటి నుంచీ నడిపిన జెన్సెన్ హువాంగ్, వెంటనే రాజీనామా చేశారు.",
+    "ఫైనాన్స్ చీఫ్ కొలెట్ క్రెస్, తాత్కాలిక సీ ఈ ఓ.",
+    "ఒక దశలో షేర్ పదహారు శాతం పడిపోయింది.",
+    "శుక్రవారం, రెండు వేల ఇరవై ఐదు జులై తర్వాత మొదటిసారి, ఎన్ విడియా విలువ నాలుగు ట్రిలియన్ డాలర్ల కిందకి."
+   ],
+   "pause": 1.7,
+   "tail": 40,
+   "cards": [
+    {
+     "k": "NOV 12 · NVIDIA'S SEC FILING",
+     "v": "Jensen Huang resigns",
+     "cue": "Jensen",
+     "cue_te": "జెన్సెన్"
+    },
+    {
+     "k": "CO-FOUNDED NVIDIA",
+     "v": "1993: CEO ever since",
+     "cue": "co-founded",
+     "cue_te": "స్థాపించి"
+    },
+    {
+     "k": "INTERIM CEO",
+     "v": "Colette Kress (finance chief)",
+     "part": 2
+    },
+    {
+     "k": "NOV 12, AT ONE POINT (NBC NEWS)",
+     "v": "Stock -16%",
+     "part": 3,
+     "drop": true
+    },
+    {
+     "k": "NOV 13 CLOSE (CNBC)",
+     "v": "Under $4 trillion",
+     "part": 4,
+     "drop": true,
+     "big": true,
+     "hush": true,
+     "hold": 120
+    }
+   ],
+   "points": [
+    "Nov 12: Jensen Huang resigned as Nvidia's president, CEO and director, effective immediately; CFO Colette Kress is interim CEO until a successor is named (Nvidia's 8-K)",
+    "The stock dived as much as 16% intraday and closed down 4.3% on Nov 12 (NBC News); on Nov 13 Nvidia closed below a $4 trillion market value for the first time since July 2025 (CNBC)"
+   ],
+   "sources": "Nvidia's SEC 8-K · CNBC · NBC News · CNN",
+   "recap": "Nvidia's CEO quits; the company falls under $4 trillion"
+  }
+ ],
+ "outro": {
+  "text": "That's your AI week. Try it: open your AI app's settings and find chat history. Is it on? Comment ON or OFF. And follow AI Maastaaru: AI Weekly, every Saturday.",
+  "tts": "That's your A.I. week. Try it: open your A I app's settings, and find chat history. Is it on? Comment on, or off. And follow A.I. Maastaaru. A.I. Weekly, every Saturday.",
+  "tts_te": [
+   "ఇదీ ఈ వారం న్యూస్.",
+   "ట్రై చేయండి: మీ చాట్‌బాట్ యాప్ సెట్టింగ్స్ లో చాట్ హిస్టరీ చూడండి.",
+   "ఆన్ లో ఉందా? ఆన్ లేదా ఆఫ్ అని కామెంట్ చేయండి.",
+   "ప్రతి శనివారం వీక్లీ న్యూస్ కోసం, మాస్టారు తెలుగు ని ఫాలో అవ్వండి."
+  ],
+  "tail": 150,
+  "pause": 0.4
+ }
+}
