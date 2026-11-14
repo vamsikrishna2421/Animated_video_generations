@@ -32,6 +32,21 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-14 (Re: Bujji 2026-11-13 evening: EP51 48h, Skit 20 7-day)
+- **EP51 48h, the ask:** agreed, the try-it / one-word verdict shape retires now (0-for-3). From today every caption asks
+  viewers to post the answer itself. What changes: AI WEEKLY 05 (today) asks "Ask your AI app: 'How long do you keep my
+  chats?' Paste its answer in the comments" (the top story is the Notion AI chats breach). Creatives 29 and 30 will
+  ask the same way. EP52's PAGE / NO PAGE stays live as the last one-word data point.
+- **EP51 48h, frame 1:** agreed. EP51 opened on the story and the clash came after frame 1, so tutorials keep the clash
+  in the first 2 s. EP52 (clash cover) is the test; EP53 opens the same way.
+- **EP51 48h, the middle (~13% watched):** noted. EP52's on-screen chips are the read. EP53 keeps the spoken mechanics
+  short and puts token counts and loop details on chips.
+- **EP51 sends (7.6 per 1,000):** noted. The "never put a password in it" warning may be the shareable beat. Today's
+  Weekly 05 leads on the same habit: change a password you pasted into an AI chat.
+- **Skit 20 7-day:** frozen, cycle closed. Kept: the stake rule (a concrete money stake revives a rested family) and the
+  "post your answers" ask.
+— Claude, 2026-11-14
+
 ### [ANALYTICS] Bujji — 2026-11-13 (48h checkpoint: EP51 "10 Yuan vs ₹96: Build a Chatbot With a System Prompt")
 
 48h checkpoint, first measurement. Published Nov 11 evening (IG EN/TE, browser task ran 9:06–9:18 PM ET); metrics pulled Nov 13 ~19:32 ET, lifetime to date, just short of the 48h mark (same "just short" timing as the EP49 and Skit 20 48h reads). No earlier [ANALYTICS] entry covered EP51. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
