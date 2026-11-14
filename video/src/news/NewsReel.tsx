@@ -17,7 +17,7 @@ type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
   org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string; hits?: number[]; lineAt?: number[]; recap?: string; clash?: { k: string; v: string; c?: string }[]; clashJoin?: string; ask?: string[];
 };
-export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; lean?: boolean; music?: string; lock?: boolean; labs?: string[]; musicBase?: number; musicBaseYT?: number; captionMode?: "phrase"; hookMascot?: boolean };
+export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; lean?: boolean; music?: string; lock?: boolean; labs?: string[]; musicBase?: number; musicBaseYT?: number; captionMode?: "phrase"; hookMascot?: boolean; outroLift?: number };
 const A =(f: string) => staticFile(`brand/audio/brand_${f}.wav`);
 const FOLLOW_LEN = 140;
 // English captions over a Telugu voice show whole phrases (word order differs); English voice keeps karaoke.
@@ -602,9 +602,10 @@ export const NewsReel: React.FC<{ tl: NewsTimeline; handle: string }> = ({ tl, h
         if (fr >= Math.max(followAbs, voiceEnd)) return Math.max(0.8, base * 3.3); // music-only end card: the loudest point of the bed
         if (fr < starts[1]) return base * 1.6;
         const lastStory = starts[starts.length - 2];
-        if (fr >= outroStart) return base * interpolate(fr, [outroStart, followAbs], [1.15, 1.4], cl); // CTA voice: the bed rises into the follow card
+        const L = tl.outroLift ?? 1;   // AI WEEKLY 05 render review: a stronger lift through the last story into the ask
+        if (fr >= outroStart) return base * interpolate(fr, [outroStart, followAbs], [1.15 * L, 1.4 * L], cl); // CTA voice: the bed rises into the follow card
         // the bed sits lower through the middle stories and climbs through the last story into the CTA
-        const v = fr >= lastStory ? base * interpolate(fr, [lastStory, outroStart], [0.9, 1.15], cl) : base * interpolate(fr, [starts[1], lastStory], [0.8, 0.9], cl);
+        const v = fr >= lastStory ? base * interpolate(fr, [lastStory, outroStart], [0.9, 1.15 * L], cl) : base * interpolate(fr, [starts[1], lastStory], [0.8, 0.9], cl);
         const swell = starts.slice(1, -1).reduce((g, s) => Math.max(g, interpolate(fr, [s - 16, s - 2, s + 10], [1, 2, 1], cl)), 1);
         const hushQ = quiets.reduce((g, q) => g * interpolate(fr, [q.f - 14, q.f, q.f + q.h, q.f + q.h + 24], [1, 0.2, 0.2, 1], cl), 1);
         return hushQ * v * swell * drops.reduce((g, d) => g * (d.hush ? interpolate(fr, [d.f - 36, d.f - 28, d.f - 2, d.f + 4], [1, 0.15, 0.15, 1], cl) : interpolate(fr, [d.f - 16, d.f - 7, d.f - 1, d.f + 5], [1, 0.25, 0.25, 1], cl)), 1);

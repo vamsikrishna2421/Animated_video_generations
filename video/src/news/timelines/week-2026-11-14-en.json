@@ -16,164 +16,180 @@
  "musicBase": 0.28,
  "musicBaseYT": 0.24,
  "hookMascot": false,
+ "outroLift": 1.45,
  "lang": "en",
  "segments": [
   {
    "name": "hook",
    "audio": "news/week-2026-11-14/en/hook.wav",
    "lead": 4,
-   "frames": 375,
+   "frames": 420,
    "words": [
     {
-     "w": "Promised:",
-     "s": 11,
-     "e": 36
+     "w": "Notion's",
+     "s": 10,
+     "e": 24
     },
     {
      "w": "AI",
-     "s": 36,
-     "e": 40
+     "s": 24,
+     "e": 28
+    },
+    {
+     "w": "vendor",
+     "s": 28,
+     "e": 39
+    },
+    {
+     "w": "promised",
+     "s": 39,
+     "e": 53
+    },
+    {
+     "w": "to",
+     "s": 53,
+     "e": 57
+    },
+    {
+     "w": "keep",
+     "s": 57,
+     "e": 65
     },
     {
      "w": "chats",
-     "s": 40,
-     "e": 49
-    },
-    {
-     "w": "kept",
-     "s": 49,
-     "e": 60
+     "s": 65,
+     "e": 77
     },
     {
      "w": "zero",
-     "s": 60,
-     "e": 68
+     "s": 77,
+     "e": 85
     },
     {
      "w": "days.",
-     "s": 68,
-     "e": 103
+     "s": 85,
+     "e": 94
     },
     {
      "w": "Then",
-     "s": 103,
-     "e": 110
+     "s": 94,
+     "e": 127
     },
     {
-     "w": "stolen,",
-     "s": 110,
-     "e": 129
+     "w": "hackers",
+     "s": 127,
+     "e": 139
     },
     {
-     "w": "from",
-     "s": 129,
-     "e": 136
-    },
-    {
-     "w": "under",
-     "s": 136,
-     "e": 145
-    },
-    {
-     "w": "1",
-     "s": 145,
+     "w": "stole",
+     "s": 139,
      "e": 148
     },
     {
-     "w": "percent",
+     "w": "them,",
      "s": 148,
-     "e": 160
+     "e": 157
     },
     {
-     "w": "of",
-     "s": 160,
-     "e": 164
+     "w": "from",
+     "s": 157,
+     "e": 173
     },
     {
-     "w": "workspaces",
-     "s": 164,
-     "e": 180
+     "w": "under",
+     "s": 173,
+     "e": 182
     },
     {
-     "w": "on",
-     "s": 180,
+     "w": "1",
+     "s": 182,
      "e": 185
     },
     {
-     "w": "Notion.",
+     "w": "percent",
      "s": 185,
-     "e": 222
+     "e": 197
+    },
+    {
+     "w": "of",
+     "s": 197,
+     "e": 205
+    },
+    {
+     "w": "workspaces.",
+     "s": 205,
+     "e": 223
     },
     {
      "w": "An",
-     "s": 222,
-     "e": 227
-    },
-    {
-     "w": "AI",
-     "s": 227,
-     "e": 231
-    },
-    {
-     "w": "that",
-     "s": 231,
-     "e": 238
-    },
-    {
-     "w": "can",
-     "s": 238,
-     "e": 244
-    },
-    {
-     "w": "now",
-     "s": 244,
-     "e": 250
-    },
-    {
-     "w": "pay",
-     "s": 250,
+     "s": 223,
      "e": 256
     },
     {
-     "w": "for",
+     "w": "AI",
      "s": 256,
-     "e": 289
+     "e": 260
+    },
+    {
+     "w": "that",
+     "s": 260,
+     "e": 268
+    },
+    {
+     "w": "can",
+     "s": 268,
+     "e": 274
+    },
+    {
+     "w": "now",
+     "s": 274,
+     "e": 280
+    },
+    {
+     "w": "shop",
+     "s": 280,
+     "e": 288
+    },
+    {
+     "w": "for",
+     "s": 288,
+     "e": 298
     },
     {
      "w": "you.",
-     "s": 289,
-     "e": 297
+     "s": 298,
+     "e": 334
     },
     {
      "w": "And",
-     "s": 297,
-     "e": 303
+     "s": 334,
+     "e": 340
     },
     {
      "w": "Nvidia's",
-     "s": 303,
-     "e": 316
+     "s": 340,
+     "e": 353
     },
     {
      "w": "boss",
-     "s": 316,
-     "e": 323
+     "s": 353,
+     "e": 361
     },
     {
      "w": "resigns.",
-     "s": 323,
-     "e": 337
+     "s": 361,
+     "e": 379
     }
    ],
    "lines": [
     [
-     "Promised 0 days, ",
-     "then stolen",
+     "Kept 0 days? ",
+     "Stolen",
      ""
     ],
     [
      "An AI that can ",
-     "pay for you",
+     "shop for you",
      ""
     ],
     [
@@ -184,33 +200,33 @@
    ],
    "clash": [
     {
-     "k": "PROMISED: CHATS KEPT",
+     "k": "VENDOR PROMISED NOTION:",
      "v": "0 DAYS",
      "c": "#4ade80"
     },
     {
-     "k": "STOLEN FROM NOTION WORKSPACES",
-     "v": "<1%",
+     "k": "WHAT HAPPENED (NOV 8)",
+     "v": "STOLEN",
      "c": "#f87171"
     }
    ],
    "clashJoin": "BUT",
    "hits": [
-    110,
-    250,
-    323
+    0,
+    280,
+    361
    ],
    "lineAt": [
-    11,
-    103,
-    222
+    10,
+    94,
+    223
    ]
   },
   {
    "name": "story1",
    "audio": "news/week-2026-11-14/en/story1.wav",
    "lead": 14,
-   "frames": 600,
+   "frames": 615,
    "words": [
     {
      "w": "Hackers",
@@ -220,217 +236,227 @@
     {
      "w": "broke",
      "s": 31,
-     "e": 43
+     "e": 44
     },
     {
      "w": "into",
-     "s": 43,
+     "s": 44,
      "e": 50
     },
     {
      "w": "Fireworks,",
      "s": 50,
-     "e": 68
+     "e": 69
     },
     {
      "w": "which",
-     "s": 68,
-     "e": 76
+     "s": 69,
+     "e": 77
     },
     {
      "w": "ran",
-     "s": 76,
-     "e": 81
+     "s": 77,
+     "e": 82
     },
     {
      "w": "some",
-     "s": 81,
-     "e": 88
+     "s": 82,
+     "e": 89
     },
     {
      "w": "of",
-     "s": 88,
-     "e": 92
+     "s": 89,
+     "e": 93
     },
     {
      "w": "Notion's",
-     "s": 92,
-     "e": 103
+     "s": 93,
+     "e": 105
     },
     {
      "w": "AI,",
-     "s": 103,
-     "e": 109
+     "s": 105,
+     "e": 110
     },
     {
      "w": "and",
-     "s": 109,
-     "e": 127
+     "s": 110,
+     "e": 128
     },
     {
      "w": "took",
-     "s": 127,
-     "e": 137
+     "s": 128,
+     "e": 139
     },
     {
      "w": "chats",
-     "s": 137,
-     "e": 145
+     "s": 139,
+     "e": 147
     },
     {
      "w": "from",
-     "s": 145,
-     "e": 151
+     "s": 147,
+     "e": 154
     },
     {
      "w": "its",
-     "s": 151,
-     "e": 157
+     "s": 154,
+     "e": 159
     },
     {
      "w": "Insights",
-     "s": 157,
-     "e": 168
+     "s": 159,
+     "e": 171
     },
     {
      "w": "feature,",
-     "s": 168,
-     "e": 180
+     "s": 171,
+     "e": 213
     },
     {
      "w": "from",
-     "s": 180,
-     "e": 217
+     "s": 213,
+     "e": 220
     },
     {
      "w": "under",
-     "s": 217,
-     "e": 225
+     "s": 220,
+     "e": 228
     },
     {
      "w": "1",
-     "s": 225,
-     "e": 227
+     "s": 228,
+     "e": 231
     },
     {
      "w": "percent",
-     "s": 227,
-     "e": 238
+     "s": 231,
+     "e": 241
     },
     {
      "w": "of",
-     "s": 238,
-     "e": 242
+     "s": 241,
+     "e": 245
     },
     {
      "w": "workspaces.",
-     "s": 242,
-     "e": 257
+     "s": 245,
+     "e": 261
     },
     {
      "w": "Fireworks'",
-     "s": 257,
-     "e": 307
+     "s": 261,
+     "e": 311
     },
     {
      "w": "contract",
-     "s": 307,
-     "e": 319
+     "s": 311,
+     "e": 323
     },
     {
      "w": "said",
-     "s": 319,
-     "e": 325
+     "s": 323,
+     "e": 330
     },
     {
      "w": "keep",
-     "s": 325,
-     "e": 332
+     "s": 330,
+     "e": 353
     },
     {
      "w": "zero",
-     "s": 332,
-     "e": 355
+     "s": 353,
+     "e": 360
     },
     {
      "w": "data;",
-     "s": 355,
-     "e": 363
+     "s": 360,
+     "e": 379
     },
     {
      "w": "it",
-     "s": 363,
-     "e": 378
+     "s": 379,
+     "e": 383
     },
     {
      "w": "kept",
-     "s": 378,
-     "e": 389
+     "s": 383,
+     "e": 394
     },
     {
      "w": "these.",
-     "s": 389,
-     "e": 440
+     "s": 394,
+     "e": 445
     },
     {
-     "w": "Pasted",
-     "s": 440,
-     "e": 449
+     "w": "Did",
+     "s": 445,
+     "e": 451
+    },
+    {
+     "w": "you",
+     "s": 451,
+     "e": 456
+    },
+    {
+     "w": "paste",
+     "s": 456,
+     "e": 464
     },
     {
      "w": "a",
-     "s": 449,
-     "e": 452
-    },
-    {
-     "w": "password",
-     "s": 452,
+     "s": 464,
      "e": 467
     },
     {
-     "w": "or",
+     "w": "password",
      "s": 467,
-     "e": 471
+     "e": 487
+    },
+    {
+     "w": "or",
+     "s": 487,
+     "e": 491
     },
     {
      "w": "an",
-     "s": 471,
-     "e": 475
+     "s": 491,
+     "e": 495
     },
     {
      "w": "API",
-     "s": 475,
-     "e": 480
+     "s": 495,
+     "e": 505
     },
     {
      "w": "key",
-     "s": 480,
-     "e": 489
-    },
-    {
-     "w": "into",
-     "s": 489,
-     "e": 501
-    },
-    {
-     "w": "Notion",
-     "s": 501,
+     "s": 505,
      "e": 510
     },
     {
-     "w": "AI?",
+     "w": "into",
      "s": 510,
-     "e": 515
+     "e": 517
+    },
+    {
+     "w": "Notion",
+     "s": 517,
+     "e": 526
+    },
+    {
+     "w": "AI?",
+     "s": 526,
+     "e": 532
     },
     {
      "w": "Change",
-     "s": 515,
-     "e": 552
+     "s": 532,
+     "e": 568
     },
     {
      "w": "it.",
-     "s": 552,
-     "e": 558
+     "s": 568,
+     "e": 574
     }
    ],
    "org": "NOTION",
@@ -459,7 +485,7 @@
      "k": "AFFECTED: INSIGHTS CHATS",
      "v": "Under 1% of workspaces",
      "cue": "Insights",
-     "f": 157
+     "f": 159
     },
     {
      "k": "FIREWORKS' CONTRACT: ZERO DATA RETENTION",
@@ -470,7 +496,7 @@
      "f": 296
     },
     {
-     "k": "AFFECTED OWNERS CAN CHECK IN NOTION",
+     "k": "CHECK: NOTION > SECURITY INCIDENT REVIEW",
      "v": "Pasted a password? Change it",
      "part": 3,
      "f": 429
@@ -689,10 +715,10 @@
    "tag": "MONEY",
    "headline": [
     "ChatGPT can now",
-    "pay for you"
+    "shop for you"
    ],
    "dek": "ChatGPT Wallet · Nov 13 · US, Pro plan, 18+",
-   "chapter": "ChatGPT can now pay for you",
+   "chapter": "ChatGPT can now shop for you",
    "points": [
     "ChatGPT Wallet (Nov 13): agents in ChatGPT can complete purchases; each one needs a biometric check (Face ID or a fingerprint); a tokenized card, so the merchant never sees the card number",
     "US ChatGPT Pro subscribers, 18+, with eligible US cards (Amex, Mastercard, Visa, some Chase cards); spending limits are planned, no date"
@@ -731,7 +757,7 @@
    "name": "story3",
    "audio": "news/week-2026-11-14/en/story3.wav",
    "lead": 14,
-   "frames": 840,
+   "frames": 855,
    "words": [
     {
      "w": "Finally,",
@@ -746,11 +772,11 @@
     {
      "w": "Jensen",
      "s": 59,
-     "e": 69
+     "e": 68
     },
     {
      "w": "Huang,",
-     "s": 69,
+     "s": 68,
      "e": 88
     },
     {
@@ -811,16 +837,16 @@
     {
      "w": "Finance",
      "s": 317,
-     "e": 329
+     "e": 328
     },
     {
      "w": "chief",
-     "s": 329,
-     "e": 342
+     "s": 328,
+     "e": 341
     },
     {
      "w": "Colette",
-     "s": 342,
+     "s": 341,
      "e": 353
     },
     {
@@ -851,122 +877,137 @@
     {
      "w": "stock",
      "s": 454,
-     "e": 462
+     "e": 468
     },
     {
      "w": "fell",
-     "s": 462,
-     "e": 474
+     "s": 468,
+     "e": 475
     },
     {
      "w": "as",
-     "s": 474,
-     "e": 478
+     "s": 475,
+     "e": 479
     },
     {
      "w": "much",
-     "s": 478,
-     "e": 485
+     "s": 479,
+     "e": 486
     },
     {
      "w": "as",
-     "s": 485,
-     "e": 490
+     "s": 486,
+     "e": 491
     },
     {
      "w": "16",
-     "s": 490,
-     "e": 494
+     "s": 491,
+     "e": 495
     },
     {
-     "w": "percent,",
-     "s": 494,
-     "e": 507
+     "w": "percent",
+     "s": 495,
+     "e": 506
+    },
+    {
+     "w": "during",
+     "s": 506,
+     "e": 521
+    },
+    {
+     "w": "the",
+     "s": 521,
+     "e": 527
+    },
+    {
+     "w": "day,",
+     "s": 527,
+     "e": 543
     },
     {
      "w": "and",
-     "s": 507,
-     "e": 522
-    },
-    {
-     "w": "closed",
-     "s": 522,
-     "e": 532
-    },
-    {
-     "w": "down",
-     "s": 532,
-     "e": 539
-    },
-    {
-     "w": "4.",
-     "s": 539,
+     "s": 543,
      "e": 549
     },
     {
-     "w": "On",
+     "w": "closed",
      "s": 549,
-     "e": 619
+     "e": 565
+    },
+    {
+     "w": "down",
+     "s": 565,
+     "e": 633
+    },
+    {
+     "w": "4.",
+     "s": 633,
+     "e": 637
+    },
+    {
+     "w": "On",
+     "s": 637,
+     "e": 641
     },
     {
      "w": "Friday,",
-     "s": 619,
-     "e": 630
+     "s": 641,
+     "e": 663
     },
     {
      "w": "Nvidia",
-     "s": 630,
-     "e": 650
+     "s": 663,
+     "e": 673
     },
     {
      "w": "closed",
-     "s": 650,
-     "e": 660
+     "s": 673,
+     "e": 693
     },
     {
      "w": "under",
-     "s": 660,
-     "e": 668
+     "s": 693,
+     "e": 705
     },
     {
      "w": "4",
-     "s": 668,
-     "e": 682
+     "s": 705,
+     "e": 712
     },
     {
      "w": "trillion",
-     "s": 682,
-     "e": 702
+     "s": 712,
+     "e": 725
     },
     {
      "w": "dollars,",
-     "s": 702,
-     "e": 715
+     "s": 725,
+     "e": 750
     },
     {
      "w": "a",
-     "s": 715,
-     "e": 728
-    },
-    {
-     "w": "first",
-     "s": 728,
-     "e": 744
-    },
-    {
-     "w": "since",
-     "s": 744,
+     "s": 750,
      "e": 753
     },
     {
-     "w": "July",
+     "w": "first",
      "s": 753,
-     "e": 760
+     "e": 761
+    },
+    {
+     "w": "since",
+     "s": 761,
+     "e": 770
+    },
+    {
+     "w": "July",
+     "s": 770,
+     "e": 783
     },
     {
      "w": "2025.",
-     "s": 760,
-     "e": 780
+     "s": 783,
+     "e": 791
     }
    ],
    "org": "NVIDIA",
@@ -1011,14 +1052,14 @@
      "f": 447
     },
     {
-     "k": "NOV 13 CLOSE (CNBC)",
+     "k": "NOV 13 CLOSE (CNBC) · FIRST SINCE JULY 2025",
      "v": "Under $4 trillion",
-     "part": 4,
+     "cue": "trillion",
      "drop": true,
      "big": true,
      "hush": true,
-     "hold": 120,
-     "f": 609
+     "hold": 400,
+     "f": 712
     }
    ]
   },
@@ -1026,95 +1067,110 @@
    "name": "outro",
    "audio": "news/week-2026-11-14/en/outro.wav",
    "lead": 6,
-   "frames": 293,
+   "frames": 321,
    "words": [
     {
-     "w": "Search",
-     "s": 12,
-     "e": 20
+     "w": "In",
+     "s": 13,
+     "e": 16
     },
     {
      "w": "your",
-     "s": 20,
-     "e": 26
+     "s": 16,
+     "e": 22
     },
     {
      "w": "AI",
+     "s": 22,
+     "e": 26
+    },
+    {
+     "w": "app,",
      "s": 26,
-     "e": 30
+     "e": 32
+    },
+    {
+     "w": "search",
+     "s": 32,
+     "e": 53
+    },
+    {
+     "w": "your",
+     "s": 53,
+     "e": 59
     },
     {
      "w": "chats",
-     "s": 30,
-     "e": 37
+     "s": 59,
+     "e": 66
     },
     {
      "w": "for",
-     "s": 37,
-     "e": 42
+     "s": 66,
+     "e": 71
     },
     {
-     "w": "the",
-     "s": 42,
-     "e": 46
-    },
-    {
-     "w": "word",
-     "s": 46,
-     "e": 52
-    },
-    {
-     "w": "password.",
-     "s": 52,
-     "e": 69
-    },
-    {
-     "w": "How",
-     "s": 69,
-     "e": 107
-    },
-    {
-     "w": "many?",
-     "s": 107,
-     "e": 114
-    },
-    {
-     "w": "Change",
-     "s": 114,
-     "e": 148
-    },
-    {
-     "w": "them,",
-     "s": 148,
-     "e": 155
+     "w": "password",
+     "s": 71,
+     "e": 82
     },
     {
      "w": "and",
-     "s": 155,
-     "e": 163
+     "s": 82,
+     "e": 86
+    },
+    {
+     "w": "key.",
+     "s": 86,
+     "e": 92
+    },
+    {
+     "w": "How",
+     "s": 92,
+     "e": 135
+    },
+    {
+     "w": "many?",
+     "s": 135,
+     "e": 142
+    },
+    {
+     "w": "Change",
+     "s": 142,
+     "e": 175
+    },
+    {
+     "w": "them,",
+     "s": 175,
+     "e": 182
+    },
+    {
+     "w": "and",
+     "s": 182,
+     "e": 191
     },
     {
      "w": "comment",
-     "s": 163,
-     "e": 173
+     "s": 191,
+     "e": 201
     },
     {
      "w": "the",
-     "s": 173,
-     "e": 178
+     "s": 201,
+     "e": 205
     },
     {
      "w": "number.",
-     "s": 178,
-     "e": 187
+     "s": 205,
+     "e": 215
     }
    ],
    "ask": [
     "Search your AI chats for",
-    "\"password\". How many?",
+    "\"password\" and \"key\". How many?",
     "COMMENT THE NUMBER"
    ]
   }
  ],
- "frames": 2603
+ "frames": 2706
 }
