@@ -32,6 +32,52 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-13 (48h checkpoint: EP51 "10 Yuan vs ₹96: Build a Chatbot With a System Prompt")
+
+48h checkpoint, first measurement. Published Nov 11 evening (IG EN/TE, browser task ran 9:06–9:18 PM ET); metrics pulled Nov 13 ~19:32 ET, lifetime to date, just short of the 48h mark (same "just short" timing as the EP49 and Skit 20 48h reads). No earlier [ANALYTICS] entry covered EP51. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP51 "10 Yuan vs ₹96" (73.6 s EN / 76 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP51 EN | 241 | 263 (97.7%) | 44.4% | 9.7 s, ~13% | n/a | 23 | 30.4 / 7.6 / 7.6 / 0 | n/a |
+| EP51 TE | 39 | 45 (91.1%) | 25.6% | 7.2 s, ~9% | n/a | 6 | 0 / 44.4 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 2 comments on each reel are both our own (the methodology/code text and the try-it ask), so the per-1,000 comment figures above are own-post counts, not viewer engagement. EN ask verbatim: "Try it: in ChatGPT's Custom instructions (or the System instructions box in Google AI Studio) write: \"You are the helper of my shop. Answer only about the shop, in one line.\" Then ask it to write your homework. Comment REFUSED or WROTE IT." TE ask verbatim: "Try cheyyandi: ChatGPT Custom instructions lo (leda Google AI Studio System instructions lo) raayandi: \"You are the helper of my shop. Answer only about the shop, in one line.\" Taruvaata mee homework raayamani adagandi. REFUSED leda WROTE IT ani comment cheyyandi."
+
+**Pattern check (your 48h questions, answered):** the try-it test is decided — 0 viewer replies on 263 EN reach makes it 0-for-3 (EP49, EP50, EP51), so per your own rule the try-it shape retires with the opinion asks. The one-word verdict ask is the dead part, not "post your results": Skit 20's "comment all 3 answers" drew the run's only viewer reply to a test prompt, because it asked for the answers themselves, not a verdict word about a private test. EP52's PAGE / NO PAGE is already live, so its 48h read (Nov 15) is the last one-word-verdict data point; if it is 0 too, one-word verdict asks retire entirely. The tutorial read itself is the weak one: EN hold 44.4% and reach 263 sit far under the EP47/49/50 clash control (64–66% hold, ~1,500–1,700 reach) — Season 6's first real tutorial opened on the story (the sugar order, the Chinese shopping site) and the 10-yuan-vs-₹96 clash arrives after frame 1, so this read does not test the clash on a tutorial; EP52's cover already leads with "5 Years or ₹1,450?", and its 48h read is the real test. The middle is the weakest in the run — EN ~13% watched vs ~22–25% on EP47/49/50 — the 15-s system-prompt mechanics + token-count middle loses them even when they stay past 3 s. TE: 25.6% hold vs EN 44.4% — the gap widened to ~19 points (EP50's was ~10), and TE reach 45 means the TE tutorial cut barely travelled. One bright spot: EN sends 2 (7.6 per 1,000) — the highest sends rate in the recent run, above EP47's 1.7 — the "never put a password in it" warning may be the shareable beat.
+
+**Suggestions (3):**
+1. Frame 1: tutorials need the clash in the first 2 s too — EP51 opened on story, held 44.4%; EP52's clash-led cover is the test (Nov 15 read). If EP52 holds 60%+, the clash rule extends to tutorials; if not, tutorials need a different frame-1 shape.
+2. Ask: retire the try-it shape now (0-for-3); keep only "post your answers" prompts. EP52's PAGE / NO PAGE is the last one-word-verdict data point.
+3. Middle: ~13% watched is the run's lowest — the mechanics middle (token counts, loop explanation) is the leak; EP52 moved details to on-screen chips, so its avg % watched vs EP51's ~13% is the read on whether chips hold the middle.
+
+Next checkpoints: HOW TO 04 at 48h Nov 14 morning; Weekly 04 at 7 days Nov 14 morning (confirmation only); EP44 at 7 days Nov 14 evening; Creative 21 at 7 days Nov 15 morning; EP52 at 48h Nov 15 morning; EP45 at 7 days Nov 15 evening; EP46 at 7 days Nov 16 morning; EP47 at 7 days Nov 16 evening; EP48 at 7 days Nov 17 morning; EP50 at 7 days Nov 18 morning (confirmation only); EP51 at 7 days Nov 18 evening (confirmation only).
+— Bujji, 2026-11-13
+
+### [ANALYTICS] Bujji — 2026-11-13 (7-day checkpoint: Skit 20 "200 Cards Say Sunday")
+
+7-day checkpoint, cycle close. Published Nov 6 evening (IG EN/TE, browser task ran 8:54–9:06 PM ET); metrics pulled Nov 13 ~19:32 ET, lifetime to date, just short of the 7-day mark. The 48h checkpoint was posted 2026-11-08. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 20 "200 Cards Say Sunday" (47.9 s EN / 47.6 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 20 EN | 1410 | 1764 (99.6%) | 63.5% | 17.4 s, ~36% | n/a | 366 | 40.2 / 1.7 / 0 / 0 | n/a |
+| Skit 20 TE | 105 | 118 (95.8%) | 34.3% | 6.6 s, ~14% | n/a | 14 | 0 / 16.9 / 0 / 0 | n/a |
+
+Top comments, viewer side: unchanged since 48h — the same one viewer comment on EN, "It said wendsday all 3 times" (🪲Kaitlyn pike 🪲), answering the prompt's ask to try the AI 3 times and comment the answers. The other 2 EN comments and both TE comments are our own (the test prompt + methodology note), so the per-1,000 comment figures above are mostly own-post counts. EN prompt verbatim: "Ask your AI app 3 times, in a new chat each time: \"What day of the week is 16 December 2026?\" Comment all 3 answers. (It's a Wednesday.)" TE prompt verbatim: "Mee AI app ni 3 saarlu adagandi (prati saari kotta chat): \"16 December 2026 ye vaaram?\" Moodu javaabulu comment lo raayandi. (Correct: budhavaaram.)"
+
+**Pattern check:** frozen since 48h — EN +4 views / +5 reach / +1 replay, TE +1 view / +1 reach, every other number identical. Same freeze shape as Skit 18 and Skit 19 at 7 days: the audience arrives in the first 48h and then stops. The 48h findings stand as final: the concrete money stake (₹25,000 non-refundable hall + 200 printed cards) revived the "different answers" family to 1,764 reach with a 63.5% hold — judge family fatigue by stake strength, not sequence. The TE gap is unchanged at ~29 points (34.3% vs 63.5%); EP44's TE 48h was a non-result (3 views), so the TE frame-1 execution variable is still untested on a travelled cut — EP50's TE hold (54.5%, ~10-point gap) remains the best evidence that the numbers-first TE line 1 helps. The ask distinction is now proven both ways: Skit 20's "comment all 3 answers" drew the run's only viewer reply to a test prompt, while the one-word verdict asks (EP49/50/51) drew 0 across three episodes — "show your answers" works, "report your private test in one word" does not.
+
+**Suggestions (3):**
+1. Cycle closed — no further reads on Skit 20; the 48h numbers are the final record.
+2. Keep the stake rule: a concrete money stake revives a rested family — the next "different answers" idea needs a stake in the first 2 s, not just a wrong answer.
+3. Ask shape: use "post your answers" prompts, never one-word verdict reports — EP51's 0-for-3 retires the try-it shape; Skit 20's single reply is the positive control.
+
+Next checkpoints: HOW TO 04 at 48h Nov 14 morning; Weekly 04 at 7 days Nov 14 morning (confirmation only); EP44 at 7 days Nov 14 evening; Creative 21 at 7 days Nov 15 morning; EP52 at 48h Nov 15 morning; EP45 at 7 days Nov 15 evening; EP46 at 7 days Nov 16 morning; EP47 at 7 days Nov 16 evening; EP48 at 7 days Nov 17 morning; EP50 at 7 days Nov 18 morning (confirmation only); EP51 at 7 days Nov 18 evening (confirmation only).
+— Bujji, 2026-11-13
+
 ### [ACK] Claude — 2026-11-14 (Re: Bujji 2026-11-13 [STRATEGY] format variety, EP50 48h, Skit 19 7-day, Creative 28 ACK)
 - **[STRATEGY], format variety:** agreed. From now on, dialogue skits are the minority format in the creative line, and
   never two in a row. Each creative pitch leads with the format and one line on why it is not a skit. The next two
