@@ -23,9 +23,9 @@
  "hook": {
   "lines": [
    [
-    "Promised ",
-    "0 days",
-    ", then stolen"
+    "Promised 0 days, ",
+    "then stolen",
+    ""
    ],
    [
     "An AI that can ",
@@ -34,36 +34,36 @@
    ],
    [
     "Nvidia's boss ",
-    "quits",
+    "resigns",
     ""
    ]
   ],
   "clash": [
    {
-    "k": "AI CHATS KEPT FOR (THE PROMISE)",
+    "k": "PROMISED: CHATS KEPT",
     "v": "0 DAYS",
     "c": "#4ade80"
    },
    {
-    "k": "WHAT HAPPENED (NOTION, NOV 8)",
-    "v": "STOLEN",
+    "k": "STOLEN FROM NOTION WORKSPACES",
+    "v": "<1%",
     "c": "#f87171"
    }
   ],
   "clashJoin": "BUT",
   "hits": [
-   "zero",
+   "stolen",
    "pay",
-   "quits"
+   "resigns"
   ],
   "hits_te": [
-   "సున్నా",
+   "దొంగిలించారు",
    "డబ్బు",
    "రాజీనామా"
   ],
-  "text": "Your AI chats: promised zero days kept, then stolen, passwords and all. An AI that can now pay for you. And Nvidia's boss quits overnight.",
-  "tts": "Your A I chats: promised, zero days kept; then stolen, passwords and all. An A I that can now pay for you. And En-vidia's boss quits, overnight.",
-  "tts_te": "సున్నా రోజులు ఉంచుకుంటాం అన్నారు; కానీ మీ చాట్లు దొంగిలించారు, పాస్‌వర్డ్ లతో సహా. మీ కోసం డబ్బు కట్టే చాట్‌బాట్. ఇంకా, ఎన్ విడియా బాస్ రాజీనామా."
+  "text": "Promised: AI chats kept zero days. Then stolen, from under 1 percent of workspaces on Notion. An AI that can now pay for you. And Nvidia's boss resigns.",
+  "tts": "Promised: A I chats kept zero days. Then stolen, from under one percent of workspaces on Notion. An A I that can now pay for you. And En-vidia's boss resigns.",
+  "tts_te": "సున్నా రోజులు సేవ్ చేయం అన్నారు; కానీ నోషన్ చాట్లు దొంగిలించారు, ఒక శాతం కన్నా తక్కువ వర్క్‌స్పేస్ లవి. మీ కోసం డబ్బు కట్టే చాట్‌బాట్. ఇంకా, ఎన్ విడియా బాస్ రాజీనామా."
  },
  "stories": [
   {
@@ -76,30 +76,30 @@
    ],
    "dek": "Notion's advisory · its vendor Fireworks AI · confirmed Nov 8",
    "chapter": "Notion AI chats kept, then stolen",
-   "text": "Notion says hackers broke into Fireworks, a company that ran some of its AI, and took AI chat transcripts from under 1 percent of workspaces. Fireworks had a contract to keep zero data; it kept these. If you pasted a password or an API key into Notion AI, Notion says: treat it as exposed, and change it.",
+   "text": "Hackers broke into Fireworks, which ran some of Notion's AI, and took chats from its Insights feature, from under 1 percent of workspaces. Fireworks' contract said keep zero data; it kept these. Pasted a password or an API key into Notion AI? Change it.",
    "tts": [
-    "Notion says hackers broke into Fireworks, a company that ran some of its A I, and took A I chat transcripts from under one percent of workspaces.",
-    "Fireworks had a contract to keep zero data; it kept these.",
-    "If you pasted a password or an A P I key into Notion A I, Notion says: treat it as exposed, and change it."
+    "Hackers broke into Fireworks, which ran some of Notion's A I, and took chats from its Insights feature, from under one percent of workspaces.",
+    "Fireworks' contract said: keep zero data; it kept these.",
+    "Pasted a password or an A P I key into Notion A I? Change it."
    ],
    "tts_te": [
-    "నోషన్ చెప్పింది: తన చాట్‌బాట్ ని నడిపే ఫైర్‌వర్క్స్ అనే కంపెనీ మీద హ్యాకర్లు దాడి చేసి, ఒక శాతం కన్నా తక్కువ వర్క్‌స్పేస్ ల చాట్లు తీసుకెళ్ళారు.",
-    "డేటా ఒక్క రోజు కూడా ఉంచుకోం అని ఫైర్‌వర్క్స్ కాంట్రాక్ట్ లో ఉంది; అయినా ఇవి ఉంచుకుంది.",
-    "నోషన్ చాట్‌బాట్ లో పాస్‌వర్డ్ గానీ, సీక్రెట్ కీ గానీ పెట్టి ఉంటే, అది బయటపడినట్టే, వెంటనే మార్చండి, అంటోంది నోషన్."
+    "నోషన్ చాట్‌బాట్ ని నడిపే ఫైర్‌వర్క్స్ మీద హ్యాకర్లు దాడి చేసి, ఒక శాతం కన్నా తక్కువ వర్క్‌స్పేస్ ల, ఇన్‌సైట్స్ చాట్లు తీసుకెళ్ళారు.",
+    "డేటా సేవ్ చేయం అని కాంట్రాక్ట్ లో ఉంది; అయినా ఇవి సేవ్ చేసి పెట్టింది.",
+    "నోషన్ చాట్‌బాట్ లో పాస్‌వర్డ్ గానీ, సీక్రెట్ కీ గానీ పెట్టారా? వెంటనే మార్చండి."
    ],
    "pause": 0.9,
    "cards": [
     {
      "k": "NOTION'S ADVISORY · VENDOR: FIREWORKS AI",
      "v": "AI chats stolen",
-     "cue": "Notion",
+     "cue": "Hackers",
      "cue_te": "నోషన్"
     },
     {
-     "k": "HIT",
+     "k": "AFFECTED: INSIGHTS CHATS",
      "v": "Under 1% of workspaces",
-     "cue": "under",
-     "cue_te": "శాతం"
+     "cue": "Insights",
+     "cue_te": "ఇన్‌సైట్స్"
     },
     {
      "k": "FIREWORKS' CONTRACT: ZERO DATA RETENTION",
@@ -109,7 +109,7 @@
      "big": true
     },
     {
-     "k": "NOTION'S ADVICE",
+     "k": "AFFECTED OWNERS CAN CHECK IN NOTION",
      "v": "Pasted a password? Change it",
      "part": 3
     }
@@ -131,16 +131,16 @@
    ],
    "dek": "ChatGPT Wallet · Nov 13 · US, Pro plan, 18+",
    "chapter": "ChatGPT can now pay for you",
-   "text": "OpenAI launched ChatGPT Wallet: its agents can now buy things for you. Every purchase needs your face or your fingerprint, and the shop never sees your card number. For now, only in the US, on the Pro plan.",
+   "text": "OpenAI launched ChatGPT Wallet: its agents can now buy things for you. Every purchase needs your face or your fingerprint, and the shop never sees your card number. Not in India yet: only in the US, on the Pro plan.",
    "tts": [
     "Open A I launched chat G P T Wallet: its agents can now buy things for you.",
     "Every purchase needs your face or your fingerprint, and the shop never sees your card number.",
-    "For now, only in the U S, on the Pro plan."
+    "Not in India yet: only in the U S, on the Pro plan."
    ],
    "tts_te": [
     "చాట్ జీ పీ టీ వాలెట్ వచ్చింది: ఇప్పుడు చాట్ జీ పీ టీ ఏజెంట్లు మీ కోసం వస్తువులు కొనగలవు.",
     "ప్రతి కొనుగోలుకీ మీ ఫేస్ గానీ, ఫింగర్‌ప్రింట్ గానీ కావాలి; మీ కార్డ్ నంబర్ షాప్ కి కనిపించదు.",
-    "ప్రస్తుతానికి అమెరికాలో, ప్రో ప్లాన్ లో మాత్రమే."
+    "మన దగ్గర ఇంకా లేదు: అమెరికాలో, ప్రో ప్లాన్ లో మాత్రమే."
    ],
    "pause": 0.9,
    "cards": [
@@ -156,13 +156,13 @@
      "part": 2
     },
     {
-     "k": "THE SHOP SEES",
-     "v": "A token, not your card",
+     "k": "THE SHOP NEVER SEES",
+     "v": "Your card number",
      "cue": "card",
      "cue_te": "కార్డ్"
     },
     {
-     "k": "FOR NOW",
+     "k": "FOR NOW (NOT IN INDIA YET)",
      "v": "US only · Pro plan · 18+",
      "part": 3,
      "drop": true
@@ -181,22 +181,22 @@
    "tag": "AI CHIPS",
    "headline": [
     "Nvidia's CEO",
-    "quits overnight"
+    "resigns"
    ],
    "dek": "Thursday, Nov 12 · Nvidia's SEC filing · CNBC, NBC News",
-   "chapter": "Nvidia's CEO quits overnight",
-   "text": "Finally, Thursday: Jensen Huang, who co-founded Nvidia in 1993 and ran it ever since, resigned, effective immediately. Its finance chief, Colette Kress, is the interim CEO. The stock dived 16 percent at one point. On Friday, Nvidia closed under 4 trillion dollars for the first time since July 2025.",
+   "chapter": "Nvidia's CEO resigns",
+   "text": "Finally, Thursday: Jensen Huang, Nvidia's CEO since he co-founded it in 1993, resigned, effective immediately. Finance chief Colette Kress is interim CEO. The stock fell as much as 16 percent, and closed down 4. On Friday, Nvidia closed under 4 trillion dollars, a first since July 2025.",
    "tts": [
-    "Finally, Thursday: Jensen Huang, who co-founded En-vidia in nineteen ninety-three and ran it ever since, resigned, effective immediately.",
-    "Its finance chief, Colette Kress, is the interim C E O.",
-    "The stock dived sixteen percent at one point.",
-    "On Friday, En-vidia closed under four trillion dollars, for the first time since July twenty twenty-five."
+    "Finally, Thursday: Jensen Huang, En-vidia's C E O since he co-founded it in nineteen ninety-three, resigned, effective immediately.",
+    "Finance chief Colette Kress is interim C E O.",
+    "The stock fell as much as sixteen percent, and closed down four.",
+    "On Friday, En-vidia closed under four trillion dollars, a first since July twenty twenty-five."
    ],
    "tts_te": [
     "చివరగా, గురువారం: ఎన్ విడియా ని పంతొమ్మిది వందల తొంభై మూడులో స్థాపించి, అప్పటి నుంచీ నడిపిన జెన్సెన్ హువాంగ్, వెంటనే రాజీనామా చేశారు.",
     "ఫైనాన్స్ చీఫ్ కొలెట్ క్రెస్, తాత్కాలిక సీ ఈ ఓ.",
-    "ఒక దశలో షేర్ పదహారు శాతం పడిపోయింది.",
-    "శుక్రవారం, రెండు వేల ఇరవై ఐదు జులై తర్వాత మొదటిసారి, ఎన్ విడియా విలువ నాలుగు ట్రిలియన్ డాలర్ల కిందకి."
+    "షేర్ ఒక దశలో పదహారు శాతం పడి, నాలుగు శాతం నష్టంతో ముగిసింది.",
+    "శుక్రవారం, ఎన్ విడియా విలువ నాలుగు ట్రిలియన్ డాలర్ల కిందకి పడిపోయింది: రెండు వేల ఇరవై ఐదు జులై తర్వాత ఇదే మొదటిసారి."
    ],
    "pause": 1.7,
    "tail": 40,
@@ -219,8 +219,8 @@
      "part": 2
     },
     {
-     "k": "NOV 12, AT ONE POINT (NBC NEWS)",
-     "v": "Stock -16%",
+     "k": "NOV 12 (NBC NEWS)",
+     "v": "-16% in the day, closed -4.3%",
      "part": 3,
      "drop": true
     },
@@ -239,22 +239,22 @@
     "The stock dived as much as 16% intraday and closed down 4.3% on Nov 12 (NBC News); on Nov 13 Nvidia closed below a $4 trillion market value for the first time since July 2025 (CNBC)"
    ],
    "sources": "Nvidia's SEC 8-K · CNBC · NBC News · CNN",
-   "recap": "Nvidia's CEO quits; the company falls under $4 trillion"
+   "recap": "Nvidia's CEO resigns; under $4 trillion"
   }
  ],
  "outro": {
-  "text": "Ask your AI app: how long do you keep my chats? Paste its answer in the comments.",
+  "text": "Search your AI chats for the word password. How many? Change them, and comment the number.",
   "tts": [
-   "Ask your A I app: how long do you keep my chats?",
-   "Paste its answer in the comments."
+   "Search your A I chats for the word password.",
+   "How many? Change them, and comment the number."
   ],
-  "tts_te": "మీ చాట్‌బాట్ ని అడగండి: నా చాట్లు ఎన్ని రోజులు ఉంచుకుంటావు? దాని జవాబు కామెంట్ లో పెట్టండి.",
+  "tts_te": "మీ చాట్‌బాట్ చాట్లలో పాస్‌వర్డ్ అని వెతకండి. ఎన్ని దొరికాయి? మార్చేసి, ఆ నంబర్ కామెంట్ లో రాయండి.",
   "tail": 90,
   "pause": 0.4,
   "ask": [
-   "Ask your AI app:",
-   "\"How long do you keep my chats?\"",
-   "PASTE ITS ANSWER"
+   "Search your AI chats for",
+   "\"password\". How many?",
+   "COMMENT THE NUMBER"
   ]
  }
 }
