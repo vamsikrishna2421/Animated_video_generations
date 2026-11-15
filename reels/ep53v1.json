@@ -115,19 +115,19 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "Fifteen thousand tokens, or two hundred and forty-seven? [1] One question, a 300-page manual: the whole thing didn't fit our small AI. [2] Three pages answered it: page 141.",
+     "text": "Over fifteen thousand tokens, or two hundred and forty-seven? [1] One question, a 300-page manual: the whole thing didn't fit our small AI. [2] Three pages answered it: page 141.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "15,373 tokens, or 247? One question, a 300-page manual: the whole thing didn't fit our small AI. Three pages answered it: page 141.",
+     "show": "Over 15,000 tokens, or 247? One question, a 300-page manual: the whole thing didn't fit our small AI. Three pages answered it: page 141.",
      "tempo": 1.1
     },
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "Part 1 sent every page. [1] Here, that's about sixty times the tokens, every single question.",
+     "text": "Part 1 sent every page. [1] That's sixty-two times the tokens, every question, and you pay for every one.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "show": "Part 1 sent every page. Here, that's about 60 times the tokens, every single question.",
+     "show": "Part 1 sent every page. That's 62 times the tokens, every question, and you pay for every one.",
      "tempo": 1.1
     },
     {
@@ -211,19 +211,19 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "Step one: turn every page into numbers, once. [1] Three hundred pages: three seconds, on our computer.",
+     "text": "Step one: turn every page into numbers, once. [1] Three hundred pages: three seconds.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "show": "Step 1: turn every page into numbers, once. 300 pages: 3 seconds, on our computer.",
+     "show": "Step 1: turn every page into numbers, once. 300 pages: 3 seconds.",
      "tempo": 1.1
     },
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "Step two: turn the question into numbers too, and take the three closest pages. [1] 'Banging' found 'knocking': different words, same meaning.",
+     "text": "Step two: do the same to the question, and take the three closest pages. [1] 'Banging' found 'knocking': different words, same meaning.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Step 2: turn the question into numbers too, and take the 3 closest pages. 'Banging' found 'knocking': different words, same meaning.",
+     "show": "Step 2: do the same to the question, and take the 3 closest pages. 'Banging' found 'knocking': different words, same meaning.",
      "tempo": 1.1
     },
     {
@@ -247,7 +247,7 @@
     [
      0,
      1,
-     0.5
+     0.3
     ]
    ],
    "data": {
@@ -259,10 +259,6 @@
      {
       "prop": "miss",
       "n": 8
-     },
-     {
-      "prop": "habit",
-      "n": 9
      }
     ],
     "captionTop": 1500,
@@ -305,8 +301,8 @@
      ]
     },
     "yt": {
-     "chapter": "Our test, and which to use",
-     "title": "Our test, and which to use",
+     "chapter": "Our test",
+     "title": "Our test",
      "notes": []
     }
    },
@@ -314,15 +310,15 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "Ten questions: right page in the top three? [1] By meaning, eight. [2] Word search, seven. <pause 0.5> [3] Both mixed, the simple way: six.",
+     "text": "Ten questions: right page in the top three? <pause 0.6> [1] By meaning, eight. [2] Word search, seven. [3] Both mixed, the simple way: six.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "10 questions: right page in the top 3? By meaning, 8. Word search, 7. <pause 0.5> Both mixed, the simple way: 6.",
+     "show": "10 questions: right page in the top 3? <pause 0.6> By meaning, 8. Word search, 7. Both mixed, the simple way: 6.",
      "tempo": 1.1,
-     "tts": "Ten questions: right page in the top three? By meaning, eight. Word search, seven.",
+     "tts": "Ten questions: right page in the top three?",
      "file2": "07b_storyteller.wav",
-     "tts2": "Both mixed, the simple way: six.",
-     "pause": 0.5
+     "tts2": "By meaning, eight. Word search, seven. Both mixed, the simple way: six.",
+     "pause": 0.6
     },
     {
      "who": "storyteller",
@@ -331,15 +327,6 @@
      "maxgap": 0.3,
      "gap": 0.35,
      "show": "It missed 2. The child lock: 'not in the document', but it's on page 96. 'Not there'? Check the PDF.",
-     "tempo": 1.1
-    },
-    {
-     "who": "storyteller",
-     "file": "09_storyteller.wav",
-     "text": "Short PDF? Send it whole, like Part 1. [1] Long, or lots of questions? Search by meaning, and test ten questions you know the page for.",
-     "maxgap": 0.3,
-     "gap": 0.4,
-     "show": "Short PDF? Send it whole, like Part 1. Long, or lots of questions? Search by meaning, and test 10 questions you know the page for.",
      "tempo": 1.1
     }
    ]
@@ -352,9 +339,13 @@
    "pre": 0.4,
    "boost": 1.9,
    "lift": 0.8,
-   "rise": 1.9,
+   "rise": 2.0,
    "data": {
     "beats": [
+     {
+      "prop": "habit",
+      "n": 9
+     },
      {
       "prop": "loop",
       "n": 10
@@ -400,20 +391,33 @@
      ]
     },
     "yt": {
-     "chapter": "Next: agents",
-     "title": "Next: agents",
+     "chapter": "Which one for your PDF",
+     "title": "Which one for your PDF",
      "notes": []
     }
    },
    "lines": [
     {
      "who": "storyteller",
+     "file": "09_storyteller.wav",
+     "text": "A few pages? Send it whole, like Part 1. [1] Long? Search by meaning. [2] No code? Upload it to a chat app. Either way, test ten questions you know the page for.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "A few pages? Send it whole, like Part 1. Long? Search by meaning. No code? Upload it to a chat app. Either way, test 10 questions you know the page for.",
+     "tempo": 1.1
+    },
+    {
+     "who": "storyteller",
      "file": "10_storyteller.wav",
-     "text": "Next: an agent with tools. [1] And the drain question? Clean the drain filter, page 141.",
+     "text": "And the drain question? <pause 0.6> [1] Clean the drain filter, page 141. [2] Next: an agent with tools.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "Next: an agent with tools. And the drain question? Clean the drain filter, page 141.",
-     "tempo": 1.1
+     "show": "And the drain question? <pause 0.6> Clean the drain filter, page 141. Next: an agent with tools.",
+     "tempo": 1.1,
+     "tts": "And the drain question?",
+     "file2": "10b_storyteller.wav",
+     "tts2": "Clean the drain filter, page 141. Next: an agent with tools.",
+     "pause": 0.6
     }
    ]
   }

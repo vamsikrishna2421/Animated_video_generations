@@ -28,20 +28,21 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("fifteen", "15"), ("247", "forty"), ("manual",), ("fit",), ("141",)], 2: [("part",), ("sixty", "60"), ("question",)],
+MUST = {"en": {1: [("fifteen", "15"), ("247", "forty"), ("manual",), ("fit",), ("141",)], 2: [("part",), ("62", "sixty"), ("pay",)],
                3: [("part",), ("meaning",)], 4: [("step",), ("numbers",), ("three", "3", "300")], 5: [("step",), ("closest",), ("banging",), ("knocking",), ("meaning",)],
-               6: [("step",), ("page",), ("rules",)], 7: [("questions",), ("meaning",), ("eight", "8"), ("seven", "7")], "7b": [("six", "6")],
-               8: [("missed",), ("child",), ("document",), ("96",), ("pdf",)], 9: [("short",), ("whole",), ("meaning",), ("ten", "10")], 10: [("agent",), ("filter",), ("141",)]},
+               6: [("step",), ("page",), ("rules",)], 7: [("questions",), ("top",)], "7b": [("meaning",), ("eight", "8"), ("seven", "7"), ("six", "6")],
+               8: [("missed",), ("child",), ("document",), ("96",), ("pdf",)], 9: [("few",), ("whole",), ("meaning",), ("code",), ("chat",), ("ten", "10")],
+               10: [("drain",)], "10b": [("filter",), ("141",), ("agent",)]},
         "te": {}}
-JUDGE_TEXT = {1: "15,000 tokens, or 247? One question, a 300-page manual: the whole thing didn't fit our small AI. Three pages answered it: page 141.",
-              2: "Part 1 sent every page. Here, that's about 60 times the tokens, every single question.",
-              4: "Step 1: turn every page into numbers, once. 300 pages: 3 seconds, on our computer.",
-              5: "Step 2: turn the question into numbers too, and take the 3 closest pages. 'Banging' found 'knocking': different words, same meaning.",
+JUDGE_TEXT = {1: "Over 15,000 tokens, or 247? One question, a 300-page manual: the whole thing didn't fit our small AI. Three pages answered it: page 141.",
+              2: "Part 1 sent every page. That's 62 times the tokens, every question, and you pay for every one.",
+              4: "Step 1: turn every page into numbers, once. 300 pages: 3 seconds.",
+              5: "Step 2: do the same to the question, and take the 3 closest pages. 'Banging' found 'knocking': different words, same meaning.",
               6: "Step 3: send those pages, with their page numbers and Part 1's rules.",
-              7: "10 questions: right page in the top 3? By meaning, 8. Word search, 7.", "7b": "Both mixed, the simple way: 6.",
+              7: "10 questions: right page in the top 3?", "7b": "By meaning, 8. Word search, 7. Both mixed, the simple way: 6.",
               8: "It missed 2. The child lock: 'not in the document', but it's on page 96. 'Not there'? Check the PDF.",
-              9: "Short PDF? Send it whole, like Part 1. Long, or lots of questions? Search by meaning, and test 10 questions you know the page for.",
-              10: "Next: an agent with tools. And the drain question? Clean the drain filter, page 141."}
+              9: "A few pages? Send it whole, like Part 1. Long? Search by meaning. No code? Upload it to a chat app. Either way, test 10 questions you know the page for.",
+              10: "And the drain question?", "10b": "Clean the drain filter, page 141. Next: an agent with tools."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

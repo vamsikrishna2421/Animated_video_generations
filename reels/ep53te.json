@@ -127,10 +127,10 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "పార్ట్ వన్ లో ప్రతి పేజీ పంపాం. [1] పట్టినా సరే, ప్రతి ప్రశ్నకీ దాదాపు అరవై రెట్లు టోకెన్లు.",
+     "text": "పార్ట్ వన్ లో ప్రతి పేజీ పంపాం. [1] అది అరవై రెండు రెట్లు టోకెన్లు, ప్రతి ప్రశ్నకీ; ప్రతి టోకెన్ కీ ఖర్చే.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "show": "In Part 1 we sent every page. Even when it fits, that's about 60 times the tokens, every question.",
+     "show": "In Part 1 we sent every page. That's 62 times the tokens, every question; every token costs.",
      "tempo": 1.12
     },
     {
@@ -255,7 +255,7 @@
     [
      0,
      1,
-     0.5
+     0.3
     ]
    ],
    "data": {
@@ -267,10 +267,6 @@
      {
       "prop": "miss",
       "n": 8
-     },
-     {
-      "prop": "habit",
-      "n": 9
      }
     ],
     "captionTop": 1500,
@@ -313,8 +309,8 @@
      ]
     },
     "yt": {
-     "chapter": "Our test, and which to use",
-     "title": "Our test, and which to use",
+     "chapter": "Our test",
+     "title": "Our test",
      "notes": []
     },
     "handle": "@ai_maastaaru_telugu"
@@ -323,15 +319,15 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "పది ప్రశ్నలు: సరైన పేజీ టాప్ త్రీ లో ఉందా? [1] అర్థం బట్టి, ఎనిమిది. [2] మాటల సెర్చ్, ఏడు. <pause 0.5> [3] రెండూ మామూలుగా కలిపితే: ఆరు.",
+     "text": "పది ప్రశ్నలు: సరైన పేజీ టాప్ త్రీ లో ఉందా? <pause 0.6> [1] అర్థం బట్టి, ఎనిమిది. [2] మాటల సెర్చ్, ఏడు. [3] రెండూ మామూలుగా కలిపితే: ఆరు.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "10 questions: is the right page in the top 3? By meaning, 8. Word search, 7. <pause 0.5> Both mixed, the plain way: 6.",
+     "show": "10 questions: is the right page in the top 3? <pause 0.6> By meaning, 8. Word search, 7. Both mixed, the plain way: 6.",
      "tempo": 1.12,
-     "tts": "పది ప్రశ్నలు: సరైన పేజీ టాప్ త్రీ లో ఉందా? అర్థం బట్టి, ఎనిమిది. మాటల సెర్చ్, ఏడు.",
+     "tts": "పది ప్రశ్నలు: సరైన పేజీ టాప్ త్రీ లో ఉందా?",
      "file2": "07b_storyteller.wav",
-     "tts2": "రెండూ మామూలుగా కలిపితే: ఆరు.",
-     "pause": 0.5
+     "tts2": "అర్థం బట్టి, ఎనిమిది. మాటల సెర్చ్, ఏడు. రెండూ మామూలుగా కలిపితే: ఆరు.",
+     "pause": 0.6
     },
     {
      "who": "storyteller",
@@ -345,19 +341,6 @@
      "file2": "08b_storyteller.wav",
      "tts2": "డాక్యుమెంట్ లో లేదు అంది; కానీ అది పేజీ తొంభై ఆరులో ఉంది. లేదు అంటే, పీడీఎఫ్ మీరే చూసుకోండి.",
      "pause": 0.3
-    },
-    {
-     "who": "storyteller",
-     "file": "09_storyteller.wav",
-     "text": "మీ పీడీఎఫ్ చిన్నదా? పార్ట్ వన్ లా మొత్తం పంపండి. <pause 0.4> [1] పెద్దదా, ప్రశ్నలు ఎక్కువా? అర్థం బట్టి వెతకండి; పేజీ తెలిసిన పది ప్రశ్నలతో పరీక్షించండి.",
-     "maxgap": 0.3,
-     "gap": 0.4,
-     "show": "Your PDF short? Send it whole, like Part 1. <pause 0.4> Long, or many questions? Search by meaning; test with 10 questions whose page you know.",
-     "tempo": 1.12,
-     "tts": "మీ పీడీఎఫ్ చిన్నదా? పార్ట్ వన్ లా మొత్తం పంపండి.",
-     "file2": "09b_storyteller.wav",
-     "tts2": "పెద్దదా, ప్రశ్నలు ఎక్కువా? అర్థం బట్టి వెతకండి; పేజీ తెలిసిన పది ప్రశ్నలతో పరీక్షించండి.",
-     "pause": 0.4
     }
    ]
   },
@@ -372,6 +355,10 @@
    "rise": 1.7,
    "data": {
     "beats": [
+     {
+      "prop": "habit",
+      "n": 9
+     },
      {
       "prop": "loop",
       "n": 10
@@ -417,8 +404,8 @@
      ]
     },
     "yt": {
-     "chapter": "Next: agents",
-     "title": "Next: agents",
+     "chapter": "Which one for your PDF",
+     "title": "Which one for your PDF",
      "notes": []
     },
     "handle": "@ai_maastaaru_telugu"
@@ -426,16 +413,29 @@
    "lines": [
     {
      "who": "storyteller",
+     "file": "09_storyteller.wav",
+     "text": "కొన్ని పేజీలేనా? పార్ట్ వన్ లా మొత్తం పంపండి. [1] పెద్దదా? అర్థం బట్టి వెతకండి. <pause 0.4> [2] కోడ్ రాదా? చాట్ యాప్ లో అప్‌లోడ్ చేసుకోండి. ఏదైనా, పేజీ తెలిసిన పది ప్రశ్నలతో పరీక్షించండి.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "Just a few pages? Send it whole, like Part 1. Big? Search by meaning. <pause 0.4> No code? Upload it to a chat app. Either way, test with 10 questions whose page you know.",
+     "tempo": 1.12,
+     "tts": "కొన్ని పేజీలేనా? పార్ట్ వన్ లా మొత్తం పంపండి. పెద్దదా? అర్థం బట్టి వెతకండి.",
+     "file2": "09b_storyteller.wav",
+     "tts2": "కోడ్ రాదా? చాట్ యాప్ లో అప్‌లోడ్ చేసుకోండి. ఏదైనా, పేజీ తెలిసిన పది ప్రశ్నలతో పరీక్షించండి.",
+     "pause": 0.4
+    },
+    {
+     "who": "storyteller",
      "file": "10_storyteller.wav",
-     "text": "తర్వాత: టూల్స్ ఉన్న ఏజెంట్. <pause 0.3> [1] మరి డ్రెయిన్ ప్రశ్న? డ్రెయిన్ ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి.",
+     "text": "మరి డ్రెయిన్ ప్రశ్న? <pause 0.6> [1] డ్రెయిన్ ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి. [2] తర్వాత: టూల్స్ ఉన్న ఏజెంట్.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "Next: an agent with tools. <pause 0.3> And the drain question? Clean the drain filter, page 141.",
+     "show": "And the drain question? <pause 0.6> Clean the drain filter, page 141. Next: an agent with tools.",
      "tempo": 1.12,
-     "tts": "తర్వాత: టూల్స్ ఉన్న ఏజెంట్.",
+     "tts": "మరి డ్రెయిన్ ప్రశ్న?",
      "file2": "10b_storyteller.wav",
-     "tts2": "మరి డ్రెయిన్ ప్రశ్న? డ్రెయిన్ ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి.",
-     "pause": 0.3
+     "tts2": "డ్రెయిన్ ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి. తర్వాత: టూల్స్ ఉన్న ఏజెంట్.",
+     "pause": 0.6
     }
    ]
   }

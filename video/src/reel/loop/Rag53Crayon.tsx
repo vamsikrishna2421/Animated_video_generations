@@ -55,6 +55,19 @@ const pageCard = (c: Ctx, x: number, y: number, w: number, n: number, title: str
   c.restore();
   return y + h;
 };
+// render review: the hook's bottom half was empty: the person's problem, a machine that won't drain
+const washer = (c: Ctx, x: number, y: number, k: number) => {
+  if (k <= 0) return;
+  c.save(); c.globalAlpha = clamp(k * 3);
+  c.fillStyle = "#e2e8f0"; rrect(c, x, y, 380, 440, 30); c.fill();
+  c.fillStyle = "#94a3b8"; rrect(c, x, y, 380, 80, 30); c.fill(); c.fillRect(x, y + 50, 380, 30);
+  c.fillStyle = "#1e293b"; c.beginPath(); c.arc(x + 300, y + 40, 18, 0, 7); c.fill();
+  c.fillStyle = "#475569"; c.beginPath(); c.arc(x + 190, y + 255, 135, 0, 7); c.fill();
+  c.fillStyle = "#38bdf8"; c.beginPath(); c.arc(x + 190, y + 255, 112, 0, 7); c.fill();
+  c.fillStyle = "#0ea5e9"; c.fillRect(x + 78, y + 255, 224, 0); c.beginPath(); c.arc(x + 190, y + 255, 112, 0.15, Math.PI - 0.15); c.fill();
+  c.fillStyle = "rgba(56,189,248,0.55)"; c.beginPath(); c.ellipse(x + 190, y + 470, 260, 34, 0, 0, 7); c.fill();
+  c.restore();
+};
 const stamp = (c: Ctx, t: string, x: number, y: number, k: number, col = RED, rot = -0.06) => {
   if (k <= 0) return;
   c.save(); c.translate(x, y); c.rotate(rot); c.globalAlpha = clamp(k * 3);
@@ -85,13 +98,13 @@ const StRag: React.FC<SP> = ({ s }) => {
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     if (["title", "test", "habit"].includes(b.prop)) sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 11)} src="audio/sfx_whoosh.wav" vol={0.45} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("z")} at={cue(i, 2, 0.6) - 14} src="reel/sfx_buzz.wav" vol={0.4} />, <Sfx key={k("d")} at={cue(i, 2, 0.7) + 10} src="audio/gag_ding.wav" vol={0.5} />);
-    if (b.prop === "part1") sfx.push(<Sfx key={k("b")} at={cue(i, 1, 0.4) + 18} src="reel/sfx_boom.wav" vol={0.75} />);
+    if (b.prop === "part1") sfx.push(<Sfx key={k("b")} at={cue(i, 1, 0.4) + 6} src="reel/sfx_boom.wav" vol={0.75} />);
     if (["step1", "step2", "step3"].includes(b.prop)) sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_pop.wav" vol={0.45} />, <Sfx key={k("t")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.35} />);
     if (b.prop === "step2") sfx.push(<Sfx key={k("m")} at={cue(i, 1, 0.5) + 12} src="audio/sfx_whoosh.wav" vol={0.4} />, <Sfx key={k("d")} at={cue(i, 1, 0.5) + 24} src="audio/gag_ding.wav" vol={0.45} />);
     if (b.prop === "test") sfx.push(<Sfx key={k("b")} at={cue(i, 1, 0.3) - 2} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={cue(i, 1, 0.3)} src={CLAP} vol={0.4} />, <Sfx key={k("n")} at={cue(i, 2, 0.6)} src="audio/sfx_pop.wav" vol={0.45} />, <Sfx key={k("z")} at={cue(i, 3, 0.8) + 16} src="reel/sfx_buzz.wav" vol={0.4} />);
     if (b.prop === "miss") sfx.push(<Sfx key={k("z")} at={cue(i, 1, 0.4) + 14} src="reel/sfx_buzz.wav" vol={0.45} />, <Sfx key={k("d")} at={cue(i, 2, 0.8)} src="audio/gag_ding.wav" vol={0.45} />);
-    if (b.prop === "habit") sfx.push(<Sfx key={k("p")} at={at + 8} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("q")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.4} />);
-    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 24)} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />); }
+    if (b.prop === "habit") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("q")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("r")} at={cue(i, 2, 0.6)} src="audio/sfx_pop.wav" vol={0.45} />);
+    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.3) + 2} src="audio/gag_ding.wav" vol={0.5} />, <Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />); }
   });
   return (
     <>
@@ -105,21 +118,15 @@ const StRag: React.FC<SP> = ({ s }) => {
         bg(c, W, H);
         const P = loopOn ? "hook" : b.prop;
         const code: string[] = T.code;
-        if (P === "hook") {   // script review v1: not "same answer" (the whole manual never answered); the answer itself is held for the loop
+        if (P === "hook") {   // render review: the real answer (no blur), the bottom half filled
           block(c, 50, 250, "WHOLE MANUAL · 300 PAGES", `${T.whole} tokens`, "#f87171");
           block(c, 560, 250, "3 PAGES, BY MEANING", `${T.top3} tokens`, GREEN);
-          chip(c, "✗ didn't fit our AI", 285, 470, "#fee2e2", "#7f1d1d", loopOn ? 1 : seg(f, cu(2, 0.6) - 14, cu(2, 0.6) - 6), 34);
-          chip(c, "✓ answered · page 141", 795, 470, "#dcfce7", "#14532d", loopOn ? 1 : seg(f, cu(2, 0.7) + 10, cu(2, 0.7) + 18), 34);
-          const y = chat(c, 50, 560, W - 100, "Washing machine help · 300-page manual", [{ me: true, t: T.q, k: 1 }], 36);
-          const kA = loopOn ? 1 : seg(f, cu(2, 0.7) + 10, cu(2, 0.7) + 18);
-          if (kA > 0) {   // the reply, blurred: the loop line reads it out
-            c.save(); c.globalAlpha = clamp(kA * 3);
-            c.fillStyle = "#ffffff"; rrect(c, 70, y, 760, 230, 18); c.fill();
-            c.fillStyle = "#cbd5e1"; [600, 680, 520].forEach((w, q) => { rrect(c, 95, y + 30 + q * 50, w, 26, 10); c.fill(); });
-            c.font = SANS(36, 800); c.fillStyle = INK; c.textAlign = "left"; c.fillText("(page 141)", 95, y + 200);
-            c.restore();
-            chip(c, "the answer: at the end", W / 2, y + 310, "#1e293b", "#fde68a", kA, 40);
-          }
+          const kX = loopOn ? 1 : seg(f, cu(2, 0.6) - 14, cu(2, 0.6) - 6), kA = loopOn ? 1 : seg(f, cu(2, 0.7) + 4, cu(2, 0.7) + 12);
+          chip(c, "✗ didn't fit our AI", 285, 470, "#fee2e2", "#7f1d1d", kX, 34);
+          chip(c, "✓ answered · page 141", 795, 470, "#dcfce7", "#14532d", kA, 34);
+          const y = chat(c, 50, 560, W - 100, "Washing machine help · 300-page manual", [{ me: true, t: T.q, k: 1 }, { me: false, t: T.reply, k: kA }], 38);
+          if (kA < 1) { c.save(); c.globalAlpha = 1 - clamp(kA); washer(c, W / 2 - 190, 800, 1); c.restore(); }
+          chip(c, `${T.ratio}× fewer tokens, every question`, W / 2, Math.max(y + 60, 1100), "#1e293b", "#fde68a", kA, 46);
         } else if (P === "part1") {
           c.font = SANS(fit(c, "PART 1: SEND EVERY PAGE", W - 120, 64), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("PART 1: SEND EVERY PAGE", W / 2, 330);
           const nShow = Math.floor(300 * seg(f, ln.from, cu(1, 0.4)));
@@ -127,8 +134,9 @@ const StRag: React.FC<SP> = ({ s }) => {
           const k2 = seg(f, cu(1, 0.4), cu(1, 0.4) + 12), scale = 960 / 15373;
           bar(c, 1000, `whole manual: ${T.whole} tokens`, 15373, "#f87171", k2, scale);
           bar(c, 1160, `3 pages: ${T.top3} tokens`, 247, GREEN, k2, scale);
-          stamp(c, `${T.ratio}× THE TOKENS, EVERY QUESTION`, W / 2, 1340, seg(f, cu(1, 0.4) + 18, cu(1, 0.4) + 26));
-          chip(c, `our small AI reads ${T.ctx} tokens at once: it didn't fit`, W / 2, 1450, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4) + 34, cu(1, 0.4) + 42), big(c, `our small AI reads ${T.ctx} tokens at once: it didn't fit`, 40));   // render check: was too small
+          stamp(c, `${T.ratio}× THE TOKENS, EVERY QUESTION`, W / 2, 1340, seg(f, cu(1, 0.4) + 6, cu(1, 0.4) + 14));
+          chip(c, "you pay for every token: money, or waiting", W / 2, 870, "#fde68a", INK, seg(f, endL - 34, endL - 26), big(c, "you pay for every token: money, or waiting", 44));   // render review: the cost, said plainly
+          chip(c, `and we set our small AI to ${T.ctx}: it didn't fit`, W / 2, 1460, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4) + 24, cu(1, 0.4) + 32), big(c, `and we set our small AI to ${T.ctx}: it didn't fit`, 42));   // render review: our own setting
         } else if (P === "title") {
           c.font = SANS(fit(c, "PART 2: ONLY THE PAGES THAT ANSWER", W - 100, 66), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("PART 2: ONLY THE PAGES THAT ANSWER", W / 2, 400);
           chip(c, "found by meaning, not by matching words", W / 2, 490, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.5), cu(1, 0.5) + 8), big(c, "found by meaning, not by matching words", 42));
@@ -147,6 +155,7 @@ const StRag: React.FC<SP> = ({ s }) => {
             chip(c, "page 141 → [0.04, 0.06, 0.09, … 384 numbers]", W / 2, yE + 80, "#1e293b", "#e2e8f0", seg(f, ln.from + 20, ln.from + 28), big(c, "page 141 → [0.04, 0.06, 0.09, … 384 numbers]", 40));   // the real first 3
             chip(c, "300 pages · 3.1 seconds · our computer", W / 2, yE + 185, "#dcfce7", "#14532d", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), 44);
             chip(c, "pip install transformers torch · free model: all-MiniLM-L6-v2", W / 2, yE + 290, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.6) + 24, cu(1, 0.6) + 32), big(c, "pip install transformers torch · free model: all-MiniLM-L6-v2", 34));
+            chip(c, "full code: in the pinned comment", W / 2, yE + 490, "#fde68a", INK, seg(f, ln.from + 10, ln.from + 18), 40);   // render review: the code is small on a phone
             chip(c, "our made-up pages are short (~50 tokens): split long pages into chunks first", W / 2, yE + 390, "#1e293b", "#fde68a", seg(f, cu(1, 0.6) + 40, cu(1, 0.6) + 48), big(c, "our made-up pages are short (~50 tokens): split long pages into chunks first", 32));
           }
           if (P === "step2") {
@@ -179,15 +188,16 @@ const StRag: React.FC<SP> = ({ s }) => {
             if (sub) { c.font = SANS(fit(c, sub, W - 180, 30, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(sub, 80, y + 155); }   // render check: was too small
             c.font = SANS(80, 900); c.textAlign = "right"; c.fillStyle = col; c.fillText(v, W - 80, y + 120); c.restore();
           });
-          chip(c, "of the 8: 7 answers with the right page", W / 2, 1110, "#e0e7ff", "#1e3a8a", seg(f, cu(2, 0.6) + 30, cu(2, 0.6) + 38), big(c, "of the 8: 7 answers with the right page", 40));
-          chip(c, "mixing isn't automatically better: test it", W / 2, 1230, "#1e293b", "#fca5a5", seg(f, cu(3, 0.85) + 45, cu(3, 0.85) + 53), big(c, "mixing isn't automatically better: test it", 42));
-          chip(c, "a small free AI on our computer · every reply read by hand", W / 2, 1340, "#111827", "#cbd5e1", seg(f, ln.from + 10, ln.from + 18), big(c, "a small free AI on our computer · every reply read by hand", 30));
+          chip(c, "of the 8: 7 cite the right page · 1 cites a copy of it", W / 2, 1110, "#e0e7ff", "#1e3a8a", seg(f, cu(2, 0.6) + 20, cu(2, 0.6) + 28), big(c, "of the 8: 7 cite the right page · 1 cites a copy of it", 40));
+          chip(c, "mixing isn't automatically better: test it", W / 2, 1230, "#1e293b", "#fca5a5", seg(f, cu(3, 0.85) + 26, cu(3, 0.85) + 34), big(c, "mixing isn't automatically better: test it", 42));
+          chip(c, "a small free AI on our computer · every reply read by hand", W / 2, 1350, "#111827", "#e2e8f0", seg(f, ln.from + 10, ln.from + 18), big(c, "a small free AI on our computer · every reply read by hand", 38));
         } else if (P === "miss") {   // script review v1: a wrong "not in the document", not a win
           const y = chat(c, 50, 300, W - 100, "Washing machine help · 3 pages by meaning", [{ me: true, t: T.qMiss, k: 1 }, { me: false, t: T.missReply, k: seg(f, cu(1, 0.4), cu(1, 0.4) + 6), red: true }], 36);
-          chip(c, "it was given safety pages 13, 18, 19", W / 2, y + 60, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4) + 6, cu(1, 0.4) + 14), big(c, "it was given safety pages 13, 18, 19", 40));
-          stamp(c, "✗ WRONG: CHILD LOCK IS ON PAGE 96", W / 2, y + 200, seg(f, cu(1, 0.4) + 14, cu(1, 0.4) + 22));
-          chip(c, "2 of 10 like this (also: clothes smell bad)", W / 2, y + 330, "#fee2e2", "#7f1d1d", seg(f, ln.from + 6, ln.from + 14), big(c, "2 of 10 like this (also: clothes smell bad)", 38));
-          chip(c, "\"not there\"? check the PDF yourself", W / 2, y + 450, "#dcfce7", "#14532d", seg(f, cu(2, 0.8), cu(2, 0.8) + 8), big(c, "\"not there\"? check the PDF yourself", 44));
+          chip(c, "2 of 10 like this (also: clothes smell bad)", W / 2, y + 60, "#fee2e2", "#7f1d1d", seg(f, ln.from + 6, ln.from + 14), big(c, "2 of 10 like this (also: clothes smell bad)", 40));
+          chip(c, "\"page 13\": a safety page it was given, not the answer", W / 2, y + 170, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4) + 6, cu(1, 0.4) + 14), big(c, "\"page 13\": a safety page it was given, not the answer", 40));   // render review: explain page 13
+          stamp(c, "✗ WRONG: CHILD LOCK IS ON PAGE 96", W / 2, y + 310, seg(f, cu(1, 0.4) + 14, cu(1, 0.4) + 22));
+          chip(c, "more pages wouldn't fix it: page 96 ranked 15th of 300", W / 2, y + 450, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.4) + 34, cu(1, 0.4) + 42), big(c, "more pages wouldn't fix it: page 96 ranked 15th of 300", 40));   // rank_check.py
+          chip(c, "\"not there\"? check the PDF yourself", W / 2, y + 570, "#dcfce7", "#14532d", seg(f, cu(2, 0.8), cu(2, 0.8) + 8), big(c, "\"not there\"? check the PDF yourself", 46));
         } else if (P === "habit") {   // script review v1: which one do I use with my PDF?
           c.font = SANS(fit(c, "YOUR PDF: WHICH ONE?", W - 100, 64), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("YOUR PDF: WHICH ONE?", W / 2, 320);
           const card = (y: number, top: string, sub: string, col: string, k: number) => {
@@ -196,26 +206,25 @@ const StRag: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, top, W - 180, 44, 900), 900); c.fillStyle = col; c.textAlign = "center"; c.fillText(top, W / 2, y + 80);
             c.font = SANS(fit(c, sub, W - 180, 36, 800), 800); c.fillStyle = "#f8fafc"; c.fillText(sub, W / 2, y + 145); c.restore();
           };
-          card(380, "SHORT · fits with room to spare", "send it whole, with page numbers (Part 1)", "#93c5fd", seg(f, ln.from + 4, ln.from + 12));
-          card(600, "LONG · or lots of questions", "search by meaning, send the top 3 (Part 2)", GREEN, seg(f, cu(1, 0.4), cu(1, 0.4) + 8));
-          const kT = seg(f, cu(1, 0.4) + 30, cu(1, 0.4) + 38);
+          card(380, "A FEW PAGES · fits with room to spare", "send it whole, with page numbers (Part 1)", "#93c5fd", seg(f, ln.from + 2, ln.from + 10));
+          card(600, "LONG · or lots of questions", "search by meaning, send the top 3 (Part 2)", GREEN, seg(f, cu(1, 0.3), cu(1, 0.3) + 8));
+          chip(c, "no code? upload it to a chat app", W / 2, 880, "#fde68a", INK, seg(f, cu(2, 0.6), cu(2, 0.6) + 8), big(c, "no code? upload it to a chat app", 50));   // render review: said out loud now
+          const kT = seg(f, cu(2, 0.6) + 40, cu(2, 0.6) + 48);
           if (kT > 0) {
             c.save(); c.globalAlpha = clamp(kT * 3);
-            c.font = SANS(40, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("then test: 10 questions, the right page first", W / 2, 880);
+            c.font = SANS(fit(c, "either way: 10 questions, the right page first", W - 100, 44, 900), 900); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText("either way: 10 questions, the right page first", W / 2, 1010);
             const hits: boolean[] = T.hits;
-            hits.forEach((h, q) => { const x = 130 + q * 91; c.fillStyle = h ? GREEN : "#f87171"; c.beginPath(); c.arc(x, 960, 34, 0, 7); c.fill(); c.font = SANS(36, 900); c.fillStyle = "#0b1220"; c.fillText(h ? "✓" : "✗", x, 973); });
-            c.font = SANS(36, 800); c.fillStyle = "#e2e8f0"; c.fillText("ours: 8 of 10", W / 2, 1060);
+            hits.forEach((h, q) => { const x = 130 + q * 91; c.fillStyle = h ? GREEN : "#f87171"; c.beginPath(); c.arc(x, 1090, 34, 0, 7); c.fill(); c.font = SANS(36, 900); c.fillStyle = "#0b1220"; c.fillText(h ? "✓" : "✗", x, 1103); });
+            c.font = SANS(40, 800); c.fillStyle = "#e2e8f0"; c.fillText("ours: 8 of 10", W / 2, 1195);
             c.restore();
           }
-          chip(c, "no code?", W / 2, 1170, "#fde68a", INK, seg(f, cu(1, 0.4) + 48, cu(1, 0.4) + 56), 40);   // render check: one long chip was too small
-          chip(c, "upload the PDF to a chat app, ask the same 10", W / 2, 1270, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.4) + 52, cu(1, 0.4) + 60), big(c, "upload the PDF to a chat app, ask the same 10", 42));
-        } else if (P === "loop") {
-          c.font = SANS(fit(c, "NEXT · EP54: AN AGENT WITH TOOLS", W - 120, 62), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("NEXT · EP54: AN AGENT WITH TOOLS", W / 2, 400);
-          const kf = seg(f, cu(1, 0.02), cu(1, 0.02) + 8);
-          if (kf > 0) {
-            c.save(); c.globalAlpha = clamp(kf * 3);
-            const y = chat(c, 50, 500, W - 100, "Washing machine help · 3 pages by meaning", [{ me: true, t: T.q, k: 1 }, { me: false, t: T.reply, k: 1 }], 36);
-            chip(c, `${T.top3} tokens, not ${T.whole}`, W / 2, y + 70, "#dcfce7", "#14532d", 1, 50);
+        } else if (P === "loop") {   // render review: the answer first, then "next"
+          const y = chat(c, 50, 300, W - 100, "Washing machine help · 3 pages by meaning", [{ me: true, t: T.q, k: 1 }, { me: false, t: T.reply, k: seg(f, cu(1, 0.3), cu(1, 0.3) + 6) }], 38);
+          chip(c, `${T.top3} tokens, not ${T.whole}`, W / 2, y + 70, "#dcfce7", "#14532d", seg(f, cu(1, 0.3) + 12, cu(1, 0.3) + 20), 50);
+          const kN = seg(f, cu(2, 0.6), cu(2, 0.6) + 8);
+          if (kN > 0) {
+            c.save(); c.globalAlpha = clamp(kN * 3);
+            c.font = SANS(fit(c, "NEXT · EP54: AN AGENT WITH TOOLS", W - 120, 62), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("NEXT · EP54: AN AGENT WITH TOOLS", W / 2, y + 230);
             c.restore();
           }
         }
