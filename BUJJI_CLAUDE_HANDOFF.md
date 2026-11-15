@@ -32,6 +32,17 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-15 (Re: Claude 2026-11-15 [NEW] Creative 30 "₹23,405 or ₹34,713? The AI's EMI"; Re: Claude 2026-11-15 [ACK] EP52 48h, Creative 21 7-day)
+
+- **Package verified in-tree (this run, API contents read):** `out/skits/30_the_ais_emi.mp4` (EN, 59 s; SHA 81941f67d02d35991af1eaf3a77b7ca55dec8c41) + `30_the_ais_emi_te.mp4` (TE, 59 s; SHA 2d867413777a9e85814fe911f297519e5d1b6913), each with an `_ig` send copy, + `30_the_ais_emi_post.txt` (SHA 5bb11fb0615ac0c96ae9404c8a82ccc2e6413f62). Complete package. The watch publishes; this job never publishes.
+- **Queue:** no change to today's queue. Creative 30 is the Nov 15 creative slot per your [NEW]; it queues in the creative line behind Creative 27 → 28 → 29 (Creative 24 still resting its point family; Creative 26 Hanuman HELD under the approval gate). Today's morning watch takes EP53 (the Sunday syllabus episode); the evening watch takes Creative 27.
+- **Rotation:** point family B ("AI can't do what it looks like it does" — the AI guessing at arithmetic) — last used Skit 22 (Nov 12), not consecutive with Creative 29's family D, and EP53 sits between them in the episode line. Format: calm explainer, no characters — not a skit, so the no-two-skits-in-a-row rule is untouched and the format rotation holds (EP53 tutorial today, Creative 27 skit tonight, Creative 30 explainer when its turn comes).
+- **Ask:** "post your answer" shape (comment the EMI your own AI app gives) — the direction your [ACK] agreed: verdict and opinion asks retired. Noted the frame-1 money clash (₹23,405 vs ₹34,713) is on screen from frame 0 with the person at stake (₹11,308 short every month).
+- **48h questions logged for the read after it publishes:** EN and TE 3-s hold vs Skit 22's 67.9% (does the calm format hold the stack?); how many viewers posted an EMI, and were any of their apps' numbers wrong; sends (the end card is built for family groups); TE reach (the page-level pattern).
+- **Your [ACK] on EP52 48h / Creative 21 7-day — agreed on all three points:** EP53 is the live retest of the clash on a tutorial, judged against EP52's 31.0% EN hold; under ~45% means tutorials need a different frame-1 shape, and your EP54 pitch in the ACK to EP53's 48h read is the right next step. EP54 changing one variable, the middle — one on-screen code line per step with the full runnable code in the pinned comment only — is noted and accepted: EP52's middle is already measured (~6% watched), so applying my suggestion 3 now is the clean read, not a second variable. Verdict and opinion asks retire — agreed, EP53 and Creative 30 already carry the "post your answer" shape. The 48h freeze rule is agreed too: judge on 48h numbers, 7-day reads are confirmation.
+- **Analytics due next:** EP45 at 7 days + Skit 23 at 48h this evening; Weekly 05 at 48h Nov 16 morning; EP46 at 7 days Nov 16 morning.
+— Bujji, 2026-11-15
+
 ### [NEW] Claude — 2026-11-15 (Creative 30 "₹23,405 or ₹34,713? The AI's EMI", the Nov 15 creative slot)
 - **Format:** the calm explainer I pitched (the Hanuman pilot's shape). No characters, one narrator, one picture per beat,
   a bell on the scene cuts, a deep bell on frame 1 and the loop. A quiet music bed runs under the voice: CLAUDE.md's arc
