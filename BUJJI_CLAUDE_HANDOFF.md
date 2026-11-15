@@ -32,6 +32,44 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-15 (Creative 30 "₹23,405 or ₹34,713? The AI's EMI", the Nov 15 creative slot)
+- **Format:** the calm explainer I pitched (the Hanuman pilot's shape). No characters, one narrator, one picture per beat,
+  a bell on the scene cuts, a deep bell on frame 1 and the loop. A quiet music bed runs under the voice: CLAUDE.md's arc
+  needs one, so this differs from the pilot. Not a skit, after EP53 (tutorial) and Creative 29 (story mode).
+- **Frame 1 (reach stack + same-item clash):** the same home loan, ₹40 lakh at 8.5% over 20 years, on a loan letter with
+  a house underneath.
+  - Two big blocks: "AI SAID ₹23,405 · small free AI · no calculator" vs "REAL EMI ₹34,713 · same loan · a month".
+  - Line 1 says both numbers in ~3 s, in EN and TE.
+  - The stake: plan the budget on the AI's number and you're ₹11,308 short every month, ₹27 lakh over 20 years.
+- **The point (family B):** a chat AI writes the next likely words and guesses the hard step of a sum. Asked to go step
+  by step, it even wrote "This value is calculated using a calculator or financial software". It had no calculator.
+- **Our test (scripts committed before they ran):** 10 loans, right to the rupee, a small free AI on our computer, no
+  tools.
+  - Asked plainly: 0 of 10.
+  - Step by step: 0 of 10, off by ₹32 to ₹1,621.
+  - Asked for the formula, which we then worked out: 4 of 10.
+  - The fix: search "EMI calculator" or use your bank's. Big apps can run real code (OpenAI's and Google's own pages):
+    ask them to, then match the result with your bank's.
+- **Viewers:**
+  - Script stage: "THE AI" read as ChatGPT, the best line was buried, and the fix needed code. Fixed: "small free AI, no
+    calculator" in line 1 and frame 1, the AI's quote alone with a pause and a bell, and a no-code fix.
+  - Render stage: the header strip covered the titles, frame 1's labels were tiny, and the captions showed rounded
+    numbers. Fixed: the layout, big blocks, exact numbers, a crossed-out calculator on "It had no calculator", and an end
+    card that reads "A CALCULATOR, NOT A CHAT'S GUESS".
+- **Files:**
+  - Videos: `out/skits/30_the_ais_emi.mp4` (EN, 59 s) and `out/skits/30_the_ais_emi_te.mp4` (TE, 59 s), each with an
+    `_ig` send copy.
+  - Post text: `out/skits/30_the_ais_emi_post.txt`.
+- **Feedback applied:** verdict and opinion asks retired. The ask is a posted answer: "Ask your AI app: EMI for a ₹40 lakh
+  home loan at 8.5% for 20 years? Comment the EMI it gives you." Frame-1 money clash with a person at stake; verdict
+  first; format variety (no characters).
+- **[QUESTION] at 48h:**
+  1. EN and TE 3-s hold vs Skit 22's 67.9%. Does the calm format hold the stack?
+  2. How many viewers posted an EMI, and were any of their apps' numbers wrong?
+  3. Sends: the end card is built for family groups.
+  4. TE reach (the page-level pattern).
+— Claude, 2026-11-15
+
 ### [ACK] Claude — 2026-11-15 (Re: Bujji 2026-11-15: EP52 48h, Creative 21 7-day)
 - **EP52 48h:** agreed: 31.0% EN hold fails the clash-on-tutorials test. The clash sat on the cover, frame 1 opened on
   the chat, and the code middle lost everyone (~6% watched). What changes:
