@@ -1,4 +1,4 @@
-# EP53 "Build RAG over your PDFs, Part 2" (Season 6, a screen tutorial) · queue 057 · script v2, Nov 15
+# EP53 "Build RAG over your PDFs, Part 2" (Season 6, a screen tutorial) · queue 057 · script v3, Nov 15
 
 ## The format
 A screen tutorial (Season 6), one narrator, the code and a chat drawn in our crayon style (as EP51, EP52). Verdict
@@ -68,29 +68,46 @@ what to do with my own PDF. Must-fixes and changes:
 7. Sound: a boom on the 62x stamp, a whoosh and a ding on banging -> knocking, the drop before "eight" kept.
 8. Caption ask changed to the video's own habit: post one question and the page it should find.
 
-## Script (English, v2; narrator)
-1. (hook) Fifteen thousand tokens, or two hundred and forty-seven? One question, a 300-page manual: the whole thing didn't fit our small AI. Three pages answered it: page 141.
-2. (part1) Part 1 sent every page. Even when it fits, that's about sixty times the tokens, with every question.
-3. (title) Part 2: send only the pages that answer, found by meaning.
-4. (step1) Step one: turn every page into numbers, once. Three hundred pages: three seconds, on our computer.
-5. (step2) Step two: turn the question into numbers too, and take the three closest pages. 'Banging' found 'knocking': different words, same meaning.
-6. (step3) Step three: send those pages, with their page numbers and Part 1's rules.
-7. (test) Ten questions: right page in the top three? By meaning, eight. Word search, seven. | Both mixed, the simple way: six.
-8. (miss) It missed two. The child lock: 'not in the document', but it's on page 96. 'Not there'? Check the PDF.
-9. (habit) Short PDF? Send it whole, like Part 1. Long, or lots of questions? Search by meaning, and test ten questions you know the page for.
-10. (loop) Next: an agent with tools. And the drain question? Clean the drain filter, page 141.
+## Render review (human-viewer, v2 render, 77.4 s) and what changed (v3)
+Both viewers: "banging found knocking" is the only moment that lands; the blurred-answer tease annoys; the payoff came
+after "Next" and ran into it ("an agent with tools and the drain question"); sound flat across quarters.
+1. Ending: the answer first ("And the drain question? | Clean the drain filter, page 141"), 0.6 s pause, then "Next".
+2. Line 9 now says the no-code route out loud ("No code? Upload it to a chat app") and "short" became "a few pages".
+3. One ratio, 62x, said and shown; "Here," cut; "you pay for every one" (on screen: money, or waiting); on screen
+   "we set our small AI to 4,096: it didn't fit" (our own setting, said plainly). Voice says "over fifteen thousand".
+4. Small text enlarged (Part 1 chip, word-search sub-line, the no-code chip, the test footer); "full code: in the
+   pinned comment" in step 1.
+5. Miss scene: "page 13" explained (a safety page it was given); a new check, pipeline/ep53/rank_check.py: more pages
+   wouldn't fix it (page 96 ranked 15th of 300; the other miss, page 69, 88th); the 8th hit "cites a copy of the page".
+6. Sound: line 7 split so the drop before "eight" lands in a 0.6 s pause; lines 9-10 moved into the outro scene with a
+   rise to 2.0 so the last quarter lifts; ding on the drain answer.
+7. Hook: the real answer replaces the blur; a washing machine (water not draining) fills the bottom half until it lands.
+Not changed: the "Part 2" banner in the first 2 s (the series frame), and the gap music level (CLAUDE.md wants it louder
+in gaps).
 
-## Script (Telugu, v2)
+## Script (English, v3; narrator)
+1. (hook) Over fifteen thousand tokens, or two hundred and forty-seven? One question, a 300-page manual: the whole thing didn't fit our small AI. Three pages answered it: page 141.
+2. (part1) Part 1 sent every page. That's sixty-two times the tokens, every question, and you pay for every one.
+3. (title) Part 2: send only the pages that answer, found by meaning.
+4. (step1) Step one: turn every page into numbers, once. Three hundred pages: three seconds.
+5. (step2) Step two: do the same to the question, and take the three closest pages. 'Banging' found 'knocking': different words, same meaning.
+6. (step3) Step three: send those pages, with their page numbers and Part 1's rules.
+7. (test) Ten questions: right page in the top three? | By meaning, eight. Word search, seven. Both mixed, the simple way: six.
+8. (miss) It missed two. The child lock: 'not in the document', but it's on page 96. 'Not there'? Check the PDF.
+9. (habit) A few pages? Send it whole, like Part 1. Long? Search by meaning. No code? Upload it to a chat app. Either way, test ten questions you know the page for.
+10. (loop) And the drain question? | Clean the drain filter, page 141. Next: an agent with tools.
+
+## Script (Telugu, v3)
 1. పదిహేను వేల టోకెన్లా, రెండు వందల నలభై ఏడు టోకెన్లా? మూడొందల పేజీల మాన్యువల్ కి ఒకే ప్రశ్న: మొత్తం మాన్యువల్ మా చిన్న మోడల్ కి పట్టలేదు. మూడు పేజీలతో, పేజీ నూట నలభై ఒకటి నుంచి జవాబు వచ్చింది.
-2. పార్ట్ వన్ లో ప్రతి పేజీ పంపాం. పట్టినా సరే, ప్రతి ప్రశ్నకీ దాదాపు అరవై రెట్లు టోకెన్లు.
+2. పార్ట్ వన్ లో ప్రతి పేజీ పంపాం. అది అరవై రెండు రెట్లు టోకెన్లు, ప్రతి ప్రశ్నకీ; ప్రతి టోకెన్ కీ ఖర్చే.
 3. పార్ట్ టూ: జవాబు ఉన్న పేజీలే పంపండి. వాటిని అర్థం బట్టి వెతకండి.
 4. స్టెప్ వన్: ప్రతి పేజీని ఒక్కసారే నంబర్లుగా మార్చండి. మూడొందల పేజీలకి మూడు సెకన్లు, మా కంప్యూటర్ లోనే.
 5. స్టెప్ టూ: ప్రశ్నని కూడా నంబర్లుగా మార్చి, దగ్గరగా ఉన్న మూడు పేజీలు తీసుకోండి. | ప్రశ్నలో ఒక మాట, పేజీలో వేరే మాట; అర్థం ఒకటే, అందుకే పేజీ దొరికింది.
 6. స్టెప్ త్రీ: ఆ పేజీలని, పేజీ నంబర్లతో, పార్ట్ వన్ రూల్స్ తో పంపండి.
-7. పది ప్రశ్నలు: సరైన పేజీ టాప్ త్రీ లో ఉందా? అర్థం బట్టి, ఎనిమిది. మాటల సెర్చ్, ఏడు. | రెండూ మామూలుగా కలిపితే: ఆరు.
-8. రెండు మిస్ అయ్యాయి. చైల్డ్ లాక్: డాక్యుమెంట్ లో లేదు అంది, కానీ అది పేజీ తొంభై ఆరులో ఉంది. లేదు అంటే, పీడీఎఫ్ మీరే చూసుకోండి.
-9. మీ పీడీఎఫ్ చిన్నదా? పార్ట్ వన్ లా మొత్తం పంపండి. పెద్దదా, ప్రశ్నలు ఎక్కువా? అర్థం బట్టి వెతకండి, తర్వాత పేజీ తెలిసిన పది ప్రశ్నలతో టెస్ట్ చేసుకోండి.
-10. తర్వాత: టూల్స్ ఉన్న ఏజెంట్. | మరి డ్రెయిన్ ప్రశ్న? డ్రెయిన్ ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి.
+7. పది ప్రశ్నలు: సరైన పేజీ టాప్ త్రీ లో ఉందా? | అర్థం బట్టి, ఎనిమిది. మాటల సెర్చ్, ఏడు. రెండూ మామూలుగా కలిపితే: ఆరు.
+8. రెండు తప్పాయి. చైల్డ్ లాక్ ప్రశ్నకి, | డాక్యుమెంట్ లో లేదు అంది; కానీ అది పేజీ తొంభై ఆరులో ఉంది. లేదు అంటే, పీడీఎఫ్ మీరే చూసుకోండి.
+9. కొన్ని పేజీలేనా? పార్ట్ వన్ లా మొత్తం పంపండి. పెద్దదా? అర్థం బట్టి వెతకండి. | కోడ్ రాదా? చాట్ యాప్ లో అప్‌లోడ్ చేసుకోండి. ఏదైనా, పేజీ తెలిసిన పది ప్రశ్నలతో పరీక్షించండి.
+10. మరి డ్రెయిన్ ప్రశ్న? | డ్రెయిన్ ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి. తర్వాత: టూల్స్ ఉన్న ఏజెంట్.
 
 ## Caption ask (post your answer)
 "Post one question you'd ask your own PDF, and the page it should find."

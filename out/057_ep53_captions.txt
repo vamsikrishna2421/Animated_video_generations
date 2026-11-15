@@ -1,5 +1,5 @@
 UPLOAD: 057
-VIDEO: 057_ep53_15373_tokens_or_247.mp4  (a screen tutorial, ~77 s, AI voice in the Creative 21 standard; send copy: 057_ep53_15373_tokens_or_247_ig.mp4). It loops: "And the drain question? Clean the drain filter, page 141." and it is frame 1 again (15,373 tokens vs 247).
+VIDEO: 057_ep53_15373_tokens_or_247.mp4  (a screen tutorial, ~79 s, AI voice in the Creative 21 standard; send copy: 057_ep53_15373_tokens_or_247_ig.mp4). It ends: "And the drain question? Clean the drain filter, page 141. Next: an agent with tools." and loops to frame 1 (15,373 tokens vs 247).
 
 === CAPTION ===
 "Water is not going out of my machine. What do I check?" One question to a 300-page manual. Sending the whole manual: 15,373 tokens, too big for our small AI. Sending the 3 pages found by meaning: 247 tokens, and the answer, page 141.
@@ -13,10 +13,10 @@ Our test, a 300-page manual we wrote for a made-up washing machine, ten question
 - right page in the top 3, by meaning: 8 of 10
 - Part 1's word search, top 3: 7 of 10 (in Part 1 it got 1 of 10 because it took only the top page, the cover)
 - both mixed, the simple way (reciprocal rank fusion): 6 of 10. Mixing isn't automatically better: test it.
-Of the 8 found, 7 answers came with the right page. The 2 misses both said "Not in the document" (child lock is on page 96). So when it says "not there", check the PDF yourself.
+Of the 8 found, 7 answers cite the right page and 1 cites a copy of it. The 2 misses both said "Not in the document" (the child lock is on page 96). Taking more pages wouldn't have fixed it: page 96 ranked 15th of 300. So when it says "not there", check the PDF yourself.
 
-Which one for your PDF? Short, fits with room to spare: send it whole, with page numbers (Part 1). Long, or lots of questions: search by meaning and send the top 3 (Part 2). Either way, test it with 10 questions whose page you already know. No code? Upload the PDF to a chat app and run the same 10 questions.
-(The whole manual is about 62 times the tokens of the 3 pages, with every question. Our made-up pages are short, about 50 tokens each; split long pages into chunks first.)
+Which one for your PDF? A few pages, fits with room to spare: send it whole, with page numbers (Part 1). Long, or lots of questions: search by meaning and send the top 3 (Part 2). Either way, test it with 10 questions whose page you already know. No code? Upload the PDF to a chat app and run the same 10 questions.
+(The whole manual is 62 times the tokens of the 3 pages, with every question, and you pay for every token: money on a paid AI, waiting time on your own computer. We set our small AI to read 4,096 tokens at once, so the whole manual didn't fit at all. Our made-up pages are short, about 50 tokens each; split long pages into chunks first.)
 
 Next: an agent with tools.
 Follow @ai_maastaaru for the full series.
@@ -37,7 +37,7 @@ scores = (page_vecs @ q_vec).tolist()   # cosine similarity
 top3 = sorted(range(len(pages)), key=lambda i: -scores[i])[:3]   # best first
 doc = "\n\n".join(f"--- page {i+1} ---\n{pages[i]}" for i in top3)
 messages = [{"role": "system", "content": RULES}, {"role": "user", "content": f"Document:\n{doc}\n\nQuestion: {question}"}]
-How we tested (Nov 15, 2026): a 300-page manual for a made-up "WM-900" washing machine (programs, error codes, parts and prices, warranty, service), Qwen2.5-7B-Instruct (4-bit) on llama.cpp's OpenAI-compatible server with a 4,096-token context setting, temperature 0.2; embeddings with sentence-transformers/all-MiniLM-L6-v2 (texts cut at 256 tokens, so split long pages); ten everyday questions with the right page fixed before the run; every reply read by hand. Whole manual: 15,373 tokens. The 3 pages: 197 to 252 prompt tokens a question (the drain question: 247). Word search = the page sharing the most rare words; the mix = reciprocal rank fusion of both full rankings (k = 60), which lost two pages that meaning had found. Bigger models and better embedding models may do better; count your own.
+How we tested (Nov 15, 2026): a 300-page manual for a made-up "WM-900" washing machine (programs, error codes, parts and prices, warranty, service), Qwen2.5-7B-Instruct (4-bit) on llama.cpp's OpenAI-compatible server with a 4,096-token context setting, temperature 0.2; embeddings with sentence-transformers/all-MiniLM-L6-v2 (texts cut at 256 tokens, so split long pages); ten everyday questions with the right page fixed before the run; every reply read by hand. Whole manual: 15,373 tokens. The 3 pages: 197 to 252 prompt tokens a question (the drain question: 247). Word search = the page sharing the most rare words; the mix = reciprocal rank fusion of both full rankings (k = 60), which lost two pages that meaning had found. Where the right page ranked by meaning (rank_check.py): 8 questions 1st or 2nd; the child lock page 15th, the smell page 88th, so top 5 or top 10 would not have caught them. Bigger models and better embedding models may do better; count your own.
 
 === COVER ===
 Frame 1: two blocks, "WHOLE MANUAL · 300 PAGES: 15,373 tokens" (red) and "3 PAGES, BY MEANING: 247 tokens" (green), over a chat "Washing machine help · 300-page manual" with the question "Water is not going out of my machine. What do I check?".
