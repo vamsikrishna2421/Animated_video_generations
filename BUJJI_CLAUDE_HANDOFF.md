@@ -32,6 +32,53 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-15 (EP53 "15,373 Tokens or 247? Build RAG Over Your PDFs, Part 2", the Sunday syllabus episode, queue 057)
+- **Format:** a screen tutorial (Season 6), one narrator. It follows Creative 29 (story mode), so there are no two skits in a row.
+- **Frame 1 (the clash rule, now for tutorials too, per your HOW TO 04 48h read):** a same-item count clash from our own
+  test, on screen from frame 0: "WHOLE MANUAL · 300 PAGES: 15,373 tokens" (red) vs "3 PAGES, BY MEANING: 247 tokens"
+  (green).
+  - The person at stake is a real question, "Water is not going out of my machine. What do I check?", with a washing
+    machine drawn under it.
+  - Then "✗ didn't fit our AI" vs "✓ answered · page 141", and the real answer.
+  - Verdict first. Telugu line 1 opens on the clash.
+- **The lesson:** Part 1 sent every page, which here is 62x the tokens on every question. Part 2 sends only the pages
+  that answer, found by meaning:
+  1. Turn every page into numbers once.
+  2. Do the same to the question and take the 3 closest pages ("banging" found "knocking").
+  3. Send those pages with their page numbers and Part 1's rules.
+  - Which one for your PDF: a few pages, send it whole; long, search by meaning; no code, upload it to a chat app. Either
+    way, test 10 questions whose page you know.
+- **Our test (each script committed before it ran):** a 300-page manual we wrote for a made-up washing machine, ten
+  questions with the right page fixed first, a small free AI on our computer, every reply read by hand. Right page in
+  the top 3:
+  - by meaning: 8 of 10
+  - word search: 7 of 10
+  - both mixed, the simple way: 6 of 10
+  - The 2 misses said "Not in the document" (the child lock page ranked 15th).
+- **Viewers:**
+  - Script stage: they caught a contradiction ("same answer" though the whole manual never fit) and asked what to do with
+    their own PDF. Fixed: a which-one line and the real reason (62x tokens, our own 4,096 setting).
+  - Render stage: the blurred-answer tease annoyed both, the answer came after "Next", and the sound was flat. Fixed: the
+    answer up front and again at the end before "Next", the no-code route spoken, the drop before "eight" in a 0.6 s
+    pause, and a rise into the last quarter.
+  - Confirmation pass: caught an overclaim ("more pages wouldn't fix it") and the wrong page numbers under the drain
+    question. Both fixed.
+  - Telugu: no "నాకింగ్"/"బ్యాంగింగ్" in the voice, "ఒక్కసారే", "ఎలా చేసినా", and "తొంభై ఆరో పేజీలో" for a clear 96.
+- **Files:**
+  - Videos: `out/057_ep53_15373_tokens_or_247.mp4` (EN, 80 s) and `out/telugu_page/057_ep53_insta_te.mp4` (TE, 86 s),
+    each with an `_ig` send copy.
+  - Captions: `out/057_ep53_captions.txt` (the pinned comment has runnable code), `out/telugu_page/057_ep53_captions_te.txt`.
+  - YouTube: `out/youtube/057_ep53_youtube.txt`.
+- **Feedback applied:** frame-1 clash in a tutorial (HOW TO 04 48h); try-it retired (0-for-4); verdict first; Telugu line 1
+  on the clash.
+- **Ask (post your answer, Skit 22's lesson):** "Post one question you'd ask your own PDF, and the page it should find."
+- **[QUESTION] at 48h:**
+  1. Hold at 3 s and the drop-off point: does the code screen (~0:24) lose people?
+  2. Comment count and what people posted (real questions + pages, or "how many pages is too many?").
+  3. Saves vs EP52: the which-one card and the runnable pinned code are save bait.
+  4. TE reach (the page-level pattern we're watching).
+— Claude, 2026-11-15
+
 ### [ACK] Claude — 2026-11-15 (Re: Bujji 2026-11-14 evening: Skit 22 48h, EP44 7-day)
 - **Skit 22 48h:** agreed, a breakout (67.9% EN hold, 2,609 reach), and the TE hold gap closed to ~3 points. Story mode plus a
   frame-1 money clash is now the shape to hold. What changes:
