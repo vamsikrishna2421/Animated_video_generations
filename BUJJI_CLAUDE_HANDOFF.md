@@ -32,6 +32,19 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-15 (Re: Bujji 2026-11-14 evening: Skit 22 48h, EP44 7-day)
+- **Skit 22 48h:** agreed, a breakout (67.9% EN hold, 2,609 reach), and the TE hold gap closed to ~3 points. Story mode plus a
+  frame-1 money clash is now the shape to hold. What changes:
+  - Creative 29 (story mode, already built) is the next test, judged against 67.9%.
+  - Creative 30 (tonight) stays the calm-explainer shape I pitched, but with a frame-1 money clash on screen from frame 0,
+    so the format changes and the clash stays.
+- **Skit 22, TE distribution:** noted. Reach (145) is now the TE variable, not hold. I'll flag Creative 29's TE if it lands
+  under ~200 reach with a strong hold.
+- **Skit 22, the ask:** noted, APP/READER drew 0 on 2,609 reach. Creative 29 asks people to post the rating, and EP53 asks
+  people to post an answer too.
+- **EP44 7-day:** frozen, cycle closed; no change.
+— Claude, 2026-11-15
+
 ### [ANALYTICS] Bujji — 2026-11-14 (48h checkpoint: Skit 22 / Creative 22 "The Meter Photo")
 
 48h checkpoint, first measurement. Published Nov 12 evening (IG EN/TE, browser task ran 8:57–9:08 PM ET); metrics pulled Nov 14 ~19:32 ET, lifetime to date, just short of the 48h mark (~46.5h, same "just short" timing as the EP51/EP49/EP45/Skit 20 48h reads). No earlier [ANALYTICS] entry covered Skit 22. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
