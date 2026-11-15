@@ -1,0 +1,591 @@
+{
+ "id": "ep53te",
+ "title": "15,373 Tokens or 247? Build RAG Over Your PDFs, Part 2 (EP53) (Telugu audio)",
+ "label": "EP53",
+ "banner": "Build RAG over your PDFs, Part 2",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.2,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_rag53",
+   "tail": 0.0,
+   "boost": 1.2,
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "part1",
+      "n": 2
+     },
+     {
+      "prop": "title",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q": "Water is not going out of my machine. What do I check?",
+     "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+     "qMiss": "How do I stop my child from changing the wash settings?",
+     "missReply": "Not in the document. (page 13)",
+     "q5": "The machine is jumping and banging when it spins. Why?",
+     "p48": "If they are left in, the machine shakes, moves and makes loud knocking noises during the spin.",
+     "rows": [
+      [
+       "clothes smell bad",
+       69
+      ],
+      [
+       "water not going out",
+       141
+      ],
+      [
+       "silk saree?",
+       63
+      ],
+      [
+       "door seal price",
+       262
+      ],
+      [
+       "jumping and banging",
+       48
+      ],
+      [
+       "motor guarantee",
+       284
+      ],
+      [
+       "E35 on the screen",
+       155
+      ],
+      [
+       "stop my child changing settings",
+       96
+      ],
+      [
+       "dish liquid?",
+       104
+      ],
+      [
+       "who repairs it?",
+       291
+      ]
+     ],
+     "hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "whole": "15,373",
+     "top3": "247",
+     "ctx": "4,096",
+     "pages": "300",
+     "code": [
+      "embed = embedder()  # all-MiniLM-L6-v2, on our computer",
+      "page_vecs = embed(pages)   # 300 pages, once",
+      "q_vec = embed([question])[0]",
+      "scores = page_vecs @ q_vec   # how close each page is",
+      "top3 = scores.argsort()[-3:]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{pages[i]}\"",
+      "              for i in top3)",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "15,373 tokens or 247?",
+     "title": "15,373 tokens or 247?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "పదిహేను వేల టోకెన్లా, రెండు వందల నలభై ఏడు టోకెన్లా? [1] ఒకే ప్రశ్న, మూడొందల పేజీల మాన్యువల్ నుంచి ఒకే జవాబు: డ్రెయిన్ ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "15,373 tokens, or 247? Same question, same answer from a 300-page manual: clean the drain filter, page 141.",
+     "tempo": 1.05
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "పార్ట్ వన్ లో ప్రతి పేజీ పంపాం. [1] ఇక్కడ అది ప్రతి ప్రశ్నకీ పదిహేను వేల టోకెన్లు; మా చిన్న చాట్‌బాట్ సెట్టింగ్ పట్టేది నాలుగు వేలే.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "In Part 1 we sent every page. Here that's 15,373 tokens a question; our small chatbot's setting holds only 4,096.",
+     "tempo": 1.05
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "పార్ట్ టూ: జవాబు ఉన్న పేజీలే పంపండి. [1] వాటిని వెతకడానికి, అర్థం బట్టి సెర్చ్.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Part 2: send only the pages with the answer. To find them, search by meaning.",
+     "tempo": 1.05
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_rag53",
+   "tail": 0.0,
+   "boost": 0.85,
+   "lift": 0.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "step1",
+      "n": 4
+     },
+     {
+      "prop": "step2",
+      "n": 5
+     },
+     {
+      "prop": "step3",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q": "Water is not going out of my machine. What do I check?",
+     "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+     "qMiss": "How do I stop my child from changing the wash settings?",
+     "missReply": "Not in the document. (page 13)",
+     "q5": "The machine is jumping and banging when it spins. Why?",
+     "p48": "If they are left in, the machine shakes, moves and makes loud knocking noises during the spin.",
+     "rows": [
+      [
+       "clothes smell bad",
+       69
+      ],
+      [
+       "water not going out",
+       141
+      ],
+      [
+       "silk saree?",
+       63
+      ],
+      [
+       "door seal price",
+       262
+      ],
+      [
+       "jumping and banging",
+       48
+      ],
+      [
+       "motor guarantee",
+       284
+      ],
+      [
+       "E35 on the screen",
+       155
+      ],
+      [
+       "stop my child changing settings",
+       96
+      ],
+      [
+       "dish liquid?",
+       104
+      ],
+      [
+       "who repairs it?",
+       291
+      ]
+     ],
+     "hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "whole": "15,373",
+     "top3": "247",
+     "ctx": "4,096",
+     "pages": "300",
+     "code": [
+      "embed = embedder()  # all-MiniLM-L6-v2, on our computer",
+      "page_vecs = embed(pages)   # 300 pages, once",
+      "q_vec = embed([question])[0]",
+      "scores = page_vecs @ q_vec   # how close each page is",
+      "top3 = scores.argsort()[-3:]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{pages[i]}\"",
+      "              for i in top3)",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Search by meaning: 3 steps",
+     "title": "Search by meaning: 3 steps",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "స్టెప్ వన్: ప్రతి పేజీని ఒకసారి నంబర్ల లిస్ట్ గా మార్చండి. [1] మూడొందల పేజీలకి మూడు సెకన్లు, మా కంప్యూటర్ లోనే.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Step 1: turn every page into a list of numbers, once. 300 pages took 3 seconds, on our computer.",
+     "tempo": 1.05
+    },
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "స్టెప్ టూ: ప్రశ్నని కూడా నంబర్లుగా మార్చి, దగ్గరగా ఉన్న మూడు పేజీలు తీసుకోండి. <pause 0.4> [1] బ్యాంగింగ్ అన్న ప్రశ్నకి, నాకింగ్ ఉన్న పేజీ దొరికింది; మాటలు వేరు, అర్థం ఒకటే.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "Step 2: turn the question into numbers too, and take the 3 closest pages. <pause 0.4> 'Banging' found the page with 'knocking': different words, same meaning.",
+     "tempo": 1.05,
+     "tts": "స్టెప్ టూ: ప్రశ్నని కూడా నంబర్లుగా మార్చి, దగ్గరగా ఉన్న మూడు పేజీలు తీసుకోండి.",
+     "file2": "05b_storyteller.wav",
+     "tts2": "బ్యాంగింగ్ అన్న ప్రశ్నకి, నాకింగ్ ఉన్న పేజీ దొరికింది; మాటలు వేరు, అర్థం ఒకటే.",
+     "pause": 0.4
+    },
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "స్టెప్ త్రీ: ఆ పేజీలే, నంబర్లతో, పార్ట్ వన్ రూల్స్ తో పంపండి. [1] ఒక్కో ప్రశ్నకి సుమారు రెండు వందల ముప్పై టోకెన్లు.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Step 3: send only those pages, numbered, with Part 1's rules. About 230 tokens a question.",
+     "tempo": 1.05
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_rag53",
+   "tail": 0.0,
+   "boost": 1.4,
+   "lift": 0.7,
+   "drop_at": [
+    [
+     0,
+     1,
+     0.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "prop": "miss",
+      "n": 8
+     },
+     {
+      "prop": "habit",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q": "Water is not going out of my machine. What do I check?",
+     "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+     "qMiss": "How do I stop my child from changing the wash settings?",
+     "missReply": "Not in the document. (page 13)",
+     "q5": "The machine is jumping and banging when it spins. Why?",
+     "p48": "If they are left in, the machine shakes, moves and makes loud knocking noises during the spin.",
+     "rows": [
+      [
+       "clothes smell bad",
+       69
+      ],
+      [
+       "water not going out",
+       141
+      ],
+      [
+       "silk saree?",
+       63
+      ],
+      [
+       "door seal price",
+       262
+      ],
+      [
+       "jumping and banging",
+       48
+      ],
+      [
+       "motor guarantee",
+       284
+      ],
+      [
+       "E35 on the screen",
+       155
+      ],
+      [
+       "stop my child changing settings",
+       96
+      ],
+      [
+       "dish liquid?",
+       104
+      ],
+      [
+       "who repairs it?",
+       291
+      ]
+     ],
+     "hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "whole": "15,373",
+     "top3": "247",
+     "ctx": "4,096",
+     "pages": "300",
+     "code": [
+      "embed = embedder()  # all-MiniLM-L6-v2, on our computer",
+      "page_vecs = embed(pages)   # 300 pages, once",
+      "q_vec = embed([question])[0]",
+      "scores = page_vecs @ q_vec   # how close each page is",
+      "top3 = scores.argsort()[-3:]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{pages[i]}\"",
+      "              for i in top3)",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "మా టెస్ట్, పది ప్రశ్నలు: సరైన పేజీ టాప్ త్రీ లో ఉందా? [1] అర్థం బట్టి, ఎనిమిది. [2] పార్ట్ వన్ మాటల సెర్చ్, ఏడు. <pause 0.5> [3] రెండూ కలిపితే, సింపుల్ గా: ఆరు.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "Our test, 10 questions: is the right page in the top 3? By meaning, 8. Part 1's word search, 7. <pause 0.5> Both mixed, the simple way: 6.",
+     "tempo": 1.05,
+     "tts": "మా టెస్ట్, పది ప్రశ్నలు: సరైన పేజీ టాప్ త్రీ లో ఉందా? అర్థం బట్టి, ఎనిమిది. పార్ట్ వన్ మాటల సెర్చ్, ఏడు.",
+     "file2": "07b_storyteller.wav",
+     "tts2": "రెండూ కలిపితే, సింపుల్ గా: ఆరు.",
+     "pause": 0.5
+    },
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "సరైన పేజీ దొరకనప్పుడు, [1] డాక్యుమెంట్ లో లేదు అంది. గెస్ చేయలేదు.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "When the right page wasn't found, it said: not in the document. It didn't guess.",
+     "tempo": 1.05
+    },
+    {
+     "who": "storyteller",
+     "file": "09_storyteller.wav",
+     "text": "అందుకే, మీ సెర్చ్ ని నమ్మే ముందు, [1] సరైన పేజీతో పది ప్రశ్నలు ముందే రాసి, లెక్కపెట్టండి.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "So before you trust your search, write 10 questions with the right page first, and count.",
+     "tempo": 1.05
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_rag53",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.4,
+   "boost": 1.7,
+   "lift": 0.8,
+   "rise": 1.7,
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q": "Water is not going out of my machine. What do I check?",
+     "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+     "qMiss": "How do I stop my child from changing the wash settings?",
+     "missReply": "Not in the document. (page 13)",
+     "q5": "The machine is jumping and banging when it spins. Why?",
+     "p48": "If they are left in, the machine shakes, moves and makes loud knocking noises during the spin.",
+     "rows": [
+      [
+       "clothes smell bad",
+       69
+      ],
+      [
+       "water not going out",
+       141
+      ],
+      [
+       "silk saree?",
+       63
+      ],
+      [
+       "door seal price",
+       262
+      ],
+      [
+       "jumping and banging",
+       48
+      ],
+      [
+       "motor guarantee",
+       284
+      ],
+      [
+       "E35 on the screen",
+       155
+      ],
+      [
+       "stop my child changing settings",
+       96
+      ],
+      [
+       "dish liquid?",
+       104
+      ],
+      [
+       "who repairs it?",
+       291
+      ]
+     ],
+     "hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "whole": "15,373",
+     "top3": "247",
+     "ctx": "4,096",
+     "pages": "300",
+     "code": [
+      "embed = embedder()  # all-MiniLM-L6-v2, on our computer",
+      "page_vecs = embed(pages)   # 300 pages, once",
+      "q_vec = embed([question])[0]",
+      "scores = page_vecs @ q_vec   # how close each page is",
+      "top3 = scores.argsort()[-3:]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{pages[i]}\"",
+      "              for i in top3)",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Next: agents",
+     "title": "Next: agents",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "10_storyteller.wav",
+     "text": "తర్వాత: టూల్స్ ఉన్న ఏజెంట్. <pause 0.3> [1] మరి డ్రెయిన్ ప్రశ్న? ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి, రెండు వందల నలభై ఏడు టోకెన్లతో.",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "show": "Next: an agent with tools. <pause 0.3> And the drain question? Clean the filter, page 141, with 247 tokens.",
+     "tempo": 1.05,
+     "tts": "తర్వాత: టూల్స్ ఉన్న ఏజెంట్.",
+     "file2": "10b_storyteller.wav",
+     "tts2": "మరి డ్రెయిన్ ప్రశ్న? ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి, రెండు వందల నలభై ఏడు టోకెన్లతో.",
+     "pause": 0.3
+    }
+   ]
+  }
+ ]
+}

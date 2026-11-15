@@ -1,0 +1,577 @@
+{
+ "id": "ep53v1",
+ "title": "15,373 Tokens or 247? Build RAG Over Your PDFs, Part 2 (EP53)",
+ "label": "EP53",
+ "banner": "Build RAG over your PDFs, Part 2",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.2,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_rag53",
+   "tail": 0.0,
+   "boost": 1.2,
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "part1",
+      "n": 2
+     },
+     {
+      "prop": "title",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q": "Water is not going out of my machine. What do I check?",
+     "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+     "qMiss": "How do I stop my child from changing the wash settings?",
+     "missReply": "Not in the document. (page 13)",
+     "q5": "The machine is jumping and banging when it spins. Why?",
+     "p48": "If they are left in, the machine shakes, moves and makes loud knocking noises during the spin.",
+     "rows": [
+      [
+       "clothes smell bad",
+       69
+      ],
+      [
+       "water not going out",
+       141
+      ],
+      [
+       "silk saree?",
+       63
+      ],
+      [
+       "door seal price",
+       262
+      ],
+      [
+       "jumping and banging",
+       48
+      ],
+      [
+       "motor guarantee",
+       284
+      ],
+      [
+       "E35 on the screen",
+       155
+      ],
+      [
+       "stop my child changing settings",
+       96
+      ],
+      [
+       "dish liquid?",
+       104
+      ],
+      [
+       "who repairs it?",
+       291
+      ]
+     ],
+     "hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "whole": "15,373",
+     "top3": "247",
+     "ctx": "4,096",
+     "pages": "300",
+     "code": [
+      "embed = embedder()  # all-MiniLM-L6-v2, on our computer",
+      "page_vecs = embed(pages)   # 300 pages, once",
+      "q_vec = embed([question])[0]",
+      "scores = page_vecs @ q_vec   # how close each page is",
+      "top3 = scores.argsort()[-3:]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{pages[i]}\"",
+      "              for i in top3)",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "15,373 tokens or 247?",
+     "title": "15,373 tokens or 247?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "Fifteen thousand tokens, or two hundred and forty-seven? [1] Same question, same answer from a 300-page manual: clean the drain filter, page 141.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "15,373 tokens, or 247? Same question, same answer from a 300-page manual: clean the drain filter, page 141.",
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "Part 1 sent every page. [1] Here, that's fifteen thousand tokens with every question, and our small AI's setting holds four thousand.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Part 1 sent every page. Here, that's 15,373 tokens with every question, and our small AI's setting holds 4,096.",
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "Part 2: send only the pages that answer. [1] To find them, search by meaning.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Part 2: send only the pages that answer. To find them, search by meaning.",
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_rag53",
+   "tail": 0.0,
+   "boost": 0.85,
+   "lift": 0.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "step1",
+      "n": 4
+     },
+     {
+      "prop": "step2",
+      "n": 5
+     },
+     {
+      "prop": "step3",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q": "Water is not going out of my machine. What do I check?",
+     "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+     "qMiss": "How do I stop my child from changing the wash settings?",
+     "missReply": "Not in the document. (page 13)",
+     "q5": "The machine is jumping and banging when it spins. Why?",
+     "p48": "If they are left in, the machine shakes, moves and makes loud knocking noises during the spin.",
+     "rows": [
+      [
+       "clothes smell bad",
+       69
+      ],
+      [
+       "water not going out",
+       141
+      ],
+      [
+       "silk saree?",
+       63
+      ],
+      [
+       "door seal price",
+       262
+      ],
+      [
+       "jumping and banging",
+       48
+      ],
+      [
+       "motor guarantee",
+       284
+      ],
+      [
+       "E35 on the screen",
+       155
+      ],
+      [
+       "stop my child changing settings",
+       96
+      ],
+      [
+       "dish liquid?",
+       104
+      ],
+      [
+       "who repairs it?",
+       291
+      ]
+     ],
+     "hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "whole": "15,373",
+     "top3": "247",
+     "ctx": "4,096",
+     "pages": "300",
+     "code": [
+      "embed = embedder()  # all-MiniLM-L6-v2, on our computer",
+      "page_vecs = embed(pages)   # 300 pages, once",
+      "q_vec = embed([question])[0]",
+      "scores = page_vecs @ q_vec   # how close each page is",
+      "top3 = scores.argsort()[-3:]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{pages[i]}\"",
+      "              for i in top3)",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Search by meaning: 3 steps",
+     "title": "Search by meaning: 3 steps",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "Step one: turn every page into a list of numbers, once. [1] Three hundred pages took three seconds, on our computer.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Step 1: turn every page into a list of numbers, once. 300 pages took 3 seconds, on our computer.",
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "Step two: turn the question into numbers too, and take the three closest pages. [1] 'Banging' found 'knocking': different words, same meaning.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "Step two: turn the question into numbers too, and take the three closest pages. 'Banging' found 'knocking': different words, same meaning.",
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "Step three: send just those pages, numbered, with Part 1's rules. [1] About two hundred and thirty tokens a question.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Step 3: send just those pages, numbered, with Part 1's rules. About 230 tokens a question.",
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_rag53",
+   "tail": 0.0,
+   "boost": 1.4,
+   "lift": 0.7,
+   "drop_at": [
+    [
+     0,
+     1,
+     0.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "prop": "miss",
+      "n": 8
+     },
+     {
+      "prop": "habit",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q": "Water is not going out of my machine. What do I check?",
+     "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+     "qMiss": "How do I stop my child from changing the wash settings?",
+     "missReply": "Not in the document. (page 13)",
+     "q5": "The machine is jumping and banging when it spins. Why?",
+     "p48": "If they are left in, the machine shakes, moves and makes loud knocking noises during the spin.",
+     "rows": [
+      [
+       "clothes smell bad",
+       69
+      ],
+      [
+       "water not going out",
+       141
+      ],
+      [
+       "silk saree?",
+       63
+      ],
+      [
+       "door seal price",
+       262
+      ],
+      [
+       "jumping and banging",
+       48
+      ],
+      [
+       "motor guarantee",
+       284
+      ],
+      [
+       "E35 on the screen",
+       155
+      ],
+      [
+       "stop my child changing settings",
+       96
+      ],
+      [
+       "dish liquid?",
+       104
+      ],
+      [
+       "who repairs it?",
+       291
+      ]
+     ],
+     "hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "whole": "15,373",
+     "top3": "247",
+     "ctx": "4,096",
+     "pages": "300",
+     "code": [
+      "embed = embedder()  # all-MiniLM-L6-v2, on our computer",
+      "page_vecs = embed(pages)   # 300 pages, once",
+      "q_vec = embed([question])[0]",
+      "scores = page_vecs @ q_vec   # how close each page is",
+      "top3 = scores.argsort()[-3:]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{pages[i]}\"",
+      "              for i in top3)",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "Our test, ten questions: right page in the top three? [1] By meaning, eight. [2] Part 1's word search, seven. <pause 0.5> [3] Both mixed, the simple way: six.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "Our test, 10 questions: right page in the top 3? By meaning, 8. Part 1's word search, 7. <pause 0.5> Both mixed, the simple way: 6.",
+     "tempo": 1.04,
+     "tts": "Our test, ten questions: right page in the top three? By meaning, eight. Part 1's word search, seven.",
+     "file2": "07b_storyteller.wav",
+     "tts2": "Both mixed, the simple way: six.",
+     "pause": 0.5
+    },
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "When the right page wasn't found, [1] it said: not in the document. It didn't guess.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "When the right page wasn't found, it said: not in the document. It didn't guess.",
+     "tempo": 1.04
+    },
+    {
+     "who": "storyteller",
+     "file": "09_storyteller.wav",
+     "text": "So before you trust your search, [1] write ten questions with the right page first, and count.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "So before you trust your search, write 10 questions with the right page first, and count.",
+     "tempo": 1.04
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_rag53",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.4,
+   "boost": 1.9,
+   "lift": 0.8,
+   "rise": 1.9,
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q": "Water is not going out of my machine. What do I check?",
+     "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+     "qMiss": "How do I stop my child from changing the wash settings?",
+     "missReply": "Not in the document. (page 13)",
+     "q5": "The machine is jumping and banging when it spins. Why?",
+     "p48": "If they are left in, the machine shakes, moves and makes loud knocking noises during the spin.",
+     "rows": [
+      [
+       "clothes smell bad",
+       69
+      ],
+      [
+       "water not going out",
+       141
+      ],
+      [
+       "silk saree?",
+       63
+      ],
+      [
+       "door seal price",
+       262
+      ],
+      [
+       "jumping and banging",
+       48
+      ],
+      [
+       "motor guarantee",
+       284
+      ],
+      [
+       "E35 on the screen",
+       155
+      ],
+      [
+       "stop my child changing settings",
+       96
+      ],
+      [
+       "dish liquid?",
+       104
+      ],
+      [
+       "who repairs it?",
+       291
+      ]
+     ],
+     "hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "whole": "15,373",
+     "top3": "247",
+     "ctx": "4,096",
+     "pages": "300",
+     "code": [
+      "embed = embedder()  # all-MiniLM-L6-v2, on our computer",
+      "page_vecs = embed(pages)   # 300 pages, once",
+      "q_vec = embed([question])[0]",
+      "scores = page_vecs @ q_vec   # how close each page is",
+      "top3 = scores.argsort()[-3:]",
+      "doc = \"\".join(f\"--- page {i+1} ---\\n{pages[i]}\"",
+      "              for i in top3)",
+      "messages = [{\"role\": \"system\", \"content\": rules},",
+      "  {\"role\": \"user\", \"content\": doc + question}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Next: agents",
+     "title": "Next: agents",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "10_storyteller.wav",
+     "text": "Next: an agent with tools. [1] And the drain question? Clean the filter, page 141, from 247 tokens.",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "show": "Next: an agent with tools. And the drain question? Clean the filter, page 141, from 247 tokens.",
+     "tempo": 1.04
+    }
+   ]
+  }
+ ]
+}
