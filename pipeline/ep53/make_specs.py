@@ -25,10 +25,10 @@ LINES = {
         "స్టెప్ త్రీ: ఆ పేజీలని, [1] పేజీ నంబర్లతో, పార్ట్ వన్ రూల్స్ తో పంపండి."),
     7: ("test", "Ten questions: right page in the top three? | [1] By meaning, eight. [2] Word search, seven. [3] Both mixed, the simple way: six.",
         "పది ప్రశ్నలు: సరైన పేజీ టాప్ త్రీ లో ఉందా? | [1] అర్థం బట్టి, ఎనిమిది. [2] మాటల సెర్చ్, ఏడు. [3] రెండూ మామూలుగా కలిపితే: ఆరు."),
-    8: ("miss", "It missed two. The child lock: [1] 'not in the document', but it's on page 96. [2] 'Not there'? Check the PDF.",
-        "రెండు తప్పాయి. చైల్డ్ లాక్ ప్రశ్నకి, | [1] డాక్యుమెంట్ లో లేదు అంది; కానీ అది పేజీ తొంభై ఆరులో ఉంది. [2] లేదు అంటే, పీడీఎఫ్ మీరే చూసుకోండి."),
+    8: ("miss", "By meaning, it missed two. The child lock: [1] 'not in the document', but it's on page 96. [2] 'Not there'? Check the PDF.",
+        "అర్థం బట్టి వెతికితే, రెండు తప్పాయి. చైల్డ్ లాక్ ప్రశ్నకి, | [1] డాక్యుమెంట్ లో లేదు అంది; కానీ అది తొంభై ఆరో పేజీలో ఉంది. [2] లేదు అంటే, పీడీఎఫ్ మీరే చూసుకోండి."),
     9: ("habit", "A few pages? Send it whole, like Part 1. [1] Long? Search by meaning. [2] No code? Upload it to a chat app. Either way, test ten questions you know the page for.",
-        "కొన్ని పేజీలేనా? పార్ట్ వన్ లా మొత్తం పంపండి. [1] పెద్దదా? అర్థం బట్టి వెతకండి. | [2] కోడ్ రాదా? చాట్ యాప్ లో అప్‌లోడ్ చేసుకోండి. ఏదైనా, పేజీ తెలిసిన పది ప్రశ్నలతో పరీక్షించండి."),
+        "కొన్ని పేజీలేనా? పార్ట్ వన్ లా మొత్తం పంపండి. [1] పెద్దదా? అర్థం బట్టి వెతకండి. | [2] కోడ్ రాదా? చాట్ యాప్ లో అప్‌లోడ్ చేసుకోండి. ఎలా చేసినా, పేజీ తెలిసిన పది ప్రశ్నలతో పరీక్షించండి."),
     10: ("loop", "And the drain question? | [1] Clean the drain filter, page 141. [2] Next: an agent with tools.",
          "మరి డ్రెయిన్ ప్రశ్న? | [1] డ్రెయిన్ ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి. [2] తర్వాత: టూల్స్ ఉన్న ఏజెంట్."),
 }
@@ -38,7 +38,7 @@ SHOW = {1: "Over 15,000 tokens, or 247? One question, a 300-page manual: the who
         5: "Step 2: do the same to the question, and take the 3 closest pages. 'Banging' found 'knocking': different words, same meaning.",
         6: "Step 3: send those pages, with their page numbers and Part 1's rules.",
         7: "10 questions: right page in the top 3? <pause 0.6> By meaning, 8. Word search, 7. Both mixed, the simple way: 6.",
-        8: "It missed 2. The child lock: 'not in the document', but it's on page 96. 'Not there'? Check the PDF.",
+        8: "By meaning, it missed 2. The child lock: 'not in the document', but it's on page 96. 'Not there'? Check the PDF.",
         9: "A few pages? Send it whole, like Part 1. Long? Search by meaning. No code? Upload it to a chat app. Either way, test 10 questions you know the page for.",
         10: "And the drain question? <pause 0.6> Clean the drain filter, page 141. Next: an agent with tools."}
 SHOW_TE = {
@@ -49,7 +49,7 @@ SHOW_TE = {
     5: "Step 2: turn the question into numbers too, and take the 3 closest pages. <pause 0.4> One word in the question, another on the page; same meaning, so the page was found.",
     6: "Step 3: send those pages, with their page numbers and Part 1's rules.",
     7: "10 questions: is the right page in the top 3? <pause 0.6> By meaning, 8. Word search, 7. Both mixed, the plain way: 6.",
-    8: "2 missed. The child lock question: <pause 0.3> it said 'not in the document', but it's on page 96. If it says 'not there', check the PDF yourself.",
+    8: "By meaning, 2 missed. The child lock question: <pause 0.3> it said 'not in the document', but it's on page 96. If it says 'not there', check the PDF yourself.",
     9: "Just a few pages? Send it whole, like Part 1. Big? Search by meaning. <pause 0.4> No code? Upload it to a chat app. Either way, test with 10 questions whose page you know.",
     10: "And the drain question? <pause 0.6> Clean the drain filter, page 141. Next: an agent with tools.",
 }
@@ -83,9 +83,9 @@ T = {   # on screen: our test (series/scripts/ep53_demo/), the manual is ours (m
 SCENES = [("s_a", (1, 2, 3), {"boost": 1.2, "tail": 0.0}),
           ("s_b", (4, 5, 6), {"boost": 0.85, "lift": 0.5, "tail": 0.0}),
           ("s_c", (7, 8), {"boost": 1.4, "lift": 0.7, "drop_at": [[0, 1, 0.3]], "tail": 0.0}),
-          ("s_d", (9, 10), {"outro": True, "pre": 0.4, "boost": 1.9, "lift": 0.8, "rise": 2.0, "tail": 0.0})]   # render review: Q4 had no rise
+          ("s_d", (9, 10), {"outro": True, "pre": 0.4, "boost": 1.9, "lift": 0.8, "rise": 2.3, "tail": 0.0})]   # render review: Q4 had no rise
 GAP = {1: 0.4, 2: 0.3, 3: 0.3, 4: 0.3, 5: 0.35, 6: 0.3, 7: 0.4, 8: 0.35, 9: 0.4, 10: 0.0}
-FLAGS_TE = {"s_d": {"boost": 1.7, "rise": 1.7}}
+FLAGS_TE = {"s_d": {"boost": 1.85, "rise": 2.1}}   # confirmation pass: Telugu Q4 sat below Q1
 YT = {"s_a": "15,373 tokens or 247?", "s_b": "Search by meaning: 3 steps", "s_c": "Our test", "s_d": "Which one for your PDF"}
 MARK = re.compile(r"\[\d+\]\s*")
 

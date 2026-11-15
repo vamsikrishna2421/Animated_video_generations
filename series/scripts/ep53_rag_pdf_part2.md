@@ -77,8 +77,8 @@ after "Next" and ran into it ("an agent with tools and the drain question"); sou
    "we set our small AI to 4,096: it didn't fit" (our own setting, said plainly). Voice says "over fifteen thousand".
 4. Small text enlarged (Part 1 chip, word-search sub-line, the no-code chip, the test footer); "full code: in the
    pinned comment" in step 1.
-5. Miss scene: "page 13" explained (a safety page it was given); a new check, pipeline/ep53/rank_check.py: more pages
-   wouldn't fix it (page 96 ranked 15th of 300; the other miss, page 69, 88th); the 8th hit "cites a copy of the page".
+5. Miss scene: "page 13" explained (a safety page it was given); a new check, pipeline/ep53/rank_check.py: the top 3
+   missed both (page 96 ranked 15th of 300; the other miss, page 69, 88th); the 8th hit "cites a copy of the page".
 6. Sound: line 7 split so the drop before "eight" lands in a 0.6 s pause; lines 9-10 moved into the outro scene with a
    rise to 2.0 so the last quarter lifts; ding on the drain answer.
 7. Hook: the real answer replaces the blur; a washing machine (water not draining) fills the bottom half until it lands.

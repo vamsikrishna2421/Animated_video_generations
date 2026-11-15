@@ -40,7 +40,7 @@ JUDGE_TEXT = {1: "Over 15,000 tokens, or 247? One question, a 300-page manual: t
               5: "Step 2: do the same to the question, and take the 3 closest pages. 'Banging' found 'knocking': different words, same meaning.",
               6: "Step 3: send those pages, with their page numbers and Part 1's rules.",
               7: "10 questions: right page in the top 3?", "7b": "By meaning, 8. Word search, 7. Both mixed, the simple way: 6.",
-              8: "It missed 2. The child lock: 'not in the document', but it's on page 96. 'Not there'? Check the PDF.",
+              8: "By meaning, it missed 2. The child lock: 'not in the document', but it's on page 96. 'Not there'? Check the PDF.",
               9: "A few pages? Send it whole, like Part 1. Long? Search by meaning. No code? Upload it to a chat app. Either way, test 10 questions you know the page for.",
               10: "And the drain question?", "10b": "Clean the drain filter, page 141. Next: an agent with tools."}
 

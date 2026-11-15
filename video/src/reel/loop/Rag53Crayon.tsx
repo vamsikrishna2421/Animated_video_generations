@@ -101,7 +101,7 @@ const StRag: React.FC<SP> = ({ s }) => {
     if (b.prop === "part1") sfx.push(<Sfx key={k("b")} at={cue(i, 1, 0.4) + 6} src="reel/sfx_boom.wav" vol={0.75} />);
     if (["step1", "step2", "step3"].includes(b.prop)) sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_pop.wav" vol={0.45} />, <Sfx key={k("t")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.35} />);
     if (b.prop === "step2") sfx.push(<Sfx key={k("m")} at={cue(i, 1, 0.5) + 12} src="audio/sfx_whoosh.wav" vol={0.4} />, <Sfx key={k("d")} at={cue(i, 1, 0.5) + 24} src="audio/gag_ding.wav" vol={0.45} />);
-    if (b.prop === "test") sfx.push(<Sfx key={k("b")} at={cue(i, 1, 0.3) - 2} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={cue(i, 1, 0.3)} src={CLAP} vol={0.4} />, <Sfx key={k("n")} at={cue(i, 2, 0.6)} src="audio/sfx_pop.wav" vol={0.45} />, <Sfx key={k("z")} at={cue(i, 3, 0.8) + 16} src="reel/sfx_buzz.wav" vol={0.4} />);
+    if (b.prop === "test") sfx.push(<Sfx key={k("b")} at={cue(i, 1, 0.3) - 2} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={cue(i, 1, 0.3)} src={CLAP} vol={0.4} />, <Sfx key={k("n")} at={cue(i, 2, 0.6)} src="audio/sfx_pop.wav" vol={0.45} />, <Sfx key={k("z")} at={cue(i, 3, 0.8) + 48} src="reel/sfx_buzz.wav" vol={0.4} />);
     if (b.prop === "miss") sfx.push(<Sfx key={k("z")} at={cue(i, 1, 0.4) + 14} src="reel/sfx_buzz.wav" vol={0.45} />, <Sfx key={k("d")} at={cue(i, 2, 0.8)} src="audio/gag_ding.wav" vol={0.45} />);
     if (b.prop === "habit") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("q")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("r")} at={cue(i, 2, 0.6)} src="audio/sfx_pop.wav" vol={0.45} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.3) + 2} src="audio/gag_ding.wav" vol={0.5} />, <Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />); }
@@ -135,7 +135,7 @@ const StRag: React.FC<SP> = ({ s }) => {
           bar(c, 1000, `whole manual: ${T.whole} tokens`, 15373, "#f87171", k2, scale);
           bar(c, 1160, `3 pages: ${T.top3} tokens`, 247, GREEN, k2, scale);
           stamp(c, `${T.ratio}× THE TOKENS, EVERY QUESTION`, W / 2, 1340, seg(f, cu(1, 0.4) + 6, cu(1, 0.4) + 14));
-          chip(c, "you pay for every token: money, or waiting", W / 2, 870, "#fde68a", INK, seg(f, endL - 34, endL - 26), big(c, "you pay for every token: money, or waiting", 44));   // render review: the cost, said plainly
+          chip(c, "you pay for every token: money, or waiting", W / 2, 870, "#fde68a", INK, seg(f, cu(1, 0.4) + 40, cu(1, 0.4) + 48), big(c, "you pay for every token: money, or waiting", 44));   // render review: the cost, said plainly
           chip(c, `and we set our small AI to ${T.ctx}: it didn't fit`, W / 2, 1460, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4) + 24, cu(1, 0.4) + 32), big(c, `and we set our small AI to ${T.ctx}: it didn't fit`, 42));   // render review: our own setting
         } else if (P === "title") {
           c.font = SANS(fit(c, "PART 2: ONLY THE PAGES THAT ANSWER", W - 100, 66), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("PART 2: ONLY THE PAGES THAT ANSWER", W / 2, 400);
@@ -169,7 +169,7 @@ const StRag: React.FC<SP> = ({ s }) => {
             chip(c, "different words, same meaning: found", W / 2, 1450, "#dcfce7", "#14532d", seg(f, cu(1, 0.6) + 35, cu(1, 0.6) + 43), 40);
           }
           if (P === "step3") {
-            chip(c, "--- page 48 --- … --- page 113 --- … --- page 77 ---", W / 2, yE + 80, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), big(c, "--- page 48 --- … --- page 113 --- … --- page 77 ---", 34));
+            chip(c, "--- page 141 --- … --- page 132 --- … --- page 46 ---", W / 2, yE + 80, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), big(c, "--- page 141 --- … --- page 132 --- … --- page 46 ---", 34));   // confirmation pass: the drain question's 3 pages
             chip(c, "Part 1's rules: only from it · the page · or \"Not in the document\"", W / 2, yE + 190, "#dcfce7", "#14532d", seg(f, cu(1, 0.3) + 18, cu(1, 0.3) + 26), big(c, "Part 1's rules: only from it · the page · or \"Not in the document\"", 36));
             chip(c, `the drain question: ${T.top3} tokens, not ${T.whole}`, W / 2, yE + 310, "#1e293b", "#fde68a", seg(f, cu(1, 0.3) + 36, cu(1, 0.3) + 44), big(c, `the drain question: ${T.top3} tokens, not ${T.whole}`, 46));
           }
@@ -178,8 +178,8 @@ const StRag: React.FC<SP> = ({ s }) => {
           c.font = SANS(32, 700); c.fillStyle = "#cbd5e1"; c.fillText("is the right page in the top 3?", W / 2, 375);
           const rows: [string, string, string, string, number][] = [
             ["by meaning", "", "8/10", GREEN, cu(1, 0.3)],
-            ["word search", "Part 1 got 1/10: it took only the top page, the cover", "7/10", "#fbbf24", cu(2, 0.6)],   // script review v1: why 7 here
-            ["both mixed, the simple way", "", "6/10", "#f87171", cu(3, 0.85) + 20]];
+            ["word search", "Part 1 got 1/10: it took only the top page, the cover", "7/10", "#fbbf24", cu(2, 0.6) - 6],   // script review v1: why 7 here
+            ["both mixed, the simple way", "", "6/10", "#f87171", cu(3, 0.85) + 48]];   // confirmation pass: on "six"
           rows.forEach(([a, sub, v, col, t0], q) => {
             const k = seg(f, t0 - 2, t0 + 6); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 430 + q * 210;
@@ -189,14 +189,13 @@ const StRag: React.FC<SP> = ({ s }) => {
             c.font = SANS(80, 900); c.textAlign = "right"; c.fillStyle = col; c.fillText(v, W - 80, y + 120); c.restore();
           });
           chip(c, "of the 8: 7 cite the right page · 1 cites a copy of it", W / 2, 1110, "#e0e7ff", "#1e3a8a", seg(f, cu(2, 0.6) + 20, cu(2, 0.6) + 28), big(c, "of the 8: 7 cite the right page · 1 cites a copy of it", 40));
-          chip(c, "mixing isn't automatically better: test it", W / 2, 1230, "#1e293b", "#fca5a5", seg(f, cu(3, 0.85) + 26, cu(3, 0.85) + 34), big(c, "mixing isn't automatically better: test it", 42));
+          chip(c, "mixing isn't automatically better: test it", W / 2, 1230, "#1e293b", "#fca5a5", seg(f, cu(3, 0.85) + 62, cu(3, 0.85) + 70), big(c, "mixing isn't automatically better: test it", 42));
           chip(c, "a small free AI on our computer · every reply read by hand", W / 2, 1350, "#111827", "#e2e8f0", seg(f, ln.from + 10, ln.from + 18), big(c, "a small free AI on our computer · every reply read by hand", 38));
         } else if (P === "miss") {   // script review v1: a wrong "not in the document", not a win
           const y = chat(c, 50, 300, W - 100, "Washing machine help · 3 pages by meaning", [{ me: true, t: T.qMiss, k: 1 }, { me: false, t: T.missReply, k: seg(f, cu(1, 0.4), cu(1, 0.4) + 6), red: true }], 36);
-          chip(c, "2 of 10 like this (also: clothes smell bad)", W / 2, y + 60, "#fee2e2", "#7f1d1d", seg(f, ln.from + 6, ln.from + 14), big(c, "2 of 10 like this (also: clothes smell bad)", 40));
           chip(c, "\"page 13\": a safety page it was given, not the answer", W / 2, y + 170, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4) + 6, cu(1, 0.4) + 14), big(c, "\"page 13\": a safety page it was given, not the answer", 40));   // render review: explain page 13
           stamp(c, "✗ WRONG: CHILD LOCK IS ON PAGE 96", W / 2, y + 310, seg(f, cu(1, 0.4) + 14, cu(1, 0.4) + 22));
-          chip(c, "more pages wouldn't fix it: page 96 ranked 15th of 300", W / 2, y + 450, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.4) + 34, cu(1, 0.4) + 42), big(c, "more pages wouldn't fix it: page 96 ranked 15th of 300", 40));   // rank_check.py
+          chip(c, "top 3 missed it: page 96 ranked 15th (the smell page: 88th)", W / 2, y + 450, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.4) + 34, cu(1, 0.4) + 42), big(c, "top 3 missed it: page 96 ranked 15th (the smell page: 88th)", 40));   // rank_check.py; confirmation pass: no "more pages wouldn't fix it"
           chip(c, "\"not there\"? check the PDF yourself", W / 2, y + 570, "#dcfce7", "#14532d", seg(f, cu(2, 0.8), cu(2, 0.8) + 8), big(c, "\"not there\"? check the PDF yourself", 46));
         } else if (P === "habit") {   // script review v1: which one do I use with my PDF?
           c.font = SANS(fit(c, "YOUR PDF: WHICH ONE?", W - 100, 64), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("YOUR PDF: WHICH ONE?", W / 2, 320);
