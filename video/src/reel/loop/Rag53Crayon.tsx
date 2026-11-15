@@ -135,7 +135,7 @@ const StRag: React.FC<SP> = ({ s }) => {
           bar(c, 1000, `whole manual: ${T.whole} tokens`, 15373, "#f87171", k2, scale);
           bar(c, 1160, `3 pages: ${T.top3} tokens`, 247, GREEN, k2, scale);
           stamp(c, `${T.ratio}× THE TOKENS, EVERY QUESTION`, W / 2, 1340, seg(f, cu(1, 0.4) + 6, cu(1, 0.4) + 14));
-          chip(c, "you pay for every token: money, or waiting", W / 2, 870, "#fde68a", INK, seg(f, cu(1, 0.4) + 40, cu(1, 0.4) + 48), big(c, "you pay for every token: money, or waiting", 44));   // render review: the cost, said plainly
+          chip(c, "you pay for every token: money, or waiting", W / 2, 912, "#fde68a", INK, seg(f, cu(1, 0.4) + 40, cu(1, 0.4) + 48), big(c, "you pay for every token: money, or waiting", 44));   // render review: the cost, said plainly
           chip(c, `and we set our small AI to ${T.ctx}: it didn't fit`, W / 2, 1460, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4) + 24, cu(1, 0.4) + 32), big(c, `and we set our small AI to ${T.ctx}: it didn't fit`, 42));   // render review: our own setting
         } else if (P === "title") {
           c.font = SANS(fit(c, "PART 2: ONLY THE PAGES THAT ANSWER", W - 100, 66), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("PART 2: ONLY THE PAGES THAT ANSWER", W / 2, 400);
