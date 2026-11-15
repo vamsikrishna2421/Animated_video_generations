@@ -41,7 +41,16 @@ LOANS = [   # (what, principal Rs, annual rate %, years)
     ("tractor loan", 700000, 9.5, 6),
     ("two-wheeler loan", 90000, 13.0, 2),
 ]
-HAND = {}   # filled in after the run, from the replies in emi.json
+HAND = {   # read by hand after the run (series/scripts/creative30_demo/emi.json)
+    "ask": "0 of 10 within Rs 1: bare numbers, off by Rs 2 (the phone) to Rs 22,137 a month (the car loan: 35,709 vs 13,572); "
+           "the Rs 40 lakh home loan: 23,405 vs 34,713, Rs 11,308 short a month (Rs 27.1 lakh over 240 months)",
+    "steps": "0 of 10 within Rs 1, but closer: off by Rs 32 to Rs 1,621 a month. It wrote the right formula every time and then "
+             "guessed the powers: on the home loan, '(1.00708333)^240 = 6.9544 (This value is calculated using a calculator or "
+             "financial software)'; the real value is 5.4412 and there was no calculator; EMI 33,092 vs 34,713",
+    "code": "all 10 replies in maths notation ('^', 3 with pow), refused by the evaluator here; re-scored by rescore.py "
+            "(committed first): 4 of 10 formulas exactly right (bike, car, phone, tractor), 6 wrong (rates not divided by "
+            "1200, a power applied to 12 then times 7...): the home loan's formula gives Rs 28,33,333 a month",
+}
 
 
 def emi(p, rate, years):
