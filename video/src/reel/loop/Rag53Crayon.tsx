@@ -128,7 +128,7 @@ const StRag: React.FC<SP> = ({ s }) => {
           bar(c, 1000, `whole manual: ${T.whole} tokens`, 15373, "#f87171", k2, scale);
           bar(c, 1160, `3 pages: ${T.top3} tokens`, 247, GREEN, k2, scale);
           stamp(c, `${T.ratio}× THE TOKENS, EVERY QUESTION`, W / 2, 1340, seg(f, cu(1, 0.4) + 18, cu(1, 0.4) + 26));
-          chip(c, `and our small AI was set to read ${T.ctx} at once: it didn't fit`, W / 2, 1440, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4) + 34, cu(1, 0.4) + 42), big(c, `and our small AI was set to read ${T.ctx} at once: it didn't fit`, 32));
+          chip(c, `our small AI reads ${T.ctx} tokens at once: it didn't fit`, W / 2, 1450, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4) + 34, cu(1, 0.4) + 42), big(c, `our small AI reads ${T.ctx} tokens at once: it didn't fit`, 40));   // render check: was too small
         } else if (P === "title") {
           c.font = SANS(fit(c, "PART 2: ONLY THE PAGES THAT ANSWER", W - 100, 66), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("PART 2: ONLY THE PAGES THAT ANSWER", W / 2, 400);
           chip(c, "found by meaning, not by matching words", W / 2, 490, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.5), cu(1, 0.5) + 8), big(c, "found by meaning, not by matching words", 42));
@@ -169,14 +169,14 @@ const StRag: React.FC<SP> = ({ s }) => {
           c.font = SANS(32, 700); c.fillStyle = "#cbd5e1"; c.fillText("is the right page in the top 3?", W / 2, 375);
           const rows: [string, string, string, string, number][] = [
             ["by meaning", "", "8/10", GREEN, cu(1, 0.3)],
-            ["word search", "(Part 1's 1/10 took only the top page: the cover)", "7/10", "#fbbf24", cu(2, 0.6)],   // script review v1: why 7 here
+            ["word search", "Part 1 got 1/10: it took only the top page, the cover", "7/10", "#fbbf24", cu(2, 0.6)],   // script review v1: why 7 here
             ["both mixed, the simple way", "", "6/10", "#f87171", cu(3, 0.85) + 20]];
           rows.forEach(([a, sub, v, col, t0], q) => {
             const k = seg(f, t0 - 2, t0 + 6); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 430 + q * 210;
             c.fillStyle = "#1e293b"; rrect(c, 40, y, W - 80, 180, 22); c.fill();
             c.font = SANS(fit(c, a, 620, 44, 800), 800); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(a, 80, y + (sub ? 90 : 108));
-            if (sub) { c.font = SANS(fit(c, sub, 680, 26, 700), 700); c.fillStyle = "#94a3b8"; c.fillText(sub, 80, y + 140); }
+            if (sub) { c.font = SANS(fit(c, sub, W - 180, 30, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(sub, 80, y + 155); }   // render check: was too small
             c.font = SANS(80, 900); c.textAlign = "right"; c.fillStyle = col; c.fillText(v, W - 80, y + 120); c.restore();
           });
           chip(c, "of the 8: 7 answers with the right page", W / 2, 1110, "#e0e7ff", "#1e3a8a", seg(f, cu(2, 0.6) + 30, cu(2, 0.6) + 38), big(c, "of the 8: 7 answers with the right page", 40));
@@ -207,7 +207,8 @@ const StRag: React.FC<SP> = ({ s }) => {
             c.font = SANS(36, 800); c.fillStyle = "#e2e8f0"; c.fillText("ours: 8 of 10", W / 2, 1060);
             c.restore();
           }
-          chip(c, "no code? upload the PDF to a chat app and run the same 10 questions", W / 2, 1200, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.4) + 48, cu(1, 0.4) + 56), big(c, "no code? upload the PDF to a chat app and run the same 10 questions", 34));
+          chip(c, "no code?", W / 2, 1170, "#fde68a", INK, seg(f, cu(1, 0.4) + 48, cu(1, 0.4) + 56), 40);   // render check: one long chip was too small
+          chip(c, "upload the PDF to a chat app, ask the same 10", W / 2, 1270, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.4) + 52, cu(1, 0.4) + 60), big(c, "upload the PDF to a chat app, ask the same 10", 42));
         } else if (P === "loop") {
           c.font = SANS(fit(c, "NEXT · EP54: AN AGENT WITH TOOLS", W - 120, 62), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("NEXT · EP54: AN AGENT WITH TOOLS", W / 2, 400);
           const kf = seg(f, cu(1, 0.02), cu(1, 0.02) + 8);
