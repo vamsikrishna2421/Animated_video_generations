@@ -1,0 +1,1505 @@
+{
+ "id": "ep53te",
+ "look": "classic",
+ "topic": "",
+ "banner": "Build RAG over your PDFs, Part 2",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "title": "15,373 Tokens or 247? Build RAG Over Your PDFs, Part 2 (EP53) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "EP53",
+ "fps": 30,
+ "musicDrops": [
+  [
+   1482,
+   1521
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   736,
+   1.2
+  ],
+  [
+   736,
+   1411,
+   0.85
+  ],
+  [
+   1412,
+   2209,
+   1.4
+  ],
+  [
+   2209,
+   2468,
+   1.7
+  ],
+  [
+   2209,
+   2468,
+   1.7,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 2468,
+ "music": "reel/ep53te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_rag53",
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "part1",
+      "n": 2
+     },
+     {
+      "prop": "title",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q": "Water is not going out of my machine. What do I check?",
+     "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+     "qMiss": "How do I stop my child from changing the wash settings?",
+     "missReply": "Not in the document. (page 13)",
+     "q5": "The machine is jumping and banging when it spins. Why?",
+     "p48": "If they are left in, the machine shakes, moves and makes loud knocking noises during the spin.",
+     "hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "whole": "15,373",
+     "top3": "247",
+     "ctx": "4,096",
+     "ratio": "62",
+     "code": [
+      "pages = read_pdf(\"manual.pdf\")   # Part 1, step 1",
+      "embed = embedder()   # all-MiniLM-L6-v2",
+      "page_vecs = embed(pages)   # 300 pages, once",
+      "q_vec = embed([question])[0]",
+      "scores = (page_vecs @ q_vec).tolist()",
+      "top3 = sorted(range(len(pages)),",
+      "              key=lambda i: -scores[i])[:3]",
+      "doc = \"\\n\\n\".join(f\"--- page {i+1} ---\\n{pages[i]}\"",
+      "                  for i in top3)",
+      "messages = [{\"role\": \"system\", \"content\": RULES},",
+      "  {\"role\": \"user\",",
+      "   \"content\": f\"Document:\\n{doc}\\n\\nQuestion: {question}\"}]"
+     ]
+    },
+    "yt": {
+     "chapter": "15,373 tokens or 247?",
+     "title": "15,373 tokens or 247?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 736,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep53te/line_01.wav",
+     "from": 15,
+     "frames": 376,
+     "words": [
+      {
+       "w": "15,373",
+       "from": 16,
+       "to": 31
+      },
+      {
+       "w": "tokens,",
+       "from": 31,
+       "to": 48
+      },
+      {
+       "w": "or",
+       "from": 48,
+       "to": 65
+      },
+      {
+       "w": "247?",
+       "from": 65,
+       "to": 75
+      },
+      {
+       "w": "One",
+       "from": 75,
+       "to": 84
+      },
+      {
+       "w": "question",
+       "from": 84,
+       "to": 103
+      },
+      {
+       "w": "to",
+       "from": 103,
+       "to": 110
+      },
+      {
+       "w": "a",
+       "from": 110,
+       "to": 114
+      },
+      {
+       "w": "300-page",
+       "from": 114,
+       "to": 143
+      },
+      {
+       "w": "manual:",
+       "from": 143,
+       "to": 160
+      },
+      {
+       "w": "the",
+       "from": 160,
+       "to": 169
+      },
+      {
+       "w": "whole",
+       "from": 169,
+       "to": 182
+      },
+      {
+       "w": "manual",
+       "from": 182,
+       "to": 205
+      },
+      {
+       "w": "didn't",
+       "from": 205,
+       "to": 220
+      },
+      {
+       "w": "fit",
+       "from": 220,
+       "to": 232
+      },
+      {
+       "w": "our",
+       "from": 232,
+       "to": 241
+      },
+      {
+       "w": "small",
+       "from": 241,
+       "to": 254
+      },
+      {
+       "w": "model.",
+       "from": 254,
+       "to": 277
+      },
+      {
+       "w": "With",
+       "from": 277,
+       "to": 287
+      },
+      {
+       "w": "3",
+       "from": 287,
+       "to": 292
+      },
+      {
+       "w": "pages,",
+       "from": 292,
+       "to": 316
+      },
+      {
+       "w": "the",
+       "from": 316,
+       "to": 324
+      },
+      {
+       "w": "answer",
+       "from": 324,
+       "to": 348
+      },
+      {
+       "w": "came",
+       "from": 348,
+       "to": 358
+      },
+      {
+       "w": "from",
+       "from": 358,
+       "to": 369
+      },
+      {
+       "w": "page",
+       "from": 369,
+       "to": 380
+      },
+      {
+       "w": "141.",
+       "from": 380,
+       "to": 391
+      }
+     ],
+     "cues": {
+      "1": 112,
+      "2": 282
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep53te/line_02.wav",
+     "from": 403,
+     "frames": 177,
+     "words": [
+      {
+       "w": "In",
+       "from": 404,
+       "to": 408
+      },
+      {
+       "w": "Part",
+       "from": 408,
+       "to": 415
+      },
+      {
+       "w": "1",
+       "from": 415,
+       "to": 418
+      },
+      {
+       "w": "we",
+       "from": 418,
+       "to": 422
+      },
+      {
+       "w": "sent",
+       "from": 422,
+       "to": 437
+      },
+      {
+       "w": "every",
+       "from": 437,
+       "to": 446
+      },
+      {
+       "w": "page.",
+       "from": 446,
+       "to": 454
+      },
+      {
+       "w": "Even",
+       "from": 454,
+       "to": 471
+      },
+      {
+       "w": "when",
+       "from": 471,
+       "to": 478
+      },
+      {
+       "w": "it",
+       "from": 478,
+       "to": 482
+      },
+      {
+       "w": "fits,",
+       "from": 482,
+       "to": 500
+      },
+      {
+       "w": "that's",
+       "from": 500,
+       "to": 509
+      },
+      {
+       "w": "about",
+       "from": 509,
+       "to": 527
+      },
+      {
+       "w": "60",
+       "from": 527,
+       "to": 531
+      },
+      {
+       "w": "times",
+       "from": 531,
+       "to": 540
+      },
+      {
+       "w": "the",
+       "from": 540,
+       "to": 545
+      },
+      {
+       "w": "tokens,",
+       "from": 545,
+       "to": 557
+      },
+      {
+       "w": "every",
+       "from": 557,
+       "to": 565
+      },
+      {
+       "w": "question.",
+       "from": 565,
+       "to": 579
+      }
+     ],
+     "cues": {
+      "1": 471
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep53te/line_03.wav",
+     "from": 588,
+     "frames": 129,
+     "words": [
+      {
+       "w": "Part",
+       "from": 589,
+       "to": 597
+      },
+      {
+       "w": "2:",
+       "from": 597,
+       "to": 602
+      },
+      {
+       "w": "send",
+       "from": 602,
+       "to": 619
+      },
+      {
+       "w": "only",
+       "from": 619,
+       "to": 627
+      },
+      {
+       "w": "the",
+       "from": 627,
+       "to": 633
+      },
+      {
+       "w": "pages",
+       "from": 633,
+       "to": 642
+      },
+      {
+       "w": "with",
+       "from": 642,
+       "to": 650
+      },
+      {
+       "w": "the",
+       "from": 650,
+       "to": 656
+      },
+      {
+       "w": "answer.",
+       "from": 656,
+       "to": 683
+      },
+      {
+       "w": "Find",
+       "from": 683,
+       "to": 690
+      },
+      {
+       "w": "them",
+       "from": 690,
+       "to": 698
+      },
+      {
+       "w": "by",
+       "from": 698,
+       "to": 703
+      },
+      {
+       "w": "meaning.",
+       "from": 703,
+       "to": 717
+      }
+     ],
+     "cues": {
+      "1": 672
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_rag53",
+   "data": {
+    "beats": [
+     {
+      "prop": "step1",
+      "n": 4
+     },
+     {
+      "prop": "step2",
+      "n": 5
+     },
+     {
+      "prop": "step3",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q": "Water is not going out of my machine. What do I check?",
+     "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+     "qMiss": "How do I stop my child from changing the wash settings?",
+     "missReply": "Not in the document. (page 13)",
+     "q5": "The machine is jumping and banging when it spins. Why?",
+     "p48": "If they are left in, the machine shakes, moves and makes loud knocking noises during the spin.",
+     "hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "whole": "15,373",
+     "top3": "247",
+     "ctx": "4,096",
+     "ratio": "62",
+     "code": [
+      "pages = read_pdf(\"manual.pdf\")   # Part 1, step 1",
+      "embed = embedder()   # all-MiniLM-L6-v2",
+      "page_vecs = embed(pages)   # 300 pages, once",
+      "q_vec = embed([question])[0]",
+      "scores = (page_vecs @ q_vec).tolist()",
+      "top3 = sorted(range(len(pages)),",
+      "              key=lambda i: -scores[i])[:3]",
+      "doc = \"\\n\\n\".join(f\"--- page {i+1} ---\\n{pages[i]}\"",
+      "                  for i in top3)",
+      "messages = [{\"role\": \"system\", \"content\": RULES},",
+      "  {\"role\": \"user\",",
+      "   \"content\": f\"Document:\\n{doc}\\n\\nQuestion: {question}\"}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Search by meaning: 3 steps",
+     "title": "Search by meaning: 3 steps",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 736,
+   "frames": 675,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep53te/line_04.wav",
+     "from": 0,
+     "frames": 210,
+     "words": [
+      {
+       "w": "Step",
+       "from": 4,
+       "to": 13
+      },
+      {
+       "w": "1:",
+       "from": 13,
+       "to": 27
+      },
+      {
+       "w": "turn",
+       "from": 27,
+       "to": 36
+      },
+      {
+       "w": "every",
+       "from": 36,
+       "to": 56
+      },
+      {
+       "w": "page",
+       "from": 56,
+       "to": 64
+      },
+      {
+       "w": "into",
+       "from": 64,
+       "to": 73
+      },
+      {
+       "w": "numbers,",
+       "from": 73,
+       "to": 88
+      },
+      {
+       "w": "just",
+       "from": 88,
+       "to": 109
+      },
+      {
+       "w": "once.",
+       "from": 109,
+       "to": 119
+      },
+      {
+       "w": "300",
+       "from": 119,
+       "to": 126
+      },
+      {
+       "w": "pages:",
+       "from": 126,
+       "to": 138
+      },
+      {
+       "w": "3",
+       "from": 138,
+       "to": 150
+      },
+      {
+       "w": "seconds,",
+       "from": 150,
+       "to": 165
+      },
+      {
+       "w": "on",
+       "from": 165,
+       "to": 171
+      },
+      {
+       "w": "our",
+       "from": 171,
+       "to": 186
+      },
+      {
+       "w": "own",
+       "from": 186,
+       "to": 193
+      },
+      {
+       "w": "computer.",
+       "from": 193,
+       "to": 210
+      }
+     ],
+     "cues": {
+      "1": 118
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep53te/line_05.wav",
+     "from": 219,
+     "frames": 301,
+     "words": [
+      {
+       "w": "Step",
+       "from": 222,
+       "to": 230
+      },
+      {
+       "w": "2:",
+       "from": 230,
+       "to": 244
+      },
+      {
+       "w": "turn",
+       "from": 244,
+       "to": 252
+      },
+      {
+       "w": "the",
+       "from": 252,
+       "to": 258
+      },
+      {
+       "w": "question",
+       "from": 258,
+       "to": 273
+      },
+      {
+       "w": "into",
+       "from": 273,
+       "to": 281
+      },
+      {
+       "w": "numbers",
+       "from": 281,
+       "to": 303
+      },
+      {
+       "w": "too,",
+       "from": 303,
+       "to": 311
+      },
+      {
+       "w": "and",
+       "from": 311,
+       "to": 317
+      },
+      {
+       "w": "take",
+       "from": 317,
+       "to": 325
+      },
+      {
+       "w": "the",
+       "from": 325,
+       "to": 332
+      },
+      {
+       "w": "3",
+       "from": 332,
+       "to": 335
+      },
+      {
+       "w": "closest",
+       "from": 335,
+       "to": 347
+      },
+      {
+       "w": "pages.",
+       "from": 347,
+       "to": 358
+      },
+      {
+       "w": "One",
+       "from": 375,
+       "to": 381
+      },
+      {
+       "w": "word",
+       "from": 381,
+       "to": 388
+      },
+      {
+       "w": "in",
+       "from": 388,
+       "to": 392
+      },
+      {
+       "w": "the",
+       "from": 392,
+       "to": 398
+      },
+      {
+       "w": "question,",
+       "from": 398,
+       "to": 418
+      },
+      {
+       "w": "another",
+       "from": 418,
+       "to": 430
+      },
+      {
+       "w": "on",
+       "from": 430,
+       "to": 434
+      },
+      {
+       "w": "the",
+       "from": 434,
+       "to": 440
+      },
+      {
+       "w": "page;",
+       "from": 440,
+       "to": 455
+      },
+      {
+       "w": "same",
+       "from": 455,
+       "to": 462
+      },
+      {
+       "w": "meaning,",
+       "from": 462,
+       "to": 483
+      },
+      {
+       "w": "so",
+       "from": 483,
+       "to": 488
+      },
+      {
+       "w": "the",
+       "from": 488,
+       "to": 493
+      },
+      {
+       "w": "page",
+       "from": 493,
+       "to": 501
+      },
+      {
+       "w": "was",
+       "from": 501,
+       "to": 506
+      },
+      {
+       "w": "found.",
+       "from": 506,
+       "to": 517
+      }
+     ],
+     "cues": {
+      "1": 375
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep53te/line_06.wav",
+     "from": 531,
+     "frames": 135,
+     "words": [
+      {
+       "w": "Step",
+       "from": 537,
+       "to": 549
+      },
+      {
+       "w": "3:",
+       "from": 549,
+       "to": 560
+      },
+      {
+       "w": "send",
+       "from": 560,
+       "to": 567
+      },
+      {
+       "w": "those",
+       "from": 567,
+       "to": 574
+      },
+      {
+       "w": "pages,",
+       "from": 574,
+       "to": 592
+      },
+      {
+       "w": "with",
+       "from": 592,
+       "to": 599
+      },
+      {
+       "w": "their",
+       "from": 599,
+       "to": 607
+      },
+      {
+       "w": "page",
+       "from": 607,
+       "to": 613
+      },
+      {
+       "w": "numbers",
+       "from": 613,
+       "to": 633
+      },
+      {
+       "w": "and",
+       "from": 633,
+       "to": 638
+      },
+      {
+       "w": "Part",
+       "from": 638,
+       "to": 644
+      },
+      {
+       "w": "1's",
+       "from": 644,
+       "to": 654
+      },
+      {
+       "w": "rules.",
+       "from": 654,
+       "to": 663
+      }
+     ],
+     "cues": {
+      "1": 591
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_rag53",
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "prop": "miss",
+      "n": 8
+     },
+     {
+      "prop": "habit",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q": "Water is not going out of my machine. What do I check?",
+     "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+     "qMiss": "How do I stop my child from changing the wash settings?",
+     "missReply": "Not in the document. (page 13)",
+     "q5": "The machine is jumping and banging when it spins. Why?",
+     "p48": "If they are left in, the machine shakes, moves and makes loud knocking noises during the spin.",
+     "hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "whole": "15,373",
+     "top3": "247",
+     "ctx": "4,096",
+     "ratio": "62",
+     "code": [
+      "pages = read_pdf(\"manual.pdf\")   # Part 1, step 1",
+      "embed = embedder()   # all-MiniLM-L6-v2",
+      "page_vecs = embed(pages)   # 300 pages, once",
+      "q_vec = embed([question])[0]",
+      "scores = (page_vecs @ q_vec).tolist()",
+      "top3 = sorted(range(len(pages)),",
+      "              key=lambda i: -scores[i])[:3]",
+      "doc = \"\\n\\n\".join(f\"--- page {i+1} ---\\n{pages[i]}\"",
+      "                  for i in top3)",
+      "messages = [{\"role\": \"system\", \"content\": RULES},",
+      "  {\"role\": \"user\",",
+      "   \"content\": f\"Document:\\n{doc}\\n\\nQuestion: {question}\"}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Our test, and which to use",
+     "title": "Our test, and which to use",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1412,
+   "frames": 797,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep53te/line_07.wav",
+     "from": 0,
+     "frames": 234,
+     "words": [
+      {
+       "w": "10",
+       "from": 1,
+       "to": 6
+      },
+      {
+       "w": "questions:",
+       "from": 6,
+       "to": 33
+      },
+      {
+       "w": "is",
+       "from": 33,
+       "to": 37
+      },
+      {
+       "w": "the",
+       "from": 37,
+       "to": 43
+      },
+      {
+       "w": "right",
+       "from": 43,
+       "to": 53
+      },
+      {
+       "w": "page",
+       "from": 53,
+       "to": 73
+      },
+      {
+       "w": "in",
+       "from": 73,
+       "to": 78
+      },
+      {
+       "w": "the",
+       "from": 78,
+       "to": 84
+      },
+      {
+       "w": "top",
+       "from": 84,
+       "to": 99
+      },
+      {
+       "w": "3?",
+       "from": 99,
+       "to": 104
+      },
+      {
+       "w": "By",
+       "from": 104,
+       "to": 109
+      },
+      {
+       "w": "meaning,",
+       "from": 109,
+       "to": 123
+      },
+      {
+       "w": "8.",
+       "from": 123,
+       "to": 136
+      },
+      {
+       "w": "Word",
+       "from": 136,
+       "to": 143
+      },
+      {
+       "w": "search,",
+       "from": 143,
+       "to": 162
+      },
+      {
+       "w": "7.",
+       "from": 162,
+       "to": 166
+      },
+      {
+       "w": "Both",
+       "from": 183,
+       "to": 192
+      },
+      {
+       "w": "mixed,",
+       "from": 192,
+       "to": 203
+      },
+      {
+       "w": "the",
+       "from": 203,
+       "to": 210
+      },
+      {
+       "w": "plain",
+       "from": 210,
+       "to": 220
+      },
+      {
+       "w": "way:",
+       "from": 220,
+       "to": 229
+      },
+      {
+       "w": "6.",
+       "from": 229,
+       "to": 234
+      }
+     ],
+     "cues": {
+      "1": 94,
+      "2": 135,
+      "3": 183
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep53te/line_08.wav",
+     "from": 246,
+     "frames": 261,
+     "words": [
+      {
+       "w": "2",
+       "from": 247,
+       "to": 250
+      },
+      {
+       "w": "missed.",
+       "from": 250,
+       "to": 261
+      },
+      {
+       "w": "The",
+       "from": 261,
+       "to": 277
+      },
+      {
+       "w": "child",
+       "from": 277,
+       "to": 285
+      },
+      {
+       "w": "lock",
+       "from": 285,
+       "to": 292
+      },
+      {
+       "w": "question:",
+       "from": 292,
+       "to": 305
+      },
+      {
+       "w": "it",
+       "from": 315,
+       "to": 320
+      },
+      {
+       "w": "said",
+       "from": 320,
+       "to": 327
+      },
+      {
+       "w": "'not",
+       "from": 327,
+       "to": 335
+      },
+      {
+       "w": "in",
+       "from": 335,
+       "to": 340
+      },
+      {
+       "w": "the",
+       "from": 340,
+       "to": 346
+      },
+      {
+       "w": "document',",
+       "from": 346,
+       "to": 382
+      },
+      {
+       "w": "but",
+       "from": 382,
+       "to": 388
+      },
+      {
+       "w": "it's",
+       "from": 388,
+       "to": 396
+      },
+      {
+       "w": "on",
+       "from": 396,
+       "to": 400
+      },
+      {
+       "w": "page",
+       "from": 400,
+       "to": 408
+      },
+      {
+       "w": "96.",
+       "from": 408,
+       "to": 414
+      },
+      {
+       "w": "If",
+       "from": 414,
+       "to": 419
+      },
+      {
+       "w": "it",
+       "from": 419,
+       "to": 424
+      },
+      {
+       "w": "says",
+       "from": 424,
+       "to": 440
+      },
+      {
+       "w": "'not",
+       "from": 440,
+       "to": 448
+      },
+      {
+       "w": "there',",
+       "from": 448,
+       "to": 469
+      },
+      {
+       "w": "check",
+       "from": 469,
+       "to": 479
+      },
+      {
+       "w": "the",
+       "from": 479,
+       "to": 485
+      },
+      {
+       "w": "PDF",
+       "from": 485,
+       "to": 491
+      },
+      {
+       "w": "yourself.",
+       "from": 491,
+       "to": 507
+      }
+     ],
+     "cues": {
+      "1": 315,
+      "2": 439
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep53te/line_09.wav",
+     "from": 517,
+     "frames": 263,
+     "words": [
+      {
+       "w": "Your",
+       "from": 518,
+       "to": 527
+      },
+      {
+       "w": "PDF",
+       "from": 527,
+       "to": 534
+      },
+      {
+       "w": "short?",
+       "from": 534,
+       "to": 547
+      },
+      {
+       "w": "Send",
+       "from": 547,
+       "to": 564
+      },
+      {
+       "w": "it",
+       "from": 564,
+       "to": 570
+      },
+      {
+       "w": "whole,",
+       "from": 570,
+       "to": 589
+      },
+      {
+       "w": "like",
+       "from": 589,
+       "to": 598
+      },
+      {
+       "w": "Part",
+       "from": 598,
+       "to": 607
+      },
+      {
+       "w": "1.",
+       "from": 607,
+       "to": 612
+      },
+      {
+       "w": "Long,",
+       "from": 625,
+       "to": 634
+      },
+      {
+       "w": "or",
+       "from": 634,
+       "to": 638
+      },
+      {
+       "w": "many",
+       "from": 638,
+       "to": 646
+      },
+      {
+       "w": "questions?",
+       "from": 646,
+       "to": 676
+      },
+      {
+       "w": "Search",
+       "from": 676,
+       "to": 686
+      },
+      {
+       "w": "by",
+       "from": 686,
+       "to": 690
+      },
+      {
+       "w": "meaning;",
+       "from": 690,
+       "to": 712
+      },
+      {
+       "w": "test",
+       "from": 712,
+       "to": 719
+      },
+      {
+       "w": "with",
+       "from": 719,
+       "to": 727
+      },
+      {
+       "w": "10",
+       "from": 727,
+       "to": 731
+      },
+      {
+       "w": "questions",
+       "from": 731,
+       "to": 749
+      },
+      {
+       "w": "whose",
+       "from": 749,
+       "to": 758
+      },
+      {
+       "w": "page",
+       "from": 758,
+       "to": 766
+      },
+      {
+       "w": "you",
+       "from": 766,
+       "to": 771
+      },
+      {
+       "w": "know.",
+       "from": 771,
+       "to": 780
+      }
+     ],
+     "cues": {
+      "1": 625
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_rag53",
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "q": "Water is not going out of my machine. What do I check?",
+     "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+     "qMiss": "How do I stop my child from changing the wash settings?",
+     "missReply": "Not in the document. (page 13)",
+     "q5": "The machine is jumping and banging when it spins. Why?",
+     "p48": "If they are left in, the machine shakes, moves and makes loud knocking noises during the spin.",
+     "hits": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      true,
+      true
+     ],
+     "whole": "15,373",
+     "top3": "247",
+     "ctx": "4,096",
+     "ratio": "62",
+     "code": [
+      "pages = read_pdf(\"manual.pdf\")   # Part 1, step 1",
+      "embed = embedder()   # all-MiniLM-L6-v2",
+      "page_vecs = embed(pages)   # 300 pages, once",
+      "q_vec = embed([question])[0]",
+      "scores = (page_vecs @ q_vec).tolist()",
+      "top3 = sorted(range(len(pages)),",
+      "              key=lambda i: -scores[i])[:3]",
+      "doc = \"\\n\\n\".join(f\"--- page {i+1} ---\\n{pages[i]}\"",
+      "                  for i in top3)",
+      "messages = [{\"role\": \"system\", \"content\": RULES},",
+      "  {\"role\": \"user\",",
+      "   \"content\": f\"Document:\\n{doc}\\n\\nQuestion: {question}\"}]"
+     ]
+    },
+    "yt": {
+     "chapter": "Next: agents",
+     "title": "Next: agents",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 2209,
+   "frames": 259,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep53te/line_10.wav",
+     "from": 12,
+     "frames": 211,
+     "words": [
+      {
+       "w": "Next:",
+       "from": 13,
+       "to": 22
+      },
+      {
+       "w": "an",
+       "from": 22,
+       "to": 26
+      },
+      {
+       "w": "agent",
+       "from": 26,
+       "to": 44
+      },
+      {
+       "w": "with",
+       "from": 44,
+       "to": 51
+      },
+      {
+       "w": "tools.",
+       "from": 51,
+       "to": 61
+      },
+      {
+       "w": "And",
+       "from": 75,
+       "to": 83
+      },
+      {
+       "w": "the",
+       "from": 83,
+       "to": 90
+      },
+      {
+       "w": "drain",
+       "from": 90,
+       "to": 101
+      },
+      {
+       "w": "question?",
+       "from": 101,
+       "to": 131
+      },
+      {
+       "w": "Clean",
+       "from": 131,
+       "to": 150
+      },
+      {
+       "w": "the",
+       "from": 150,
+       "to": 158
+      },
+      {
+       "w": "drain",
+       "from": 158,
+       "to": 178
+      },
+      {
+       "w": "filter,",
+       "from": 178,
+       "to": 201
+      },
+      {
+       "w": "page",
+       "from": 201,
+       "to": 210
+      },
+      {
+       "w": "141.",
+       "from": 210,
+       "to": 219
+      }
+     ],
+     "cues": {
+      "1": 75
+     }
+    }
+   ]
+  }
+ ]
+}

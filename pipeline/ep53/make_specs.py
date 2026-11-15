@@ -108,7 +108,7 @@ def spec(lang="en"):
             raw = tel if te else en
             ln = {"who": "storyteller", "file": f"{n:02d}_storyteller.wav", "text": raw, "maxgap": 0.3, "gap": GAP.get(n, 0.3),
                   "show": (SHOW_TE.get(n) if te else None) or SHOW.get(n, MARK.sub("", en).replace(" | ", " ").strip()),
-                  "tempo": 1.05 if te else 1.1}
+                  "tempo": 1.12 if te else 1.1}
             if not te and n in TTS_EN:
                 ln["tts"] = TTS_EN[n]
             if " | " in raw:
