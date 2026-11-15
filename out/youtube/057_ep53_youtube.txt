@@ -1,0 +1,25 @@
+UPLOAD: 057 (YouTube Shorts: upload the same vertical files as Instagram, 057_ep53_15373_tokens_or_247.mp4 and telugu_page/057_ep53_insta_te.mp4; no landscape version)
+
+########## ENGLISH ##########
+=== TITLE ===
+15,373 Tokens or 247? Build RAG Over Your PDFs, Part 2 | AI From Scratch Ep 53 #Shorts
+
+=== DESCRIPTION ===
+One question to a 300-page manual. The whole manual is 15,373 tokens and didn't fit our small AI; the 3 pages found by meaning are 247 tokens and answer it from page 141. Three steps: turn every page into numbers once (embeddings, all-MiniLM-L6-v2: 300 pages in 3.1 s on our computer); turn the question into numbers and take the 3 closest pages ("banging" found "knocking"); send those pages with their page numbers and Part 1's rules.
+
+Our test, 10 questions on a manual we wrote for a made-up washing machine, right page in the top 3: by meaning 8 of 10, word search 7 of 10, both mixed the simple way 6 of 10. The 2 misses said "Not in the document"; when it says that, check the PDF yourself. Short PDF: send it whole (Part 1). Long, or lots of questions: search by meaning (Part 2), then test it with 10 questions whose page you know. (A small test on one small model, Qwen2.5-7B-Instruct, on our computer.)
+
+Next: an agent with tools.
+
+=== TAGS ===
+RAG, embeddings, semantic search, chat with PDF, RAG python, all-MiniLM-L6-v2, AI for beginners, AI From Scratch
+
+########## TELUGU: telugu_page/057_ep53_insta_te.mp4 (YouTube Shorts, same vertical file) ##########
+=== TITLE ===
+15,373 Tokens or 247? PDF meeda RAG, Part 2 | AI From Scratch Ep 53 Telugu #Shorts
+
+=== DESCRIPTION ===
+300 pages manual ki oka prashna. Mottam manual 15,373 tokens, maa chinna model ki pattaledu; artham batti dorikina 3 pages 247 tokens, javaabu page 141 nunchi. 3 steps: prati page ni okkasaare numbers ga (embeddings); prashna ni numbers ga maarchi daggari 3 pages; aa pages ni page numbers, Part 1 rules tho pampandi. Test: artham batti 10 lo 8, maatala search 10 lo 7, rendu kalipite 10 lo 6. "Not in the document" ante PDF meere choosukondi.
+
+=== TAGS ===
+RAG Telugu, embeddings Telugu, chat with PDF Telugu, AI in Telugu, AI From Scratch Telugu

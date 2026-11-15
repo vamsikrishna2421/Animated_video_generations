@@ -1,0 +1,30 @@
+UPLOAD: 057 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/057_ep53_insta_te.mp4  (a screen tutorial, Telugu voice on our TTS, English on-screen text; send copy: telugu_page/057_ep53_insta_te_ig.mp4). It loops: "మరి డ్రెయిన్ ప్రశ్న? డ్రెయిన్ ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి." taruvaata frame 1 (15,373 tokens vs 247).
+
+=== CAPTION ===
+"Water is not going out of my machine. What do I check?" 300 pages manual ki oka prashna. Mottam manual pampite: 15,373 tokens, maa chinna model ki pattaledu. Artham batti dorikina 3 pages pampite: 247 tokens, javaabu page 141 nunchi.
+
+AI From Scratch Episode 53: mee PDFs meeda RAG build cheyyadam, Part 2 (Season 6, screen tutorial)
+1. Prati page ni okkasaare numbers ga maarchandi ("embedding": free model all-MiniLM-L6-v2 tho page ki 384 numbers). 300 pages ki maa computer lo 3.1 seconds.
+2. Prashna ni kooda numbers ga maarchi, daggaraga unna 3 pages teesukondi. Prashna lo "jumping and banging", page lo "loud knocking noises": maatalu veru, artham okate, page dorikindi.
+3. Aa pages ni page numbers tho, Part 1 rules tho pampandi (document lo unnade, page number tho, lekapote "Not in the document").
+
+Maa test, maa sontha 300-page manual (oka made-up washing machine), 10 prashnalu, correct page mundhe raasi (maa computer lo oka chinna free model tho chinna test):
+- artham batti, top 3 lo correct page: 10 lo 8
+- Part 1 maatala search, top 3: 10 lo 7 (Part 1 lo top page okkate teesukundi, anduke 10 lo 1)
+- rendu maamoolugaa kalipite: 10 lo 6. Kalipite better avvaali ani ledu: test cheyyandi.
+8 lo 7 javaabulu correct page tho vachaayi. 2 miss lu "Not in the document" annaayi (child lock page 96 lo undi). "Ledu" ante PDF meere choosukondi.
+
+Mee PDF ki edi? Chinnadi, haayiga pattedi: mottam page numbers tho pampandi (Part 1). Peddadi leda prashnalu ekkuva: artham batti vetiki top 3 pampandi (Part 2). Edaina sare, page telisina 10 prashnalatho test cheyyandi. Code raadaa? PDF ni oka chat app lo upload chesi ave 10 prashnalu adagandi.
+
+Next: tools unna agent.
+Follow @ai_maastaaru_telugu.
+
+=== COMMENT PROMPT ===
+Mee PDF ni meeru adige oka prashna, adi dorakaalsina page number: comment lo post cheyyandi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #RAG #ChatWithPDF #LearnAI
+
+=== PINNED_COMMENT ===
+Code (Python; pip install transformers torch pypdf): page_vecs = embed(pages) (all-MiniLM-L6-v2, okkasaare); q_vec = embed([question])[0]; scores = page_vecs @ q_vec; top3 = best 3 pages (best first); doc = prati page ki "--- page N ---" marker; messages lo system = RULES, user = "Document: ... Question: ...". Test (Nov 15, 2026): made-up "WM-900" washing machine manual (300 pages), Qwen2.5-7B-Instruct (4-bit), llama.cpp server (context 4,096), temperature 0.2, 10 prashnalu, prati javaabu chadivaam. Mottam manual 15,373 tokens; 3 pages 197-252 tokens (drain prashna 247). Maa pages chinnavi (~50 tokens); peddha pages ni mundhu chunks ga vidagottandi.

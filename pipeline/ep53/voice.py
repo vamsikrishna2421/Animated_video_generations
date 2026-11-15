@@ -28,18 +28,20 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("fifteen", "15"), ("two", "247"), ("manual",), ("filter",), ("141",)], 2: [("part",), ("fifteen", "15"), ("four", "4")],
+MUST = {"en": {1: [("fifteen", "15"), ("247", "forty"), ("manual",), ("fit",), ("141",)], 2: [("part",), ("sixty", "60"), ("question",)],
                3: [("part",), ("meaning",)], 4: [("step",), ("numbers",), ("three", "3", "300")], 5: [("step",), ("closest",), ("banging",), ("knocking",), ("meaning",)],
-               6: [("step",), ("pages",), ("tokens",)], 7: [("test",), ("meaning",), ("eight", "8"), ("seven", "7")], "7b": [("six", "6")],
-               8: [("page",), ("document",), ("guess",)], 9: [("trust",), ("ten", "10"), ("count",)], 10: [("agent",), ("filter",), ("141",)]},
+               6: [("step",), ("page",), ("rules",)], 7: [("questions",), ("meaning",), ("eight", "8"), ("seven", "7")], "7b": [("six", "6")],
+               8: [("missed",), ("child",), ("document",), ("96",), ("pdf",)], 9: [("short",), ("whole",), ("meaning",), ("ten", "10")], 10: [("agent",), ("filter",), ("141",)]},
         "te": {}}
-JUDGE_TEXT = {1: "15,000 tokens, or 247? Same question, same answer from a 300-page manual: clean the drain filter, page 141.",
-              2: "Part 1 sent every page. Here, that's 15,000 tokens with every question, and our small AI's setting holds 4,000.",
-              4: "Step 1: turn every page into a list of numbers, once. 300 pages took 3 seconds, on our computer.",
-              6: "Step 3: send just those pages, numbered, with Part 1's rules. About 230 tokens a question.",
-              7: "Our test, 10 questions: right page in the top 3? By meaning, 8. Part 1's word search, 7.", "7b": "Both mixed, the simple way: 6.",
-              9: "So before you trust your search, write 10 questions with the right page first, and count.",
-              10: "Next: an agent with tools. And the drain question? Clean the filter, page 141, from 247 tokens."}
+JUDGE_TEXT = {1: "15,000 tokens, or 247? One question, a 300-page manual: the whole thing didn't fit our small AI. Three pages answered it: page 141.",
+              2: "Part 1 sent every page. Here, that's about 60 times the tokens, every single question.",
+              4: "Step 1: turn every page into numbers, once. 300 pages: 3 seconds, on our computer.",
+              5: "Step 2: turn the question into numbers too, and take the 3 closest pages. 'Banging' found 'knocking': different words, same meaning.",
+              6: "Step 3: send those pages, with their page numbers and Part 1's rules.",
+              7: "10 questions: right page in the top 3? By meaning, 8. Word search, 7.", "7b": "Both mixed, the simple way: 6.",
+              8: "It missed 2. The child lock: 'not in the document', but it's on page 96. 'Not there'? Check the PDF.",
+              9: "Short PDF? Send it whole, like Part 1. Long, or lots of questions? Search by meaning, and test 10 questions you know the page for.",
+              10: "Next: an agent with tools. And the drain question? Clean the drain filter, page 141."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

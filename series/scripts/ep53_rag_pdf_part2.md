@@ -1,4 +1,4 @@
-# EP53 "Build RAG over your PDFs, Part 2" (Season 6, a screen tutorial) · queue 057 · script v1, Nov 15
+# EP53 "Build RAG over your PDFs, Part 2" (Season 6, a screen tutorial) · queue 057 · script v2, Nov 15
 
 ## The format
 A screen tutorial (Season 6), one narrator, the code and a chat drawn in our crayon style (as EP51, EP52). Verdict
@@ -33,43 +33,64 @@ bolts p48, q6 10 years p284, q7 E35 door lock p155, q9 no dish liquid p104, q10 
 cited page 117 (a second program page); q1 and q8 "Not in the document" (no guess). Prompt tokens 197 to 252, average
 230 (q2: 247). Embedding all 300 pages: 3.1 s.
 
-## The code on screen (the steps our test ran, Python; transformers + all-MiniLM-L6-v2, mean pooling)
+## The code on screen (what rag_meaning.py ran, compacted; transformers + all-MiniLM-L6-v2, mean pooling)
 ```
-embed = embedder()  # all-MiniLM-L6-v2, on our computer
+pages = read_pdf("manual.pdf")   # Part 1, step 1
+embed = embedder()   # all-MiniLM-L6-v2
 page_vecs = embed(pages)   # 300 pages, once
 q_vec = embed([question])[0]
-scores = page_vecs @ q_vec   # how close each page is
-top3 = scores.argsort()[-3:]
-doc = "".join(f"--- page {i+1} ---\n{pages[i]}"
-              for i in top3)
-messages = [{"role": "system", "content": rules},
-  {"role": "user", "content": doc + question}]
+scores = (page_vecs @ q_vec).tolist()
+top3 = sorted(range(len(pages)),
+              key=lambda i: -scores[i])[:3]
+doc = "\n\n".join(f"--- page {i+1} ---\n{pages[i]}"
+                  for i in top3)
+messages = [{"role": "system", "content": RULES},
+  {"role": "user",
+   "content": f"Document:\n{doc}\n\nQuestion: {question}"}]
 ```
-(embed() returns unit-length vectors, so `page_vecs @ q_vec` is the cosine similarity.)
+(embed() returns unit-length vectors, so `page_vecs @ q_vec` is the cosine similarity; best page first.)
 
-## Script (English, v1; narrator)
-1. (hook) Fifteen thousand tokens, or two hundred and forty-seven? Same question, same answer from a 300-page manual: clean the drain filter, page 141.
-2. (part1) Part 1 sent every page. Here, that's fifteen thousand tokens with every question, and our small AI's setting holds four thousand.
-3. (title) Part 2: send only the pages that answer. To find them, search by meaning.
-4. (step1) Step one: turn every page into a list of numbers, once. Three hundred pages took three seconds, on our computer.
+## Script review (human-viewer, v1) and what changed (v2)
+Both viewers: "banging found knocking" is the best moment; "same answer" and "doesn't fit" contradict; nobody says
+what to do with my own PDF. Must-fixes and changes:
+1. The hook said "same answer", but the whole manual never answered (it didn't fit). Now: "15,373: didn't fit our
+   small AI" vs "247: answered, page 141"; the answer itself is blurred until the loop line reads it out.
+2. The real reason, not only our 4,096 setting: about 60 times the tokens with every question (15,373 / 247 = 62x).
+   On screen: our small AI was set to read 4,096 at once; our made-up pages are short (~50 tokens), split long pages.
+3. Which one for my PDF: a new line 9 (short: send it whole, Part 1; long or many questions: search by meaning, then
+   test 10 questions); on screen a no-code route (upload it to a chat app, run the same 10 questions).
+4. The miss: called wrong ("not in the document", but it's on page 96; 2 of 10 like this; check the PDF). On screen
+   why word search got 7 here after Part 1's 1/10 (Part 1 took only the top page, the cover).
+5. The code on screen now matches what ran (best page first, "\n\n" between pages, "Document: ... Question:").
+   One token number: 247 (the drain question) everywhere; "about 230" dropped. English cut to ~185 words.
+6. Telugu: no "నాకింగ్"/"బ్యాంగింగ్" in the voice (line 5 now says "one word in the question, another on the page");
+   "ఒక్కసారే"; "పేజీ నంబర్లతో"; "మామూలుగా కలిపితే"; line 3 ends "వెతకండి"; "మోడల్" for the AI in line 1.
+7. Sound: a boom on the 62x stamp, a whoosh and a ding on banging -> knocking, the drop before "eight" kept.
+8. Caption ask changed to the video's own habit: post one question and the page it should find.
+
+## Script (English, v2; narrator)
+1. (hook) Fifteen thousand tokens, or two hundred and forty-seven? One question, a 300-page manual: the whole thing didn't fit our small AI. Three pages answered it: page 141.
+2. (part1) Part 1 sent every page. Even when it fits, that's about sixty times the tokens, with every question.
+3. (title) Part 2: send only the pages that answer, found by meaning.
+4. (step1) Step one: turn every page into numbers, once. Three hundred pages: three seconds, on our computer.
 5. (step2) Step two: turn the question into numbers too, and take the three closest pages. 'Banging' found 'knocking': different words, same meaning.
-6. (step3) Step three: send just those pages, numbered, with Part 1's rules. About two hundred and thirty tokens a question.
-7. (test) Our test, ten questions: right page in the top three? By meaning, eight. Part 1's word search, seven. | Both mixed, the simple way: six.
-8. (miss) When the right page wasn't found, it said: not in the document. It didn't guess.
-9. (habit) So before you trust your search, write ten questions with the right page first, and count.
-10. (loop) Next: an agent with tools. And the drain question? Clean the filter, page 141, from 247 tokens.
+6. (step3) Step three: send those pages, with their page numbers and Part 1's rules.
+7. (test) Ten questions: right page in the top three? By meaning, eight. Word search, seven. | Both mixed, the simple way: six.
+8. (miss) It missed two. The child lock: 'not in the document', but it's on page 96. 'Not there'? Check the PDF.
+9. (habit) Short PDF? Send it whole, like Part 1. Long, or lots of questions? Search by meaning, and test ten questions you know the page for.
+10. (loop) Next: an agent with tools. And the drain question? Clean the drain filter, page 141.
 
-## Script (Telugu, v1)
-1. పదిహేను వేల టోకెన్లా, రెండు వందల నలభై ఏడు టోకెన్లా? ఒకే ప్రశ్న, మూడొందల పేజీల మాన్యువల్ నుంచి ఒకే జవాబు: డ్రెయిన్ ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి.
-2. పార్ట్ వన్ లో ప్రతి పేజీ పంపాం. ఇక్కడ అది ప్రతి ప్రశ్నకీ పదిహేను వేల టోకెన్లు; మా చిన్న చాట్‌బాట్ సెట్టింగ్ పట్టేది నాలుగు వేలే.
-3. పార్ట్ టూ: జవాబు ఉన్న పేజీలే పంపండి. వాటిని వెతకడానికి, అర్థం బట్టి సెర్చ్.
-4. స్టెప్ వన్: ప్రతి పేజీని ఒకసారి నంబర్ల లిస్ట్ గా మార్చండి. మూడొందల పేజీలకి మూడు సెకన్లు, మా కంప్యూటర్ లోనే.
-5. స్టెప్ టూ: ప్రశ్నని కూడా నంబర్లుగా మార్చి, దగ్గరగా ఉన్న మూడు పేజీలు తీసుకోండి. | బ్యాంగింగ్ అన్న ప్రశ్నకి, నాకింగ్ ఉన్న పేజీ దొరికింది; మాటలు వేరు, అర్థం ఒకటే.
-6. స్టెప్ త్రీ: ఆ పేజీలే, నంబర్లతో, పార్ట్ వన్ రూల్స్ తో పంపండి. ఒక్కో ప్రశ్నకి సుమారు రెండు వందల ముప్పై టోకెన్లు.
-7. మా టెస్ట్, పది ప్రశ్నలు: సరైన పేజీ టాప్ త్రీ లో ఉందా? అర్థం బట్టి, ఎనిమిది. పార్ట్ వన్ మాటల సెర్చ్, ఏడు. | రెండూ కలిపితే, సింపుల్ గా: ఆరు.
-8. సరైన పేజీ దొరకనప్పుడు, డాక్యుమెంట్ లో లేదు అంది. గెస్ చేయలేదు.
-9. అందుకే, మీ సెర్చ్ ని నమ్మే ముందు, సరైన పేజీతో పది ప్రశ్నలు ముందే రాసి, లెక్కపెట్టండి.
-10. తర్వాత: టూల్స్ ఉన్న ఏజెంట్. | మరి డ్రెయిన్ ప్రశ్న? ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి, రెండు వందల నలభై ఏడు టోకెన్లతో.
+## Script (Telugu, v2)
+1. పదిహేను వేల టోకెన్లా, రెండు వందల నలభై ఏడు టోకెన్లా? మూడొందల పేజీల మాన్యువల్ కి ఒకే ప్రశ్న: మొత్తం మాన్యువల్ మా చిన్న మోడల్ కి పట్టలేదు. మూడు పేజీలతో, పేజీ నూట నలభై ఒకటి నుంచి జవాబు వచ్చింది.
+2. పార్ట్ వన్ లో ప్రతి పేజీ పంపాం. పట్టినా సరే, ప్రతి ప్రశ్నకీ దాదాపు అరవై రెట్లు టోకెన్లు.
+3. పార్ట్ టూ: జవాబు ఉన్న పేజీలే పంపండి. వాటిని అర్థం బట్టి వెతకండి.
+4. స్టెప్ వన్: ప్రతి పేజీని ఒక్కసారే నంబర్లుగా మార్చండి. మూడొందల పేజీలకి మూడు సెకన్లు, మా కంప్యూటర్ లోనే.
+5. స్టెప్ టూ: ప్రశ్నని కూడా నంబర్లుగా మార్చి, దగ్గరగా ఉన్న మూడు పేజీలు తీసుకోండి. | ప్రశ్నలో ఒక మాట, పేజీలో వేరే మాట; అర్థం ఒకటే, అందుకే పేజీ దొరికింది.
+6. స్టెప్ త్రీ: ఆ పేజీలని, పేజీ నంబర్లతో, పార్ట్ వన్ రూల్స్ తో పంపండి.
+7. పది ప్రశ్నలు: సరైన పేజీ టాప్ త్రీ లో ఉందా? అర్థం బట్టి, ఎనిమిది. మాటల సెర్చ్, ఏడు. | రెండూ మామూలుగా కలిపితే: ఆరు.
+8. రెండు మిస్ అయ్యాయి. చైల్డ్ లాక్: డాక్యుమెంట్ లో లేదు అంది, కానీ అది పేజీ తొంభై ఆరులో ఉంది. లేదు అంటే, పీడీఎఫ్ మీరే చూసుకోండి.
+9. మీ పీడీఎఫ్ చిన్నదా? పార్ట్ వన్ లా మొత్తం పంపండి. పెద్దదా, ప్రశ్నలు ఎక్కువా? అర్థం బట్టి వెతకండి, తర్వాత పేజీ తెలిసిన పది ప్రశ్నలతో టెస్ట్ చేసుకోండి.
+10. తర్వాత: టూల్స్ ఉన్న ఏజెంట్. | మరి డ్రెయిన్ ప్రశ్న? డ్రెయిన్ ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి.
 
 ## Caption ask (post your answer)
-"Your manual or PDF: how many pages? Post the number, and we'll say whether Part 1 or Part 2 fits it."
+"Post one question you'd ask your own PDF, and the page it should find."
