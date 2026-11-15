@@ -1,0 +1,198 @@
+{
+ "pages": 300,
+ "embed_seconds": 3.1,
+ "whole_manual_tokens": 15373,
+ "rules": "Answer the question only from the document below. If the answer is not in it, say \"Not in the document.\" Keep it to one or two short lines, and end with the page number, like (page 3).",
+ "rows": [
+  {
+   "id": "q1",
+   "q": "My clothes smell bad after washing. What should I do?",
+   "right_page": 69,
+   "words_top3": [
+    1,
+    6,
+    7
+   ],
+   "meaning_top3": [
+    210,
+    202,
+    209
+   ],
+   "words_hit": false,
+   "meaning_hit": false,
+   "reply": "Not in the document. (page 210)",
+   "prompt_tokens": 218
+  },
+  {
+   "id": "q2",
+   "q": "Water is not going out of my machine. What do I check?",
+   "right_page": 141,
+   "words_top3": [
+    132,
+    141,
+    6
+   ],
+   "meaning_top3": [
+    141,
+    132,
+    46
+   ],
+   "words_hit": true,
+   "meaning_hit": true,
+   "reply": "Check if the drain pump filter is blocked; open the small door at the bottom right, unscrew the filter slowly over a towel, clean it, and close it. (page 141)",
+   "prompt_tokens": 247
+  },
+  {
+   "id": "q3",
+   "q": "Can I wash my silk saree in it?",
+   "right_page": 63,
+   "words_top3": [
+    63,
+    72,
+    81
+   ],
+   "meaning_top3": [
+    117,
+    63,
+    81
+   ],
+   "words_hit": true,
+   "meaning_hit": true,
+   "reply": "Yes, you can wash your silk saree in this program as it is designed for silk, wool, and other delicate fabrics. (page 117)",
+   "prompt_tokens": 252
+  },
+  {
+   "id": "q4",
+   "q": "How much does a new rubber seal for the door cost?",
+   "right_page": 262,
+   "words_top3": [
+    262,
+    104,
+    141
+   ],
+   "meaning_top3": [
+    262,
+    230,
+    235
+   ],
+   "words_hit": true,
+   "meaning_hit": true,
+   "reply": "Rs 1,250. (page 262)",
+   "prompt_tokens": 244
+  },
+  {
+   "id": "q5",
+   "q": "The machine is jumping and banging when it spins. Why?",
+   "right_page": 48,
+   "words_top3": [
+    1,
+    6,
+    7
+   ],
+   "meaning_top3": [
+    48,
+    113,
+    77
+   ],
+   "words_hit": false,
+   "meaning_hit": true,
+   "reply": "Before the first wash, remove the four transit bolts at the back of the machine. (page 48)",
+   "prompt_tokens": 227
+  },
+  {
+   "id": "q6",
+   "q": "For how many years is the motor guaranteed?",
+   "right_page": 284,
+   "words_top3": [
+    284,
+    1,
+    2
+   ],
+   "meaning_top3": [
+    284,
+    77,
+    2
+   ],
+   "words_hit": true,
+   "meaning_hit": true,
+   "reply": "10 years (page 284)",
+   "prompt_tokens": 197
+  },
+  {
+   "id": "q7",
+   "q": "My screen shows E35. What does it mean?",
+   "right_page": 155,
+   "words_top3": [
+    155,
+    1,
+    2
+   ],
+   "meaning_top3": [
+    154,
+    155,
+    163
+   ],
+   "words_hit": true,
+   "meaning_hit": true,
+   "reply": "Error E35: Door lock fault. Close the door firmly until it clicks. If the code stays, call service. (page 155)",
+   "prompt_tokens": 210
+  },
+  {
+   "id": "q8",
+   "q": "How do I stop my child from changing the wash settings?",
+   "right_page": 96,
+   "words_top3": [
+    96,
+    6,
+    7
+   ],
+   "meaning_top3": [
+    13,
+    18,
+    19
+   ],
+   "words_hit": true,
+   "meaning_hit": false,
+   "reply": "Not in the document. (page 13)",
+   "prompt_tokens": 241
+  },
+  {
+   "id": "q9",
+   "q": "Can I use the liquid I wash dishes with?",
+   "right_page": 104,
+   "words_top3": [
+    104,
+    48,
+    6
+   ],
+   "meaning_top3": [
+    104,
+    18,
+    19
+   ],
+   "words_hit": true,
+   "meaning_hit": true,
+   "reply": "No, you cannot use dishwashing liquid or hand-wash soap as it makes too much foam and can cause the machine to leak and be damaged. (page 104)",
+   "prompt_tokens": 234
+  },
+  {
+   "id": "q10",
+   "q": "Who do I call to get it repaired?",
+   "right_page": 291,
+   "words_top3": [
+    121,
+    122,
+    123
+   ],
+   "meaning_top3": [
+    291,
+    172,
+    155
+   ],
+   "words_hit": false,
+   "meaning_hit": true,
+   "reply": "Call 1800 000 0000 or send a WhatsApp message with a photo of the bill. (page 291)",
+   "prompt_tokens": 230
+  }
+ ]
+}
