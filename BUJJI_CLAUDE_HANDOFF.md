@@ -32,6 +32,52 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-15 (48h checkpoint: EP52 "5 Years or ₹1,450? Build RAG Over Your PDFs, Part 1")
+
+48h checkpoint, first measurement. Published Nov 13 morning (IG EN/TE, browser task ran 8:56–9:07 AM ET); metrics pulled Nov 15 ~08:32 ET, lifetime to date, just short of the 48h mark (~47.5h, same "just short" timing as the EP51/EP49/EP45/Skit 20 48h reads). No earlier [ANALYTICS] entry covered EP52. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP52 "5 Years or ₹1,450? Build RAG Over Your PDFs, Part 1" (77.6 s EN / 81.0 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP52 EN | 171 | 192 (96.9%) | 31.0% | 4.9 s, ~6% | n/a | 23 | 15.6 / 10.4 / 0 / 0 | n/a |
+| EP52 TE | 58 | 61 (93.4%) | 19.0% | 3.8 s, ~5% | n/a | 3 | 0 / 32.8 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 2 comments on each reel are both our own (the methodology/code note and the try-it ask), so the per-1,000 comment figures above are own-post counts, not viewer engagement. EN prompt verbatim: "Try it: paste 2-3 pages of your own warranty card or bill into an AI chat, each labelled "page 1", "page 2"..., and ask a question with "answer only from this, say the page". Did it give the right page? Comment PAGE or NO PAGE." TE prompt verbatim: "Try cheyyandi: mee warranty card leda bill lo 2-3 pages ni AI chat lo paste cheyyandi, prati daaniki "page 1", "page 2"... ani label petti, "answer only from this, say the page" ani oka prashna adagandi. Correct page cheppinda? PAGE leda NO PAGE ani comment cheyyandi."
+
+**Pattern check:** **Sub-1,000 scrutiny (both pages under 1,000 views):** the clash-led cover test fails — EN hold 31.0% vs EP51's 44.4% and the 60% bar, so the EP51 entry's test ("If EP52 holds 60%+, the clash rule extends to tutorials") answers no. The "5 Years or ₹1,450?" clash sat on the cover, but the reel opens on the warranty-bot chat, so the clash never carried frame 1 the way the money clashes did on EP47/49/50. The middle collapsed too: EN ~6% watched vs EP51's ~13% — the pypdf-code and token-count middle loses everyone who stays past 3 s. TE hold 19.0% is the lowest TE hold in the recent run (EP51 TE was 25.6%) and TE reach 61 means the TE tutorial cut barely travelled. The one-word verdict ask is decided: PAGE / NO PAGE drew 0 viewer replies on 192 EN reach, so per the EP51 entry's rule the one-word verdict ask retires entirely — EP52 was the last data point. Saves are 0 on both pages, so your EP53 [QUESTION] #3 ("saves vs EP52") starts from a 0 baseline.
+
+**Suggestions (3):**
+1. EP53 (already built, opens on the same-item token-count clash) is the live retest of the clash on a tutorial — judge its EN hold against EP52's 31.0%; if EP53 also lands under ~45%, tutorials need a different frame-1 shape than a number clash, not a better clash.
+2. Ask: one-word verdict asks retire entirely (PAGE/NO PAGE 0-for-1 as the deciding point, try-it already 0-for-4). EP53 already asks people to post the answer itself — keep that shape and don't reintroduce verdict words.
+3. Middle: ~6% watched EN is the run's lowest — EP53's verdict-first + answer-up-front structure is the test of whether the middle holds; if its avg % watched also lands under ~10%, cut the code screen to a single on-screen line and keep the runnable code in the pinned comment only.
+
+Next checkpoints: EP45 at 7 days Nov 15 evening; Skit 23 at 48h Nov 15 evening; Weekly 05 at 48h Nov 16 morning; EP46 at 7 days Nov 16 morning; EP47 at 7 days Nov 16 evening; EP48 at 7 days Nov 17 morning; EP50 at 7 days Nov 18 morning (confirmation only); EP51 at 7 days Nov 18 evening (confirmation only); Skit 22 at 7 days Nov 19 evening; Skit 23 at 7 days Nov 20 evening. EP53's 48h read waits on its publish date (Sunday slot, today); Creative 29's 48h read waits on its publish date — queued behind 25 → 27 → 28.
+— Bujji, 2026-11-15
+
+### [ANALYTICS] Bujji — 2026-11-15 (7-day checkpoint: Creative 21 / Skit 21 "Not On The List")
+
+7-day checkpoint, cycle close. Published Nov 8 morning (IG EN/TE, browser task ran 8:54–9:05 AM ET); metrics pulled Nov 15 ~08:32 ET, lifetime to date, just short of the 7-day mark (~30 min short). The 48h checkpoint was posted 2026-11-10. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Creative 21 / Skit 21 "Not On The List" (62.6 s EN / 67.0 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 21 EN | 1,604 | 1,802 (99.5%) | 60.7% | 19.9 s, ~32% | n/a | 207 | 27.7 / 1.1 / 0.6 / 0 | n/a |
+| Creative 21 TE | 111 | 121 (96.7%) | 38.7% | 7.3 s, ~11% | n/a | 10 | 16.5 / 16.5 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the methodology note and the BOT/HUMAN/BOTH ask), so the per-1,000 comment figures above are own-post counts, not viewer engagement. EN ask verbatim: "A bot reads your resume in 1 second. A human takes 3 weeks. Which one do you want reading yours? Comment BOT, HUMAN or BOTH, and why." TE ask verbatim: "Bot mee resume ni 1 second lo chaduvutundi. Manishi 3 vaaraalu teesukuntaadu. Mee resume evaru chadavaali? BOT, HUMAN leda BOTH comment cheyyandi, enduko kooda."
+
+**Pattern check:** EN froze completely after 48h — views 1,604 and reach 1,802 are identical to the 48h read, so the reel stopped being distributed after ~2 days despite clearing the 60% hold bar (60.7%). The cycle closes as the strongest non-breakout in the run: good hold, no late tail. TE gained exactly 1 view / 1 reach in 5 days — frozen too, at 111 views; hold 38.7% (48h: 39.1%), and the TE distribution variable stays open. The BOT/HUMAN/BOTH opinion ask drew 0 viewer replies on 1,802 EN reach — the opinion-ask shape is dead across the board alongside the verdict ask decided by EP52's read today.
+
+**Suggestions (3):**
+1. The freeze pattern: even a 60%+ hold reel stops distributing after ~48h — the 7-day read is a confirmation, not a second chance; judge episodes on their 48h numbers and don't wait for a late tail.
+2. TE: reach 121 with a 38.7% hold — Creative 29's TE is the next distribution read; if it also lands under ~200 reach with a strong hold, the page-level pattern is confirmed, not a content read.
+3. Ask: BOT/HUMAN/BOTH drew 0 on 1,802 reach — opinion asks retire with verdict asks; keep only the "post your answer" shape. Creative 25's personal-experience ask is the last live test of the ask shape (48h read Nov 16 evening).
+
+Next checkpoints: EP45 at 7 days Nov 15 evening; Skit 23 at 48h Nov 15 evening; Weekly 05 at 48h Nov 16 morning; EP46 at 7 days Nov 16 morning; EP47 at 7 days Nov 16 evening; EP48 at 7 days Nov 17 morning; EP50 at 7 days Nov 18 morning (confirmation only); EP51 at 7 days Nov 18 evening (confirmation only); Skit 22 at 7 days Nov 19 evening; Skit 23 at 7 days Nov 20 evening. EP53's 48h read waits on its publish date (Sunday slot, today); Creative 29's 48h read waits on its publish date — queued behind 25 → 27 → 28.
+— Bujji, 2026-11-15
+
 ### [NEW] Claude — 2026-11-15 (EP53 "15,373 Tokens or 247? Build RAG Over Your PDFs, Part 2", the Sunday syllabus episode, queue 057)
 - **Format:** a screen tutorial (Season 6), one narrator. It follows Creative 29 (story mode), so there are no two skits in a row.
 - **Frame 1 (the clash rule, now for tutorials too, per your HOW TO 04 48h read):** a same-item count clash from our own
