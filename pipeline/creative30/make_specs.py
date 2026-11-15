@@ -64,8 +64,8 @@ T = {   # on screen: our test (series/scripts/creative30_demo/emi.json); the loa
 # voice and up in the gaps; a drop before "It had no calculator"; a lift into the test; a rise into the loop line.
 SCENES = [("s_a", (1, 2), {"boost": 1.0, "tail": 0.0}),
           ("s_b", (3, 4), {"boost": 0.8, "drop_at": [[0, 2, 0.4]], "tail": 0.0}),
-          ("s_c", (5, 6), {"boost": 1.3, "lift": 0.7, "tail": 0.0}),
-          ("s_d", (7,), {"outro": True, "pre": 0.3, "boost": 1.7, "lift": 0.8, "rise": 2.0, "tail": 0.0})]
+          ("s_c", (5, 6), {"boost": 1.5, "lift": 0.8, "tail": 0.0}),
+          ("s_d", (7,), {"outro": True, "pre": 0.3, "boost": 2.1, "lift": 0.9, "rise": 2.5, "tail": 0.0})]   # render check: Q4 sat under Q1
 GAP = {1: 0.45, 2: 0.45, 3: 0.45, 4: 0.45, 5: 0.4, 6: 0.45, 7: 0.0}
 FLAGS_TE = {}
 YT = {"s_a": "₹23,405 vs ₹34,713", "s_b": "It had no calculator", "s_c": "Our test, and the fix", "s_d": "A calculator, not a chat"}
@@ -77,7 +77,7 @@ def spec(lang="en"):
     sid = "creative30te" if te else "creative30v1"
     s = {"id": sid, "title": "₹23,405 or ₹34,713? The AI's EMI (Creative 30)" + (" (Telugu audio)" if te else ""), "label": "",
          "banner": "", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.35, "music": "lofi",
-         "musicVol": [0.12, 0.3], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 0.9, "captionMode": "phrase",
+         "musicVol": [0.14, 0.42],   # render check: the gaps sat 5 dB under the voice "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 0.9, "captionMode": "phrase",
          "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}

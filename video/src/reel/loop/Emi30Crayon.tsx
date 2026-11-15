@@ -103,6 +103,7 @@ const StEmi: React.FC<SP> = ({ s }) => {
         const endL = ln.from + ln.frames;
         const loopOn = b.prop === "loop" && f >= endL + HOLD;
         c.fillStyle = BG; c.fillRect(0, 0, W, H);
+        c.save(); c.translate(540 * 0.06, 112); c.scale(0.94, 0.94);   // render check: clear the reel's header strip, end above the captions
         const P = loopOn ? "hook" : b.prop;
         if (P === "hook") {
           paper(c, 90, 150, 900, 150, false);
@@ -149,7 +150,8 @@ const StEmi: React.FC<SP> = ({ s }) => {
             c.font = SANS(34, 800); c.fillStyle = "#713f12"; c.textAlign = "center"; c.fillText("the AI wrote:", 540, 935);
             c.font = SANS(54, 900); c.fillStyle = INK;
             wrap(c, "\u201ccalculated using a calculator\u201d", 900).forEach((t, q) => c.fillText(t, 540, 1010 + q * 64));
-            c.font = SANS(28, 700); c.fillStyle = "#713f12"; c.fillText("(its full line: \u201cThis value is calculated using a calculator or financial software\u201d)", 540, 1100);
+            const full = "(its full line: \u201cThis value is calculated using a calculator or financial software\u201d)";
+            c.font = SANS(fit(c, full, 900, 28, 700), 700); c.fillStyle = "#713f12"; c.fillText(full, 540, 1100);
             c.restore();
           }
           stamp(c, "NO CALCULATOR", 540, 1230, seg(f, cu(2, 0.8), cu(2, 0.8) + 8));
@@ -209,8 +211,9 @@ const StEmi: React.FC<SP> = ({ s }) => {
           title(c, "FOR MONEY: A CALCULATOR", 250, GREEN, 64);
           calculator(c, 540, 640, 0.9, "34,713");
           chip(c, T.search, 540, 1010, "#1c1917", AMBER, seg(f, ln.from + 6, ln.from + 14), big(c, T.search, 48));
-          chip(c, T.apps, 540, 1130, "#1c1917", "#e7e5e4", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), big(c, T.apps, 42));
-          chip(c, T.formula, 540, 1250, "#fffbeb", INK, seg(f, cu(1, 0.3) + 24, cu(1, 0.3) + 32), big(c, T.formula, 36));
+          chip(c, "big apps can run real code:", 540, 1130, "#1c1917", "#e7e5e4", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), 44);   // render check: one long chip was small
+          chip(c, "ask them to, then match it with your bank's", 540, 1230, "#1c1917", "#e7e5e4", seg(f, cu(1, 0.3) + 8, cu(1, 0.3) + 16), big(c, "ask them to, then match it with your bank's", 44));
+          chip(c, T.formula, 540, 1360, "#fffbeb", INK, seg(f, cu(1, 0.3) + 24, cu(1, 0.3) + 32), big(c, T.formula, 36));
         } else if (P === "loop") {
           const k = seg(f, ln.from, ln.from + 10);
           c.save(); c.globalAlpha = clamp(k * 2);
@@ -220,6 +223,7 @@ const StEmi: React.FC<SP> = ({ s }) => {
           c.font = SANS(fit(c, "NOT A CHAT", 760, 90, 900), 900); c.fillStyle = "#b91c1c"; c.fillText("NOT A CHAT", 540, 940);
           c.restore();
         }
+        c.restore();
       }} />
     </>
   );
