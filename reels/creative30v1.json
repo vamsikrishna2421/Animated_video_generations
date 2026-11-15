@@ -1,0 +1,457 @@
+{
+ "id": "creative30v1",
+ "title": "₹23,405 or ₹34,713? The AI's EMI (Creative 30)",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.12,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.9,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_emi30",
+   "tail": 0.0,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "gap",
+      "n": 2
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "loan": "HOME LOAN · ₹40,00,000 · 8.5% · 20 YEARS",
+     "ai": "₹23,405",
+     "real": "₹34,713",
+     "short": "₹11,308",
+     "months": 240,
+     "lost": "₹27,13,920",
+     "steps": [
+      "r = 8.5 / 1200 = 0.00708333",
+      "n = 20 × 12 = 240",
+      "(1.00708333)^240 ≈ 6.9544",
+      "(This value is calculated using a calculator or financial software)",
+      "EMI = 4000000 × 0.04928 / 5.9544",
+      "EMI ≈ ₹33,092"
+     ],
+     "realPow": "real: 5.4412",
+     "stepsEmi": "₹33,092",
+     "ask": [
+      1285,
+      8192,
+      35709,
+      23405,
+      7146,
+      5385,
+      18537,
+      8195,
+      13475,
+      3854
+     ],
+     "true": [
+      3929,
+      7974,
+      13572,
+      34713,
+      13385,
+      5387,
+      24986,
+      10747,
+      12792,
+      4279
+     ],
+     "codeRight": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "formula": "EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)",
+     "apps": "some chat apps can run real code for maths: ask it to, then check the code"
+    },
+    "yt": {
+     "chapter": "₹23,405 vs ₹34,713",
+     "title": "₹23,405 vs ₹34,713",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "Twenty-three thousand a month, said a small AI. [1] The real EMI on this home loan: thirty-four thousand, seven hundred.",
+     "maxgap": 0.3,
+     "gap": 0.45,
+     "show": "₹23,000 a month, said a small AI. The real EMI on this home loan: ₹34,700.",
+     "tempo": 1.0
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "Eleven thousand short, every month. [1] Over twenty years, twenty-seven lakh rupees you never planned for.",
+     "maxgap": 0.3,
+     "gap": 0.45,
+     "show": "₹11,000 short, every month. Over 20 years, ₹27 lakh you never planned for.",
+     "tempo": 1.0
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_emi30",
+   "tail": 0.0,
+   "boost": 0.8,
+   "drop_at": [
+    [
+     0,
+     2,
+     0.4
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "steps",
+      "n": 3
+     },
+     {
+      "prop": "why",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "loan": "HOME LOAN · ₹40,00,000 · 8.5% · 20 YEARS",
+     "ai": "₹23,405",
+     "real": "₹34,713",
+     "short": "₹11,308",
+     "months": 240,
+     "lost": "₹27,13,920",
+     "steps": [
+      "r = 8.5 / 1200 = 0.00708333",
+      "n = 20 × 12 = 240",
+      "(1.00708333)^240 ≈ 6.9544",
+      "(This value is calculated using a calculator or financial software)",
+      "EMI = 4000000 × 0.04928 / 5.9544",
+      "EMI ≈ ₹33,092"
+     ],
+     "realPow": "real: 5.4412",
+     "stepsEmi": "₹33,092",
+     "ask": [
+      1285,
+      8192,
+      35709,
+      23405,
+      7146,
+      5385,
+      18537,
+      8195,
+      13475,
+      3854
+     ],
+     "true": [
+      3929,
+      7974,
+      13572,
+      34713,
+      13385,
+      5387,
+      24986,
+      10747,
+      12792,
+      4279
+     ],
+     "codeRight": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "formula": "EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)",
+     "apps": "some chat apps can run real code for maths: ask it to, then check the code"
+    },
+    "yt": {
+     "chapter": "It had no calculator",
+     "title": "It had no calculator",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "Asked to work it out step by step, it got closer: thirty-three thousand. [1] And it wrote, 'calculated using a calculator.' <pause 0.6> [2] It had no calculator.",
+     "maxgap": 0.3,
+     "gap": 0.45,
+     "show": "Asked to work it out step by step, it got closer: ₹33,000. And it wrote, 'calculated using a calculator.' <pause 0.6> It had no calculator.",
+     "tempo": 1.0,
+     "tts": "Asked to work it out step by step, it got closer: thirty-three thousand. And it wrote, 'calculated using a calculator.'",
+     "file2": "03b_storyteller.wav",
+     "tts2": "It had no calculator.",
+     "pause": 0.6
+    },
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "A chat AI writes the next likely words. [1] Numbers too: it writes them; it doesn't work them out.",
+     "maxgap": 0.3,
+     "gap": 0.45,
+     "show": "A chat AI writes the next likely words. Numbers too: it writes them; it doesn't work them out.",
+     "tempo": 1.0
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_emi30",
+   "tail": 0.0,
+   "boost": 1.3,
+   "lift": 0.7,
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 5
+     },
+     {
+      "prop": "fix",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "loan": "HOME LOAN · ₹40,00,000 · 8.5% · 20 YEARS",
+     "ai": "₹23,405",
+     "real": "₹34,713",
+     "short": "₹11,308",
+     "months": 240,
+     "lost": "₹27,13,920",
+     "steps": [
+      "r = 8.5 / 1200 = 0.00708333",
+      "n = 20 × 12 = 240",
+      "(1.00708333)^240 ≈ 6.9544",
+      "(This value is calculated using a calculator or financial software)",
+      "EMI = 4000000 × 0.04928 / 5.9544",
+      "EMI ≈ ₹33,092"
+     ],
+     "realPow": "real: 5.4412",
+     "stepsEmi": "₹33,092",
+     "ask": [
+      1285,
+      8192,
+      35709,
+      23405,
+      7146,
+      5385,
+      18537,
+      8195,
+      13475,
+      3854
+     ],
+     "true": [
+      3929,
+      7974,
+      13572,
+      34713,
+      13385,
+      5387,
+      24986,
+      10747,
+      12792,
+      4279
+     ],
+     "codeRight": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "formula": "EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)",
+     "apps": "some chat apps can run real code for maths: ask it to, then check the code"
+    },
+    "yt": {
+     "chapter": "Our test, and the fix",
+     "title": "Our test, and the fix",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "Our test, ten loans: [1] asked plainly, none right. [2] Step by step, none. <pause 0.5> [3] As a formula we then worked out: four.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "Our test, 10 loans: asked plainly, none right. Step by step, none. <pause 0.5> As a formula we then worked out: 4.",
+     "tempo": 1.0,
+     "tts": "Our test, ten loans: asked plainly, none right. Step by step, none.",
+     "file2": "05b_storyteller.wav",
+     "tts2": "As a formula we then worked out: four.",
+     "pause": 0.5
+    },
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "For money, use a calculator: [1] your bank's EMI calculator, or code you can check.",
+     "maxgap": 0.3,
+     "gap": 0.45,
+     "show": "For money, use a calculator: your bank's EMI calculator, or code you can check.",
+     "tempo": 1.0
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_emi30",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.7,
+   "lift": 0.8,
+   "rise": 2.0,
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "loan": "HOME LOAN · ₹40,00,000 · 8.5% · 20 YEARS",
+     "ai": "₹23,405",
+     "real": "₹34,713",
+     "short": "₹11,308",
+     "months": 240,
+     "lost": "₹27,13,920",
+     "steps": [
+      "r = 8.5 / 1200 = 0.00708333",
+      "n = 20 × 12 = 240",
+      "(1.00708333)^240 ≈ 6.9544",
+      "(This value is calculated using a calculator or financial software)",
+      "EMI = 4000000 × 0.04928 / 5.9544",
+      "EMI ≈ ₹33,092"
+     ],
+     "realPow": "real: 5.4412",
+     "stepsEmi": "₹33,092",
+     "ask": [
+      1285,
+      8192,
+      35709,
+      23405,
+      7146,
+      5385,
+      18537,
+      8195,
+      13475,
+      3854
+     ],
+     "true": [
+      3929,
+      7974,
+      13572,
+      34713,
+      13385,
+      5387,
+      24986,
+      10747,
+      12792,
+      4279
+     ],
+     "codeRight": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "formula": "EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)",
+     "apps": "some chat apps can run real code for maths: ask it to, then check the code"
+    },
+    "yt": {
+     "chapter": "A calculator, not a chat",
+     "title": "A calculator, not a chat",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "So the next time a chat says, twenty-three thousand a month...",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "show": "So the next time a chat says ₹23,000 a month...",
+     "tempo": 1.0
+    }
+   ]
+  }
+ ]
+}

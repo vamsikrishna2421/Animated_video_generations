@@ -1,0 +1,463 @@
+{
+ "id": "creative30te",
+ "title": "₹23,405 or ₹34,713? The AI's EMI (Creative 30) (Telugu audio)",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.12,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.9,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_emi30",
+   "tail": 0.0,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "gap",
+      "n": 2
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "loan": "HOME LOAN · ₹40,00,000 · 8.5% · 20 YEARS",
+     "ai": "₹23,405",
+     "real": "₹34,713",
+     "short": "₹11,308",
+     "months": 240,
+     "lost": "₹27,13,920",
+     "steps": [
+      "r = 8.5 / 1200 = 0.00708333",
+      "n = 20 × 12 = 240",
+      "(1.00708333)^240 ≈ 6.9544",
+      "(This value is calculated using a calculator or financial software)",
+      "EMI = 4000000 × 0.04928 / 5.9544",
+      "EMI ≈ ₹33,092"
+     ],
+     "realPow": "real: 5.4412",
+     "stepsEmi": "₹33,092",
+     "ask": [
+      1285,
+      8192,
+      35709,
+      23405,
+      7146,
+      5385,
+      18537,
+      8195,
+      13475,
+      3854
+     ],
+     "true": [
+      3929,
+      7974,
+      13572,
+      34713,
+      13385,
+      5387,
+      24986,
+      10747,
+      12792,
+      4279
+     ],
+     "codeRight": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "formula": "EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)",
+     "apps": "some chat apps can run real code for maths: ask it to, then check the code"
+    },
+    "yt": {
+     "chapter": "₹23,405 vs ₹34,713",
+     "title": "₹23,405 vs ₹34,713",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "నెలకి ఇరవై మూడు వేలు, అంది ఒక చిన్న చాట్‌బాట్. [1] ఈ హోమ్ లోన్ అసలు నెల వాయిదా: ముప్పై నాలుగు వేల ఏడు వందలు.",
+     "maxgap": 0.3,
+     "gap": 0.45,
+     "show": "₹23,000 a month, said a small chatbot. This home loan's real monthly instalment: ₹34,700.",
+     "tempo": 1.08
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "ప్రతి నెలా పదకొండు వేలు తక్కువ. [1] ఇరవై ఏళ్ళలో, మీరు లెక్కలో వేసుకోని ఇరవై ఏడు లక్షలు.",
+     "maxgap": 0.3,
+     "gap": 0.45,
+     "show": "₹11,000 short every month. Over 20 years, ₹27 lakh you never counted.",
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_emi30",
+   "tail": 0.0,
+   "boost": 0.8,
+   "drop_at": [
+    [
+     0,
+     2,
+     0.4
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "steps",
+      "n": 3
+     },
+     {
+      "prop": "why",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "loan": "HOME LOAN · ₹40,00,000 · 8.5% · 20 YEARS",
+     "ai": "₹23,405",
+     "real": "₹34,713",
+     "short": "₹11,308",
+     "months": 240,
+     "lost": "₹27,13,920",
+     "steps": [
+      "r = 8.5 / 1200 = 0.00708333",
+      "n = 20 × 12 = 240",
+      "(1.00708333)^240 ≈ 6.9544",
+      "(This value is calculated using a calculator or financial software)",
+      "EMI = 4000000 × 0.04928 / 5.9544",
+      "EMI ≈ ₹33,092"
+     ],
+     "realPow": "real: 5.4412",
+     "stepsEmi": "₹33,092",
+     "ask": [
+      1285,
+      8192,
+      35709,
+      23405,
+      7146,
+      5385,
+      18537,
+      8195,
+      13475,
+      3854
+     ],
+     "true": [
+      3929,
+      7974,
+      13572,
+      34713,
+      13385,
+      5387,
+      24986,
+      10747,
+      12792,
+      4279
+     ],
+     "codeRight": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "formula": "EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)",
+     "apps": "some chat apps can run real code for maths: ask it to, then check the code"
+    },
+    "yt": {
+     "chapter": "It had no calculator",
+     "title": "It had no calculator",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "స్టెప్ బై స్టెప్ అడిగితే, దగ్గరికి వచ్చింది: ముప్పై మూడు వేలు. [1] కాలిక్యులేటర్ తో లెక్కించాం, అని కూడా రాసింది. <pause 0.6> [2] దాని దగ్గర కాలిక్యులేటరే లేదు.",
+     "maxgap": 0.3,
+     "gap": 0.45,
+     "show": "Asked step by step, it came closer: ₹33,000. It even wrote 'calculated with a calculator'. <pause 0.6> It had no calculator.",
+     "tempo": 1.08,
+     "tts": "స్టెప్ బై స్టెప్ అడిగితే, దగ్గరికి వచ్చింది: ముప్పై మూడు వేలు. కాలిక్యులేటర్ తో లెక్కించాం, అని కూడా రాసింది.",
+     "file2": "03b_storyteller.wav",
+     "tts2": "దాని దగ్గర కాలిక్యులేటరే లేదు.",
+     "pause": 0.6
+    },
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "చాట్‌బాట్ తర్వాత రావాల్సిన మాటలు రాస్తుంది. [1] అంకెలు కూడా అంతే: రాస్తుంది, లెక్క వేయదు.",
+     "maxgap": 0.3,
+     "gap": 0.45,
+     "show": "A chatbot writes the words that should come next. Numbers too: it writes them, it doesn't calculate.",
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_emi30",
+   "tail": 0.0,
+   "boost": 1.3,
+   "lift": 0.7,
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 5
+     },
+     {
+      "prop": "fix",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "loan": "HOME LOAN · ₹40,00,000 · 8.5% · 20 YEARS",
+     "ai": "₹23,405",
+     "real": "₹34,713",
+     "short": "₹11,308",
+     "months": 240,
+     "lost": "₹27,13,920",
+     "steps": [
+      "r = 8.5 / 1200 = 0.00708333",
+      "n = 20 × 12 = 240",
+      "(1.00708333)^240 ≈ 6.9544",
+      "(This value is calculated using a calculator or financial software)",
+      "EMI = 4000000 × 0.04928 / 5.9544",
+      "EMI ≈ ₹33,092"
+     ],
+     "realPow": "real: 5.4412",
+     "stepsEmi": "₹33,092",
+     "ask": [
+      1285,
+      8192,
+      35709,
+      23405,
+      7146,
+      5385,
+      18537,
+      8195,
+      13475,
+      3854
+     ],
+     "true": [
+      3929,
+      7974,
+      13572,
+      34713,
+      13385,
+      5387,
+      24986,
+      10747,
+      12792,
+      4279
+     ],
+     "codeRight": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "formula": "EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)",
+     "apps": "some chat apps can run real code for maths: ask it to, then check the code"
+    },
+    "yt": {
+     "chapter": "Our test, and the fix",
+     "title": "Our test, and the fix",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "మా టెస్ట్, పది లోన్లు: [1] మామూలుగా అడిగితే, ఒక్కటీ సరిగ్గా లేదు. [2] స్టెప్ బై స్టెప్, ఒక్కటీ లేదు. <pause 0.5> [3] ఫార్ములా రాయమని, మేమే లెక్కిస్తే: నాలుగు.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "Our test, 10 loans: asked plainly, not one right. Step by step, not one. <pause 0.5> Asked for a formula, and we calculated it: 4.",
+     "tempo": 1.08,
+     "tts": "మా టెస్ట్, పది లోన్లు: మామూలుగా అడిగితే, ఒక్కటీ సరిగ్గా లేదు. స్టెప్ బై స్టెప్, ఒక్కటీ లేదు.",
+     "file2": "05b_storyteller.wav",
+     "tts2": "ఫార్ములా రాయమని, మేమే లెక్కిస్తే: నాలుగు.",
+     "pause": 0.5
+    },
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "డబ్బు లెక్కకి, కాలిక్యులేటరే వాడండి: [1] మీ బ్యాంక్ లోన్ కాలిక్యులేటర్, లేదా మీరు చెక్ చేయగలిగే కోడ్.",
+     "maxgap": 0.3,
+     "gap": 0.45,
+     "show": "For money maths, use a calculator: your bank's loan calculator, or code you can check.",
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_emi30",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.7,
+   "lift": 0.8,
+   "rise": 2.0,
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "loan": "HOME LOAN · ₹40,00,000 · 8.5% · 20 YEARS",
+     "ai": "₹23,405",
+     "real": "₹34,713",
+     "short": "₹11,308",
+     "months": 240,
+     "lost": "₹27,13,920",
+     "steps": [
+      "r = 8.5 / 1200 = 0.00708333",
+      "n = 20 × 12 = 240",
+      "(1.00708333)^240 ≈ 6.9544",
+      "(This value is calculated using a calculator or financial software)",
+      "EMI = 4000000 × 0.04928 / 5.9544",
+      "EMI ≈ ₹33,092"
+     ],
+     "realPow": "real: 5.4412",
+     "stepsEmi": "₹33,092",
+     "ask": [
+      1285,
+      8192,
+      35709,
+      23405,
+      7146,
+      5385,
+      18537,
+      8195,
+      13475,
+      3854
+     ],
+     "true": [
+      3929,
+      7974,
+      13572,
+      34713,
+      13385,
+      5387,
+      24986,
+      10747,
+      12792,
+      4279
+     ],
+     "codeRight": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "formula": "EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)",
+     "apps": "some chat apps can run real code for maths: ask it to, then check the code"
+    },
+    "yt": {
+     "chapter": "A calculator, not a chat",
+     "title": "A calculator, not a chat",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "ఇంకోసారి ఏదైనా చాట్, నెలకి ఇరవై మూడు వేలు అంటే...",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "show": "The next time any chat says ₹23,000 a month...",
+     "tempo": 1.08
+    }
+   ]
+  }
+ ]
+}
