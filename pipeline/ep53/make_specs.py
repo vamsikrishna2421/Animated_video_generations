@@ -26,9 +26,9 @@ LINES = {
     7: ("test", "Ten questions: right page in the top three? [1] By meaning, eight. [2] Word search, seven. | [3] Both mixed, the simple way: six.",
         "పది ప్రశ్నలు: సరైన పేజీ టాప్ త్రీ లో ఉందా? [1] అర్థం బట్టి, ఎనిమిది. [2] మాటల సెర్చ్, ఏడు. | [3] రెండూ మామూలుగా కలిపితే: ఆరు."),
     8: ("miss", "It missed two. The child lock: [1] 'not in the document', but it's on page 96. [2] 'Not there'? Check the PDF.",
-        "రెండు మిస్ అయ్యాయి. చైల్డ్ లాక్: [1] డాక్యుమెంట్ లో లేదు అంది, కానీ అది పేజీ తొంభై ఆరులో ఉంది. [2] లేదు అంటే, పీడీఎఫ్ మీరే చూసుకోండి."),
+        "రెండు తప్పాయి. చైల్డ్ లాక్ ప్రశ్నకి, | [1] డాక్యుమెంట్ లో లేదు అంది; కానీ అది పేజీ తొంభై ఆరులో ఉంది. [2] లేదు అంటే, పీడీఎఫ్ మీరే చూసుకోండి."),
     9: ("habit", "Short PDF? Send it whole, like Part 1. [1] Long, or lots of questions? Search by meaning, and test ten questions you know the page for.",
-        "మీ పీడీఎఫ్ చిన్నదా? పార్ట్ వన్ లా మొత్తం పంపండి. [1] పెద్దదా, ప్రశ్నలు ఎక్కువా? అర్థం బట్టి వెతకండి, తర్వాత పేజీ తెలిసిన పది ప్రశ్నలతో టెస్ట్ చేసుకోండి."),
+        "మీ పీడీఎఫ్ చిన్నదా? పార్ట్ వన్ లా మొత్తం పంపండి. | [1] పెద్దదా, ప్రశ్నలు ఎక్కువా? అర్థం బట్టి వెతకండి; పేజీ తెలిసిన పది ప్రశ్నలతో పరీక్షించండి."),
     10: ("loop", "Next: an agent with tools. [1] And the drain question? Clean the drain filter, page 141.",
          "తర్వాత: టూల్స్ ఉన్న ఏజెంట్. | [1] మరి డ్రెయిన్ ప్రశ్న? డ్రెయిన్ ఫిల్టర్ క్లీన్ చేసుకోండి, పేజీ నూట నలభై ఒకటి."),
 }
@@ -48,12 +48,12 @@ SHOW_TE = {
     5: "Step 2: turn the question into numbers too, and take the 3 closest pages. <pause 0.4> One word in the question, another on the page; same meaning, so the page was found.",
     6: "Step 3: send those pages, with their page numbers and Part 1's rules.",
     7: "10 questions: is the right page in the top 3? By meaning, 8. Word search, 7. <pause 0.5> Both mixed, the plain way: 6.",
-    8: "It missed 2. The child lock: it said 'not in the document', but it's on page 96. If it says 'not there', check the PDF yourself.",
-    9: "Your PDF short? Send it whole, like Part 1. Long, or many questions? Search by meaning, then test with 10 questions whose page you know.",
+    8: "2 missed. The child lock question: <pause 0.3> it said 'not in the document', but it's on page 96. If it says 'not there', check the PDF yourself.",
+    9: "Your PDF short? Send it whole, like Part 1. <pause 0.4> Long, or many questions? Search by meaning; test with 10 questions whose page you know.",
     10: "Next: an agent with tools. <pause 0.3> And the drain question? Clean the drain filter, page 141.",
 }
 SPLIT_PAUSE = {7: 0.5}
-SPLIT_PAUSE_TE = {5: 0.4, 7: 0.5, 10: 0.3}
+SPLIT_PAUSE_TE = {5: 0.4, 7: 0.5, 8: 0.3, 9: 0.4, 10: 0.3}
 TTS_EN = {}
 T = {   # on screen: our test (series/scripts/ep53_demo/), the manual is ours (made up)
     "q": "Water is not going out of my machine. What do I check?",
