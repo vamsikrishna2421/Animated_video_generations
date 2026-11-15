@@ -1,0 +1,221 @@
+{
+ "loans": [
+  [
+   "bike loan",
+   120000,
+   11.0,
+   3
+  ],
+  [
+   "personal loan",
+   300000,
+   12.5,
+   4
+  ],
+  [
+   "car loan",
+   650000,
+   9.25,
+   5
+  ],
+  [
+   "home loan",
+   4000000,
+   8.5,
+   20
+  ],
+  [
+   "education loan",
+   800000,
+   10.25,
+   7
+  ],
+  [
+   "phone on EMI",
+   60000,
+   14.0,
+   1
+  ],
+  [
+   "home loan",
+   2500000,
+   8.75,
+   15
+  ],
+  [
+   "personal loan",
+   500000,
+   10.5,
+   5
+  ],
+  [
+   "tractor loan",
+   700000,
+   9.5,
+   6
+  ],
+  [
+   "two-wheeler loan",
+   90000,
+   13.0,
+   2
+  ]
+ ],
+ "prompts": {
+  "ask": "<question> Reply with only the EMI in rupees.",
+  "steps": "<question> Work it out step by step, then give the EMI on the last line as 'EMI: Rs N'.",
+  "code": "<question> Don't calculate it yourself. Write one arithmetic expression, using only numbers (no variable names), that computes the EMI with the standard EMI formula. Reply with the expression only."
+ },
+ "rows": [
+  {
+   "mode": "ask",
+   "loan": 1,
+   "what": "bike loan",
+   "principal": 120000,
+   "rate": 11.0,
+   "years": 3,
+   "emi": 3928.65,
+   "got": 1285.0,
+   "expr": null,
+   "err_month": -2644,
+   "err_total": -95184,
+   "right": false,
+   "reply": "1285"
+  },
+  {
+   "mode": "ask",
+   "loan": 2,
+   "what": "personal loan",
+   "principal": 300000,
+   "rate": 12.5,
+   "years": 4,
+   "emi": 7974.0,
+   "got": 8192.0,
+   "expr": null,
+   "err_month": 218,
+   "err_total": 10464,
+   "right": false,
+   "reply": "8192"
+  },
+  {
+   "mode": "ask",
+   "loan": 3,
+   "what": "car loan",
+   "principal": 650000,
+   "rate": 9.25,
+   "years": 5,
+   "emi": 13571.93,
+   "got": 35709.0,
+   "expr": null,
+   "err_month": 22137,
+   "err_total": 1328220,
+   "right": false,
+   "reply": "35709"
+  },
+  {
+   "mode": "ask",
+   "loan": 4,
+   "what": "home loan",
+   "principal": 4000000,
+   "rate": 8.5,
+   "years": 20,
+   "emi": 34712.93,
+   "got": 23405.0,
+   "expr": null,
+   "err_month": -11308,
+   "err_total": -2713920,
+   "right": false,
+   "reply": "23405"
+  },
+  {
+   "mode": "ask",
+   "loan": 5,
+   "what": "education loan",
+   "principal": 800000,
+   "rate": 10.25,
+   "years": 7,
+   "emi": 13384.51,
+   "got": 7146.0,
+   "expr": null,
+   "err_month": -6239,
+   "err_total": -524076,
+   "right": false,
+   "reply": "7146"
+  },
+  {
+   "mode": "ask",
+   "loan": 6,
+   "what": "phone on EMI",
+   "principal": 60000,
+   "rate": 14.0,
+   "years": 1,
+   "emi": 5387.23,
+   "got": 5385.0,
+   "expr": null,
+   "err_month": -2,
+   "err_total": -24,
+   "right": false,
+   "reply": "5385"
+  },
+  {
+   "mode": "ask",
+   "loan": 7,
+   "what": "home loan",
+   "principal": 2500000,
+   "rate": 8.75,
+   "years": 15,
+   "emi": 24986.22,
+   "got": 18537.0,
+   "expr": null,
+   "err_month": -6449,
+   "err_total": -1160820,
+   "right": false,
+   "reply": "18537"
+  },
+  {
+   "mode": "ask",
+   "loan": 8,
+   "what": "personal loan",
+   "principal": 500000,
+   "rate": 10.5,
+   "years": 5,
+   "emi": 10746.95,
+   "got": 8195.0,
+   "expr": null,
+   "err_month": -2552,
+   "err_total": -153120,
+   "right": false,
+   "reply": "8195"
+  },
+  {
+   "mode": "ask",
+   "loan": 9,
+   "what": "tractor loan",
+   "principal": 700000,
+   "rate": 9.5,
+   "years": 6,
+   "emi": 12792.28,
+   "got": 13475.0,
+   "expr": null,
+   "err_month": 683,
+   "err_total": 49176,
+   "right": false,
+   "reply": "13475"
+  },
+  {
+   "mode": "ask",
+   "loan": 10,
+   "what": "two-wheeler loan",
+   "principal": 90000,
+   "rate": 13.0,
+   "years": 2,
+   "emi": 4278.76,
+   "got": 3854.0,
+   "expr": null,
+   "err_month": -425,
+   "err_total": -10200,
+   "right": false,
+   "reply": "3854"
+  }
+ ]
+}
