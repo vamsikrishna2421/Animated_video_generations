@@ -28,16 +28,17 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("twenty", "23"), ("thousand",), ("emi",), ("thirty", "34"), ("seven", "700")], 2: [("eleven", "11"), ("twenty", "20"), ("lakh",)],
+MUST = {"en": {1: [("twenty", "23"), ("thirty", "34"), ("seven", "700"), ("same",), ("small",), ("calculator",)], 2: [("budget",), ("eleven", "11"), ("twenty", "20"), ("lakh",)],
                3: [("step",), ("closer",), ("thirty", "33"), ("calculator",)], "3b": [("calculator",)],
-               4: [("words",), ("numbers",), ("work",)], 5: [("ten", "10"), ("none",), ("step",)], "5b": [("formula",), ("four", "4")],
-               6: [("calculator",), ("bank",), ("code",)], 7: [("next",), ("twenty", "23"), ("month",)]},
+               4: [("words",), ("numbers",), ("guesses", "guess")], 5: [("ten", "10"), ("rupee",), ("none",), ("step",)], "5b": [("formula",), ("four", "4"), ("ten", "10")],
+               6: [("emi",), ("calculator",), ("bank",)], "6b": [("code",), ("bank",)], 7: [("next",), ("twenty", "23"), ("month",)]},
         "te": {}}
-JUDGE_TEXT = {1: "23,000 a month, said a small AI. The real EMI on this home loan: 34,700.",
-              2: "11,000 short, every month. Over 20 years, 27 lakh rupees you never planned for.",
-              3: "Asked to work it out step by step, it got closer: 33,000. And it wrote, 'calculated using a calculator.'",
+JUDGE_TEXT = {1: "23,000 a month, or 34,700? Same home loan. The first came from a small free AI, with no calculator.",
+              2: "Plan your budget on it, and you're 11,000 short every month. Over 20 years: 27 lakh.",
+              3: "Asked to go step by step, it got closer: 33,000. It even wrote: 'calculated using a calculator.'",
               "3b": "It had no calculator.",
-              5: "Our test, 10 loans: asked plainly, none right. Step by step, none.", "5b": "As a formula we then worked out: 4.",
+              5: "Our test, 10 loans, right to the rupee: asked plainly, none. Step by step, none.", "5b": "As a formula we then worked out: 4 of 10.",
+              6: "For money, search 'EMI calculator', or use your bank's.", "6b": "Big apps can run real code: ask them to, then match it with your bank's.",
               7: "So the next time a chat says 23,000 a month..."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
