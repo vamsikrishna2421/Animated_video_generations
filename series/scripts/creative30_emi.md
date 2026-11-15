@@ -1,4 +1,4 @@
-# Creative 30 "₹23,405 or ₹34,713? The AI's EMI" · Nov 15 creative slot · script v1
+# Creative 30 "₹23,405 or ₹34,713? The AI's EMI" · Nov 15 creative slot · script v2
 
 ## The format (the pitch to Bujji, Nov 14: a calm explainer in the Hanuman pilot's shape)
 No characters, nobody talks to anybody. One calm narrator, one picture per beat (a loan letter and a house, a 20-year
@@ -37,23 +37,40 @@ tractor, two-wheeler), the EMI from the standard formula, the same small free AI
   Python for calculations; check the code and outputs); Google's Gemini API docs, "Code execution" (the model writes and
   runs Python). Cited in the caption, not named in the video.
 
-## Script (English, v1; narrator)
-1. (hook) Twenty-three thousand a month, said a small AI. The real EMI on this home loan: thirty-four thousand, seven hundred.
-2. (gap) Eleven thousand short, every month. Over twenty years, twenty-seven lakh rupees you never planned for.
-3. (steps) Asked to work it out step by step, it got closer: thirty-three thousand. And it wrote, 'calculated using a calculator.' | It had no calculator.
-4. (why) A chat AI writes the next likely words. Numbers too: it writes them; it doesn't work them out.
-5. (test) Our test, ten loans: asked plainly, none right. Step by step, none. | As a formula we then worked out: four.
-6. (fix) For money, use a calculator: your bank's EMI calculator, or code you can check.
+## Script review (human-viewer, v1) and what changed (v2)
+Both viewers stopped on the clash; both said "THE AI" reads as ChatGPT, the best line ("calculated using a calculator /
+it had no calculator") was buried under decimals, and the fix needed code. Changes:
+1. Line 1: both numbers first, then "the first came from a small free AI, with no calculator"; frame 0's red block says
+   "SMALL FREE AI · NO CALCULATOR".
+2. The fix anyone can do: "search 'EMI calculator', or use your bank's"; said aloud: "big apps can run real code: ask
+   them to, then match it with your bank's". "Code you can check" left the voice.
+3. Beat 3: the decimals fade, the AI's words alone and big ("calculated using a calculator", with its full line under
+   it); "It even wrote:" (so it isn't heard as our claim); a 0.8 s pause and the one deep bell before "It had no
+   calculator". The soft bells only on the scene cuts now (they felt like phone notifications).
+4. "Right to the rupee" said and shown; "four of ten"; the ₹28-lakh-a-month line cut ("the 6 wrong formulas were far
+   off"); line 2 frames the harm as a budget planned on the wrong number. Line 4: "with numbers, it guesses the hard
+   step" (it got r and n right).
+5. Telugu: "అసలు నెల వాయిదా" (అసలు = principal in loan talk) gone; "లెక్కించిన విలువ" (not "we calculated");
+   "వచ్చే అవకాశం ఉన్న మాటలు"; "పదిలో నాలుగు".
+6. Caption ask: "Ask your AI app: ₹40 lakh, 8.5%, 20 years. Comment the EMI it gives."
+
+## Script (English, v2; narrator)
+1. (hook) Twenty-three thousand a month, or thirty-four thousand seven hundred? Same home loan. The first came from a small free AI, with no calculator.
+2. (gap) Plan your budget on it, and you're eleven thousand short every month. Over twenty years: twenty-seven lakh.
+3. (steps) Asked to go step by step, it got closer: thirty-three thousand. It even wrote: 'calculated using a calculator.' | It had no calculator.
+4. (why) A chat AI writes the next likely words. With numbers, it guesses the hard step.
+5. (test) Our test, ten loans, right to the rupee: asked plainly, none. Step by step, none. | As a formula we then worked out: four of ten.
+6. (fix) For money, search 'EMI calculator', or use your bank's. | Big apps can run real code: ask them to, then match it with your bank's.
 7. (loop) So the next time a chat says, twenty-three thousand a month...
 
-## Script (Telugu, v1)
-1. నెలకి ఇరవై మూడు వేలు, అంది ఒక చిన్న చాట్‌బాట్. ఈ హోమ్ లోన్ అసలు నెల వాయిదా: ముప్పై నాలుగు వేల ఏడు వందలు.
-2. ప్రతి నెలా పదకొండు వేలు తక్కువ. ఇరవై ఏళ్ళలో, మీరు లెక్కలో వేసుకోని ఇరవై ఏడు లక్షలు.
-3. స్టెప్ బై స్టెప్ అడిగితే, దగ్గరికి వచ్చింది: ముప్పై మూడు వేలు. కాలిక్యులేటర్ తో లెక్కించాం, అని కూడా రాసింది. | దాని దగ్గర కాలిక్యులేటరే లేదు.
-4. చాట్‌బాట్ తర్వాత రావాల్సిన మాటలు రాస్తుంది. అంకెలు కూడా అంతే: రాస్తుంది, లెక్క వేయదు.
-5. మా టెస్ట్, పది లోన్లు: మామూలుగా అడిగితే, ఒక్కటీ సరిగ్గా లేదు. స్టెప్ బై స్టెప్, ఒక్కటీ లేదు. | ఫార్ములా రాయమని, మేమే లెక్కిస్తే: నాలుగు.
-6. డబ్బు లెక్కకి, కాలిక్యులేటరే వాడండి: మీ బ్యాంక్ లోన్ కాలిక్యులేటర్, లేదా మీరు చెక్ చేయగలిగే కోడ్.
+## Script (Telugu, v2)
+1. నెలకి ఇరవై మూడు వేలా, ముప్పై నాలుగు వేల ఏడు వందలా? ఒకే హోమ్ లోన్. మొదటిది, కాలిక్యులేటర్ లేని ఒక చిన్న ఫ్రీ చాట్‌బాట్ చెప్పింది.
+2. దాన్ని నమ్మి బడ్జెట్ వేసుకుంటే, ప్రతి నెలా పదకొండు వేలు తక్కువ. ఇరవై ఏళ్ళలో: ఇరవై ఏడు లక్షలు.
+3. స్టెప్ బై స్టెప్ అడిగితే, దగ్గరికి వచ్చింది: ముప్పై మూడు వేలు. కాలిక్యులేటర్ తో లెక్కించిన విలువ, అని కూడా రాసింది. | దాని దగ్గర కాలిక్యులేటరే లేదు.
+4. చాట్‌బాట్, తర్వాత వచ్చే అవకాశం ఉన్న మాటలు రాస్తుంది. అంకెలు కూడా అంతే: కష్టమైన లెక్క, ఊహిస్తుంది.
+5. మా టెస్ట్, పది లోన్లు, రూపాయి తేడా లేకుండా: మామూలుగా అడిగితే, ఒక్కటీ లేదు. స్టెప్ బై స్టెప్, ఒక్కటీ లేదు. | ఫార్ములా రాయమని, మేమే లెక్కిస్తే: పదిలో నాలుగు.
+6. డబ్బు లెక్కకి, లోన్ కాలిక్యులేటర్ వెతకండి, లేదా మీ బ్యాంక్ ది వాడండి. | పెద్ద యాప్ లు నిజమైన కోడ్ రన్ చేయగలవు: అడగండి, తర్వాత బ్యాంక్ లెక్కతో పోల్చండి.
 7. ఇంకోసారి ఏదైనా చాట్, నెలకి ఇరవై మూడు వేలు అంటే...
 
 ## Caption ask (post your answer)
-"Your last EMI or bill: did you check it with a calculator, or trust the app? Post which."
+"Ask your AI app: 'EMI for a ₹40 lakh home loan at 8.5% for 20 years?' Comment the EMI it gives you."
