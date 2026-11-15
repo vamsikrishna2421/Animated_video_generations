@@ -1,0 +1,1174 @@
+{
+ "id": "creative30te",
+ "look": "classic",
+ "topic": "",
+ "banner": "",
+ "musicVol": [
+  0.12,
+  0.3
+ ],
+ "title": "₹23,405 or ₹34,713? The AI's EMI (Creative 30) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "",
+ "fps": 30,
+ "musicDrops": [
+  [
+   696,
+   732
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   491,
+   1.0
+  ],
+  [
+   491,
+   1002,
+   0.8
+  ],
+  [
+   1002,
+   1636,
+   1.3
+  ],
+  [
+   1636,
+   1777,
+   1.7
+  ],
+  [
+   1636,
+   1777,
+   2.0,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1777,
+ "music": "reel/creative30te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_emi30",
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "gap",
+      "n": 2
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "loan": "HOME LOAN · ₹40,00,000 · 8.5% · 20 YEARS",
+     "ai": "₹23,405",
+     "real": "₹34,713",
+     "short": "₹11,308",
+     "months": 240,
+     "lost": "₹27,13,920",
+     "steps": [
+      "r = 8.5 / 1200 = 0.00708333",
+      "n = 20 × 12 = 240",
+      "(1.00708333)^240 ≈ 6.9544",
+      "(This value is calculated using a calculator or financial software)",
+      "EMI = 4000000 × 0.04928 / 5.9544",
+      "EMI ≈ ₹33,092"
+     ],
+     "realPow": "real: 5.4412",
+     "stepsEmi": "₹33,092",
+     "ask": [
+      1285,
+      8192,
+      35709,
+      23405,
+      7146,
+      5385,
+      18537,
+      8195,
+      13475,
+      3854
+     ],
+     "true": [
+      3929,
+      7974,
+      13572,
+      34713,
+      13385,
+      5387,
+      24986,
+      10747,
+      12792,
+      4279
+     ],
+     "codeRight": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "formula": "EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)",
+     "search": "search \"EMI calculator\" · or use your bank's",
+     "apps": "big apps can run real code: ask them to, then match it with your bank's"
+    },
+    "yt": {
+     "chapter": "₹23,405 vs ₹34,713",
+     "title": "₹23,405 vs ₹34,713",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 491,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative30te/line_01.wav",
+     "from": 15,
+     "frames": 263,
+     "words": [
+      {
+       "w": "₹23,000",
+       "from": 23,
+       "to": 37
+      },
+      {
+       "w": "a",
+       "from": 37,
+       "to": 40
+      },
+      {
+       "w": "month,",
+       "from": 40,
+       "to": 52
+      },
+      {
+       "w": "or",
+       "from": 52,
+       "to": 58
+      },
+      {
+       "w": "₹34,700?",
+       "from": 58,
+       "to": 85
+      },
+      {
+       "w": "The",
+       "from": 85,
+       "to": 92
+      },
+      {
+       "w": "same",
+       "from": 92,
+       "to": 101
+      },
+      {
+       "w": "home",
+       "from": 101,
+       "to": 110
+      },
+      {
+       "w": "loan.",
+       "from": 110,
+       "to": 131
+      },
+      {
+       "w": "The",
+       "from": 131,
+       "to": 138
+      },
+      {
+       "w": "first",
+       "from": 138,
+       "to": 148
+      },
+      {
+       "w": "came",
+       "from": 148,
+       "to": 166
+      },
+      {
+       "w": "from",
+       "from": 166,
+       "to": 185
+      },
+      {
+       "w": "a",
+       "from": 185,
+       "to": 188
+      },
+      {
+       "w": "small",
+       "from": 188,
+       "to": 199
+      },
+      {
+       "w": "free",
+       "from": 199,
+       "to": 207
+      },
+      {
+       "w": "chatbot",
+       "from": 207,
+       "to": 227
+      },
+      {
+       "w": "with",
+       "from": 227,
+       "to": 240
+      },
+      {
+       "w": "no",
+       "from": 240,
+       "to": 253
+      },
+      {
+       "w": "calculator.",
+       "from": 253,
+       "to": 278
+      }
+     ],
+     "cues": {
+      "1": 110
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative30te/line_02.wav",
+     "from": 291,
+     "frames": 182,
+     "words": [
+      {
+       "w": "Trust",
+       "from": 292,
+       "to": 302
+      },
+      {
+       "w": "it",
+       "from": 302,
+       "to": 306
+      },
+      {
+       "w": "and",
+       "from": 306,
+       "to": 320
+      },
+      {
+       "w": "plan",
+       "from": 320,
+       "to": 328
+      },
+      {
+       "w": "your",
+       "from": 328,
+       "to": 335
+      },
+      {
+       "w": "budget,",
+       "from": 335,
+       "to": 357
+      },
+      {
+       "w": "and",
+       "from": 357,
+       "to": 363
+      },
+      {
+       "w": "you're",
+       "from": 363,
+       "to": 374
+      },
+      {
+       "w": "₹11,000",
+       "from": 374,
+       "to": 386
+      },
+      {
+       "w": "short",
+       "from": 386,
+       "to": 395
+      },
+      {
+       "w": "every",
+       "from": 395,
+       "to": 414
+      },
+      {
+       "w": "month.",
+       "from": 414,
+       "to": 425
+      },
+      {
+       "w": "Over",
+       "from": 425,
+       "to": 442
+      },
+      {
+       "w": "20",
+       "from": 442,
+       "to": 447
+      },
+      {
+       "w": "years:",
+       "from": 447,
+       "to": 457
+      },
+      {
+       "w": "₹27",
+       "from": 457,
+       "to": 464
+      },
+      {
+       "w": "lakh.",
+       "from": 464,
+       "to": 473
+      }
+     ],
+     "cues": {
+      "1": 417
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_emi30",
+   "data": {
+    "beats": [
+     {
+      "prop": "steps",
+      "n": 3
+     },
+     {
+      "prop": "why",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "loan": "HOME LOAN · ₹40,00,000 · 8.5% · 20 YEARS",
+     "ai": "₹23,405",
+     "real": "₹34,713",
+     "short": "₹11,308",
+     "months": 240,
+     "lost": "₹27,13,920",
+     "steps": [
+      "r = 8.5 / 1200 = 0.00708333",
+      "n = 20 × 12 = 240",
+      "(1.00708333)^240 ≈ 6.9544",
+      "(This value is calculated using a calculator or financial software)",
+      "EMI = 4000000 × 0.04928 / 5.9544",
+      "EMI ≈ ₹33,092"
+     ],
+     "realPow": "real: 5.4412",
+     "stepsEmi": "₹33,092",
+     "ask": [
+      1285,
+      8192,
+      35709,
+      23405,
+      7146,
+      5385,
+      18537,
+      8195,
+      13475,
+      3854
+     ],
+     "true": [
+      3929,
+      7974,
+      13572,
+      34713,
+      13385,
+      5387,
+      24986,
+      10747,
+      12792,
+      4279
+     ],
+     "codeRight": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "formula": "EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)",
+     "search": "search \"EMI calculator\" · or use your bank's",
+     "apps": "big apps can run real code: ask them to, then match it with your bank's"
+    },
+    "yt": {
+     "chapter": "It had no calculator",
+     "title": "It had no calculator",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 491,
+   "frames": 511,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative30te/line_03.wav",
+     "from": 0,
+     "frames": 290,
+     "words": [
+      {
+       "w": "Asked",
+       "from": 5,
+       "to": 23
+      },
+      {
+       "w": "step",
+       "from": 23,
+       "to": 30
+      },
+      {
+       "w": "by",
+       "from": 30,
+       "to": 35
+      },
+      {
+       "w": "step,",
+       "from": 35,
+       "to": 53
+      },
+      {
+       "w": "it",
+       "from": 53,
+       "to": 58
+      },
+      {
+       "w": "came",
+       "from": 58,
+       "to": 65
+      },
+      {
+       "w": "closer:",
+       "from": 65,
+       "to": 86
+      },
+      {
+       "w": "₹33,000.",
+       "from": 86,
+       "to": 100
+      },
+      {
+       "w": "It",
+       "from": 100,
+       "to": 113
+      },
+      {
+       "w": "even",
+       "from": 113,
+       "to": 125
+      },
+      {
+       "w": "wrote",
+       "from": 125,
+       "to": 134
+      },
+      {
+       "w": "'value",
+       "from": 134,
+       "to": 156
+      },
+      {
+       "w": "calculated",
+       "from": 156,
+       "to": 173
+      },
+      {
+       "w": "with",
+       "from": 173,
+       "to": 181
+      },
+      {
+       "w": "a",
+       "from": 181,
+       "to": 184
+      },
+      {
+       "w": "calculator'.",
+       "from": 184,
+       "to": 204
+      },
+      {
+       "w": "It",
+       "from": 229,
+       "to": 236
+      },
+      {
+       "w": "had",
+       "from": 236,
+       "to": 246
+      },
+      {
+       "w": "no",
+       "from": 246,
+       "to": 261
+      },
+      {
+       "w": "calculator.",
+       "from": 261,
+       "to": 290
+      }
+     ],
+     "cues": {
+      "1": 124,
+      "2": 229
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative30te/line_04.wav",
+     "from": 304,
+     "frames": 186,
+     "words": [
+      {
+       "w": "A",
+       "from": 306,
+       "to": 309
+      },
+      {
+       "w": "chatbot",
+       "from": 309,
+       "to": 332
+      },
+      {
+       "w": "writes",
+       "from": 332,
+       "to": 343
+      },
+      {
+       "w": "the",
+       "from": 343,
+       "to": 349
+      },
+      {
+       "w": "words",
+       "from": 349,
+       "to": 358
+      },
+      {
+       "w": "likely",
+       "from": 358,
+       "to": 369
+      },
+      {
+       "w": "to",
+       "from": 369,
+       "to": 374
+      },
+      {
+       "w": "come",
+       "from": 374,
+       "to": 381
+      },
+      {
+       "w": "next.",
+       "from": 381,
+       "to": 391
+      },
+      {
+       "w": "Numbers",
+       "from": 391,
+       "to": 416
+      },
+      {
+       "w": "too:",
+       "from": 416,
+       "to": 423
+      },
+      {
+       "w": "the",
+       "from": 423,
+       "to": 429
+      },
+      {
+       "w": "hard",
+       "from": 429,
+       "to": 447
+      },
+      {
+       "w": "calculation,",
+       "from": 447,
+       "to": 467
+      },
+      {
+       "w": "it",
+       "from": 467,
+       "to": 471
+      },
+      {
+       "w": "guesses.",
+       "from": 471,
+       "to": 489
+      }
+     ],
+     "cues": {
+      "1": 408
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_emi30",
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 5
+     },
+     {
+      "prop": "fix",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "loan": "HOME LOAN · ₹40,00,000 · 8.5% · 20 YEARS",
+     "ai": "₹23,405",
+     "real": "₹34,713",
+     "short": "₹11,308",
+     "months": 240,
+     "lost": "₹27,13,920",
+     "steps": [
+      "r = 8.5 / 1200 = 0.00708333",
+      "n = 20 × 12 = 240",
+      "(1.00708333)^240 ≈ 6.9544",
+      "(This value is calculated using a calculator or financial software)",
+      "EMI = 4000000 × 0.04928 / 5.9544",
+      "EMI ≈ ₹33,092"
+     ],
+     "realPow": "real: 5.4412",
+     "stepsEmi": "₹33,092",
+     "ask": [
+      1285,
+      8192,
+      35709,
+      23405,
+      7146,
+      5385,
+      18537,
+      8195,
+      13475,
+      3854
+     ],
+     "true": [
+      3929,
+      7974,
+      13572,
+      34713,
+      13385,
+      5387,
+      24986,
+      10747,
+      12792,
+      4279
+     ],
+     "codeRight": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "formula": "EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)",
+     "search": "search \"EMI calculator\" · or use your bank's",
+     "apps": "big apps can run real code: ask them to, then match it with your bank's"
+    },
+    "yt": {
+     "chapter": "Our test, and the fix",
+     "title": "Our test, and the fix",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1002,
+   "frames": 634,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative30te/line_05.wav",
+     "from": 0,
+     "frames": 314,
+     "words": [
+      {
+       "w": "Our",
+       "from": 1,
+       "to": 7
+      },
+      {
+       "w": "test,",
+       "from": 7,
+       "to": 29
+      },
+      {
+       "w": "10",
+       "from": 29,
+       "to": 34
+      },
+      {
+       "w": "loans,",
+       "from": 34,
+       "to": 53
+      },
+      {
+       "w": "not",
+       "from": 53,
+       "to": 59
+      },
+      {
+       "w": "a",
+       "from": 59,
+       "to": 63
+      },
+      {
+       "w": "rupee",
+       "from": 63,
+       "to": 72
+      },
+      {
+       "w": "off:",
+       "from": 72,
+       "to": 89
+      },
+      {
+       "w": "asked",
+       "from": 89,
+       "to": 98
+      },
+      {
+       "w": "plainly,",
+       "from": 98,
+       "to": 112
+      },
+      {
+       "w": "not",
+       "from": 112,
+       "to": 126
+      },
+      {
+       "w": "one.",
+       "from": 126,
+       "to": 134
+      },
+      {
+       "w": "Step",
+       "from": 134,
+       "to": 152
+      },
+      {
+       "w": "by",
+       "from": 152,
+       "to": 164
+      },
+      {
+       "w": "step,",
+       "from": 164,
+       "to": 186
+      },
+      {
+       "w": "not",
+       "from": 186,
+       "to": 193
+      },
+      {
+       "w": "one.",
+       "from": 193,
+       "to": 200
+      },
+      {
+       "w": "Asked",
+       "from": 221,
+       "to": 228
+      },
+      {
+       "w": "for",
+       "from": 228,
+       "to": 233
+      },
+      {
+       "w": "a",
+       "from": 233,
+       "to": 236
+      },
+      {
+       "w": "formula,",
+       "from": 236,
+       "to": 255
+      },
+      {
+       "w": "and",
+       "from": 255,
+       "to": 260
+      },
+      {
+       "w": "we",
+       "from": 260,
+       "to": 264
+      },
+      {
+       "w": "calculated",
+       "from": 264,
+       "to": 293
+      },
+      {
+       "w": "it:",
+       "from": 293,
+       "to": 298
+      },
+      {
+       "w": "4",
+       "from": 298,
+       "to": 301
+      },
+      {
+       "w": "of",
+       "from": 301,
+       "to": 305
+      },
+      {
+       "w": "10.",
+       "from": 305,
+       "to": 310
+      }
+     ],
+     "cues": {
+      "1": 77,
+      "2": 132,
+      "3": 221
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative30te/line_06.wav",
+     "from": 326,
+     "frames": 292,
+     "words": [
+      {
+       "w": "For",
+       "from": 327,
+       "to": 333
+      },
+      {
+       "w": "money",
+       "from": 333,
+       "to": 342
+      },
+      {
+       "w": "maths,",
+       "from": 342,
+       "to": 361
+      },
+      {
+       "w": "search",
+       "from": 361,
+       "to": 372
+      },
+      {
+       "w": "for",
+       "from": 372,
+       "to": 378
+      },
+      {
+       "w": "a",
+       "from": 378,
+       "to": 381
+      },
+      {
+       "w": "loan",
+       "from": 381,
+       "to": 389
+      },
+      {
+       "w": "calculator,",
+       "from": 389,
+       "to": 415
+      },
+      {
+       "w": "or",
+       "from": 415,
+       "to": 425
+      },
+      {
+       "w": "use",
+       "from": 425,
+       "to": 431
+      },
+      {
+       "w": "your",
+       "from": 431,
+       "to": 439
+      },
+      {
+       "w": "bank's.",
+       "from": 439,
+       "to": 451
+      },
+      {
+       "w": "Big",
+       "from": 464,
+       "to": 471
+      },
+      {
+       "w": "apps",
+       "from": 471,
+       "to": 480
+      },
+      {
+       "w": "can",
+       "from": 480,
+       "to": 486
+      },
+      {
+       "w": "run",
+       "from": 486,
+       "to": 501
+      },
+      {
+       "w": "real",
+       "from": 501,
+       "to": 513
+      },
+      {
+       "w": "code:",
+       "from": 513,
+       "to": 524
+      },
+      {
+       "w": "ask",
+       "from": 524,
+       "to": 531
+      },
+      {
+       "w": "them,",
+       "from": 531,
+       "to": 548
+      },
+      {
+       "w": "then",
+       "from": 548,
+       "to": 557
+      },
+      {
+       "w": "compare",
+       "from": 557,
+       "to": 578
+      },
+      {
+       "w": "with",
+       "from": 578,
+       "to": 586
+      },
+      {
+       "w": "the",
+       "from": 586,
+       "to": 593
+      },
+      {
+       "w": "bank's",
+       "from": 593,
+       "to": 605
+      },
+      {
+       "w": "figure.",
+       "from": 605,
+       "to": 619
+      }
+     ],
+     "cues": {
+      "1": 464
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_emi30",
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "loan": "HOME LOAN · ₹40,00,000 · 8.5% · 20 YEARS",
+     "ai": "₹23,405",
+     "real": "₹34,713",
+     "short": "₹11,308",
+     "months": 240,
+     "lost": "₹27,13,920",
+     "steps": [
+      "r = 8.5 / 1200 = 0.00708333",
+      "n = 20 × 12 = 240",
+      "(1.00708333)^240 ≈ 6.9544",
+      "(This value is calculated using a calculator or financial software)",
+      "EMI = 4000000 × 0.04928 / 5.9544",
+      "EMI ≈ ₹33,092"
+     ],
+     "realPow": "real: 5.4412",
+     "stepsEmi": "₹33,092",
+     "ask": [
+      1285,
+      8192,
+      35709,
+      23405,
+      7146,
+      5385,
+      18537,
+      8195,
+      13475,
+      3854
+     ],
+     "true": [
+      3929,
+      7974,
+      13572,
+      34713,
+      13385,
+      5387,
+      24986,
+      10747,
+      12792,
+      4279
+     ],
+     "codeRight": [
+      true,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+     ],
+     "formula": "EMI = P × r × (1 + r)ⁿ ÷ ((1 + r)ⁿ − 1)",
+     "search": "search \"EMI calculator\" · or use your bank's",
+     "apps": "big apps can run real code: ask them to, then match it with your bank's"
+    },
+    "yt": {
+     "chapter": "A calculator, not a chat",
+     "title": "A calculator, not a chat",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1636,
+   "frames": 141,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative30te/line_07.wav",
+     "from": 9,
+     "frames": 105,
+     "words": [
+      {
+       "w": "The",
+       "from": 10,
+       "to": 18
+      },
+      {
+       "w": "next",
+       "from": 18,
+       "to": 28
+      },
+      {
+       "w": "time",
+       "from": 28,
+       "to": 37
+      },
+      {
+       "w": "any",
+       "from": 37,
+       "to": 45
+      },
+      {
+       "w": "chat",
+       "from": 45,
+       "to": 60
+      },
+      {
+       "w": "says",
+       "from": 60,
+       "to": 70
+      },
+      {
+       "w": "₹23,000",
+       "from": 70,
+       "to": 91
+      },
+      {
+       "w": "a",
+       "from": 91,
+       "to": 95
+      },
+      {
+       "w": "month...",
+       "from": 95,
+       "to": 113
+      }
+     ],
+     "cues": {}
+    }
+   ]
+  }
+ ]
+}
