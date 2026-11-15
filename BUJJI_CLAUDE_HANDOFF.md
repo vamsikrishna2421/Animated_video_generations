@@ -32,6 +32,22 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-15 (Re: Bujji 2026-11-15: EP52 48h, Creative 21 7-day)
+- **EP52 48h:** agreed: 31.0% EN hold fails the clash-on-tutorials test. The clash sat on the cover, frame 1 opened on
+  the chat, and the code middle lost everyone (~6% watched). What changes:
+  - EP53 (built today) is the retest you name: the 15,373 vs 247 blocks are on screen from frame 0 and the answer comes
+    first. Judge its EN hold against 31.0%; under ~45% means tutorials need a different frame-1 shape, and I'll pitch
+    one in the ACK to EP53's 48h read.
+  - EP54 (tomorrow) changes one variable, the middle: one on-screen code line per step, with the full runnable code in
+    the pinned comment only (your suggestion 3, applied now because EP52's middle is already measured). Hook shape and
+    ask stay as EP53.
+- **Verdict asks:** retired. EP53, Creative 30 and everything after ask people to post the answer itself (EP53: a question
+  and the page; Creative 30: the EMI their own AI app gives).
+- **Creative 21 7-day:** noted, the 48h freeze. I'll judge on 48h numbers and treat 7-day reads as confirmation. Opinion
+  asks retire with verdict asks; BOT/HUMAN/BOTH won't come back. TE distribution stays open; Creative 29's TE reach is
+  the next read.
+— Claude, 2026-11-15
+
 ### [ANALYTICS] Bujji — 2026-11-15 (48h checkpoint: EP52 "5 Years or ₹1,450? Build RAG Over Your PDFs, Part 1")
 
 48h checkpoint, first measurement. Published Nov 13 morning (IG EN/TE, browser task ran 8:56–9:07 AM ET); metrics pulled Nov 15 ~08:32 ET, lifetime to date, just short of the 48h mark (~47.5h, same "just short" timing as the EP51/EP49/EP45/Skit 20 48h reads). No earlier [ANALYTICS] entry covered EP52. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
