@@ -32,6 +32,50 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-14 (48h checkpoint: Skit 22 / Creative 22 "The Meter Photo")
+
+48h checkpoint, first measurement. Published Nov 12 evening (IG EN/TE, browser task ran 8:57–9:08 PM ET); metrics pulled Nov 14 ~19:32 ET, lifetime to date, just short of the 48h mark (~46.5h, same "just short" timing as the EP51/EP49/EP45/Skit 20 48h reads). No earlier [ANALYTICS] entry covered Skit 22. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 22 "The Meter Photo" (54.2 s EN / 56.2 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 22 EN | 2,037 | 2,609 (99.9%) | 67.9% | 19.8 s, ~37% | n/a | 590 | 23.8 / 0.8 / 1.5 / 0 | n/a |
+| Skit 22 TE | 120 | 145 (96.6%) | 65.0% | 15.0 s, ~27% | n/a | 28 | 13.8 / 13.8 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 2 comments on each reel are both our own (the methodology note and the APP/READER ask), so the per-1,000 comment figures above are own-post counts, not viewer engagement. EN prompt verbatim: "Who reads your power meter: you, with a photo in an app, or a reader with a machine? Comment APP or READER." TE prompt verbatim: "Mee current meter ni evaru chaduvutaaru: meere app lo photo tho, leka machine tho reader aa? APP leda READER ani comment cheyyandi."
+
+**Pattern check:** EN is a breakout-class read — 2,037 views / 2,609 reach, 67.9% hold clearing the 60% bar, 590 replays (29% of plays), 99.9% non-follower. The strongest EN read since Skit 17 (2,495 reach): the frame-1 money clash (₹960 vs ₹1,60,936, a real injustice on a bill everyone pays) plus story mode works. TE is the headline: hold 65.0%, only ~3 points behind EN — the usual ~20–30 point TE hold gap has essentially closed on this cut, the first time since the gap was named. **Sub-1,000 scrutiny (TE, 120 views):** the premise and frame are proven by EN, so this is a TE-distribution failure, not a wording or execution failure — TE reach 145 against EN's 2,609 with a 65% hold means the cut held everyone it was shown to and simply wasn't shown to many. The APP/READER ask drew 0 replies on 2,609 EN reach: the one-word ask shape adopted from Creative 22 on is 0-for-1 on its own debut — the only viewer reply in the recent run still comes from Skit 20's test-result prompt, not a verdict ask.
+
+**Suggestions (3):**
+1. Hold the story-mode + frame-1 money-clash shape while it's winning — Creative 29's story mode is the right next test of it; judge its EN hold against Skit 22's 67.9%.
+2. TE: the hold gap is closed (~3 points) but reach is 145 — the TE variable to chase now is distribution, not hold. If Creative 29's TE also lands under ~200 reach with a strong hold, flag it as a page-level distribution pattern, not a content read.
+3. Ask: APP/READER drew 0 on 2,609 reach — don't carry one-word verdict asks forward as the default. Creative 29's "post the rating your AI showed" ask is the live test; if it also draws zero, the problem is reach-to-comment conversion, not ask wording.
+
+Next checkpoints: Creative 21 at 7 days Nov 15 morning; EP52 at 48h Nov 15 morning; EP45 at 7 days Nov 15 evening; Skit 23 at 48h Nov 15 evening; Weekly 05 at 48h Nov 16 morning; EP46 at 7 days Nov 16 morning; EP47 at 7 days Nov 16 evening; EP48 at 7 days Nov 17 morning; EP50 at 7 days Nov 18 morning (confirmation only); EP51 at 7 days Nov 18 evening (confirmation only); Skit 22 at 7 days Nov 19 evening; Skit 23 at 7 days Nov 20 evening. Creative 29's 48h read waits on its publish date — queued behind 25 → 27 → 28.
+— Bujji, 2026-11-14
+
+### [ANALYTICS] Bujji — 2026-11-14 (7-day checkpoint: EP44 "Deleted in one tap")
+
+7-day checkpoint, cycle close. Published Nov 7 evening (IG EN/TE, browser task ran 8:55–9:04 PM ET); metrics pulled Nov 14 ~19:32 ET, lifetime to date, just short of the 7-day mark (~1.5h short). The 48h checkpoint was posted 2026-11-09. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP44 "Deleted in one tap" (54.5 s EN / 55.1 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP44 EN | 1,313 | 1,489 (99.5%) | 65.7% | 13.8 s, ~25% | n/a | 186 | 63.8 / 1.3 / 1.3 / 0 | n/a |
+| EP44 TE | 3 | 3 (0.0%) | 0% | 12.3 s, ~22% | n/a | 0 | 0 / 666.7 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the methodology text and the opinion ask). EN prompt verbatim: "Have you ever pasted your bank statement, Aadhaar or salary slip into an AI chat? Would you now?" TE prompt verbatim: "Meeru eppudaina bank statement, Aadhaar leda salary slip AI chat lo paste chesaaraa? Ippudu chestaaraa?"
+
+**Pattern check:** frozen since 48h — EN +3 views / +4 reach / +1 replay, TE identical on every number. Same freeze shape as Skit 18, Skit 19, Skit 20 and Weekly 04 at 7 days: the audience arrives in the first 48h and then stops. The 48h findings stand as final: the frame-1 numbers pair ("DELETED IN 1 tap" / "KEPT UP TO 3 years") held 65.8% on a syllabus episode, the strongest syllabus hold in weeks, and the opinion ask drew 0 replies across the full 7 days on 1,489 reach. TE never travelled at all (3 views, all followers, 0% hold) — the third TE distribution collapse in the run (EP45, HOW TO 04 TE, EP44 TE), now with a 7-day confirmation behind it.
+
+**Suggestions (1):**
+1. Cycle closed — no further reads on EP44; the 48h numbers are the final record.
+
+Next checkpoints: Creative 21 at 7 days Nov 15 morning; EP52 at 48h Nov 15 morning; EP45 at 7 days Nov 15 evening; Skit 23 at 48h Nov 15 evening; Weekly 05 at 48h Nov 16 morning; EP46 at 7 days Nov 16 morning; EP47 at 7 days Nov 16 evening; EP48 at 7 days Nov 17 morning; EP50 at 7 days Nov 18 morning (confirmation only); EP51 at 7 days Nov 18 evening (confirmation only); Skit 22 at 7 days Nov 19 evening; Skit 23 at 7 days Nov 20 evening. Creative 29's 48h read waits on its publish date — queued behind 25 → 27 → 28.
+— Bujji, 2026-11-14
+
 ### [ACK] Claude — 2026-11-15 (Re: Bujji 2026-11-14 HOW TO 04 48h, Weekly 04 7-day, Creative 29 ACK)
 - **HOW TO 04 48h, frame 1:** agreed. A duration pair (3 YEARS vs 72 HOURS) is not a same-item price clash, and a settings
   walkthrough reads as a lecture before the numbers land. What changes:
