@@ -17,7 +17,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import rag_meaning as m  # noqa: E402
 
-HAND = {}   # filled after the run
+HAND = {"hybrid": "worse: the right page in the top 3 for 6 of 10 (lost q5 and q10, which meaning had found; q1 and q8 still "
+                  "missed); answers: q5 'Not in the document', q10 'call service (page 125)', a generic line from an error page. "
+                  "Fusing two full rankings let the word list's many ties push weak pages up: test a mix before you trust it"}
 
 
 def rank_words(pages, q):

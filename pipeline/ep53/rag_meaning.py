@@ -69,7 +69,14 @@ QS = [   # (id, question in everyday words, the right page)
 RULES = ("Answer the question only from the document below. If the answer is not in it, say \"Not in the document.\" "
          "Keep it to one or two short lines, and end with the page number, like (page 3).")
 STOP = set("a an and are be by can do does for from how i in is it its me my of on or the this to what when will with you your".split())
-HAND = {}   # filled after the run
+HAND = {   # read by hand after the run (series/scripts/ep53_demo/meaning.json)
+    "search": "right page in the top 3: words 7 of 10 (missed q1 smell/odour, q5 banging/knocking, q10 repair/service); "
+              "meaning 8 of 10 (missed q1 and q8 child lock: it ranked the safety page 'do not let children play' first)",
+    "answers (meaning top 3)": "q2 the drain filter (page 141), q4 Rs 1,250 (262), q5 the transit bolts (48), q6 10 years (284), q7 E35 door "
+                               "lock (155), q9 no dish soap (104), q10 the service number (291): right with the right page; q3 right but cited "
+                               "page 117 (a later page of the same Delicates and Wool program, same text); q1 and q8 'Not in the document' "
+                               "(the right page wasn't retrieved: no guess). About 200-250 prompt tokens a question; the whole manual 15,373",
+}
 
 
 def make_pages():
