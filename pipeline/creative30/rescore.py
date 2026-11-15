@@ -8,6 +8,7 @@ import ast
 import json
 import math
 import operator
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -42,7 +43,7 @@ def main():
     for r in data["rows"]:
         if r["mode"] != "code":
             continue
-        expr = r["reply"].strip().strip("`").strip().replace(",", "").replace("^", "**")
+        expr = re.sub(r"(?<=\d),(?=\d{3}\b)", "", r["reply"].strip().strip("`").strip()).replace("^", "**")   # thousands commas only (the first run also ate pow's comma)
         try:
             got = ev(ast.parse(expr, mode="eval"))
         except Exception as e:  # noqa: BLE001
