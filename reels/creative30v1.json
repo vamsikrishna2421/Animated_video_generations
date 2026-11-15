@@ -129,7 +129,7 @@
      "text": "Twenty-three thousand a month, or thirty-four thousand seven hundred? [1] Same home loan. The first came from a small free AI, with no calculator.",
      "maxgap": 0.3,
      "gap": 0.45,
-     "show": "₹23,000 a month, or ₹34,700? Same home loan. The first came from a small free AI, with no calculator.",
+     "show": "₹23,405 a month, or ₹34,713? Same home loan. The first came from a small free AI, with no calculator.",
      "tempo": 1.0
     },
     {
@@ -138,7 +138,7 @@
      "text": "Plan your budget on it, and you're eleven thousand short every month. [1] Over twenty years: twenty-seven lakh.",
      "maxgap": 0.3,
      "gap": 0.45,
-     "show": "Plan your budget on it, and you're ₹11,000 short every month. Over 20 years: ₹27 lakh.",
+     "show": "Plan your budget on it, and you're ₹11,308 short every month. Over 20 years: ₹27 lakh.",
      "tempo": 1.0
     }
    ]
@@ -234,12 +234,12 @@
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "Asked to go step by step, it got closer: thirty-three thousand. [1] It even wrote: 'calculated using a calculator.' <pause 0.8> [2] It had no calculator.",
+     "text": "When we asked it to go step by step, it got closer: thirty-three thousand. [1] It even wrote: 'calculated using a calculator.' <pause 0.8> [2] It had no calculator.",
      "maxgap": 0.3,
      "gap": 0.45,
-     "show": "Asked to go step by step, it got closer: ₹33,000. It even wrote: 'calculated using a calculator.' <pause 0.8> It had no calculator.",
+     "show": "When we asked it to go step by step, it got closer: ₹33,092. It even wrote: 'calculated using a calculator.' <pause 0.8> It had no calculator.",
      "tempo": 1.0,
-     "tts": "Asked to go step by step, it got closer: thirty-three thousand. It even wrote: 'calculated using a calculator.'",
+     "tts": "When we asked it to go step by step, it got closer: thirty-three thousand. It even wrote: 'calculated using a calculator.'",
      "file2": "03b_storyteller.wav",
      "tts2": "It had no calculator.",
      "pause": 0.8
@@ -261,6 +261,13 @@
    "tail": 0.0,
    "boost": 1.5,
    "lift": 0.8,
+   "drop_at": [
+    [
+     0,
+     3,
+     0.3
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -452,7 +459,7 @@
      "text": "So the next time a chat says, twenty-three thousand a month...",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "So the next time a chat says ₹23,000 a month...",
+     "show": "So the next time a chat says ₹23,405 a month...",
      "tempo": 1.0
     }
    ]

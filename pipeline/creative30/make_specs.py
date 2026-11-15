@@ -18,7 +18,7 @@ LINES = {   # v2 (script review): "small free AI, no calculator" in line 1; the 
         "నెలకి ఇరవై మూడు వేలా, ముప్పై నాలుగు వేల ఏడు వందలా? [1] ఒకే హోమ్ లోన్. మొదటిది, కాలిక్యులేటర్ లేని ఒక చిన్న ఫ్రీ చాట్‌బాట్ చెప్పింది."),
     2: ("gap", "Plan your budget on it, and you're eleven thousand short every month. [1] Over twenty years: twenty-seven lakh.",
         "దాన్ని నమ్మి బడ్జెట్ వేసుకుంటే, ప్రతి నెలా పదకొండు వేలు తక్కువ. [1] ఇరవై ఏళ్ళలో: ఇరవై ఏడు లక్షలు."),
-    3: ("steps", "Asked to go step by step, it got closer: thirty-three thousand. [1] It even wrote: 'calculated using a calculator.' | [2] It had no calculator.",
+    3: ("steps", "When we asked it to go step by step, it got closer: thirty-three thousand. [1] It even wrote: 'calculated using a calculator.' | [2] It had no calculator.",
         "స్టెప్ బై స్టెప్ అడిగితే, దగ్గరికి వచ్చింది: ముప్పై మూడు వేలు. [1] కాలిక్యులేటర్ తో లెక్కించిన విలువ, అని కూడా రాసింది. | [2] దాని దగ్గర కాలిక్యులేటరే లేదు."),
     4: ("why", "A chat AI writes the next likely words. [1] With numbers, it guesses the hard step.",
         "చాట్‌బాట్, తర్వాత వచ్చే అవకాశం ఉన్న మాటలు రాస్తుంది. [1] అంకెలు కూడా అంతే: కష్టమైన లెక్క, ఊహిస్తుంది."),
@@ -27,22 +27,22 @@ LINES = {   # v2 (script review): "small free AI, no calculator" in line 1; the 
     6: ("fix", "For money, search 'EMI calculator', or use your bank's. | [1] Big apps can run real code: ask them to, then match it with your bank's.",
         "డబ్బు లెక్కకి, లోన్ కాలిక్యులేటర్ వెతకండి, లేదా మీ బ్యాంక్ ది వాడండి. | [1] పెద్ద యాప్ లు నిజమైన కోడ్ రన్ చేయగలవు: అడగండి, తర్వాత బ్యాంక్ లెక్కతో పోల్చండి."),
     7: ("loop", "So the next time a chat says, twenty-three thousand a month...",
-        "ఇంకోసారి ఏదైనా చాట్, నెలకి ఇరవై మూడు వేలు అంటే..."),
+        "ఇంకోసారి ఏదైనా చాట్‌బాట్, నెలకి ఇరవై మూడు వేలు అంటే..."),
 }
-SHOW = {1: "₹23,000 a month, or ₹34,700? Same home loan. The first came from a small free AI, with no calculator.",
-        2: "Plan your budget on it, and you're ₹11,000 short every month. Over 20 years: ₹27 lakh.",
-        3: "Asked to go step by step, it got closer: ₹33,000. It even wrote: 'calculated using a calculator.' <pause 0.8> It had no calculator.",
+SHOW = {1: "₹23,405 a month, or ₹34,713? Same home loan. The first came from a small free AI, with no calculator.",   # render review: the boxes' numbers
+        2: "Plan your budget on it, and you're ₹11,308 short every month. Over 20 years: ₹27 lakh.",
+        3: "When we asked it to go step by step, it got closer: ₹33,092. It even wrote: 'calculated using a calculator.' <pause 0.8> It had no calculator.",
         5: "Our test, 10 loans, right to the rupee: asked plainly, none. Step by step, none. <pause 0.5> As a formula we then worked out: 4 of 10.",
         6: "For money, search 'EMI calculator', or use your bank's. <pause 0.4> Big apps can run real code: ask them to, then match it with your bank's.",
-        7: "So the next time a chat says ₹23,000 a month..."}
+        7: "So the next time a chat says ₹23,405 a month..."}
 SHOW_TE = {
-    1: "₹23,000 a month, or ₹34,700? The same home loan. The first came from a small free chatbot with no calculator.",
-    2: "Trust it and plan your budget, and you're ₹11,000 short every month. Over 20 years: ₹27 lakh.",
-    3: "Asked step by step, it came closer: ₹33,000. It even wrote 'value calculated with a calculator'. <pause 0.8> It had no calculator.",
+    1: "₹23,405 a month, or ₹34,713? The same home loan. The first came from a small free chatbot with no calculator.",
+    2: "Trust it and plan your budget, and you're ₹11,308 short every month. Over 20 years: ₹27 lakh.",
+    3: "Asked step by step, it came closer: ₹33,092. It even wrote 'value calculated with a calculator'. <pause 0.8> It had no calculator.",
     4: "A chatbot writes the words likely to come next. Numbers too: the hard calculation, it guesses.",
-    5: "Our test, 10 loans, not a rupee off: asked plainly, not one. Step by step, not one. <pause 0.5> Asked for a formula, and we calculated it: 4 of 10.",
+    5: "Our test, 10 loans, right to the rupee: asked plainly, not one. Step by step, not one. <pause 0.5> Asked for a formula, and we calculated it: 4 of 10.",
     6: "For money maths, search for a loan calculator, or use your bank's. <pause 0.4> Big apps can run real code: ask them, then compare with the bank's figure.",
-    7: "The next time any chat says ₹23,000 a month...",
+    7: "The next time any chatbot says ₹23,405 a month...",
 }
 SPLIT_PAUSE = {3: 0.8, 5: 0.5, 6: 0.4}
 SPLIT_PAUSE_TE = {3: 0.8, 5: 0.5, 6: 0.4}
@@ -64,10 +64,10 @@ T = {   # on screen: our test (series/scripts/creative30_demo/emi.json); the loa
 # voice and up in the gaps; a drop before "It had no calculator"; a lift into the test; a rise into the loop line.
 SCENES = [("s_a", (1, 2), {"boost": 1.0, "tail": 0.0}),
           ("s_b", (3, 4), {"boost": 0.8, "drop_at": [[0, 2, 0.4]], "tail": 0.0}),
-          ("s_c", (5, 6), {"boost": 1.5, "lift": 0.8, "tail": 0.0}),
+          ("s_c", (5, 6), {"boost": 1.5, "lift": 0.8, "drop_at": [[0, 3, 0.3]], "tail": 0.0}),   # render review: a beat before "four of ten"
           ("s_d", (7,), {"outro": True, "pre": 0.3, "boost": 2.1, "lift": 0.9, "rise": 2.5, "tail": 0.0})]   # render check: Q4 sat under Q1
 GAP = {1: 0.45, 2: 0.45, 3: 0.45, 4: 0.45, 5: 0.4, 6: 0.45, 7: 0.0}
-FLAGS_TE = {}
+FLAGS_TE = {"s_b": {"boost": 0.7}, "s_d": {"boost": 2.4, "rise": 2.8}}   # render review: the Telugu arc was flat
 YT = {"s_a": "₹23,405 vs ₹34,713", "s_b": "It had no calculator", "s_c": "Our test, and the fix", "s_d": "A calculator, not a chat"}
 MARK = re.compile(r"\[\d+\]\s*")
 

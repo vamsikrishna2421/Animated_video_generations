@@ -132,7 +132,7 @@
      "text": "నెలకి ఇరవై మూడు వేలా, ముప్పై నాలుగు వేల ఏడు వందలా? [1] ఒకే హోమ్ లోన్. మొదటిది, కాలిక్యులేటర్ లేని ఒక చిన్న ఫ్రీ చాట్‌బాట్ చెప్పింది.",
      "maxgap": 0.3,
      "gap": 0.45,
-     "show": "₹23,000 a month, or ₹34,700? The same home loan. The first came from a small free chatbot with no calculator.",
+     "show": "₹23,405 a month, or ₹34,713? The same home loan. The first came from a small free chatbot with no calculator.",
      "tempo": 1.12
     },
     {
@@ -141,7 +141,7 @@
      "text": "దాన్ని నమ్మి బడ్జెట్ వేసుకుంటే, ప్రతి నెలా పదకొండు వేలు తక్కువ. [1] ఇరవై ఏళ్ళలో: ఇరవై ఏడు లక్షలు.",
      "maxgap": 0.3,
      "gap": 0.45,
-     "show": "Trust it and plan your budget, and you're ₹11,000 short every month. Over 20 years: ₹27 lakh.",
+     "show": "Trust it and plan your budget, and you're ₹11,308 short every month. Over 20 years: ₹27 lakh.",
      "tempo": 1.12
     }
    ]
@@ -150,7 +150,7 @@
    "id": "s_b",
    "type": "sk_emi30",
    "tail": 0.0,
-   "boost": 0.8,
+   "boost": 0.7,
    "drop_at": [
     [
      0,
@@ -241,7 +241,7 @@
      "text": "స్టెప్ బై స్టెప్ అడిగితే, దగ్గరికి వచ్చింది: ముప్పై మూడు వేలు. [1] కాలిక్యులేటర్ తో లెక్కించిన విలువ, అని కూడా రాసింది. <pause 0.8> [2] దాని దగ్గర కాలిక్యులేటరే లేదు.",
      "maxgap": 0.3,
      "gap": 0.45,
-     "show": "Asked step by step, it came closer: ₹33,000. It even wrote 'value calculated with a calculator'. <pause 0.8> It had no calculator.",
+     "show": "Asked step by step, it came closer: ₹33,092. It even wrote 'value calculated with a calculator'. <pause 0.8> It had no calculator.",
      "tempo": 1.12,
      "tts": "స్టెప్ బై స్టెప్ అడిగితే, దగ్గరికి వచ్చింది: ముప్పై మూడు వేలు. కాలిక్యులేటర్ తో లెక్కించిన విలువ, అని కూడా రాసింది.",
      "file2": "03b_storyteller.wav",
@@ -265,6 +265,13 @@
    "tail": 0.0,
    "boost": 1.5,
    "lift": 0.8,
+   "drop_at": [
+    [
+     0,
+     3,
+     0.3
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -348,7 +355,7 @@
      "text": "మా టెస్ట్, పది లోన్లు, రూపాయి తేడా లేకుండా: [1] మామూలుగా అడిగితే, ఒక్కటీ లేదు. [2] స్టెప్ బై స్టెప్, ఒక్కటీ లేదు. <pause 0.5> [3] ఫార్ములా రాయమని, మేమే లెక్కిస్తే: పదిలో నాలుగు.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Our test, 10 loans, not a rupee off: asked plainly, not one. Step by step, not one. <pause 0.5> Asked for a formula, and we calculated it: 4 of 10.",
+     "show": "Our test, 10 loans, right to the rupee: asked plainly, not one. Step by step, not one. <pause 0.5> Asked for a formula, and we calculated it: 4 of 10.",
      "tempo": 1.12,
      "tts": "మా టెస్ట్, పది లోన్లు, రూపాయి తేడా లేకుండా: మామూలుగా అడిగితే, ఒక్కటీ లేదు. స్టెప్ బై స్టెప్, ఒక్కటీ లేదు.",
      "file2": "05b_storyteller.wav",
@@ -376,9 +383,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 2.1,
+   "boost": 2.4,
    "lift": 0.9,
-   "rise": 2.5,
+   "rise": 2.8,
    "data": {
     "beats": [
      {
@@ -455,10 +462,10 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "ఇంకోసారి ఏదైనా చాట్, నెలకి ఇరవై మూడు వేలు అంటే...",
+     "text": "ఇంకోసారి ఏదైనా చాట్‌బాట్, నెలకి ఇరవై మూడు వేలు అంటే...",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "The next time any chat says ₹23,000 a month...",
+     "show": "The next time any chatbot says ₹23,405 a month...",
      "tempo": 1.12
     }
    ]

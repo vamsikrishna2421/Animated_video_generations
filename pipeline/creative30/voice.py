@@ -35,7 +35,7 @@ MUST = {"en": {1: [("twenty", "23"), ("thirty", "34"), ("seven", "700"), ("same"
         "te": {}}
 JUDGE_TEXT = {1: "23,000 a month, or 34,700? Same home loan. The first came from a small free AI, with no calculator.",
               2: "Plan your budget on it, and you're 11,000 short every month. Over 20 years: 27 lakh.",
-              3: "Asked to go step by step, it got closer: 33,000. It even wrote: 'calculated using a calculator.'",
+              3: "When we asked it to go step by step, it got closer: 33,000. It even wrote: 'calculated using a calculator.'",
               "3b": "It had no calculator.",
               5: "Our test, 10 loans, right to the rupee: asked plainly, none. Step by step, none.", "5b": "As a formula we then worked out: 4 of 10.",
               6: "For money, search 'EMI calculator', or use your bank's.", "6b": "Big apps can run real code: ask them to, then match it with your bank's.",

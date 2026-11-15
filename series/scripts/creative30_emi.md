@@ -54,6 +54,21 @@ it had no calculator") was buried under decimals, and the fix needed code. Chang
    "వచ్చే అవకాశం ఉన్న మాటలు"; "పదిలో నాలుగు".
 6. Caption ask: "Ask your AI app: ₹40 lakh, 8.5%, 20 years. Comment the EMI it gives."
 
+## Render review (human-viewer) and what changed (v3)
+All five stopped on frame 1; the red calendar to ₹27,13,920 landed; the second half (27-58 s) read as talk over slow
+screens; the reel's header strip covered the first titles. Changes:
+1. The whole picture moved below the header strip; frame 1's blocks redrawn big ("AI SAID ₹23,405 · small free AI · no
+   calculator" vs "REAL EMI ₹34,713 · same loan · a month").
+2. "It had no calculator": a crossed-out calculator under the stamp with the deep bell; "it wrote 6.9544 · the real
+   number: 5.4412" readable. Line 3 now opens "When we asked it..." (it was heard as a tip, "Ask to...").
+3. Captions use the boxes' numbers (₹23,405, ₹34,713, ₹11,308, ₹33,092); the tiles show "off by ₹2 to ₹22,137" so
+   "none" isn't read as rigged; the disclaimer chip enlarged.
+4. The end card is up at the cut and reads "A CALCULATOR, NOT A CHAT'S GUESS" (no clash with "big apps can run code").
+5. Sound: a drop before "four of ten"; music up in the gaps (0.42) and a bigger rise into the end (Telugu too).
+6. Telugu: the last line says చాట్‌బాట్ (చాట్ alone was heard as the snack); each built line checked by ear-proxy
+   (per-line recognition): 27 lakh, "no calculator" and "four of ten" are all there (the whole-mix transcript looped on
+   music). Kept: "కాలిక్యులేటర్" (the usual spelling; a re-voice of three lines for a softer "kal-kyu" wasn't worth it).
+
 ## Script (English, v2; narrator)
 1. (hook) Twenty-three thousand a month, or thirty-four thousand seven hundred? Same home loan. The first came from a small free AI, with no calculator.
 2. (gap) Plan your budget on it, and you're eleven thousand short every month. Over twenty years: twenty-seven lakh.

@@ -4,7 +4,7 @@ import { CrayonCanvas } from "./CrayonCanvas";
 import { rrect, Sfx } from "./DistillCrayon";
 import { INK } from "./WordsCrayon";
 import { cueAt } from "./SkitCrayon";
-import { fit, wrap, chip, block } from "./TutorialCrayon";
+import { fit, wrap, chip } from "./TutorialCrayon";
 
 // Creative 30 "₹23,405 or ₹34,713? The AI's EMI" (series/scripts/creative30_emi.md): a calm explainer in the Hanuman
 // pilot's shape: no characters, one narrator, one picture per beat, a bell on every cut (deep on frame 1 and the loop).
@@ -74,6 +74,17 @@ const calculator = (c: Ctx, x: number, y: number, s: number, shown: string, dim 
   c.restore();
 };
 
+// frame 1's two blocks, big enough to read with the sound off (render review: the labels were tiny)
+const clash = (c: Ctx, x: number, label: string, value: string, sub: string, col: string, bgc: string) => {
+  c.save();
+  c.fillStyle = bgc; rrect(c, x, 330, 490, 290, 24); c.fill();
+  c.textAlign = "center";
+  c.font = SANS(48, 900); c.fillStyle = "#f5f5f4"; c.fillText(label, x + 245, 395);
+  c.font = SANS(fit(c, value, 450, 104, 900), 900); c.fillStyle = col; c.fillText(value, x + 245, 505);
+  c.font = SANS(fit(c, sub, 450, 36, 800), 800); c.fillStyle = "#e7e5e4"; c.fillText(sub, x + 245, 580);
+  c.restore();
+};
+
 const StEmi: React.FC<SP> = ({ s }) => {
   const beats: Beat[] = s.data.beats;
   const T = s.data.t as Record<string, any>;
@@ -108,12 +119,11 @@ const StEmi: React.FC<SP> = ({ s }) => {
         if (P === "hook") {
           paper(c, 90, 150, 900, 150, false);
           c.font = SANS(fit(c, T.loan, 820, 48, 900), 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText(T.loan, 540, 245);
-          block(c, 50, 360, "SMALL FREE AI · NO CALCULATOR", T.ai, RED);   // script review: not "THE AI"
-          block(c, 560, 360, "THE REAL EMI · a month", T.real, GREEN);
+          clash(c, 40, "AI SAID", T.ai, "small free AI · no calculator", RED, "#3f1414");
+          clash(c, 550, "REAL EMI", T.real, "same loan · a month", GREEN, "#123320");
           const kR = loopOn ? 1 : seg(f, cu(1, 0.5), cu(1, 0.5) + 10);
-          if (kR > 0) { c.save(); c.globalAlpha = clamp(kR * 2); c.strokeStyle = GREEN; c.lineWidth = 8; rrect(c, 556, 356, 478, 168, 24); c.stroke(); c.restore(); }
-          chip(c, "same home loan · a month", 540, 580, "#1c1917", "#e7e5e4", loopOn ? 1 : seg(f, cu(1, 0.5), cu(1, 0.5) + 8), 40);
-          house(c, 540, 1080, 1.35);
+          if (kR > 0) { c.save(); c.globalAlpha = clamp(kR * 2); c.strokeStyle = GREEN; c.lineWidth = 8; rrect(c, 546, 326, 498, 298, 26); c.stroke(); c.restore(); }
+          house(c, 540, 1130, 1.25);
         } else if (P === "gap") {
           title(c, "PLAN YOUR BUDGET ON IT:", 200, "#e7e5e4", 52);
           title(c, `${T.short} SHORT, EVERY MONTH`, 275, RED, 64);
@@ -154,14 +164,15 @@ const StEmi: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, full, 900, 28, 700), 700); c.fillStyle = "#713f12"; c.fillText(full, 540, 1100);
             c.restore();
           }
-          stamp(c, "NO CALCULATOR", 540, 1230, seg(f, cu(2, 0.8), cu(2, 0.8) + 8));
-          const kG = seg(f, cu(2, 0.8) + 14, cu(2, 0.8) + 22);
-          if (kG > 0) {
-            c.save(); c.globalAlpha = clamp(kG * 3);
-            c.font = SANS(40, 900); c.fillStyle = "#15803d"; c.textAlign = "right"; c.fillText(T.realPow, 1000, 570);
+          const kN = seg(f, cu(2, 0.8) - 4, cu(2, 0.8) + 4);
+          if (kN > 0) {   // render review: show it, a crossed-out calculator under the stamp
+            c.save(); c.globalAlpha = clamp(kN * 3); calculator(c, 540, 1300, 0.45, "", true);
+            c.strokeStyle = "#dc2626"; c.lineWidth = 16; c.beginPath(); c.moveTo(440, 1170); c.lineTo(640, 1430); c.moveTo(640, 1170); c.lineTo(440, 1430); c.stroke();
             c.restore();
-            chip(c, `it said ${T.stepsEmi} · real ${T.real}`, 540, 1380, "#1c1917", AMBER, kG, 46);
           }
+          stamp(c, "NO CALCULATOR", 540, 1180, kN);
+          const kG = seg(f, cu(2, 0.8) + 14, cu(2, 0.8) + 22);
+          chip(c, "it wrote 6.9544 · the real number: 5.4412", 540, 830, "#14532d", "#dcfce7", kG, 40);
         } else if (P === "why") {
           title(c, "IT WRITES THE NEXT LIKELY WORD", 260, AMBER, 58);
           const toks = ["The", "EMI", "is", "₹", "2", "3", ",", "4", "0", "5"];
@@ -188,7 +199,7 @@ const StEmi: React.FC<SP> = ({ s }) => {
           title(c, "OUR TEST · 10 LOANS", 240, AMBER, 64);
           c.font = SANS(32, 700); c.fillStyle = "#d6d3d1"; c.textAlign = "center"; c.fillText("right = exact to the rupee", 540, 300);
           const rows: [string, string, boolean[], string, number][] = [
-            ["asked plainly", "0/10", Array(10).fill(false), "", cu(1, 0.3)],
+            ["asked plainly", "0/10", Array(10).fill(false), "off by ₹2 to ₹22,137 a month", cu(1, 0.3)],   // render review: the closest miss shown
             ["step by step", "0/10", Array(10).fill(false), "closer: off by ₹32 to ₹1,621 a month", cu(2, 0.6)],
             ["as a formula we worked out", "4/10", T.codeRight, "4 exact · the 6 wrong formulas were far off", cu(3, 0.85) + 10]];
           rows.forEach(([a, v, hits, sub, t0], q) => {
@@ -206,7 +217,7 @@ const StEmi: React.FC<SP> = ({ s }) => {
             if (sub) { c.font = SANS(fit(c, sub, W - 160, 32, 700), 700); c.fillStyle = "#d6d3d1"; c.textAlign = "left"; c.fillText(sub, 80, y + 238); }
             c.restore();
           });
-          chip(c, "a small free AI on our computer · no tools", 540, 1330, "#292524", "#e7e5e4", seg(f, ln.from + 6, ln.from + 14), 40);
+          chip(c, "a small free AI on our computer · no tools", 540, 1340, "#7f1d1d", "#fecaca", seg(f, ln.from + 6, ln.from + 14), 44);
         } else if (P === "fix") {   // script review: a fix anyone can do, the big apps said aloud
           title(c, "FOR MONEY: A CALCULATOR", 250, GREEN, 64);
           calculator(c, 540, 640, 0.9, "34,713");
@@ -215,12 +226,12 @@ const StEmi: React.FC<SP> = ({ s }) => {
           chip(c, "ask them to, then match it with your bank's", 540, 1230, "#1c1917", "#e7e5e4", seg(f, cu(1, 0.3) + 8, cu(1, 0.3) + 16), big(c, "ask them to, then match it with your bank's", 44));
           chip(c, T.formula, 540, 1360, "#fffbeb", INK, seg(f, cu(1, 0.3) + 24, cu(1, 0.3) + 32), big(c, T.formula, 36));
         } else if (P === "loop") {
-          const k = seg(f, ln.from, ln.from + 10);
+          const k = seg(f, ln.from - 8, ln.from);   // render review: up at the cut, no empty frame
           c.save(); c.globalAlpha = clamp(k * 2);
           paper(c, 90, 520, 900, 520, false);
           c.font = SANS(fit(c, "MONEY MATHS:", 760, 90, 900), 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("MONEY MATHS:", 540, 700);
           c.font = SANS(fit(c, "A CALCULATOR,", 760, 90, 900), 900); c.fillStyle = "#15803d"; c.fillText("A CALCULATOR,", 540, 820);
-          c.font = SANS(fit(c, "NOT A CHAT", 760, 90, 900), 900); c.fillStyle = "#b91c1c"; c.fillText("NOT A CHAT", 540, 940);
+          c.font = SANS(fit(c, "NOT A CHAT'S GUESS", 760, 90, 900), 900); c.fillStyle = "#b91c1c"; c.fillText("NOT A CHAT'S GUESS", 540, 940);   // render review: fits "big apps can run code"
           c.restore();
         }
         c.restore();
