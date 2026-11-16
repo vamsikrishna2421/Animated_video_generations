@@ -124,7 +124,7 @@
    "id": "s_b",
    "type": "sk_detector31",
    "tail": 0.0,
-   "boost": 1.3,
+   "boost": 1.1,
    "lift": 0.6,
    "drop_at": [
     [
@@ -172,15 +172,15 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "That's a Stanford study from 2023, seven detectors. [1] Each one, on average, flagged six in ten of those essays. <pause 0.5> [2] Essays by U.S.-born students: almost none flagged.",
+     "text": "That's a Stanford study from 2023, seven detectors. [1] Each one, on average, flagged six in ten of those essays. Essays by U.S.-born students? <pause 0.7> [2] Almost none flagged.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "That's a Stanford study from 2023, 7 detectors. Each one, on average, flagged 6 in 10 of those essays. <pause 0.5> Essays by U.S.-born students: almost none flagged.",
+     "show": "That's a Stanford study from 2023, 7 detectors. Each one, on average, flagged 6 in 10 of those essays. Essays by U.S.-born students? <pause 0.7> Almost none flagged.",
      "tempo": 1.04,
-     "tts": "That's a Stanford study from 2023, seven detectors. Each one, on average, flagged six in ten of those essays.",
+     "tts": "That's a Stanford study from 2023, seven detectors. Each one, on average, flagged six in ten of those essays. Essays by U.S.-born students?",
      "file2": "04b_storyteller.wav",
-     "tts2": "Essays by U.S.-born students: almost none flagged.",
-     "pause": 0.5
+     "tts2": "Almost none flagged.",
+     "pause": 0.7
     },
     {
      "who": "storyteller",
@@ -197,8 +197,8 @@
    "id": "s_c",
    "type": "sk_detector31",
    "tail": 0.0,
-   "boost": 1.4,
-   "lift": 0.7,
+   "boost": 1.8,
+   "lift": 0.8,
    "data": {
     "beats": [
      {
@@ -238,10 +238,10 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "So keep your drafts and version history from day one. [1] If you're flagged, show them, and offer to explain your essay out loud.",
+     "text": "So keep your drafts and version history from day one. [1] If you're flagged, show them. And offer to explain your essay out loud.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "So keep your drafts and version history from day one. If you're flagged, show them, and offer to explain your essay out loud.",
+     "show": "So keep your drafts and version history from day one. If you're flagged, show them. And offer to explain your essay out loud.",
      "tempo": 1.04
     },
     {
@@ -261,9 +261,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 2.1,
+   "boost": 2.5,
    "lift": 0.9,
-   "rise": 2.4,
+   "rise": 2.9,
    "data": {
     "beats": [
      {

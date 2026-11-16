@@ -91,7 +91,7 @@ const StDetector: React.FC<SP> = ({ s }) => {
           clashBlock(c, 550, "FLAGGED AS AI", "89", RED, "#3f1414");
           c.font = SANS(fit(c, "91 STUDENT ESSAYS · ENGLISH AS A 2ND LANGUAGE", 980, 44, 900), 900); c.fillStyle = "#f5f5f4"; c.textAlign = "center";
           c.fillText("91 STUDENT ESSAYS · ENGLISH AS A 2ND LANGUAGE", 540, 440);
-          const red = hook && !loopOn ? Math.floor(89 * seg(f, cu(1, 0.5), cu(1, 0.5) + 40)) : 89;
+          const red = hook && !loopOn ? Math.floor(89 * seg(f, 9, 60)) : 89;   // render review: the sweep in the first 2 s
           grid(c, 480, red);
           chip(c, "flagged by AT LEAST ONE of 7 detectors", 540, 1290, "#3f1414", "#fecaca", 1, big(c, "flagged by AT LEAST ONE of 7 detectors", 46));   // script review: say which count
           chip(c, "Stanford study, 2023", 540, 1395, "#1c1f24", "#d6d3d1", 1, 38);
@@ -105,11 +105,11 @@ const StDetector: React.FC<SP> = ({ s }) => {
           c.save(); c.fillStyle = "#334155"; rrect(c, 580, 400, 440, 300, 16); c.fill(); c.fillStyle = "#0f172a"; rrect(c, 600, 420, 400, 260, 10); c.fill();
           c.fillStyle = "#475569"; c.beginPath(); c.moveTo(550, 700); c.lineTo(1050, 700); c.lineTo(1010, 740); c.lineTo(590, 740); c.closePath(); c.fill();
           c.font = SANS(30, 800); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("AI DETECTOR", 800, 480);
-          const kD = seg(f, cu(1, 0.5), cu(1, 0.5) + 8);
+          const tD = Math.min(cu(1, 0.5), ln.from + 40), kD = seg(f, tD, tD + 8);   // render review: up long enough
           if (kD > 0) { c.globalAlpha = clamp(kD * 3); c.font = SANS(fit(c, "AI-GENERATED", 360, 56, 900), 900); c.fillStyle = "#ef4444"; c.fillText("AI-GENERATED", 800, 580); }
           c.restore();
           chip(c, "English: your second language", 540, 1010, "#1c1f24", "#e7e5e4", seg(f, ln.from + 10, ln.from + 18), 44);
-          stamp(c, "BUT YOU WROTE IT", 540, 1170, seg(f, cu(1, 0.5) + 14, cu(1, 0.5) + 22));
+          stamp(c, "BUT YOU WROTE IT", 540, 1170, seg(f, tD + 14, tD + 22));
         } else if (P === "why") {
           title(c, "WHAT DETECTORS HUNT FOR", 250, AMBER, 60);
           card(c, 320, 300);
@@ -127,21 +127,22 @@ const StDetector: React.FC<SP> = ({ s }) => {
           const bar = (y: number, label: string, val: string, frac: number, col: string, k: number) => {
             if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); card(c, y, 260);
-            c.font = SANS(fit(c, label, 900, 42, 900), 900); c.fillStyle = "#f5f5f4"; c.textAlign = "left"; c.fillText(label, 80, y + 70);
+            c.font = SANS(fit(c, label, 920, 48, 900), 900); c.fillStyle = "#f5f5f4"; c.textAlign = "left"; c.fillText(label, 80, y + 70);
             c.fillStyle = "#292524"; rrect(c, 80, y + 110, 920, 70, 12); c.fill();
             c.fillStyle = col; rrect(c, 80, y + 110, Math.max(20, 920 * frac * clamp(k * 1.5)), 70, 12); c.fill();
             c.font = SANS(fit(c, val, 900, 50, 900), 900); c.fillStyle = col; c.fillText(val, 80, y + 235); c.restore();
           };
-          bar(330, "English as a 2nd language: each detector, on average", "6 in 10 flagged (61%)", 0.61, RED, seg(f, cu(1, 0.4) - 2, cu(1, 0.4) + 8));
+          const tB = Math.min(cu(1, 0.4), ln.from + 25);
+          bar(330, "2nd-language essays: EACH detector, on average", "6 in 10 flagged (61%)", 0.61, RED, seg(f, tB - 2, tB + 8));
           bar(640, "US-born students' essays", "almost none flagged", 0.03, GREEN, seg(f, cu(2, 0.6), cu(2, 0.6) + 8));   // script review: not "near-perfect"
-          chip(c, "any one of the 7: 89 of 91", 540, 980, "#3f1414", "#fecaca", seg(f, cu(1, 0.4) + 20, cu(1, 0.4) + 28), 46);
+          chip(c, "AT LEAST 1 of 7: 89 of 91", 540, 980, "#3f1414", "#fecaca", seg(f, cu(1, 0.4) + 20, cu(1, 0.4) + 28), 50);   // render review: same words as the hook
         } else if (P === "makers") {
           title(c, "EVEN THE MAKERS WARN", 250, AMBER, 64);
           (T.makers as string[][]).forEach(([who, what], q) => {
             const k = seg(f, ln.from + 6 + q * Math.max(30, cu(1, 0.4) - ln.from - 6), ln.from + 14 + q * Math.max(30, cu(1, 0.4) - ln.from - 6)); if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); const y = 330 + q * 330; card(c, y, 290);
             c.font = SANS(64, 900); c.fillStyle = "#f5f5f4"; c.textAlign = "left"; c.fillText(who, 80, y + 95);
-            c.font = SANS(40, 800); c.fillStyle = AMBER; wrap(c, what, 900).forEach((t, j) => c.fillText(t, 80, y + 170 + j * 52));
+            c.font = SANS(48, 800); c.fillStyle = AMBER; wrap(c, what, 900).forEach((t, j) => c.fillText(t, 80, y + 170 + j * 58));
             c.restore();
           });
         } else if (P === "fix") {   // script review: stay with "you"; from day one; offer to explain
@@ -157,7 +158,7 @@ const StDetector: React.FC<SP> = ({ s }) => {
           chip(c, "offer to explain your essay out loud", 540, 900, "#14261a", "#bbf7d0", seg(f, cu(1, 0.5) + 14, cu(1, 0.5) + 22), big(c, "offer to explain your essay out loud", 50));
         } else if (P === "teachers") {
           title(c, "TEACHERS", 300, AMBER, 80);
-          const k = seg(f, cu(1, 0.3), cu(1, 0.3) + 8);
+          const tT = Math.min(cu(1, 0.3), ln.from + 20), k = seg(f, tT, tT + 8);   // render review: on time
           if (k > 0) {
             c.save(); c.globalAlpha = clamp(k * 3); card(c, 400, 420, "#14261a");
             c.font = SANS(fit(c, "a score is a reason to talk,", 900, 64, 900), 900); c.fillStyle = "#f5f5f4"; c.textAlign = "center"; c.fillText("a score is a reason to talk,", 540, 560);

@@ -16,16 +16,16 @@ R = ROOT / "reels"
 LINES = {   # v2 (script review): "at least one detector" said; 61% = each detector's average; "almost none"; our test cut
     # from the video (a 2019 detector vs today's AI was a strawman; it lives in the pinned comment); the ending stays "you"
     1: ("hook", "Ninety-one student essays. [1] Written by AI: zero. Flagged as AI, by at least one detector: eighty-nine.",
-        "తొంభై ఒక్క స్టూడెంట్స్ వ్యాసాలు. [1] మెషీన్ రాసినవి: సున్నా. మెషీన్ అని ముద్ర: ఎనభై తొమ్మిది."),
+        "తొంభై ఒక్క స్టూడెంట్స్ వ్యాసాలు. [1] మెషీన్ రాసినవి: సున్నా. కనీసం ఒక్క డిటెక్టర్, మెషీన్ అని ముద్ర వేసినవి: ఎనభై తొమ్మిది."),
     2: ("pov", "POV: you wrote yours yourself, in English, your second language. [1] The detector says: AI.",
         "ఊహించండి: మీ వ్యాసం మీరే రాశారు, ఇంగ్లీష్ మీ రెండో భాష. [1] డిటెక్టర్ మాత్రం, మెషీన్ రాసింది అంటోంది."),
     3: ("why", "Detectors hunt for plain, predictable words. [1] Careful, simple English looks predictable too.",
-        "డిటెక్టర్లు, ఊహించగలిగే సాదా మాటల కోసం వెతుకుతాయి. [1] జాగ్రత్తగా రాసిన సింపుల్ ఇంగ్లీష్ కూడా, అలాగే కనిపిస్తుంది."),
-    4: ("study", "That's a Stanford study from 2023, seven detectors. [1] Each one, on average, flagged six in ten of those essays. | [2] Essays by U.S.-born students: almost none flagged.",
-        "అది రెండు వేల ఇరవై మూడు స్టాన్ఫర్డ్ స్టడీ: ఏడు డిటెక్టర్లు. [1] ఒక్కో డిటెక్టర్, సగటున పదింట్లో ఆరు వ్యాసాలకు ముద్ర వేసింది. | [2] అమెరికాలో పుట్టిన స్టూడెంట్స్ వ్యాసాలకు: దాదాపు సున్నా."),
+        "డిటెక్టర్లు, ఊహించగలిగే సాదా మాటల కోసం వెతుకుతాయి. [1] జాగ్రత్తగా రాసిన సింపుల్ ఇంగ్లీష్ కూడా, అలాగే అనిపిస్తుంది."),
+    4: ("study", "That's a Stanford study from 2023, seven detectors. [1] Each one, on average, flagged six in ten of those essays. Essays by U.S.-born students? | [2] Almost none flagged.",
+        "అది రెండు వేల ఇరవై మూడు స్టాన్ఫర్డ్ స్టడీ: ఏడు డిటెక్టర్లు. [1] ఒక్కో డిటెక్టర్, సగటున పదింట్లో ఆరు వ్యాసాలకు ముద్ర వేసింది. | [2] అమెరికాలో పుట్టిన స్టూడెంట్స్ రాసిన వ్యాసాలకు: దాదాపు సున్నా."),
     5: ("makers", "Even the makers warn: OpenAI shut its own detector for low accuracy, [1] and Turnitin says its score shouldn't be the only proof.",
         "తయారు చేసినవాళ్ళే హెచ్చరిస్తున్నారు: [1] ఈ స్కోర్ ఒక్కటే రుజువు కాదు."),
-    6: ("fix", "So keep your drafts and version history from day one. [1] If you're flagged, show them, and offer to explain your essay out loud.",
+    6: ("fix", "So keep your drafts and version history from day one. [1] If you're flagged, show them. And offer to explain your essay out loud.",
         "అందుకే, ముందు నుంచే డ్రాఫ్ట్స్, వెర్షన్ హిస్టరీ సేవ్ చేసి ఉంచండి. | [1] ముద్ర పడితే, అవి చూపించండి; మీ వ్యాసం నోటితో వివరిస్తానని చెప్పండి."),
     7: ("teachers", "And teachers: [1] a score is a reason to talk, not proof.",
         "టీచర్లకి: [1] స్కోర్, మాట్లాడటానికి ఒక కారణం; రుజువు కాదు."),
@@ -33,10 +33,10 @@ LINES = {   # v2 (script review): "at least one detector" said; 61% = each detec
         "ఎందుకంటే గుర్తుంచుకోండి: [1] తొంభై ఒక్క స్టూడెంట్స్ వ్యాసాలు..."),
 }
 SHOW = {1: "91 student essays. Written by AI: 0. Flagged as AI, by at least one detector: 89.",
-        4: "That's a Stanford study from 2023, 7 detectors. Each one, on average, flagged 6 in 10 of those essays. <pause 0.5> Essays by U.S.-born students: almost none flagged.",
+        4: "That's a Stanford study from 2023, 7 detectors. Each one, on average, flagged 6 in 10 of those essays. Essays by U.S.-born students? <pause 0.7> Almost none flagged.",
         8: "Because remember: 91 student essays..."}
 SHOW_TE = {
-    1: "91 student essays. Written by a machine: 0. Stamped 'machine': 89.",
+    1: "91 student essays. Written by a machine: 0. Stamped 'machine' by at least one detector: 89.",
     2: "Imagine: you wrote your essay yourself; English is your second language. The detector says a machine wrote it.",
     3: "Detectors look for plain, predictable words. Carefully written simple English looks the same way.",
     4: "That's a 2023 Stanford study: 7 detectors. Each detector, on average, stamped 6 in 10 essays. <pause 0.5> Essays by US-born students: almost zero.",
@@ -45,7 +45,7 @@ SHOW_TE = {
     7: "To teachers: a score is a reason to talk; it is not proof.",
     8: "Because remember: 91 student essays...",
 }
-SPLIT_PAUSE = {4: 0.5}
+SPLIT_PAUSE = {4: 0.7}
 SPLIT_PAUSE_TE = {4: 0.5, 6: 0.4}
 TTS_EN = {}
 T = {   # on screen: Stanford HAI (May 15, 2023); OpenAI's note; Turnitin's guidance (quoted by universities)
@@ -56,11 +56,11 @@ T = {   # on screen: Stanford HAI (May 15, 2023); OpenAI's note; Turnitin's guid
 # Sound (CLAUDE.md arc): a boom on frame 1 and a buzz on "eighty-nine"; a soft tick per red dot; a drop before
 # "near-perfect"; a buzz on the 1776 stamp; a ding on "judge the work"; a riser and the slam into the loop.
 SCENES = [("s_a", (1, 2, 3), {"boost": 1.2, "tail": 0.0}),
-          ("s_b", (4, 5), {"boost": 1.3, "lift": 0.6, "drop_at": [[0, 2, 0.3]], "tail": 0.0}),
-          ("s_c", (6, 7), {"boost": 1.4, "lift": 0.7, "tail": 0.0}),
-          ("s_d", (8,), {"outro": True, "pre": 0.3, "boost": 2.1, "lift": 0.9, "rise": 2.4, "tail": 0.0})]
+          ("s_b", (4, 5), {"boost": 1.1, "lift": 0.6, "drop_at": [[0, 2, 0.3]], "tail": 0.0}),
+          ("s_c", (6, 7), {"boost": 1.8, "lift": 0.8, "tail": 0.0}),   # render review: the end never lifted
+          ("s_d", (8,), {"outro": True, "pre": 0.3, "boost": 2.5, "lift": 0.9, "rise": 2.9, "tail": 0.0})]
 GAP = {1: 0.4, 2: 0.35, 3: 0.35, 4: 0.4, 5: 0.4, 6: 0.35, 7: 0.4, 8: 0.0}
-FLAGS_TE = {"s_c": {"boost": 1.6}, "s_d": {"boost": 2.3, "rise": 2.7}}
+FLAGS_TE = {"s_b": {"boost": 1.2}, "s_c": {"boost": 2.0}, "s_d": {"boost": 2.6, "rise": 3.0}}
 YT = {"s_a": "Written by AI: 0. Flagged: 89.", "s_b": "The study, and the makers", "s_c": "What to do", "s_d": "91 essays"}
 MARK = re.compile(r"\[\d+\]\s*")
 

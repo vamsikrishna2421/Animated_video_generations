@@ -29,13 +29,13 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
 MUST = {"en": {1: [("ninety", "91"), ("zero",), ("least",), ("eighty", "89")], 2: [("pov", "p.o.v"), ("second",), ("detector",)],
-               3: [("predictable",), ("simple",)], 4: [("stanford",), ("seven", "7"), ("average",), ("six", "6")], "4b": [("born",), ("none",)],
+               3: [("predictable",), ("simple",)], 4: [("stanford",), ("seven", "7"), ("average",), ("six", "6")], "4b": [("none",), ("flagged",)],
                5: [("makers",), ("accuracy",), ("turnitin", "turn it in"), ("proof",)], 6: [("drafts",), ("history",), ("flagged",), ("loud",)],
                7: [("teachers",), ("score",), ("proof",)], 8: [("remember",), ("ninety", "91"), ("essays",)]},
         "te": {}}
 JUDGE_TEXT = {1: "91 student essays. Written by AI: 0. Flagged as AI, by at least one detector: 89.",
-              4: "That's a Stanford study from 2023, 7 detectors. Each one, on average, flagged 6 in 10 of those essays.",
-              "4b": "Essays by U.S.-born students: almost none flagged.", 8: "Because remember: 91 student essays..."}
+              4: "That's a Stanford study from 2023, 7 detectors. Each one, on average, flagged 6 in 10 of those essays. Essays by U.S.-born students?",
+              "4b": "Almost none flagged.", 8: "Because remember: 91 student essays..."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

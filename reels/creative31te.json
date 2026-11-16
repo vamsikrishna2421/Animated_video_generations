@@ -97,10 +97,10 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "తొంభై ఒక్క స్టూడెంట్స్ వ్యాసాలు. [1] మెషీన్ రాసినవి: సున్నా. మెషీన్ అని ముద్ర: ఎనభై తొమ్మిది.",
+     "text": "తొంభై ఒక్క స్టూడెంట్స్ వ్యాసాలు. [1] మెషీన్ రాసినవి: సున్నా. కనీసం ఒక్క డిటెక్టర్, మెషీన్ అని ముద్ర వేసినవి: ఎనభై తొమ్మిది.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "91 student essays. Written by a machine: 0. Stamped 'machine': 89.",
+     "show": "91 student essays. Written by a machine: 0. Stamped 'machine' by at least one detector: 89.",
      "tempo": 1.1
     },
     {
@@ -115,7 +115,7 @@
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "డిటెక్టర్లు, ఊహించగలిగే సాదా మాటల కోసం వెతుకుతాయి. [1] జాగ్రత్తగా రాసిన సింపుల్ ఇంగ్లీష్ కూడా, అలాగే కనిపిస్తుంది.",
+     "text": "డిటెక్టర్లు, ఊహించగలిగే సాదా మాటల కోసం వెతుకుతాయి. [1] జాగ్రత్తగా రాసిన సింపుల్ ఇంగ్లీష్ కూడా, అలాగే అనిపిస్తుంది.",
      "maxgap": 0.3,
      "gap": 0.35,
      "show": "Detectors look for plain, predictable words. Carefully written simple English looks the same way.",
@@ -127,7 +127,7 @@
    "id": "s_b",
    "type": "sk_detector31",
    "tail": 0.0,
-   "boost": 1.3,
+   "boost": 1.2,
    "lift": 0.6,
    "drop_at": [
     [
@@ -176,14 +176,14 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "అది రెండు వేల ఇరవై మూడు స్టాన్ఫర్డ్ స్టడీ: ఏడు డిటెక్టర్లు. [1] ఒక్కో డిటెక్టర్, సగటున పదింట్లో ఆరు వ్యాసాలకు ముద్ర వేసింది. <pause 0.5> [2] అమెరికాలో పుట్టిన స్టూడెంట్స్ వ్యాసాలకు: దాదాపు సున్నా.",
+     "text": "అది రెండు వేల ఇరవై మూడు స్టాన్ఫర్డ్ స్టడీ: ఏడు డిటెక్టర్లు. [1] ఒక్కో డిటెక్టర్, సగటున పదింట్లో ఆరు వ్యాసాలకు ముద్ర వేసింది. <pause 0.5> [2] అమెరికాలో పుట్టిన స్టూడెంట్స్ రాసిన వ్యాసాలకు: దాదాపు సున్నా.",
      "maxgap": 0.3,
      "gap": 0.4,
      "show": "That's a 2023 Stanford study: 7 detectors. Each detector, on average, stamped 6 in 10 essays. <pause 0.5> Essays by US-born students: almost zero.",
      "tempo": 1.1,
      "tts": "అది రెండు వేల ఇరవై మూడు స్టాన్ఫర్డ్ స్టడీ: ఏడు డిటెక్టర్లు. ఒక్కో డిటెక్టర్, సగటున పదింట్లో ఆరు వ్యాసాలకు ముద్ర వేసింది.",
      "file2": "04b_storyteller.wav",
-     "tts2": "అమెరికాలో పుట్టిన స్టూడెంట్స్ వ్యాసాలకు: దాదాపు సున్నా.",
+     "tts2": "అమెరికాలో పుట్టిన స్టూడెంట్స్ రాసిన వ్యాసాలకు: దాదాపు సున్నా.",
      "pause": 0.5
     },
     {
@@ -201,8 +201,8 @@
    "id": "s_c",
    "type": "sk_detector31",
    "tail": 0.0,
-   "boost": 1.6,
-   "lift": 0.7,
+   "boost": 2.0,
+   "lift": 0.8,
    "data": {
     "beats": [
      {
@@ -270,9 +270,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 2.3,
+   "boost": 2.6,
    "lift": 0.9,
-   "rise": 2.7,
+   "rise": 3.0,
    "data": {
     "beats": [
      {
