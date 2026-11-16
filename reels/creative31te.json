@@ -1,0 +1,445 @@
+{
+ "id": "creative31te",
+ "title": "Written by AI: 0. Flagged as AI: 89. (Creative 31) (Telugu audio)",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.14,
+  0.4
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.9,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_detector31",
+   "tail": 0.0,
+   "boost": 1.2,
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "pov",
+      "n": 2
+     },
+     {
+      "prop": "why",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "src": "Stanford study, 2023 · 7 detectors · flagged by at least one",
+     "study": {
+      "esl": "61%",
+      "us": "near-perfect",
+      "atLeastOne": "89 of 91",
+      "unanimous": "18 of 91"
+     },
+     "ours": [
+      [
+       "the 1776 Declaration of Independence (human)",
+       "AI · 55%",
+       "#f87171"
+      ],
+      [
+       "a small AI's real text #2",
+       "human · 34% AI",
+       "#f87171"
+      ],
+      [
+       "a small AI's real text #3",
+       "human · 3% AI",
+       "#f87171"
+      ],
+      [
+       "India's Preamble, 1949 (human)",
+       "human",
+       "#4ade80"
+      ]
+     ],
+     "d1": "OpenAI's 2019 detector (free download)",
+     "d2": "a 2023 open detector: got our 7 short texts right",
+     "makers": [
+      [
+       "OpenAI",
+       "shut its 2023 AI classifier: 'low rate of accuracy'"
+      ],
+      [
+       "Turnitin",
+       "its AI score shouldn't be the sole basis for action"
+      ]
+     ],
+     "keep": [
+      "drafts",
+      "notes",
+      "version history"
+     ]
+    },
+    "yt": {
+     "chapter": "Written by AI: 0. Flagged: 89.",
+     "title": "Written by AI: 0. Flagged: 89.",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "తొంభై ఒక్క వ్యాసాలు, అన్నీ పిల్లలు రాసినవే. [1] మెషీన్ రాసినవి: సున్నా. మెషీన్ రాసింది అని ముద్ర పడ్డవి: ఎనభై తొమ్మిది.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "91 essays, all written by students. Written by a machine: 0. Stamped 'machine-written': 89.",
+     "tempo": 1.1
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "ఊహించండి: మీ వ్యాసం మీరే రాశారు, ఇంగ్లీష్ మీ రెండో భాష. [1] డిటెక్టర్ మాత్రం, మెషీన్ రాసింది అంటోంది.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "Imagine: you wrote your essay yourself; English is your second language. The detector says a machine wrote it.",
+     "tempo": 1.1
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "డిటెక్టర్లు, ఊహించగలిగే సాదా మాటల కోసం వెతుకుతాయి. [1] జాగ్రత్తగా రాసిన సింపుల్ ఇంగ్లీష్ కూడా, అలాగే కనిపిస్తుంది.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "Detectors look for plain, predictable words. Carefully written simple English looks the same way.",
+     "tempo": 1.1
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_detector31",
+   "tail": 0.0,
+   "boost": 1.3,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     0,
+     2,
+     0.3
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "study",
+      "n": 4
+     },
+     {
+      "prop": "ours",
+      "n": 5
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "src": "Stanford study, 2023 · 7 detectors · flagged by at least one",
+     "study": {
+      "esl": "61%",
+      "us": "near-perfect",
+      "atLeastOne": "89 of 91",
+      "unanimous": "18 of 91"
+     },
+     "ours": [
+      [
+       "the 1776 Declaration of Independence (human)",
+       "AI · 55%",
+       "#f87171"
+      ],
+      [
+       "a small AI's real text #2",
+       "human · 34% AI",
+       "#f87171"
+      ],
+      [
+       "a small AI's real text #3",
+       "human · 3% AI",
+       "#f87171"
+      ],
+      [
+       "India's Preamble, 1949 (human)",
+       "human",
+       "#4ade80"
+      ]
+     ],
+     "d1": "OpenAI's 2019 detector (free download)",
+     "d2": "a 2023 open detector: got our 7 short texts right",
+     "makers": [
+      [
+       "OpenAI",
+       "shut its 2023 AI classifier: 'low rate of accuracy'"
+      ],
+      [
+       "Turnitin",
+       "its AI score shouldn't be the sole basis for action"
+      ]
+     ],
+     "keep": [
+      "drafts",
+      "notes",
+      "version history"
+     ]
+    },
+    "yt": {
+     "chapter": "The study and our test",
+     "title": "The study and our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "స్టాన్ఫర్డ్ రీసెర్చర్లు, ఏడు డిటెక్టర్లతో టెస్ట్ చేశారు. [1] ఇంగ్లీష్ రెండో భాషగా రాసిన పిల్లలు: అరవై ఒక్క శాతం మీద ముద్ర. <pause 0.5> [2] అమెరికాలో పుట్టిన పిల్లల మీద: దాదాపు లేదు.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "Stanford researchers tested 7 detectors. Students writing English as a second language: 61% stamped. <pause 0.5> Students born in the US: almost none.",
+     "tempo": 1.1,
+     "tts": "స్టాన్ఫర్డ్ రీసెర్చర్లు, ఏడు డిటెక్టర్లతో టెస్ట్ చేశారు. ఇంగ్లీష్ రెండో భాషగా రాసిన పిల్లలు: అరవై ఒక్క శాతం మీద ముద్ర.",
+     "file2": "04b_storyteller.wav",
+     "tts2": "అమెరికాలో పుట్టిన పిల్లల మీద: దాదాపు లేదు.",
+     "pause": 0.5
+    },
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "మేము రెండు ఫ్రీ డిటెక్టర్లు ట్రై చేశాం. [1] ఒక పాత డిటెక్టర్, పదిహేడు వందల డెబ్భై ఆరులో రాసిన అమెరికా డిక్లరేషన్ ని, మెషీన్ రాసింది అంది. <pause 0.4> [2] నిజంగా మెషీన్ రాసిన మూడింట్లో రెండు, మనుషులు రాసినవి అంది.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "We tried 2 free detectors. An old detector said the American Declaration written in 1776 was machine-written. <pause 0.4> Of 3 texts a machine really wrote, it called 2 human.",
+     "tempo": 1.1,
+     "tts": "మేము రెండు ఫ్రీ డిటెక్టర్లు ట్రై చేశాం. ఒక పాత డిటెక్టర్, పదిహేడు వందల డెబ్భై ఆరులో రాసిన అమెరికా డిక్లరేషన్ ని, మెషీన్ రాసింది అంది.",
+     "file2": "05b_storyteller.wav",
+     "tts2": "నిజంగా మెషీన్ రాసిన మూడింట్లో రెండు, మనుషులు రాసినవి అంది.",
+     "pause": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_detector31",
+   "tail": 0.0,
+   "boost": 1.6,
+   "lift": 0.7,
+   "data": {
+    "beats": [
+     {
+      "prop": "makers",
+      "n": 6
+     },
+     {
+      "prop": "fix",
+      "n": 7
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "src": "Stanford study, 2023 · 7 detectors · flagged by at least one",
+     "study": {
+      "esl": "61%",
+      "us": "near-perfect",
+      "atLeastOne": "89 of 91",
+      "unanimous": "18 of 91"
+     },
+     "ours": [
+      [
+       "the 1776 Declaration of Independence (human)",
+       "AI · 55%",
+       "#f87171"
+      ],
+      [
+       "a small AI's real text #2",
+       "human · 34% AI",
+       "#f87171"
+      ],
+      [
+       "a small AI's real text #3",
+       "human · 3% AI",
+       "#f87171"
+      ],
+      [
+       "India's Preamble, 1949 (human)",
+       "human",
+       "#4ade80"
+      ]
+     ],
+     "d1": "OpenAI's 2019 detector (free download)",
+     "d2": "a 2023 open detector: got our 7 short texts right",
+     "makers": [
+      [
+       "OpenAI",
+       "shut its 2023 AI classifier: 'low rate of accuracy'"
+      ],
+      [
+       "Turnitin",
+       "its AI score shouldn't be the sole basis for action"
+      ]
+     ],
+     "keep": [
+      "drafts",
+      "notes",
+      "version history"
+     ]
+    },
+    "yt": {
+     "chapter": "What to do",
+     "title": "What to do",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "తయారు చేసినవాళ్ళే హెచ్చరిస్తున్నారు: [1] ఈ స్కోర్ ఒక్కటే రుజువు కాదు.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "Even the makers warn: this score alone is not proof.",
+     "tempo": 1.1
+    },
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "మీ పిల్లల మీద ఈ ముద్ర పడితే: డ్రాఫ్ట్స్, నోట్స్, వెర్షన్ హిస్టరీ దాచండి. [1] స్కోర్ కాదు, పని చూడమని అడగండి.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "If your child gets this stamp: keep the drafts, notes, version history. Ask them to judge the work, not the score.",
+     "tempo": 1.1
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_detector31",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 2.3,
+   "lift": 0.9,
+   "rise": 2.7,
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "src": "Stanford study, 2023 · 7 detectors · flagged by at least one",
+     "study": {
+      "esl": "61%",
+      "us": "near-perfect",
+      "atLeastOne": "89 of 91",
+      "unanimous": "18 of 91"
+     },
+     "ours": [
+      [
+       "the 1776 Declaration of Independence (human)",
+       "AI · 55%",
+       "#f87171"
+      ],
+      [
+       "a small AI's real text #2",
+       "human · 34% AI",
+       "#f87171"
+      ],
+      [
+       "a small AI's real text #3",
+       "human · 3% AI",
+       "#f87171"
+      ],
+      [
+       "India's Preamble, 1949 (human)",
+       "human",
+       "#4ade80"
+      ]
+     ],
+     "d1": "OpenAI's 2019 detector (free download)",
+     "d2": "a 2023 open detector: got our 7 short texts right",
+     "makers": [
+      [
+       "OpenAI",
+       "shut its 2023 AI classifier: 'low rate of accuracy'"
+      ],
+      [
+       "Turnitin",
+       "its AI score shouldn't be the sole basis for action"
+      ]
+     ],
+     "keep": [
+      "drafts",
+      "notes",
+      "version history"
+     ]
+    },
+    "yt": {
+     "chapter": "91 essays",
+     "title": "91 essays",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "ఎందుకంటే గుర్తుంచుకోండి: [1] తొంభై ఒక్క వ్యాసాలు, అన్నీ పిల్లలు రాసినవే...",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "show": "Because remember: 91 essays, all written by students...",
+     "tempo": 1.1
+    }
+   ]
+  }
+ ]
+}
