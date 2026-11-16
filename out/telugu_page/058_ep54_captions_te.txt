@@ -1,5 +1,5 @@
 UPLOAD: 058 (Telugu page, @ai_maastaaru_telugu)
-VIDEO: telugu_page/058_ep54_insta_te.mp4  (a screen tutorial, Telugu voice on our TTS, English on-screen text; send copy: telugu_page/058_ep54_insta_te_ig.mp4). It ends: "మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. ఇంకా స్టార్ట్ కాలేదు." taruvaata frame 1 (₹1,299 refunded vs ₹0).
+VIDEO: telugu_page/058_ep54_insta_te.mp4  (a screen tutorial, 77 s, Telugu voice on our TTS, English on-screen text; send copy: telugu_page/058_ep54_insta_te_ig.mp4). It ends: "మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. రిఫండ్ ఇంకా రాలేదు." taruvaata frame 1 (₹1,299 refunded vs ₹0).
 
 === CAPTION ===
 "Naa ₹1,299 refund vachinda?" Shop chatbot: "Yes, your refund of Rs 1,299 for order 4417 has been processed." Shop record lo: ₹0. Refund inka start kooda kaaledu. Chatbot ki choose daare ledu; anduke refund javaabu maamoolugaa ela untundo, ala raasesindi.
@@ -7,7 +7,7 @@ VIDEO: telugu_page/058_ep54_insta_te.mp4  (a screen tutorial, Telugu voice on ou
 AI From Scratch Episode 54: anni kante simple AI agent, oka tool tho (Season 6, screen tutorial)
 Agent ante mee code tho pani cheyinchagalige chatbot. Chatbot edi run cheyyadu:
 1. Tool gurinchi cheppandi; vaadaalante oka JSON line tho adagamanandi. Ikkada get_order(order_id).
-2. Mee code aa line vetiki, order chustundi. (Rendusaarlu aa line tarvaata ooha kooda raasindi, "December 15th"; maa code daanni pattinchukoledu. Record lo Nov 18.)
+2. Mee code aa line vetiki, order chustundi. (Rendusaarlu aa line tarvaata ooha kooda raasindi, "December 15th"; Record lo Nov 18. Maa code aa line ne vaadindi.)
 3. Result tirigi pampandi. Ippudu shop record nunche javaabistundi.
 OpenAI, Google sontha docs lo kooda ide loop (model tool peru, arguments istundi; mee app run chesi result pamputundi); ikkada chetto chesaam.
 
@@ -26,4 +26,4 @@ Edaina AI chat app ni adagandi: "Has my refund for order 12345 come?" (made-up n
 #AIinTelugu #TeluguAI #AIAgents #LearnAI #Python
 
 === PINNED_COMMENT ===
-Code (Python): ORDERS dict; get_order(order_id) = ORDERS.get(...); find_json(reply) = reply lo {"tool": ...} line vetakadam; messages lo system = support assistant + TOOL instructions; reply = ask(messages); call = find_json(reply); call unte "Tool result: ..." tirigi pampi, malli ask(messages). Test (Nov 16, 2026): made-up shop (10 orders, maa sontham), Qwen2.5-7B-Instruct (4-bit), llama.cpp, temperature 0.2, prati javaabu chadivaam. Asalaina APIs lo tools option undi (OpenAI "Function calling", Google "Function calling with the Gemini API"); ikkada ade loop chetto.
+Code (Python, full runnable version in the English page's pinned comment): ORDERS dict; get_order(order_id) = ORDERS.get(...); find_json(reply) = reply lo {"tool": ...} line vetakadam; messages lo system = support assistant + TOOL instructions; reply = ask(messages); call = find_json(reply); call unte "Tool result: ..." tirigi pampi, malli ask(messages). Test (Nov 16, 2026): made-up shop (10 orders, maa sontham), Qwen2.5-7B-Instruct (4-bit), llama.cpp, temperature 0.2, prati javaabu chadivaam. Asalaina APIs lo tools option undi (OpenAI "Function calling", Google "Function calling with the Gemini API"); ikkada ade loop chetto.

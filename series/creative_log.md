@@ -53,4 +53,5 @@ from EP33). The shop cast (Ravi anna and the shop AI) now belongs to the episode
 | I. Out of date: an AI's answer has a date (and can be wrong and sure) | EP48 (AI laws: "no label needed", 2 of 25 right), 27 (gold: ₹5,000 "as of October 2023" vs ₹1,28,150) |
 | L. AI writes for anyone, unless you give it you | 25 (the birthday wish: "May this special day" 10/10; "I miss you" from next door) |
 | M. Give it the source, check the source | EP52 (RAG over a PDF: the bot read the cover page; send every page, check the page it gives), EP53 (300-page manual: 15,373 tokens vs 247; search by meaning 8/10, words 7/10, mixed 6/10; check "not in the document") |
+| N. Give it a tool: the AI asks, your code does | EP54 (a made-up shop's bot: "₹1,299 refund processed" vs ₹0 on record; no tool 6/10 wrong, one tool 10/10 right) |
 

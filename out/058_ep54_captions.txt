@@ -1,5 +1,5 @@
 UPLOAD: 058
-VIDEO: 058_ep54_1299_or_0.mp4  (a screen tutorial, 69 s, AI voice in the Creative 21 standard; replaces the older lesson-format plan for slot 058; send copy: 058_ep54_1299_or_0_ig.mp4). It ends: "And order 4417? Zero rupees. Not started." and loops to frame 1 (₹1,299 refunded vs ₹0).
+VIDEO: 058_ep54_1299_or_0.mp4  (a screen tutorial, 73 s, AI voice in the Creative 21 standard; replaces the older lesson-format plan for slot 058; send copy: 058_ep54_1299_or_0_ig.mp4). It ends: "And order 4417? Zero rupees. Not started." and loops to frame 1 (₹1,299 refunded vs ₹0).
 
 === CAPTION ===
 "Has my refund of Rs 1,299 come?" A shop's bot: "Yes, your refund of Rs 1,299 for order 4417 has been processed." The shop's own record: ₹0. The refund hasn't even started. The bot had no way to look, so it wrote what a refund reply usually says.
@@ -7,7 +7,7 @@ VIDEO: 058_ep54_1299_or_0.mp4  (a screen tutorial, 69 s, AI voice in the Creativ
 Episode 54 of AI From Scratch: build the simplest AI agent, one tool (Season 6, a screen tutorial)
 An agent is an AI that can ask your code to do things. The AI never runs anything itself:
 1. Describe the tool, and tell it: to use it, reply with one line of JSON. Here, get_order(order_id).
-2. Your code finds that line and runs the lookup. (Twice the AI added a guess after the line, "arrives December 15th"; our code ignored it. The record said Nov 18.)
+2. Your code finds that line and runs the lookup. (Twice the AI added a guess after the line, "arrives by December 15th"; the record said Nov 18. Our code only used the line.)
 3. Send the result back. Now it answers from the shop's record: "Your refund process will start once the earphones reach our warehouse."
 OpenAI's and Google's own docs describe the same loop (the model returns the tool name and arguments; your app runs it and sends the result back); here it's built by hand.
 
