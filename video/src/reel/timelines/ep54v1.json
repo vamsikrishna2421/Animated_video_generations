@@ -1,0 +1,1291 @@
+{
+ "id": "ep54v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Build an AI agent with tools",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "title": "₹1,299 or ₹0? Build an AI Agent with Tools (EP54)",
+ "handle": "@ai_maastaaru",
+ "label": "EP54",
+ "fps": 30,
+ "musicDrops": [
+  [
+   1422,
+   1458
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   595,
+   1.2
+  ],
+  [
+   595,
+   1248,
+   0.85
+  ],
+  [
+   1248,
+   1821,
+   1.4
+  ],
+  [
+   1820,
+   2071,
+   2.0
+  ],
+  [
+   1820,
+   2071,
+   2.3,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 2071,
+ "music": "reel/ep54v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_agent54",
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "why",
+      "n": 2
+     },
+     {
+      "prop": "title",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "shop": "a made-up shop · order help",
+     "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
+     "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
+     "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
+     "result": [
+      "\"item\": \"Bluetooth earphones\"",
+      "\"amount\": \"Rs 1,299\"",
+      "\"status\": \"returned, not yet received at our warehouse\"",
+      "\"refund\": \"not started: it starts when the return reaches us\""
+     ],
+     "final": "Your refund process will start once the earphones reach our warehouse.",
+     "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+     "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+     "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
+     "code": {
+      "step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+      "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
+      "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
+     },
+     "wrongBig": [
+      [
+       "order 4417",
+       "\"refund processed\"",
+       "not started"
+      ],
+      [
+       "order 4362",
+       "\"delivered March 15th\"",
+       "delivered Nov 9"
+      ]
+     ],
+     "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+     "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+     "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess."
+    },
+    "yt": {
+     "chapter": "₹1,299 or ₹0?",
+     "title": "₹1,299 or ₹0?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 595,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep54v1/line_01.wav",
+     "from": 10,
+     "frames": 210,
+     "words": [
+      {
+       "w": "₹1,299",
+       "from": 13,
+       "to": 25
+      },
+      {
+       "w": "refunded,",
+       "from": 25,
+       "to": 41
+      },
+      {
+       "w": "said",
+       "from": 41,
+       "to": 50
+      },
+      {
+       "w": "the",
+       "from": 50,
+       "to": 56
+      },
+      {
+       "w": "shop's",
+       "from": 56,
+       "to": 80
+      },
+      {
+       "w": "bot.",
+       "from": 80,
+       "to": 88
+      },
+      {
+       "w": "The",
+       "from": 88,
+       "to": 95
+      },
+      {
+       "w": "shop's",
+       "from": 95,
+       "to": 119
+      },
+      {
+       "w": "own",
+       "from": 119,
+       "to": 126
+      },
+      {
+       "w": "record:",
+       "from": 126,
+       "to": 148
+      },
+      {
+       "w": "₹0.",
+       "from": 148,
+       "to": 154
+      },
+      {
+       "w": "The",
+       "from": 154,
+       "to": 170
+      },
+      {
+       "w": "refund",
+       "from": 170,
+       "to": 182
+      },
+      {
+       "w": "hasn't",
+       "from": 182,
+       "to": 193
+      },
+      {
+       "w": "even",
+       "from": 193,
+       "to": 202
+      },
+      {
+       "w": "started.",
+       "from": 202,
+       "to": 220
+      }
+     ],
+     "cues": {
+      "1": 107
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep54v1/line_02.wav",
+     "from": 233,
+     "frames": 197,
+     "words": [
+      {
+       "w": "A",
+       "from": 233,
+       "to": 236
+      },
+      {
+       "w": "made-up",
+       "from": 236,
+       "to": 252
+      },
+      {
+       "w": "shop,",
+       "from": 252,
+       "to": 271
+      },
+      {
+       "w": "a",
+       "from": 271,
+       "to": 273
+      },
+      {
+       "w": "real",
+       "from": 273,
+       "to": 284
+      },
+      {
+       "w": "test:",
+       "from": 284,
+       "to": 309
+      },
+      {
+       "w": "the",
+       "from": 309,
+       "to": 314
+      },
+      {
+       "w": "bot",
+       "from": 314,
+       "to": 319
+      },
+      {
+       "w": "had",
+       "from": 319,
+       "to": 325
+      },
+      {
+       "w": "no",
+       "from": 325,
+       "to": 329
+      },
+      {
+       "w": "way",
+       "from": 329,
+       "to": 334
+      },
+      {
+       "w": "to",
+       "from": 334,
+       "to": 338
+      },
+      {
+       "w": "look.",
+       "from": 338,
+       "to": 358
+      },
+      {
+       "w": "So",
+       "from": 358,
+       "to": 362
+      },
+      {
+       "w": "it",
+       "from": 362,
+       "to": 366
+      },
+      {
+       "w": "wrote",
+       "from": 366,
+       "to": 374
+      },
+      {
+       "w": "what",
+       "from": 374,
+       "to": 381
+      },
+      {
+       "w": "a",
+       "from": 381,
+       "to": 383
+      },
+      {
+       "w": "refund",
+       "from": 383,
+       "to": 393
+      },
+      {
+       "w": "reply",
+       "from": 393,
+       "to": 401
+      },
+      {
+       "w": "usually",
+       "from": 401,
+       "to": 411
+      },
+      {
+       "w": "says.",
+       "from": 411,
+       "to": 423
+      }
+     ],
+     "cues": {
+      "1": 358
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep54v1/line_03.wav",
+     "from": 439,
+     "frames": 146,
+     "words": [
+      {
+       "w": "Today:",
+       "from": 439,
+       "to": 450
+      },
+      {
+       "w": "the",
+       "from": 450,
+       "to": 465
+      },
+      {
+       "w": "simplest",
+       "from": 465,
+       "to": 480
+      },
+      {
+       "w": "agent.",
+       "from": 480,
+       "to": 492
+      },
+      {
+       "w": "An",
+       "from": 492,
+       "to": 506
+      },
+      {
+       "w": "AI",
+       "from": 506,
+       "to": 511
+      },
+      {
+       "w": "that",
+       "from": 511,
+       "to": 519
+      },
+      {
+       "w": "can",
+       "from": 519,
+       "to": 525
+      },
+      {
+       "w": "ask",
+       "from": 525,
+       "to": 532
+      },
+      {
+       "w": "your",
+       "from": 532,
+       "to": 548
+      },
+      {
+       "w": "code",
+       "from": 548,
+       "to": 556
+      },
+      {
+       "w": "to",
+       "from": 556,
+       "to": 561
+      },
+      {
+       "w": "do",
+       "from": 561,
+       "to": 566
+      },
+      {
+       "w": "one",
+       "from": 566,
+       "to": 573
+      },
+      {
+       "w": "thing.",
+       "from": 573,
+       "to": 585
+      }
+     ],
+     "cues": {
+      "1": 492
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_agent54",
+   "data": {
+    "beats": [
+     {
+      "prop": "step1",
+      "n": 4
+     },
+     {
+      "prop": "step2",
+      "n": 5
+     },
+     {
+      "prop": "step3",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "shop": "a made-up shop · order help",
+     "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
+     "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
+     "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
+     "result": [
+      "\"item\": \"Bluetooth earphones\"",
+      "\"amount\": \"Rs 1,299\"",
+      "\"status\": \"returned, not yet received at our warehouse\"",
+      "\"refund\": \"not started: it starts when the return reaches us\""
+     ],
+     "final": "Your refund process will start once the earphones reach our warehouse.",
+     "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+     "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+     "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
+     "code": {
+      "step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+      "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
+      "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
+     },
+     "wrongBig": [
+      [
+       "order 4417",
+       "\"refund processed\"",
+       "not started"
+      ],
+      [
+       "order 4362",
+       "\"delivered March 15th\"",
+       "delivered Nov 9"
+      ]
+     ],
+     "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+     "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+     "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess."
+    },
+    "yt": {
+     "chapter": "One tool: 3 steps",
+     "title": "One tool: 3 steps",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 595,
+   "frames": 653,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep54v1/line_04.wav",
+     "from": 0,
+     "frames": 253,
+     "words": [
+      {
+       "w": "Step",
+       "from": 3,
+       "to": 12
+      },
+      {
+       "w": "one:",
+       "from": 12,
+       "to": 28
+      },
+      {
+       "w": "describe",
+       "from": 28,
+       "to": 47
+      },
+      {
+       "w": "the",
+       "from": 47,
+       "to": 54
+      },
+      {
+       "w": "tool,",
+       "from": 54,
+       "to": 73
+      },
+      {
+       "w": "and",
+       "from": 73,
+       "to": 79
+      },
+      {
+       "w": "say:",
+       "from": 79,
+       "to": 97
+      },
+      {
+       "w": "to",
+       "from": 97,
+       "to": 102
+      },
+      {
+       "w": "use",
+       "from": 102,
+       "to": 118
+      },
+      {
+       "w": "it,",
+       "from": 118,
+       "to": 124
+      },
+      {
+       "w": "reply",
+       "from": 124,
+       "to": 134
+      },
+      {
+       "w": "with",
+       "from": 134,
+       "to": 143
+      },
+      {
+       "w": "one",
+       "from": 143,
+       "to": 149
+      },
+      {
+       "w": "line",
+       "from": 149,
+       "to": 158
+      },
+      {
+       "w": "of",
+       "from": 158,
+       "to": 162
+      },
+      {
+       "w": "JSON.",
+       "from": 162,
+       "to": 181
+      },
+      {
+       "w": "Here:",
+       "from": 181,
+       "to": 200
+      },
+      {
+       "w": "get",
+       "from": 200,
+       "to": 207
+      },
+      {
+       "w": "order,",
+       "from": 207,
+       "to": 225
+      },
+      {
+       "w": "by",
+       "from": 225,
+       "to": 230
+      },
+      {
+       "w": "order",
+       "from": 230,
+       "to": 240
+      },
+      {
+       "w": "number.",
+       "from": 240,
+       "to": 253
+      }
+     ],
+     "cues": {
+      "1": 181
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep54v1/line_05.wav",
+     "from": 262,
+     "frames": 238,
+     "words": [
+      {
+       "w": "Step",
+       "from": 263,
+       "to": 271
+      },
+      {
+       "w": "two:",
+       "from": 271,
+       "to": 279
+      },
+      {
+       "w": "your",
+       "from": 279,
+       "to": 295
+      },
+      {
+       "w": "code",
+       "from": 295,
+       "to": 306
+      },
+      {
+       "w": "finds",
+       "from": 306,
+       "to": 315
+      },
+      {
+       "w": "that",
+       "from": 315,
+       "to": 323
+      },
+      {
+       "w": "line",
+       "from": 323,
+       "to": 331
+      },
+      {
+       "w": "and",
+       "from": 331,
+       "to": 337
+      },
+      {
+       "w": "runs",
+       "from": 337,
+       "to": 344
+      },
+      {
+       "w": "the",
+       "from": 344,
+       "to": 350
+      },
+      {
+       "w": "lookup.",
+       "from": 350,
+       "to": 376
+      },
+      {
+       "w": "Twice,",
+       "from": 376,
+       "to": 387
+      },
+      {
+       "w": "the",
+       "from": 387,
+       "to": 403
+      },
+      {
+       "w": "AI",
+       "from": 403,
+       "to": 408
+      },
+      {
+       "w": "added",
+       "from": 408,
+       "to": 417
+      },
+      {
+       "w": "a",
+       "from": 417,
+       "to": 420
+      },
+      {
+       "w": "guess",
+       "from": 420,
+       "to": 429
+      },
+      {
+       "w": "after",
+       "from": 429,
+       "to": 438
+      },
+      {
+       "w": "the",
+       "from": 438,
+       "to": 444
+      },
+      {
+       "w": "line.",
+       "from": 444,
+       "to": 453
+      },
+      {
+       "w": "Our",
+       "from": 453,
+       "to": 468
+      },
+      {
+       "w": "code",
+       "from": 468,
+       "to": 476
+      },
+      {
+       "w": "ignored",
+       "from": 476,
+       "to": 488
+      },
+      {
+       "w": "it.",
+       "from": 488,
+       "to": 494
+      }
+     ],
+     "cues": {
+      "1": 376
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep54v1/line_06.wav",
+     "from": 511,
+     "frames": 130,
+     "words": [
+      {
+       "w": "Step",
+       "from": 515,
+       "to": 525
+      },
+      {
+       "w": "three:",
+       "from": 525,
+       "to": 542
+      },
+      {
+       "w": "send",
+       "from": 542,
+       "to": 547
+      },
+      {
+       "w": "the",
+       "from": 547,
+       "to": 551
+      },
+      {
+       "w": "result",
+       "from": 551,
+       "to": 559
+      },
+      {
+       "w": "back.",
+       "from": 559,
+       "to": 584
+      },
+      {
+       "w": "Now",
+       "from": 584,
+       "to": 588
+      },
+      {
+       "w": "it",
+       "from": 588,
+       "to": 591
+      },
+      {
+       "w": "answers",
+       "from": 591,
+       "to": 600
+      },
+      {
+       "w": "from",
+       "from": 600,
+       "to": 605
+      },
+      {
+       "w": "the",
+       "from": 605,
+       "to": 609
+      },
+      {
+       "w": "shop's",
+       "from": 609,
+       "to": 617
+      },
+      {
+       "w": "record.",
+       "from": 617,
+       "to": 630
+      }
+     ],
+     "cues": {
+      "1": 584
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_agent54",
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "prop": "rule",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "shop": "a made-up shop · order help",
+     "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
+     "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
+     "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
+     "result": [
+      "\"item\": \"Bluetooth earphones\"",
+      "\"amount\": \"Rs 1,299\"",
+      "\"status\": \"returned, not yet received at our warehouse\"",
+      "\"refund\": \"not started: it starts when the return reaches us\""
+     ],
+     "final": "Your refund process will start once the earphones reach our warehouse.",
+     "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+     "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+     "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
+     "code": {
+      "step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+      "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
+      "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
+     },
+     "wrongBig": [
+      [
+       "order 4417",
+       "\"refund processed\"",
+       "not started"
+      ],
+      [
+       "order 4362",
+       "\"delivered March 15th\"",
+       "delivered Nov 9"
+      ]
+     ],
+     "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+     "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+     "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess."
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1248,
+   "frames": 573,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep54v1/line_07.wav",
+     "from": 0,
+     "frames": 285,
+     "words": [
+      {
+       "w": "Our",
+       "from": 0,
+       "to": 7
+      },
+      {
+       "w": "test,",
+       "from": 7,
+       "to": 32
+      },
+      {
+       "w": "10",
+       "from": 32,
+       "to": 38
+      },
+      {
+       "w": "customers.",
+       "from": 38,
+       "to": 67
+      },
+      {
+       "w": "Without",
+       "from": 67,
+       "to": 81
+      },
+      {
+       "w": "the",
+       "from": 81,
+       "to": 97
+      },
+      {
+       "w": "tool:",
+       "from": 97,
+       "to": 107
+      },
+      {
+       "w": "10",
+       "from": 107,
+       "to": 113
+      },
+      {
+       "w": "answers,",
+       "from": 113,
+       "to": 135
+      },
+      {
+       "w": "no",
+       "from": 135,
+       "to": 141
+      },
+      {
+       "w": "checking,",
+       "from": 141,
+       "to": 167
+      },
+      {
+       "w": "6",
+       "from": 167,
+       "to": 171
+      },
+      {
+       "w": "wrong.",
+       "from": 171,
+       "to": 183
+      },
+      {
+       "w": "With",
+       "from": 198,
+       "to": 209
+      },
+      {
+       "w": "the",
+       "from": 209,
+       "to": 214
+      },
+      {
+       "w": "tool:",
+       "from": 214,
+       "to": 231
+      },
+      {
+       "w": "10",
+       "from": 231,
+       "to": 236
+      },
+      {
+       "w": "lookups,",
+       "from": 236,
+       "to": 264
+      },
+      {
+       "w": "10",
+       "from": 264,
+       "to": 268
+      },
+      {
+       "w": "right.",
+       "from": 268,
+       "to": 281
+      }
+     ],
+     "cues": {
+      "1": 67,
+      "2": 198
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep54v1/line_08.wav",
+     "from": 297,
+     "frames": 248,
+     "words": [
+      {
+       "w": "If",
+       "from": 297,
+       "to": 302
+      },
+      {
+       "w": "you",
+       "from": 302,
+       "to": 308
+      },
+      {
+       "w": "build",
+       "from": 308,
+       "to": 318
+      },
+      {
+       "w": "one:",
+       "from": 318,
+       "to": 334
+      },
+      {
+       "w": "the",
+       "from": 334,
+       "to": 340
+      },
+      {
+       "w": "AI",
+       "from": 340,
+       "to": 345
+      },
+      {
+       "w": "only",
+       "from": 345,
+       "to": 353
+      },
+      {
+       "w": "asks;",
+       "from": 353,
+       "to": 362
+      },
+      {
+       "w": "your",
+       "from": 362,
+       "to": 385
+      },
+      {
+       "w": "code",
+       "from": 385,
+       "to": 393
+      },
+      {
+       "w": "decides",
+       "from": 393,
+       "to": 405
+      },
+      {
+       "w": "what",
+       "from": 405,
+       "to": 413
+      },
+      {
+       "w": "runs.",
+       "from": 413,
+       "to": 423
+      },
+      {
+       "w": "If",
+       "from": 423,
+       "to": 427
+      },
+      {
+       "w": "you",
+       "from": 427,
+       "to": 444
+      },
+      {
+       "w": "use",
+       "from": 444,
+       "to": 450
+      },
+      {
+       "w": "one:",
+       "from": 450,
+       "to": 458
+      },
+      {
+       "w": "check",
+       "from": 458,
+       "to": 475
+      },
+      {
+       "w": "the",
+       "from": 475,
+       "to": 482
+      },
+      {
+       "w": "refund",
+       "from": 482,
+       "to": 492
+      },
+      {
+       "w": "on",
+       "from": 492,
+       "to": 497
+      },
+      {
+       "w": "the",
+       "from": 497,
+       "to": 503
+      },
+      {
+       "w": "shop's",
+       "from": 503,
+       "to": 514
+      },
+      {
+       "w": "own",
+       "from": 514,
+       "to": 521
+      },
+      {
+       "w": "order",
+       "from": 521,
+       "to": 530
+      },
+      {
+       "w": "page.",
+       "from": 530,
+       "to": 539
+      }
+     ],
+     "cues": {
+      "1": 423
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_agent54",
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "shop": "a made-up shop · order help",
+     "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
+     "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
+     "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
+     "result": [
+      "\"item\": \"Bluetooth earphones\"",
+      "\"amount\": \"Rs 1,299\"",
+      "\"status\": \"returned, not yet received at our warehouse\"",
+      "\"refund\": \"not started: it starts when the return reaches us\""
+     ],
+     "final": "Your refund process will start once the earphones reach our warehouse.",
+     "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+     "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+     "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
+     "code": {
+      "step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+      "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
+      "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
+     },
+     "wrongBig": [
+      [
+       "order 4417",
+       "\"refund processed\"",
+       "not started"
+      ],
+      [
+       "order 4362",
+       "\"delivered March 15th\"",
+       "delivered Nov 9"
+      ]
+     ],
+     "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+     "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+     "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess."
+    },
+    "yt": {
+     "chapter": "Next: MCP",
+     "title": "Next: MCP",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1820,
+   "frames": 251,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep54v1/line_09.wav",
+     "from": 12,
+     "frames": 203,
+     "words": [
+      {
+       "w": "Next:",
+       "from": 12,
+       "to": 44
+      },
+      {
+       "w": "your",
+       "from": 44,
+       "to": 56
+      },
+      {
+       "w": "own",
+       "from": 56,
+       "to": 66
+      },
+      {
+       "w": "MCP",
+       "from": 66,
+       "to": 84
+      },
+      {
+       "w": "server.",
+       "from": 84,
+       "to": 113
+      },
+      {
+       "w": "And",
+       "from": 113,
+       "to": 123
+      },
+      {
+       "w": "order",
+       "from": 123,
+       "to": 138
+      },
+      {
+       "w": "4417?",
+       "from": 138,
+       "to": 162
+      },
+      {
+       "w": "₹0.",
+       "from": 162,
+       "to": 172
+      },
+      {
+       "w": "Not",
+       "from": 172,
+       "to": 192
+      },
+      {
+       "w": "started.",
+       "from": 192,
+       "to": 215
+      }
+     ],
+     "cues": {
+      "1": 86
+     }
+    }
+   ]
+  }
+ ]
+}

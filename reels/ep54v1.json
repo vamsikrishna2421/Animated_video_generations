@@ -68,7 +68,7 @@
     ],
     "captionTop": 1500,
     "t": {
-     "shop": "Kiran Mobiles · order help",
+     "shop": "a made-up shop · order help",
      "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
      "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
      "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
@@ -79,44 +79,29 @@
       "\"refund\": \"not started: it starts when the return reaches us\""
      ],
      "final": "Your refund process will start once the earphones reach our warehouse.",
+     "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+     "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+     "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
      "code": {
-      "step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
-      "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+      "step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+      "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
       "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
      },
-     "wrong": [
+     "wrongBig": [
       [
-       "4417",
-       "refund processed",
+       "order 4417",
+       "\"refund processed\"",
        "not started"
       ],
       [
-       "4502",
-       "shipped",
-       "packed, not shipped"
-      ],
-      [
-       "4475",
-       "ships in 2-3 days",
-       "out for delivery today"
-      ],
-      [
-       "4650",
-       "confirmed",
-       "payment pending"
-      ],
-      [
-       "4362",
-       "delivered March 15",
+       "order 4362",
+       "\"delivered March 15th\"",
        "delivered Nov 9"
-      ],
-      [
-       "4388",
-       "5-7 business days",
-       "arrives Nov 18"
       ]
      ],
-     "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it"
+     "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+     "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+     "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess."
     },
     "yt": {
      "chapter": "₹1,299 or ₹0?",
@@ -128,7 +113,7 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "One thousand two hundred ninety-nine rupees refunded, said the shop's bot. [1] The shop's own record: zero. The refund hasn't even started.",
+     "text": "Twelve ninety-nine refunded, said the shop's bot. [1] The shop's own record: zero. The refund hasn't even started.",
      "maxgap": 0.3,
      "gap": 0.4,
      "show": "₹1,299 refunded, said the shop's bot. The shop's own record: ₹0. The refund hasn't even started.",
@@ -137,19 +122,19 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "The bot had no way to look. [1] So it wrote what a refund reply usually says.",
+     "text": "A made-up shop, a real test: the bot had no way to look. [1] So it wrote what a refund reply usually says.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "show": "The bot had no way to look. So it wrote what a refund reply usually says.",
+     "show": "A made-up shop, a real test: the bot had no way to look. So it wrote what a refund reply usually says.",
      "tempo": 1.08
     },
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "Today: give it one tool. [1] An agent is an AI that can ask your code to do things.",
+     "text": "Today: the simplest agent. [1] An AI that can ask your code to do one thing.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Today: give it one tool. An agent is an AI that can ask your code to do things.",
+     "show": "Today: the simplest agent. An AI that can ask your code to do one thing.",
      "tempo": 1.08
     }
    ]
@@ -177,7 +162,7 @@
     ],
     "captionTop": 1500,
     "t": {
-     "shop": "Kiran Mobiles · order help",
+     "shop": "a made-up shop · order help",
      "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
      "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
      "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
@@ -188,44 +173,29 @@
       "\"refund\": \"not started: it starts when the return reaches us\""
      ],
      "final": "Your refund process will start once the earphones reach our warehouse.",
+     "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+     "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+     "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
      "code": {
-      "step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
-      "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+      "step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+      "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
       "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
      },
-     "wrong": [
+     "wrongBig": [
       [
-       "4417",
-       "refund processed",
+       "order 4417",
+       "\"refund processed\"",
        "not started"
       ],
       [
-       "4502",
-       "shipped",
-       "packed, not shipped"
-      ],
-      [
-       "4475",
-       "ships in 2-3 days",
-       "out for delivery today"
-      ],
-      [
-       "4650",
-       "confirmed",
-       "payment pending"
-      ],
-      [
-       "4362",
-       "delivered March 15",
+       "order 4362",
+       "\"delivered March 15th\"",
        "delivered Nov 9"
-      ],
-      [
-       "4388",
-       "5-7 business days",
-       "arrives Nov 18"
       ]
      ],
-     "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it"
+     "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+     "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+     "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess."
     },
     "yt": {
      "chapter": "One tool: 3 steps",
@@ -237,19 +207,19 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "Step one: describe the tool: get order, by order number. [1] To use it, the AI replies with one line of JSON.",
+     "text": "Step one: describe the tool, and say: to use it, reply with one line of JSON. [1] Here: get order, by order number.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "show": "Step one: describe the tool: get order, by order number. To use it, the AI replies with one line of JSON.",
+     "show": "Step one: describe the tool, and say: to use it, reply with one line of JSON. Here: get order, by order number.",
      "tempo": 1.08
     },
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "Step two: your code reads that line and looks the order up. [1] The AI never touches your system. Your code does.",
+     "text": "Step two: your code finds that line and runs the lookup. [1] Twice, the AI added a guess after the line. Our code ignored it.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Step two: your code reads that line and looks the order up. The AI never touches your system. Your code does.",
+     "show": "Step two: your code finds that line and runs the lookup. Twice, the AI added a guess after the line. Our code ignored it.",
      "tempo": 1.08
     },
     {
@@ -289,7 +259,7 @@
     ],
     "captionTop": 1500,
     "t": {
-     "shop": "Kiran Mobiles · order help",
+     "shop": "a made-up shop · order help",
      "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
      "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
      "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
@@ -300,44 +270,29 @@
       "\"refund\": \"not started: it starts when the return reaches us\""
      ],
      "final": "Your refund process will start once the earphones reach our warehouse.",
+     "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+     "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+     "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
      "code": {
-      "step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
-      "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+      "step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+      "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
       "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
      },
-     "wrong": [
+     "wrongBig": [
       [
-       "4417",
-       "refund processed",
+       "order 4417",
+       "\"refund processed\"",
        "not started"
       ],
       [
-       "4502",
-       "shipped",
-       "packed, not shipped"
-      ],
-      [
-       "4475",
-       "ships in 2-3 days",
-       "out for delivery today"
-      ],
-      [
-       "4650",
-       "confirmed",
-       "payment pending"
-      ],
-      [
-       "4362",
-       "delivered March 15",
+       "order 4362",
+       "\"delivered March 15th\"",
        "delivered Nov 9"
-      ],
-      [
-       "4388",
-       "5-7 business days",
-       "arrives Nov 18"
       ]
      ],
-     "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it"
+     "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+     "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+     "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess."
     },
     "yt": {
      "chapter": "Our test",
@@ -349,23 +304,23 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "Our test, ten customers. [1] Without the tool, it answered all ten without checking, and six were wrong. <pause 0.5> [2] With the tool, it looked up all ten, and all ten were right.",
+     "text": "Our test, ten customers. [1] Without the tool: ten answers, no checking, six wrong. <pause 0.5> [2] With the tool: ten lookups, ten right.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Our test, 10 customers. Without the tool, it answered all 10 without checking, and 6 were wrong. <pause 0.5> With the tool, it looked up all 10, and all 10 were right.",
+     "show": "Our test, 10 customers. Without the tool: 10 answers, no checking, 6 wrong. <pause 0.5> With the tool: 10 lookups, 10 right.",
      "tempo": 1.08,
-     "tts": "Our test, ten customers. Without the tool, it answered all ten without checking, and six were wrong.",
+     "tts": "Our test, ten customers. Without the tool: ten answers, no checking, six wrong.",
      "file2": "07b_storyteller.wav",
-     "tts2": "With the tool, it looked up all ten, and all ten were right.",
+     "tts2": "With the tool: ten lookups, ten right.",
      "pause": 0.5
     },
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "If you build one: the AI only asks; your code decides what runs. [1] If you use one: check your refund on the shop's own order page.",
+     "text": "If you build one: the AI only asks; your code decides what runs. [1] If you use one: check the refund on the shop's own order page.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "If you build one: the AI only asks; your code decides what runs. If you use one: check your refund on the shop's own order page.",
+     "show": "If you build one: the AI only asks; your code decides what runs. If you use one: check the refund on the shop's own order page.",
      "tempo": 1.08
     }
    ]
@@ -388,7 +343,7 @@
     ],
     "captionTop": 1500,
     "t": {
-     "shop": "Kiran Mobiles · order help",
+     "shop": "a made-up shop · order help",
      "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
      "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
      "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
@@ -399,44 +354,29 @@
       "\"refund\": \"not started: it starts when the return reaches us\""
      ],
      "final": "Your refund process will start once the earphones reach our warehouse.",
+     "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+     "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+     "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
      "code": {
-      "step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
-      "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+      "step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+      "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
       "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
      },
-     "wrong": [
+     "wrongBig": [
       [
-       "4417",
-       "refund processed",
+       "order 4417",
+       "\"refund processed\"",
        "not started"
       ],
       [
-       "4502",
-       "shipped",
-       "packed, not shipped"
-      ],
-      [
-       "4475",
-       "ships in 2-3 days",
-       "out for delivery today"
-      ],
-      [
-       "4650",
-       "confirmed",
-       "payment pending"
-      ],
-      [
-       "4362",
-       "delivered March 15",
+       "order 4362",
+       "\"delivered March 15th\"",
        "delivered Nov 9"
-      ],
-      [
-       "4388",
-       "5-7 business days",
-       "arrives Nov 18"
       ]
      ],
-     "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it"
+     "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+     "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+     "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess."
     },
     "yt": {
      "chapter": "Next: MCP",
@@ -448,10 +388,10 @@
     {
      "who": "storyteller",
      "file": "09_storyteller.wav",
-     "text": "Next: build your own MCP server. [1] And order forty-four seventeen? Zero rupees. Refund not started.",
+     "text": "Next: your own M C P server. [1] And order forty-four seventeen? Zero rupees. Not started.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "Next: build your own MCP server. And order 4417? ₹0. Refund not started.",
+     "show": "Next: your own MCP server. And order 4417? ₹0. Not started.",
      "tempo": 1.08
     }
    ]

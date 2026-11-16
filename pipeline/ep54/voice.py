@@ -28,15 +28,15 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("thousand", "1,299", "1299"), ("ninety",), ("bot",), ("zero",), ("started",)], 2: [("look",), ("refund",)],
-               3: [("tool",), ("agent",), ("code",)], 4: [("step",), ("order",), ("json", "jason")], 5: [("step",), ("code",), ("system",)],
-               6: [("step",), ("result",), ("record",)], 7: [("ten", "10"), ("without",), ("six", "6"), ("wrong",)], "7b": [("tool",), ("right",)],
-               8: [("build",), ("code",), ("refund",), ("page",)], 9: [("mcp", "server"), ("zero",), ("started",)]},
+MUST = {"en": {1: [("twelve", "1299", "12"), ("ninety", "99"), ("bot",), ("zero",), ("started",)], 2: [("made",), ("look",), ("refund",)],
+               3: [("simplest",), ("agent",), ("code",)], 4: [("step",), ("json", "jason"), ("order",)], 5: [("step",), ("code",), ("guess",), ("ignored",)],
+               6: [("step",), ("result",), ("record",)], 7: [("ten", "10"), ("without",), ("six", "6"), ("wrong",)], "7b": [("tool",), ("ten", "10"), ("right",)],
+               8: [("build",), ("code",), ("refund",), ("page",)], 9: [("server",), ("zero",), ("started",)]},
         "te": {}}
-JUDGE_TEXT = {1: "1,299 rupees refunded, said the shop's bot. The shop's own record: zero. The refund hasn't even started.",
-              7: "Our test, 10 customers. Without the tool, it answered all 10 without checking, and 6 were wrong.",
-              "7b": "With the tool, it looked up all 10, and all 10 were right.",
-              9: "Next: build your own MCP server. And order 4417? Zero rupees. Refund not started."}
+JUDGE_TEXT = {1: "12.99 refunded, said the shop's bot. The shop's own record: zero. The refund hasn't even started.",
+              7: "Our test, 10 customers. Without the tool: 10 answers, no checking, 6 wrong.",
+              "7b": "With the tool: 10 lookups, 10 right.",
+              9: "Next: your own MCP server. And order 4417? Zero rupees. Not started."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

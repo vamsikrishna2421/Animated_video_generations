@@ -1,29 +1,46 @@
 UPLOAD: 058
-VIDEO: 058_ep54_build_an_ai_agent_with_tools.mp4
+VIDEO: 058_ep54_1299_or_0.mp4  (a screen tutorial, 69 s, AI voice in the Creative 21 standard; replaces the older lesson-format plan for slot 058; send copy: 058_ep54_1299_or_0_ig.mp4). It ends: "And order 4417? Zero rupees. Not started." and loops to frame 1 (₹1,299 refunded vs ₹0).
 
 === CAPTION ===
-A chatbot talks. An agent acts. Build one with a real tool loop, in 17 lines of Python.
+"Has my refund of Rs 1,299 come?" A shop's bot: "Yes, your refund of Rs 1,299 for order 4417 has been processed." The shop's own record: ₹0. The refund hasn't even started. The bot had no way to look, so it wrote what a refund reply usually says.
 
-AI From Scratch, Episode 54: build an AI agent with tools
-- What we're building: question, tool call, result, answer
-- The code, line by line
-- The agent loop: the model asks, your code runs
-- Jargon: tool schema, stop reason, tool result, tool use ID
-- Safety: limit tool powers and confirm risky actions
+Episode 54 of AI From Scratch: build the simplest AI agent, one tool (Season 6, a screen tutorial)
+An agent is an AI that can ask your code to do things. The AI never runs anything itself:
+1. Describe the tool, and tell it: to use it, reply with one line of JSON. Here, get_order(order_id).
+2. Your code finds that line and runs the lookup. (Twice the AI added a guess after the line, "arrives December 15th"; our code ignored it. The record said Nov 18.)
+3. Send the result back. Now it answers from the shop's record: "Your refund process will start once the earphones reach our warehouse."
+OpenAI's and Google's own docs describe the same loop (the model returns the tool name and arguments; your app runs it and sends the result back); here it's built by hand.
 
-Quiz at the end. Got it right? Comment below.
+Our test, a made-up shop with 10 orders, 10 customers, a small free AI on our computer:
+- without the tool: 10 answers, no checking; 6 wrong ("refund processed", "shipped", "delivered March 15th"...), 3 right by luck, 1 said "We're checking" (it couldn't check)
+- with the tool: 10 lookups, 10 right
+If you build one: the AI only asks; your code decides what runs (and who can look up which order). If you use one: check the refund on the shop's own order page. Run a shop? Ask your own bot about an order that doesn't exist: a sure answer is a guess.
 
-Next: build your own MCP server.
-Follow @ai_maastaaru to learn AI from scratch.
+Next: your own MCP server.
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+Ask any AI chat app: "Has my refund for order 12345 come?" (a made-up number). Post its answer: did it look, or did it guess?
 
 === HASHTAGS ===
-#AIMaastaaru #AIAgents #Python #LearnAI #CodingForBeginners
+#AIFromScratch #AIAgents #FunctionCalling #LearnAI #Python
 
 === PINNED_COMMENT ===
-Quiz answer: Your code runs the tool. The model only asks for it. What tool would you give your agent first? Comment below!
+The code (Python, every line flat so it survives a comment; ask() = your chat call from EP51):
+import json, re
+ORDERS = {"4417": {"status": "returned, not yet received at our warehouse", "refund": "not started"}}
+def get_order(order_id): return ORDERS.get(order_id, "no such order")
+def find_json(reply): m = re.search(r'\{[^{}]*"tool"[^{}]*\}', reply); return json.loads(m[0]) if m else None
+TOOL = 'You can use one tool: get_order(order_id) returns the order status and refund. To use it, reply with only: {"tool": "get_order", "order_id": "<the order number>"}. After the tool result, answer only from it.'
+messages = [{"role": "system", "content": "You are a shop's support assistant. " + TOOL}, {"role": "user", "content": question}]
+reply = ask(messages)
+call = find_json(reply)
+if call: messages += [{"role": "assistant", "content": reply}, {"role": "user", "content": "Tool result: " + json.dumps(get_order(call["order_id"]))}]; reply = ask(messages)
+print(reply)
+How we tested (Nov 16, 2026): a made-up online shop (its prompt called it "Kiran Mobiles"; no real shop) with 10 orders we wrote; Qwen2.5-7B-Instruct (4-bit) on llama.cpp on our computer, temperature 0.2, one fresh chat per question, every reply read by hand. Real APIs have a built-in tools option (OpenAI "Function calling", Google "Function calling with the Gemini API"); this is the same loop by hand. In a real shop, check who is asking before get_order answers.
 
 === COVER ===
-'Build an Agent' title card
+Frame 1: blocks "THE BOT SAID: REFUNDED ₹1,299" (red) and "THE SHOP'S RECORD ₹0 · refund not started" (amber), the bot's reply "Yes, your refund of Rs 1,299 for order 4417 has been processed." in red.
 
 === ALT_TEXT ===
-Animated coding tutorial: building a Python AI agent with a tool-use loop.
+A crayon-drawn screen tutorial. Two blocks: the bot said refunded, ₹1,299; the shop's record, ₹0, refund not started. A chat from a made-up shop: the bot's red reply "Yes, your refund of Rs 1,299 for order 4417 has been processed." A stamp: it had no way to look; a chip: so it wrote the usual refund reply. A title, the simplest agent: an AI that can ask your code to do one thing, with a loop of four boxes: AI, your code, the shop's system, result. Three steps, each with one big code line: describe the tool and the one-line JSON reply; find the JSON line and look the order up; send the result back. Under them the real trace for order 4417: the AI's line {"tool": "get_order", "order_id": "4417"}, the shop's record (returned, not yet received; refund not started), and the AI's new answer: your refund process will start once the earphones reach our warehouse. For order 4388 the AI also wrote a guess, December 15th, struck out: our code used the line and dropped the guess; the record says Nov 18. A test card: without the tool, 10 answers, no checking; refund processed vs not started; delivered March 15th vs Nov 9; plus 4 more wrong, 3 right by luck, 1 we're checking. With the tool: 10 lookups, 10 right. Cards: if you build one, the AI asks, your code decides what runs; if you use one, check the refund on the shop's own order page; run a shop? ask your own bot about order 12345. End card: next, EP55, your own MCP server, and the 4417 answer: ₹0 so far, refund not started.

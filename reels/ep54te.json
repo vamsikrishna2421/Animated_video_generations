@@ -70,7 +70,7 @@
     ],
     "captionTop": 1500,
     "t": {
-     "shop": "Kiran Mobiles · order help",
+     "shop": "a made-up shop · order help",
      "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
      "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
      "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
@@ -81,44 +81,29 @@
       "\"refund\": \"not started: it starts when the return reaches us\""
      ],
      "final": "Your refund process will start once the earphones reach our warehouse.",
+     "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+     "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+     "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
      "code": {
-      "step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
-      "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+      "step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+      "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
       "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
      },
-     "wrong": [
+     "wrongBig": [
       [
-       "4417",
-       "refund processed",
+       "order 4417",
+       "\"refund processed\"",
        "not started"
       ],
       [
-       "4502",
-       "shipped",
-       "packed, not shipped"
-      ],
-      [
-       "4475",
-       "ships in 2-3 days",
-       "out for delivery today"
-      ],
-      [
-       "4650",
-       "confirmed",
-       "payment pending"
-      ],
-      [
-       "4362",
-       "delivered March 15",
+       "order 4362",
+       "\"delivered March 15th\"",
        "delivered Nov 9"
-      ],
-      [
-       "4388",
-       "5-7 business days",
-       "arrives Nov 18"
       ]
      ],
-     "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it"
+     "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+     "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+     "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess."
     },
     "yt": {
      "chapter": "₹1,299 or ₹0?",
@@ -131,7 +116,7 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "వెయ్యి రెండు వందల తొంభై తొమ్మిది రూపాయలు రిఫండ్ అయింది, అంది షాప్ చాట్‌బాట్. [1] షాప్ రికార్డ్ లో: సున్నా. రిఫండ్ ఇంకా స్టార్ట్ కూడా కాలేదు.",
+     "text": "పన్నెండు వందల తొంభై తొమ్మిది రిఫండ్ అయింది, అంది షాప్ చాట్‌బాట్. [1] షాప్ రికార్డ్ లో: సున్నా. రిఫండ్ ఇంకా స్టార్ట్ కూడా కాలేదు.",
      "maxgap": 0.3,
      "gap": 0.4,
      "show": "₹1,299 refunded, said the shop's chatbot. In the shop's record: ₹0. The refund hasn't even started.",
@@ -140,19 +125,19 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "చాట్‌బాట్ కి చూసే దారే లేదు. [1] అందుకే, రిఫండ్ జవాబు మామూలుగా ఎలా ఉంటుందో, అలా రాసేసింది.",
+     "text": "ఇది మేం అల్లిన షాప్, టెస్ట్ నిజం: చాట్‌బాట్ కి చూసే దారే లేదు. [1] అందుకే, రిఫండ్ జవాబు మామూలుగా ఎలా ఉంటుందో, అలా రాసేసింది.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "show": "The chatbot had no way to look. So it wrote what a refund reply usually sounds like.",
+     "show": "A shop we made up, a real test: the chatbot had no way to look. So it wrote what a refund reply usually sounds like.",
      "tempo": 1.1
     },
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "ఈ రోజు: దానికి ఒక టూల్ ఇద్దాం. [1] ఏజెంట్ అంటే, మీ కోడ్ ని పనులు చేయమని అడగగలిగే చాట్‌బాట్.",
+     "text": "ఈ రోజు: అన్నిటికంటే సింపుల్ ఏజెంట్. [1] మీ కోడ్ తో ఒక పని చేయించగలిగే చాట్‌బాట్.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Today: let's give it one tool. An agent is a chatbot that can ask your code to do things.",
+     "show": "Today: the simplest agent. A chatbot that can get your code to do one thing.",
      "tempo": 1.1
     }
    ]
@@ -180,7 +165,7 @@
     ],
     "captionTop": 1500,
     "t": {
-     "shop": "Kiran Mobiles · order help",
+     "shop": "a made-up shop · order help",
      "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
      "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
      "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
@@ -191,44 +176,29 @@
       "\"refund\": \"not started: it starts when the return reaches us\""
      ],
      "final": "Your refund process will start once the earphones reach our warehouse.",
+     "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+     "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+     "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
      "code": {
-      "step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
-      "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+      "step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+      "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
       "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
      },
-     "wrong": [
+     "wrongBig": [
       [
-       "4417",
-       "refund processed",
+       "order 4417",
+       "\"refund processed\"",
        "not started"
       ],
       [
-       "4502",
-       "shipped",
-       "packed, not shipped"
-      ],
-      [
-       "4475",
-       "ships in 2-3 days",
-       "out for delivery today"
-      ],
-      [
-       "4650",
-       "confirmed",
-       "payment pending"
-      ],
-      [
-       "4362",
-       "delivered March 15",
+       "order 4362",
+       "\"delivered March 15th\"",
        "delivered Nov 9"
-      ],
-      [
-       "4388",
-       "5-7 business days",
-       "arrives Nov 18"
       ]
      ],
-     "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it"
+     "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+     "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+     "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess."
     },
     "yt": {
      "chapter": "One tool: 3 steps",
@@ -241,20 +211,24 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "స్టెప్ వన్: టూల్ గురించి చెప్పండి: ఆర్డర్ నంబర్ తో ఆర్డర్ వివరాలు. [1] వాడాలంటే, చాట్‌బాట్ ఒక్క జేసన్ లైన్ తో జవాబిస్తుంది.",
+     "text": "స్టెప్ వన్: టూల్ గురించి చెప్పండి; వాడాలంటే, ఒక్క జేసన్ లైన్ తో అడగమనండి. [1] ఇక్కడ: ఆర్డర్ నంబర్ తో ఆర్డర్ వివరాలు.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "show": "Step 1: describe the tool: order details by order number. To use it, the chatbot replies with one JSON line.",
+     "show": "Step 1: describe the tool; to use it, tell it to ask with one JSON line. Here: order details by order number.",
      "tempo": 1.1
     },
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "స్టెప్ టూ: మీ కోడ్ ఆ లైన్ చదివి, ఆర్డర్ వెతుకుతుంది. [1] చాట్‌బాట్ మీ సిస్టమ్ ని తాకదు; మీ కోడే తాకుతుంది.",
+     "text": "స్టెప్ టూ: మీ కోడ్ ఆ లైన్ వెతికి, ఆర్డర్ చూస్తుంది. <pause 0.4> [1] రెండుసార్లు, ఆ లైన్ తర్వాత ఊహ కూడా రాసింది; మా కోడ్ దాన్ని పట్టించుకోలేదు.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Step 2: your code reads that line and looks the order up. The chatbot doesn't touch your system; your code does.",
-     "tempo": 1.1
+     "show": "Step 2: your code finds that line and looks the order up. <pause 0.4> Twice it also wrote a guess after the line; our code ignored it.",
+     "tempo": 1.1,
+     "tts": "స్టెప్ టూ: మీ కోడ్ ఆ లైన్ వెతికి, ఆర్డర్ చూస్తుంది.",
+     "file2": "05b_storyteller.wav",
+     "tts2": "రెండుసార్లు, ఆ లైన్ తర్వాత ఊహ కూడా రాసింది; మా కోడ్ దాన్ని పట్టించుకోలేదు.",
+     "pause": 0.4
     },
     {
      "who": "storyteller",
@@ -293,7 +267,7 @@
     ],
     "captionTop": 1500,
     "t": {
-     "shop": "Kiran Mobiles · order help",
+     "shop": "a made-up shop · order help",
      "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
      "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
      "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
@@ -304,44 +278,29 @@
       "\"refund\": \"not started: it starts when the return reaches us\""
      ],
      "final": "Your refund process will start once the earphones reach our warehouse.",
+     "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+     "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+     "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
      "code": {
-      "step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
-      "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+      "step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+      "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
       "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
      },
-     "wrong": [
+     "wrongBig": [
       [
-       "4417",
-       "refund processed",
+       "order 4417",
+       "\"refund processed\"",
        "not started"
       ],
       [
-       "4502",
-       "shipped",
-       "packed, not shipped"
-      ],
-      [
-       "4475",
-       "ships in 2-3 days",
-       "out for delivery today"
-      ],
-      [
-       "4650",
-       "confirmed",
-       "payment pending"
-      ],
-      [
-       "4362",
-       "delivered March 15",
+       "order 4362",
+       "\"delivered March 15th\"",
        "delivered Nov 9"
-      ],
-      [
-       "4388",
-       "5-7 business days",
-       "arrives Nov 18"
       ]
      ],
-     "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it"
+     "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+     "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+     "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess."
     },
     "yt": {
      "chapter": "Our test",
@@ -354,27 +313,27 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "మా టెస్ట్, పది మంది కస్టమర్లు. [1] టూల్ లేకుండా, చూడకుండానే పదింటికీ జవాబిచ్చింది; ఆరు తప్పు. <pause 0.5> [2] టూల్ తో, పదీ చూసింది; పదీ కరెక్ట్.",
+     "text": "మా టెస్ట్, పది మంది కస్టమర్లు. [1] టూల్ లేకుండా: పది జవాబులు, ఒక్కటీ చూడలేదు, ఆరు తప్పు. <pause 0.5> [2] టూల్ తో: పది ఆర్డర్లూ చూసింది, పదీ కరెక్ట్.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Our test, 10 customers. Without the tool, it answered all 10 without looking; 6 wrong. <pause 0.5> With the tool, it looked up all 10; all 10 right.",
+     "show": "Our test, 10 customers. Without the tool: 10 answers, not one checked, 6 wrong. <pause 0.5> With the tool: it looked up all 10 orders, all 10 right.",
      "tempo": 1.1,
-     "tts": "మా టెస్ట్, పది మంది కస్టమర్లు. టూల్ లేకుండా, చూడకుండానే పదింటికీ జవాబిచ్చింది; ఆరు తప్పు.",
+     "tts": "మా టెస్ట్, పది మంది కస్టమర్లు. టూల్ లేకుండా: పది జవాబులు, ఒక్కటీ చూడలేదు, ఆరు తప్పు.",
      "file2": "07b_storyteller.wav",
-     "tts2": "టూల్ తో, పదీ చూసింది; పదీ కరెక్ట్.",
+     "tts2": "టూల్ తో: పది ఆర్డర్లూ చూసింది, పదీ కరెక్ట్.",
      "pause": 0.5
     },
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "మీరు తయారు చేస్తే: చాట్‌బాట్ అడుగుతుంది, ఏది రన్ అవ్వాలో మీ కోడే నిర్ణయిస్తుంది. <pause 0.4> [1] మీరు వాడితే: రిఫండ్ ని, షాప్ ఆర్డర్ పేజీలోనే చూసుకోండి.",
+     "text": "మీరు తయారు చేస్తే: చాట్‌బాట్ అడుగుతుంది, ఏది రన్ అవ్వాలో మీ కోడే నిర్ణయిస్తుంది. <pause 0.4> [1] మీరు వాడితే: రిఫండ్ స్టేటస్, షాప్ ఆర్డర్ పేజీలోనే చూసుకోండి.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "If you build one: the chatbot asks, your code decides what runs. <pause 0.4> If you use one: check the refund on the shop's order page.",
+     "show": "If you build one: the chatbot asks, your code decides what runs. <pause 0.4> If you use one: check the refund status on the shop's order page.",
      "tempo": 1.1,
      "tts": "మీరు తయారు చేస్తే: చాట్‌బాట్ అడుగుతుంది, ఏది రన్ అవ్వాలో మీ కోడే నిర్ణయిస్తుంది.",
      "file2": "08b_storyteller.wav",
-     "tts2": "మీరు వాడితే: రిఫండ్ ని, షాప్ ఆర్డర్ పేజీలోనే చూసుకోండి.",
+     "tts2": "మీరు వాడితే: రిఫండ్ స్టేటస్, షాప్ ఆర్డర్ పేజీలోనే చూసుకోండి.",
      "pause": 0.4
     }
    ]
@@ -397,7 +356,7 @@
     ],
     "captionTop": 1500,
     "t": {
-     "shop": "Kiran Mobiles · order help",
+     "shop": "a made-up shop · order help",
      "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
      "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
      "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
@@ -408,44 +367,29 @@
       "\"refund\": \"not started: it starts when the return reaches us\""
      ],
      "final": "Your refund process will start once the earphones reach our warehouse.",
+     "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+     "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+     "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
      "code": {
-      "step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
-      "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+      "step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+      "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
       "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
      },
-     "wrong": [
+     "wrongBig": [
       [
-       "4417",
-       "refund processed",
+       "order 4417",
+       "\"refund processed\"",
        "not started"
       ],
       [
-       "4502",
-       "shipped",
-       "packed, not shipped"
-      ],
-      [
-       "4475",
-       "ships in 2-3 days",
-       "out for delivery today"
-      ],
-      [
-       "4650",
-       "confirmed",
-       "payment pending"
-      ],
-      [
-       "4362",
-       "delivered March 15",
+       "order 4362",
+       "\"delivered March 15th\"",
        "delivered Nov 9"
-      ],
-      [
-       "4388",
-       "5-7 business days",
-       "arrives Nov 18"
       ]
      ],
-     "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it"
+     "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+     "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+     "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess."
     },
     "yt": {
      "chapter": "Next: MCP",
@@ -458,14 +402,14 @@
     {
      "who": "storyteller",
      "file": "09_storyteller.wav",
-     "text": "తర్వాత: మీ సొంత ఎం సి పి సర్వర్. <pause 0.4> [1] మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. రిఫండ్ ఇంకా స్టార్ట్ కాలేదు.",
+     "text": "తర్వాత: మీ సొంత, ఎం, సి, పి, సర్వర్. <pause 0.4> [1] మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. ఇంకా స్టార్ట్ కాలేదు.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "Next: your own MCP server. <pause 0.4> And order 4417? ₹0. The refund hasn't started yet.",
+     "show": "Next: your own MCP server. <pause 0.4> And order 4417? ₹0. Not started yet.",
      "tempo": 1.1,
-     "tts": "తర్వాత: మీ సొంత ఎం సి పి సర్వర్.",
+     "tts": "తర్వాత: మీ సొంత, ఎం, సి, పి, సర్వర్.",
      "file2": "09b_storyteller.wav",
-     "tts2": "మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. రిఫండ్ ఇంకా స్టార్ట్ కాలేదు.",
+     "tts2": "మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. ఇంకా స్టార్ట్ కాలేదు.",
      "pause": 0.4
     }
    ]

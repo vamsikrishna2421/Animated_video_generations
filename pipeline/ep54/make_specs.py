@@ -11,58 +11,62 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 R = ROOT / "reels"
 
-LINES = {
-    1: ("hook", "One thousand two hundred ninety-nine rupees refunded, said the shop's bot. [1] The shop's own record: zero. The refund hasn't even started.",
-        "వెయ్యి రెండు వందల తొంభై తొమ్మిది రూపాయలు రిఫండ్ అయింది, అంది షాప్ చాట్‌బాట్. [1] షాప్ రికార్డ్ లో: సున్నా. రిఫండ్ ఇంకా స్టార్ట్ కూడా కాలేదు."),
-    2: ("why", "The bot had no way to look. [1] So it wrote what a refund reply usually says.",
-        "చాట్‌బాట్ కి చూసే దారే లేదు. [1] అందుకే, రిఫండ్ జవాబు మామూలుగా ఎలా ఉంటుందో, అలా రాసేసింది."),
-    3: ("title", "Today: give it one tool. [1] An agent is an AI that can ask your code to do things.",
-        "ఈ రోజు: దానికి ఒక టూల్ ఇద్దాం. [1] ఏజెంట్ అంటే, మీ కోడ్ ని పనులు చేయమని అడగగలిగే చాట్‌బాట్."),
-    4: ("step1", "Step one: describe the tool: get order, by order number. [1] To use it, the AI replies with one line of JSON.",
-        "స్టెప్ వన్: టూల్ గురించి చెప్పండి: ఆర్డర్ నంబర్ తో ఆర్డర్ వివరాలు. [1] వాడాలంటే, చాట్‌బాట్ ఒక్క జేసన్ లైన్ తో జవాబిస్తుంది."),
-    5: ("step2", "Step two: your code reads that line and looks the order up. [1] The AI never touches your system. Your code does.",
-        "స్టెప్ టూ: మీ కోడ్ ఆ లైన్ చదివి, ఆర్డర్ వెతుకుతుంది. [1] చాట్‌బాట్ మీ సిస్టమ్ ని తాకదు; మీ కోడే తాకుతుంది."),
+LINES = {   # v2 (script review): "made-up shop" said; "twelve ninety-nine"; "the simplest agent"; the step-2 code is the code
+    # that ran (find the JSON line), with the beat it earned (twice it added a guess after the line; our code dropped it)
+    1: ("hook", "Twelve ninety-nine refunded, said the shop's bot. [1] The shop's own record: zero. The refund hasn't even started.",
+        "పన్నెండు వందల తొంభై తొమ్మిది రిఫండ్ అయింది, అంది షాప్ చాట్‌బాట్. [1] షాప్ రికార్డ్ లో: సున్నా. రిఫండ్ ఇంకా స్టార్ట్ కూడా కాలేదు."),
+    2: ("why", "A made-up shop, a real test: the bot had no way to look. [1] So it wrote what a refund reply usually says.",
+        "ఇది మేం అల్లిన షాప్, టెస్ట్ నిజం: చాట్‌బాట్ కి చూసే దారే లేదు. [1] అందుకే, రిఫండ్ జవాబు మామూలుగా ఎలా ఉంటుందో, అలా రాసేసింది."),
+    3: ("title", "Today: the simplest agent. [1] An AI that can ask your code to do one thing.",
+        "ఈ రోజు: అన్నిటికంటే సింపుల్ ఏజెంట్. [1] మీ కోడ్ తో ఒక పని చేయించగలిగే చాట్‌బాట్."),
+    4: ("step1", "Step one: describe the tool, and say: to use it, reply with one line of JSON. [1] Here: get order, by order number.",
+        "స్టెప్ వన్: టూల్ గురించి చెప్పండి; వాడాలంటే, ఒక్క జేసన్ లైన్ తో అడగమనండి. [1] ఇక్కడ: ఆర్డర్ నంబర్ తో ఆర్డర్ వివరాలు."),
+    5: ("step2", "Step two: your code finds that line and runs the lookup. [1] Twice, the AI added a guess after the line. Our code ignored it.",
+        "స్టెప్ టూ: మీ కోడ్ ఆ లైన్ వెతికి, ఆర్డర్ చూస్తుంది. | [1] రెండుసార్లు, ఆ లైన్ తర్వాత ఊహ కూడా రాసింది; మా కోడ్ దాన్ని పట్టించుకోలేదు."),
     6: ("step3", "Step three: send the result back. [1] Now it answers from the shop's record.",
         "స్టెప్ త్రీ: ఆ రిజల్ట్ తిరిగి పంపండి. [1] ఇప్పుడు, షాప్ రికార్డ్ నుంచే జవాబిస్తుంది."),
-    7: ("test", "Our test, ten customers. [1] Without the tool, it answered all ten without checking, and six were wrong. | [2] With the tool, it looked up all ten, and all ten were right.",
-        "మా టెస్ట్, పది మంది కస్టమర్లు. [1] టూల్ లేకుండా, చూడకుండానే పదింటికీ జవాబిచ్చింది; ఆరు తప్పు. | [2] టూల్ తో, పదీ చూసింది; పదీ కరెక్ట్."),
-    8: ("rule", "If you build one: the AI only asks; your code decides what runs. [1] If you use one: check your refund on the shop's own order page.",
-        "మీరు తయారు చేస్తే: చాట్‌బాట్ అడుగుతుంది, ఏది రన్ అవ్వాలో మీ కోడే నిర్ణయిస్తుంది. | [1] మీరు వాడితే: రిఫండ్ ని, షాప్ ఆర్డర్ పేజీలోనే చూసుకోండి."),
-    9: ("loop", "Next: build your own MCP server. [1] And order forty-four seventeen? Zero rupees. Refund not started.",
-        "తర్వాత: మీ సొంత ఎం సి పి సర్వర్. | [1] మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. రిఫండ్ ఇంకా స్టార్ట్ కాలేదు."),
+    7: ("test", "Our test, ten customers. [1] Without the tool: ten answers, no checking, six wrong. | [2] With the tool: ten lookups, ten right.",
+        "మా టెస్ట్, పది మంది కస్టమర్లు. [1] టూల్ లేకుండా: పది జవాబులు, ఒక్కటీ చూడలేదు, ఆరు తప్పు. | [2] టూల్ తో: పది ఆర్డర్లూ చూసింది, పదీ కరెక్ట్."),
+    8: ("rule", "If you build one: the AI only asks; your code decides what runs. [1] If you use one: check the refund on the shop's own order page.",
+        "మీరు తయారు చేస్తే: చాట్‌బాట్ అడుగుతుంది, ఏది రన్ అవ్వాలో మీ కోడే నిర్ణయిస్తుంది. | [1] మీరు వాడితే: రిఫండ్ స్టేటస్, షాప్ ఆర్డర్ పేజీలోనే చూసుకోండి."),
+    9: ("loop", "Next: your own M C P server. [1] And order forty-four seventeen? Zero rupees. Not started.",
+        "తర్వాత: మీ సొంత, ఎం, సి, పి, సర్వర్. | [1] మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. ఇంకా స్టార్ట్ కాలేదు."),
 }
 SHOW = {1: "₹1,299 refunded, said the shop's bot. The shop's own record: ₹0. The refund hasn't even started.",
-        7: "Our test, 10 customers. Without the tool, it answered all 10 without checking, and 6 were wrong. <pause 0.5> With the tool, it looked up all 10, and all 10 were right.",
-        9: "Next: build your own MCP server. And order 4417? ₹0. Refund not started."}
+        7: "Our test, 10 customers. Without the tool: 10 answers, no checking, 6 wrong. <pause 0.5> With the tool: 10 lookups, 10 right.",
+        9: "Next: your own MCP server. And order 4417? ₹0. Not started."}
 SHOW_TE = {
     1: "₹1,299 refunded, said the shop's chatbot. In the shop's record: ₹0. The refund hasn't even started.",
-    2: "The chatbot had no way to look. So it wrote what a refund reply usually sounds like.",
-    3: "Today: let's give it one tool. An agent is a chatbot that can ask your code to do things.",
-    4: "Step 1: describe the tool: order details by order number. To use it, the chatbot replies with one JSON line.",
-    5: "Step 2: your code reads that line and looks the order up. The chatbot doesn't touch your system; your code does.",
+    2: "A shop we made up, a real test: the chatbot had no way to look. So it wrote what a refund reply usually sounds like.",
+    3: "Today: the simplest agent. A chatbot that can get your code to do one thing.",
+    4: "Step 1: describe the tool; to use it, tell it to ask with one JSON line. Here: order details by order number.",
+    5: "Step 2: your code finds that line and looks the order up. <pause 0.4> Twice it also wrote a guess after the line; our code ignored it.",
     6: "Step 3: send that result back. Now it answers from the shop's record.",
-    7: "Our test, 10 customers. Without the tool, it answered all 10 without looking; 6 wrong. <pause 0.5> With the tool, it looked up all 10; all 10 right.",
-    8: "If you build one: the chatbot asks, your code decides what runs. <pause 0.4> If you use one: check the refund on the shop's order page.",
-    9: "Next: your own MCP server. <pause 0.4> And order 4417? ₹0. The refund hasn't started yet.",
+    7: "Our test, 10 customers. Without the tool: 10 answers, not one checked, 6 wrong. <pause 0.5> With the tool: it looked up all 10 orders, all 10 right.",
+    8: "If you build one: the chatbot asks, your code decides what runs. <pause 0.4> If you use one: check the refund status on the shop's order page.",
+    9: "Next: your own MCP server. <pause 0.4> And order 4417? ₹0. Not started yet.",
 }
 SPLIT_PAUSE = {7: 0.5}
-SPLIT_PAUSE_TE = {7: 0.5, 8: 0.4, 9: 0.4}
+SPLIT_PAUSE_TE = {5: 0.4, 7: 0.5, 8: 0.4, 9: 0.4}
 TTS_EN = {}
-T = {   # on screen: our test (series/scripts/ep54_demo/agent.json); the shop and its orders are made up
-    "shop": "Kiran Mobiles · order help",
+T = {   # on screen: our test (series/scripts/ep54_demo/agent.json); the shop and its orders are made up (the prompt called it "Kiran Mobiles")
+    "shop": "a made-up shop · order help",
     "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
     "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
     "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
     "result": ["\"item\": \"Bluetooth earphones\"", "\"amount\": \"Rs 1,299\"", "\"status\": \"returned, not yet received at our warehouse\"",
                "\"refund\": \"not started: it starts when the return reaches us\""],
     "final": "Your refund process will start once the earphones reach our warehouse.",
-    "code": {"step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
-             "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+    "guessCall": "{\"tool\": \"get_order\", \"order_id\": \"4388\"}",
+    "guess": "The smartwatch in order 4388 is expected to arrive by December 15th...",
+    "guessReal": "our code used the line, dropped the guess · the record: arrives Nov 18",
+    "code": {"step1": "TOOL = 'get_order(order_id): the order status. To use it, reply with only: {\"tool\": \"get_order\", \"order_id\": \"...\"}'",
+             "step2": "call = find_json(reply); result = get_order(call[\"order_id\"])",
              "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"},
-    "wrong": [["4417", "refund processed", "not started"], ["4502", "shipped", "packed, not shipped"],
-              ["4475", "ships in 2-3 days", "out for delivery today"], ["4650", "confirmed", "payment pending"],
-              ["4362", "delivered March 15", "delivered Nov 9"], ["4388", "5-7 business days", "arrives Nov 18"]],
-    "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it",
+    "wrongBig": [["order 4417", "\"refund processed\"", "not started"], ["order 4362", "\"delivered March 15th\"", "delivered Nov 9"]],
+    "wrongMore": "+4 more wrong · 3 right by luck · 1 \"we're checking\" (it can't check)",
+    "docs": "the same loop OpenAI's and Google's docs describe; here built by hand",
+    "owner": "RUN A SHOP? ask your own bot about order 12345. A sure answer = a guess.",
 }
 # Sound (CLAUDE.md arc): a boom on frame 1 and a buzz on "zero"; pops as each step's line types; a whoosh on the tool
 # call; a drop before "all ten were right" and a boom on it; a ding on the final answer; a riser and the slam.
