@@ -13,49 +13,45 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 R = ROOT / "reels"
 
-LINES = {
-    1: ("hook", "Ninety-one essays, all written by students. [1] Written by AI: zero. Flagged as AI: eighty-nine.",
-        "తొంభై ఒక్క వ్యాసాలు, అన్నీ పిల్లలు రాసినవే. [1] మెషీన్ రాసినవి: సున్నా. మెషీన్ రాసింది అని ముద్ర పడ్డవి: ఎనభై తొమ్మిది."),
+LINES = {   # v2 (script review): "at least one detector" said; 61% = each detector's average; "almost none"; our test cut
+    # from the video (a 2019 detector vs today's AI was a strawman; it lives in the pinned comment); the ending stays "you"
+    1: ("hook", "Ninety-one student essays. [1] Written by AI: zero. Flagged as AI, by at least one detector: eighty-nine.",
+        "తొంభై ఒక్క స్టూడెంట్స్ వ్యాసాలు. [1] మెషీన్ రాసినవి: సున్నా. మెషీన్ అని ముద్ర: ఎనభై తొమ్మిది."),
     2: ("pov", "POV: you wrote yours yourself, in English, your second language. [1] The detector says: AI.",
         "ఊహించండి: మీ వ్యాసం మీరే రాశారు, ఇంగ్లీష్ మీ రెండో భాష. [1] డిటెక్టర్ మాత్రం, మెషీన్ రాసింది అంటోంది."),
     3: ("why", "Detectors hunt for plain, predictable words. [1] Careful, simple English looks predictable too.",
         "డిటెక్టర్లు, ఊహించగలిగే సాదా మాటల కోసం వెతుకుతాయి. [1] జాగ్రత్తగా రాసిన సింపుల్ ఇంగ్లీష్ కూడా, అలాగే కనిపిస్తుంది."),
-    4: ("study", "Stanford researchers, 2023, seven detectors. [1] Students writing English as a second language: sixty-one percent flagged. | [2] U.S.-born students: near-perfect.",
-        "స్టాన్ఫర్డ్ రీసెర్చర్లు, ఏడు డిటెక్టర్లతో టెస్ట్ చేశారు. [1] ఇంగ్లీష్ రెండో భాషగా రాసిన పిల్లలు: అరవై ఒక్క శాతం మీద ముద్ర. | [2] అమెరికాలో పుట్టిన పిల్లల మీద: దాదాపు లేదు."),
-    5: ("ours", "We tried two free detectors. [1] OpenAI's older one called the 1776 Declaration of Independence AI, | [2] and called two of three real AI texts human.",
-        "మేము రెండు ఫ్రీ డిటెక్టర్లు ట్రై చేశాం. [1] ఒక పాత డిటెక్టర్, పదిహేడు వందల డెబ్భై ఆరులో రాసిన అమెరికా డిక్లరేషన్ ని, మెషీన్ రాసింది అంది. | [2] నిజంగా మెషీన్ రాసిన మూడింట్లో రెండు, మనుషులు రాసినవి అంది."),
-    6: ("makers", "Even the makers warn: OpenAI shut its 2023 detector for low accuracy, [1] and Turnitin says its score shouldn't be the only proof.",
+    4: ("study", "That's a Stanford study from 2023, seven detectors. [1] Each one, on average, flagged six in ten of those essays. | [2] Essays by U.S.-born students: almost none flagged.",
+        "అది రెండు వేల ఇరవై మూడు స్టాన్ఫర్డ్ స్టడీ: ఏడు డిటెక్టర్లు. [1] ఒక్కో డిటెక్టర్, సగటున పదింట్లో ఆరు వ్యాసాలకు ముద్ర వేసింది. | [2] అమెరికాలో పుట్టిన స్టూడెంట్స్ వ్యాసాలకు: దాదాపు సున్నా."),
+    5: ("makers", "Even the makers warn: OpenAI shut its own detector for low accuracy, [1] and Turnitin says its score shouldn't be the only proof.",
         "తయారు చేసినవాళ్ళే హెచ్చరిస్తున్నారు: [1] ఈ స్కోర్ ఒక్కటే రుజువు కాదు."),
-    7: ("fix", "So if it's your child: keep the drafts, the notes, the version history. [1] Ask them to judge the work, not the score.",
-        "మీ పిల్లల మీద ఈ ముద్ర పడితే: డ్రాఫ్ట్స్, నోట్స్, వెర్షన్ హిస్టరీ దాచండి. [1] స్కోర్ కాదు, పని చూడమని అడగండి."),
-    8: ("loop", "Because remember: [1] ninety-one essays, all written by students...",
-        "ఎందుకంటే గుర్తుంచుకోండి: [1] తొంభై ఒక్క వ్యాసాలు, అన్నీ పిల్లలు రాసినవే..."),
+    6: ("fix", "So keep your drafts and version history from day one. [1] If you're flagged, show them, and offer to explain your essay out loud.",
+        "అందుకే, ముందు నుంచే డ్రాఫ్ట్స్, వెర్షన్ హిస్టరీ సేవ్ చేసి ఉంచండి. | [1] ముద్ర పడితే, అవి చూపించండి; మీ వ్యాసం నోటితో వివరిస్తానని చెప్పండి."),
+    7: ("teachers", "And teachers: [1] a score is a reason to talk, not proof.",
+        "టీచర్లకి: [1] స్కోర్, మాట్లాడటానికి ఒక కారణం; రుజువు కాదు."),
+    8: ("loop", "Because remember: [1] ninety-one student essays...",
+        "ఎందుకంటే గుర్తుంచుకోండి: [1] తొంభై ఒక్క స్టూడెంట్స్ వ్యాసాలు..."),
 }
-SHOW = {1: "91 essays, all written by students. Written by AI: 0. Flagged as AI: 89.",
-        4: "Stanford researchers, 2023, 7 detectors. Students writing English as a second language: 61% flagged. <pause 0.5> U.S.-born students: near-perfect.",
-        5: "We tried 2 free detectors. OpenAI's older one called the 1776 Declaration of Independence AI, <pause 0.4> and called 2 of 3 real AI texts human.",
-        8: "Because remember: 91 essays, all written by students..."}
+SHOW = {1: "91 student essays. Written by AI: 0. Flagged as AI, by at least one detector: 89.",
+        4: "That's a Stanford study from 2023, 7 detectors. Each one, on average, flagged 6 in 10 of those essays. <pause 0.5> Essays by U.S.-born students: almost none flagged.",
+        8: "Because remember: 91 student essays..."}
 SHOW_TE = {
-    1: "91 essays, all written by students. Written by a machine: 0. Stamped 'machine-written': 89.",
+    1: "91 student essays. Written by a machine: 0. Stamped 'machine': 89.",
     2: "Imagine: you wrote your essay yourself; English is your second language. The detector says a machine wrote it.",
     3: "Detectors look for plain, predictable words. Carefully written simple English looks the same way.",
-    4: "Stanford researchers tested 7 detectors. Students writing English as a second language: 61% stamped. <pause 0.5> Students born in the US: almost none.",
-    5: "We tried 2 free detectors. An old detector said the American Declaration written in 1776 was machine-written. <pause 0.4> Of 3 texts a machine really wrote, it called 2 human.",
-    6: "Even the makers warn: this score alone is not proof.",
-    7: "If your child gets this stamp: keep the drafts, notes, version history. Ask them to judge the work, not the score.",
-    8: "Because remember: 91 essays, all written by students...",
+    4: "That's a 2023 Stanford study: 7 detectors. Each detector, on average, stamped 6 in 10 essays. <pause 0.5> Essays by US-born students: almost zero.",
+    5: "Even the makers warn: this score alone is not proof.",
+    6: "So save your drafts and version history from the start. <pause 0.4> If you're stamped, show them, and say you'll explain your essay out loud.",
+    7: "To teachers: a score is a reason to talk; it is not proof.",
+    8: "Because remember: 91 student essays...",
 }
-SPLIT_PAUSE = {4: 0.5, 5: 0.4}
-SPLIT_PAUSE_TE = {4: 0.5, 5: 0.4}
+SPLIT_PAUSE = {4: 0.5}
+SPLIT_PAUSE_TE = {4: 0.5, 6: 0.4}
 TTS_EN = {}
-T = {   # on screen: Stanford HAI (May 15, 2023) and our test (series/scripts/creative31_demo/detector.json)
+T = {   # on screen: Stanford HAI (May 15, 2023); OpenAI's note; Turnitin's guidance (quoted by universities)
     "src": "Stanford study, 2023 · 7 detectors · flagged by at least one",
-    "study": {"esl": "61%", "us": "near-perfect", "atLeastOne": "89 of 91", "unanimous": "18 of 91"},
-    "ours": [["the 1776 Declaration of Independence (human)", "AI · 55%", "#f87171"], ["a small AI's real text #2", "human · 34% AI", "#f87171"],
-             ["a small AI's real text #3", "human · 3% AI", "#f87171"], ["India's Preamble, 1949 (human)", "human", "#4ade80"]],
-    "d1": "OpenAI's 2019 detector (free download)", "d2": "a 2023 open detector: got our 7 short texts right",
     "makers": [["OpenAI", "shut its 2023 AI classifier: 'low rate of accuracy'"], ["Turnitin", "its AI score shouldn't be the sole basis for action"]],
-    "keep": ["drafts", "notes", "version history"],
+    "keep": ["drafts", "version history"],
 }
 # Sound (CLAUDE.md arc): a boom on frame 1 and a buzz on "eighty-nine"; a soft tick per red dot; a drop before
 # "near-perfect"; a buzz on the 1776 stamp; a ding on "judge the work"; a riser and the slam into the loop.
@@ -65,7 +61,7 @@ SCENES = [("s_a", (1, 2, 3), {"boost": 1.2, "tail": 0.0}),
           ("s_d", (8,), {"outro": True, "pre": 0.3, "boost": 2.1, "lift": 0.9, "rise": 2.4, "tail": 0.0})]
 GAP = {1: 0.4, 2: 0.35, 3: 0.35, 4: 0.4, 5: 0.4, 6: 0.35, 7: 0.4, 8: 0.0}
 FLAGS_TE = {"s_c": {"boost": 1.6}, "s_d": {"boost": 2.3, "rise": 2.7}}
-YT = {"s_a": "Written by AI: 0. Flagged: 89.", "s_b": "The study and our test", "s_c": "What to do", "s_d": "91 essays"}
+YT = {"s_a": "Written by AI: 0. Flagged: 89.", "s_b": "The study, and the makers", "s_c": "What to do", "s_d": "91 essays"}
 MARK = re.compile(r"\[\d+\]\s*")
 
 

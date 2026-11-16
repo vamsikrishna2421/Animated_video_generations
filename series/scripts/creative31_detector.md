@@ -1,4 +1,4 @@
-# Creative 31 "Written by AI: 0. Flagged as AI: 89." · Nov 16 creative slot · script v1
+# Creative 31 "Written by AI: 0. Flagged as AI: 89." · Nov 16 creative slot · script v2
 
 ## The format
 POV (not used in the last 7 days), one calm narrator, no other characters: "you" are the student. Pictures: a grid of 91
@@ -38,25 +38,38 @@ Creative 30's test):
 - A 2023 detector trained on ChatGPT answers (chatgpt-detector-roberta): all 7 right.
 Small test, short texts (OpenAI said its own classifier was unreliable under 1,000 characters).
 
-## Script (English, v1; narrator)
-1. (hook) Ninety-one essays, all written by students. Written by AI: zero. Flagged as AI: eighty-nine.
+## Script review (human-viewer, v1) and what changed (v2)
+Both stopped on the hook; it broke at "61%" (vs 89) and drifted at our own test; the makers' notes convinced them.
+1. 89 vs 61 made honest: line 1 says "flagged as AI, by at least one detector: eighty-nine"; line 4 "each one, on
+   average, flagged six in ten". On screen: "flagged by AT LEAST ONE of 7 detectors" big; "any one of the 7: 89 of 91".
+2. "Near-perfect" (read as "flagged near-perfectly") became "almost none flagged" / "దాదాపు సున్నా".
+3. Our test cut from the video: a 2019 detector built for older AI against today's AI text was a strawman, and the 2023
+   detector got all 7 right; it lives in the pinned comment with that caveat ("7 short texts prove nothing either way").
+4. The ending stays with "you": keep drafts and version history from day one; flagged? show them and offer to explain
+   your essay out loud; and one line for teachers: "a score is a reason to talk, not proof" (so it isn't anti-teacher).
+5. Telugu: "సేవ్ చేసి ఉంచండి" (not "దాచండి", which can mean hide); "స్టూడెంట్స్" (not "పిల్లలు"); a shorter line 1;
+   "వ్యాసాలకు ముద్ర"; "దాదాపు సున్నా"; the 1776 line gone.
+6. Caption ask: the % and which detector.
+
+## Script (English, v2; narrator)
+1. (hook) Ninety-one student essays. Written by AI: zero. Flagged as AI, by at least one detector: eighty-nine.
 2. (pov) POV: you wrote yours yourself, in English, your second language. The detector says: AI.
 3. (why) Detectors hunt for plain, predictable words. Careful, simple English looks predictable too.
-4. (study) Stanford researchers, 2023, seven detectors. Students writing English as a second language: sixty-one percent flagged. | U.S.-born students: near-perfect.
-5. (ours) We tried two free detectors. OpenAI's older one called the 1776 Declaration of Independence AI, | and called two of three real AI texts human.
-6. (makers) Even the makers warn: OpenAI shut its 2023 detector for low accuracy, and Turnitin says its score shouldn't be the only proof.
-7. (fix) So if it's your child: keep the drafts, the notes, the version history. Ask them to judge the work, not the score.
-8. (loop) Because remember: ninety-one essays, all written by students...
+4. (study) That's a Stanford study from 2023, seven detectors. Each one, on average, flagged six in ten of those essays. | Essays by U.S.-born students: almost none flagged.
+5. (makers) Even the makers warn: OpenAI shut its own detector for low accuracy, and Turnitin says its score shouldn't be the only proof.
+6. (fix) So keep your drafts and version history from day one. If you're flagged, show them, and offer to explain your essay out loud.
+7. (teachers) And teachers: a score is a reason to talk, not proof.
+8. (loop) Because remember: ninety-one student essays...
 
-## Script (Telugu, v1)
-1. తొంభై ఒక్క వ్యాసాలు, అన్నీ పిల్లలు రాసినవే. మెషీన్ రాసినవి: సున్నా. మెషీన్ రాసింది అని ముద్ర పడ్డవి: ఎనభై తొమ్మిది.
+## Script (Telugu, v2)
+1. తొంభై ఒక్క స్టూడెంట్స్ వ్యాసాలు. మెషీన్ రాసినవి: సున్నా. మెషీన్ అని ముద్ర: ఎనభై తొమ్మిది.
 2. ఊహించండి: మీ వ్యాసం మీరే రాశారు, ఇంగ్లీష్ మీ రెండో భాష. డిటెక్టర్ మాత్రం, మెషీన్ రాసింది అంటోంది.
 3. డిటెక్టర్లు, ఊహించగలిగే సాదా మాటల కోసం వెతుకుతాయి. జాగ్రత్తగా రాసిన సింపుల్ ఇంగ్లీష్ కూడా, అలాగే కనిపిస్తుంది.
-4. స్టాన్ఫర్డ్ రీసెర్చర్లు, ఏడు డిటెక్టర్లతో టెస్ట్ చేశారు. ఇంగ్లీష్ రెండో భాషగా రాసిన పిల్లలు: అరవై ఒక్క శాతం మీద ముద్ర. | అమెరికాలో పుట్టిన పిల్లల మీద: దాదాపు లేదు.
-5. మేము రెండు ఫ్రీ డిటెక్టర్లు ట్రై చేశాం. ఒక పాత డిటెక్టర్, పదిహేడు వందల డెబ్భై ఆరులో రాసిన అమెరికా డిక్లరేషన్ ని, మెషీన్ రాసింది అంది. | నిజంగా మెషీన్ రాసిన మూడింట్లో రెండు, మనుషులు రాసినవి అంది.
-6. తయారు చేసినవాళ్ళే హెచ్చరిస్తున్నారు: ఈ స్కోర్ ఒక్కటే రుజువు కాదు.
-7. మీ పిల్లల మీద ఈ ముద్ర పడితే: డ్రాఫ్ట్స్, నోట్స్, వెర్షన్ హిస్టరీ దాచండి. స్కోర్ కాదు, పని చూడమని అడగండి.
-8. ఎందుకంటే గుర్తుంచుకోండి: తొంభై ఒక్క వ్యాసాలు, అన్నీ పిల్లలు రాసినవే...
+4. అది రెండు వేల ఇరవై మూడు స్టాన్ఫర్డ్ స్టడీ: ఏడు డిటెక్టర్లు. ఒక్కో డిటెక్టర్, సగటున పదింట్లో ఆరు వ్యాసాలకు ముద్ర వేసింది. | అమెరికాలో పుట్టిన స్టూడెంట్స్ వ్యాసాలకు: దాదాపు సున్నా.
+5. తయారు చేసినవాళ్ళే హెచ్చరిస్తున్నారు: ఈ స్కోర్ ఒక్కటే రుజువు కాదు.
+6. అందుకే, ముందు నుంచే డ్రాఫ్ట్స్, వెర్షన్ హిస్టరీ సేవ్ చేసి ఉంచండి. | ముద్ర పడితే, అవి చూపించండి; మీ వ్యాసం నోటితో వివరిస్తానని చెప్పండి.
+7. టీచర్లకి: స్కోర్, మాట్లాడటానికి ఒక కారణం; రుజువు కాదు.
+8. ఎందుకంటే గుర్తుంచుకోండి: తొంభై ఒక్క స్టూడెంట్స్ వ్యాసాలు...
 
 ## Caption ask (a try-it with a posted answer)
-"Paste a paragraph you wrote yourself into any free AI detector. Post the % AI it gives you."
+"Paste a paragraph you wrote yourself into any free AI detector. Post the % AI it gave and which detector."

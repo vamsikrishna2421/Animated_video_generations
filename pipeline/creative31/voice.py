@@ -28,16 +28,14 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("ninety", "91"), ("students",), ("zero",), ("eighty", "89")], 2: [("pov", "p.o.v"), ("second",), ("detector",)],
-               3: [("predictable",), ("simple",)], 4: [("stanford",), ("seven", "7"), ("sixty", "61")], "4b": [("born",), ("perfect",)],
-               5: [("two", "2"), ("detectors",), ("1776", "seventeen"), ("declaration",)], "5b": [("three", "3"), ("human",)],
-               6: [("makers",), ("accuracy",), ("turnitin", "turn it in"), ("proof",)], 7: [("drafts",), ("notes",), ("history",), ("score",)],
-               8: [("remember",), ("ninety", "91"), ("students",)]},
+MUST = {"en": {1: [("ninety", "91"), ("zero",), ("least",), ("eighty", "89")], 2: [("pov", "p.o.v"), ("second",), ("detector",)],
+               3: [("predictable",), ("simple",)], 4: [("stanford",), ("seven", "7"), ("average",), ("six", "6")], "4b": [("born",), ("none",)],
+               5: [("makers",), ("accuracy",), ("turnitin", "turn it in"), ("proof",)], 6: [("drafts",), ("history",), ("flagged",), ("loud",)],
+               7: [("teachers",), ("score",), ("proof",)], 8: [("remember",), ("ninety", "91"), ("essays",)]},
         "te": {}}
-JUDGE_TEXT = {1: "91 essays, all written by students. Written by AI: 0. Flagged as AI: 89.",
-              4: "Stanford researchers, 2023, 7 detectors. Students writing English as a second language: 61% flagged.",
-              "4b": "U.S.-born students: near-perfect.", 5: "We tried 2 free detectors. OpenAI's older one called the 1776 Declaration of Independence AI,",
-              "5b": "and called 2 of 3 real AI texts human.", 8: "Because remember: 91 essays, all written by students..."}
+JUDGE_TEXT = {1: "91 student essays. Written by AI: 0. Flagged as AI, by at least one detector: 89.",
+              4: "That's a Stanford study from 2023, 7 detectors. Each one, on average, flagged 6 in 10 of those essays.",
+              "4b": "Essays by U.S.-born students: almost none flagged.", 8: "Because remember: 91 student essays..."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

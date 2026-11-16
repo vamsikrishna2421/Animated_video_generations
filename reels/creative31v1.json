@@ -69,36 +69,6 @@
     "captionTop": 1500,
     "t": {
      "src": "Stanford study, 2023 · 7 detectors · flagged by at least one",
-     "study": {
-      "esl": "61%",
-      "us": "near-perfect",
-      "atLeastOne": "89 of 91",
-      "unanimous": "18 of 91"
-     },
-     "ours": [
-      [
-       "the 1776 Declaration of Independence (human)",
-       "AI · 55%",
-       "#f87171"
-      ],
-      [
-       "a small AI's real text #2",
-       "human · 34% AI",
-       "#f87171"
-      ],
-      [
-       "a small AI's real text #3",
-       "human · 3% AI",
-       "#f87171"
-      ],
-      [
-       "India's Preamble, 1949 (human)",
-       "human",
-       "#4ade80"
-      ]
-     ],
-     "d1": "OpenAI's 2019 detector (free download)",
-     "d2": "a 2023 open detector: got our 7 short texts right",
      "makers": [
       [
        "OpenAI",
@@ -111,7 +81,6 @@
      ],
      "keep": [
       "drafts",
-      "notes",
       "version history"
      ]
     },
@@ -125,10 +94,10 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "Ninety-one essays, all written by students. [1] Written by AI: zero. Flagged as AI: eighty-nine.",
+     "text": "Ninety-one student essays. [1] Written by AI: zero. Flagged as AI, by at least one detector: eighty-nine.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "91 essays, all written by students. Written by AI: 0. Flagged as AI: 89.",
+     "show": "91 student essays. Written by AI: 0. Flagged as AI, by at least one detector: 89.",
      "tempo": 1.04
     },
     {
@@ -171,43 +140,13 @@
       "n": 4
      },
      {
-      "prop": "ours",
+      "prop": "makers",
       "n": 5
      }
     ],
     "captionTop": 1500,
     "t": {
      "src": "Stanford study, 2023 · 7 detectors · flagged by at least one",
-     "study": {
-      "esl": "61%",
-      "us": "near-perfect",
-      "atLeastOne": "89 of 91",
-      "unanimous": "18 of 91"
-     },
-     "ours": [
-      [
-       "the 1776 Declaration of Independence (human)",
-       "AI · 55%",
-       "#f87171"
-      ],
-      [
-       "a small AI's real text #2",
-       "human · 34% AI",
-       "#f87171"
-      ],
-      [
-       "a small AI's real text #3",
-       "human · 3% AI",
-       "#f87171"
-      ],
-      [
-       "India's Preamble, 1949 (human)",
-       "human",
-       "#4ade80"
-      ]
-     ],
-     "d1": "OpenAI's 2019 detector (free download)",
-     "d2": "a 2023 open detector: got our 7 short texts right",
      "makers": [
       [
        "OpenAI",
@@ -220,13 +159,12 @@
      ],
      "keep": [
       "drafts",
-      "notes",
       "version history"
      ]
     },
     "yt": {
-     "chapter": "The study and our test",
-     "title": "The study and our test",
+     "chapter": "The study, and the makers",
+     "title": "The study, and the makers",
      "notes": []
     }
    },
@@ -234,28 +172,24 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "Stanford researchers, 2023, seven detectors. [1] Students writing English as a second language: sixty-one percent flagged. <pause 0.5> [2] U.S.-born students: near-perfect.",
+     "text": "That's a Stanford study from 2023, seven detectors. [1] Each one, on average, flagged six in ten of those essays. <pause 0.5> [2] Essays by U.S.-born students: almost none flagged.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Stanford researchers, 2023, 7 detectors. Students writing English as a second language: 61% flagged. <pause 0.5> U.S.-born students: near-perfect.",
+     "show": "That's a Stanford study from 2023, 7 detectors. Each one, on average, flagged 6 in 10 of those essays. <pause 0.5> Essays by U.S.-born students: almost none flagged.",
      "tempo": 1.04,
-     "tts": "Stanford researchers, 2023, seven detectors. Students writing English as a second language: sixty-one percent flagged.",
+     "tts": "That's a Stanford study from 2023, seven detectors. Each one, on average, flagged six in ten of those essays.",
      "file2": "04b_storyteller.wav",
-     "tts2": "U.S.-born students: near-perfect.",
+     "tts2": "Essays by U.S.-born students: almost none flagged.",
      "pause": 0.5
     },
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "We tried two free detectors. [1] OpenAI's older one called the 1776 Declaration of Independence AI, <pause 0.4> [2] and called two of three real AI texts human.",
+     "text": "Even the makers warn: OpenAI shut its own detector for low accuracy, [1] and Turnitin says its score shouldn't be the only proof.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "We tried 2 free detectors. OpenAI's older one called the 1776 Declaration of Independence AI, <pause 0.4> and called 2 of 3 real AI texts human.",
-     "tempo": 1.04,
-     "tts": "We tried two free detectors. OpenAI's older one called the 1776 Declaration of Independence AI,",
-     "file2": "05b_storyteller.wav",
-     "tts2": "and called two of three real AI texts human.",
-     "pause": 0.4
+     "show": "Even the makers warn: OpenAI shut its own detector for low accuracy, and Turnitin says its score shouldn't be the only proof.",
+     "tempo": 1.04
     }
    ]
   },
@@ -268,47 +202,17 @@
    "data": {
     "beats": [
      {
-      "prop": "makers",
+      "prop": "fix",
       "n": 6
      },
      {
-      "prop": "fix",
+      "prop": "teachers",
       "n": 7
      }
     ],
     "captionTop": 1500,
     "t": {
      "src": "Stanford study, 2023 · 7 detectors · flagged by at least one",
-     "study": {
-      "esl": "61%",
-      "us": "near-perfect",
-      "atLeastOne": "89 of 91",
-      "unanimous": "18 of 91"
-     },
-     "ours": [
-      [
-       "the 1776 Declaration of Independence (human)",
-       "AI · 55%",
-       "#f87171"
-      ],
-      [
-       "a small AI's real text #2",
-       "human · 34% AI",
-       "#f87171"
-      ],
-      [
-       "a small AI's real text #3",
-       "human · 3% AI",
-       "#f87171"
-      ],
-      [
-       "India's Preamble, 1949 (human)",
-       "human",
-       "#4ade80"
-      ]
-     ],
-     "d1": "OpenAI's 2019 detector (free download)",
-     "d2": "a 2023 open detector: got our 7 short texts right",
      "makers": [
       [
        "OpenAI",
@@ -321,7 +225,6 @@
      ],
      "keep": [
       "drafts",
-      "notes",
       "version history"
      ]
     },
@@ -335,19 +238,19 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "Even the makers warn: OpenAI shut its 2023 detector for low accuracy, [1] and Turnitin says its score shouldn't be the only proof.",
+     "text": "So keep your drafts and version history from day one. [1] If you're flagged, show them, and offer to explain your essay out loud.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Even the makers warn: OpenAI shut its 2023 detector for low accuracy, and Turnitin says its score shouldn't be the only proof.",
+     "show": "So keep your drafts and version history from day one. If you're flagged, show them, and offer to explain your essay out loud.",
      "tempo": 1.04
     },
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "So if it's your child: keep the drafts, the notes, the version history. [1] Ask them to judge the work, not the score.",
+     "text": "And teachers: [1] a score is a reason to talk, not proof.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "So if it's your child: keep the drafts, the notes, the version history. Ask them to judge the work, not the score.",
+     "show": "And teachers: a score is a reason to talk, not proof.",
      "tempo": 1.04
     }
    ]
@@ -371,36 +274,6 @@
     "captionTop": 1500,
     "t": {
      "src": "Stanford study, 2023 · 7 detectors · flagged by at least one",
-     "study": {
-      "esl": "61%",
-      "us": "near-perfect",
-      "atLeastOne": "89 of 91",
-      "unanimous": "18 of 91"
-     },
-     "ours": [
-      [
-       "the 1776 Declaration of Independence (human)",
-       "AI · 55%",
-       "#f87171"
-      ],
-      [
-       "a small AI's real text #2",
-       "human · 34% AI",
-       "#f87171"
-      ],
-      [
-       "a small AI's real text #3",
-       "human · 3% AI",
-       "#f87171"
-      ],
-      [
-       "India's Preamble, 1949 (human)",
-       "human",
-       "#4ade80"
-      ]
-     ],
-     "d1": "OpenAI's 2019 detector (free download)",
-     "d2": "a 2023 open detector: got our 7 short texts right",
      "makers": [
       [
        "OpenAI",
@@ -413,7 +286,6 @@
      ],
      "keep": [
       "drafts",
-      "notes",
       "version history"
      ]
     },
@@ -427,10 +299,10 @@
     {
      "who": "storyteller",
      "file": "08_storyteller.wav",
-     "text": "Because remember: [1] ninety-one essays, all written by students...",
+     "text": "Because remember: [1] ninety-one student essays...",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "Because remember: 91 essays, all written by students...",
+     "show": "Because remember: 91 student essays...",
      "tempo": 1.04
     }
    ]

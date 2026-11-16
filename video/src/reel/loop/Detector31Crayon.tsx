@@ -65,11 +65,11 @@ const StDetector: React.FC<SP> = ({ s }) => {
   beats.forEach((b, i) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
-    if (["study", "ours", "makers", "fix"].includes(b.prop)) sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 11)} src="audio/sfx_whoosh.wav" vol={0.4} />);
+    if (["study", "makers", "fix", "teachers"].includes(b.prop)) sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 11)} src="audio/sfx_whoosh.wav" vol={0.4} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("z")} at={cue(i, 1, 0.5) + 30} src="reel/sfx_buzz.wav" vol={0.4} />);
     if (b.prop === "pov") sfx.push(<Sfx key={k("z")} at={cue(i, 1, 0.5) + 6} src="reel/sfx_buzz.wav" vol={0.45} />);
     if (b.prop === "study") sfx.push(<Sfx key={k("b")} at={cue(i, 1, 0.4)} src="reel/sfx_boom.wav" vol={0.7} />, <Sfx key={k("d")} at={cue(i, 2, 0.6)} src="audio/gag_ding.wav" vol={0.4} />);
-    if (b.prop === "ours") sfx.push(<Sfx key={k("z")} at={cue(i, 1, 0.4) + 30} src="reel/sfx_buzz.wav" vol={0.45} />, <Sfx key={k("p")} at={cue(i, 2, 0.6)} src="audio/sfx_pop.wav" vol={0.4} />);
+    if (b.prop === "teachers") sfx.push(<Sfx key={k("p")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.45} />);
     if (b.prop === "fix") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5)} src="audio/gag_ding.wav" vol={0.45} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 30)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />); }
   });
@@ -89,11 +89,12 @@ const StDetector: React.FC<SP> = ({ s }) => {
           const hook = P === "hook";
           clashBlock(c, 40, "WRITTEN BY AI", "0", GREEN, "#123320");
           clashBlock(c, 550, "FLAGGED AS AI", "89", RED, "#3f1414");
-          c.font = SANS(fit(c, "91 ESSAYS, ALL WRITTEN BY STUDENTS", 980, 44, 900), 900); c.fillStyle = "#f5f5f4"; c.textAlign = "center";
-          c.fillText("91 ESSAYS, ALL WRITTEN BY STUDENTS", 540, 440);
+          c.font = SANS(fit(c, "91 STUDENT ESSAYS · ENGLISH AS A 2ND LANGUAGE", 980, 44, 900), 900); c.fillStyle = "#f5f5f4"; c.textAlign = "center";
+          c.fillText("91 STUDENT ESSAYS · ENGLISH AS A 2ND LANGUAGE", 540, 440);
           const red = hook && !loopOn ? Math.floor(89 * seg(f, cu(1, 0.5), cu(1, 0.5) + 40)) : 89;
           grid(c, 480, red);
-          chip(c, T.src, 540, 1310, "#1c1f24", "#d6d3d1", 1, big(c, T.src, 34));
+          chip(c, "flagged by AT LEAST ONE of 7 detectors", 540, 1290, "#3f1414", "#fecaca", 1, big(c, "flagged by AT LEAST ONE of 7 detectors", 46));   // script review: say which count
+          chip(c, "Stanford study, 2023", 540, 1395, "#1c1f24", "#d6d3d1", 1, 38);
         } else if (P === "pov") {
           title(c, "POV: YOU WROTE EVERY WORD", 250, AMBER, 60);
           c.save(); c.fillStyle = "#fffbeb"; rrect(c, 70, 320, 460, 600, 14); c.fill();
@@ -122,7 +123,7 @@ const StDetector: React.FC<SP> = ({ s }) => {
             c.font = SANS(44, 800); c.fillStyle = RED; c.fillText("looks predictable too", 540, 1000); c.restore();
           }
         } else if (P === "study") {
-          title(c, "STANFORD STUDY, 2023 · 7 DETECTORS", 250, AMBER, 52);
+          title(c, "A STANFORD STUDY, 2023 · 7 DETECTORS", 250, AMBER, 52);
           const bar = (y: number, label: string, val: string, frac: number, col: string, k: number) => {
             if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); card(c, y, 260);
@@ -131,22 +132,9 @@ const StDetector: React.FC<SP> = ({ s }) => {
             c.fillStyle = col; rrect(c, 80, y + 110, Math.max(20, 920 * frac * clamp(k * 1.5)), 70, 12); c.fill();
             c.font = SANS(fit(c, val, 900, 50, 900), 900); c.fillStyle = col; c.fillText(val, 80, y + 235); c.restore();
           };
-          bar(330, "English as a 2nd language (TOEFL essays)", "61% flagged as AI", 0.61, RED, seg(f, cu(1, 0.4) - 2, cu(1, 0.4) + 8));
-          bar(640, "US-born students (8th grade essays)", "near-perfect", 0.03, GREEN, seg(f, cu(2, 0.6), cu(2, 0.6) + 8));
-          chip(c, "89 of 91 flagged by at least one detector", 540, 980, "#3f1414", "#fecaca", seg(f, cu(1, 0.4) + 20, cu(1, 0.4) + 28), big(c, "89 of 91 flagged by at least one detector", 42));
-        } else if (P === "ours") {
-          title(c, "OUR TEST · 2 FREE DETECTORS", 250, AMBER, 58);
-          c.font = SANS(fit(c, T.d1, 980, 40, 800), 800); c.fillStyle = "#d6d3d1"; c.textAlign = "center"; c.fillText(T.d1, 540, 310);
-          (T.ours as string[][]).slice(0, 3).forEach(([t, v, col], q) => {
-            const t0 = q === 0 ? cu(1, 0.4) : cu(2, 0.6) + (q - 1) * 10;
-            const k = seg(f, t0 - 2, t0 + 6); if (k <= 0) return;
-            c.save(); c.globalAlpha = clamp(k * 3); const y = 350 + q * 200; card(c, y, 180);
-            c.font = SANS(fit(c, t, 900, 40, 800), 800); c.fillStyle = "#e7e5e4"; c.textAlign = "left"; c.fillText(t, 80, y + 66);
-            c.font = SANS(64, 900); c.fillStyle = col; c.fillText("→ " + v, 80, y + 146); c.restore();
-          });
-          stamp(c, "WRITTEN IN 1776", 760, 470, seg(f, cu(1, 0.4) + 26, cu(1, 0.4) + 34), "#dc2626", 0.06);
-          chip(c, T.d2, 540, 1000, "#14261a", "#bbf7d0", seg(f, cu(2, 0.6) + 30, cu(2, 0.6) + 38), big(c, T.d2, 38));
-          chip(c, "same 7 short texts, opposite results", 540, 1110, "#1c1f24", AMBER, seg(f, cu(2, 0.6) + 40, cu(2, 0.6) + 48), 44);
+          bar(330, "English as a 2nd language: each detector, on average", "6 in 10 flagged (61%)", 0.61, RED, seg(f, cu(1, 0.4) - 2, cu(1, 0.4) + 8));
+          bar(640, "US-born students' essays", "almost none flagged", 0.03, GREEN, seg(f, cu(2, 0.6), cu(2, 0.6) + 8));   // script review: not "near-perfect"
+          chip(c, "any one of the 7: 89 of 91", 540, 980, "#3f1414", "#fecaca", seg(f, cu(1, 0.4) + 20, cu(1, 0.4) + 28), 46);
         } else if (P === "makers") {
           title(c, "EVEN THE MAKERS WARN", 250, AMBER, 64);
           (T.makers as string[][]).forEach(([who, what], q) => {
@@ -156,16 +144,26 @@ const StDetector: React.FC<SP> = ({ s }) => {
             c.font = SANS(40, 800); c.fillStyle = AMBER; wrap(c, what, 900).forEach((t, j) => c.fillText(t, 80, y + 170 + j * 52));
             c.restore();
           });
-        } else if (P === "fix") {
-          title(c, "IF IT'S YOUR CHILD", 250, AMBER, 64);
+        } else if (P === "fix") {   // script review: stay with "you"; from day one; offer to explain
+          title(c, "FROM DAY ONE, KEEP", 250, AMBER, 64);
           (T.keep as string[]).forEach((t, q) => {
             const k = seg(f, ln.from + 10 + q * 14, ln.from + 18 + q * 14); if (k <= 0) return;
-            c.save(); c.globalAlpha = clamp(k * 3); const y = 330 + q * 180;
+            c.save(); c.globalAlpha = clamp(k * 3); const y = 330 + q * 190;
             c.fillStyle = "#f59e0b"; rrect(c, 120, y, 220, 50, 10); c.fill();
             c.fillStyle = "#fbbf24"; rrect(c, 120, y + 30, 840, 130, 14); c.fill();
-            c.font = SANS(54, 900); c.fillStyle = INK; c.textAlign = "left"; c.fillText("keep: " + t, 160, y + 115); c.restore();
+            c.font = SANS(56, 900); c.fillStyle = INK; c.textAlign = "left"; c.fillText(t, 160, y + 115); c.restore();
           });
-          chip(c, "judge the work, not the score", 540, 940, "#14261a", "#bbf7d0", seg(f, cu(1, 0.5), cu(1, 0.5) + 8), 56);
+          chip(c, "flagged? show them", 540, 790, "#1c1f24", "#e7e5e4", seg(f, cu(1, 0.5), cu(1, 0.5) + 8), 52);
+          chip(c, "offer to explain your essay out loud", 540, 900, "#14261a", "#bbf7d0", seg(f, cu(1, 0.5) + 14, cu(1, 0.5) + 22), big(c, "offer to explain your essay out loud", 50));
+        } else if (P === "teachers") {
+          title(c, "TEACHERS", 300, AMBER, 80);
+          const k = seg(f, cu(1, 0.3), cu(1, 0.3) + 8);
+          if (k > 0) {
+            c.save(); c.globalAlpha = clamp(k * 3); card(c, 400, 420, "#14261a");
+            c.font = SANS(fit(c, "a score is a reason to talk,", 900, 64, 900), 900); c.fillStyle = "#f5f5f4"; c.textAlign = "center"; c.fillText("a score is a reason to talk,", 540, 560);
+            c.font = SANS(fit(c, "not proof", 900, 110, 900), 900); c.fillStyle = GREEN; c.fillText("not proof", 540, 720);
+            c.restore();
+          }
         }
         c.restore();
       }} />
