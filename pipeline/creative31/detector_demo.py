@@ -44,7 +44,13 @@ HUMAN = {
 }
 DETECTORS = {"D1": ("openai-community/roberta-base-openai-detector", "Fake"),
              "D2": ("Hello-SimpleAI/chatgpt-detector-roberta", "ChatGPT")}
-HAND = {}   # filled in after the run
+HAND = {   # read after the run (series/scripts/creative31_demo/detector.json)
+    "D1": "OpenAI's 2019 detector called the 1776 Declaration of Independence AI (0.55) and called 2 of the 3 real AI texts "
+          "human (0.34, 0.03; the third 0.89 AI); the Preamble, Tagore and Aesop human",
+    "D2": "the 2023 ChatGPT detector got all 7 right on these (human texts 0.0003-0.25, AI texts 0.98-0.995)",
+    "takeaway": "two free detectors, opposite results on the same 7 short texts; one called a 1776 text AI. Small test, short "
+                "texts (OpenAI said its own classifier was unreliable under 1,000 characters)",
+}
 
 
 def ai_texts():

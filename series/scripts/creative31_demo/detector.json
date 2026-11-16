@@ -1,0 +1,205 @@
+{
+ "texts": {
+  "H1 Preamble of India (1949)": "WE, THE PEOPLE OF INDIA, having solemnly resolved to constitute India into a SOVEREIGN DEMOCRATIC REPUBLIC and to secure to all its citizens: JUSTICE, social, economic and political; LIBERTY of thought, expression, belief, faith and worship; EQUALITY of status and of opportunity; and to promote among them all FRATERNITY assuring the dignity of the individual and the unity of the Nation; IN OUR CONSTITUENT ASSEMBLY this twenty-sixth day of November, 1949, do HEREBY ADOPT, ENACT AND GIVE TO OURSELVES THIS CONSTITUTION.",
+  "H2 Tagore, Where the mind is without fear (1912)": "Where the mind is without fear and the head is held high; Where knowledge is free; Where the world has not been broken up into fragments by narrow domestic walls; Where words come out from the depth of truth; Where tireless striving stretches its arms towards perfection; Where the clear stream of reason has not lost its way into the dreary desert sand of dead habit; Where the mind is led forward by thee into ever-widening thought and action; Into that heaven of freedom, my Father, let my country awake.",
+  "H3 US Declaration of Independence (1776)": "When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation. We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.",
+  "H4 Aesop, The Fox and the Grapes (1867)": "A famished fox saw some clusters of ripe black grapes hanging from a trellised vine. She resorted to all her tricks to get at them, but wearied herself in vain, for she could not reach them. At last she turned away, hiding her disappointment and saying: \"The Grapes are sour, and not ripe as I thought.\"",
+  "A1 small AI's EMI working (bike loan)": "To calculate the Equated Monthly Installment (EMI) for a loan, we use the formula:\n\n\\[ EMI = \\frac{P \\times r \\times (1 + r)^n}{(1 + r)^n - 1} \\]\n\nWhere:\n- \\( P \\) is the principal amount (Rs 120,000).\n- \\( r \\) is the monthly interest rate.\n- \\( n \\) is the number of monthly installments.\n\nLet's break it down step by step:\n\n### Step 1: Determine the Principal Amount\n\\[ P = Rs\\ 120,000 \\]\n\n### Step 2: Calculate the Monthly Interest Rate (\\( r \\))\nThe annual interest rate is 11.0%, so the monthly interest rate is:\n\\[ r = \\frac{11.0\\%}{12} = \\frac{0.11}{12} = 0.009167 \\]\n\n### Step 3: Determine t",
+  "A2 small AI's EMI working (home loan)": "To calculate the Equated Monthly Installment (EMI) for a loan, we use the following formula:\n\n\\[ \\text{EMI} = P \\times \\frac{r(1+r)^n}{(1+r)^n-1} \\]\n\nWhere:\n- \\(P\\) is the principal amount (loan amount),\n- \\(r\\) is the monthly interest rate,\n- \\(n\\) is the number of installments.\n\nGiven:\n- Principal (\\(P\\)) = Rs 4,000,000\n- Annual Interest Rate = 8.5%\n- Loan Tenure = 20 years\n\nFirst, we need to convert the annual interest rate into a monthly interest rate and calculate the total number of installments.\n\n1. **Convert the annual interest rate to a monthly interest rate:**\n\n\\[ r = \\frac{8.5\\%}{12",
+  "A3 small AI's EMI working (personal loan)": "To calculate the Equated Monthly Installment (EMI) for a loan, we use the formula:\n\n\\[ \\text{EMI} = P \\times \\frac{r(1+r)^n}{(1+r)^n-1} \\]\n\nwhere:\n- \\(P\\) is the principal amount (Rs 500,000 in this case),\n- \\(r\\) is the monthly interest rate,\n- \\(n\\) is the number of monthly installments.\n\nLet's break it down step by step:\n\n### Step 1: Determine the Principal Amount\n\\[ P = \\text{Rs } 500,000 \\]\n\n### Step 2: Calculate the Monthly Interest Rate\nThe annual interest rate is 10.5%. To find the monthly interest rate:\n\\[ r = \\frac{\\text{Annual Interest Rate}}{12} = \\frac{10.5\\%}{12} = \\frac{0.105}{1"
+ },
+ "detectors": {
+  "D1": [
+   "openai-community/roberta-base-openai-detector",
+   "Fake"
+  ],
+  "D2": [
+   "Hello-SimpleAI/chatgpt-detector-roberta",
+   "ChatGPT"
+  ]
+ },
+ "rows": [
+  {
+   "detector": "D1",
+   "model": "openai-community/roberta-base-openai-detector",
+   "text": "H1 Preamble of India (1949)",
+   "human": true,
+   "p_ai": 0.0003,
+   "called_ai": false,
+   "scores": {
+    "Real": 0.9997,
+    "Fake": 0.0003
+   },
+   "chars": 522
+  },
+  {
+   "detector": "D1",
+   "model": "openai-community/roberta-base-openai-detector",
+   "text": "H2 Tagore, Where the mind is without fear (1912)",
+   "human": true,
+   "p_ai": 0.0138,
+   "called_ai": false,
+   "scores": {
+    "Real": 0.9862,
+    "Fake": 0.0138
+   },
+   "chars": 507
+  },
+  {
+   "detector": "D1",
+   "model": "openai-community/roberta-base-openai-detector",
+   "text": "H3 US Declaration of Independence (1776)",
+   "human": true,
+   "p_ai": 0.5506,
+   "called_ai": true,
+   "scores": {
+    "Fake": 0.5506,
+    "Real": 0.4494
+   },
+   "chars": 616
+  },
+  {
+   "detector": "D1",
+   "model": "openai-community/roberta-base-openai-detector",
+   "text": "H4 Aesop, The Fox and the Grapes (1867)",
+   "human": true,
+   "p_ai": 0.0025,
+   "called_ai": false,
+   "scores": {
+    "Real": 0.9975,
+    "Fake": 0.0025
+   },
+   "chars": 303
+  },
+  {
+   "detector": "D1",
+   "model": "openai-community/roberta-base-openai-detector",
+   "text": "A1 small AI's EMI working (bike loan)",
+   "human": false,
+   "p_ai": 0.8917,
+   "called_ai": true,
+   "scores": {
+    "Fake": 0.8917,
+    "Real": 0.1083
+   },
+   "chars": 600
+  },
+  {
+   "detector": "D1",
+   "model": "openai-community/roberta-base-openai-detector",
+   "text": "A2 small AI's EMI working (home loan)",
+   "human": false,
+   "p_ai": 0.3369,
+   "called_ai": false,
+   "scores": {
+    "Real": 0.6631,
+    "Fake": 0.3369
+   },
+   "chars": 600
+  },
+  {
+   "detector": "D1",
+   "model": "openai-community/roberta-base-openai-detector",
+   "text": "A3 small AI's EMI working (personal loan)",
+   "human": false,
+   "p_ai": 0.0302,
+   "called_ai": false,
+   "scores": {
+    "Real": 0.9698,
+    "Fake": 0.0302
+   },
+   "chars": 600
+  },
+  {
+   "detector": "D2",
+   "model": "Hello-SimpleAI/chatgpt-detector-roberta",
+   "text": "H1 Preamble of India (1949)",
+   "human": true,
+   "p_ai": 0.0003,
+   "called_ai": false,
+   "scores": {
+    "Human": 0.9997,
+    "ChatGPT": 0.0003
+   },
+   "chars": 522
+  },
+  {
+   "detector": "D2",
+   "model": "Hello-SimpleAI/chatgpt-detector-roberta",
+   "text": "H2 Tagore, Where the mind is without fear (1912)",
+   "human": true,
+   "p_ai": 0.084,
+   "called_ai": false,
+   "scores": {
+    "Human": 0.916,
+    "ChatGPT": 0.084
+   },
+   "chars": 507
+  },
+  {
+   "detector": "D2",
+   "model": "Hello-SimpleAI/chatgpt-detector-roberta",
+   "text": "H3 US Declaration of Independence (1776)",
+   "human": true,
+   "p_ai": 0.22,
+   "called_ai": false,
+   "scores": {
+    "Human": 0.78,
+    "ChatGPT": 0.22
+   },
+   "chars": 616
+  },
+  {
+   "detector": "D2",
+   "model": "Hello-SimpleAI/chatgpt-detector-roberta",
+   "text": "H4 Aesop, The Fox and the Grapes (1867)",
+   "human": true,
+   "p_ai": 0.2472,
+   "called_ai": false,
+   "scores": {
+    "Human": 0.7528,
+    "ChatGPT": 0.2472
+   },
+   "chars": 303
+  },
+  {
+   "detector": "D2",
+   "model": "Hello-SimpleAI/chatgpt-detector-roberta",
+   "text": "A1 small AI's EMI working (bike loan)",
+   "human": false,
+   "p_ai": 0.9838,
+   "called_ai": true,
+   "scores": {
+    "ChatGPT": 0.9838,
+    "Human": 0.0162
+   },
+   "chars": 600
+  },
+  {
+   "detector": "D2",
+   "model": "Hello-SimpleAI/chatgpt-detector-roberta",
+   "text": "A2 small AI's EMI working (home loan)",
+   "human": false,
+   "p_ai": 0.9954,
+   "called_ai": true,
+   "scores": {
+    "ChatGPT": 0.9954,
+    "Human": 0.0046
+   },
+   "chars": 600
+  },
+  {
+   "detector": "D2",
+   "model": "Hello-SimpleAI/chatgpt-detector-roberta",
+   "text": "A3 small AI's EMI working (personal loan)",
+   "human": false,
+   "p_ai": 0.9864,
+   "called_ai": true,
+   "scores": {
+    "ChatGPT": 0.9864,
+    "Human": 0.0136
+   },
+   "chars": 600
+  }
+ ]
+}
