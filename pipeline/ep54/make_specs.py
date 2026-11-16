@@ -22,7 +22,7 @@ LINES = {   # v2 (script review): "made-up shop" said; "twelve ninety-nine"; "th
     4: ("step1", "Step one: describe the tool, and say: to use it, reply with one line of JSON. [1] Here: get order, by order number.",
         "స్టెప్ వన్: టూల్ గురించి చెప్పండి; వాడాలంటే, ఒక్క జేసన్ లైన్ తో అడగమనండి. [1] ఇక్కడ: ఆర్డర్ నంబర్ తో ఆర్డర్ వివరాలు."),
     5: ("step2", "Step two: your code finds that line and runs the lookup. [1] Twice, the AI added a guess after the line. Our code ignored it.",
-        "స్టెప్ టూ: మీ కోడ్ ఆ లైన్ వెతికి, ఆర్డర్ చూస్తుంది. | [1] రెండుసార్లు, ఆ లైన్ తర్వాత ఊహ కూడా రాసింది; మా కోడ్ దాన్ని పట్టించుకోలేదు."),
+        "స్టెప్ టూ: మీ కోడ్ ఆ లైన్ వెతికి, ఆర్డర్ వివరాలు తెస్తుంది. | [1] రెండుసార్లు, ఆ లైన్ తర్వాత ఊహ కూడా రాసింది; మా కోడ్ దాన్ని పట్టించుకోలేదు."),
     6: ("step3", "Step three: send the result back. [1] Now it answers from the shop's record.",
         "స్టెప్ త్రీ: ఆ రిజల్ట్ తిరిగి పంపండి. [1] ఇప్పుడు, షాప్ రికార్డ్ నుంచే జవాబిస్తుంది."),
     7: ("test", "Our test, ten customers. [1] Without the tool: ten answers, no checking, six wrong. | [2] With the tool: ten lookups, ten right.",

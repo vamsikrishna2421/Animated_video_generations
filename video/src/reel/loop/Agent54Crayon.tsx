@@ -153,7 +153,8 @@ const StAgent: React.FC<SP> = ({ s }) => {
             const y1 = traceBox(c, yC + 30, "SENT BACK: THE RECORD", T.result.slice(2), GREEN, 1);
             arrowDown(c, y1 + 8, kT);
             const y2 = chat(c, 50, y1 + 64, W - 100, "the AI's answer now", [{ me: false, t: T.final, k: kT }], 36);
-            chip(c, T.docs, W / 2, y2 + 50, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.4) + 20, cu(1, 0.4) + 28), big(c, T.docs, 34));
+            chip(c, "the same loop as OpenAI's and Google's docs", W / 2, y2 + 60, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.4) + 20, cu(1, 0.4) + 28), big(c, "the same loop as OpenAI's and Google's docs", 42));   // render check: was too small
+            chip(c, "here, built by hand", W / 2, y2 + 160, "#e0e7ff", "#1e3a8a", seg(f, cu(1, 0.4) + 26, cu(1, 0.4) + 34), 42);
           }
         } else if (P === "test") {
           c.font = SANS(fit(c, "OUR TEST · 10 CUSTOMERS", W - 100, 60), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("OUR TEST · 10 CUSTOMERS", W / 2, 320);
@@ -194,7 +195,8 @@ const StAgent: React.FC<SP> = ({ s }) => {
           card(340, "IF YOU BUILD ONE", "the AI asks · your code decides what runs", "#93c5fd", seg(f, ln.from + 2, ln.from + 10));
           card(620, "IF YOU USE ONE", "check the refund on the shop's own order page", GREEN, seg(f, cu(1, 0.5), cu(1, 0.5) + 8));
           chip(c, "full code: in the pinned comment", W / 2, 960, "#fde68a", INK, seg(f, cu(1, 0.5) + 20, cu(1, 0.5) + 28), 44);
-          chip(c, T.owner, W / 2, 1080, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.5) + 34, cu(1, 0.5) + 42), big(c, T.owner, 36));   // script review: the shop owner
+          chip(c, "RUN A SHOP? ask your own bot about order 12345", W / 2, 1090, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.5) + 34, cu(1, 0.5) + 42), big(c, "RUN A SHOP? ask your own bot about order 12345", 42));   // script review: the shop owner
+          chip(c, "a sure answer = a guess", W / 2, 1190, "#1e293b", "#fca5a5", seg(f, cu(1, 0.5) + 40, cu(1, 0.5) + 48), 46);
         } else if (P === "loop") {
           c.font = SANS(fit(c, "NEXT · EP55: YOUR OWN MCP SERVER", W - 120, 60), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("NEXT · EP55: YOUR OWN MCP SERVER", W / 2, 330);
           const kf = seg(f, cu(1, 0.3), cu(1, 0.3) + 8);
