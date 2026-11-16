@@ -1,4 +1,4 @@
-# Creative 31 "Written by AI: 0. Flagged as AI: 89." · Nov 16 creative slot · script v2
+# Creative 31 "Written by AI: 0. Flagged as AI: 89." · Nov 16 creative slot · script v3
 
 ## The format
 POV (not used in the last 7 days), one calm narrator, no other characters: "you" are the student. Pictures: a grid of 91
@@ -51,21 +51,33 @@ Both stopped on the hook; it broke at "61%" (vs 89) and drifted at our own test;
    "వ్యాసాలకు ముద్ర"; "దాదాపు సున్నా"; the 1776 line gone.
 6. Caption ask: the % and which detector.
 
-## Script (English, v2; narrator)
+## Render review (human-viewer, v2 render) and what changed (v3)
+All five stopped on 0 vs 89; the POV and the teacher line landed; "any one of the 7" read as "each one", and the end never
+lifted (EN quarters within 1.2 dB). Changes:
+1. "AT LEAST 1 of 7: 89 of 91" (the hook's words) and a bigger "EACH detector, on average" label on the 61% bar.
+2. Telugu line 1 says it too: "కనీసం ఒక్క డిటెక్టర్, మెషీన్ అని ముద్ర వేసినవి: ఎనభై తొమ్మిది".
+3. The pause moved: "Essays by U.S.-born students? | Almost none flagged." (0.7 s, a music drop and a ding on it).
+4. The music lifts from the "keep your drafts" scene into the loop (boosts 1.8 / 2.5, rise 2.9; Telugu 2.0 / 2.6, 3.0).
+5. The grid turns red in the first 2 s (motion from frame 9); the EN laptop verdict and "BUT YOU WROTE IT" stamp up in
+   time; the 61% bar comes in on "seven detectors"; the teacher card on time; the makers' text larger.
+6. "If you're flagged, show them. And offer..." (re-voiced); Telugu "అలాగే అనిపిస్తుంది" (a possible stutter on
+   "కనిపిస్తుంది") and "స్టూడెంట్స్ రాసిన వ్యాసాలకు" re-voiced.
+
+## Script (English, v3; narrator)
 1. (hook) Ninety-one student essays. Written by AI: zero. Flagged as AI, by at least one detector: eighty-nine.
 2. (pov) POV: you wrote yours yourself, in English, your second language. The detector says: AI.
 3. (why) Detectors hunt for plain, predictable words. Careful, simple English looks predictable too.
-4. (study) That's a Stanford study from 2023, seven detectors. Each one, on average, flagged six in ten of those essays. | Essays by U.S.-born students: almost none flagged.
+4. (study) That's a Stanford study from 2023, seven detectors. Each one, on average, flagged six in ten of those essays. Essays by U.S.-born students? | Almost none flagged.
 5. (makers) Even the makers warn: OpenAI shut its own detector for low accuracy, and Turnitin says its score shouldn't be the only proof.
-6. (fix) So keep your drafts and version history from day one. If you're flagged, show them, and offer to explain your essay out loud.
+6. (fix) So keep your drafts and version history from day one. If you're flagged, show them. And offer to explain your essay out loud.
 7. (teachers) And teachers: a score is a reason to talk, not proof.
 8. (loop) Because remember: ninety-one student essays...
 
-## Script (Telugu, v2)
-1. తొంభై ఒక్క స్టూడెంట్స్ వ్యాసాలు. మెషీన్ రాసినవి: సున్నా. మెషీన్ అని ముద్ర: ఎనభై తొమ్మిది.
+## Script (Telugu, v3)
+1. తొంభై ఒక్క స్టూడెంట్స్ వ్యాసాలు. మెషీన్ రాసినవి: సున్నా. కనీసం ఒక్క డిటెక్టర్, మెషీన్ అని ముద్ర వేసినవి: ఎనభై తొమ్మిది.
 2. ఊహించండి: మీ వ్యాసం మీరే రాశారు, ఇంగ్లీష్ మీ రెండో భాష. డిటెక్టర్ మాత్రం, మెషీన్ రాసింది అంటోంది.
-3. డిటెక్టర్లు, ఊహించగలిగే సాదా మాటల కోసం వెతుకుతాయి. జాగ్రత్తగా రాసిన సింపుల్ ఇంగ్లీష్ కూడా, అలాగే కనిపిస్తుంది.
-4. అది రెండు వేల ఇరవై మూడు స్టాన్ఫర్డ్ స్టడీ: ఏడు డిటెక్టర్లు. ఒక్కో డిటెక్టర్, సగటున పదింట్లో ఆరు వ్యాసాలకు ముద్ర వేసింది. | అమెరికాలో పుట్టిన స్టూడెంట్స్ వ్యాసాలకు: దాదాపు సున్నా.
+3. డిటెక్టర్లు, ఊహించగలిగే సాదా మాటల కోసం వెతుకుతాయి. జాగ్రత్తగా రాసిన సింపుల్ ఇంగ్లీష్ కూడా, అలాగే అనిపిస్తుంది.
+4. అది రెండు వేల ఇరవై మూడు స్టాన్ఫర్డ్ స్టడీ: ఏడు డిటెక్టర్లు. ఒక్కో డిటెక్టర్, సగటున పదింట్లో ఆరు వ్యాసాలకు ముద్ర వేసింది. | అమెరికాలో పుట్టిన స్టూడెంట్స్ రాసిన వ్యాసాలకు: దాదాపు సున్నా.
 5. తయారు చేసినవాళ్ళే హెచ్చరిస్తున్నారు: ఈ స్కోర్ ఒక్కటే రుజువు కాదు.
 6. అందుకే, ముందు నుంచే డ్రాఫ్ట్స్, వెర్షన్ హిస్టరీ సేవ్ చేసి ఉంచండి. | ముద్ర పడితే, అవి చూపించండి; మీ వ్యాసం నోటితో వివరిస్తానని చెప్పండి.
 7. టీచర్లకి: స్కోర్, మాట్లాడటానికి ఒక కారణం; రుజువు కాదు.
