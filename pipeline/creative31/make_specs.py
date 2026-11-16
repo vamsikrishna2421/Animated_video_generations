@@ -60,7 +60,7 @@ SCENES = [("s_a", (1, 2, 3), {"boost": 1.2, "tail": 0.0}),
           ("s_c", (6, 7), {"boost": 1.8, "lift": 0.8, "tail": 0.0}),   # render review: the end never lifted
           ("s_d", (8,), {"outro": True, "pre": 0.3, "boost": 2.5, "lift": 0.9, "rise": 2.9, "tail": 0.0})]
 GAP = {1: 0.4, 2: 0.35, 3: 0.35, 4: 0.4, 5: 0.4, 6: 0.35, 7: 0.4, 8: 0.0}
-FLAGS_TE = {"s_b": {"boost": 1.2}, "s_c": {"boost": 2.0}, "s_d": {"boost": 2.6, "rise": 3.0}}
+FLAGS_TE = {"s_b": {"boost": 1.2}, "s_c": {"boost": 2.0}, "s_d": {"boost": 2.8, "rise": 3.3}}
 YT = {"s_a": "Written by AI: 0. Flagged: 89.", "s_b": "The study, and the makers", "s_c": "What to do", "s_d": "91 essays"}
 MARK = re.compile(r"\[\d+\]\s*")
 
@@ -84,7 +84,7 @@ def spec(lang="en"):
             raw = tel if te else en
             ln = {"who": "storyteller", "file": f"{n:02d}_storyteller.wav", "text": raw, "maxgap": 0.3, "gap": GAP.get(n, 0.3),
                   "show": (SHOW_TE.get(n) if te else None) or SHOW.get(n, MARK.sub("", en).replace(" | ", " ").strip()),
-                  "tempo": 1.1 if te else 1.04}
+                  "tempo": 1.13 if te else 1.04}
             if not te and n in TTS_EN:
                 ln["tts"] = TTS_EN[n]
             if " | " in raw:

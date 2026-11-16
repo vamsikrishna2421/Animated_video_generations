@@ -13,42 +13,37 @@
  "fps": 30,
  "musicDrops": [
   [
-   891,
-   924
+   944,
+   977
   ]
  ],
  "musicBoosts": [
   [
    0,
-   657,
+   1227,
    1.2
   ],
   [
-   657,
-   1145,
-   1.3
+   1227,
+   1636,
+   2.0
   ],
   [
-   1145,
-   1575,
-   1.6
+   1636,
+   1774,
+   2.8
   ],
   [
-   1575,
-   1716,
-   2.3
-  ],
-  [
-   1575,
-   1716,
-   2.7,
+   1636,
+   1774,
+   3.3,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1716,
+ "totalFrames": 1774,
  "music": "reel/creative31te/score.wav",
  "scenes": [
   {
@@ -97,7 +92,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 657,
+   "frames": 716,
    "lines": [
     {
      "who": "storyteller",
@@ -106,66 +101,91 @@
      "sub": null,
      "audio": "reel/creative31te/line_01.wav",
      "from": 15,
-     "frames": 168,
+     "frames": 230,
      "words": [
       {
        "w": "91",
        "from": 16,
-       "to": 22
+       "to": 21
       },
       {
        "w": "student",
-       "from": 22,
-       "to": 38
+       "from": 21,
+       "to": 36
       },
       {
        "w": "essays.",
-       "from": 38,
-       "to": 54
+       "from": 36,
+       "to": 51
       },
       {
        "w": "Written",
-       "from": 54,
-       "to": 79
+       "from": 51,
+       "to": 75
       },
       {
        "w": "by",
-       "from": 79,
-       "to": 85
+       "from": 75,
+       "to": 80
       },
       {
        "w": "a",
-       "from": 85,
-       "to": 89
+       "from": 80,
+       "to": 84
       },
       {
        "w": "machine:",
-       "from": 89,
-       "to": 124
+       "from": 84,
+       "to": 111
       },
       {
        "w": "0.",
-       "from": 124,
-       "to": 130
+       "from": 111,
+       "to": 116
       },
       {
        "w": "Stamped",
-       "from": 130,
+       "from": 116,
        "to": 146
       },
       {
-       "w": "'machine':",
+       "w": "'machine'",
        "from": 146,
-       "to": 175
+       "to": 177
+      },
+      {
+       "w": "by",
+       "from": 177,
+       "to": 183
+      },
+      {
+       "w": "at",
+       "from": 183,
+       "to": 192
+      },
+      {
+       "w": "least",
+       "from": 192,
+       "to": 203
+      },
+      {
+       "w": "one",
+       "from": 203,
+       "to": 211
+      },
+      {
+       "w": "detector:",
+       "from": 211,
+       "to": 237
       },
       {
        "w": "89.",
-       "from": 175,
-       "to": 183
+       "from": 237,
+       "to": 245
       }
      ],
      "cues": {
-      "1": 74
+      "1": 63
      }
     },
     {
@@ -174,102 +194,102 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative31te/line_02.wav",
-     "from": 195,
-     "frames": 215,
+     "from": 257,
+     "frames": 209,
      "words": [
       {
        "w": "Imagine:",
-       "from": 195,
-       "to": 208
+       "from": 257,
+       "to": 270
       },
       {
        "w": "you",
-       "from": 208,
-       "to": 223
+       "from": 270,
+       "to": 284
       },
       {
        "w": "wrote",
-       "from": 223,
-       "to": 231
+       "from": 284,
+       "to": 293
       },
       {
        "w": "your",
-       "from": 231,
-       "to": 245
+       "from": 293,
+       "to": 306
       },
       {
        "w": "essay",
-       "from": 245,
-       "to": 254
+       "from": 306,
+       "to": 315
       },
       {
        "w": "yourself;",
-       "from": 254,
-       "to": 276
+       "from": 315,
+       "to": 336
       },
       {
        "w": "English",
-       "from": 276,
-       "to": 287
+       "from": 336,
+       "to": 353
       },
       {
        "w": "is",
-       "from": 287,
-       "to": 297
+       "from": 353,
+       "to": 357
       },
       {
        "w": "your",
-       "from": 297,
-       "to": 304
+       "from": 357,
+       "to": 364
       },
       {
        "w": "second",
-       "from": 304,
-       "to": 314
-      },
-      {
-       "w": "language.",
-       "from": 314,
-       "to": 341
-      },
-      {
-       "w": "The",
-       "from": 341,
-       "to": 346
-      },
-      {
-       "w": "detector",
-       "from": 346,
-       "to": 367
-      },
-      {
-       "w": "says",
-       "from": 367,
+       "from": 364,
        "to": 374
       },
       {
-       "w": "a",
+       "w": "language.",
        "from": 374,
-       "to": 376
+       "to": 401
+      },
+      {
+       "w": "The",
+       "from": 401,
+       "to": 406
+      },
+      {
+       "w": "detector",
+       "from": 406,
+       "to": 426
+      },
+      {
+       "w": "says",
+       "from": 426,
+       "to": 433
+      },
+      {
+       "w": "a",
+       "from": 433,
+       "to": 436
       },
       {
        "w": "machine",
-       "from": 376,
-       "to": 388
+       "from": 436,
+       "to": 451
       },
       {
        "w": "wrote",
-       "from": 388,
-       "to": 400
+       "from": 451,
+       "to": 460
       },
       {
        "w": "it.",
-       "from": 400,
-       "to": 406
+       "from": 460,
+       "to": 466
       }
      ],
      "cues": {
-      "1": 315
+      "1": 375
      }
     },
     {
@@ -278,82 +298,82 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative31te/line_03.wav",
-     "from": 420,
-     "frames": 226,
+     "from": 476,
+     "frames": 227,
      "words": [
       {
        "w": "Detectors",
-       "from": 421,
-       "to": 453
+       "from": 480,
+       "to": 510
       },
       {
        "w": "look",
-       "from": 453,
-       "to": 462
-      },
-      {
-       "w": "for",
-       "from": 462,
-       "to": 470
-      },
-      {
-       "w": "plain,",
-       "from": 470,
-       "to": 483
-      },
-      {
-       "w": "predictable",
-       "from": 483,
-       "to": 506
-      },
-      {
-       "w": "words.",
-       "from": 506,
+       "from": 510,
        "to": 519
       },
       {
-       "w": "Carefully",
+       "w": "for",
        "from": 519,
-       "to": 550
+       "to": 527
+      },
+      {
+       "w": "plain,",
+       "from": 527,
+       "to": 539
+      },
+      {
+       "w": "predictable",
+       "from": 539,
+       "to": 561
+      },
+      {
+       "w": "words.",
+       "from": 561,
+       "to": 573
+      },
+      {
+       "w": "Carefully",
+       "from": 573,
+       "to": 606
       },
       {
        "w": "written",
-       "from": 550,
-       "to": 565
-      },
-      {
-       "w": "simple",
-       "from": 565,
-       "to": 587
-      },
-      {
-       "w": "English",
-       "from": 587,
-       "to": 602
-      },
-      {
-       "w": "looks",
-       "from": 602,
+       "from": 606,
        "to": 620
       },
       {
-       "w": "the",
+       "w": "simple",
        "from": 620,
-       "to": 628
+       "to": 644
+      },
+      {
+       "w": "English",
+       "from": 644,
+       "to": 659
+      },
+      {
+       "w": "looks",
+       "from": 659,
+       "to": 674
+      },
+      {
+       "w": "the",
+       "from": 674,
+       "to": 681
       },
       {
        "w": "same",
-       "from": 628,
-       "to": 637
+       "from": 681,
+       "to": 690
       },
       {
        "w": "way.",
-       "from": 637,
-       "to": 646
+       "from": 690,
+       "to": 699
       }
      ],
      "cues": {
-      "1": 519
+      "1": 573
      }
     }
    ]
@@ -399,8 +419,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 657,
-   "frames": 488,
+   "from": 716,
+   "frames": 511,
    "lines": [
     {
      "who": "storyteller",
@@ -409,122 +429,122 @@
      "sub": null,
      "audio": "reel/creative31te/line_04.wav",
      "from": 0,
-     "frames": 350,
+     "frames": 359,
      "words": [
       {
        "w": "That's",
        "from": 1,
-       "to": 22
+       "to": 21
       },
       {
        "w": "a",
-       "from": 22,
-       "to": 26
+       "from": 21,
+       "to": 25
       },
       {
        "w": "2023",
-       "from": 26,
-       "to": 36
+       "from": 25,
+       "to": 34
       },
       {
        "w": "Stanford",
-       "from": 36,
-       "to": 53
+       "from": 34,
+       "to": 51
       },
       {
        "w": "study:",
-       "from": 53,
-       "to": 75
+       "from": 51,
+       "to": 74
       },
       {
        "w": "7",
-       "from": 75,
-       "to": 89
+       "from": 74,
+       "to": 87
       },
       {
        "w": "detectors.",
-       "from": 89,
-       "to": 110
+       "from": 87,
+       "to": 107
       },
       {
        "w": "Each",
-       "from": 110,
-       "to": 135
+       "from": 107,
+       "to": 131
       },
       {
        "w": "detector,",
-       "from": 135,
-       "to": 165
+       "from": 131,
+       "to": 160
       },
       {
        "w": "on",
-       "from": 165,
-       "to": 171
+       "from": 160,
+       "to": 166
       },
       {
        "w": "average,",
-       "from": 171,
-       "to": 196
+       "from": 166,
+       "to": 191
       },
       {
        "w": "stamped",
-       "from": 196,
-       "to": 211
+       "from": 191,
+       "to": 206
       },
       {
        "w": "6",
-       "from": 211,
-       "to": 215
+       "from": 206,
+       "to": 209
       },
       {
        "w": "in",
+       "from": 209,
+       "to": 215
+      },
+      {
+       "w": "10",
        "from": 215,
        "to": 220
       },
       {
-       "w": "10",
-       "from": 220,
-       "to": 226
-      },
-      {
        "w": "essays.",
-       "from": 226,
-       "to": 242
+       "from": 220,
+       "to": 235
       },
       {
        "w": "Essays",
-       "from": 258,
-       "to": 273
+       "from": 252,
+       "to": 268
       },
       {
        "w": "by",
-       "from": 273,
-       "to": 279
+       "from": 268,
+       "to": 275
       },
       {
        "w": "US-born",
-       "from": 279,
-       "to": 296
+       "from": 275,
+       "to": 299
       },
       {
        "w": "students:",
-       "from": 296,
-       "to": 323
+       "from": 299,
+       "to": 322
       },
       {
        "w": "almost",
-       "from": 323,
-       "to": 338
+       "from": 322,
+       "to": 345
       },
       {
        "w": "zero.",
-       "from": 338,
-       "to": 350
+       "from": 345,
+       "to": 359
       }
      ],
      "cues": {
-      "1": 132,
-      "2": 258
+      "1": 128,
+      "2": 252
      }
     },
     {
@@ -533,62 +553,62 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative31te/line_05.wav",
-     "from": 362,
-     "frames": 113,
+     "from": 371,
+     "frames": 111,
      "words": [
       {
        "w": "Even",
-       "from": 364,
-       "to": 373
+       "from": 372,
+       "to": 381
       },
       {
        "w": "the",
-       "from": 373,
-       "to": 380
+       "from": 381,
+       "to": 388
       },
       {
        "w": "makers",
-       "from": 380,
-       "to": 392
+       "from": 388,
+       "to": 400
       },
       {
        "w": "warn:",
-       "from": 392,
-       "to": 403
+       "from": 400,
+       "to": 411
       },
       {
        "w": "this",
-       "from": 403,
-       "to": 412
+       "from": 411,
+       "to": 420
       },
       {
        "w": "score",
-       "from": 412,
-       "to": 431
+       "from": 420,
+       "to": 438
       },
       {
        "w": "alone",
-       "from": 431,
-       "to": 451
+       "from": 438,
+       "to": 458
       },
       {
        "w": "is",
-       "from": 451,
-       "to": 456
-      },
-      {
-       "w": "not",
-       "from": 456,
+       "from": 458,
        "to": 463
       },
       {
-       "w": "proof.",
+       "w": "not",
        "from": 463,
-       "to": 476
+       "to": 470
+      },
+      {
+       "w": "proof.",
+       "from": 470,
+       "to": 482
       }
      ],
      "cues": {
-      "1": 425
+      "1": 432
      }
     }
    ]
@@ -634,8 +654,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1145,
-   "frames": 430,
+   "from": 1227,
+   "frames": 409,
    "lines": [
     {
      "who": "storyteller",
@@ -644,126 +664,126 @@
      "sub": null,
      "audio": "reel/creative31te/line_06.wav",
      "from": 0,
-     "frames": 279,
+     "frames": 272,
      "words": [
       {
        "w": "So",
        "from": 8,
-       "to": 14
+       "to": 13
       },
       {
        "w": "save",
-       "from": 14,
-       "to": 32
+       "from": 13,
+       "to": 31
       },
       {
        "w": "your",
-       "from": 32,
-       "to": 41
+       "from": 31,
+       "to": 40
       },
       {
        "w": "drafts",
-       "from": 41,
-       "to": 54
+       "from": 40,
+       "to": 53
       },
       {
        "w": "and",
-       "from": 54,
-       "to": 70
+       "from": 53,
+       "to": 69
       },
       {
        "w": "version",
-       "from": 70,
-       "to": 85
+       "from": 69,
+       "to": 83
       },
       {
        "w": "history",
-       "from": 85,
-       "to": 100
+       "from": 83,
+       "to": 97
       },
       {
        "w": "from",
-       "from": 100,
-       "to": 109
+       "from": 97,
+       "to": 106
       },
       {
        "w": "the",
-       "from": 109,
-       "to": 116
+       "from": 106,
+       "to": 113
       },
       {
        "w": "start.",
-       "from": 116,
-       "to": 129
+       "from": 113,
+       "to": 126
       },
       {
        "w": "If",
-       "from": 142,
-       "to": 147
+       "from": 139,
+       "to": 143
       },
       {
        "w": "you're",
-       "from": 147,
-       "to": 157
+       "from": 143,
+       "to": 154
       },
       {
        "w": "stamped,",
-       "from": 157,
-       "to": 179
+       "from": 154,
+       "to": 175
       },
       {
        "w": "show",
-       "from": 179,
-       "to": 187
+       "from": 175,
+       "to": 182
       },
       {
        "w": "them,",
-       "from": 187,
-       "to": 205
+       "from": 182,
+       "to": 200
       },
       {
        "w": "and",
+       "from": 200,
+       "to": 205
+      },
+      {
+       "w": "say",
        "from": 205,
        "to": 211
       },
       {
-       "w": "say",
-       "from": 211,
-       "to": 217
-      },
-      {
        "w": "you'll",
-       "from": 217,
-       "to": 234
+       "from": 211,
+       "to": 229
       },
       {
        "w": "explain",
-       "from": 234,
-       "to": 246
+       "from": 229,
+       "to": 240
       },
       {
        "w": "your",
-       "from": 246,
-       "to": 254
+       "from": 240,
+       "to": 248
       },
       {
        "w": "essay",
-       "from": 254,
-       "to": 263
+       "from": 248,
+       "to": 257
       },
       {
        "w": "out",
-       "from": 263,
-       "to": 269
+       "from": 257,
+       "to": 263
       },
       {
        "w": "loud.",
-       "from": 269,
-       "to": 279
+       "from": 263,
+       "to": 272
       }
      ],
      "cues": {
-      "1": 142
+      "1": 139
      }
     },
     {
@@ -772,77 +792,77 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative31te/line_07.wav",
-     "from": 289,
-     "frames": 116,
+     "from": 282,
+     "frames": 113,
      "words": [
       {
        "w": "To",
-       "from": 290,
-       "to": 294
+       "from": 283,
+       "to": 287
       },
       {
        "w": "teachers:",
-       "from": 294,
-       "to": 322
+       "from": 287,
+       "to": 312
       },
       {
        "w": "a",
-       "from": 322,
-       "to": 325
+       "from": 312,
+       "to": 315
       },
       {
        "w": "score",
-       "from": 325,
-       "to": 343
+       "from": 315,
+       "to": 333
       },
       {
        "w": "is",
-       "from": 343,
-       "to": 347
+       "from": 333,
+       "to": 337
       },
       {
        "w": "a",
-       "from": 347,
-       "to": 350
+       "from": 337,
+       "to": 340
       },
       {
        "w": "reason",
-       "from": 350,
-       "to": 360
+       "from": 340,
+       "to": 351
       },
       {
        "w": "to",
-       "from": 360,
-       "to": 365
+       "from": 351,
+       "to": 355
       },
       {
        "w": "talk;",
-       "from": 365,
-       "to": 373
+       "from": 355,
+       "to": 364
       },
       {
        "w": "it",
-       "from": 373,
-       "to": 378
+       "from": 364,
+       "to": 368
       },
       {
        "w": "is",
-       "from": 378,
-       "to": 389
+       "from": 368,
+       "to": 379
       },
       {
        "w": "not",
-       "from": 389,
-       "to": 395
+       "from": 379,
+       "to": 385
       },
       {
        "w": "proof.",
-       "from": 395,
-       "to": 405
+       "from": 385,
+       "to": 395
       }
      ],
      "cues": {
-      "1": 305
+      "1": 299
      }
     }
    ]
@@ -884,8 +904,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1575,
-   "frames": 141,
+   "from": 1636,
+   "frames": 138,
    "lines": [
     {
      "who": "storyteller",
@@ -894,36 +914,36 @@
      "sub": null,
      "audio": "reel/creative31te/line_08.wav",
      "from": 9,
-     "frames": 105,
+     "frames": 102,
      "words": [
       {
        "w": "Because",
        "from": 12,
-       "to": 37
+       "to": 36
       },
       {
        "w": "remember:",
-       "from": 37,
-       "to": 66
+       "from": 36,
+       "to": 65
       },
       {
        "w": "91",
-       "from": 66,
-       "to": 72
+       "from": 65,
+       "to": 71
       },
       {
        "w": "student",
-       "from": 72,
-       "to": 93
+       "from": 71,
+       "to": 91
       },
       {
        "w": "essays...",
-       "from": 93,
-       "to": 113
+       "from": 91,
+       "to": 111
       }
      ],
      "cues": {
-      "1": 53
+      "1": 52
      }
     }
    ]
