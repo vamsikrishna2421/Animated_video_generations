@@ -1,0 +1,474 @@
+{
+ "id": "ep54te",
+ "title": "₹1,299 or ₹0? Build an AI Agent with Tools (EP54) (Telugu audio)",
+ "label": "EP54",
+ "banner": "Build an AI agent with tools",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.2,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_agent54",
+   "tail": 0.0,
+   "boost": 1.2,
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "why",
+      "n": 2
+     },
+     {
+      "prop": "title",
+      "n": 3
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "shop": "Kiran Mobiles · order help",
+     "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
+     "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
+     "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
+     "result": [
+      "\"item\": \"Bluetooth earphones\"",
+      "\"amount\": \"Rs 1,299\"",
+      "\"status\": \"returned, not yet received at our warehouse\"",
+      "\"refund\": \"not started: it starts when the return reaches us\""
+     ],
+     "final": "Your refund process will start once the earphones reach our warehouse.",
+     "code": {
+      "step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
+      "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+      "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
+     },
+     "wrong": [
+      [
+       "4417",
+       "refund processed",
+       "not started"
+      ],
+      [
+       "4502",
+       "shipped",
+       "packed, not shipped"
+      ],
+      [
+       "4475",
+       "ships in 2-3 days",
+       "out for delivery today"
+      ],
+      [
+       "4650",
+       "confirmed",
+       "payment pending"
+      ],
+      [
+       "4362",
+       "delivered March 15",
+       "delivered Nov 9"
+      ],
+      [
+       "4388",
+       "5-7 business days",
+       "arrives Nov 18"
+      ]
+     ],
+     "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it"
+    },
+    "yt": {
+     "chapter": "₹1,299 or ₹0?",
+     "title": "₹1,299 or ₹0?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "వెయ్యి రెండు వందల తొంభై తొమ్మిది రూపాయలు రిఫండ్ అయింది, అంది షాప్ చాట్‌బాట్. [1] షాప్ రికార్డ్ లో: సున్నా. రిఫండ్ ఇంకా స్టార్ట్ కూడా కాలేదు.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "₹1,299 refunded, said the shop's chatbot. In the shop's record: ₹0. The refund hasn't even started.",
+     "tempo": 1.1
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "చాట్‌బాట్ కి చూసే దారే లేదు. [1] అందుకే, రిఫండ్ జవాబు మామూలుగా ఎలా ఉంటుందో, అలా రాసేసింది.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "The chatbot had no way to look. So it wrote what a refund reply usually sounds like.",
+     "tempo": 1.1
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "ఈ రోజు: దానికి ఒక టూల్ ఇద్దాం. [1] ఏజెంట్ అంటే, మీ కోడ్ ని పనులు చేయమని అడగగలిగే చాట్‌బాట్.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "Today: let's give it one tool. An agent is a chatbot that can ask your code to do things.",
+     "tempo": 1.1
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_agent54",
+   "tail": 0.0,
+   "boost": 0.85,
+   "lift": 0.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "step1",
+      "n": 4
+     },
+     {
+      "prop": "step2",
+      "n": 5
+     },
+     {
+      "prop": "step3",
+      "n": 6
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "shop": "Kiran Mobiles · order help",
+     "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
+     "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
+     "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
+     "result": [
+      "\"item\": \"Bluetooth earphones\"",
+      "\"amount\": \"Rs 1,299\"",
+      "\"status\": \"returned, not yet received at our warehouse\"",
+      "\"refund\": \"not started: it starts when the return reaches us\""
+     ],
+     "final": "Your refund process will start once the earphones reach our warehouse.",
+     "code": {
+      "step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
+      "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+      "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
+     },
+     "wrong": [
+      [
+       "4417",
+       "refund processed",
+       "not started"
+      ],
+      [
+       "4502",
+       "shipped",
+       "packed, not shipped"
+      ],
+      [
+       "4475",
+       "ships in 2-3 days",
+       "out for delivery today"
+      ],
+      [
+       "4650",
+       "confirmed",
+       "payment pending"
+      ],
+      [
+       "4362",
+       "delivered March 15",
+       "delivered Nov 9"
+      ],
+      [
+       "4388",
+       "5-7 business days",
+       "arrives Nov 18"
+      ]
+     ],
+     "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it"
+    },
+    "yt": {
+     "chapter": "One tool: 3 steps",
+     "title": "One tool: 3 steps",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "స్టెప్ వన్: టూల్ గురించి చెప్పండి: ఆర్డర్ నంబర్ తో ఆర్డర్ వివరాలు. [1] వాడాలంటే, చాట్‌బాట్ ఒక్క జేసన్ లైన్ తో జవాబిస్తుంది.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Step 1: describe the tool: order details by order number. To use it, the chatbot replies with one JSON line.",
+     "tempo": 1.1
+    },
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "స్టెప్ టూ: మీ కోడ్ ఆ లైన్ చదివి, ఆర్డర్ వెతుకుతుంది. [1] చాట్‌బాట్ మీ సిస్టమ్ ని తాకదు; మీ కోడే తాకుతుంది.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "Step 2: your code reads that line and looks the order up. The chatbot doesn't touch your system; your code does.",
+     "tempo": 1.1
+    },
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "స్టెప్ త్రీ: ఆ రిజల్ట్ తిరిగి పంపండి. [1] ఇప్పుడు, షాప్ రికార్డ్ నుంచే జవాబిస్తుంది.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Step 3: send that result back. Now it answers from the shop's record.",
+     "tempo": 1.1
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_agent54",
+   "tail": 0.0,
+   "boost": 1.4,
+   "lift": 0.7,
+   "drop_at": [
+    [
+     0,
+     2,
+     0.4
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 7
+     },
+     {
+      "prop": "rule",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "shop": "Kiran Mobiles · order help",
+     "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
+     "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
+     "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
+     "result": [
+      "\"item\": \"Bluetooth earphones\"",
+      "\"amount\": \"Rs 1,299\"",
+      "\"status\": \"returned, not yet received at our warehouse\"",
+      "\"refund\": \"not started: it starts when the return reaches us\""
+     ],
+     "final": "Your refund process will start once the earphones reach our warehouse.",
+     "code": {
+      "step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
+      "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+      "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
+     },
+     "wrong": [
+      [
+       "4417",
+       "refund processed",
+       "not started"
+      ],
+      [
+       "4502",
+       "shipped",
+       "packed, not shipped"
+      ],
+      [
+       "4475",
+       "ships in 2-3 days",
+       "out for delivery today"
+      ],
+      [
+       "4650",
+       "confirmed",
+       "payment pending"
+      ],
+      [
+       "4362",
+       "delivered March 15",
+       "delivered Nov 9"
+      ],
+      [
+       "4388",
+       "5-7 business days",
+       "arrives Nov 18"
+      ]
+     ],
+     "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it"
+    },
+    "yt": {
+     "chapter": "Our test",
+     "title": "Our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "మా టెస్ట్, పది మంది కస్టమర్లు. [1] టూల్ లేకుండా, చూడకుండానే పదింటికీ జవాబిచ్చింది; ఆరు తప్పు. <pause 0.5> [2] టూల్ తో, పదీ చూసింది; పదీ కరెక్ట్.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "Our test, 10 customers. Without the tool, it answered all 10 without looking; 6 wrong. <pause 0.5> With the tool, it looked up all 10; all 10 right.",
+     "tempo": 1.1,
+     "tts": "మా టెస్ట్, పది మంది కస్టమర్లు. టూల్ లేకుండా, చూడకుండానే పదింటికీ జవాబిచ్చింది; ఆరు తప్పు.",
+     "file2": "07b_storyteller.wav",
+     "tts2": "టూల్ తో, పదీ చూసింది; పదీ కరెక్ట్.",
+     "pause": 0.5
+    },
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "మీరు తయారు చేస్తే: చాట్‌బాట్ అడుగుతుంది, ఏది రన్ అవ్వాలో మీ కోడే నిర్ణయిస్తుంది. <pause 0.4> [1] మీరు వాడితే: రిఫండ్ ని, షాప్ ఆర్డర్ పేజీలోనే చూసుకోండి.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "show": "If you build one: the chatbot asks, your code decides what runs. <pause 0.4> If you use one: check the refund on the shop's order page.",
+     "tempo": 1.1,
+     "tts": "మీరు తయారు చేస్తే: చాట్‌బాట్ అడుగుతుంది, ఏది రన్ అవ్వాలో మీ కోడే నిర్ణయిస్తుంది.",
+     "file2": "08b_storyteller.wav",
+     "tts2": "మీరు వాడితే: రిఫండ్ ని, షాప్ ఆర్డర్ పేజీలోనే చూసుకోండి.",
+     "pause": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_agent54",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.4,
+   "boost": 2.2,
+   "lift": 0.8,
+   "rise": 2.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "shop": "Kiran Mobiles · order help",
+     "q": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
+     "plain": "Yes, your refund of Rs 1,299 for order 4417 has been processed.",
+     "call": "{\"tool\": \"get_order\", \"order_id\": \"4417\"}",
+     "result": [
+      "\"item\": \"Bluetooth earphones\"",
+      "\"amount\": \"Rs 1,299\"",
+      "\"status\": \"returned, not yet received at our warehouse\"",
+      "\"refund\": \"not started: it starts when the return reaches us\""
+     ],
+     "final": "Your refund process will start once the earphones reach our warehouse.",
+     "code": {
+      "step1": "TOOL = \"get_order(order_id): status and refund from our system\"",
+      "step2": "result = get_order(json.loads(reply)[\"order_id\"])",
+      "step3": "messages.append({\"role\": \"user\", \"content\": f\"Tool result: {result}\"})"
+     },
+     "wrong": [
+      [
+       "4417",
+       "refund processed",
+       "not started"
+      ],
+      [
+       "4502",
+       "shipped",
+       "packed, not shipped"
+      ],
+      [
+       "4475",
+       "ships in 2-3 days",
+       "out for delivery today"
+      ],
+      [
+       "4650",
+       "confirmed",
+       "payment pending"
+      ],
+      [
+       "4362",
+       "delivered March 15",
+       "delivered Nov 9"
+      ],
+      [
+       "4388",
+       "5-7 business days",
+       "arrives Nov 18"
+      ]
+     ],
+     "docs": "OpenAI's and Google's own docs: the model returns the tool name and arguments; your code runs it"
+    },
+    "yt": {
+     "chapter": "Next: MCP",
+     "title": "Next: MCP",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "09_storyteller.wav",
+     "text": "తర్వాత: మీ సొంత ఎం సి పి సర్వర్. <pause 0.4> [1] మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. రిఫండ్ ఇంకా స్టార్ట్ కాలేదు.",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "show": "Next: your own MCP server. <pause 0.4> And order 4417? ₹0. The refund hasn't started yet.",
+     "tempo": 1.1,
+     "tts": "తర్వాత: మీ సొంత ఎం సి పి సర్వర్.",
+     "file2": "09b_storyteller.wav",
+     "tts2": "మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. రిఫండ్ ఇంకా స్టార్ట్ కాలేదు.",
+     "pause": 0.4
+    }
+   ]
+  }
+ ]
+}
