@@ -14,40 +14,41 @@ R = ROOT / "reels"
 LINES = {   # v2 (script review): "made-up shop" said; "twelve ninety-nine"; "the simplest agent"; the step-2 code is the code
     # that ran (find the JSON line), with the beat it earned (twice it added a guess after the line; our code dropped it)
     1: ("hook", "Twelve ninety-nine refunded, said the shop's bot. [1] The shop's own record: zero. The refund hasn't even started.",
-        "పన్నెండు వందల తొంభై తొమ్మిది రిఫండ్ అయింది, అంది షాప్ చాట్‌బాట్. [1] షాప్ రికార్డ్ లో: సున్నా. రిఫండ్ ఇంకా స్టార్ట్ కూడా కాలేదు."),
+        "పన్నెండు వందల తొంభై తొమ్మిది రిఫండ్ అయిపోయిందట, షాప్ చాట్‌బాట్ ప్రకారం. [1] షాప్ రికార్డ్ లో: సున్నా. రిఫండ్ ఇంకా రాలేదు."),
     2: ("why", "A made-up shop, a real test: the bot had no way to look. [1] So it wrote what a refund reply usually says.",
-        "ఇది మేం అల్లిన షాప్, టెస్ట్ నిజం: చాట్‌బాట్ కి చూసే దారే లేదు. [1] అందుకే, రిఫండ్ జవాబు మామూలుగా ఎలా ఉంటుందో, అలా రాసేసింది."),
+        "ఇది ఉత్తుత్తి షాప్, టెస్ట్ నిజం: చాట్‌బాట్ కి చూసే దారే లేదు. [1] అందుకే, రిఫండ్ జవాబు మామూలుగా ఎలా ఉంటుందో, అలా రాసేసింది."),
     3: ("title", "Today: the simplest agent. [1] An AI that can ask your code to do one thing.",
         "ఈ రోజు: అన్నిటికంటే సింపుల్ ఏజెంట్. [1] మీ కోడ్ తో ఒక పని చేయించగలిగే చాట్‌బాట్."),
     4: ("step1", "Step one: describe the tool, and say: to use it, reply with one line of JSON. [1] Here: get order, by order number.",
         "స్టెప్ వన్: టూల్ గురించి చెప్పండి; వాడాలంటే, ఒక్క జేసన్ లైన్ తో అడగమనండి. [1] ఇక్కడ: ఆర్డర్ నంబర్ తో ఆర్డర్ వివరాలు."),
-    5: ("step2", "Step two: your code finds that line and runs the lookup. [1] Twice, the AI added a guess after the line. Our code ignored it.",
-        "స్టెప్ టూ: మీ కోడ్ ఆ లైన్ వెతికి, ఆర్డర్ వివరాలు తెస్తుంది. | [1] రెండుసార్లు, ఆ లైన్ తర్వాత ఊహ కూడా రాసింది; మా కోడ్ దాన్ని పట్టించుకోలేదు."),
+    5: ("step2", "Step two: your code finds that line and runs the lookup. | [1] Twice, it added a guess after the line: December fifteenth. The record said November eighteenth. Our code only used the line.",
+        "స్టెప్ టూ: మీ కోడ్ ఆ లైన్ వెతికి, ఆర్డర్ వివరాలు తెస్తుంది. | [1] రెండుసార్లు, ఆ లైన్ తర్వాత ఊహ కూడా రాసింది: డిసెంబర్ పదిహేను అని. రికార్డ్ లో నవంబర్ పద్దెనిమిది. మా కోడ్ ఆ లైన్ నే వాడింది."),
     6: ("step3", "Step three: send the result back. [1] Now it answers from the shop's record.",
         "స్టెప్ త్రీ: ఆ రిజల్ట్ తిరిగి పంపండి. [1] ఇప్పుడు, షాప్ రికార్డ్ నుంచే జవాబిస్తుంది."),
     7: ("test", "Our test, ten customers. [1] Without the tool: ten answers, no checking, six wrong. | [2] With the tool: ten lookups, ten right.",
         "మా టెస్ట్, పది మంది కస్టమర్లు. [1] టూల్ లేకుండా: పది జవాబులు, ఒక్కటీ చూడలేదు, ఆరు తప్పు. | [2] టూల్ తో: పది ఆర్డర్లూ చూసింది, పదీ కరెక్ట్."),
     8: ("rule", "If you build one: the AI only asks; your code decides what runs. [1] If you use one: check the refund on the shop's own order page.",
-        "మీరు తయారు చేస్తే: చాట్‌బాట్ అడుగుతుంది, ఏది రన్ అవ్వాలో మీ కోడే నిర్ణయిస్తుంది. | [1] మీరు వాడితే: రిఫండ్ స్టేటస్, షాప్ ఆర్డర్ పేజీలోనే చూసుకోండి."),
+        "మీరు తయారు చేస్తే: చాట్‌బాట్ అడుగుతుంది, ఏది రన్ అవ్వాలో మీ కోడే నిర్ణయిస్తుంది. | [1] మీరు వాడితే: రిఫండ్ ఎక్కడుందో, షాప్ ఆర్డర్ పేజీలోనే చూసుకోండి."),
     9: ("loop", "Next: your own M C P server. [1] And order forty-four seventeen? Zero rupees. Not started.",
-        "తర్వాత: మీ సొంత, ఎం, సి, పి, సర్వర్. | [1] మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. ఇంకా స్టార్ట్ కాలేదు."),
+        "తర్వాత: మీ సొంత ఎమ్ సీ పీ సర్వర్. | [1] మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. రిఫండ్ ఇంకా రాలేదు."),
 }
-SHOW = {1: "₹1,299 refunded, said the shop's bot. The shop's own record: ₹0. The refund hasn't even started.",
-        7: "Our test, 10 customers. Without the tool: 10 answers, no checking, 6 wrong. <pause 0.5> With the tool: 10 lookups, 10 right.",
+SHOW = {5: "Step two: your code finds that line and runs the lookup. <pause 0.4> Twice, it added a guess after the line: December 15th. The record said November 18th. Our code only used the line.",
+        1: "₹1,299 refunded, said the shop's bot. The shop's own record: ₹0. The refund hasn't even started.",
+        7: "Our test, 10 customers. Without the tool: 10 answers, no checking, 6 wrong. <pause 0.75> With the tool: 10 lookups, 10 right.",
         9: "Next: your own MCP server. And order 4417? ₹0. Not started."}
 SHOW_TE = {
-    1: "₹1,299 refunded, said the shop's chatbot. In the shop's record: ₹0. The refund hasn't even started.",
-    2: "A shop we made up, a real test: the chatbot had no way to look. So it wrote what a refund reply usually sounds like.",
+    1: "₹1,299 refunded, says the shop's chatbot. In the shop's record: ₹0. The refund hasn't come yet.",
+    2: "A fake shop, a real test: the chatbot had no way to look. So it wrote what a refund reply usually sounds like.",
     3: "Today: the simplest agent. A chatbot that can get your code to do one thing.",
     4: "Step 1: describe the tool; to use it, tell it to ask with one JSON line. Here: order details by order number.",
-    5: "Step 2: your code finds that line and looks the order up. <pause 0.4> Twice it also wrote a guess after the line; our code ignored it.",
+    5: "Step 2: your code finds that line and brings the order details. <pause 0.4> Twice it also wrote a guess after the line: December 15. The record: November 18. Our code used only the line.",
     6: "Step 3: send that result back. Now it answers from the shop's record.",
-    7: "Our test, 10 customers. Without the tool: 10 answers, not one checked, 6 wrong. <pause 0.5> With the tool: it looked up all 10 orders, all 10 right.",
-    8: "If you build one: the chatbot asks, your code decides what runs. <pause 0.4> If you use one: check the refund status on the shop's order page.",
-    9: "Next: your own MCP server. <pause 0.4> And order 4417? ₹0. Not started yet.",
+    7: "Our test, 10 customers. Without the tool: 10 answers, not one checked, 6 wrong. <pause 0.75> With the tool: it looked up all 10 orders, all 10 right.",
+    8: "If you build one: the chatbot asks, your code decides what runs. <pause 0.4> If you use one: check where your refund is on the shop's order page.",
+    9: "Next: your own MCP server. <pause 0.4> And order 4417? ₹0. The refund hasn't come yet.",
 }
-SPLIT_PAUSE = {7: 0.5}
-SPLIT_PAUSE_TE = {5: 0.4, 7: 0.5, 8: 0.4, 9: 0.4}
+SPLIT_PAUSE = {5: 0.4, 7: 0.75}
+SPLIT_PAUSE_TE = {5: 0.4, 7: 0.75, 8: 0.4, 9: 0.4}
 TTS_EN = {}
 T = {   # on screen: our test (series/scripts/ep54_demo/agent.json); the shop and its orders are made up (the prompt called it "Kiran Mobiles")
     "shop": "a made-up shop · order help",
@@ -75,7 +76,7 @@ SCENES = [("s_a", (1, 2, 3), {"boost": 1.2, "tail": 0.0}),
           ("s_c", (7, 8), {"boost": 1.4, "lift": 0.7, "drop_at": [[0, 2, 0.4]], "tail": 0.0}),
           ("s_d", (9,), {"outro": True, "pre": 0.4, "boost": 2.0, "lift": 0.8, "rise": 2.3, "tail": 0.0})]
 GAP = {1: 0.4, 2: 0.3, 3: 0.35, 4: 0.3, 5: 0.35, 6: 0.3, 7: 0.4, 8: 0.4, 9: 0.0}
-FLAGS_TE = {"s_d": {"boost": 2.2, "rise": 2.5}}
+FLAGS_TE = {"s_b": {"boost": 0.7}, "s_c": {"boost": 1.7}, "s_d": {"boost": 2.5, "rise": 2.9}}   # render review: the Telugu arc was flat
 YT = {"s_a": "₹1,299 or ₹0?", "s_b": "One tool: 3 steps", "s_c": "Our test", "s_d": "Next: MCP"}
 MARK = re.compile(r"\[\d+\]\s*")
 
@@ -85,7 +86,7 @@ def spec(lang="en"):
     sid = "ep54te" if te else "ep54v1"
     s = {"id": sid, "title": "₹1,299 or ₹0? Build an AI Agent with Tools (EP54)" + (" (Telugu audio)" if te else ""), "label": "EP54",
          "banner": "Build an AI agent with tools", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.35, "music": "lofi",
-         "musicVol": [0.16, 0.3], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.2, "captionMode": "phrase",
+         "musicVol": [0.12, 0.3], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.2, "captionMode": "phrase",
          "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1500}

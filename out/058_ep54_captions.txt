@@ -26,12 +26,17 @@ Ask any AI chat app: "Has my refund for order 12345 come?" (a made-up number). P
 #AIFromScratch #AIAgents #FunctionCalling #LearnAI #Python
 
 === PINNED_COMMENT ===
-The code (Python, every line flat so it survives a comment; ask() = your chat call from EP51):
+The code, runnable (Python; pip install openai; any OpenAI-compatible chat API, a local llama.cpp server included):
 import json, re
+from openai import OpenAI
+client = OpenAI()  # your API key in OPENAI_API_KEY (or base_url=... for a local server)
+MODEL = "your-model-name"
+def ask(messages): return client.chat.completions.create(model=MODEL, messages=messages).choices[0].message.content
 ORDERS = {"4417": {"status": "returned, not yet received at our warehouse", "refund": "not started"}}
-def get_order(order_id): return ORDERS.get(order_id, "no such order")
+def get_order(order_id): return ORDERS.get(str(order_id).strip(), "no such order")
 def find_json(reply): m = re.search(r'\{[^{}]*"tool"[^{}]*\}', reply); return json.loads(m[0]) if m else None
 TOOL = 'You can use one tool: get_order(order_id) returns the order status and refund. To use it, reply with only: {"tool": "get_order", "order_id": "<the order number>"}. After the tool result, answer only from it.'
+question = "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?"
 messages = [{"role": "system", "content": "You are a shop's support assistant. " + TOOL}, {"role": "user", "content": question}]
 reply = ask(messages)
 call = find_json(reply)

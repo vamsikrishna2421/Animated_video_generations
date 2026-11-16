@@ -54,12 +54,12 @@ const codeCard = (c: Ctx, y: number, code: string, k: number, label: string) => 
 const traceBox = (c: Ctx, y: number, title: string, lines: string[], col: string, k: number) => {
   if (k <= 0) return y;
   c.save(); c.globalAlpha = clamp(k * 3);
-  c.font = MONO(28, 700); const ws = lines.flatMap((l) => wrap(c, l, 900));
-  const h = 56 + ws.length * 40 + 18;
+  c.font = MONO(32, 700); const ws = lines.flatMap((l) => wrap(c, l, 900));
+  const h = 60 + ws.length * 46 + 18;
   c.fillStyle = "#0f172a"; rrect(c, 40, y, 1000, h, 16); c.fill();
   c.strokeStyle = col; c.lineWidth = 4; rrect(c, 40, y, 1000, h, 16); c.stroke();
-  c.font = SANS(26, 900); c.fillStyle = col; c.textAlign = "left"; c.fillText(title, 64, y + 38);
-  c.font = MONO(28, 700); c.fillStyle = "#e2e8f0"; ws.forEach((t, i) => c.fillText(t, 64, y + 84 + i * 40));
+  c.font = SANS(30, 900); c.fillStyle = col; c.textAlign = "left"; c.fillText(title, 64, y + 40);
+  c.font = MONO(32, 700); c.fillStyle = "#e2e8f0"; ws.forEach((t, i) => c.fillText(t, 64, y + 92 + i * 46));
   c.restore();
   return y + h;
 };
@@ -104,8 +104,7 @@ const StAgent: React.FC<SP> = ({ s }) => {
           block(c, 50, 250, "THE BOT SAID: REFUNDED", "₹1,299", "#f87171");
           block(c, 560, 250, "THE SHOP'S RECORD", "₹0", "#fbbf24");   // script review: a green ₹0 read as good news
           chip(c, "refund not started", 795, 470, "#fef3c7", "#78350f", P === "why" || loopOn ? 1 : seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 34);
-          chip(c, "asked: has my ₹1,299 refund for order 4417 come?", W / 2, 560, "#1e293b", "#cbd5e1", 1, 32);   // script review: one bubble
-          const y = chat(c, 50, 610, W - 100, T.shop, [{ me: false, t: T.plain, k: 1, red: true, sz: 40 }], 40);
+          const y = chat(c, 50, 540, W - 100, T.shop, [{ me: true, t: T.q, k: 1, sz: 32 }, { me: false, t: T.plain, k: 1, red: true, sz: 42 }], 40);   // render review: the real prompt
           if (P === "hook") chip(c, "a made-up shop · a small free AI · a real test", W / 2, y + 60, "#1e293b", "#cbd5e1", 1, 36);
           if (P === "why") {
             stamp(c, "IT HAD NO WAY TO LOOK", W / 2, y + 80, seg(f, ln.from + 2, ln.from + 10));
@@ -126,7 +125,7 @@ const StAgent: React.FC<SP> = ({ s }) => {
             const mx = (x + nx) / 2, my = (y + ny) / 2;
             if (ny === y) { c.moveTo(x + (nx > x ? 205 : -205), y); c.lineTo(nx + (nx > x ? -205 : 205), y); } else { c.moveTo(x, y + (ny > y ? 85 : -85)); c.lineTo(x, ny + (ny > y ? -85 : 85)); }
             c.stroke();
-            c.font = SANS(30, 800); c.fillStyle = "#cbd5e1"; c.fillText(labels[q], mx + (ny === y ? 0 : (x > 540 ? 130 : -130)), my + (ny === y ? -100 : 10));
+            c.font = SANS(38, 800); c.fillStyle = "#cbd5e1"; c.fillText(labels[q], mx + (ny === y ? 0 : (x > 540 ? 130 : -130)), my + (ny === y ? -100 : 10));
             c.restore();
           });
         } else if (P === "step1" || P === "step2" || P === "step3") {
@@ -144,10 +143,20 @@ const StAgent: React.FC<SP> = ({ s }) => {
               arrowDown(c, y1 + 8, seg(f, ln.from + 20, ln.from + 28));
               traceBox(c, y1 + 64, "YOUR CODE FOUND, IN THE SHOP'S SYSTEM", T.result, GREEN, seg(f, ln.from + 20, ln.from + 28));
             } else {
-              const y1 = traceBox(c, yC + 30, "ORDER 4388: THE AI WROTE", [T.guessCall, T.guess], "#fca5a5", kG);
-              c.save(); c.globalAlpha = clamp(kG * 3); c.strokeStyle = "#dc2626"; c.lineWidth = 6;
-              c.beginPath(); c.moveTo(60, y1 - 60); c.lineTo(1020, y1 - 30); c.stroke(); c.restore();   // the guess, struck out
-              chip(c, T.guessReal, W / 2, y1 + 70, "#dcfce7", "#14532d", seg(f, cu(1, 0.4) + 12, cu(1, 0.4) + 20), big(c, T.guessReal, 38));
+              const y1 = traceBox(c, yC + 30, "ORDER 4388: THE AI WROTE THE LINE, THEN A GUESS", [T.guessCall, T.guess], "#fca5a5", kG);
+              c.save(); c.globalAlpha = clamp(kG * 3);   // render review: the dates big, held for the whole line
+              c.font = SANS(110, 900); c.textAlign = "center"; c.fillStyle = "#f87171"; c.fillText("Dec 15", 300, y1 + 160);
+              c.strokeStyle = "#dc2626"; c.lineWidth = 12; c.beginPath(); c.moveTo(120, y1 + 125); c.lineTo(480, y1 + 125); c.stroke();
+              c.font = SANS(34, 800); c.fillStyle = "#cbd5e1"; c.fillText("its guess", 300, y1 + 215);
+              c.restore();
+              const kR = seg(f, cu(1, 0.4) + 30, cu(1, 0.4) + 38);
+              if (kR > 0) {
+                c.save(); c.globalAlpha = clamp(kR * 3);
+                c.font = SANS(110, 900); c.textAlign = "center"; c.fillStyle = GREEN; c.fillText("Nov 18", 780, y1 + 160);
+                c.font = SANS(34, 800); c.fillStyle = "#cbd5e1"; c.fillText("the record", 780, y1 + 215);
+                c.restore();
+              }
+              chip(c, "our code only used the line", W / 2, y1 + 300, "#dcfce7", "#14532d", seg(f, cu(1, 0.4) + 50, cu(1, 0.4) + 58), 46);
             }
           } else {
             const y1 = traceBox(c, yC + 30, "SENT BACK: THE RECORD", T.result.slice(2), GREEN, 1);
@@ -172,8 +181,12 @@ const StAgent: React.FC<SP> = ({ s }) => {
               c.font = SANS(fit(c, said, 900, 46, 900), 900); c.fillStyle = "#f87171"; c.fillText(said, 70, y + 56);
               c.font = SANS(36, 800); c.fillStyle = GREEN; c.fillText("the record: " + real, 70, y + 104);
             });
-            const k3 = seg(f, cu(1, 0.4) + 30, cu(1, 0.4) + 36);
-            if (k3 > 0) { c.font = SANS(fit(c, T.wrongMore, 900, 34, 800), 800); c.fillStyle = "#fde68a"; c.fillText(T.wrongMore, 70, 930); }
+            const k3 = seg(f, cu(1, 0.4) + 24, cu(1, 0.4) + 30);
+            if (k3 > 0) {   // render review: the 6 on screen
+              c.font = SANS(76, 900); c.fillStyle = "#f87171"; c.textAlign = "right"; c.fillText("6/10 WRONG", 1010, 600);
+              c.font = SANS(38, 800); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText("+4 more wrong · 3 right by luck", 70, 905);
+              c.fillText("1 said \"we're checking\" (it couldn't)", 70, 955);
+            }
             c.restore();
           }
           const k2 = seg(f, cu(2, 0.6), cu(2, 0.6) + 8);
@@ -195,8 +208,7 @@ const StAgent: React.FC<SP> = ({ s }) => {
           card(340, "IF YOU BUILD ONE", "the AI asks · your code decides what runs", "#93c5fd", seg(f, ln.from + 2, ln.from + 10));
           card(620, "IF YOU USE ONE", "check the refund on the shop's own order page", GREEN, seg(f, cu(1, 0.5), cu(1, 0.5) + 8));
           chip(c, "full code: in the pinned comment", W / 2, 960, "#fde68a", INK, seg(f, cu(1, 0.5) + 20, cu(1, 0.5) + 28), 44);
-          chip(c, "RUN A SHOP? ask your own bot about order 12345", W / 2, 1090, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.5) + 34, cu(1, 0.5) + 42), big(c, "RUN A SHOP? ask your own bot about order 12345", 42));   // script review: the shop owner
-          chip(c, "a sure answer = a guess", W / 2, 1190, "#1e293b", "#fca5a5", seg(f, cu(1, 0.5) + 40, cu(1, 0.5) + 48), 46);
+
         } else if (P === "loop") {
           c.font = SANS(fit(c, "NEXT · EP55: YOUR OWN MCP SERVER", W - 120, 60), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("NEXT · EP55: YOUR OWN MCP SERVER", W / 2, 330);
           const kf = seg(f, cu(1, 0.3), cu(1, 0.3) + 8);

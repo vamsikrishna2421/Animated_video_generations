@@ -29,7 +29,7 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
 MUST = {"en": {1: [("twelve", "1299", "12"), ("ninety", "99"), ("bot",), ("zero",), ("started",)], 2: [("made",), ("look",), ("refund",)],
-               3: [("simplest",), ("agent",), ("code",)], 4: [("step",), ("json", "jason"), ("order",)], 5: [("step",), ("code",), ("guess",), ("ignored",)],
+               3: [("simplest",), ("agent",), ("code",)], 4: [("step",), ("json", "jason"), ("order",)], 5: [("step",), ("code",), ("lookup",)], "5b": [("guess",), ("december",), ("november",), ("line",)],
                6: [("step",), ("result",), ("record",)], 7: [("ten", "10"), ("without",), ("six", "6"), ("wrong",)], "7b": [("tool",), ("ten", "10"), ("right",)],
                8: [("build",), ("code",), ("refund",), ("page",)], 9: [("server",), ("zero",), ("started",)]},
         "te": {}}

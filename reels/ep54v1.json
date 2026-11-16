@@ -9,7 +9,7 @@
  "lead": 0.35,
  "music": "lofi",
  "musicVol": [
-  0.16,
+  0.12,
   0.3
  ],
  "musicDuckRamp": 9,
@@ -216,11 +216,15 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "Step two: your code finds that line and runs the lookup. [1] Twice, the AI added a guess after the line. Our code ignored it.",
+     "text": "Step two: your code finds that line and runs the lookup. <pause 0.4> [1] Twice, it added a guess after the line: December fifteenth. The record said November eighteenth. Our code only used the line.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Step two: your code finds that line and runs the lookup. Twice, the AI added a guess after the line. Our code ignored it.",
-     "tempo": 1.08
+     "show": "Step two: your code finds that line and runs the lookup. <pause 0.4> Twice, it added a guess after the line: December 15th. The record said November 18th. Our code only used the line.",
+     "tempo": 1.08,
+     "tts": "Step two: your code finds that line and runs the lookup.",
+     "file2": "05b_storyteller.wav",
+     "tts2": "Twice, it added a guess after the line: December fifteenth. The record said November eighteenth. Our code only used the line.",
+     "pause": 0.4
     },
     {
      "who": "storyteller",
@@ -304,15 +308,15 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "Our test, ten customers. [1] Without the tool: ten answers, no checking, six wrong. <pause 0.5> [2] With the tool: ten lookups, ten right.",
+     "text": "Our test, ten customers. [1] Without the tool: ten answers, no checking, six wrong. <pause 0.75> [2] With the tool: ten lookups, ten right.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Our test, 10 customers. Without the tool: 10 answers, no checking, 6 wrong. <pause 0.5> With the tool: 10 lookups, 10 right.",
+     "show": "Our test, 10 customers. Without the tool: 10 answers, no checking, 6 wrong. <pause 0.75> With the tool: 10 lookups, 10 right.",
      "tempo": 1.08,
      "tts": "Our test, ten customers. Without the tool: ten answers, no checking, six wrong.",
      "file2": "07b_storyteller.wav",
      "tts2": "With the tool: ten lookups, ten right.",
-     "pause": 0.5
+     "pause": 0.75
     },
     {
      "who": "storyteller",
