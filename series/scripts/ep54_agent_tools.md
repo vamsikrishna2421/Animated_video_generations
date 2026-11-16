@@ -1,4 +1,4 @@
-# EP54 "Build an AI Agent with Tools" (Season 6, a screen tutorial) · queue 058 · script v2, Nov 16
+# EP54 "Build an AI Agent with Tools" (Season 6, a screen tutorial) · queue 058 · script v3, Nov 16
 
 ## The format
 A screen tutorial (Season 6), one narrator, the chat and one code line per step drawn in our crayon style. Verdict first:
@@ -53,27 +53,41 @@ got 10/10. Changes:
    "ఎం, సి, పి" with pauses.
 Not done: "just tell it not to guess" (not tested, so not claimed).
 
-## Script (English, v2; narrator)
+## Render review (human-viewer, v2 render) and what changed (v3)
+Both stopped on the hook and the big 10/10 landed; the guess beat and the test card's fine print didn't; too much small
+text while the bottom of the screen sat empty; the pinned code didn't run as written (no `question`, no `ask`). Changes:
+1. The 4388 beat said and shown: "December fifteenth. The record said November eighteenth. Our code only used the line"
+   (not "ignored": the demo still sent the whole reply back, the answer came from the record); a big struck "Dec 15"
+   and a green "Nov 18", held for the whole line.
+2. The test card shows "6/10 WRONG" big; the fine print in two readable lines; the shop-owner chips cut (the caption
+   keeps them).
+3. Frame 1 shows the customer's real question (as the test asked it) above the bot's reply.
+4. Trace and diagram text larger; a 0.75 s pause before "With the tool"; the music lower under the voice.
+5. The pinned code runs as written: an OpenAI-compatible client, ask(), the question, str(order_id) in get_order.
+6. Telugu: "స్టార్ట్" (mangled three times) gone: "రిఫండ్ ఇంకా రాలేదు"; the hook reworded ("అయింది, అంది" echoed);
+   "ఉత్తుత్తి షాప్"; "రిఫండ్ ఎక్కడుందో"; "ఎమ్ సీ పీ"; the 4388 dates in Telugu; more lift in the Telugu arc.
+
+## Script (English, v3; narrator)
 1. (hook) Twelve ninety-nine refunded, said the shop's bot. The shop's own record: zero. The refund hasn't even started.
 2. (why) A made-up shop, a real test: the bot had no way to look. So it wrote what a refund reply usually says.
 3. (title) Today: the simplest agent. An AI that can ask your code to do one thing.
 4. (step1) Step one: describe the tool, and say: to use it, reply with one line of JSON. Here: get order, by order number.
-5. (step2) Step two: your code finds that line and runs the lookup. Twice, the AI added a guess after the line. Our code ignored it.
+5. (step2) Step two: your code finds that line and runs the lookup. | Twice, it added a guess after the line: December fifteenth. The record said November eighteenth. Our code only used the line.
 6. (step3) Step three: send the result back. Now it answers from the shop's record.
 7. (test) Our test, ten customers. Without the tool: ten answers, no checking, six wrong. | With the tool: ten lookups, ten right.
 8. (rule) If you build one: the AI only asks; your code decides what runs. If you use one: check the refund on the shop's own order page.
 9. (loop) Next: your own M C P server. And order forty-four seventeen? Zero rupees. Not started.
 
-## Script (Telugu, v2)
-1. పన్నెండు వందల తొంభై తొమ్మిది రిఫండ్ అయింది, అంది షాప్ చాట్‌బాట్. షాప్ రికార్డ్ లో: సున్నా. రిఫండ్ ఇంకా స్టార్ట్ కూడా కాలేదు.
-2. ఇది మేం అల్లిన షాప్, టెస్ట్ నిజం: చాట్‌బాట్ కి చూసే దారే లేదు. అందుకే, రిఫండ్ జవాబు మామూలుగా ఎలా ఉంటుందో, అలా రాసేసింది.
+## Script (Telugu, v3)
+1. పన్నెండు వందల తొంభై తొమ్మిది రిఫండ్ అయిపోయిందట, షాప్ చాట్‌బాట్ ప్రకారం. షాప్ రికార్డ్ లో: సున్నా. రిఫండ్ ఇంకా రాలేదు.
+2. ఇది ఉత్తుత్తి షాప్, టెస్ట్ నిజం: చాట్‌బాట్ కి చూసే దారే లేదు. అందుకే, రిఫండ్ జవాబు మామూలుగా ఎలా ఉంటుందో, అలా రాసేసింది.
 3. ఈ రోజు: అన్నిటికంటే సింపుల్ ఏజెంట్. మీ కోడ్ తో ఒక పని చేయించగలిగే చాట్‌బాట్.
 4. స్టెప్ వన్: టూల్ గురించి చెప్పండి; వాడాలంటే, ఒక్క జేసన్ లైన్ తో అడగమనండి. ఇక్కడ: ఆర్డర్ నంబర్ తో ఆర్డర్ వివరాలు.
-5. స్టెప్ టూ: మీ కోడ్ ఆ లైన్ వెతికి, ఆర్డర్ చూస్తుంది. | రెండుసార్లు, ఆ లైన్ తర్వాత ఊహ కూడా రాసింది; మా కోడ్ దాన్ని పట్టించుకోలేదు.
+5. స్టెప్ టూ: మీ కోడ్ ఆ లైన్ వెతికి, ఆర్డర్ వివరాలు తెస్తుంది. | రెండుసార్లు, ఆ లైన్ తర్వాత ఊహ కూడా రాసింది: డిసెంబర్ పదిహేను అని. రికార్డ్ లో నవంబర్ పద్దెనిమిది. మా కోడ్ ఆ లైన్ నే వాడింది.
 6. స్టెప్ త్రీ: ఆ రిజల్ట్ తిరిగి పంపండి. ఇప్పుడు, షాప్ రికార్డ్ నుంచే జవాబిస్తుంది.
 7. మా టెస్ట్, పది మంది కస్టమర్లు. టూల్ లేకుండా: పది జవాబులు, ఒక్కటీ చూడలేదు, ఆరు తప్పు. | టూల్ తో: పది ఆర్డర్లూ చూసింది, పదీ కరెక్ట్.
-8. మీరు తయారు చేస్తే: చాట్‌బాట్ అడుగుతుంది, ఏది రన్ అవ్వాలో మీ కోడే నిర్ణయిస్తుంది. | మీరు వాడితే: రిఫండ్ స్టేటస్, షాప్ ఆర్డర్ పేజీలోనే చూసుకోండి.
-9. తర్వాత: మీ సొంత, ఎం, సి, పి, సర్వర్. | మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. ఇంకా స్టార్ట్ కాలేదు.
+8. మీరు తయారు చేస్తే: చాట్‌బాట్ అడుగుతుంది, ఏది రన్ అవ్వాలో మీ కోడే నిర్ణయిస్తుంది. | మీరు వాడితే: రిఫండ్ ఎక్కడుందో, షాప్ ఆర్డర్ పేజీలోనే చూసుకోండి.
+9. తర్వాత: మీ సొంత ఎమ్ సీ పీ సర్వర్. | మరి ఆర్డర్ నలభై నాలుగు పదిహేడు? సున్నా రూపాయలు. రిఫండ్ ఇంకా రాలేదు.
 
 ## Caption ask (post your answer)
 "Ask any AI chat app: 'Has my refund for order 12345 come?' (a made-up number). Post its answer: did it look, or did it guess?"
