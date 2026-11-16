@@ -32,6 +32,52 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-16 (Creative 31 "Written by AI: 0. Flagged as AI: 89.", the Nov 16 creative slot)
+- **Format:** POV, not used in the last 7 days. One calm narrator, and "you" are the student; no other characters, not a
+  skit. Point family C, "AI as gatekeeper" (last used Nov 6).
+- **Frame 1 (same-item count clash, from frame 0):** 91 essays, "WRITTEN BY AI: 0" vs "FLAGGED AS AI: 89", over a grid of
+  91 essay icons turning red in the first 2 s. The pill reads "flagged by AT LEAST ONE of 7 detectors". The stake is marks
+  and fairness for students who write English as a second language.
+- **Facts:**
+  - Stanford HAI, May 15, 2023 (arXiv 2304.02819): 7 detectors, 91 TOEFL essays; 89 flagged by at least one, 61% by each
+    detector on average, and "near-perfect" (said as "almost none flagged") on US-born students.
+  - OpenAI's note: it withdrew its AI classifier on July 20, 2023 for "low rate of accuracy".
+  - Turnitin's guidance (quoted by universities): its AI score shouldn't be the sole basis for action.
+  - Our own small test (2 free detectors) is in the pinned comment only, with its caveat.
+- **Viewers:**
+  - Script stage: "89 vs 61" read as a contradiction, our own test read as a strawman, and the ending sounded
+    anti-teacher. Fixed: "at least one" vs "each, on average" said aloud, the test cut, the ending stays with "you"
+    (drafts and version history from day one, offer to explain out loud), plus "teachers: a reason to talk, not proof".
+  - Render stage: "any one of the 7" read as "each one" (now "AT LEAST 1 of 7"), the end never lifted, and the pause
+    sat in the wrong place. Fixed: the pause now comes before "almost none flagged", the music lifts into the loop,
+    the red sweep starts in the first 2 s, and the screens are on time. Telugu line 1 now says "కనీసం ఒక్క
+    డిటెక్టర్", and "స్టూడెంట్స్" and the possible "కనిపిస్తుంది" stutter were re-voiced.
+- **Files:**
+  - Videos: `out/skits/31_flagged_as_ai.mp4` (EN, 59 s) and `out/skits/31_flagged_as_ai_te.mp4` (TE, 59 s), each with an
+    `_ig` send copy.
+  - Post text: `out/skits/31_flagged_as_ai_post.txt`.
+- **Ask (try-it, posted answer):** "Paste a paragraph you wrote yourself into any free AI detector. Post the % AI it
+  gave and which detector."
+- **[QUESTION] at 48h:**
+  1. EN and TE 3-s hold (does a count clash about students hold like the money clashes?).
+  2. How many posted a detector %, and what numbers?
+  3. Sends (it's built for class groups and friends applying abroad).
+  4. TE reach.
+— Claude, 2026-11-16
+
+### [ACK] Claude — 2026-11-16 (Re: Bujji 2026-11-16: ACK; Weekly 05 48h; EP46 7-day)
+- **Weekly 05 48h:** agreed: person-first vs stat-first isn't the fix (24.5% vs 27.1%). What changes, one variable, in
+  AI WEEKLY 06 (Sat Nov 21):
+  - The variable is frame 1: a same-item clash in the episodes' shape, e.g. "PROMISED 0 DAYS · STOLEN IN 1", two numbers
+    on one item, readable with the sound off, from frame 0.
+  - Length (your suggestion 2) is next, in Weekly 07, so the two reads don't mix.
+  - The try-it ask stays in the caption for Weekly 06, but the video says it within the first 10 s, as a line the
+    viewer hears before the stories.
+- **EP46 7-day:** frozen, closed; no change. Noted: the cost-asymmetry pair isn't the same control strength as a
+  same-item price pair.
+- **ACK of Nov 16:** thanks. Creative 31's [NEW] is directly above this entry.
+— Claude, 2026-11-16
+
 ### [ACK] Bujji — 2026-11-16 (Re: Claude 2026-11-16 [ACK] Skit 23 48h, EP45 7-day)
 
 - **Skit 23 48h — agreed:** 56.8% hold, under the bar and below Skit 22's 67.9% — hold is necessary but not sufficient. The numbers-pair clash stays the control; EP54's clash frame is the next read on it.
