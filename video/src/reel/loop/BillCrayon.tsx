@@ -20,7 +20,7 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "happy" | "shock" | "angry" | "calm" | "deadpan" | "worried" | "smug" | "excited";
 type Arms = "rest" | "up" | "phone" | "calc" | "five" | "fiveL" | "pay" | "fold" | "shrug";
-type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan" | "divya" | "shalini" | "naveen" | "kamala" | "sastry" | "pallavi" | "suresh";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
+type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan" | "divya" | "shalini" | "naveen" | "kamala" | "sastry" | "pallavi" | "suresh" | "anusha";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const MONO = (s: number, w = 600) => `${w} ${s}px "Courier New", monospace`;
@@ -63,6 +63,7 @@ const LOOK: Record<Who, { skin: string; hair: string; top: string }> = {
   sastry: { skin: "#8d5a3b", hair: "#d4d4d8", top: "#f1f5f9" },   // Creative 23 (ProfitCrayon.tsx): Sastry garu, 62, a retired headmaster, white hair, glasses, a moustache, a white shirt
   pallavi: { skin: "#b07a52", hair: "#120d0a", top: "#0f766e" },   // his daughter, 29, a chartered accountant, long hair, a teal kurta
   suresh: { skin: "#8d5a3b", hair: "#1c1410", top: "#b45309" },   // EP49 (JobsCrayon.tsx): Suresh, 30s, Ravi's helper for eight years, a brown work shirt
+  anusha: { skin: "#a26d47", hair: "#120d0a", top: "#7c3aed" },   // Creative 32 (Lease32Crayon.tsx): Anusha, 26, a tenant packing for Pune, a violet kurti, long hair
 };
 const SEATS: Partial<Record<Who, number>> = { arjun: 190, nikhil: 425, meghana: 660, sneha: 895 };
 // our test, "just the amount" (3B, tries 1-10) and its working (3B, show the working, try 3, shortened)
@@ -91,7 +92,7 @@ const palm = (c: Ctx, x: number, y: number, skin: string, r: () => number, rad =
 const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   const L = LOOK[who], hy = -130;
   c.fillStyle = L.hair;
-  if (who === "sneha" || who === "rani" || who === "swapna" || who === "bindu" || who === "varsha" || who === "keerthi" || who === "meena" || who === "pinky" || who === "pallavi") { c.beginPath(); c.ellipse(0, hy + 10, 116, 140, 0, 0, 7); c.fill(); rrect(c, -116, hy, 232, 200, 40); c.fill(); }   // long hair behind
+  if (who === "sneha" || who === "rani" || who === "swapna" || who === "bindu" || who === "varsha" || who === "keerthi" || who === "meena" || who === "pinky" || who === "pallavi" || who === "anusha") { c.beginPath(); c.ellipse(0, hy + 10, 116, 140, 0, 0, 7); c.fill(); rrect(c, -116, hy, 232, 200, 40); c.fill(); }   // long hair behind
   if (who === "meghana") { c.beginPath(); c.ellipse(0, hy + 6, 114, 124, 0, 0, 7); c.fill(); }   // a bob
   [-1, 1].forEach((s) => { c.beginPath(); c.ellipse(s * 92, hy + 6, 16, 26, 0, 0, 7); c.fillStyle = L.skin; c.fill(); });
   c.beginPath(); c.ellipse(0, hy, 94, 112, 0, 0, 7); c.fillStyle = L.skin; c.fill();
