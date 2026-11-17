@@ -1,4 +1,4 @@
-# Creative 32 "₹36,000, Said the AI. ₹44,000, Said Clause 11." · Nov 17 creative slot · script v1
+# Creative 32 "₹36,000, Said a Free AI. ₹44,000, the Real Cost." · Nov 17 creative slot · script v2
 
 ## Format and rotation
 - Format: **a nature-documentary parody** (last used by Creative 13, Oct 29; not in the last 7 days). A hushed narrator,
@@ -36,19 +36,37 @@ Rs 18,000. (The notice month's rent is rent she pays anyway.)
 - Lock-in clauses in Indian 11-month agreements are common (housing.com; NoBroker); our agreement is made up, and the
   reel gives no legal advice.
 
-## Script v1 (EN | TE)
+## Script review (human-viewer, v1), what changed for v2
+- The hook took ~4 s to reach "forty-four": now "A free AI said thirty-six thousand. The real cost: forty-four." (TE
+  "ఒక ఫ్రీ చాట్‌బాట్: ముప్పై ఆరు వేలు. అసలు లెక్క: నలభై నాలుగు వేలు."); frame 1 is the two blocks and her face (the chip
+  moved to the test card).
+- Overclaim: "THE AI" -> "A SMALL FREE AI SAID"; "HER AGREEMENT" -> "THE REAL COST" (no clause says 44,000; it is
+  36,000 + 8,000); the title changed; line 8 says "a sample agreement we wrote" and "offline"; the test card says "we
+  didn't test the big apps".
+- The prompt we teach is the prompt we tested, word for word, on screen (the voice says "every amount, with its clause
+  number"; the card shows the full text).
+- "Painting" alone read as a picture: "painting charge" in EN and TE; the clause card says it is charged whenever she
+  moves out (not a penalty for leaving early).
+- "lock-in = 2 months' rent (clause 10)" on screen; "Fine!" -> "Well, at least eighteen thousand comes back".
+- Telugu: L4 "పద్నాలుగు క్లాజులూ చాట్‌బాట్ చదివింది"; L5 "సరే, పద్దెనిమిది అయినా వస్తాయి"; L6 "ఏదో దాక్కుని ఉంది";
+  L8 "ఒక్కసారి కూడా చెప్పలేదు".
+- Not taken: an experience ask in the caption ("what did your owner cut?"): asks stay try-its with a posted answer
+  (Standing Rules); the try-it was made lower-effort (paste only the money clauses). The Apple/BBC fact was cut.
+- Length: 70.5 s -> 59.4 s (lines 2, 4, 8, 9, 10 shortened, tempo 1.04 -> 1.08).
+
+## Script v2 (EN | TE)
 | # | who | English | Telugu |
 |---|---|---|---|
-| 1 | narrator | The AI told her moving out would cost thirty-six thousand. Her agreement says forty-four. | చాట్‌బాట్ చెప్పింది: ఇల్లు ఖాళీ చేస్తే ముప్పై ఆరు వేలు. అగ్రిమెంట్ లో మాత్రం: నలభై నాలుగు వేలు. |
-| 2 | narrator | Here, among the cardboard, the young tenant prepares to migrate. A job in Pune. Four months into an eleven-month agreement. | ఇక్కడ, అట్టపెట్టెల మధ్య, మన టెనెంట్ వలసకి సిద్ధమవుతోంది. పూణే లో కొత్త ఉద్యోగం; పదకొండు నెలల అగ్రిమెంట్ లో, నాలుగు నెలలే అయ్యాయి. |
+| 1 | narrator | A free AI said thirty-six thousand. The real cost: forty-four. | ఒక ఫ్రీ చాట్‌బాట్: ముప్పై ఆరు వేలు. అసలు లెక్క: నలభై నాలుగు వేలు. |
+| 2 | narrator | Here, among the cardboard, the young tenant prepares to migrate. A job in Pune, four months in. | అట్టపెట్టెల మధ్య, మన టెనెంట్ వలసకి సిద్ధమవుతోంది. పూణే లో కొత్త ఉద్యోగం; నాలుగు నెలలే అయ్యాయి. |
 | 3 | anusha | I may have to move out after four months. What will it cost me? | నాలుగు నెలలకే ఖాళీ చేయాల్సి రావచ్చు. నాకు ఎంత ఖర్చవుతుంది? |
-| 4 | narrator | The AI has all fourteen clauses. Thirty-six thousand, it says. The lock-in penalty. | చాట్‌బాట్ దగ్గర, పద్నాలుగు క్లాజులూ ఉన్నాయి. ముప్పై ఆరు వేలు, అంటోంది. లాక్ ఇన్ పెనాల్టీ. |
-| 5 | anusha | Fifty-four thousand deposit, minus thirty-six. Eighteen thousand back. Fine! | యాభై నాలుగు వేల డిపాజిట్, ముప్పై ఆరు పోతే, పద్దెనిమిది వేలు వెనక్కి. పర్లేదు! |
-| 6 | narrator | But deep in clause eleven, something waits. | కానీ క్లాజ్ పదకొండు లోతుల్లో, ఒకటి దాక్కుని ఉంది. |
-| 7 | anusha | Eight thousand for painting?! So ten thousand back, not eighteen?! | పెయింటింగ్ కి ఎనిమిది వేలా?! అంటే వచ్చేది పది వేలే, పద్దెనిమిది కాదా?! |
-| 8 | narrator | We asked a small free AI on our computer the same question, ten times. Thirty-six thousand: ten times. | The painting: not once. | మా కంప్యూటర్ లో ఒక చిన్న ఫ్రీ చాట్‌బాట్ ని, ఇదే ప్రశ్న పదిసార్లు అడిగాం. ముప్పై ఆరు వేలు: పదిసార్లూ. | పెయింటింగ్: ఒక్కసారి కూడా లేదు. |
-| 9 | narrator | So ask it this: list every amount I may pay or lose, with the clause number. Ten out of ten found the painting. | Then open those clauses, and add them up yourself. | అందుకే ఇలా అడగండి: నేను కట్టాల్సిన, కోల్పోయే ప్రతి రూపాయి, క్లాజ్ నంబర్ తో చెప్పు. పదికి పది, పెయింటింగ్ చూపించింది. | ఆ క్లాజులు మీరే చదివి, లెక్క వేసుకోండి. |
-| 10 | narrator | Meanwhile, in the next flat, another tenant asks the AI what moving out will cost... | ఇంతలో, పక్క ఫ్లాట్ లో, ఇంకో టెనెంట్ చాట్‌బాట్ ని అడుగుతోంది, ఖాళీ చేస్తే ఎంత అవుతుందని... |
+| 4 | narrator | The AI read all fourteen clauses. Thirty-six thousand, it says: the lock-in. | పద్నాలుగు క్లాజులూ చాట్‌బాట్ చదివింది. ముప్పై ఆరు వేలు, అంటోంది: లాక్ ఇన్ పెనాల్టీ. |
+| 5 | anusha | Fifty-four thousand deposit, minus thirty-six. Well, at least eighteen thousand comes back. | యాభై నాలుగు వేల డిపాజిట్, ముప్పై ఆరు పోతే, సరే, పద్దెనిమిది అయినా వస్తాయి. |
+| 6 | narrator | But deep in clause eleven, something waits. | కానీ క్లాజ్ పదకొండు లోతుల్లో, ఏదో దాక్కుని ఉంది. |
+| 7 | anusha | An eight thousand painting charge?! So ten thousand back, not eighteen?! | ఎనిమిది వేలు పెయింటింగ్ చార్జీనా?! అంటే వచ్చేది పది వేలే, పద్దెనిమిది కాదా?! |
+| 8 | narrator | We gave a small free AI, offline, a sample agreement we wrote. Thirty-six thousand: ten out of ten. | The painting charge: not once. | ఆఫ్‌లైన్ లో ఒక చిన్న ఫ్రీ చాట్‌బాట్ కి, మేము రాసిన శాంపిల్ అగ్రిమెంట్ ఇచ్చాం. ముప్పై ఆరు వేలు: పదికి పది. | పెయింటింగ్ చార్జీ: ఒక్కసారి కూడా చెప్పలేదు. |
+| 9 | narrator | Then we asked for every amount, with its clause number. Ten out of ten named the painting charge. | So open those clauses, and add them up yourself. | తర్వాత, ప్రతి రూపాయి క్లాజ్ నంబర్ తో అడిగాం. పదికి పది, పెయింటింగ్ చార్జీ చూపించింది. | అందుకే, ఆ క్లాజులు మీరే చదివి, లెక్క వేసుకోండి. |
+| 10 | narrator | Meanwhile, next door, another tenant asks the AI the same question... | ఇంతలో, పక్క ఫ్లాట్ లో, ఇంకో టెనెంట్ అదే ప్రశ్న అడుగుతోంది... |
 
 ## On screen (English in both versions)
 1. Frame 1: Anusha among taped boxes ("KITCHEN", "BOOKS"), phone up; two blocks "THE AI: MOVING OUT COSTS ₹36,000" vs
@@ -66,5 +84,5 @@ Rs 18,000. (The notice month's rent is rent she pays anyway.)
 10. The next flat's door, another tenant's phone: the same question; cut to frame 1.
 
 ## Caption ask (a try-it with a posted answer)
-"Try it on your own rent agreement (black out names, address and ID numbers first): ask any AI 'List every amount I
-may pay or lose, with the clause number.' Post one amount it found that you didn't know about."
+"Try it: paste just the money clauses of your rent agreement (no names, no address) into any AI and ask the question
+above, word for word. Post one amount it found that you hadn't noticed."
