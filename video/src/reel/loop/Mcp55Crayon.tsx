@@ -202,10 +202,10 @@ const StMcp: React.FC<SP> = ({ s }) => {
           const yC = codeCard(c, 360, [T.fixLine], seg(f, ln.from + 2, ln.from + 20), "orders_server.py · the fix", "| int", seg(f, ln.from + 20, ln.from + 28));
           const k1 = seg(f, cu(1, 0.45), cu(1, 0.45) + 6), k2 = seg(f, cu(2, 0.75), cu(2, 0.75) + 8);
           if (k2 <= 0) {
-            const y1 = traceBox(c, yC + 30, "OUR CLIENT CODE NOW SHOWS EACH TYPE (BEFORE: NAMES ONLY)", [T.fixList], "#93c5fd", seg(f, ln.from + 26, ln.from + 34), "string or integer", GREEN);
+            const y1 = traceBox(c, yC + 30, "OUR CLIENT CODE NOW SHOWS EACH TYPE", [T.fixList], "#93c5fd", seg(f, ln.from + 26, ln.from + 34), "string or integer", GREEN);
             bigNum(c, "10/10", W / 2, y1 + 220, GREEN, k1, 170, "");
             if (k1 > 0) chip(c, "WhatsApp bot · the same 10 customers · was 1/10", W / 2, y1 + 300, "#dcfce7", "#14532d", k1, big(c, "WhatsApp bot · the same 10 customers · was 1/10", 40));
-            chip(c, "a one-time change, for every tool: nothing about orders", W / 2, y1 + 400, "#1e293b", "#e2e8f0", seg(f, ln.from + 34, ln.from + 42), big(c, "a one-time change, for every tool: nothing about orders", 38));   // render review: not a bot change
+            chip(c, "before: names only · a one-time change, for every tool", W / 2, y1 + 400, "#1e293b", "#e2e8f0", seg(f, ln.from + 34, ln.from + 42), big(c, "before: names only · a one-time change, for every tool", 38));   // render review: not a bot change
           } else {
             bigNum(c, "10/10", 290, yC + 190, GREEN, 1, 130, "WhatsApp bot · was 1/10");
             bigNum(c, "7/10", 790, yC + 190, "#fbbf24", k2, 130, "website bot · was 0/10");
