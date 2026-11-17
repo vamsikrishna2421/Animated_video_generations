@@ -28,14 +28,14 @@ LINES = {
         "ఫిక్స్: అంకె అయినా, టెక్స్ట్ అయినా తీసుకోవాలి; చాట్‌బాట్‌కి టైప్స్ చూపించాలి. [1] పదికి పది. | [2] రెండో చాట్‌బాట్: సున్నా నుంచి ఏడు; మూడుసార్లు తప్పు ఫార్మాట్."),
     8: ("update", "Then one change on the server, the refund approved, [1] and our WhatsApp bot said so, with no change to the bot.",
         "తర్వాత, సర్వర్ లో ఒక్క మార్పు: రిఫండ్ అప్రూవ్డ్. [1] చాట్‌బాట్ ని మార్చకుండానే, వాట్సాప్ బాట్ రిఫండ్ అప్రూవ్ అయిందని చెప్పింది."),
-    9: ("loop", "One app: a plain tool. [1] Two or more: a server. [2] Accept what the AI sends; test ten real questions. | [3] Next: a voice assistant.",
+    9: ("loop", "One app: a plain tool. [1] Two or more: a server. [2] Accept whatever the AI sends; test ten real questions. | [3] Next: a voice assistant.",
         "ఒక్క యాప్ కి, మామూలు టూల్ చాలు. [1] రెండు యాప్స్ దాటితే, సర్వర్. [2] చాట్‌బాట్ పంపేది తీసుకునేలా రాసుకోండి; పది నిజమైన ప్రశ్నలతో టెస్ట్ చేసుకోండి. | [3] తర్వాత: వాయిస్ అసిస్టెంట్."),
 }
 SHOW = {1: "Same bot, same 10 customers. Plugged into our new MCP server: 1 right. <pause 0.5> After we fixed its input: 10.",
         4: "Step 1: the server. 12 lines: one function, a one-line description, and its input: the order number, as text.",
         6: "Our test: 1 right. The AI sent the order number as a number; the server wanted text, and refused. The one time it sent text, it worked.",
         7: "The fix: accept a number or text, and show the AI the types. 10 out of 10. <pause 0.5> Our second bot: 0, then 7; 3 broken JSON lines.",
-        9: "One app: a plain tool. Two or more: a server. Accept what the AI sends; test 10 real questions. <pause 0.4> Next: a voice assistant."}
+        9: "One app: a plain tool. Two or more: a server. Accept whatever the AI sends; test 10 real questions. <pause 0.4> Next: a voice assistant."}
 SHOW_TE = {
     1: "Same chatbot, same 10 customers. Plugged into our new MCP server: just 1 right. <pause 0.5> After fixing the input: 10 out of 10.",
     2: "MCP is a standard plug for chatbot apps. Put a tool in a server once, and every MCP app can use it.",
@@ -69,12 +69,12 @@ T = {   # on screen: our test (series/scripts/ep55_demo/); the shop and its orde
 }
 # Sound (CLAUDE.md arc): a boom on frame 1 and a buzz on "one right"; a drop and a boom on "ten"; pops as each code line
 # types; a buzz on the refusal; a ding on "ten out of ten"; a ding on the update; a riser and the slam.
-SCENES = [("s_a", (1, 2, 3), {"boost": 1.2, "drop_at": [[0, 2, 0.4]], "tail": 0.0}),
+SCENES = [("s_a", (1, 2, 3), {"boost": 1.6, "drop_at": [[0, 2, 0.4]], "tail": 0.0}),
           ("s_b", (4, 5), {"boost": 0.85, "lift": 0.5, "tail": 0.0}),
-          ("s_c", (6, 7, 8), {"boost": 1.4, "lift": 0.7, "drop_at": [[1, 1, 0.3]], "tail": 0.0}),
-          ("s_d", (9,), {"outro": True, "pre": 0.4, "boost": 2.2, "lift": 0.8, "rise": 2.6, "tail": 0.0})]
+          ("s_c", (6, 7, 8), {"boost": 1.1, "lift": 0.7, "drop_at": [[1, 1, 0.3]], "swell": [2, 1, 1.9], "tail": 0.0}),   # render check: a flat arc
+          ("s_d", (9,), {"outro": True, "pre": 0.4, "boost": 2.6, "lift": 0.8, "rise": 3.0, "tail": 0.0})]
 GAP = {1: 0.4, 2: 0.3, 3: 0.35, 4: 0.3, 5: 0.35, 6: 0.35, 7: 0.4, 8: 0.4, 9: 0.0}
-FLAGS_TE = {"s_c": {"boost": 1.6}, "s_d": {"boost": 2.5, "rise": 2.9}}
+FLAGS_TE = {"s_c": {"boost": 1.2}, "s_d": {"boost": 2.8, "rise": 3.2}}
 YT = {"s_a": "1 right or 10?", "s_b": "The server, the client", "s_c": "The bug, the fix", "s_d": "Next: a voice assistant"}
 MARK = re.compile(r"\[\d+\]\s*")
 

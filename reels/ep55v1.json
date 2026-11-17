@@ -50,7 +50,7 @@
    "id": "s_a",
    "type": "sk_mcp55",
    "tail": 0.0,
-   "boost": 1.2,
+   "boost": 1.6,
    "drop_at": [
     [
      0,
@@ -223,7 +223,7 @@
    "id": "s_c",
    "type": "sk_mcp55",
    "tail": 0.0,
-   "boost": 1.4,
+   "boost": 1.1,
    "lift": 0.7,
    "drop_at": [
     [
@@ -231,6 +231,11 @@
      1,
      0.3
     ]
+   ],
+   "swell": [
+    2,
+    1,
+    1.9
    ],
    "data": {
     "beats": [
@@ -324,9 +329,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.4,
-   "boost": 2.2,
+   "boost": 2.6,
    "lift": 0.8,
-   "rise": 2.6,
+   "rise": 3.0,
    "data": {
     "beats": [
      {
@@ -375,12 +380,12 @@
     {
      "who": "storyteller",
      "file": "09_storyteller.wav",
-     "text": "One app: a plain tool. [1] Two or more: a server. [2] Accept what the AI sends; test ten real questions. <pause 0.4> [3] Next: a voice assistant.",
+     "text": "One app: a plain tool. [1] Two or more: a server. [2] Accept whatever the AI sends; test ten real questions. <pause 0.4> [3] Next: a voice assistant.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "One app: a plain tool. Two or more: a server. Accept what the AI sends; test 10 real questions. <pause 0.4> Next: a voice assistant.",
+     "show": "One app: a plain tool. Two or more: a server. Accept whatever the AI sends; test 10 real questions. <pause 0.4> Next: a voice assistant.",
      "tempo": 1.08,
-     "tts": "One app: a plain tool. Two or more: a server. Accept what the AI sends; test ten real questions.",
+     "tts": "One app: a plain tool. Two or more: a server. Accept whatever the AI sends; test ten real questions.",
      "file2": "09b_storyteller.wav",
      "tts2": "Next: a voice assistant.",
      "pause": 0.4

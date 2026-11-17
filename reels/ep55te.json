@@ -52,7 +52,7 @@
    "id": "s_a",
    "type": "sk_mcp55",
    "tail": 0.0,
-   "boost": 1.2,
+   "boost": 1.6,
    "drop_at": [
     [
      0,
@@ -227,7 +227,7 @@
    "id": "s_c",
    "type": "sk_mcp55",
    "tail": 0.0,
-   "boost": 1.6,
+   "boost": 1.2,
    "lift": 0.7,
    "drop_at": [
     [
@@ -235,6 +235,11 @@
      1,
      0.3
     ]
+   ],
+   "swell": [
+    2,
+    1,
+    1.9
    ],
    "data": {
     "beats": [
@@ -329,9 +334,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.4,
-   "boost": 2.5,
+   "boost": 2.8,
    "lift": 0.8,
-   "rise": 2.9,
+   "rise": 3.2,
    "data": {
     "beats": [
      {

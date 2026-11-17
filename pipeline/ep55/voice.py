@@ -33,13 +33,13 @@ MUST = {"en": {1: [("bot",), ("ten", "10"), ("mcp", "server"), ("one", "1")], "1
                4: [("step",), ("twelve", "12"), ("function",), ("text",)], 5: [("step",), ("tools",), ("nothing",)],
                6: [("one", "1"), ("number",), ("text",), ("refused",), ("worked",)], 7: [("fix",), ("types",), ("ten", "10")],
                "7b": [("zero", "0"), ("seven", "7"), ("json", "jason")],
-               8: [("server",), ("refund",), ("whatsapp", "what's app")], 9: [("app",), ("server",), ("test",)], "9b": [("voice",)]},
+               8: [("server",), ("refund",), ("whatsapp", "what's app")], 9: [("app",), ("server",), ("accept",), ("test",)], "9b": [("voice",)]},
         "te": {}}
 JUDGE_TEXT = {1: "Same bot, same 10 customers. Plugged into our new MCP server: 1 right.", "1b": "After we fixed its input: 10.",
               4: "Step 1: the server. 12 lines: one function, a one-line description, and its input: the order number, as text.",
               6: "Our test: 1 right. The AI sent the order number as a number; the server wanted text, and refused. The one time it sent text, it worked.",
               7: "The fix: accept a number or text, and show the AI the types. 10 out of 10.", "7b": "Our second bot: 0, then 7; 3 broken JSON lines.",
-              9: "One app: a plain tool. Two or more: a server. Accept what the AI sends; test 10 real questions.", "9b": "Next: a voice assistant."}
+              9: "One app: a plain tool. Two or more: a server. Accept whatever the AI sends; test 10 real questions.", "9b": "Next: a voice assistant."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
