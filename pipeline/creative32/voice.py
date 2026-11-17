@@ -38,19 +38,20 @@ VOICE_TE = {
               "moderate pace. The recording is very clear, close-up, studio quality, with no background noise.",
 }
 APP = set()
-MUST = {"en": {1: [("thirty", "36"), ("forty", "44"), ("agreement",)], 2: [("cardboard",), ("tenant",), ("pune",), ("eleven", "11")],
-               3: [("four", "4"), ("cost",)], 4: [("fourteen", "14"), ("thirty", "36"), ("lock",)], 5: [("fifty", "54"), ("eighteen", "18"), ("fine",)],
-               6: [("clause",), ("eleven", "11"), ("waits",)], 7: [("eight", "8"), ("painting",), ("ten", "10"), ("eighteen", "18")],
-               8: [("small",), ("free",), ("ten", "10")], "8b": [("painting",), ("once",)],
+MUST = {"en": {1: [("thirty", "36"), ("forty", "44"), ("real",)], 2: [("cardboard",), ("tenant",), ("pune",), ("four", "4")],
+               3: [("four", "4"), ("cost",)], 4: [("fourteen", "14"), ("thirty", "36"), ("lock",)],
+               5: [("fifty", "54"), ("eighteen", "18"), ("least",)], 6: [("clause",), ("eleven", "11"), ("waits",)],
+               7: [("eight", "8"), ("painting",), ("ten", "10"), ("eighteen", "18")],
+               8: [("small",), ("free",), ("sample",), ("ten", "10")], "8b": [("painting",), ("once",)],
                9: [("amount",), ("clause",), ("ten", "10"), ("painting",)], "9b": [("clauses", "clause"), ("yourself",)],
-               10: [("flat",), ("tenant",), ("cost",)]},
+               10: [("door",), ("tenant",), ("question",)]},
         "te": {}}
-JUDGE_TEXT = {1: "The AI told her moving out would cost 36,000. Her agreement says 44,000.",
-              4: "The AI has all 14 clauses. 36,000, it says. The lock-in penalty.",
-              5: "54,000 deposit, minus 36. 18,000 back. Fine!",
-              7: "8,000 for painting?! So 10,000 back, not 18,000?!",
-              8: "We asked a small free AI on our computer the same question, 10 times. 36,000: 10 times.",
-              9: "So ask it this: list every amount I may pay or lose, with the clause number. 10 out of 10 found the painting."}
+JUDGE_TEXT = {1: "A free AI said 36,000. The real cost: 44,000.",
+              4: "The AI read all 14 clauses. 36,000, it says: the lock-in.",
+              5: "54,000 deposit, minus 36. Well, at least 18,000 comes back.",
+              7: "An 8,000 painting charge?! So 10,000 back, not 18,000?!",
+              8: "We gave a small free AI, offline, a sample agreement we wrote. 36,000: 10 out of 10.",
+              9: "Then we asked for every amount, with its clause number. 10 out of 10 named the painting charge."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

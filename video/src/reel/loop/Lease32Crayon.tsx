@@ -183,10 +183,9 @@ const StLease: React.FC<SP> = ({ s }) => {
         if (["hook", "wild", "relief", "shock", "loop"].includes(P)) room(c, W, H, r); else { c.fillStyle = "#1f2937"; c.fillRect(0, 0, W, H); }
         if (P === "hook") {
           her(540, 760, 0.62, "hook");
-          block(c, 50, 330, "THE AI: MOVING OUT COSTS", "₹36,000", "#f87171");
-          block(c, 560, 330, "HER AGREEMENT", "₹44,000", "#fbbf24");
+          block(c, 50, 330, "A SMALL FREE AI SAID", "₹36,000", "#f87171");   // script review: not "THE AI"
+          block(c, 560, 330, "THE REAL COST", "₹44,000", "#fbbf24");
           if (!loopOn) { const k1 = seg(f, cu(1, 0.5) - 3, cu(1, 0.5) + 7); if (k1 > 0 && k1 < 1) { c.save(); c.globalAlpha = 0.6 * (1 - k1); c.strokeStyle = AMBER; c.lineWidth = 10 + 10 * k1; rrect(c, 556 - 8 * k1, 326 - 8 * k1, 478 + 16 * k1, 168 + 16 * k1, 24); c.stroke(); c.restore(); } }
-          chip(c, "a made-up agreement · a small free AI · our test", W / 2, 1290, "#1e293b", "#e2e8f0", 1, 36);
         } else if (P === "wild") {
           her(540, 780, 0.62, "wild");
           const kM = seg(f, cu(1, 0.4), cu(1, 0.4) + 8);
@@ -208,6 +207,7 @@ const StLease: React.FC<SP> = ({ s }) => {
             bubble(c, T.reply, y1 + 30, false, kR, seg(f, cu(1, 0.4), cu(1, 0.4) + 4) > 0 ? T.lit : "", 38);
             chip(c, "14 clauses · all in the chat", 300, 1250, "#fffdf7", INK, seg(f, ln.from + 2, ln.from + 10), 34);
             chip(c, "its real reply", 780, 1250, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 34);
+            chip(c, "lock-in = 2 months' rent (clause 10)", W / 2, 300, "#fef3c7", "#78350f", seg(f, cu(1, 0.4) + 14, cu(1, 0.4) + 22), 40);   // script review: why 36k
           } else chip(c, "her question, word for word", W / 2, 1250, "#1e293b", "#e2e8f0", seg(f, ln.from + 6, ln.from + 14), 36);
         } else if (P === "relief") {
           her(330, 820, 0.56, "relief");
@@ -227,21 +227,23 @@ const StLease: React.FC<SP> = ({ s }) => {
             c.strokeStyle = AMBER; c.lineWidth = 6; rrect(c, 140, 700, 800, 250, 14); c.stroke();
             c.font = SERIF(34, 700); c.fillStyle = INK; c.textAlign = "left";
             wrap(c, T.c11, 740).forEach((t, q) => c.fillText(t, 170, 760 + q * 46));
+            c.font = SANS(30, 800); c.fillStyle = "#78350f"; c.fillText("(charged whenever she moves out)", 170, 930);
             c.restore();
           }
           grass(c, 760, seg(f, cu(1, 0.6) - 10, cu(1, 0.6) + 10), f);
           c.restore();
           docFrame(c, f);
-          lowerThird(c, "CLAUSE 11", "rarely seen · Rs 8,000 · repainting", seg(f, cu(1, 0.6) + 10, cu(1, 0.6) + 20), r);
+          lowerThird(c, "CLAUSE 11", "rarely seen · a Rs 8,000 painting charge, whenever she moves out", seg(f, cu(1, 0.6) + 10, cu(1, 0.6) + 20), r);
         } else if (P === "shock") {
           her(300, 820, 0.56, "shock");
-          SUM(c, 690, 380, [["₹54,000", "deposit"], ["− ₹36,000", "lock-in (cl. 10)"], ["− ₹8,000", "painting (cl. 11)"]], "₹10,000 back", RED, 1,
+          SUM(c, 690, 380, [["₹54,000", "deposit"], ["− ₹36,000", "lock-in (cl. 10)"], ["− ₹8,000", "painting charge (cl. 11)"]], "₹10,000 back", RED, 1,
             seg(f, cu(1, 0.5), cu(1, 0.5) + 6) > 0 ? "₹18,000" : "");
           chip(c, "she pays ₹44,000, not ₹36,000", W / 2, 1290, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.5) + 10, cu(1, 0.5) + 18), 44);
         } else if (P === "test") {
           docFrame(c, f);
           c.font = SANS(fit(c, "OUR TEST · THE SAME QUESTION, 10 TIMES", W - 140, 54), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("OUR TEST · THE SAME QUESTION, 10 TIMES", W / 2, 390);
-          c.font = SANS(32, 700); c.fillStyle = "#e2e8f0"; c.fillText("a made-up agreement · a small free AI on our computer", W / 2, 440);
+          c.font = SANS(fit(c, "a sample agreement we wrote · a small free AI, offline", W - 140, 34, 700), 700); c.fillStyle = "#e2e8f0"; c.fillText("a sample agreement we wrote · a small free AI, offline", W / 2, 440);
+          chip(c, "we didn't test the big apps", W / 2, 1210, "#1e293b", "#e2e8f0", seg(f, cu(2, 0.75) + 10, cu(2, 0.75) + 18), 38);
           const row = (y: number, label: string, ok: boolean, k0: number) => {
             c.font = SANS(44, 900); c.fillStyle = ok ? "#86efac" : "#fca5a5"; c.textAlign = "left"; c.fillText(label, 90, y);
             for (let q = 0; q < 10; q++) {
@@ -252,13 +254,13 @@ const StLease: React.FC<SP> = ({ s }) => {
             }
           };
           row(540, "said ₹36,000 (the lock-in)", true, cu(1, 0.4));
-          row(860, "named the ₹8,000 painting", false, cu(2, 0.75) - 20);
+          row(860, "named the ₹8,000 painting charge", false, cu(2, 0.75) - 20);
           const kZ = seg(f, cu(2, 0.75), cu(2, 0.75) + 6);
           if (kZ > 0) { c.save(); c.globalAlpha = clamp(kZ * 3); c.font = SANS(96, 900); c.fillStyle = "#f87171"; c.textAlign = "right"; c.fillText("0/10", 990, 858); c.restore(); }
           if (seg(f, cu(1, 0.4) + 20, cu(1, 0.4) + 26) > 0) { c.font = SANS(96, 900); c.fillStyle = "#4ade80"; c.textAlign = "right"; c.fillText("10/10", 990, 538); }
         } else if (P === "fix") {
           docFrame(c, f);
-          chip(c, "ASK IT THIS", W / 2, 380, "#fde68a", INK, 1, 46);
+          chip(c, "THEN WE ASKED (word for word)", W / 2, 380, "#fde68a", INK, 1, 44);
           c.save(); c.fillStyle = "#2563eb"; rrect(c, 80, 430, 920, 230, 28); c.fill();
           c.font = SANS(38, 700); c.fillStyle = "#fff"; c.textAlign = "left";
           const typed = T.better.slice(0, Math.round(T.better.length * seg(f, ln.from + 2, cu(1, 0.45) - 6)));
@@ -267,7 +269,7 @@ const StLease: React.FC<SP> = ({ s }) => {
           if (k1 > 0) {
             c.save(); c.globalAlpha = clamp(k1 * 3); c.fillStyle = "#e5e7eb"; rrect(c, 80, 690, 920, 170, 28); c.fill();
             c.font = SANS(36, 700); c.fillStyle = INK; c.textAlign = "left"; wrap(c, T.found, 860).forEach((t, q) => c.fillText(t, 110, 746 + q * 48));
-            c.font = SANS(64, 900); c.fillStyle = "#4ade80"; c.textAlign = "center"; c.fillText("10/10 found the painting", W / 2, 950); c.restore();
+            c.font = SANS(fit(c, "10/10 named the painting charge", 900, 64), 900); c.fillStyle = "#4ade80"; c.textAlign = "center"; c.fillText("10/10 named the painting charge", W / 2, 950); c.restore();
           }
           const k2 = seg(f, cu(2, 0.75), cu(2, 0.75) + 8);
           if (k2 > 0) {
@@ -290,7 +292,6 @@ const StLease: React.FC<SP> = ({ s }) => {
           lowerThird(c, "WILD HYDERABAD", "flat 303 · another tenant", seg(f, ln.from + 4, ln.from + 14), r);
         }
         if (P === "hook" || P === "wild" || P === "relief" || P === "shock") docFrame(c, f);
-        if (P === "hook") lowerThird(c, "WILD HYDERABAD", "", 1, r, 1180);
       }} />
     </>
   );

@@ -117,6 +117,7 @@ SPEAKERS = {
     "tarun": dict(voice="hm_psi", speed=1.0, lang="en-us", name="Tarun", color="#5EEAD4"),   # Creative 20 (file takes): the "anchor"
     "vijaya": dict(voice="af_heart", speed=1.0, lang="en-us", name="Vijaya atta", color="#F9A8D4"),
     "mohan": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Mohan mama", color="#93C5FD"),
+    "anusha": dict(voice="af_bella", speed=1.0, lang="en-us", name="Anusha", color="#C4B5FD"),   # Creative 32 (file takes): the tenant
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 

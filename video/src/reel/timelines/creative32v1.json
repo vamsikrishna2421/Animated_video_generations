@@ -1,0 +1,1100 @@
+{
+ "id": "creative32v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "",
+ "musicVol": [
+  0.14,
+  0.24
+ ],
+ "title": "₹36,000, Said a Free AI. ₹44,000, the Real Cost. (Creative 32)",
+ "handle": "@ai_maastaaru",
+ "label": "",
+ "fps": 30,
+ "musicDrops": [
+  [
+   42,
+   75
+  ],
+  [
+   826,
+   868
+  ],
+  [
+   1241,
+   1279
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   329,
+   1.5
+  ],
+  [
+   329,
+   798,
+   0.9
+  ],
+  [
+   798,
+   1043,
+   1.2
+  ],
+  [
+   1043,
+   1616,
+   1.1
+  ],
+  [
+   1616,
+   1783,
+   2.2
+  ],
+  [
+   1432,
+   1616,
+   1.8,
+   1
+  ],
+  [
+   1616,
+   1783,
+   2.6,
+   1
+  ]
+ ],
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1783,
+ "music": "reel/creative32v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_lease32",
+   "data": {
+    "beats": [
+     {
+      "who": "narrator",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "narrator",
+      "prop": "wild",
+      "n": 2
+     }
+    ],
+    "captionTop": 1370,
+    "t": {
+     "ask": "I may have to move out after 4 months for a job transfer. What will it cost me?",
+     "reply": "So, if you need to move out after 4 months for a job transfer, you will have to pay Rs 36,000 as a penalty according to the agreement.",
+     "lit": "you will have to pay Rs 36,000",
+     "c10": "10. Lock-in: ... If the Tenant vacates during the lock-in period, the Tenant shall pay two months' rent, Rs 36,000, as a penalty, which the Owner may deduct from the security deposit.",
+     "c11": "11. Painting: when the Tenant vacates, Rs 8,000 towards repainting shall be deducted from the security deposit.",
+     "better": "List every amount of money I may have to pay or lose, and every condition on leaving early. Give the clause number for each.",
+     "found": "Cost towards Repainting when Vacating: Rs 8,000 deducted from the security deposit (Clause 11)"
+    },
+    "yt": {
+     "chapter": "₹36,000 vs ₹44,000",
+     "title": "₹36,000 vs ₹44,000",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 329,
+   "lines": [
+    {
+     "who": "narrator",
+     "name": "Narrator",
+     "color": "#BEF264",
+     "sub": null,
+     "audio": "reel/creative32v1/line_01.wav",
+     "from": 9,
+     "frames": 133,
+     "words": [
+      {
+       "w": "A",
+       "from": 9,
+       "to": 17
+      },
+      {
+       "w": "free",
+       "from": 17,
+       "to": 27
+      },
+      {
+       "w": "AI",
+       "from": 27,
+       "to": 33
+      },
+      {
+       "w": "said",
+       "from": 33,
+       "to": 42
+      },
+      {
+       "w": "₹36,000.",
+       "from": 42,
+       "to": 60
+      },
+      {
+       "w": "The",
+       "from": 60,
+       "to": 68
+      },
+      {
+       "w": "real",
+       "from": 68,
+       "to": 90
+      },
+      {
+       "w": "cost:",
+       "from": 90,
+       "to": 102
+      },
+      {
+       "w": "₹44,000.",
+       "from": 102,
+       "to": 136
+      }
+     ],
+     "cues": {
+      "1": 66
+     }
+    },
+    {
+     "who": "narrator",
+     "name": "Narrator",
+     "color": "#BEF264",
+     "sub": null,
+     "audio": "reel/creative32v1/line_02.wav",
+     "from": 151,
+     "frames": 171,
+     "words": [
+      {
+       "w": "Here,",
+       "from": 152,
+       "to": 171
+      },
+      {
+       "w": "among",
+       "from": 171,
+       "to": 179
+      },
+      {
+       "w": "the",
+       "from": 179,
+       "to": 185
+      },
+      {
+       "w": "cardboard,",
+       "from": 185,
+       "to": 200
+      },
+      {
+       "w": "the",
+       "from": 200,
+       "to": 205
+      },
+      {
+       "w": "young",
+       "from": 205,
+       "to": 214
+      },
+      {
+       "w": "tenant",
+       "from": 214,
+       "to": 227
+      },
+      {
+       "w": "prepares",
+       "from": 227,
+       "to": 240
+      },
+      {
+       "w": "to",
+       "from": 240,
+       "to": 244
+      },
+      {
+       "w": "migrate.",
+       "from": 244,
+       "to": 269
+      },
+      {
+       "w": "A",
+       "from": 269,
+       "to": 272
+      },
+      {
+       "w": "job",
+       "from": 272,
+       "to": 278
+      },
+      {
+       "w": "in",
+       "from": 278,
+       "to": 282
+      },
+      {
+       "w": "Pune,",
+       "from": 282,
+       "to": 290
+      },
+      {
+       "w": "4",
+       "from": 290,
+       "to": 302
+      },
+      {
+       "w": "months",
+       "from": 302,
+       "to": 311
+      },
+      {
+       "w": "in.",
+       "from": 311,
+       "to": 317
+      }
+     ],
+     "cues": {
+      "1": 267
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_lease32",
+   "data": {
+    "beats": [
+     {
+      "who": "anusha",
+      "prop": "ask",
+      "n": 3
+     },
+     {
+      "who": "narrator",
+      "prop": "reply",
+      "n": 4
+     },
+     {
+      "who": "anusha",
+      "prop": "relief",
+      "n": 5
+     }
+    ],
+    "captionTop": 1370,
+    "t": {
+     "ask": "I may have to move out after 4 months for a job transfer. What will it cost me?",
+     "reply": "So, if you need to move out after 4 months for a job transfer, you will have to pay Rs 36,000 as a penalty according to the agreement.",
+     "lit": "you will have to pay Rs 36,000",
+     "c10": "10. Lock-in: ... If the Tenant vacates during the lock-in period, the Tenant shall pay two months' rent, Rs 36,000, as a penalty, which the Owner may deduct from the security deposit.",
+     "c11": "11. Painting: when the Tenant vacates, Rs 8,000 towards repainting shall be deducted from the security deposit.",
+     "better": "List every amount of money I may have to pay or lose, and every condition on leaving early. Give the clause number for each.",
+     "found": "Cost towards Repainting when Vacating: Rs 8,000 deducted from the security deposit (Clause 11)"
+    },
+    "yt": {
+     "chapter": "What will it cost?",
+     "title": "What will it cost?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 329,
+   "frames": 469,
+   "lines": [
+    {
+     "who": "anusha",
+     "name": "Anusha",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative32v1/line_03.wav",
+     "from": 0,
+     "frames": 100,
+     "words": [
+      {
+       "w": "I",
+       "from": 1,
+       "to": 3
+      },
+      {
+       "w": "may",
+       "from": 3,
+       "to": 9
+      },
+      {
+       "w": "have",
+       "from": 9,
+       "to": 15
+      },
+      {
+       "w": "to",
+       "from": 15,
+       "to": 19
+      },
+      {
+       "w": "move",
+       "from": 19,
+       "to": 26
+      },
+      {
+       "w": "out",
+       "from": 26,
+       "to": 31
+      },
+      {
+       "w": "after",
+       "from": 31,
+       "to": 40
+      },
+      {
+       "w": "4",
+       "from": 40,
+       "to": 42
+      },
+      {
+       "w": "months.",
+       "from": 42,
+       "to": 67
+      },
+      {
+       "w": "What",
+       "from": 67,
+       "to": 73
+      },
+      {
+       "w": "will",
+       "from": 73,
+       "to": 80
+      },
+      {
+       "w": "it",
+       "from": 80,
+       "to": 84
+      },
+      {
+       "w": "cost",
+       "from": 84,
+       "to": 95
+      },
+      {
+       "w": "me?",
+       "from": 95,
+       "to": 100
+      }
+     ],
+     "cues": {
+      "1": 68
+     }
+    },
+    {
+     "who": "narrator",
+     "name": "Narrator",
+     "color": "#BEF264",
+     "sub": null,
+     "audio": "reel/creative32v1/line_04.wav",
+     "from": 108,
+     "frames": 152,
+     "words": [
+      {
+       "w": "The",
+       "from": 108,
+       "to": 116
+      },
+      {
+       "w": "AI",
+       "from": 116,
+       "to": 122
+      },
+      {
+       "w": "read",
+       "from": 122,
+       "to": 131
+      },
+      {
+       "w": "all",
+       "from": 131,
+       "to": 139
+      },
+      {
+       "w": "14",
+       "from": 139,
+       "to": 149
+      },
+      {
+       "w": "clauses.",
+       "from": 149,
+       "to": 176
+      },
+      {
+       "w": "₹36,000,",
+       "from": 176,
+       "to": 202
+      },
+      {
+       "w": "it",
+       "from": 202,
+       "to": 208
+      },
+      {
+       "w": "says:",
+       "from": 208,
+       "to": 220
+      },
+      {
+       "w": "the",
+       "from": 220,
+       "to": 227
+      },
+      {
+       "w": "lock-in.",
+       "from": 227,
+       "to": 253
+      }
+     ],
+     "cues": {
+      "1": 167
+     }
+    },
+    {
+     "who": "anusha",
+     "name": "Anusha",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative32v1/line_05.wav",
+     "from": 268,
+     "frames": 184,
+     "words": [
+      {
+       "w": "₹54,000",
+       "from": 271,
+       "to": 291
+      },
+      {
+       "w": "deposit,",
+       "from": 291,
+       "to": 309
+      },
+      {
+       "w": "minus",
+       "from": 309,
+       "to": 330
+      },
+      {
+       "w": "₹36,000.",
+       "from": 330,
+       "to": 349
+      },
+      {
+       "w": "Well,",
+       "from": 349,
+       "to": 376
+      },
+      {
+       "w": "at",
+       "from": 376,
+       "to": 392
+      },
+      {
+       "w": "least",
+       "from": 392,
+       "to": 404
+      },
+      {
+       "w": "₹18,000",
+       "from": 404,
+       "to": 421
+      },
+      {
+       "w": "comes",
+       "from": 421,
+       "to": 433
+      },
+      {
+       "w": "back.",
+       "from": 433,
+       "to": 445
+      }
+     ],
+     "cues": {
+      "1": 353
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_lease32",
+   "data": {
+    "beats": [
+     {
+      "who": "narrator",
+      "prop": "lurk",
+      "n": 6
+     },
+     {
+      "who": "anusha",
+      "prop": "shock",
+      "n": 7
+     }
+    ],
+    "captionTop": 1370,
+    "t": {
+     "ask": "I may have to move out after 4 months for a job transfer. What will it cost me?",
+     "reply": "So, if you need to move out after 4 months for a job transfer, you will have to pay Rs 36,000 as a penalty according to the agreement.",
+     "lit": "you will have to pay Rs 36,000",
+     "c10": "10. Lock-in: ... If the Tenant vacates during the lock-in period, the Tenant shall pay two months' rent, Rs 36,000, as a penalty, which the Owner may deduct from the security deposit.",
+     "c11": "11. Painting: when the Tenant vacates, Rs 8,000 towards repainting shall be deducted from the security deposit.",
+     "better": "List every amount of money I may have to pay or lose, and every condition on leaving early. Give the clause number for each.",
+     "found": "Cost towards Repainting when Vacating: Rs 8,000 deducted from the security deposit (Clause 11)"
+    },
+    "yt": {
+     "chapter": "Clause 11",
+     "title": "Clause 11",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 798,
+   "frames": 245,
+   "lines": [
+    {
+     "who": "narrator",
+     "name": "Narrator",
+     "color": "#BEF264",
+     "sub": null,
+     "audio": "reel/creative32v1/line_06.wav",
+     "from": 0,
+     "frames": 80,
+     "words": [
+      {
+       "w": "But",
+       "from": 0,
+       "to": 8
+      },
+      {
+       "w": "deep",
+       "from": 8,
+       "to": 17
+      },
+      {
+       "w": "in",
+       "from": 17,
+       "to": 22
+      },
+      {
+       "w": "clause",
+       "from": 22,
+       "to": 35
+      },
+      {
+       "w": "11,",
+       "from": 35,
+       "to": 42
+      },
+      {
+       "w": "something",
+       "from": 42,
+       "to": 68
+      },
+      {
+       "w": "waits.",
+       "from": 68,
+       "to": 80
+      }
+     ],
+     "cues": {
+      "1": 52
+     }
+    },
+    {
+     "who": "anusha",
+     "name": "Anusha",
+     "color": "#C4B5FD",
+     "sub": null,
+     "audio": "reel/creative32v1/line_07.wav",
+     "from": 89,
+     "frames": 136,
+     "words": [
+      {
+       "w": "An",
+       "from": 90,
+       "to": 95
+      },
+      {
+       "w": "₹8,000",
+       "from": 95,
+       "to": 112
+      },
+      {
+       "w": "painting",
+       "from": 112,
+       "to": 132
+      },
+      {
+       "w": "charge?!",
+       "from": 132,
+       "to": 157
+      },
+      {
+       "w": "So",
+       "from": 157,
+       "to": 163
+      },
+      {
+       "w": "₹10,000",
+       "from": 163,
+       "to": 177
+      },
+      {
+       "w": "back,",
+       "from": 177,
+       "to": 200
+      },
+      {
+       "w": "not",
+       "from": 200,
+       "to": 207
+      },
+      {
+       "w": "₹18,000?!",
+       "from": 207,
+       "to": 225
+      }
+     ],
+     "cues": {
+      "1": 159
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_lease32",
+   "data": {
+    "beats": [
+     {
+      "who": "narrator",
+      "prop": "test",
+      "n": 8
+     },
+     {
+      "who": "narrator",
+      "prop": "fix",
+      "n": 9
+     }
+    ],
+    "captionTop": 1370,
+    "t": {
+     "ask": "I may have to move out after 4 months for a job transfer. What will it cost me?",
+     "reply": "So, if you need to move out after 4 months for a job transfer, you will have to pay Rs 36,000 as a penalty according to the agreement.",
+     "lit": "you will have to pay Rs 36,000",
+     "c10": "10. Lock-in: ... If the Tenant vacates during the lock-in period, the Tenant shall pay two months' rent, Rs 36,000, as a penalty, which the Owner may deduct from the security deposit.",
+     "c11": "11. Painting: when the Tenant vacates, Rs 8,000 towards repainting shall be deducted from the security deposit.",
+     "better": "List every amount of money I may have to pay or lose, and every condition on leaving early. Give the clause number for each.",
+     "found": "Cost towards Repainting when Vacating: Rs 8,000 deducted from the security deposit (Clause 11)"
+    },
+    "yt": {
+     "chapter": "Our test, the better question",
+     "title": "Our test, the better question",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1043,
+   "frames": 573,
+   "lines": [
+    {
+     "who": "narrator",
+     "name": "Narrator",
+     "color": "#BEF264",
+     "sub": null,
+     "audio": "reel/creative32v1/line_08.wav",
+     "from": 0,
+     "frames": 283,
+     "words": [
+      {
+       "w": "We",
+       "from": 0,
+       "to": 5
+      },
+      {
+       "w": "gave",
+       "from": 5,
+       "to": 14
+      },
+      {
+       "w": "a",
+       "from": 14,
+       "to": 17
+      },
+      {
+       "w": "small",
+       "from": 17,
+       "to": 27
+      },
+      {
+       "w": "free",
+       "from": 27,
+       "to": 36
+      },
+      {
+       "w": "AI,",
+       "from": 36,
+       "to": 43
+      },
+      {
+       "w": "offline,",
+       "from": 43,
+       "to": 70
+      },
+      {
+       "w": "a",
+       "from": 70,
+       "to": 73
+      },
+      {
+       "w": "sample",
+       "from": 73,
+       "to": 96
+      },
+      {
+       "w": "agreement",
+       "from": 96,
+       "to": 112
+      },
+      {
+       "w": "we",
+       "from": 112,
+       "to": 118
+      },
+      {
+       "w": "wrote.",
+       "from": 118,
+       "to": 144
+      },
+      {
+       "w": "₹36,000:",
+       "from": 144,
+       "to": 159
+      },
+      {
+       "w": "10",
+       "from": 159,
+       "to": 164
+      },
+      {
+       "w": "out",
+       "from": 164,
+       "to": 184
+      },
+      {
+       "w": "of",
+       "from": 184,
+       "to": 189
+      },
+      {
+       "w": "10.",
+       "from": 189,
+       "to": 200
+      },
+      {
+       "w": "The",
+       "from": 222,
+       "to": 229
+      },
+      {
+       "w": "painting",
+       "from": 229,
+       "to": 245
+      },
+      {
+       "w": "charge:",
+       "from": 245,
+       "to": 266
+      },
+      {
+       "w": "not",
+       "from": 266,
+       "to": 273
+      },
+      {
+       "w": "once.",
+       "from": 273,
+       "to": 283
+      }
+     ],
+     "cues": {
+      "1": 114,
+      "2": 222
+     }
+    },
+    {
+     "who": "narrator",
+     "name": "Narrator",
+     "color": "#BEF264",
+     "sub": null,
+     "audio": "reel/creative32v1/line_09.wav",
+     "from": 292,
+     "frames": 255,
+     "words": [
+      {
+       "w": "Then",
+       "from": 293,
+       "to": 299
+      },
+      {
+       "w": "we",
+       "from": 299,
+       "to": 304
+      },
+      {
+       "w": "asked",
+       "from": 304,
+       "to": 312
+      },
+      {
+       "w": "for",
+       "from": 312,
+       "to": 317
+      },
+      {
+       "w": "every",
+       "from": 317,
+       "to": 326
+      },
+      {
+       "w": "amount,",
+       "from": 326,
+       "to": 349
+      },
+      {
+       "w": "with",
+       "from": 349,
+       "to": 355
+      },
+      {
+       "w": "its",
+       "from": 355,
+       "to": 361
+      },
+      {
+       "w": "clause",
+       "from": 361,
+       "to": 370
+      },
+      {
+       "w": "number.",
+       "from": 370,
+       "to": 390
+      },
+      {
+       "w": "10",
+       "from": 390,
+       "to": 394
+      },
+      {
+       "w": "out",
+       "from": 394,
+       "to": 400
+      },
+      {
+       "w": "of",
+       "from": 400,
+       "to": 404
+      },
+      {
+       "w": "10",
+       "from": 404,
+       "to": 408
+      },
+      {
+       "w": "named",
+       "from": 408,
+       "to": 416
+      },
+      {
+       "w": "the",
+       "from": 416,
+       "to": 422
+      },
+      {
+       "w": "painting",
+       "from": 422,
+       "to": 434
+      },
+      {
+       "w": "charge.",
+       "from": 434,
+       "to": 450
+      },
+      {
+       "w": "So",
+       "from": 462,
+       "to": 466
+      },
+      {
+       "w": "open",
+       "from": 466,
+       "to": 472
+      },
+      {
+       "w": "those",
+       "from": 472,
+       "to": 480
+      },
+      {
+       "w": "clauses,",
+       "from": 480,
+       "to": 494
+      },
+      {
+       "w": "and",
+       "from": 494,
+       "to": 512
+      },
+      {
+       "w": "add",
+       "from": 512,
+       "to": 517
+      },
+      {
+       "w": "them",
+       "from": 517,
+       "to": 523
+      },
+      {
+       "w": "up",
+       "from": 523,
+       "to": 526
+      },
+      {
+       "w": "yourself.",
+       "from": 526,
+       "to": 539
+      }
+     ],
+     "cues": {
+      "1": 389,
+      "2": 462
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_lease32",
+   "data": {
+    "beats": [
+     {
+      "who": "narrator",
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1370,
+    "t": {
+     "ask": "I may have to move out after 4 months for a job transfer. What will it cost me?",
+     "reply": "So, if you need to move out after 4 months for a job transfer, you will have to pay Rs 36,000 as a penalty according to the agreement.",
+     "lit": "you will have to pay Rs 36,000",
+     "c10": "10. Lock-in: ... If the Tenant vacates during the lock-in period, the Tenant shall pay two months' rent, Rs 36,000, as a penalty, which the Owner may deduct from the security deposit.",
+     "c11": "11. Painting: when the Tenant vacates, Rs 8,000 towards repainting shall be deducted from the security deposit.",
+     "better": "List every amount of money I may have to pay or lose, and every condition on leaving early. Give the clause number for each.",
+     "found": "Cost towards Repainting when Vacating: Rs 8,000 deducted from the security deposit (Clause 11)"
+    },
+    "yt": {
+     "chapter": "The next flat",
+     "title": "The next flat",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1616,
+   "frames": 167,
+   "lines": [
+    {
+     "who": "narrator",
+     "name": "Narrator",
+     "color": "#BEF264",
+     "sub": null,
+     "audio": "reel/creative32v1/line_10.wav",
+     "from": 9,
+     "frames": 128,
+     "words": [
+      {
+       "w": "Meanwhile,",
+       "from": 9,
+       "to": 27
+      },
+      {
+       "w": "next",
+       "from": 27,
+       "to": 35
+      },
+      {
+       "w": "door,",
+       "from": 35,
+       "to": 44
+      },
+      {
+       "w": "another",
+       "from": 44,
+       "to": 67
+      },
+      {
+       "w": "tenant",
+       "from": 67,
+       "to": 78
+      },
+      {
+       "w": "asks",
+       "from": 78,
+       "to": 86
+      },
+      {
+       "w": "the",
+       "from": 86,
+       "to": 93
+      },
+      {
+       "w": "AI",
+       "from": 93,
+       "to": 98
+      },
+      {
+       "w": "the",
+       "from": 98,
+       "to": 104
+      },
+      {
+       "w": "same",
+       "from": 104,
+       "to": 112
+      },
+      {
+       "w": "question...",
+       "from": 112,
+       "to": 131
+      }
+     ],
+     "cues": {
+      "1": 44
+     }
+    }
+   ]
+  }
+ ]
+}
