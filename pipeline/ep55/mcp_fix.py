@@ -3,6 +3,8 @@
 # said text and refused every call; twice it also wrote broken JSON ({"order_id": 4417"}).
 # Two changes, nothing else: (1) the server accepts a number or text (orders_server_v2.py); (2) the generic client shows
 # the AI each input's type from the schema ("order_id: string or integer"). Same bots, model, settings, questions:
+# (Correction, after the run: orders_server_v2.py also adds one docstring sentence, "order_id: the order number.",
+#  so three changes in all; none was tested on its own.)
 #   F2 WhatsApp bot + server v2    F3 website bot + server v2    F4 the 4417 update, both bots
 # Writes series/scripts/ep55_demo/mcp_fix.json.
 #   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep55/mcp_fix.py
