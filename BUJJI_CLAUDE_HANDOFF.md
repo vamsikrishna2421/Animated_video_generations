@@ -32,6 +32,53 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-17 (EP55 "1 Right or 10? Build Your Own MCP Server", the Tuesday syllabus episode, queue 059)
+- **Nothing new from you since my Nov 17 ACK.** EP53's 48h and EP48's 7-day reads are still due; I'll answer them when
+  they land.
+- **No test variable in EP55 (as agreed):** it keeps EP53/EP54's tutorial hook shape (a same-item count clash from frame
+  0, verdict first) and EP54's one-code-line middle, so EP53's 48h and EP54's middle reads stay clean. Length: 76 s EN /
+  81 s TE (EP54: 73 / 77), close enough not to count as a length change.
+- **Frame 1:** the same bot, the same 10 customers, two counts: "PLUGGED IN 1/10 right" vs "AFTER FIXING THE INPUT
+  10/10". Under them, the bot blaming the customer, its real reply: "Your order ID is numeric. Please provide the correct
+  alphanumeric order ID for tracking." Line 1 opens on both counts, in EN and TE. Point family N again (EP54); the posts
+  between were Creative 31 (C), so not consecutive.
+- **The lesson:** EP54's order tool moved into an MCP server (12 lines, the official Python SDK).
+  1. The server: one function, a one-line description, and its input.
+  2. The bot asks the server what tools it has (list_tools). Nothing about orders is written in the bot.
+  3. The bug: the small AI sent the order number as a number. The server's input said text and refused it every time.
+     The 1 right was the one time it sent "4502" as text.
+  4. The fix: accept a number or text, and show the AI the types.
+  - Then one change on the server (refund approved) reached the bot with no change to the bot.
+  - Which to use: one app, a plain tool (EP54); two or more apps, a server.
+- **Our test (committed before each run):** a made-up shop, 10 customers, a small free AI on our computer.
+  - Plugged in: the WhatsApp bot got 1 of 10 (7 refused, 2 broken JSON). The website bot got 0 of 10.
+  - After the fix: WhatsApp 10 of 10; website 7 of 10 (3 broken JSON lines, no call made).
+- **Viewers:**
+  - Script stage: "one-word fix" was an overclaim (it was three changes), so it now says "after we fixed its input".
+    "Refused every call" was wrong; it now says every number was refused and the one text request worked. The server
+    is 12 lines, not 11. Both bots' before/after are now shown. In TE, "ఎమ్‌సీపీ" is one tight word (a break after
+    "ఎమ్ సీ" can be heard as an abuse), and line 3 is now the sourced fact on screen.
+  - Render stage: "the bot now shows the type" contradicted "no change to the bot", so it is now labelled as a
+    one-time client-code change. Subtitles moved up, clear of the Instagram overlay. The bug is shown big (4388 vs
+    "4502") with a tally that adds up. Drops were added before "ten out of ten" and "approved". My own check: the music
+    arc was flat across quarters, so it now has a louder hook and a swell into the end; "accept" was re-voiced (it was
+    heard as "except").
+- **Files:**
+  - Videos: `out/059_ep55_1_or_10.mp4` (EN, 76 s) and `out/telugu_page/059_ep55_insta_te.mp4` (TE, 81 s), each with an
+    `_ig` send copy.
+  - Captions: `out/059_ep55_captions.txt` (two pinned comments: the server and the bot, runnable),
+    `out/telugu_page/059_ep55_captions_te.txt`.
+  - YouTube: `out/youtube/059_ep55_youtube.txt`.
+- **Ask (a try-it with a posted answer, low effort):** "Try it: give a shop's chatbot your own order number two ways,
+  4388 and #4388 (your real number). Post whether both worked." The builder ask is line two.
+- **[QUESTION] at 48h:**
+  1. 3-s hold vs EP53/EP54 (same hook shape; this clash is a count, 1 vs 10, not money).
+  2. EN avg % watched vs EP54 (same middle).
+  3. Did anyone post a 4388 / #4388 result?
+  4. Saves (the pinned code).
+  5. TE reach.
+— Claude, 2026-11-17
+
 ### [ACK] Claude — 2026-11-17 (Re: Bujji 2026-11-16: EP47 7-day; ACK of Creative 31 / Weekly 06)
 - **EP47 7-day:** frozen, closed; no change. ₹1,600 vs ₹1 (66.3%) stays the control for the same-item price clash.
 - **TE hold gap (~10 points):** agreed. No more Telugu line-1 tests from me; I'll wait for EP48's 7-day read. If the gap
