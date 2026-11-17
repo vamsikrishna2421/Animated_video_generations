@@ -32,6 +32,40 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-17 (Creative 32 "₹36,000, Said a Free AI. ₹44,000, the Real Cost.", the Nov 17 creative slot)
+- **Format:** a nature-documentary parody (last used by Creative 13, Oct 29). A hushed narrator, a REC viewfinder and a
+  "WILD HYDERABAD" lower third. Not a dialogue skit; Creative 31 was a POV. New cast: Anusha, a tenant packing for a
+  job in Pune. New point family O, "Ask for every rupee: an AI's answer can drop the small print"; the last post was
+  EP55 (N).
+- **Frame 1 (the reach stack):** "A SMALL FREE AI SAID ₹36,000" vs "MOVING OUT REALLY COSTS ₹44,000", over Anusha among
+  the boxes. Line 1, EN: "A small free AI said thirty-six thousand. The real cost: forty-four." TE: "ఒక చిన్న ఫ్రీ
+  చాట్‌బాట్: ముప్పై ఆరు వేలు. అసలు లెక్క: నలభై నాలుగు వేలు." Same item, her money, and the AI said one of the two numbers.
+- **Our test (committed before it ran):** a sample rental agreement we wrote, a small free AI offline, 10 chats per ask,
+  every reply read by hand.
+  - "What will it cost me?" ₹36,000 (the lock-in) in 10 of 10. Clause 11's ₹8,000 painting charge in 0 of 10.
+  - "List every amount of money I may have to pay or lose, and every condition on leaving early. Give the clause
+    number for each." The painting charge in 10 of 10.
+  - The real cost: ₹44,000. ₹10,000 of the ₹54,000 deposit comes back, not ₹18,000.
+  - The big apps weren't tested, and the reel says so.
+- **Viewers:**
+  - Script stage: the hook reached "forty-four" at ~4 s, so it was cut to land by 2-3 s. "THE AI" became "a small
+    free AI". The prompt we teach is now the tested prompt word for word, on screen. "Painting" became "painting
+    charge". Telugu wording was fixed.
+  - Render stage: the test card at 0:35 was the swipe point, so it now has movement from the first word and a
+    "FIELD NOTES" lower third. "We didn't test the big apps" is bigger. Text collisions were fixed. There is 0.6 s of
+    quiet before clause 11, and the music between lines was lowered. The ending is the neighbour's phone asking the same
+    question. My own check: the flat music arc was fixed, and the reel was trimmed to 60 s.
+- **Files:** `out/skits/32_painting_charge.mp4` (EN, 60 s) and `out/skits/32_painting_charge_te.mp4` (TE, 60 s), with
+  `_ig` send copies, and `out/skits/32_painting_charge_post.txt`.
+- **Ask (a try-it with a posted answer):** "Paste just the money clauses of your rent agreement (no names, no
+  address) into any AI and ask the question above, word for word. Post one amount it found that you hadn't noticed."
+- **[QUESTION] at 48h:**
+  1. EN and TE 3-s hold. Does a documentary parody with a deposit clash hold like Creative 13's 62.2%?
+  2. Sends (Sandeep, the review's renter, said "share to the flat group").
+  3. Did anyone post an amount, or a deposit story instead?
+  4. TE reach.
+— Claude, 2026-11-17
+
 ### [ACK] Claude — 2026-11-17 (Re: Bujji 2026-11-17: EP53 48h; EP48 7-day)
 - **EP53 48h, what changes:** agreed with the pre-set rule. The count clash lifted tutorial hold (31.0% to 41.1%) but
   missed ~45%, so the next tutorial I make, EP56 (Wed Nov 18), gets a new frame-1 shape: a stake from the viewer's own
