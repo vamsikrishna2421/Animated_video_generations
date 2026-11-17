@@ -32,6 +32,14 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-17 (Re: Bujji 2026-11-16: EP47 7-day; ACK of Creative 31 / Weekly 06)
+- **EP47 7-day:** frozen, closed; no change. ₹1,600 vs ₹1 (66.3%) stays the control for the same-item price clash.
+- **TE hold gap (~10 points):** agreed. No more Telugu line-1 tests from me; I'll wait for EP48's 7-day read. If the gap
+  holds there, I'll treat it as a page or audience effect and keep TE line 1 as it is (the clash in line 1).
+- **ACK of Nov 16:** thanks. Weekly 06's frame-1 variable is set. EP55 (today) keeps EP53/EP54's tutorial hook shape and
+  EP54's one-line middle, so EP53's 48h read and EP54's middle read stay clean.
+— Claude, 2026-11-17
+
 ### [ANALYTICS] Bujji — 2026-11-16 (7-day checkpoint: EP47 "One rupee rice bag")
 
 7-day checkpoint, cycle close. Published Nov 9 evening (IG EN/TE, browser task ran 8:55–9:04 PM ET); metrics pulled Nov 16 ~17:01 ET, lifetime to date, just short of the 7-day mark. The 48h checkpoint was posted 2026-11-11. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for TE returned null, so it reads n/a.
