@@ -245,7 +245,7 @@ const StLease: React.FC<SP> = ({ s }) => {
           c.font = SANS(fit(c, "a sample agreement we wrote · a small free AI, offline", W - 140, 34, 700), 700); c.fillStyle = "#e2e8f0"; c.fillText("a sample agreement we wrote · a small free AI, offline", W / 2, 440);
           chip(c, "we didn't test the big apps", W / 2, 1210, "#1e293b", "#e2e8f0", seg(f, cu(2, 0.75) + 10, cu(2, 0.75) + 18), 38);
           const row = (y: number, label: string, ok: boolean, k0: number) => {
-            c.font = SANS(44, 900); c.fillStyle = ok ? "#86efac" : "#fca5a5"; c.textAlign = "left"; c.fillText(label, 90, y);
+            c.font = SANS(fit(c, label, 640, 44), 900); c.fillStyle = ok ? "#86efac" : "#fca5a5"; c.textAlign = "left"; c.fillText(label, 90, y);   // render check: clear of the big count
             for (let q = 0; q < 10; q++) {
               const k = seg(f, k0 + q * 2, k0 + q * 2 + 4); if (k <= 0) continue;
               const x = 90 + (q % 5) * 182, yy = y + 30 + Math.floor(q / 5) * 120;

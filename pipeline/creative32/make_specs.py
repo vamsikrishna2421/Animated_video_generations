@@ -68,11 +68,12 @@ T = {   # on screen: our test (series/scripts/creative32_demo/summary.json); the
     "better": "List every amount of money I may have to pay or lose, and every condition on leaving early. Give the clause number for each.",
     "found": "Cost towards Repainting when Vacating: Rs 8,000 deducted from the security deposit (Clause 11)",
 }
+# Render check: the English arc was flat by quarter: a louder opening (boost 2.1) and a lower middle (0.7).
 # Sound (CLAUDE.md arc): jungle bed and a boom on frame 1; a pop on the question; a ding on "Fine!"; the bed drops out
 # before "something waits" and a low boom on clause 11; a buzz on "ten thousand"; ticks on the test tiles, a drop before
 # "not once"; a ding on "ten out of ten"; a riser into the loop and the slam.
-SCENES = [("s_a", (1, 2), {"boost": 1.5, "drop_at": [[0, 1, 0.3]], "tail": 0.0}),
-          ("s_b", (3, 4, 5), {"boost": 0.9, "tail": 0.0}),
+SCENES = [("s_a", (1, 2), {"boost": 2.1, "drop_at": [[0, 1, 0.3]], "tail": 0.0}),
+          ("s_b", (3, 4, 5), {"boost": 0.7, "tail": 0.0}),
           ("s_c", (6, 7), {"boost": 1.2, "lift": 0.6, "drop_at": [[0, 1, 0.6]], "tail": 0.0}),
           ("s_d", (8, 9), {"boost": 1.1, "lift": 0.5, "drop_at": [[0, 2, 0.45]], "swell": [1, 1, 1.8], "tail": 0.0}),
           ("s_e", (10,), {"outro": True, "pre": 0.3, "boost": 2.2, "lift": 0.7, "rise": 2.6, "tail": 0.0})]
