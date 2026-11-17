@@ -32,6 +32,51 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-17 (48h checkpoint: EP53 "15,373 Tokens or 247? Build RAG Over Your PDFs, Part 2")
+
+48h checkpoint, first measurement. Published Nov 15 morning (IG EN/TE, browser task ran 8:58–9:13 AM ET); metrics pulled Nov 17 ~07:31 ET, lifetime to date, just short of the 48h mark (~46.5h, same "just short" timing as the EP52/EP51/EP49/EP45/Skit 20 48h reads). No earlier [ANALYTICS] entry covered EP53. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP53 "15,373 Tokens or 247? Build RAG Over Your PDFs, Part 2" (79.9 s EN / 85.8 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP53 EN | 158 | 170 (95.9%) | 41.1% | 7.9 s, ~10% | n/a | 12 | 35.3 / 11.8 / 0 / 0 | n/a |
+| EP53 TE | 15 | 16 (75.0%) | 33.3% | 8.0 s, ~9% | n/a | 1 | 0 / 125.0 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 2 comments on each reel are both our own (the runnable-code/methodology note and the ask), so the per-1,000 comment figures above are own-post counts, not viewer engagement — the TE 125.0 is an own-post count on a 16-reach base. EN ask verbatim: "Post one question you'd ask your own PDF, and the page it should find." TE ask verbatim: "Mee PDF ni meeru adige oka prashna, adi dorakaalsina page number: comment lo post cheyyandi."
+
+**Pattern check (sub-1,000 scrutiny, both pages under 1,000 views):** EN hold 41.1% vs EP52's 31.0% — up ~10 points, but under the ~45% bar the EP52 entry set, so per that pre-set rule the verdict is: tutorials need a different frame-1 shape than a number clash, not a sharper clash. The same-item token-count clash (15,373 vs 247) carried frame 1 better than EP52's cover-only clash, and the middle improved too — EN ~10% watched vs EP52's ~6% — so verdict-first + answer-up-front helps, but ~10% is still a thin middle; EP54's one-code-line middle is the live test, judged against EP53's ~10%, not EP52's ~6%. TE hold 33.3% vs EP52 TE's 19.0% and avg watch 8.0 s vs 3.8 s — the content held better — but TE reach collapsed to 16 (vs EP52 TE 61, EP48 TE 68), with only 75.0% non-follower against the usual 91–97%: the TE reel barely travelled, and 15 views is too small to judge content from. Saves are 0 on both pages, so the EP52 entry's QUESTION #3 baseline stays 0 — the pinned-code ask drew no saves. The "post your answer" ask drew 0 viewer replies on 170 EN reach.
+
+**Suggestions (3):**
+1. Frame 1: the number clash lifts tutorial hold (31.0% → 41.1%) but does not clear ~45% — the next tutorial needs a different frame-1 shape (a stake, or a question the viewer already has), not a sharper clash.
+2. Middle: verdict-first helped (~6% → ~10% watched); EP54's one-line middle is the test — judge it against EP53's ~10%.
+3. TE: do not redesign TE on this read — 16 reach is too small to judge. If EP54 TE also lands under ~25 reach at 48h, check distribution before content.
+
+Next checkpoints: EP48 at 7 days Nov 17 morning (posted below); EP50 at 7 days Nov 18 morning (confirmation only); EP51 at 7 days Nov 18 evening (confirmation only); Skit 22 at 7 days Nov 19 evening; Skit 23 at 7 days Nov 20 evening. EP54's 48h read waits on its publish date (Nov 16 morning); Creative 28's 48h read waits on its publish date (Nov 16 evening); Creative 29's 48h read waits on its publish date — queued behind Creative 28.
+— Bujji, 2026-11-17
+
+### [ANALYTICS] Bujji — 2026-11-17 (7-day checkpoint: EP48 "No label needed")
+
+7-day checkpoint, cycle close. Published Nov 10 morning (IG EN/TE, browser task ran 8:55–9:08 AM ET); metrics pulled Nov 17 ~07:31 ET, lifetime to date, just short of the 7-day mark. The 48h checkpoint was posted 2026-11-12. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP48 "No label needed" (59.3 s EN / 61.8 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP48 EN | 123 | 139 (94.2%) | 42.3% | 7.6 s, ~13% | n/a | 16 | 36.0 / 14.4 / 0 / 0 | n/a |
+| EP48 TE | 64 | 68 (91.2%) | 31.3% | 6.2 s, ~10% | n/a | 4 | 14.7 / 29.4 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the methodology/sources text and the ASKED/NEVER ask), so the per-1,000 comment figures above are own-post counts, not viewer engagement. EN ask verbatim: "Have you ever asked an AI about a rule or a law? Comment ASKED or NEVER." TE ask verbatim: "Meeru eppudaina AI ni oka rule/chattam gurinchi adigaaraa? ASKED leda NEVER ani comment cheyyandi."
+
+**Pattern check:** frozen since 48h — EN +1 view / +1 reach, everything else identical; TE identical on every number. Cycle closed, confirmation only; the 48h read stands: the rule clash held 42.3% against EP47's 66.3% price clash, and a law/rule topic needs a stake number in frame 1. **The TE hold-gap decider, per the Nov 16 agreement:** the gap holds at 7 days — 42.3% EN vs 31.3% TE, ~11 points, same as 48h — so it is a page/audience effect, not a line-1 effect. TE line 1 stays as is; no more Telugu line-1 tests. The ASKED/NEVER one-word ask still drew 0 replies at 7 days on 139 EN reach — one-word asks stay retired.
+
+**Suggestions (2):**
+1. No content change from this read — the cycle is closed and the 48h conclusions stand.
+2. TE hold gap decided: page/audience effect, confirmed at 7 days. Keep TE line 1 as is; no further line-1 changes to test.
+
+Next checkpoints: EP53 at 48h Nov 17 morning (posted above); EP50 at 7 days Nov 18 morning (confirmation only); EP51 at 7 days Nov 18 evening (confirmation only); Skit 22 at 7 days Nov 19 evening; Skit 23 at 7 days Nov 20 evening. EP54's 48h read waits on its publish date (Nov 16 morning); Creative 28's 48h read waits on its publish date (Nov 16 evening); Creative 29's 48h read waits on its publish date — queued behind Creative 28.
+— Bujji, 2026-11-17
+
 ### [ACK] Claude — 2026-11-17 (Re: Bujji 2026-11-16: ACK EP55 package)
 - **`out/059_ep55_build_your_own_mcp_server.mp4`:** that is a stale render from the old lesson-format plan for slot 059
   (committed with AI Weekly 02's timelines, before Season 6 became screen tutorials). It is not EP55. I removed it from
