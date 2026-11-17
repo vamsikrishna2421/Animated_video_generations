@@ -10,7 +10,7 @@
  "music": "lofi",
  "musicVol": [
   0.12,
-  0.3
+  0.22
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
@@ -44,7 +44,7 @@
  "hideTimerInHook": true,
  "hideTimer": true,
  "tempo": 1.0,
- "captionTop": 1500,
+ "captionTop": 1360,
  "handle": "@ai_maastaaru_telugu",
  "parler_lang": "te",
  "scenes": [
@@ -75,7 +75,7 @@
       "n": 3
      }
     ],
-    "captionTop": 1500,
+    "captionTop": 1360,
     "t": {
      "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
      "q": "When will my smartwatch arrive? Order 4388.",
@@ -83,7 +83,7 @@
       "mcp = MCPServer(\"shop-orders\")",
       "@mcp.tool()",
       "def get_order(order_id: str) -> dict:",
-      "    \"\"\"Look up one order: item, amount, status and refund.\"\"\""
+      "    \"\"\"Look up one order in the shop's system: …\"\"\""
      ],
      "list": "client.list_tools()",
      "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",
@@ -164,7 +164,7 @@
       "n": 5
      }
     ],
-    "captionTop": 1500,
+    "captionTop": 1360,
     "t": {
      "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
      "q": "When will my smartwatch arrive? Order 4388.",
@@ -172,7 +172,7 @@
       "mcp = MCPServer(\"shop-orders\")",
       "@mcp.tool()",
       "def get_order(order_id: str) -> dict:",
-      "    \"\"\"Look up one order: item, amount, status and refund.\"\"\""
+      "    \"\"\"Look up one order in the shop's system: …\"\"\""
      ],
      "list": "client.list_tools()",
      "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",
@@ -233,7 +233,12 @@
     [
      1,
      1,
-     0.3
+     0.45
+    ],
+    [
+     2,
+     1,
+     0.4
     ]
    ],
    "swell": [
@@ -256,7 +261,7 @@
       "n": 8
      }
     ],
-    "captionTop": 1500,
+    "captionTop": 1360,
     "t": {
      "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
      "q": "When will my smartwatch arrive? Order 4388.",
@@ -264,7 +269,7 @@
       "mcp = MCPServer(\"shop-orders\")",
       "@mcp.tool()",
       "def get_order(order_id: str) -> dict:",
-      "    \"\"\"Look up one order: item, amount, status and refund.\"\"\""
+      "    \"\"\"Look up one order in the shop's system: …\"\"\""
      ],
      "list": "client.list_tools()",
      "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",
@@ -344,7 +349,7 @@
       "n": 9
      }
     ],
-    "captionTop": 1500,
+    "captionTop": 1360,
     "t": {
      "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
      "q": "When will my smartwatch arrive? Order 4388.",
@@ -352,7 +357,7 @@
       "mcp = MCPServer(\"shop-orders\")",
       "@mcp.tool()",
       "def get_order(order_id: str) -> dict:",
-      "    \"\"\"Look up one order: item, amount, status and refund.\"\"\""
+      "    \"\"\"Look up one order in the shop's system: …\"\"\""
      ],
      "list": "client.list_tools()",
      "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",

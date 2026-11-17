@@ -5,7 +5,7 @@
  "banner": "Build your own MCP server",
  "musicVol": [
   0.12,
-  0.3
+  0.22
  ],
  "title": "1 Right or 10? Build Your Own MCP Server (EP55)",
  "handle": "@ai_maastaaru",
@@ -18,14 +18,18 @@
   ],
   [
    1519,
-   1552
+   1557
+  ],
+  [
+   1800,
+   1836
   ]
  ],
  "musicBoosts": [
   [
    0,
    678,
-   1.2
+   1.6
   ],
   [
    678,
@@ -35,24 +39,30 @@
   [
    1125,
    1943,
-   1.4
+   1.1
   ],
   [
    1943,
-   2276,
-   2.2
+   2287,
+   2.6
+  ],
+  [
+   1824,
+   1943,
+   1.9,
+   1
   ],
   [
    1943,
-   2276,
-   2.6,
+   2287,
+   3.0,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 2276,
+ "totalFrames": 2287,
  "music": "reel/ep55v1/score.wav",
  "scenes": [
   {
@@ -73,7 +83,7 @@
       "n": 3
      }
     ],
-    "captionTop": 1500,
+    "captionTop": 1360,
     "t": {
      "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
      "q": "When will my smartwatch arrive? Order 4388.",
@@ -81,7 +91,7 @@
       "mcp = MCPServer(\"shop-orders\")",
       "@mcp.tool()",
       "def get_order(order_id: str) -> dict:",
-      "    \"\"\"Look up one order: item, amount, status and refund.\"\"\""
+      "    \"\"\"Look up one order in the shop's system: …\"\"\""
      ],
      "list": "client.list_tools()",
      "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",
@@ -455,7 +465,7 @@
       "n": 5
      }
     ],
-    "captionTop": 1500,
+    "captionTop": 1360,
     "t": {
      "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
      "q": "When will my smartwatch arrive? Order 4388.",
@@ -463,7 +473,7 @@
       "mcp = MCPServer(\"shop-orders\")",
       "@mcp.tool()",
       "def get_order(order_id: str) -> dict:",
-      "    \"\"\"Look up one order: item, amount, status and refund.\"\"\""
+      "    \"\"\"Look up one order in the shop's system: …\"\"\""
      ],
      "list": "client.list_tools()",
      "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",
@@ -736,7 +746,7 @@
       "n": 8
      }
     ],
-    "captionTop": 1500,
+    "captionTop": 1360,
     "t": {
      "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
      "q": "When will my smartwatch arrive? Order 4388.",
@@ -744,7 +754,7 @@
       "mcp = MCPServer(\"shop-orders\")",
       "@mcp.tool()",
       "def get_order(order_id: str) -> dict:",
-      "    \"\"\"Look up one order: item, amount, status and refund.\"\"\""
+      "    \"\"\"Look up one order in the shop's system: …\"\"\""
      ],
      "list": "client.list_tools()",
      "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",
@@ -1211,7 +1221,7 @@
       "n": 9
      }
     ],
-    "captionTop": 1500,
+    "captionTop": 1360,
     "t": {
      "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
      "q": "When will my smartwatch arrive? Order 4388.",
@@ -1219,7 +1229,7 @@
       "mcp = MCPServer(\"shop-orders\")",
       "@mcp.tool()",
       "def get_order(order_id: str) -> dict:",
-      "    \"\"\"Look up one order: item, amount, status and refund.\"\"\""
+      "    \"\"\"Look up one order in the shop's system: …\"\"\""
      ],
      "list": "client.list_tools()",
      "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",
@@ -1252,7 +1262,7 @@
     "hardCuts": true
    },
    "from": 1943,
-   "frames": 333,
+   "frames": 344,
    "lines": [
     {
      "who": "storyteller",
@@ -1261,7 +1271,7 @@
      "sub": null,
      "audio": "reel/ep55v1/line_09.wav",
      "from": 12,
-     "frames": 284,
+     "frames": 295,
      "words": [
       {
        "w": "One",
@@ -1271,118 +1281,118 @@
       {
        "w": "app:",
        "from": 19,
-       "to": 27
+       "to": 28
       },
       {
        "w": "a",
-       "from": 27,
-       "to": 45
+       "from": 28,
+       "to": 47
       },
       {
        "w": "plain",
-       "from": 45,
-       "to": 55
+       "from": 47,
+       "to": 57
       },
       {
        "w": "tool.",
-       "from": 55,
-       "to": 65
+       "from": 57,
+       "to": 76
       },
       {
        "w": "Two",
-       "from": 65,
-       "to": 80
+       "from": 76,
+       "to": 83
       },
       {
        "w": "or",
-       "from": 80,
-       "to": 85
+       "from": 83,
+       "to": 88
       },
       {
        "w": "more:",
-       "from": 85,
-       "to": 95
-      },
-      {
-       "w": "a",
-       "from": 95,
+       "from": 88,
        "to": 98
       },
       {
-       "w": "server.",
+       "w": "a",
        "from": 98,
-       "to": 118
+       "to": 110
+      },
+      {
+       "w": "server.",
+       "from": 110,
+       "to": 124
       },
       {
        "w": "Accept",
-       "from": 118,
-       "to": 138
+       "from": 124,
+       "to": 144
       },
       {
-       "w": "what",
-       "from": 138,
-       "to": 150
+       "w": "whatever",
+       "from": 144,
+       "to": 160
       },
       {
        "w": "the",
-       "from": 150,
-       "to": 157
+       "from": 160,
+       "to": 167
       },
       {
        "w": "AI",
-       "from": 157,
-       "to": 162
+       "from": 167,
+       "to": 172
       },
       {
        "w": "sends;",
-       "from": 162,
-       "to": 173
+       "from": 172,
+       "to": 193
       },
       {
        "w": "test",
-       "from": 173,
-       "to": 191
+       "from": 193,
+       "to": 201
       },
       {
        "w": "10",
-       "from": 191,
-       "to": 196
+       "from": 201,
+       "to": 207
       },
       {
        "w": "real",
-       "from": 196,
-       "to": 205
+       "from": 207,
+       "to": 215
       },
       {
        "w": "questions.",
-       "from": 205,
-       "to": 228
+       "from": 215,
+       "to": 238
       },
       {
        "w": "Next:",
-       "from": 245,
-       "to": 267
+       "from": 254,
+       "to": 261
       },
       {
        "w": "a",
-       "from": 267,
-       "to": 269
+       "from": 261,
+       "to": 278
       },
       {
        "w": "voice",
-       "from": 269,
-       "to": 275
+       "from": 278,
+       "to": 286
       },
       {
        "w": "assistant.",
-       "from": 275,
-       "to": 291
+       "from": 286,
+       "to": 303
       }
      ],
      "cues": {
-      "1": 64,
-      "2": 117,
-      "3": 245
+      "1": 76,
+      "2": 123,
+      "3": 254
      }
     }
    ]

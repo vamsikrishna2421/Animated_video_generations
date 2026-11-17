@@ -69,6 +69,22 @@ The server: 12 lines of code (not counting comments and blank lines).
 8. తర్వాత, సర్వర్ లో ఒక్క మార్పు: రిఫండ్ అప్రూవ్డ్. చాట్‌బాట్ ని మార్చకుండానే, వాట్సాప్ బాట్ రిఫండ్ అప్రూవ్ అయిందని చెప్పింది.
 9. ఒక్క యాప్ కి, మామూలు టూల్ చాలు. రెండు, అంతకంటే ఎక్కువ యాప్స్ కి, సర్వర్ గా రాసుకోండి. చాట్‌బాట్ పంపేది తీసుకునేలా రాసుకోండి; పది నిజమైన ప్రశ్నలతో టెస్ట్ చేసుకోండి. | తర్వాత: వాయిస్ అసిస్టెంట్.
 
+## Render review (human-viewer, EN v1), what changed
+- A contradiction: "the bot now shows the AI the type" vs "no change to the bot". The type display is a one-time change in
+  the generic client code (for every tool, nothing about orders); labelled so, and the update chip says "only the server
+  data" changed. "orders_server.py · the one change" -> "· the fix" (the docstring changed too).
+- Subtitles were under the Instagram overlay (top 1500): moved to 1360, into the empty band. Grey footnotes enlarged.
+- The bug at phone size: the wrapped JSON replaced by two big cards, 4388 (a number) vs "4502" (text, the 1 right), and
+  a tally under 1/10 that adds up (7 refused, 2 broken JSON, 1 right). The unspoken "name, not the type" chip moved to
+  the fix frame's label.
+- Step 1's docstring now matches the server's real description (cut with "…"); the card says "4 of its 12 lines".
+- End card: no doubled "1 1 app"; one size for all three rows; "one app: the tool inside the bot (EP54)"; the try-it
+  (4388 and #4388) on the card.
+- Sound: drops before "ten out of ten" (0.45 s) and before "approved" (0.4 s), a boom and ding on "approved"; music in
+  the gaps 0.3 -> 0.22 (it jumped above the voice between lines); the hook louder (boost 1.6), the middle lower, a swell
+  from the update into the end (my own check: the arc was flat); "accept" re-voiced (heard as "except").
+- A red pulse on "1/10 right" when the voice says it, so the hook moves before 0:08.
+
 ## Caption ask (a try-it with a posted answer)
 "Try it: give a shop's chatbot your own order number two ways, 4388 and #4388. Post whether both worked."
 Line two, for builders: "Give your tool to a small AI, send it 10 real questions, and post how many it got right before

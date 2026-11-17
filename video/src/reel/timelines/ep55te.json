@@ -1,0 +1,1456 @@
+{
+ "id": "ep55te",
+ "look": "classic",
+ "topic": "",
+ "banner": "Build your own MCP server",
+ "musicVol": [
+  0.12,
+  0.22
+ ],
+ "title": "1 Right or 10? Build Your Own MCP Server (EP55) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "EP55",
+ "fps": 30,
+ "musicDrops": [
+  [
+   183,
+   219
+  ],
+  [
+   1635,
+   1673
+  ],
+  [
+   1888,
+   1924
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   777,
+   1.6
+  ],
+  [
+   777,
+   1228,
+   0.85
+  ],
+  [
+   1228,
+   2045,
+   1.2
+  ],
+  [
+   2045,
+   2416,
+   2.8
+  ],
+  [
+   1912,
+   2045,
+   1.9,
+   1
+  ],
+  [
+   2045,
+   2416,
+   3.2,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 2416,
+ "music": "reel/ep55te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_mcp55",
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "prop": "what",
+      "n": 2
+     },
+     {
+      "prop": "who",
+      "n": 3
+     }
+    ],
+    "captionTop": 1360,
+    "t": {
+     "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
+     "q": "When will my smartwatch arrive? Order 4388.",
+     "server": [
+      "mcp = MCPServer(\"shop-orders\")",
+      "@mcp.tool()",
+      "def get_order(order_id: str) -> dict:",
+      "    \"\"\"Look up one order in the shop's system: …\"\"\""
+     ],
+     "list": "client.list_tools()",
+     "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",
+     "right": "{\"order_id\": \"4502\"}",
+     "call": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4388}}",
+     "error": "Input should be a valid string · input_value=4388, input_type=int",
+     "fixLine": "def get_order(order_id: str | int) -> dict:",
+     "fixList": "get_order(order_id: string or integer)",
+     "broken": "{\"order_id\": 4417\"}",
+     "update": "Your refund of Rs 1,299 has been approved and will reach your bank account in 5-7 working days.",
+     "who": [
+      [
+       "Anthropic",
+       "introduced MCP as an open standard · Nov 2024"
+      ],
+      [
+       "OpenAI",
+       "added MCP to its Agents SDK · Mar 2025"
+      ]
+     ],
+     "full": "full code: in the pinned comment"
+    },
+    "yt": {
+     "chapter": "1 right or 10?",
+     "title": "1 right or 10?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 777,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep55te/line_01.wav",
+     "from": 15,
+     "frames": 250,
+     "words": [
+      {
+       "w": "Same",
+       "from": 17,
+       "to": 25
+      },
+      {
+       "w": "chatbot,",
+       "from": 25,
+       "to": 50
+      },
+      {
+       "w": "same",
+       "from": 50,
+       "to": 58
+      },
+      {
+       "w": "10",
+       "from": 58,
+       "to": 63
+      },
+      {
+       "w": "customers.",
+       "from": 63,
+       "to": 91
+      },
+      {
+       "w": "Plugged",
+       "from": 91,
+       "to": 105
+      },
+      {
+       "w": "into",
+       "from": 105,
+       "to": 118
+      },
+      {
+       "w": "our",
+       "from": 118,
+       "to": 125
+      },
+      {
+       "w": "new",
+       "from": 125,
+       "to": 132
+      },
+      {
+       "w": "MCP",
+       "from": 132,
+       "to": 139
+      },
+      {
+       "w": "server:",
+       "from": 139,
+       "to": 152
+      },
+      {
+       "w": "just",
+       "from": 152,
+       "to": 168
+      },
+      {
+       "w": "1",
+       "from": 168,
+       "to": 171
+      },
+      {
+       "w": "right.",
+       "from": 171,
+       "to": 183
+      },
+      {
+       "w": "After",
+       "from": 207,
+       "to": 214
+      },
+      {
+       "w": "fixing",
+       "from": 214,
+       "to": 224
+      },
+      {
+       "w": "the",
+       "from": 224,
+       "to": 229
+      },
+      {
+       "w": "input:",
+       "from": 229,
+       "to": 247
+      },
+      {
+       "w": "10",
+       "from": 247,
+       "to": 251
+      },
+      {
+       "w": "out",
+       "from": 251,
+       "to": 256
+      },
+      {
+       "w": "of",
+       "from": 256,
+       "to": 260
+      },
+      {
+       "w": "10.",
+       "from": 260,
+       "to": 265
+      }
+     ],
+     "cues": {
+      "1": 93,
+      "2": 207
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep55te/line_02.wav",
+     "from": 277,
+     "frames": 242,
+     "words": [
+      {
+       "w": "MCP",
+       "from": 278,
+       "to": 285
+      },
+      {
+       "w": "is",
+       "from": 285,
+       "to": 291
+      },
+      {
+       "w": "a",
+       "from": 291,
+       "to": 294
+      },
+      {
+       "w": "standard",
+       "from": 294,
+       "to": 324
+      },
+      {
+       "w": "plug",
+       "from": 324,
+       "to": 333
+      },
+      {
+       "w": "for",
+       "from": 333,
+       "to": 348
+      },
+      {
+       "w": "chatbot",
+       "from": 348,
+       "to": 371
+      },
+      {
+       "w": "apps.",
+       "from": 371,
+       "to": 394
+      },
+      {
+       "w": "Put",
+       "from": 394,
+       "to": 410
+      },
+      {
+       "w": "a",
+       "from": 410,
+       "to": 413
+      },
+      {
+       "w": "tool",
+       "from": 413,
+       "to": 422
+      },
+      {
+       "w": "in",
+       "from": 422,
+       "to": 427
+      },
+      {
+       "w": "a",
+       "from": 427,
+       "to": 431
+      },
+      {
+       "w": "server",
+       "from": 431,
+       "to": 443
+      },
+      {
+       "w": "once,",
+       "from": 443,
+       "to": 462
+      },
+      {
+       "w": "and",
+       "from": 462,
+       "to": 469
+      },
+      {
+       "w": "every",
+       "from": 469,
+       "to": 480
+      },
+      {
+       "w": "MCP",
+       "from": 480,
+       "to": 491
+      },
+      {
+       "w": "app",
+       "from": 491,
+       "to": 498
+      },
+      {
+       "w": "can",
+       "from": 498,
+       "to": 505
+      },
+      {
+       "w": "use",
+       "from": 505,
+       "to": 512
+      },
+      {
+       "w": "it.",
+       "from": 512,
+       "to": 519
+      }
+     ],
+     "cues": {
+      "1": 395
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep55te/line_03.wav",
+     "from": 528,
+     "frames": 225,
+     "words": [
+      {
+       "w": "It",
+       "from": 536,
+       "to": 542
+      },
+      {
+       "w": "is",
+       "from": 542,
+       "to": 548
+      },
+      {
+       "w": "an",
+       "from": 548,
+       "to": 554
+      },
+      {
+       "w": "open",
+       "from": 554,
+       "to": 573
+      },
+      {
+       "w": "standard:",
+       "from": 573,
+       "to": 602
+      },
+      {
+       "w": "Anthropic,",
+       "from": 602,
+       "to": 625
+      },
+      {
+       "w": "2024.",
+       "from": 625,
+       "to": 654
+      },
+      {
+       "w": "The",
+       "from": 654,
+       "to": 662
+      },
+      {
+       "w": "ChatGPT",
+       "from": 662,
+       "to": 678
+      },
+      {
+       "w": "company",
+       "from": 678,
+       "to": 703
+      },
+      {
+       "w": "added",
+       "from": 703,
+       "to": 715
+      },
+      {
+       "w": "it",
+       "from": 715,
+       "to": 722
+      },
+      {
+       "w": "too,",
+       "from": 722,
+       "to": 732
+      },
+      {
+       "w": "in",
+       "from": 732,
+       "to": 738
+      },
+      {
+       "w": "2025.",
+       "from": 738,
+       "to": 750
+      }
+     ],
+     "cues": {
+      "1": 656
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_mcp55",
+   "data": {
+    "beats": [
+     {
+      "prop": "step1",
+      "n": 4
+     },
+     {
+      "prop": "step2",
+      "n": 5
+     }
+    ],
+    "captionTop": 1360,
+    "t": {
+     "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
+     "q": "When will my smartwatch arrive? Order 4388.",
+     "server": [
+      "mcp = MCPServer(\"shop-orders\")",
+      "@mcp.tool()",
+      "def get_order(order_id: str) -> dict:",
+      "    \"\"\"Look up one order in the shop's system: …\"\"\""
+     ],
+     "list": "client.list_tools()",
+     "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",
+     "right": "{\"order_id\": \"4502\"}",
+     "call": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4388}}",
+     "error": "Input should be a valid string · input_value=4388, input_type=int",
+     "fixLine": "def get_order(order_id: str | int) -> dict:",
+     "fixList": "get_order(order_id: string or integer)",
+     "broken": "{\"order_id\": 4417\"}",
+     "update": "Your refund of Rs 1,299 has been approved and will reach your bank account in 5-7 working days.",
+     "who": [
+      [
+       "Anthropic",
+       "introduced MCP as an open standard · Nov 2024"
+      ],
+      [
+       "OpenAI",
+       "added MCP to its Agents SDK · Mar 2025"
+      ]
+     ],
+     "full": "full code: in the pinned comment"
+    },
+    "yt": {
+     "chapter": "The server, the client",
+     "title": "The server, the client",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 777,
+   "frames": 451,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep55te/line_04.wav",
+     "from": 0,
+     "frames": 205,
+     "words": [
+      {
+       "w": "Step",
+       "from": 5,
+       "to": 18
+      },
+      {
+       "w": "1:",
+       "from": 18,
+       "to": 30
+      },
+      {
+       "w": "the",
+       "from": 30,
+       "to": 35
+      },
+      {
+       "w": "server.",
+       "from": 35,
+       "to": 57
+      },
+      {
+       "w": "12",
+       "from": 57,
+       "to": 60
+      },
+      {
+       "w": "lines:",
+       "from": 60,
+       "to": 69
+      },
+      {
+       "w": "one",
+       "from": 69,
+       "to": 84
+      },
+      {
+       "w": "function,",
+       "from": 84,
+       "to": 96
+      },
+      {
+       "w": "a",
+       "from": 96,
+       "to": 108
+      },
+      {
+       "w": "one-line",
+       "from": 108,
+       "to": 120
+      },
+      {
+       "w": "description,",
+       "from": 120,
+       "to": 144
+      },
+      {
+       "w": "its",
+       "from": 144,
+       "to": 149
+      },
+      {
+       "w": "input:",
+       "from": 149,
+       "to": 167
+      },
+      {
+       "w": "the",
+       "from": 167,
+       "to": 172
+      },
+      {
+       "w": "order",
+       "from": 172,
+       "to": 179
+      },
+      {
+       "w": "number,",
+       "from": 179,
+       "to": 193
+      },
+      {
+       "w": "as",
+       "from": 193,
+       "to": 197
+      },
+      {
+       "w": "text.",
+       "from": 197,
+       "to": 204
+      }
+     ],
+     "cues": {
+      "1": 87
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep55te/line_05.wav",
+     "from": 214,
+     "frames": 227,
+     "words": [
+      {
+       "w": "Step",
+       "from": 216,
+       "to": 228
+      },
+      {
+       "w": "2:",
+       "from": 228,
+       "to": 242
+      },
+      {
+       "w": "the",
+       "from": 242,
+       "to": 249
+      },
+      {
+       "w": "chatbot",
+       "from": 249,
+       "to": 272
+      },
+      {
+       "w": "asks",
+       "from": 272,
+       "to": 280
+      },
+      {
+       "w": "the",
+       "from": 280,
+       "to": 287
+      },
+      {
+       "w": "server",
+       "from": 287,
+       "to": 306
+      },
+      {
+       "w": "what",
+       "from": 306,
+       "to": 314
+      },
+      {
+       "w": "tools",
+       "from": 314,
+       "to": 324
+      },
+      {
+       "w": "it",
+       "from": 324,
+       "to": 329
+      },
+      {
+       "w": "has.",
+       "from": 329,
+       "to": 347
+      },
+      {
+       "w": "Not",
+       "from": 347,
+       "to": 353
+      },
+      {
+       "w": "one",
+       "from": 353,
+       "to": 360
+      },
+      {
+       "w": "line",
+       "from": 360,
+       "to": 368
+      },
+      {
+       "w": "about",
+       "from": 368,
+       "to": 389
+      },
+      {
+       "w": "orders",
+       "from": 389,
+       "to": 409
+      },
+      {
+       "w": "is",
+       "from": 409,
+       "to": 414
+      },
+      {
+       "w": "in",
+       "from": 414,
+       "to": 419
+      },
+      {
+       "w": "the",
+       "from": 419,
+       "to": 425
+      },
+      {
+       "w": "chatbot.",
+       "from": 425,
+       "to": 440
+      }
+     ],
+     "cues": {
+      "1": 349
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_mcp55",
+   "data": {
+    "beats": [
+     {
+      "prop": "bug",
+      "n": 6
+     },
+     {
+      "prop": "fix",
+      "n": 7
+     },
+     {
+      "prop": "update",
+      "n": 8
+     }
+    ],
+    "captionTop": 1360,
+    "t": {
+     "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
+     "q": "When will my smartwatch arrive? Order 4388.",
+     "server": [
+      "mcp = MCPServer(\"shop-orders\")",
+      "@mcp.tool()",
+      "def get_order(order_id: str) -> dict:",
+      "    \"\"\"Look up one order in the shop's system: …\"\"\""
+     ],
+     "list": "client.list_tools()",
+     "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",
+     "right": "{\"order_id\": \"4502\"}",
+     "call": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4388}}",
+     "error": "Input should be a valid string · input_value=4388, input_type=int",
+     "fixLine": "def get_order(order_id: str | int) -> dict:",
+     "fixList": "get_order(order_id: string or integer)",
+     "broken": "{\"order_id\": 4417\"}",
+     "update": "Your refund of Rs 1,299 has been approved and will reach your bank account in 5-7 working days.",
+     "who": [
+      [
+       "Anthropic",
+       "introduced MCP as an open standard · Nov 2024"
+      ],
+      [
+       "OpenAI",
+       "added MCP to its Agents SDK · Mar 2025"
+      ]
+     ],
+     "full": "full code: in the pinned comment"
+    },
+    "yt": {
+     "chapter": "The bug, the fix",
+     "title": "The bug, the fix",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1228,
+   "frames": 817,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep55te/line_06.wav",
+     "from": 0,
+     "frames": 271,
+     "words": [
+      {
+       "w": "Our",
+       "from": 1,
+       "to": 6
+      },
+      {
+       "w": "test:",
+       "from": 6,
+       "to": 24
+      },
+      {
+       "w": "just",
+       "from": 24,
+       "to": 30
+      },
+      {
+       "w": "1",
+       "from": 30,
+       "to": 32
+      },
+      {
+       "w": "right.",
+       "from": 32,
+       "to": 68
+      },
+      {
+       "w": "The",
+       "from": 68,
+       "to": 73
+      },
+      {
+       "w": "chatbot",
+       "from": 73,
+       "to": 83
+      },
+      {
+       "w": "sent",
+       "from": 83,
+       "to": 89
+      },
+      {
+       "w": "the",
+       "from": 89,
+       "to": 94
+      },
+      {
+       "w": "number",
+       "from": 94,
+       "to": 110
+      },
+      {
+       "w": "as",
+       "from": 110,
+       "to": 113
+      },
+      {
+       "w": "a",
+       "from": 113,
+       "to": 116
+      },
+      {
+       "w": "number;",
+       "from": 116,
+       "to": 138
+      },
+      {
+       "w": "the",
+       "from": 138,
+       "to": 143
+      },
+      {
+       "w": "server",
+       "from": 143,
+       "to": 162
+      },
+      {
+       "w": "asked",
+       "from": 162,
+       "to": 169
+      },
+      {
+       "w": "for",
+       "from": 169,
+       "to": 182
+      },
+      {
+       "w": "text",
+       "from": 182,
+       "to": 192
+      },
+      {
+       "w": "and",
+       "from": 192,
+       "to": 197
+      },
+      {
+       "w": "rejected",
+       "from": 197,
+       "to": 217
+      },
+      {
+       "w": "it.",
+       "from": 217,
+       "to": 222
+      },
+      {
+       "w": "The",
+       "from": 222,
+       "to": 228
+      },
+      {
+       "w": "one",
+       "from": 228,
+       "to": 233
+      },
+      {
+       "w": "time",
+       "from": 233,
+       "to": 239
+      },
+      {
+       "w": "it",
+       "from": 239,
+       "to": 243
+      },
+      {
+       "w": "sent",
+       "from": 243,
+       "to": 249
+      },
+      {
+       "w": "text,",
+       "from": 249,
+       "to": 257
+      },
+      {
+       "w": "it",
+       "from": 257,
+       "to": 261
+      },
+      {
+       "w": "worked.",
+       "from": 261,
+       "to": 271
+      }
+     ],
+     "cues": {
+      "1": 72,
+      "2": 123,
+      "3": 218
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep55te/line_07.wav",
+     "from": 281,
+     "frames": 291,
+     "words": [
+      {
+       "w": "The",
+       "from": 292,
+       "to": 309
+      },
+      {
+       "w": "fix:",
+       "from": 309,
+       "to": 316
+      },
+      {
+       "w": "take",
+       "from": 316,
+       "to": 323
+      },
+      {
+       "w": "a",
+       "from": 323,
+       "to": 338
+      },
+      {
+       "w": "number",
+       "from": 338,
+       "to": 347
+      },
+      {
+       "w": "or",
+       "from": 347,
+       "to": 352
+      },
+      {
+       "w": "text;",
+       "from": 352,
+       "to": 360
+      },
+      {
+       "w": "show",
+       "from": 360,
+       "to": 376
+      },
+      {
+       "w": "the",
+       "from": 376,
+       "to": 381
+      },
+      {
+       "w": "chatbot",
+       "from": 381,
+       "to": 396
+      },
+      {
+       "w": "the",
+       "from": 396,
+       "to": 406
+      },
+      {
+       "w": "types.",
+       "from": 406,
+       "to": 425
+      },
+      {
+       "w": "10",
+       "from": 425,
+       "to": 429
+      },
+      {
+       "w": "out",
+       "from": 429,
+       "to": 434
+      },
+      {
+       "w": "of",
+       "from": 434,
+       "to": 438
+      },
+      {
+       "w": "10.",
+       "from": 438,
+       "to": 444
+      },
+      {
+       "w": "Second",
+       "from": 460,
+       "to": 471
+      },
+      {
+       "w": "chatbot:",
+       "from": 471,
+       "to": 496
+      },
+      {
+       "w": "from",
+       "from": 496,
+       "to": 504
+      },
+      {
+       "w": "0",
+       "from": 504,
+       "to": 508
+      },
+      {
+       "w": "to",
+       "from": 508,
+       "to": 513
+      },
+      {
+       "w": "7;",
+       "from": 513,
+       "to": 518
+      },
+      {
+       "w": "3",
+       "from": 518,
+       "to": 521
+      },
+      {
+       "w": "times",
+       "from": 521,
+       "to": 536
+      },
+      {
+       "w": "the",
+       "from": 536,
+       "to": 543
+      },
+      {
+       "w": "wrong",
+       "from": 543,
+       "to": 553
+      },
+      {
+       "w": "format.",
+       "from": 553,
+       "to": 566
+      }
+     ],
+     "cues": {
+      "1": 431,
+      "2": 460
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep55te/line_08.wav",
+     "from": 584,
+     "frames": 221,
+     "words": [
+      {
+       "w": "Then",
+       "from": 585,
+       "to": 592
+      },
+      {
+       "w": "one",
+       "from": 592,
+       "to": 598
+      },
+      {
+       "w": "change",
+       "from": 598,
+       "to": 619
+      },
+      {
+       "w": "on",
+       "from": 619,
+       "to": 623
+      },
+      {
+       "w": "the",
+       "from": 623,
+       "to": 629
+      },
+      {
+       "w": "server:",
+       "from": 629,
+       "to": 641
+      },
+      {
+       "w": "refund",
+       "from": 641,
+       "to": 657
+      },
+      {
+       "w": "approved.",
+       "from": 657,
+       "to": 671
+      },
+      {
+       "w": "Without",
+       "from": 671,
+       "to": 693
+      },
+      {
+       "w": "changing",
+       "from": 693,
+       "to": 706
+      },
+      {
+       "w": "the",
+       "from": 706,
+       "to": 712
+      },
+      {
+       "w": "chatbot,",
+       "from": 712,
+       "to": 734
+      },
+      {
+       "w": "the",
+       "from": 734,
+       "to": 740
+      },
+      {
+       "w": "WhatsApp",
+       "from": 740,
+       "to": 753
+      },
+      {
+       "w": "bot",
+       "from": 753,
+       "to": 759
+      },
+      {
+       "w": "said",
+       "from": 759,
+       "to": 769
+      },
+      {
+       "w": "the",
+       "from": 769,
+       "to": 775
+      },
+      {
+       "w": "refund",
+       "from": 775,
+       "to": 785
+      },
+      {
+       "w": "was",
+       "from": 785,
+       "to": 791
+      },
+      {
+       "w": "approved.",
+       "from": 791,
+       "to": 805
+      }
+     ],
+     "cues": {
+      "1": 684
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_mcp55",
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 9
+     }
+    ],
+    "captionTop": 1360,
+    "t": {
+     "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
+     "q": "When will my smartwatch arrive? Order 4388.",
+     "server": [
+      "mcp = MCPServer(\"shop-orders\")",
+      "@mcp.tool()",
+      "def get_order(order_id: str) -> dict:",
+      "    \"\"\"Look up one order in the shop's system: …\"\"\""
+     ],
+     "list": "client.list_tools()",
+     "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",
+     "right": "{\"order_id\": \"4502\"}",
+     "call": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4388}}",
+     "error": "Input should be a valid string · input_value=4388, input_type=int",
+     "fixLine": "def get_order(order_id: str | int) -> dict:",
+     "fixList": "get_order(order_id: string or integer)",
+     "broken": "{\"order_id\": 4417\"}",
+     "update": "Your refund of Rs 1,299 has been approved and will reach your bank account in 5-7 working days.",
+     "who": [
+      [
+       "Anthropic",
+       "introduced MCP as an open standard · Nov 2024"
+      ],
+      [
+       "OpenAI",
+       "added MCP to its Agents SDK · Mar 2025"
+      ]
+     ],
+     "full": "full code: in the pinned comment"
+    },
+    "yt": {
+     "chapter": "Next: a voice assistant",
+     "title": "Next: a voice assistant",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 2045,
+   "frames": 371,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep55te/line_09.wav",
+     "from": 12,
+     "frames": 322,
+     "words": [
+      {
+       "w": "For",
+       "from": 14,
+       "to": 20
+      },
+      {
+       "w": "one",
+       "from": 20,
+       "to": 26
+      },
+      {
+       "w": "app,",
+       "from": 26,
+       "to": 46
+      },
+      {
+       "w": "a",
+       "from": 46,
+       "to": 49
+      },
+      {
+       "w": "plain",
+       "from": 49,
+       "to": 57
+      },
+      {
+       "w": "tool",
+       "from": 57,
+       "to": 65
+      },
+      {
+       "w": "is",
+       "from": 65,
+       "to": 69
+      },
+      {
+       "w": "enough.",
+       "from": 69,
+       "to": 90
+      },
+      {
+       "w": "Past",
+       "from": 90,
+       "to": 103
+      },
+      {
+       "w": "two",
+       "from": 103,
+       "to": 109
+      },
+      {
+       "w": "apps,",
+       "from": 109,
+       "to": 118
+      },
+      {
+       "w": "a",
+       "from": 118,
+       "to": 121
+      },
+      {
+       "w": "server.",
+       "from": 121,
+       "to": 148
+      },
+      {
+       "w": "Write",
+       "from": 148,
+       "to": 157
+      },
+      {
+       "w": "it",
+       "from": 157,
+       "to": 162
+      },
+      {
+       "w": "to",
+       "from": 162,
+       "to": 166
+      },
+      {
+       "w": "accept",
+       "from": 166,
+       "to": 177
+      },
+      {
+       "w": "what",
+       "from": 177,
+       "to": 184
+      },
+      {
+       "w": "the",
+       "from": 184,
+       "to": 190
+      },
+      {
+       "w": "chatbot",
+       "from": 190,
+       "to": 211
+      },
+      {
+       "w": "sends;",
+       "from": 211,
+       "to": 221
+      },
+      {
+       "w": "test",
+       "from": 221,
+       "to": 229
+      },
+      {
+       "w": "with",
+       "from": 229,
+       "to": 236
+      },
+      {
+       "w": "10",
+       "from": 236,
+       "to": 245
+      },
+      {
+       "w": "real",
+       "from": 245,
+       "to": 253
+      },
+      {
+       "w": "questions.",
+       "from": 253,
+       "to": 269
+      },
+      {
+       "w": "Next:",
+       "from": 282,
+       "to": 292
+      },
+      {
+       "w": "a",
+       "from": 292,
+       "to": 295
+      },
+      {
+       "w": "voice",
+       "from": 295,
+       "to": 312
+      },
+      {
+       "w": "assistant.",
+       "from": 312,
+       "to": 330
+      }
+     ],
+     "cues": {
+      "1": 81,
+      "2": 138,
+      "3": 282
+     }
+    }
+   ]
+  }
+ ]
+}

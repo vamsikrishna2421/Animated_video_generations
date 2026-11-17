@@ -54,7 +54,7 @@ T = {   # on screen: our test (series/scripts/ep55_demo/); the shop and its orde
     "blame": "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking.",
     "q": "When will my smartwatch arrive? Order 4388.",
     "server": ["mcp = MCPServer(\"shop-orders\")", "@mcp.tool()", "def get_order(order_id: str) -> dict:",
-               "    \"\"\"Look up one order: item, amount, status and refund.\"\"\""],
+               "    \"\"\"Look up one order in the shop's system: …\"\"\""],
     "list": "client.list_tools()",
     "listing": "get_order(order_id): Look up one order in the shop's system: item, amount, status and refund.",
     "right": "{\"order_id\": \"4502\"}",
@@ -67,11 +67,13 @@ T = {   # on screen: our test (series/scripts/ep55_demo/); the shop and its orde
     "who": [["Anthropic", "introduced MCP as an open standard · Nov 2024"], ["OpenAI", "added MCP to its Agents SDK · Mar 2025"]],
     "full": "full code: in the pinned comment",
 }
+# Render review: subtitles up to 1360 (clear of the Instagram overlay), music in the gaps 0.3 -> 0.22, drops before
+# "ten out of ten" and "approved".
 # Sound (CLAUDE.md arc): a boom on frame 1 and a buzz on "one right"; a drop and a boom on "ten"; pops as each code line
 # types; a buzz on the refusal; a ding on "ten out of ten"; a ding on the update; a riser and the slam.
 SCENES = [("s_a", (1, 2, 3), {"boost": 1.6, "drop_at": [[0, 2, 0.4]], "tail": 0.0}),
           ("s_b", (4, 5), {"boost": 0.85, "lift": 0.5, "tail": 0.0}),
-          ("s_c", (6, 7, 8), {"boost": 1.1, "lift": 0.7, "drop_at": [[1, 1, 0.3]], "swell": [2, 1, 1.9], "tail": 0.0}),   # render check: a flat arc
+          ("s_c", (6, 7, 8), {"boost": 1.1, "lift": 0.7, "drop_at": [[1, 1, 0.45], [2, 1, 0.4]], "swell": [2, 1, 1.9], "tail": 0.0}),   # render check: a flat arc
           ("s_d", (9,), {"outro": True, "pre": 0.4, "boost": 2.6, "lift": 0.8, "rise": 3.0, "tail": 0.0})]
 GAP = {1: 0.4, 2: 0.3, 3: 0.35, 4: 0.3, 5: 0.35, 6: 0.35, 7: 0.4, 8: 0.4, 9: 0.0}
 FLAGS_TE = {"s_c": {"boost": 1.2}, "s_d": {"boost": 2.8, "rise": 3.2}}
@@ -84,10 +86,10 @@ def spec(lang="en"):
     sid = "ep55te" if te else "ep55v1"
     s = {"id": sid, "title": "1 Right or 10? Build Your Own MCP Server (EP55)" + (" (Telugu audio)" if te else ""), "label": "EP55",
          "banner": "Build your own MCP server", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.35, "music": "lofi",
-         "musicVol": [0.12, 0.3], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.2, "captionMode": "phrase",
+         "musicVol": [0.12, 0.22], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.2, "captionMode": "phrase",
          "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
-         "tempo": 1.0, "captionTop": 1500}
+         "tempo": 1.0, "captionTop": 1360}
     if te:
         s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.5})
     scenes = []
@@ -108,7 +110,7 @@ def spec(lang="en"):
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             lines.append(ln)
             beats.append({"prop": prop, "n": n})
-        data = {"beats": beats, "captionTop": 1500, "t": T, "yt": {"chapter": YT[scid], "title": YT[scid], "notes": []}}
+        data = {"beats": beats, "captionTop": 1360, "t": T, "yt": {"chapter": YT[scid], "title": YT[scid], "notes": []}}
         if te:
             data["handle"] = "@ai_maastaaru_telugu"
             if scid in FLAGS_TE:

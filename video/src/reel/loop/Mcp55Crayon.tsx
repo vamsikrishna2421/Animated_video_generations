@@ -110,7 +110,7 @@ const StMcp: React.FC<SP> = ({ s }) => {
     if (b.prop === "bug") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("z")} at={cue(i, 2, 0.65) + 10} src="reel/sfx_buzz.wav" vol={0.45} />, <Sfx key={k("d")} at={cue(i, 3, 0.85)} src="audio/gag_ding.wav" vol={0.4} />);
     if (b.prop === "fix") sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("b")} at={cue(i, 1, 0.45) - 2} src="reel/sfx_boom.wav" vol={0.85} />,
       <Sfx key={k("d")} at={cue(i, 1, 0.45)} src="audio/gag_ding.wav" vol={0.5} />, <Sfx key={k("z")} at={cue(i, 2, 0.75) + 24} src="reel/sfx_buzz.wav" vol={0.3} />);
-    if (b.prop === "update") sfx.push(<Sfx key={k("s")} at={at + 16} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("d")} at={cue(i, 1, 0.5)} src="audio/gag_ding.wav" vol={0.5} />);
+    if (b.prop === "update") sfx.push(<Sfx key={k("s")} at={at + 16} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("d")} at={cue(i, 1, 0.5)} src="audio/gag_ding.wav" vol={0.5} />, <Sfx key={k("b")} at={cue(i, 1, 0.5) - 2} src="reel/sfx_boom.wav" vol={0.7} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("p1")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("p2")} at={cue(i, 2, 0.55)} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />); }
   });
   return (
@@ -128,10 +128,12 @@ const StMcp: React.FC<SP> = ({ s }) => {
           const k2 = loopOn ? 1 : seg(f, cu(2, 0.75), cu(2, 0.75) + 6);
           block(c, 50, 250, "PLUGGED IN", "1/10 right", "#f87171");
           block(c, 560, 250, "AFTER FIXING THE INPUT", "10/10", GREEN);   // script review: it was not one word
+          const k1 = loopOn ? 0 : seg(f, cu(1, 0.3) + 30, cu(1, 0.3) + 40);   // render review: something moves before "ten"
+          if (k1 > 0 && k1 < 1) { c.save(); c.globalAlpha = 0.6 * (1 - k1); c.strokeStyle = "#f87171"; c.lineWidth = 10 + 10 * k1; rrect(c, 46 - 8 * k1, 246 - 8 * k1, 478 + 16 * k1, 168 + 16 * k1, 24); c.stroke(); c.restore(); }
           if (k2 > 0 && k2 < 1) { c.save(); c.globalAlpha = 0.5 * (1 - k2); c.strokeStyle = GREEN; c.lineWidth = 10; rrect(c, 556, 246, 478, 168, 24); c.stroke(); c.restore(); }
           const y = chat(c, 50, 450, W - 100, "Kiran Mobiles · WhatsApp bot + our server", [{ me: true, t: T.q, k: 1, sz: 34 }, { me: false, t: T.blame, k: 1, red: true, sz: 46 }], 40);
           chip(c, "the bot blamed the customer", W / 2, y + 50, "#fee2e2", "#7f1d1d", 1, 40);
-          chip(c, "a made-up shop · a small free AI · our own test", W / 2, y + 150, "#1e293b", "#cbd5e1", 1, 34);
+          chip(c, "a made-up shop · a small free AI · our own test", W / 2, y + 150, "#1e293b", "#e2e8f0", 1, 40);
         } else if (P === "what") {
           c.font = SANS(fit(c, "MCP = A STANDARD PLUG FOR AI APPS", W - 100, 62), 900); c.fillStyle = "#fde68a"; c.textAlign = "center";
           c.fillText("MCP = A STANDARD PLUG FOR AI APPS", W / 2, 330);
@@ -148,7 +150,7 @@ const StMcp: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, t, 300, 42, 900), 900); c.fillStyle = "#f8fafc"; c.fillText(t, x, 948);
             c.restore();
           });
-          chip(c, "write the tool once · every app can find it and use it", W / 2, 1110, "#fde68a", INK, seg(f, cu(1, 0.4) + 24, cu(1, 0.4) + 32), big(c, "write the tool once · every app can find it and use it", 40));
+          chip(c, "write the tool once · every MCP app can find it and use it", W / 2, 1110, "#fde68a", INK, seg(f, cu(1, 0.4) + 24, cu(1, 0.4) + 32), big(c, "write the tool once · every MCP app can find it and use it", 40));
         } else if (P === "who") {
           const card = (y: number, who: string, what: string, k: number) => {
             if (k <= 0) return;
@@ -165,39 +167,45 @@ const StMcp: React.FC<SP> = ({ s }) => {
           const label = P === "step1" ? "STEP 1 · the server (12 lines)" : "STEP 2 · the bot asks: what tools?";
           chip(c, label, W / 2, 300, "#fde68a", INK, 1, big(c, label, 44));
           if (P === "step1") {
-            const yC = codeCard(c, 360, T.server, seg(f, ln.from + 2, cu(1, 0.45)), "orders_server.py · the key lines", "order_id: str", seg(f, cu(1, 0.45) + 20, cu(1, 0.45) + 28), 32);
+            const yC = codeCard(c, 360, T.server, seg(f, ln.from + 2, cu(1, 0.45)), "orders_server.py · 4 of its 12 lines", "order_id: str", seg(f, cu(1, 0.45) + 20, cu(1, 0.45) + 28), 32);
             chip(c, "one function · a one-line description · its input", W / 2, yC + 70, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.45), cu(1, 0.45) + 8), big(c, "one function · a one-line description · its input", 40));
             chip(c, "order_id: str = the order number, as text", W / 2, yC + 170, "#dcfce7", "#14532d", seg(f, cu(1, 0.45) + 20, cu(1, 0.45) + 28), big(c, "order_id: str = the order number, as text", 40));
-            chip(c, "the official Python SDK (mcp)", W / 2, yC + 270, "#1e293b", "#94a3b8", seg(f, cu(1, 0.45) + 28, cu(1, 0.45) + 36), 34);
+            chip(c, "the official Python SDK (mcp)", W / 2, yC + 270, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.45) + 28, cu(1, 0.45) + 36), 40);
           } else {
             const yC = codeCard(c, 360, [T.list], seg(f, ln.from + 2, ln.from + 20), "bot.py · one line");
             arrowDown(c, yC + 8, seg(f, ln.from + 22, ln.from + 30));
             const y1 = traceBox(c, yC + 64, "THE SERVER ANSWERS", [T.listing], GREEN, seg(f, ln.from + 26, ln.from + 34));
             chip(c, "nothing about orders written in the bot", W / 2, y1 + 80, "#dcfce7", "#14532d", seg(f, cu(1, 0.5), cu(1, 0.5) + 8), big(c, "nothing about orders written in the bot", 44));
-            chip(c, "our 2 bots · the same client code", W / 2, y1 + 190, "#1e293b", "#cbd5e1", seg(f, cu(1, 0.5) + 14, cu(1, 0.5) + 22), 38);
-            chip(c, "our client code showed the name, not the type", W / 2, y1 + 290, "#fef3c7", "#78350f", seg(f, cu(1, 0.5) + 30, cu(1, 0.5) + 38), big(c, "our client code showed the name, not the type", 38));   // script review: the setup for the bug
+            chip(c, "our 2 bots · the same client code", W / 2, y1 + 190, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.5) + 14, cu(1, 0.5) + 22), 42);
           }
-        } else if (P === "bug") {
+        } else if (P === "bug") {   // render review: the bug big (4388 vs "4502"), a tally that adds up, no wrapped JSON
           c.font = SANS(fit(c, "OUR TEST · 10 CUSTOMERS", W - 100, 60), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("OUR TEST · 10 CUSTOMERS", W / 2, 320);
-          c.font = SANS(30, 700); c.fillStyle = "#cbd5e1"; c.fillText("a made-up shop · a small free AI on our computer", W / 2, 370);
-          bigNum(c, "1/10", 270, 540, "#f87171", 1, 140, "right, plugged in");
-          const kA = seg(f, cu(1, 0.3), cu(1, 0.3) + 8);
-          const y1 = traceBox(c, 640, "THE AI SENT", [T.call], "#93c5fd", kA, "4388", "#fbbf24");
-          if (kA > 0) chip(c, "4388 = a number", 790, 500, "#fef3c7", "#78350f", kA, 42);
+          c.font = SANS(32, 700); c.fillStyle = "#e2e8f0"; c.fillText("a made-up shop · a small free AI on our computer", W / 2, 372);
+          bigNum(c, "1/10", W / 2, 530, "#f87171", 1, 150, "");
+          chip(c, "7 refused · 2 broken JSON · 1 right", W / 2, 600, "#1e293b", "#fde68a", 1, 40);
+          const idCard = (x: number, top: string, val: string, sub: string, col: string, k: number) => {
+            if (k <= 0) return;
+            c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = "#0f172a"; rrect(c, x, 660, 470, 250, 22); c.fill();
+            c.strokeStyle = col; c.lineWidth = 5; rrect(c, x, 660, 470, 250, 22); c.stroke();
+            c.textAlign = "center"; c.font = SANS(32, 900); c.fillStyle = col; c.fillText(top, x + 235, 712);
+            c.font = MONO(96, 700); c.fillStyle = col; c.fillText(val, x + 235, 820);
+            c.font = SANS(fit(c, sub, 430, 34, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(sub, x + 235, 880); c.restore();
+          };
+          idCard(50, "THE AI SENT order_id:", "4388", "a number", "#fbbf24", seg(f, cu(1, 0.3), cu(1, 0.3) + 8));
+          idCard(560, "THE 1 RIGHT order_id:", "\"4502\"", "text (in quotes)", GREEN, seg(f, cu(3, 0.85), cu(3, 0.85) + 8));
           const kE = seg(f, cu(2, 0.65), cu(2, 0.65) + 8);
-          const y2 = traceBox(c, y1 + 30, "THE SERVER SAID", [T.error], "#f87171", kE);
-          stamp(c, "REFUSED · EVERY NUMBER", W / 2, y2 + 100, seg(f, cu(2, 0.65) + 10, cu(2, 0.65) + 16));
-          chip(c, "its form (the schema) said: text", W / 2, y2 + 230, "#1e293b", "#fde68a", seg(f, cu(2, 0.65) + 22, cu(2, 0.65) + 30), 40);
-          const k3 = seg(f, cu(3, 0.85), cu(3, 0.85) + 8);   // script review: the one right was the one text request
-          if (k3 > 0) traceBox(c, y2 + 300, "THE 1 RIGHT: THE AI SENT TEXT", [T.right], GREEN, k3, "\"4502\"", GREEN);
+          const y2 = traceBox(c, 940, "THE SERVER SAID", [T.error], "#f87171", kE);
+          stamp(c, "REFUSED · EVERY NUMBER", W / 2, y2 + 90, seg(f, cu(2, 0.65) + 10, cu(2, 0.65) + 16));
+          chip(c, "its form (the schema) said: text", W / 2, y2 + 200, "#1e293b", "#fde68a", seg(f, cu(2, 0.65) + 22, cu(2, 0.65) + 30), 40);
         } else if (P === "fix") {
           chip(c, "THE FIX · accept a number or text", W / 2, 300, "#fde68a", INK, 1, big(c, "THE FIX · accept a number or text", 44));
-          const yC = codeCard(c, 360, [T.fixLine], seg(f, ln.from + 2, ln.from + 20), "orders_server.py · the one change", "| int", seg(f, ln.from + 20, ln.from + 28));
+          const yC = codeCard(c, 360, [T.fixLine], seg(f, ln.from + 2, ln.from + 20), "orders_server.py · the fix", "| int", seg(f, ln.from + 20, ln.from + 28));
           const k1 = seg(f, cu(1, 0.45), cu(1, 0.45) + 6), k2 = seg(f, cu(2, 0.75), cu(2, 0.75) + 8);
           if (k2 <= 0) {
-            const y1 = traceBox(c, yC + 30, "AND THE BOT NOW SHOWS THE AI THE TYPE", [T.fixList], "#93c5fd", seg(f, ln.from + 26, ln.from + 34), "string or integer", GREEN);
+            const y1 = traceBox(c, yC + 30, "OUR CLIENT CODE NOW SHOWS EACH TYPE (BEFORE: NAMES ONLY)", [T.fixList], "#93c5fd", seg(f, ln.from + 26, ln.from + 34), "string or integer", GREEN);
             bigNum(c, "10/10", W / 2, y1 + 220, GREEN, k1, 170, "");
             if (k1 > 0) chip(c, "WhatsApp bot · the same 10 customers · was 1/10", W / 2, y1 + 300, "#dcfce7", "#14532d", k1, big(c, "WhatsApp bot · the same 10 customers · was 1/10", 40));
+            chip(c, "a one-time change, for every tool: nothing about orders", W / 2, y1 + 400, "#1e293b", "#e2e8f0", seg(f, ln.from + 34, ln.from + 42), big(c, "a one-time change, for every tool: nothing about orders", 38));   // render review: not a bot change
           } else {
             bigNum(c, "10/10", 290, yC + 190, GREEN, 1, 130, "WhatsApp bot · was 1/10");
             bigNum(c, "7/10", 790, yC + 190, "#fbbf24", k2, 130, "website bot · was 0/10");
@@ -216,23 +224,28 @@ const StMcp: React.FC<SP> = ({ s }) => {
           }
           const kB = seg(f, cu(1, 0.5), cu(1, 0.5) + 8);
           const y = chat(c, 50, 700, W - 100, "the WhatsApp bot · asked again", [{ me: true, t: "Where is my refund? Order 4417.", k: kB, sz: 32 }, { me: false, t: T.update, k: kB, sz: 40 }], 38);
-          chip(c, "no change to the bot", W / 2, y + 60, "#dcfce7", "#14532d", seg(f, cu(1, 0.5) + 14, cu(1, 0.5) + 22), 50);
-          chip(c, "(the website bot: broken JSON again)", W / 2, y + 160, "#1e293b", "#94a3b8", seg(f, cu(1, 0.5) + 22, cu(1, 0.5) + 30), 34);
+          chip(c, "no change to the bot · only the server data", W / 2, y + 60, "#dcfce7", "#14532d", seg(f, cu(1, 0.5) + 14, cu(1, 0.5) + 22), big(c, "no change to the bot · only the server data", 46));
+          chip(c, "(the website bot: broken JSON again)", W / 2, y + 160, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.5) + 22, cu(1, 0.5) + 30), 38);
         } else if (P === "loop") {
-          const row = (y: number, n: string, t: string, k: number) => {
+          const row = (y: number, n: string, t: string[], k: number) => {   // render review: one size for all three rows
             if (k <= 0) return;
-            c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, 150, 22); c.fill();
-            c.font = SANS(70, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(n, 100, y + 100);
-            c.font = SANS(fit(c, t, W - 300, 50, 900), 900); c.fillStyle = "#f8fafc"; c.fillText(t, 190, y + 95); c.restore();
+            const h = 70 + t.length * 64;
+            c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, h, 22); c.fill();
+            c.font = SANS(70, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(n, 100, y + h / 2 + 25);
+            const fs = Math.min(...t.map((x) => fit(c, x, W - 300, 48, 900)));
+            t.forEach((x, q) => { c.font = SANS(fs, 900); c.fillStyle = "#f8fafc"; c.fillText(x, 190, y + 84 + q * 64); });
+            c.restore();
           };
-          const r3 = ["1 app: a plain tool is enough", "2+ apps: make it an MCP server", "accept what the AI sends · test 10 questions"];
+          const rows: string[][] = [["one app: the tool inside the bot (EP54)"], ["two or more apps: an MCP server"], ["accept whatever the AI sends", "test 10 real questions"]];
           const at3 = [ln.from + 2, cu(1, 0.3), cu(2, 0.55)];   // script review: "so which one do I use?"
-          r3.forEach((t, q) => row(300 + q * 180, String(q + 1), t, seg(f, at3[q], at3[q] + 8)));
-          chip(c, T.full, W / 2, 900, "#fde68a", INK, seg(f, cu(2, 0.55) + 16, cu(2, 0.55) + 24), 44);
+          let yr = 300;
+          rows.forEach((t, q) => { row(yr, String(q + 1), t, seg(f, at3[q], at3[q] + 8)); yr += 70 + t.length * 64 + 26; });
+          chip(c, "try it: send a shop's bot your order as 4388 and #4388", W / 2, yr + 50, "#dcfce7", "#14532d", seg(f, cu(2, 0.55) + 16, cu(2, 0.55) + 24), big(c, "try it: send a shop's bot your order as 4388 and #4388", 40));
+          chip(c, T.full, W / 2, yr + 150, "#fde68a", INK, seg(f, cu(2, 0.55) + 22, cu(2, 0.55) + 30), 44);
           const kN = seg(f, cu(3, 0.85), cu(3, 0.85) + 8);
           if (kN > 0) {
             c.save(); c.globalAlpha = clamp(kN * 3);
-            c.font = SANS(fit(c, "NEXT · EP56: A VOICE ASSISTANT", W - 120, 64), 900); c.fillStyle = "#93c5fd"; c.textAlign = "center"; c.fillText("NEXT · EP56: A VOICE ASSISTANT", W / 2, 1060);
+            c.font = SANS(fit(c, "NEXT · EP56: A VOICE ASSISTANT", W - 120, 64), 900); c.fillStyle = "#93c5fd"; c.textAlign = "center"; c.fillText("NEXT · EP56: A VOICE ASSISTANT", W / 2, 1290);
             c.restore();
           }
         }
