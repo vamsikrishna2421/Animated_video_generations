@@ -79,7 +79,7 @@ const room = (c: Ctx, W: number, H: number, r: () => number) => {
 const SUM = (c: Ctx, x: number, y: number, rows: [string, string][], total: string, totalCol: string, k: number, strike = "") => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3); c.translate(x, y); c.rotate(-0.03);
-  const h = 120 + rows.length * 72 + 110;
+  const h = 120 + rows.length * 72 + 110 + (strike ? 70 : 0);
   c.fillStyle = "#fef08a"; rrect(c, -330, 0, 660, h, 10); c.fill();
   c.fillStyle = "rgba(0,0,0,0.08)"; c.fillRect(-330, 0, 660, 34);
   rows.forEach(([a, b], q) => {
@@ -89,7 +89,7 @@ const SUM = (c: Ctx, x: number, y: number, rows: [string, string][], total: stri
   const yt = 110 + rows.length * 72;
   c.strokeStyle = INK; c.lineWidth = 5; c.beginPath(); c.moveTo(-290, yt - 40); c.lineTo(300, yt - 40); c.stroke();
   c.font = SANS(78, 900); c.fillStyle = totalCol; c.textAlign = "left"; c.fillText(total, -290, yt + 50);
-  if (strike) { c.font = SANS(52, 800); c.fillStyle = "#78716c"; c.textAlign = "right"; c.fillText(strike, 300, yt + 40); c.strokeStyle = RED; c.lineWidth = 8; c.beginPath(); c.moveTo(300 - c.measureText(strike).width - 8, yt + 22); c.lineTo(308, yt + 22); c.stroke(); }
+  if (strike) { c.font = SANS(50, 800); c.fillStyle = "#78716c"; c.textAlign = "left"; const t2 = "not " + strike; c.fillText(t2, -290, yt + 118); const x0 = -290 + c.measureText("not ").width; c.strokeStyle = RED; c.lineWidth = 8; c.beginPath(); c.moveTo(x0 - 6, yt + 100); c.lineTo(-290 + c.measureText(t2).width + 6, yt + 100); c.stroke(); }
   c.restore();
 };
 // the phone (screen space): the chat
@@ -162,9 +162,9 @@ const StLease: React.FC<SP> = ({ s }) => {
     if (b.prop === "ask") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.35} />);
     if (b.prop === "reply") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5)} src="audio/sfx_pop.wav" vol={0.35} />);
     if (b.prop === "relief") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.5) + 10} src="audio/gag_ding.wav" vol={0.35} />);
-    if (b.prop === "lurk") sfx.push(<Sfx key={k("j")} at={at} src={JUNGLE} vol={0.25} />, <Sfx key={k("b")} at={cue(i, 1, 0.6) - 2} src="reel/sfx_boom.wav" vol={te ? 0.7 : 0.8} />);
-    if (b.prop === "shock") sfx.push(<Sfx key={k("z")} at={cue(i, 1, 0.5) + 6} src="reel/sfx_buzz.wav" vol={0.35} />);
-    if (b.prop === "test") { const c1 = cue(i, 1, 0.4), c2 = cue(i, 2, 0.75); for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("t" + q)} at={c1 + q * 2} src="audio/sfx_tick.wav" vol={0.2} />); sfx.push(<Sfx key={k("b")} at={c2 - 2} src="reel/sfx_boom.wav" vol={0.75} />, <Sfx key={k("z")} at={c2 + 2} src="reel/sfx_buzz.wav" vol={0.3} />); }
+    if (b.prop === "lurk") sfx.push(<Sfx key={k("j")} at={at} src={JUNGLE} vol={0.25} />, <Sfx key={k("w")} at={Math.max(0, at - 6)} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("b")} at={cue(i, 1, 0.6) - 2} src="reel/sfx_boom.wav" vol={te ? 0.7 : 0.8} />);
+    if (b.prop === "shock") sfx.push(<Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={te ? 0.6 : 0.7} />, <Sfx key={k("z")} at={cue(i, 1, 0.5) + 6} src="reel/sfx_buzz.wav" vol={0.35} />);
+    if (b.prop === "test") { const c1 = cue(i, 1, 0.4), c2 = cue(i, 2, 0.75); for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("c" + q)} at={at + 4 + q * 3} src="audio/sfx_pop.wav" vol={0.12} />); for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("t" + q)} at={c1 + q * 2} src="audio/sfx_tick.wav" vol={0.2} />); sfx.push(<Sfx key={k("b")} at={c2 - 2} src="reel/sfx_boom.wav" vol={0.75} />, <Sfx key={k("z")} at={c2 + 2} src="reel/sfx_buzz.wav" vol={0.3} />); }
     if (b.prop === "fix") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("d")} at={cue(i, 1, 0.45)} src="audio/gag_ding.wav" vol={0.4} />, <Sfx key={k("c")} at={cue(i, 2, 0.75)} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.45} />); }
   });
@@ -184,7 +184,7 @@ const StLease: React.FC<SP> = ({ s }) => {
         if (P === "hook") {
           her(540, 760, 0.62, "hook");
           block(c, 50, 330, "A SMALL FREE AI SAID", "₹36,000", "#f87171");   // script review: not "THE AI"
-          block(c, 560, 330, "THE REAL COST", "₹44,000", "#fbbf24");
+          block(c, 560, 330, "MOVING OUT REALLY COSTS", "₹44,000", "#fbbf24");
           if (!loopOn) { const k1 = seg(f, cu(1, 0.5) - 3, cu(1, 0.5) + 7); if (k1 > 0 && k1 < 1) { c.save(); c.globalAlpha = 0.6 * (1 - k1); c.strokeStyle = AMBER; c.lineWidth = 10 + 10 * k1; rrect(c, 556 - 8 * k1, 326 - 8 * k1, 478 + 16 * k1, 168 + 16 * k1, 24); c.stroke(); c.restore(); } }
         } else if (P === "wild") {
           her(540, 780, 0.62, "wild");
@@ -196,7 +196,6 @@ const StLease: React.FC<SP> = ({ s }) => {
             c.font = SANS(40, 800); c.fillStyle = "#7c3aed"; c.textAlign = "center"; c.fillText("MONTH 4 OF 11 · a new job", 540, 500);
             c.restore();
           }
-          lowerThird(c, "WILD HYDERABAD", "the tenant, preparing to migrate", seg(f, ln.from + 4, ln.from + 14), r);
         } else if (P === "ask" || P === "reply") {
           docFrame(c, f);
           phone(c);
@@ -207,7 +206,7 @@ const StLease: React.FC<SP> = ({ s }) => {
             bubble(c, T.reply, y1 + 30, false, kR, seg(f, cu(1, 0.4), cu(1, 0.4) + 4) > 0 ? T.lit : "", 38);
             chip(c, "14 clauses · all in the chat", 300, 1250, "#fffdf7", INK, seg(f, ln.from + 2, ln.from + 10), 34);
             chip(c, "its real reply", 780, 1250, "#1e293b", "#e2e8f0", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), 34);
-            chip(c, "lock-in = 2 months' rent (clause 10)", W / 2, 300, "#fef3c7", "#78350f", seg(f, cu(1, 0.4) + 14, cu(1, 0.4) + 22), 40);   // script review: why 36k
+            chip(c, "lock-in = 2 months' rent (clause 10)", W / 2, 1110, "#fef3c7", "#78350f", seg(f, cu(1, 0.4) + 14, cu(1, 0.4) + 22), 40);   // render review: it covered REC   // script review: why 36k
           } else chip(c, "her question, word for word", W / 2, 1250, "#1e293b", "#e2e8f0", seg(f, ln.from + 6, ln.from + 14), 36);
         } else if (P === "relief") {
           her(330, 820, 0.56, "relief");
@@ -236,14 +235,14 @@ const StLease: React.FC<SP> = ({ s }) => {
           lowerThird(c, "CLAUSE 11", "rarely seen · a Rs 8,000 painting charge, whenever she moves out", seg(f, cu(1, 0.6) + 10, cu(1, 0.6) + 20), r);
         } else if (P === "shock") {
           her(300, 820, 0.56, "shock");
-          SUM(c, 690, 380, [["₹54,000", "deposit"], ["− ₹36,000", "lock-in (cl. 10)"], ["− ₹8,000", "painting charge (cl. 11)"]], "₹10,000 back", RED, 1,
+          SUM(c, 690, 380, [["₹54,000", "deposit"], ["− ₹36,000", "lock-in (cl. 10)"], ["− ₹8,000", "painting (cl. 11), any move-out"]], "₹10,000 back", RED, 1,
             seg(f, cu(1, 0.5), cu(1, 0.5) + 6) > 0 ? "₹18,000" : "");
           chip(c, "she pays ₹44,000, not ₹36,000", W / 2, 1290, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.5) + 10, cu(1, 0.5) + 18), 44);
         } else if (P === "test") {
           docFrame(c, f);
           c.font = SANS(fit(c, "OUR TEST · THE SAME QUESTION, 10 TIMES", W - 140, 54), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("OUR TEST · THE SAME QUESTION, 10 TIMES", W / 2, 390);
           c.font = SANS(fit(c, "a sample agreement we wrote · a small free AI, offline", W - 140, 34, 700), 700); c.fillStyle = "#e2e8f0"; c.fillText("a sample agreement we wrote · a small free AI, offline", W / 2, 440);
-          chip(c, "we didn't test the big apps", W / 2, 1210, "#1e293b", "#e2e8f0", seg(f, cu(2, 0.75) + 10, cu(2, 0.75) + 18), 38);
+          chip(c, "we didn't test the big apps", W / 2, 1210, "#fef3c7", "#78350f", seg(f, cu(1, 0.4) + 24, cu(1, 0.4) + 32), 46);   // render review: bigger, longer
           const row = (y: number, label: string, ok: boolean, k0: number) => {
             c.font = SANS(fit(c, label, 640, 44), 900); c.fillStyle = ok ? "#86efac" : "#fca5a5"; c.textAlign = "left"; c.fillText(label, 90, y);   // render check: clear of the big count
             for (let q = 0; q < 10; q++) {
@@ -253,45 +252,49 @@ const StLease: React.FC<SP> = ({ s }) => {
               c.font = SANS(64, 900); c.fillStyle = ok ? "#86efac" : "#fca5a5"; c.textAlign = "center"; c.fillText(ok ? "✓" : "✗", x + 82, yy + 72); c.restore();
             }
           };
+          const kC = seg(f, ln.from + 2, ln.from + 8);   // render review: movement from the first word (the swipe point)
+          const kOut = 1 - seg(f, cu(1, 0.4) + 8, cu(1, 0.4) + 16);   // render check: the chats make way for the 10/10
+          if (kC > 0 && kOut > 0) for (let q = 0; q < 10; q++) {
+            const kq = seg(f, ln.from + 4 + q * 3, ln.from + 8 + q * 3); if (kq <= 0) continue;
+            c.save(); c.globalAlpha = clamp(kq * 3) * kOut; c.fillStyle = "#334155"; rrect(c, 90 + q * 92, 462, 78, 44, 12); c.fill();
+            c.font = SANS(24, 800); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; c.fillText("chat " + (q + 1), 129 + q * 92, 491); c.restore();
+          }
           row(540, "said ₹36,000 (the lock-in)", true, cu(1, 0.4));
           row(860, "named the ₹8,000 painting charge", false, cu(2, 0.75) - 20);
           const kZ = seg(f, cu(2, 0.75), cu(2, 0.75) + 6);
           if (kZ > 0) { c.save(); c.globalAlpha = clamp(kZ * 3); c.font = SANS(96, 900); c.fillStyle = "#f87171"; c.textAlign = "right"; c.fillText("0/10", 990, 858); c.restore(); }
           if (seg(f, cu(1, 0.4) + 20, cu(1, 0.4) + 26) > 0) { c.font = SANS(96, 900); c.fillStyle = "#4ade80"; c.textAlign = "right"; c.fillText("10/10", 990, 538); }
+          lowerThird(c, "FIELD NOTES", "the same question, 10 fresh chats", seg(f, ln.from, ln.from + 10) * (1 - seg(f, cu(1, 0.4) + 20, cu(1, 0.4) + 28)), r, 1050);
         } else if (P === "fix") {
           docFrame(c, f);
           chip(c, "THEN WE ASKED (word for word)", W / 2, 380, "#fde68a", INK, 1, 44);
-          c.save(); c.fillStyle = "#2563eb"; rrect(c, 80, 430, 920, 230, 28); c.fill();
+          const k2 = seg(f, cu(2, 0.75), cu(2, 0.75) + 8);
+          c.save(); c.globalAlpha = 1 - 0.65 * k2; c.fillStyle = "#2563eb"; rrect(c, 80, 430, 920, 230, 28); c.fill();
           c.font = SANS(38, 700); c.fillStyle = "#fff"; c.textAlign = "left";
           const typed = T.better.slice(0, Math.round(T.better.length * seg(f, ln.from + 2, cu(1, 0.45) - 6)));
           wrap(c, typed || " ", 860).forEach((t, q) => c.fillText(t, 110, 488 + q * 50)); c.restore();
           const k1 = seg(f, cu(1, 0.45), cu(1, 0.45) + 8);
           if (k1 > 0) {
-            c.save(); c.globalAlpha = clamp(k1 * 3); c.fillStyle = "#e5e7eb"; rrect(c, 80, 690, 920, 170, 28); c.fill();
+            c.save(); c.globalAlpha = clamp(k1 * 3) * (1 - 0.65 * k2); c.fillStyle = "#e5e7eb"; rrect(c, 80, 690, 920, 170, 28); c.fill();
             c.font = SANS(36, 700); c.fillStyle = INK; c.textAlign = "left"; wrap(c, T.found, 860).forEach((t, q) => c.fillText(t, 110, 746 + q * 48));
             c.font = SANS(fit(c, "10/10 named the painting charge", 900, 64), 900); c.fillStyle = "#4ade80"; c.textAlign = "center"; c.fillText("10/10 named the painting charge", W / 2, 950); c.restore();
           }
-          const k2 = seg(f, cu(2, 0.75), cu(2, 0.75) + 8);
-          if (k2 > 0) {
-            c.save(); c.globalAlpha = clamp(k2 * 3); c.fillStyle = "#fef08a"; rrect(c, 140, 1000, 800, 170, 14); c.fill();
-            c.font = SANS(fit(c, "₹36,000 (cl. 10) + ₹8,000 (cl. 11) = ₹44,000", 740, 48, 900), 900); c.fillStyle = INK; c.textAlign = "center";
-            c.fillText("₹36,000 (cl. 10) + ₹8,000 (cl. 11) = ₹44,000", W / 2, 1070);
-            c.font = SANS(36, 800); c.fillStyle = "#57534e"; c.fillText("open those clauses · add them up yourself", W / 2, 1130); c.restore();
+          if (k2 > 0) {   // render review: the sum is the biggest thing on screen
+            c.save(); c.globalAlpha = clamp(k2 * 3); c.translate(540, 820); c.rotate(-0.02); c.fillStyle = "#fef08a"; rrect(c, -480, -190, 960, 430, 18); c.fill();
+            c.font = SANS(70, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("₹36,000  clause 10", 0, -80);
+            c.fillText("+ ₹8,000  clause 11", 0, 10);
+            c.strokeStyle = INK; c.lineWidth = 6; c.beginPath(); c.moveTo(-380, 40); c.lineTo(380, 40); c.stroke();
+            c.font = SANS(96, 900); c.fillStyle = RED; c.fillText("= ₹44,000", 0, 140);
+            c.font = SANS(fit(c, "open those clauses · add them up yourself", 900, 44, 800), 800); c.fillStyle = "#57534e"; c.fillText("open those clauses · add them up yourself", 0, 200); c.restore();
           }
-        } else if (P === "loop") {
-          c.fillStyle = "#d6cbb5"; c.fillRect(0, 0, W, H);
-          c.fillStyle = "#7c2d12"; rrect(c, 300, 420, 480, 860, 12); c.fill();
-          c.fillStyle = "#fde68a"; c.beginPath(); c.arc(720, 860, 18, 0, 7); c.fill();
-          c.fillStyle = "#fffdf7"; rrect(c, 430, 480, 220, 90, 10); c.fill(); c.font = SANS(54, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("303", 540, 545);
-          const kB = seg(f, cu(1, 0.3), cu(1, 0.3) + 8);
-          if (kB > 0) {
-            c.save(); c.globalAlpha = clamp(kB * 3); c.fillStyle = "#2563eb"; rrect(c, 120, 640, 840, 150, 28); c.fill();
-            c.font = SANS(38, 700); c.fillStyle = "#fff"; c.textAlign = "left"; wrap(c, "Moving out early. What will it cost me?", 780).forEach((t, q) => c.fillText(t, 150, 700 + q * 50)); c.restore();
-          }
+        } else if (P === "loop") {   // render review: not a closed door: the neighbour's phone, the same question
           docFrame(c, f);
+          phone(c);
+          bubble(c, T.ask, PH.y + 160, true, seg(f, ln.from + 2, endL - 4));
           lowerThird(c, "WILD HYDERABAD", "flat 303 · another tenant", seg(f, ln.from + 4, ln.from + 14), r);
         }
         if (P === "hook" || P === "wild" || P === "relief" || P === "shock") docFrame(c, f);
+        if (P === "wild") lowerThird(c, "WILD HYDERABAD", "the tenant, preparing to migrate", seg(f, ln.from + 4, ln.from + 14), r);   // render review: the leaves cut the W
       }} />
     </>
   );

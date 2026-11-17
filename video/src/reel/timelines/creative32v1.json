@@ -5,7 +5,7 @@
  "banner": "",
  "musicVol": [
   0.14,
-  0.24
+  0.17
  ],
  "title": "₹36,000, Said a Free AI. ₹44,000, the Real Cost. (Creative 32)",
  "handle": "@ai_maastaaru",
@@ -13,60 +13,60 @@
  "fps": 30,
  "musicDrops": [
   [
-   42,
-   75
+   56,
+   89
   ],
   [
-   826,
-   868
+   846,
+   888
   ],
   [
-   1241,
-   1279
+   1262,
+   1300
   ]
  ],
  "musicBoosts": [
   [
    0,
-   329,
-   1.5
+   348,
+   2.1
   ],
   [
-   329,
-   798,
-   0.9
+   348,
+   818,
+   0.7
   ],
   [
-   798,
-   1043,
+   818,
+   1063,
    1.2
   ],
   [
-   1043,
-   1616,
+   1064,
+   1637,
    1.1
   ],
   [
-   1616,
-   1783,
+   1636,
+   1799,
    2.2
   ],
   [
-   1432,
-   1616,
+   1453,
+   1637,
    1.8,
    1
   ],
   [
-   1616,
-   1783,
+   1636,
+   1799,
    2.6,
    1
   ]
  ],
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1783,
+ "totalFrames": 1799,
  "music": "reel/creative32v1/score.wav",
  "scenes": [
   {
@@ -105,7 +105,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 329,
+   "frames": 348,
    "lines": [
     {
      "who": "narrator",
@@ -114,56 +114,61 @@
      "sub": null,
      "audio": "reel/creative32v1/line_01.wav",
      "from": 9,
-     "frames": 133,
+     "frames": 145,
      "words": [
       {
        "w": "A",
        "from": 9,
-       "to": 17
+       "to": 13
+      },
+      {
+       "w": "small",
+       "from": 13,
+       "to": 29
       },
       {
        "w": "free",
-       "from": 17,
-       "to": 27
+       "from": 29,
+       "to": 38
       },
       {
        "w": "AI",
-       "from": 27,
-       "to": 33
+       "from": 38,
+       "to": 44
       },
       {
        "w": "said",
-       "from": 33,
-       "to": 42
+       "from": 44,
+       "to": 58
       },
       {
        "w": "₹36,000.",
-       "from": 42,
-       "to": 60
+       "from": 58,
+       "to": 74
       },
       {
        "w": "The",
-       "from": 60,
-       "to": 68
+       "from": 74,
+       "to": 82
       },
       {
        "w": "real",
-       "from": 68,
-       "to": 90
+       "from": 82,
+       "to": 105
       },
       {
        "w": "cost:",
-       "from": 90,
-       "to": 102
+       "from": 105,
+       "to": 116
       },
       {
        "w": "₹44,000.",
-       "from": 102,
-       "to": 136
+       "from": 116,
+       "to": 148
       }
      ],
      "cues": {
-      "1": 66
+      "1": 80
      }
     },
     {
@@ -172,97 +177,97 @@
      "color": "#BEF264",
      "sub": null,
      "audio": "reel/creative32v1/line_02.wav",
-     "from": 151,
+     "from": 163,
      "frames": 171,
      "words": [
       {
        "w": "Here,",
-       "from": 152,
-       "to": 171
+       "from": 164,
+       "to": 183
       },
       {
        "w": "among",
-       "from": 171,
-       "to": 179
+       "from": 183,
+       "to": 192
       },
       {
        "w": "the",
-       "from": 179,
-       "to": 185
+       "from": 192,
+       "to": 197
       },
       {
        "w": "cardboard,",
-       "from": 185,
-       "to": 200
+       "from": 197,
+       "to": 212
       },
       {
        "w": "the",
-       "from": 200,
-       "to": 205
+       "from": 212,
+       "to": 218
       },
       {
        "w": "young",
-       "from": 205,
-       "to": 214
+       "from": 218,
+       "to": 226
       },
       {
        "w": "tenant",
-       "from": 214,
-       "to": 227
-      },
-      {
-       "w": "prepares",
-       "from": 227,
+       "from": 226,
        "to": 240
       },
       {
-       "w": "to",
+       "w": "prepares",
        "from": 240,
-       "to": 244
+       "to": 252
+      },
+      {
+       "w": "to",
+       "from": 252,
+       "to": 256
       },
       {
        "w": "migrate.",
-       "from": 244,
-       "to": 269
-      },
-      {
-       "w": "A",
-       "from": 269,
-       "to": 272
-      },
-      {
-       "w": "job",
-       "from": 272,
-       "to": 278
-      },
-      {
-       "w": "in",
-       "from": 278,
+       "from": 256,
        "to": 282
       },
       {
-       "w": "Pune,",
+       "w": "A",
        "from": 282,
+       "to": 285
+      },
+      {
+       "w": "job",
+       "from": 285,
        "to": 290
       },
       {
-       "w": "4",
+       "w": "in",
        "from": 290,
-       "to": 302
+       "to": 294
+      },
+      {
+       "w": "Pune,",
+       "from": 294,
+       "to": 303
+      },
+      {
+       "w": "4",
+       "from": 303,
+       "to": 314
       },
       {
        "w": "months",
-       "from": 302,
-       "to": 311
+       "from": 314,
+       "to": 324
       },
       {
        "w": "in.",
-       "from": 311,
-       "to": 317
+       "from": 324,
+       "to": 329
       }
      ],
      "cues": {
-      "1": 267
+      "1": 279
      }
     }
    ]
@@ -307,8 +312,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 329,
-   "frames": 469,
+   "from": 348,
+   "frames": 470,
    "lines": [
     {
      "who": "anusha",
@@ -564,7 +569,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 798,
+   "from": 818,
    "frames": 245,
    "lines": [
     {
@@ -712,7 +717,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1043,
+   "from": 1064,
    "frames": 573,
    "lines": [
     {
@@ -1022,8 +1027,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1616,
-   "frames": 167,
+   "from": 1636,
+   "frames": 163,
    "lines": [
     {
      "who": "narrator",

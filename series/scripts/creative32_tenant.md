@@ -54,6 +54,20 @@ Rs 18,000. (The notice month's rent is rent she pays anyway.)
   (Standing Rules); the try-it was made lower-effort (paste only the money clauses). The Apple/BBC fact was cut.
 - Length: 70.5 s -> 59.4 s (lines 2, 4, 8, 9, 10 shortened, tempo 1.04 -> 1.08).
 
+## Render review (human-viewer, v2 render), what changed
+- The swipe point (the test card at 0:35, empty until "thirty-six thousand"): 10 "chat" chips pop in from the first word
+  with soft pops, and a "FIELD NOTES" lower third keeps the documentary going.
+- Credibility: "A small free AI said..." in the hook voice (EN + TE); the second block reads "MOVING OUT REALLY COSTS";
+  "we didn't test the big apps" bigger, amber, up for most of the test; the sum's painting row says "any move-out".
+- Collisions: the struck "₹18,000" moved to its own row ("not ₹18,000"; it sat on "back" in Telugu); the lock-in chip
+  moved off the REC badge; the leaves no longer cut the "W" of WILD HYDERABAD; the end sum is the biggest thing on screen
+  (the prompt fades).
+- Sound: 0.6 s of quiet before "deep in clause eleven"; a whoosh into clause 11 and a boom on the shock cut; music
+  between lines 0.24 -> 0.17 (music-only stretches now ~4.5 dB under the voice); the Telugu hook's drop shortened.
+- The ending: the neighbour's phone typing the same question (not a closed door), then frame 1.
+- My own checks: the English arc was flat (opening boost 2.1, middle 0.7: now -22.1 / -23.0 / -23.5 / -21.3 dB);
+  "0/10" touched its label; the chat chips sat under "10/10"; 60.1 s trimmed to 60.0.
+
 ## Script v2 (EN | TE)
 | # | who | English | Telugu |
 |---|---|---|---|

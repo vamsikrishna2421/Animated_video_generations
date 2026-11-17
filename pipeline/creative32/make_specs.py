@@ -14,8 +14,8 @@ ROOT = Path(__file__).resolve().parents[2]
 R = ROOT / "reels"
 
 LINES = {
-    1: ("narrator", "hook", "A free AI said thirty-six thousand. [1] The real cost: forty-four.",
-        "ఒక ఫ్రీ చాట్‌బాట్: ముప్పై ఆరు వేలు. [1] అసలు లెక్క: నలభై నాలుగు వేలు."),
+    1: ("narrator", "hook", "A small free AI said thirty-six thousand. [1] The real cost: forty-four.",
+        "ఒక చిన్న ఫ్రీ చాట్‌బాట్: ముప్పై ఆరు వేలు. [1] అసలు లెక్క: నలభై నాలుగు వేలు."),
     2: ("narrator", "wild", "Here, among the cardboard, the young tenant prepares to migrate. [1] A job in Pune, four months in.",
         "అట్టపెట్టెల మధ్య, మన టెనెంట్ వలసకి సిద్ధమవుతోంది. [1] పూణే లో కొత్త ఉద్యోగం; నాలుగు నెలలే అయ్యాయి."),
     3: ("anusha", "ask", "I may have to move out after four months. [1] What will it cost me?",
@@ -35,7 +35,7 @@ LINES = {
     10: ("narrator", "loop", "Meanwhile, next door, [1] another tenant asks the AI the same question...",
          "ఇంతలో, పక్క ఫ్లాట్ లో, [1] ఇంకో టెనెంట్ అదే ప్రశ్న అడుగుతోంది..."),
 }
-SHOW = {1: "A free AI said ₹36,000. The real cost: ₹44,000.",
+SHOW = {1: "A small free AI said ₹36,000. The real cost: ₹44,000.",
         2: "Here, among the cardboard, the young tenant prepares to migrate. A job in Pune, 4 months in.",
         3: "I may have to move out after 4 months. What will it cost me?",
         4: "The AI read all 14 clauses. ₹36,000, it says: the lock-in.",
@@ -46,7 +46,7 @@ SHOW = {1: "A free AI said ₹36,000. The real cost: ₹44,000.",
         9: "Then we asked for every amount, with its clause number. 10 out of 10 named the painting charge. <pause 0.4> So open those clauses, and add them up yourself.",
         10: "Meanwhile, next door, another tenant asks the AI the same question..."}
 SHOW_TE = {
-    1: "A free chatbot: ₹36,000. The real figure: ₹44,000.",
+    1: "A small free chatbot: ₹36,000. The real figure: ₹44,000.",
     2: "Among the cardboard boxes, our tenant gets ready to migrate. A new job in Pune; only 4 months in.",
     3: "I may have to move out after just 4 months. What will it cost me?",
     4: "The chatbot read all 14 clauses. ₹36,000, it says: the lock-in penalty.",
@@ -68,6 +68,8 @@ T = {   # on screen: our test (series/scripts/creative32_demo/summary.json); the
     "better": "List every amount of money I may have to pay or lose, and every condition on leaving early. Give the clause number for each.",
     "found": "Cost towards Repainting when Vacating: Rs 8,000 deducted from the security deposit (Clause 11)",
 }
+# Render review: "small" in the hook voice; 0.6 s of quiet before clause 11; music between lines 0.24 -> 0.17 (it
+# jumped ~5 dB above the voice); the Telugu hook's drop shortened (it fell near silence at 2.5 s).
 # Render check: the English arc was flat by quarter: a louder opening (boost 2.1) and a lower middle (0.7).
 # Sound (CLAUDE.md arc): jungle bed and a boom on frame 1; a pop on the question; a ding on "Fine!"; the bed drops out
 # before "something waits" and a low boom on clause 11; a buzz on "ten thousand"; ticks on the test tiles, a drop before
@@ -77,8 +79,8 @@ SCENES = [("s_a", (1, 2), {"boost": 2.1, "drop_at": [[0, 1, 0.3]], "tail": 0.0})
           ("s_c", (6, 7), {"boost": 1.2, "lift": 0.6, "drop_at": [[0, 1, 0.6]], "tail": 0.0}),
           ("s_d", (8, 9), {"boost": 1.1, "lift": 0.5, "drop_at": [[0, 2, 0.45]], "swell": [1, 1, 1.8], "tail": 0.0}),
           ("s_e", (10,), {"outro": True, "pre": 0.3, "boost": 2.2, "lift": 0.7, "rise": 2.6, "tail": 0.0})]
-GAP = {1: 0.3, 2: 0.25, 3: 0.25, 4: 0.25, 5: 0.3, 6: 0.3, 7: 0.35, 8: 0.3, 9: 0.35, 10: 0.0}
-FLAGS_TE = {"s_e": {"boost": 2.4, "rise": 2.8}}
+GAP = {1: 0.3, 2: 0.25, 3: 0.25, 4: 0.25, 5: 0.6, 6: 0.3, 7: 0.35, 8: 0.3, 9: 0.35, 10: 0.0}
+FLAGS_TE = {"s_a": {"drop_at": [[0, 1, 0.15]]}, "s_e": {"boost": 2.4, "rise": 2.8}}
 YT = {"s_a": "₹36,000 vs ₹44,000", "s_b": "What will it cost?", "s_c": "Clause 11", "s_d": "Our test, the better question", "s_e": "The next flat"}
 MARK = re.compile(r"\[\d+\]\s*")
 NAMES = {"en": {"narrator": "Narrator", "anusha": "Anusha"}, "te": {"narrator": "Narrator", "anusha": "Anusha"}}
@@ -89,7 +91,7 @@ def spec(lang="en"):
     sid = "creative32te" if te else "creative32v1"
     s = {"id": sid, "title": "₹36,000, Said a Free AI. ₹44,000, the Real Cost. (Creative 32)" + (" (Telugu audio)" if te else ""),
          "label": "", "banner": "", "topic": "", "look": "classic", "gap": 0.14, "lead": 0.3, "music": "lofi", "names": NAMES[lang],
-         "musicVol": [0.14, 0.24], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.0, "captionMode": "phrase",
+         "musicVol": [0.14, 0.17], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 0.85, "captionMode": "phrase",
          "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimer": True, "tempo": 1.0, "captionTop": 1370}
     if te:

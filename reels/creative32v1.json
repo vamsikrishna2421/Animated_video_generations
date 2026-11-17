@@ -14,11 +14,11 @@
  },
  "musicVol": [
   0.14,
-  0.24
+  0.17
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 1.0,
+ "endPad": 0.85,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -94,10 +94,10 @@
     {
      "who": "narrator",
      "file": "01_narrator.wav",
-     "text": "A free AI said thirty-six thousand. [1] The real cost: forty-four.",
+     "text": "A small free AI said thirty-six thousand. [1] The real cost: forty-four.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "show": "A free AI said ₹36,000. The real cost: ₹44,000.",
+     "show": "A small free AI said ₹36,000. The real cost: ₹44,000.",
      "tempo": 1.08
     },
     {
@@ -174,7 +174,7 @@
      "file": "05_anusha.wav",
      "text": "Fifty-four thousand deposit, minus thirty-six. [1] Well, at least eighteen thousand comes back.",
      "maxgap": 0.3,
-     "gap": 0.3,
+     "gap": 0.6,
      "show": "₹54,000 deposit, minus ₹36,000. Well, at least ₹18,000 comes back.",
      "tempo": 1.08
     }

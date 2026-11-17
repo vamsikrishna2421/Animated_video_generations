@@ -38,7 +38,7 @@ VOICE_TE = {
               "moderate pace. The recording is very clear, close-up, studio quality, with no background noise.",
 }
 APP = set()
-MUST = {"en": {1: [("thirty", "36"), ("forty", "44"), ("real",)], 2: [("cardboard",), ("tenant",), ("pune",), ("four", "4")],
+MUST = {"en": {1: [("small",), ("thirty", "36"), ("forty", "44"), ("real",)], 2: [("cardboard",), ("tenant",), ("pune",), ("four", "4")],
                3: [("four", "4"), ("cost",)], 4: [("fourteen", "14"), ("thirty", "36"), ("lock",)],
                5: [("fifty", "54"), ("eighteen", "18"), ("least",)], 6: [("clause",), ("eleven", "11"), ("waits",)],
                7: [("eight", "8"), ("painting",), ("ten", "10"), ("eighteen", "18")],
@@ -46,7 +46,7 @@ MUST = {"en": {1: [("thirty", "36"), ("forty", "44"), ("real",)], 2: [("cardboar
                9: [("amount",), ("clause",), ("ten", "10"), ("painting",)], "9b": [("clauses", "clause"), ("yourself",)],
                10: [("door",), ("tenant",), ("question",)]},
         "te": {}}
-JUDGE_TEXT = {1: "A free AI said 36,000. The real cost: 44,000.",
+JUDGE_TEXT = {1: "A small free AI said 36,000. The real cost: 44,000.",
               4: "The AI read all 14 clauses. 36,000, it says: the lock-in.",
               5: "54,000 deposit, minus 36. Well, at least 18,000 comes back.",
               7: "An 8,000 painting charge?! So 10,000 back, not 18,000?!",

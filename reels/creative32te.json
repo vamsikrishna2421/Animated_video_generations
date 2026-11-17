@@ -14,11 +14,11 @@
  },
  "musicVol": [
   0.14,
-  0.24
+  0.17
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 1.0,
+ "endPad": 0.85,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -60,7 +60,7 @@
     [
      0,
      1,
-     0.3
+     0.15
     ]
    ],
    "data": {
@@ -97,10 +97,10 @@
     {
      "who": "narrator",
      "file": "01_narrator.wav",
-     "text": "ఒక ఫ్రీ చాట్‌బాట్: ముప్పై ఆరు వేలు. [1] అసలు లెక్క: నలభై నాలుగు వేలు.",
+     "text": "ఒక చిన్న ఫ్రీ చాట్‌బాట్: ముప్పై ఆరు వేలు. [1] అసలు లెక్క: నలభై నాలుగు వేలు.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "show": "A free chatbot: ₹36,000. The real figure: ₹44,000.",
+     "show": "A small free chatbot: ₹36,000. The real figure: ₹44,000.",
      "tempo": 1.12
     },
     {
@@ -178,7 +178,7 @@
      "file": "05_anusha.wav",
      "text": "యాభై నాలుగు వేల డిపాజిట్, ముప్పై ఆరు పోతే, [1] సరే, పద్దెనిమిది అయినా వస్తాయి.",
      "maxgap": 0.3,
-     "gap": 0.3,
+     "gap": 0.6,
      "show": "₹54,000 deposit, minus ₹36,000: okay, at least ₹18,000 comes back.",
      "tempo": 1.12
     }
