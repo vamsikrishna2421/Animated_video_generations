@@ -1,0 +1,26 @@
+UPLOAD: 059 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/059_ep55_insta_te.mp4  (a screen tutorial, TE_LEN s, Telugu voice on our TTS, English on-screen text; send copy: telugu_page/059_ep55_insta_te_ig.mp4). It ends: "తర్వాత: వాయిస్ అసిస్టెంట్." taruvaata frame 1 (plugged in: 1/10 vs after fixing the input: 10/10).
+
+=== CAPTION ===
+"When will my smartwatch arrive? Order 4388." Maa shop chatbot: "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking." Tappu customer meeda vesindi. Asalu bug maa sontha server lone undi.
+
+AI From Scratch Episode 55: mee sontha MCP server (Season 6, screen tutorial)
+MCP (Model Context Protocol) chatbot apps ki oka standard plug: tool ni okkasaari server lo pedithe, MCP telisina prati app adi kanukkoni vaadagaladu. Anthropic open standard ga release chesindi (Nov 2024); ChatGPT company (OpenAI) tana Agents SDK lo cherchindi (Mar 2025).
+1. Server: official Python SDK tho 12 lines. Oka function get_order(order_id), oka line description, daani input.
+2. Chatbot, server ni "nee daggara e tools unnayi?" ani adugutundi (list_tools); aa javaabu tho tool list tayaru chesukuntundi. Orders gurinchi chatbot lo okka line kooda ledu.
+3. Maa test, made-up shop, 10 mandi customers, maa computer lo oka chinna free AI: 10 lo okkate correct. Chatbot order number ni ankega (4388) pampindi; server text adigindi (order_id: str), reject chesindi. Aa okka correct: "4502" ni text ga pampina okkasaari. Maa client code input peru chupinchindi, type chupinchaledu.
+4. Fix: ankaina, textaina teesukovaali (order_id: str | int, description lo oka sentence) + chatbot ki types chupinchaali. WhatsApp bot: 1 nunchi 10 ki 10. Website bot: 0 nunchi 7; migilina 3 saarlu tappu format JSON ({"order_id": 4417"}), lookup jaragaledu.
+5. Server lo okka maarpu (order 4417: refund approved): chatbot ni maarchakundaane, WhatsApp bot "Your refund of Rs 1,299 has been approved" ani cheppindi.
+Meeku edi kaavaali? Okka app ki: maamoolu tool (EP54). Rendu apps daatithe: server.
+
+Next: voice assistant.
+Follow @ai_maastaaru_telugu.
+
+=== COMMENT PROMPT ===
+Try it: edaina shop chatbot ki mee sontha order number rendu rakaalugaa ivvandi, 4388 and #4388. Rendu panichesaayaa? Comment lo raasukondi.
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #MCP #AIAgents #Python
+
+=== PINNED_COMMENT ===
+Code (Python; full runnable server + bot in the English page's two pinned comments): orders_server.py = MCPServer("shop-orders"); @mcp.tool() def get_order(order_id: str | int) -> dict; mcp.run("stdio"). bot.py = server start chesi list_tools() tho tools adugutundi; prati input type (string or integer) chatbot ki chupistundi; chatbot JSON line raaste call_tool(), result tirigi pampi malli adugutundi; tappu JSON aithe call ledu. Test (Nov 17, 2026): made-up shop (10 orders, maa sontham), Qwen2.5-7B-Instruct (4-bit), llama.cpp, temperature 0.2, prati javaabu chadivaam.

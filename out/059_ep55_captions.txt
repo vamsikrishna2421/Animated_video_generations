@@ -1,29 +1,73 @@
 UPLOAD: 059
-VIDEO: 059_ep55_build_your_own_mcp_server.mp4
+VIDEO: 059_ep55_1_or_10.mp4  (a screen tutorial, 76 s, AI voice in the Creative 21 standard; replaces the older lesson-format plan for slot 059; send copy: 059_ep55_1_or_10_ig.mp4). It ends: "Next: a voice assistant." and loops to frame 1 (plugged in: 1/10 right vs after fixing the input: 10/10).
 
 === CAPTION ===
-Build your own MCP server in about 15 lines of Python, and plug it into any AI app.
+"When will my smartwatch arrive? Order 4388." Our shop bot: "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking." It blamed the customer. The bug was in our own server.
 
-AI From Scratch, Episode 55: build an MCP server
-- How MCP connects apps, clients, servers and tools
-- Why MCP: build once, plug in everywhere
-- The code, line by line with FastMCP
-- Jargon: server, client, resource, transport
-- Only install MCP servers you trust
+Episode 55 of AI From Scratch: build your own MCP server (Season 6, a screen tutorial)
+MCP (the Model Context Protocol) is a standard plug for AI apps: put a tool in a server once, and any app that speaks MCP can ask what tools it has and use them. Anthropic released it as an open standard (Nov 2024); OpenAI added it to its Agents SDK (Mar 2025).
+1. The server: 12 lines with the official Python SDK. One function, get_order(order_id), a one-line description, and its input.
+2. The bot asks the server what tools it has (list_tools) and builds its tool list from the answer. Nothing about orders is written in the bot.
+3. Our test, a made-up shop, 10 customers, a small free AI on our computer: 1 right of 10. The AI sent the order number as a number (4388); the server's input said text (order_id: str) and refused it. The 1 right: the one time the AI sent "4502" as text. Our client code had shown the AI the input's name, not its type.
+4. The fix: accept a number or text (order_id: str | int, plus one sentence in the description) and show the AI the types. WhatsApp bot: 1 → 10 of 10. Website bot: 0 → 7 of 10; the other 3, the AI wrote broken JSON ({"order_id": 4417"}), so no lookup happened.
+5. Then one change on the server (order 4417: refund approved): the WhatsApp bot answered "Your refund of Rs 1,299 has been approved", with no change to the bot.
+Which do you need? One app: a plain tool (EP54). Two or more apps: a server.
 
-Quiz at the end. Got it right? Comment below.
+Next: a voice assistant.
+Follow @ai_maastaaru for the full series.
 
-Next: build a voice assistant.
-Follow @ai_maastaaru to learn AI from scratch.
+=== COMMENT PROMPT ===
+Try it: give a shop's chatbot your own order number two ways, 4388 and #4388 (your real number). Post whether both worked.
+Building one? Send your tool 10 real questions and post how many came back right before and after you fixed the inputs.
 
 === HASHTAGS ===
-#AIMaastaaru #MCP #Python #AIAgents #LearnAI
+#AIFromScratch #MCP #ModelContextProtocol #AIAgents #Python
 
 === PINNED_COMMENT ===
-Quiz answer: Its name, type hints and docstring, which become the tool's description. What MCP server would you build? Comment below!
+The server, runnable (Python 3.10+; pip install mcp==2.3.0 openai). Save as orders_server.py:
+import json
+from mcp.server.mcpserver import MCPServer
+ORDERS = {"4417": {"item": "Bluetooth earphones", "refund": "Rs 1,299 approved; 5-7 working days"}}
+mcp = MCPServer("shop-orders")
+@mcp.tool()
+def get_order(order_id: str | int) -> dict:
+    """Look up one order: item, status and refund. order_id: the order number."""
+    return ORDERS.get(str(order_id).strip().lstrip("#"), {"error": "no such order"})
+if __name__ == "__main__":
+    mcp.run("stdio")
+The bot is in the next pinned comment. Run: python3 bot.py (it starts the server itself).
+
+=== PINNED_COMMENT_2 ===
+The bot, bot.py (any OpenAI-compatible chat API, a local llama.cpp server included):
+import asyncio, json, re, sys
+from openai import OpenAI
+from mcp import ClientSession, StdioServerParameters
+from mcp.client.stdio import stdio_client
+llm = OpenAI()  # key in OPENAI_API_KEY (or base_url=... for a local server)
+MODEL = "your-model-name"
+def ask(msgs): return llm.chat.completions.create(model=MODEL, messages=msgs).choices[0].message.content
+def kind(p): return " or ".join(x["type"] for x in p["anyOf"]) if "anyOf" in p else p.get("type", "")
+async def main(q):
+    async with stdio_client(StdioServerParameters(command=sys.executable, args=["orders_server.py"])) as (r, w), ClientSession(r, w) as s:
+        await s.initialize()
+        tools = (await s.list_tools()).tools  # ask the server what it has
+        desc = "\n".join(f"- {t.name}({', '.join(f'{k}: {kind(v)}' for k, v in t.input_schema['properties'].items())}): {t.description}" for t in tools)
+        msgs = [{"role": "system", "content": "You reply to a shop's customers. Tools:\n" + desc + '\nTo use one, reply with only {"tool": "<name>", "args": {...}}. Then answer only from the result.'},
+                {"role": "user", "content": q}]
+        reply = ask(msgs)
+        m = re.search(r"\{.*\}", reply, re.S)
+        try: call = json.loads(m[0]) if m else None
+        except ValueError: call = None  # broken JSON from a small AI: no call
+        if call:
+            res = await s.call_tool(call["tool"], call.get("args", {}))
+            msgs += [{"role": "assistant", "content": reply}, {"role": "user", "content": "Tool result: " + res.content[0].text}]
+            reply = ask(msgs)
+        print(reply)
+asyncio.run(main("Where is my refund? Order 4417."))
+How we tested (Nov 17, 2026): a made-up shop (its prompt called it "Kiran Mobiles"; no real shop), 10 orders we wrote, Qwen2.5-7B-Instruct (4-bit) on llama.cpp on our computer, temperature 0.2, one fresh chat per question, every reply read by hand. This short version was checked end to end against a stand-in chat server.
 
 === COVER ===
-'Build an MCP Server' title card
+Frame 1: blocks "PLUGGED IN 1/10 right" (red) and "AFTER FIXING THE INPUT 10/10" (green), the bot's red reply "Your order ID is numeric. Please provide the correct alphanumeric order ID for tracking." under the customer's "When will my smartwatch arrive? Order 4388."
 
 === ALT_TEXT ===
-Animated coding tutorial: building a notes MCP server in Python with FastMCP.
+A crayon-drawn screen tutorial. Two blocks: plugged in, 1 of 10 right; after fixing the input, 10 of 10. A WhatsApp chat from a made-up shop: the customer asks when the smartwatch, order 4388, will arrive; the bot's red reply: your order ID is numeric, please provide the correct alphanumeric order ID. Chips: the bot blamed the customer; a made-up shop, a small free AI, our own test. A plug diagram: one MCP server with get_order, cables to a website bot, a WhatsApp bot and other MCP apps. Cards: Anthropic introduced MCP as an open standard, Nov 2024; OpenAI added MCP to its Agents SDK, Mar 2025. Step 1: the server's key lines typed on a code card, order_id: str boxed; the order number, as text. Step 2: client.list_tools() and the server's answer, get_order(order_id) with its description; nothing about orders written in the bot; our client code showed the name, not the type. Our test: 1 of 10; the AI sent order_id 4388 as a number; the server said input should be a valid string; a stamp, refused every number; the one right, the AI sent "4502" as text. The fix: def get_order(order_id: str | int), with "| int" boxed; the bot now shows the type, string or integer; 10 of 10 for the WhatsApp bot, was 1; 7 of 10 for the website bot, was 0; 3 broken JSON lines with a stray quote. One change on the server: order 4417's refund, not started, struck out, Rs 1,299 approved; the WhatsApp bot, asked again, says the refund has been approved; no change to the bot. Rules: 1 app, a plain tool; 2 or more apps, an MCP server; accept what the AI sends, test 10 questions; full code in the pinned comment; next, EP56, a voice assistant.

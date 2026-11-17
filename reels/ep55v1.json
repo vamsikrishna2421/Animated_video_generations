@@ -127,19 +127,19 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "MCP is a standard plug for AI apps. [1] Put a tool, like our order lookup, in a server once, and any app that speaks MCP can find it and use it.",
+     "text": "MCP is a standard plug for AI apps: [1] put a tool in a server once, and any MCP app can find it and use it.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "show": "MCP is a standard plug for AI apps. Put a tool, like our order lookup, in a server once, and any app that speaks MCP can find it and use it.",
+     "show": "MCP is a standard plug for AI apps: put a tool in a server once, and any MCP app can find it and use it.",
      "tempo": 1.08
     },
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "Anthropic released it as an open standard in 2024. [1] OpenAI added it to its Agents SDK in 2025.",
+     "text": "An open standard, from Anthropic in 2024. [1] OpenAI added it in 2025.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Anthropic released it as an open standard in 2024. OpenAI added it to its Agents SDK in 2025.",
+     "show": "An open standard, from Anthropic in 2024. OpenAI added it in 2025.",
      "tempo": 1.08
     }
    ]
@@ -288,23 +288,23 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "Our test: one right. [1] The AI sent the order number as a number. [2] The server wanted text, and refused it, every time. [3] The one time the AI sent text, it worked.",
+     "text": "Our test: one right. [1] The AI sent the order number as a number; [2] the server wanted text, and refused. [3] The one time it sent text, it worked.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Our test: 1 right. The AI sent the order number as a number. The server wanted text, and refused it, every time. The one time the AI sent text, it worked.",
+     "show": "Our test: 1 right. The AI sent the order number as a number; the server wanted text, and refused. The one time it sent text, it worked.",
      "tempo": 1.08
     },
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "The fix: accept a number or text, and show the AI the types. [1] Ten out of ten. <pause 0.5> [2] Our second bot: zero before, seven now; three times it wrote broken JSON.",
+     "text": "The fix: accept a number or text, and show the AI the types. [1] Ten out of ten. <pause 0.5> [2] Our second bot: zero, then seven; three broken JSON lines.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "The fix: accept a number or text, and show the AI the types. 10 out of 10. <pause 0.5> Our second bot: 0 before, 7 now; 3 times it wrote broken JSON.",
+     "show": "The fix: accept a number or text, and show the AI the types. 10 out of 10. <pause 0.5> Our second bot: 0, then 7; 3 broken JSON lines.",
      "tempo": 1.08,
      "tts": "The fix: accept a number or text, and show the AI the types. Ten out of ten.",
      "file2": "07b_storyteller.wav",
-     "tts2": "Our second bot: zero before, seven now; three times it wrote broken JSON.",
+     "tts2": "Our second bot: zero, then seven; three broken JSON lines.",
      "pause": 0.5
     },
     {
@@ -375,12 +375,12 @@
     {
      "who": "storyteller",
      "file": "09_storyteller.wav",
-     "text": "One app? A plain tool is enough. [1] Two or more? Make it a server. [2] Accept what the AI sends, and test ten real questions. <pause 0.4> [3] Next: a voice assistant.",
+     "text": "One app: a plain tool. [1] Two or more: a server. [2] Accept what the AI sends; test ten real questions. <pause 0.4> [3] Next: a voice assistant.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "One app? A plain tool is enough. Two or more? Make it a server. Accept what the AI sends, and test 10 real questions. <pause 0.4> Next: a voice assistant.",
+     "show": "One app: a plain tool. Two or more: a server. Accept what the AI sends; test 10 real questions. <pause 0.4> Next: a voice assistant.",
      "tempo": 1.08,
-     "tts": "One app? A plain tool is enough. Two or more? Make it a server. Accept what the AI sends, and test ten real questions.",
+     "tts": "One app: a plain tool. Two or more: a server. Accept what the AI sends; test ten real questions.",
      "file2": "09b_storyteller.wav",
      "tts2": "Next: a voice assistant.",
      "pause": 0.4

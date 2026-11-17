@@ -130,19 +130,19 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "ఎమ్‌సీపీ, చాట్‌బాట్ యాప్ లకి ఒక స్టాండర్డ్ ప్లగ్. [1] మా ఆర్డర్ లుకప్ లాంటి టూల్ ని, ఒక్కసారి సర్వర్ లో పెడితే; ఎమ్‌సీపీ తెలిసిన ప్రతి యాప్, దాన్ని కనుక్కొని వాడగలదు.",
+     "text": "ఎమ్‌సీపీ, చాట్‌బాట్ యాప్ లకి ఒక స్టాండర్డ్ ప్లగ్. [1] టూల్ ని ఒక్కసారి సర్వర్ లో పెడితే, ప్రతి ఎమ్‌సీపీ యాప్ దాన్ని వాడగలదు.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "show": "MCP is a standard plug for chatbot apps. Put a tool like our order lookup in a server once; every app that knows MCP can find it and use it.",
+     "show": "MCP is a standard plug for chatbot apps. Put a tool in a server once, and every MCP app can use it.",
      "tempo": 1.1
     },
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "ఆంత్రోపిక్, రెండు వేల ఇరవై నాలుగులో దీన్ని ఓపెన్ స్టాండర్డ్ గా విడుదల చేసింది. [1] చాట్‌జీపీటీ కంపెనీ కూడా, రెండు వేల ఇరవై ఐదులో దీన్ని తన డెవలపర్ టూల్స్ లో చేర్చింది.",
+     "text": "ఇది ఓపెన్ స్టాండర్డ్: ఆంత్రోపిక్, రెండు వేల ఇరవై నాలుగు. [1] చాట్‌జీపీటీ కంపెనీ కూడా, రెండు వేల ఇరవై ఐదులో చేర్చింది.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Anthropic released it as an open standard in 2024. The ChatGPT company also added it to its developer tools in 2025.",
+     "show": "It is an open standard: Anthropic, 2024. The ChatGPT company added it too, in 2025.",
      "tempo": 1.1
     }
    ]
@@ -293,23 +293,23 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "మా టెస్ట్: ఒక్కటే కరెక్ట్. [1] చాట్‌బాట్ ఆర్డర్ నంబర్ ని అంకెగా పంపింది. [2] సర్వర్ టెక్స్ట్ అడిగింది, ప్రతిసారీ రిజెక్ట్ చేసింది. [3] టెక్స్ట్ గా పంపిన ఒక్కసారి మాత్రం, పని చేసింది.",
+     "text": "మా టెస్ట్: ఒక్కటే కరెక్ట్. [1] చాట్‌బాట్ నంబర్ ని అంకెగా పంపింది; [2] సర్వర్ టెక్స్ట్ అడిగి, రిజెక్ట్ చేసింది. [3] టెక్స్ట్ గా పంపిన ఒక్కసారి, పని చేసింది.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Our test: just 1 right. The chatbot sent the order number as a number. The server asked for text and rejected it every time. The one time it sent text, it worked.",
+     "show": "Our test: just 1 right. The chatbot sent the number as a number; the server asked for text and rejected it. The one time it sent text, it worked.",
      "tempo": 1.1
     },
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "ఫిక్స్: అంకె అయినా, టెక్స్ట్ అయినా తీసుకోవాలి; చాట్‌బాట్‌కి టైప్స్ కూడా చూపించాలి. [1] పదికి పది. <pause 0.5> [2] మా రెండో చాట్‌బాట్: ముందు సున్నా, ఇప్పుడు ఏడు; మూడుసార్లు తప్పు ఫార్మాట్‌లో రాసింది.",
+     "text": "ఫిక్స్: అంకె అయినా, టెక్స్ట్ అయినా తీసుకోవాలి; చాట్‌బాట్‌కి టైప్స్ చూపించాలి. [1] పదికి పది. <pause 0.5> [2] రెండో చాట్‌బాట్: సున్నా నుంచి ఏడు; మూడుసార్లు తప్పు ఫార్మాట్.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "The fix: take a number or text; show the chatbot the types too. 10 out of 10. <pause 0.5> Our second chatbot: 0 before, 7 now; 3 times it wrote the wrong format.",
+     "show": "The fix: take a number or text; show the chatbot the types. 10 out of 10. <pause 0.5> Second chatbot: from 0 to 7; 3 times the wrong format.",
      "tempo": 1.1,
-     "tts": "ఫిక్స్: అంకె అయినా, టెక్స్ట్ అయినా తీసుకోవాలి; చాట్‌బాట్‌కి టైప్స్ కూడా చూపించాలి. పదికి పది.",
+     "tts": "ఫిక్స్: అంకె అయినా, టెక్స్ట్ అయినా తీసుకోవాలి; చాట్‌బాట్‌కి టైప్స్ చూపించాలి. పదికి పది.",
      "file2": "07b_storyteller.wav",
-     "tts2": "మా రెండో చాట్‌బాట్: ముందు సున్నా, ఇప్పుడు ఏడు; మూడుసార్లు తప్పు ఫార్మాట్‌లో రాసింది.",
+     "tts2": "రెండో చాట్‌బాట్: సున్నా నుంచి ఏడు; మూడుసార్లు తప్పు ఫార్మాట్.",
      "pause": 0.5
     },
     {
@@ -381,12 +381,12 @@
     {
      "who": "storyteller",
      "file": "09_storyteller.wav",
-     "text": "ఒక్క యాప్ కి, మామూలు టూల్ చాలు. [1] రెండు, అంతకంటే ఎక్కువ యాప్స్ కి, సర్వర్ గా రాసుకోండి. [2] చాట్‌బాట్ పంపేది తీసుకునేలా రాసుకోండి; పది నిజమైన ప్రశ్నలతో టెస్ట్ చేసుకోండి. <pause 0.4> [3] తర్వాత: వాయిస్ అసిస్టెంట్.",
+     "text": "ఒక్క యాప్ కి, మామూలు టూల్ చాలు. [1] రెండు యాప్స్ దాటితే, సర్వర్. [2] చాట్‌బాట్ పంపేది తీసుకునేలా రాసుకోండి; పది నిజమైన ప్రశ్నలతో టెస్ట్ చేసుకోండి. <pause 0.4> [3] తర్వాత: వాయిస్ అసిస్టెంట్.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "For one app, a plain tool is enough. For two or more apps, write it as a server. Write it to accept what the chatbot sends; test with 10 real questions. <pause 0.4> Next: a voice assistant.",
+     "show": "For one app, a plain tool is enough. Past two apps, a server. Write it to accept what the chatbot sends; test with 10 real questions. <pause 0.4> Next: a voice assistant.",
      "tempo": 1.1,
-     "tts": "ఒక్క యాప్ కి, మామూలు టూల్ చాలు. రెండు, అంతకంటే ఎక్కువ యాప్స్ కి, సర్వర్ గా రాసుకోండి. చాట్‌బాట్ పంపేది తీసుకునేలా రాసుకోండి; పది నిజమైన ప్రశ్నలతో టెస్ట్ చేసుకోండి.",
+     "tts": "ఒక్క యాప్ కి, మామూలు టూల్ చాలు. రెండు యాప్స్ దాటితే, సర్వర్. చాట్‌బాట్ పంపేది తీసుకునేలా రాసుకోండి; పది నిజమైన ప్రశ్నలతో టెస్ట్ చేసుకోండి.",
      "file2": "09b_storyteller.wav",
      "tts2": "తర్వాత: వాయిస్ అసిస్టెంట్.",
      "pause": 0.4
