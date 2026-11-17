@@ -22,7 +22,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import mcp_demo as m  # noqa: E402
 
 SERVER = m.ROOT / "pipeline/ep55/orders_server_v2.py"
-HAND = {}   # filled in after the run
+HAND = {   # read by hand after the run (series/scripts/ep55_demo/mcp_fix.json)
+    "F2": "WhatsApp bot + server v2: called 10 of 10, 10 of 10 right (the auto check missed 4417: 'Your refund process hasn't "
+          "started yet as your return is still in transit' is right)",
+    "F3": "website bot + server v2: 7 of 10 right; the other 3 (4417, 4533, 4588) the AI wrote broken JSON, "
+          "{\"order_id\": 4417\"} (a missing quote), so no call was made",
+    "F4": "after one change on the server only (4417: return received, refund approved): the WhatsApp bot answered 'Your refund "
+          "of Rs 1,299 has been approved and will reach your bank account in 5-7 working days' with no change to the bot; the "
+          "website bot wrote the broken JSON again",
+}
 
 
 def kind(p):

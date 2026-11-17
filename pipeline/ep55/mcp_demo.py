@@ -36,7 +36,15 @@ BOTS = {"website": "You are the website chat assistant of Kiran Mobiles, an onli
         "whatsapp": "You reply to Kiran Mobiles' customers on WhatsApp. Answer in one or two short lines."}
 UPDATE = {"4417": {"item": "Bluetooth earphones", "amount": "Rs 1,299", "status": "returned, received at our warehouse on Nov 17",
                    "refund": "Rs 1,299 approved on Nov 17; reaches the bank in 5-7 working days"}}
-HAND = {}   # filled in after the run
+HAND = {   # read by hand after the run (series/scripts/ep55_demo/mcp.json)
+    "R1": "website bot, no server: 10 of 10 answered without checking; 4417 'Your refund of Rs 1,299 ... is processing and should "
+          "be credited within the next 3-5 business days' (the record: not started); 1 said it had no tracking",
+    "R2": "WhatsApp bot + server: 1 of 10 right (4502). The AI sent the order number as a number, {\"order_id\": 4388}; the "
+          "server's schema says text (order_id: str), the SDK refused: 'Input should be a valid string'; the bot then blamed "
+          "the customer ('Your order ID is numeric. Please provide the correct alphanumeric order ID'). 2 broken JSON lines.",
+    "R3": "website bot + the same server: 0 of 10, the same refusal on every call, 2 broken JSON lines",
+    "R4": "the update: no right answer from either bot (the same refusal / broken JSON)",
+}
 
 
 def call(key, messages):
