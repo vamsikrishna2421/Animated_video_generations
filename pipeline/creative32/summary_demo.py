@@ -50,7 +50,15 @@ ASKS = {
           "leaving early. Give the clause number for each.",
     "P3": "I may have to move out after 4 months for a job transfer. What will it cost me?",
 }
-HAND = {}   # filled after the run, every reply read by hand
+HAND = {   # read by hand after the run (series/scripts/creative32_demo/summary.json); the auto "painting" mark was wrong
+    # (it matched the "8,000" in "18,000"): see rescore.py
+    "P1": "the 5-point summary: 10 of 10 kept the lock-in (Rs 36,000 in 9, 'two months' rent' in 1); 0 of 10 named the "
+          "Rs 8,000 painting deduction",
+    "P2": "every amount + clause numbers: 10 of 10 listed both the Rs 36,000 lock-in (clause 10) and the Rs 8,000 "
+          "repainting (clause 11 named in 6; 7 replies were cut at our 300-token cap after that line); none added a total",
+    "P3": "'move out after 4 months, what will it cost?': 10 of 10 said Rs 36,000 (from the deposit); 0 of 10 named the "
+          "Rs 8,000 painting; none gave Rs 44,000 or the Rs 10,000 left of the Rs 54,000 deposit",
+}
 
 
 def call(key, question, seed):

@@ -1,0 +1,280 @@
+{
+ "agreement": "RENTAL AGREEMENT (11 months)\n1. Property: Flat 302, a residential flat in Hyderabad, let by the Owner to the Tenant, semi-furnished.\n2. Term: 11 months, from 1 December 2026 to 31 October 2027, renewable by mutual consent.\n3. Rent: Rs 18,000 per month, payable on or before the 5th of every month by bank transfer.\n4. Maintenance: Rs 2,000 per month, payable by the Tenant directly to the residents' association.\n5. Security deposit: Rs 54,000, paid on signing, refundable without interest when the Tenant vacates, after deducting\nany unpaid rent, unpaid bills and the cost of any damage beyond normal wear and tear.\n6. Bills: electricity and water as per the meter readings, paid by the Tenant.\n7. Use: for residential use by the Tenant's family only; no sub-letting; pets only with the Owner's written consent.\n8. Repairs: minor repairs up to Rs 1,000 each by the Tenant; structural and major repairs by the Owner.\n9. Notice: either party may end this agreement by giving one month's written notice to the other.\n10. Lock-in: notwithstanding clause 9, the first 6 months are a lock-in period. If the Tenant vacates during the\nlock-in period, the Tenant shall pay two months' rent, Rs 36,000, as a penalty, which the Owner may deduct from the\nsecurity deposit.\n11. Painting: when the Tenant vacates, Rs 8,000 towards repainting shall be deducted from the security deposit.\n12. Renewal: on renewal, the rent shall increase by 5%.\n13. Access: the Owner may inspect the flat with 24 hours' notice to the Tenant.\n14. Keys: the Tenant shall return all keys and access cards when vacating.",
+ "asks": {
+  "P1": "Summarise this rental agreement for me in 5 short points.",
+  "P2": "From this rental agreement, list every amount of money I may have to pay or lose, and every condition on leaving early. Give the clause number for each.",
+  "P3": "I may have to move out after 4 months for a job transfer. What will it cost me?"
+ },
+ "rows": [
+  {
+   "ask": "P1",
+   "seed": 1,
+   "reply": "1. **Property**: Flat 302 in Hyderabad, semi-furnished.\n2. **Term & Rent**: 11 months from December 1, 2026, to October 31, 2027; rent Rs 18,000 per month by bank transfer on or before the 5th of each month.\n3. **Security Deposit**: Rs 54,000, refundable after deductions for unpaid rent and damages beyond normal wear and tear.\n4. **Lock-in & Penalties**: First 6 months are a lock-in; vacating within this period incurs a penalty of Rs 36,000.\n5. **Renewal**: Rent increases by 5% on renewal.",
+   "secs": 41.4,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P1",
+   "seed": 2,
+   "reply": "1. **Property**: Flat 302 in Hyderabad, semi-furnished.\n2. **Term and Rent**: 11-month lease from December 1, 2026, to October 31, 2027; monthly rent of Rs 18,000 paid by bank transfer.\n3. **Security Deposit**: Rs 54,000 refundable post-lease with deductions for unpaid bills and damages beyond normal wear and tear.\n4. **Penalties**: Two months' rent (Rs 36,000) penalty if the Tenant vacates during the first six months lock-in period.\n5. **Renewal**: Rent increases by 5% upon renewal.",
+   "secs": 26.3,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P1",
+   "seed": 3,
+   "reply": "1. **Property**: Flat 302 in Hyderabad, semi-furnished.\n2. **Term and Rent**: 11-month lease from December 1, 2026, to October 31, 2027; monthly rent of Rs 18,000 via bank transfer by the 5th of each month.\n3. **Maintenance and Security Deposit**: Monthly maintenance fee of Rs 2,000; security deposit of Rs 54,000 refundable after deductions for unpaid rent, bills, and repair costs beyond normal wear and tear.\n4. **Use and Notice**: For residential use only by the Tenant's family; no sub-letting or pets without written consent from the Owner; either party can end the agreement with one month’s notice, but there is a 6-month lock-in period where early termination incurs a penalty of Rs 36,000.\n5. **Renewal and Access**: Rent increases by 5% upon renewal; Owner may inspect the flat with 24 hours’ notice, and Tenant must return all keys and access cards when vacating.",
+   "secs": 41.9,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P1",
+   "seed": 4,
+   "reply": "1. **Property**: Flat 302 in Hyderabad, semi-furnished.\n2. **Term and Rent**: 11-month lease starting from December 1, 2026, with Rs 18,000 due monthly by the 5th via bank transfer.\n3. **Security Deposit**: Rs 54,000 refundable without interest after deductions for unpaid rent, bills, and damages.\n4. **Lock-in Period**: First 6 months are non-cancelable; penalty of Rs 36,000 applies if vacating during this period.\n5. **Renewal Terms**: Rent increases by 5% upon renewal.",
+   "secs": 22.7,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P1",
+   "seed": 5,
+   "reply": "1. **Property**: Flat 302 in Hyderabad, semi-furnished.\n2. **Term and Rent**: 11 months from 1 December 2026 to 31 October 2027; monthly rent of Rs 18,000 by bank transfer on or before the 5th of each month.\n3. **Maintenance and Security Deposit**: Monthly maintenance fee of Rs 2,000, security deposit of Rs 54,000 refundable after deductions for unpaid bills, rent, and damage beyond normal wear and tear.\n4. **Use and Penalties**: Residential use only; no sub-letting; penalties apply for early termination during the lock-in period (first 6 months).\n5. **Renewal and Access**: Rent increases by 5% on renewal; Owner can inspect with 24 hours' notice, Tenant must return keys and access cards upon vacating.",
+   "secs": 30.7,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P1",
+   "seed": 6,
+   "reply": "1. **Property and Term**: Flat 302 in Hyderabad, let for 11 months from December 1, 2026, to October 31, 2027, with renewal by mutual consent.\n2. **Rent and Maintenance**: Monthly rent of Rs 18,000 (payable by bank transfer) and maintenance fee of Rs 2,000 per month paid directly to the residents' association.\n3. **Security Deposit and Bills**: Security deposit of Rs 54,000 refundable without interest after deductions for unpaid rent, bills, or damage beyond wear and tear; electricity and water bills are paid by the tenant.\n4. **Use and Repairs**: For residential use only, no sub-letting, pets allowed with written consent; minor repairs up to Rs 1,000 each by the tenant, major repairs by the owner.\n5. **Lock-in and Exit Penalties**: First 6 months are a lock-in period; if vacating during this period, Tenant must pay Rs 36,000 as a penalty.",
+   "secs": 36.2,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P1",
+   "seed": 7,
+   "reply": "1. The rental term is 11 months, from December 1, 2026, to October 31, 2027, with a renewable option by mutual consent.\n2. Monthly rent is Rs 18,000, payable on or before the 5th of each month via bank transfer.\n3. Maintenance fees are Rs 2,000 per month, directly paid to the residents' association.\n4. A security deposit of Rs 54,000 is required and refundable after deductions for unpaid rent, bills, and damages beyond normal wear and tear.\n5. Early termination penalties apply: two months' rent (Rs 36,000) if vacating during the first six-month lock-in period.",
+   "secs": 25.4,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P1",
+   "seed": 8,
+   "reply": "1. **Property**: Flat 302 in Hyderabad, semi-furnished.\n2. **Term and Rent**: 11 months from December 1, 2026, to October 31, 2027; monthly rent of Rs 18,000 payable by bank transfer on or before the 5th of each month.\n3. **Security Deposit**: Rs 54,000, refundable without interest upon vacating after deductions for unpaid rent, bills, and damages.\n4. **Lock-in Period**: First 6 months are non-cancelable; leaving during this period incurs a penalty of Rs 36,000.\n5. **Renewal**: Rent increases by 5% on renewal.",
+   "secs": 26.8,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P1",
+   "seed": 9,
+   "reply": "1. **Property**: Flat 302 in Hyderabad, semi-furnished.\n2. **Term and Rent**: 11 months from December 1, 2026, to October 31, 2027; monthly rent of Rs 18,000 by bank transfer on or before the 5th of each month.\n3. **Security Deposit**: Rs 54,000, refundable without interest after deducting unpaid rent, bills, and damages beyond normal wear and tear.\n4. **Lock-in Period**: First 6 months are a lock-in period; vacating during this period incurs a penalty of Rs 36,000.\n5. **Renewal**: Rent increases by 5% on renewal.",
+   "secs": 28.1,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P1",
+   "seed": 10,
+   "reply": "1. **Property**: Flat 302 in Hyderabad, semi-furnished.\n2. **Term and Rent**: 11 months from December 1, 2026, to October 31, 2027; monthly rent of Rs 18,000 by bank transfer on or before the 5th of each month.\n3. **Security Deposit**: Rs 54,000, refundable after deducting unpaid rent, bills, and damage beyond normal wear and tear.\n4. **Lock-in Period**: First 6 months are non-negotiable; leaving during this period incurs a penalty of Rs 36,000.\n5. **Renewal**: Rent increases by 5% upon renewal.",
+   "secs": 28.7,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P2",
+   "seed": 1,
+   "reply": "Sure, here are the amounts of money you may have to pay or lose and the conditions on leaving early based on the rental agreement provided:\n\n1. **Monthly Rent**: Rs 18,000 per month (Clause 3)\n2. **Maintenance Fee**: Rs 2,000 per month (Clause 4)\n3. **Security Deposit**: Rs 54,000 paid on signing and refundable without interest after deducting any unpaid rent, unpaid bills, and the cost of any damage beyond normal wear and tear (Clause 5)\n4. **Penalty for Early Vacating during Lock-in Period**: Rs 36,000 if you vacate during the first 6 months (Clause 10)\n5. **Cost towards Repainting when Vacating**: Rs 8,000 deducted from the security deposit (Clause 11)\n6. **Increased Rent on Renewal**: 5% increase in rent upon renewal (Clause 12)\n\n**Conditions for Early Leaving:**\n\n- **Lock-in Period**: You must not vacate during the first 6 months of the agreement to avoid a penalty (Clause 10).\n- **Penalty Amount**: If you do vacate during the lock-in period, you will be required to pay Rs 36,000 as a penalty (Clause 10).\n\nThese conditions and amounts are detailed in specific clauses within your rental agreement.",
+   "secs": 56.6,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P2",
+   "seed": 2,
+   "reply": "Certainly! Below is a list of every amount of money you may have to pay or lose, along with the conditions for leaving early and the relevant clause numbers:\n\n### Amounts You May Have to Pay or Lose\n1. **Monthly Rent**: Rs 18,000 per month (Clause 3).\n2. **Maintenance Fee**: Rs 2,000 per month (Clause 4).\n3. **Security Deposit**: Rs 54,000 (paid on signing; refundable without interest upon vacating after deduction of applicable amounts) (Clause 5).\n4. **Bills**: Electricity and water as per meter readings (Clause 6).\n5. **Penalty for Early Vacations During Lock-in Period**: Rs 36,000 if you vacate during the first 6 months (Clause 10).\n6. **Repainting Deduction**: Rs 8,000 towards repainting when vacating (Clause 11).\n\n### Conditions for Leaving Early\n1. **Lock-in Period Penalties**:\n   - If you vacate within the lock-in period of the first 6 months, you must pay two months' rent as a penalty, which is Rs 36,000 (Clause 10).\n2. **Notice**: Either party may end this agreement by giving one month's written notice to the other (Clause 9).\n\nThese conditions and amounts are detailed in the specific",
+   "secs": 51.2,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P2",
+   "seed": 3,
+   "reply": "Certainly! Here is a list of every amount of money you may have to pay or lose, and the conditions for leaving early based on your rental agreement:\n\n### Amounts You May Have to Pay or Lose\n\n1. **Monthly Rent**:\n   - Rs 18,000 per month (Clause 3)\n   \n2. **Maintenance Fee**:\n   - Rs 2,000 per month (Clause 4)\n\n3. **Security Deposit**:\n   - Rs 54,000 paid on signing (Clause 5)\n   - Can be refunded without interest after the term, minus deductions for unpaid rent, unpaid bills, and damage beyond normal wear and tear (Clause 5).\n\n4. **Penalty for Early Vacating During Lock-in Period**:\n   - Rs 36,000 if you vacate during the first 6 months (Clause 10)\n\n5. **Repainting Cost**:\n   - Up to Rs 8,000 may be deducted from the security deposit when vacating (Clause 11)\n\n6. **Renewal Rent Increase**:\n   - An additional 5% increase in rent upon renewal (Clause 12)\n\n### Conditions for Leaving Early\n\n1. **Lock-in Period**: \n   - The first 6 months are a lock-in period, and you must pay Rs 36,000 as a penalty if you vacate during this time",
+   "secs": 47.8,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P2",
+   "seed": 4,
+   "reply": "Based on the rental agreement provided, here is a list of every amount of money you may have to pay or lose, and every condition for leaving early:\n\n1. **Monthly Rent**: Rs 18,000 per month (Clause 3)\n2. **Maintenance Fee**: Rs 2,000 per month (Clause 4)\n3. **Security Deposit**: Rs 54,000 paid on signing; refundable without interest after deduction of any unpaid rent, unpaid bills, and the cost of any damage beyond normal wear and tear (Clause 5)\n4. **Penalty for Early Vacancy During Lock-in Period**: Rs 36,000 if you vacate during the first 6 months (Clause 10)\n5. **Repainting Cost Deduction**: Rs 8,000 towards repainting upon vacating (Clause 11)\n6. **Renewed Rent Increase**: An additional 5% on renewed rent (Clause 12)\n\n**Conditions for Leaving Early:**\n\n1. **Lock-in Period**: If you vacate during the first 6 months of the agreement, you must pay Rs 36,000 as a penalty (Clause 10).\n2. **Security Deposit Refund**: Any deductions from the security deposit include unpaid rent, unpaid bills, and the cost of any damage beyond normal wear and tear (Clause 5).\n\nThese conditions are detailed in the clauses",
+   "secs": 50.0,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P2",
+   "seed": 5,
+   "reply": "Certainly! Here are the amounts of money you may have to pay or lose, and the conditions for leaving early based on your rental agreement:\n\n### Money You May Have to Pay or Lose\n\n1. **Monthly Rent**: Rs 18,000 per month (Clause 3).\n2. **Maintenance Fee**: Rs 2,000 per month (Clause 4).\n3. **Security Deposit**: Rs 54,000 (Clause 5), refundable after deducting:\n   - Unpaid rent\n   - Unpaid bills\n   - Cost of damage beyond normal wear and tear\n4. **Penalty for Early Termination During Lock-in Period**: Rs 36,000 if you vacate within the first 6 months (Clause 10).\n5. **Repainting Fee**: Rs 8,000 towards repainting when vacating (Clause 11).\n6. **Renewal Rent Increase**: If renewed, rent will increase by 5% (Clause 12).\n\n### Conditions for Leaving Early\n\n1. **First 6 Months Lock-in Period**:\n   - If you vacate during this period, you must pay a penalty of Rs 36,000 (Clause 10).\n   \n2. **Renewal Notice**: Either party may end the agreement by giving one month's written notice to the other (Clause 9).\n\nThese conditions and amounts are detailed",
+   "secs": 52.2,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P2",
+   "seed": 6,
+   "reply": "Sure, here is a list of every amount of money you may have to pay or lose, and the conditions on leaving early based on the rental agreement provided:\n\n1. **Monthly Rent:**\n   - Rs 18,000 per month (Clause 3)\n\n2. **Maintenance Fee:**\n   - Rs 2,000 per month (Clause 4)\n\n3. **Security Deposit:**\n   - Rs 54,000 paid on signing (Clause 5)\n   - Refundable without interest upon vacating (Clause 5) after deductions for unpaid rent, bills, and damages beyond normal wear and tear.\n\n4. **Bills:**\n   - Electricity and water as per meter readings to be paid by the Tenant (Clause 6)\n\n5. **Penalty on Early Vacating During Lock-in Period:**\n   - Rs 36,000 if vacating during first 6 months of lock-in period (Clause 10)\n\n6. **Cost of Repainting:**\n   - Rs 8,000 to be deducted from security deposit upon vacating the flat (Clause 11)\n\n7. **Renewal Rent Increase:**\n   - Increased by 5% on renewal (Clause 12)\n\n**Conditions for Early Vacating:**\n\n- **Lock-in Period:**\n  - The first 6 months are a lock-in period.\n  - If vacating during this",
+   "secs": 54.1,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P2",
+   "seed": 7,
+   "reply": "Certainly! Below is a list of every amount of money you may have to pay or lose, and the conditions for leaving early based on the rental agreement provided:\n\n1. **Monthly Rent**: Rs 18,000 per month (Clause 3)\n2. **Maintenance Fee**: Rs 2,000 per month (Clause 4)\n3. **Security Deposit**: Rs 54,000 paid on signing (Clause 5), refundable without interest upon vacating after certain deductions\n4. **Electricity and Water Bills**: As per meter readings (Clause 6)\n5. **Penalty for Early Termination during Lock-In Period**: Rs 36,000 if you vacate within the first 6 months (Clause 10)\n6. **Repainting Fee**: Rs 8,000 deducted from security deposit upon vacating (Clause 11)\n\n**Conditions on Leaving Early:**\n\n1. **Lock-In Period**: If you vacate during the first 6 months of the agreement, you must pay a penalty of Rs 36,000 (Clause 10).\n\nThese conditions are crucial to understand before signing the rental agreement and should be carefully reviewed.",
+   "secs": 43.6,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P2",
+   "seed": 8,
+   "reply": "Certainly! Here is a list of every amount of money you may have to pay or lose, and the conditions for leaving early based on the provided rental agreement:\n\n### Amounts You May Have to Pay or Lose\n\n1. **Monthly Rent**: Rs 18,000 per month.\n   - Clause: 3\n\n2. **Maintenance Fees**: Rs 2,000 per month.\n   - Clause: 4\n\n3. **Security Deposit**: Rs 54,000 paid on signing and refundable without interest upon vacating.\n   - Clause: 5\n   - Note: Any unpaid rent, unpaid bills, or costs of damage beyond normal wear and tear will be deducted from the security deposit.\n\n4. **Pet Consent Fee (if applicable)**: Not specified in the agreement but may incur a fee with written consent to keep pets.\n   - Clause: 7\n\n5. **Lock-in Period Penalty**: Rs 36,000 if vacating during the first 6 months of the lease.\n   - Clause: 10\n\n6. **Repainting Fee**: Rs 8,000 towards repainting when vacating.\n   - Clause: 11\n\n7. **Renewal Rent Increase**: 5% increase in rent upon renewal.\n   - Clause: 12\n\n### Conditions for Leaving Early (Termination)\n\n1. **Notice Period**:\n   - Either party may end",
+   "secs": 52.3,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P2",
+   "seed": 9,
+   "reply": "Certainly! Here is a list of every amount of money you may have to pay or lose, along with the conditions for leaving early based on the rental agreement provided:\n\n### Amounts You May Have to Pay or Lose\n1. **Monthly Rent**:\n   - Rs 18,000 per month (Clause 3).\n2. **Maintenance Fee**:\n   - Rs 2,000 per month (Clause 4).\n3. **Security Deposit**:\n   - Rs 54,000 paid on signing (Clause 5), refundable without interest after deductions.\n4. **Bills**:\n   - Electricity and water as per the meter readings (Clause 6).\n5. **Penalty for Early Vacating During Lock-in Period**:\n   - Rs 36,000 if vacating within the first 6 months of the agreement (Clause 10).\n6. **Repainting Cost**:\n   - Rs 8,000 deducted from security deposit when vacating (Clause 11).\n\n### Conditions for Leaving Early\n1. **Lock-in Period**: You cannot leave during the first 6 months without paying a penalty of Rs 36,000 (Clause 10).\n2. **One Month's Notice**: Either party can terminate the agreement by providing one month’s written notice to the other (Clause 9).\n\nThese conditions ensure that you understand both your financial obligations and any",
+   "secs": 52.7,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P2",
+   "seed": 10,
+   "reply": "Certainly! Here is a list of every amount of money you may have to pay or lose, and the conditions on leaving early based on the rental agreement provided:\n\n### Amounts You May Have to Pay\n1. **Monthly Rent:**\n   - Rs 18,000 per month (Clause 3)\n2. **Maintenance Fee:**\n   - Rs 2,000 per month (Clause 4)\n3. **Security Deposit:**\n   - Rs 54,000 paid on signing (Clause 5)\n4. **Penalty for Early Vacating during Lock-in Period:**\n   - Rs 36,000 if vacating within the first 6 months (Clause 10)\n5. **Cost of Repainting:**\n   - Up to Rs 8,000 deducted from security deposit when vacating (Clause 11)\n\n### Conditions on Leaving Early\n1. **Penalty for Early Vacating during Lock-in Period:**\n   - If the Tenant vacates within the first 6 months, they must pay two months' rent as a penalty (Rs 36,000) which can be deducted from the security deposit (Clause 10)\n\nThis list covers all the monetary obligations and conditions related to early termination of the rental agreement.",
+   "secs": 47.4,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P3",
+   "seed": 1,
+   "reply": "Based on the rental agreement you provided, if you need to move out after 4 months (which is within the lock-in period), you will be required to pay a penalty of two months' rent. According to clause 10:\n\n\"10. Lock-in: notwithstanding clause 9, the first 6 months are a lock-in period. If the Tenant vacates during the\nlock-in period, the Tenant shall pay two months' rent, Rs 36,000, as a penalty, which the Owner may deduct from the\nsecurity deposit.\"\n\nSince you will be vacating after 4 months and within the lock-in period, you will have to pay a penalty of Rs 36,000. This amount can be deducted from your security deposit when you vacate.\n\nHere is a summary:\n- You are required to pay Rs 36,000 as a penalty.\n- The security deposit (Rs 54,000) will be refunded after deducting the unpaid rent and any other deductions mentioned in the agreement.\n\nIt's advisable to inform your landlord about your situation before you vacate so they can take necessary steps if needed.",
+   "secs": 44.0,
+   "lock_in": true,
+   "painting": false,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P3",
+   "seed": 2,
+   "reply": "Given the terms of your rental agreement, if you have to move out after 4 months for a job transfer, you will be subject to the lock-in period conditions specified in clause 10. According to that clause:\n\n- The first 6 months are a lock-in period.\n- If you vacate during this lock-in period, you must pay two months' rent as a penalty.\n\nSince you have been renting for 4 months and will need to leave after an additional 2 months, you would be within the lock-in period. Therefore, you would owe:\n\n\\[ 2 \\text{ months' rent} = 2 \\times Rs\\ 18,000 = Rs\\ 36,000 \\]\n\nThis penalty of Rs 36,000 can be deducted from your security deposit when you vacate. If the security deposit is not sufficient to cover this amount, you would need to pay the remaining balance directly.\n\nIn summary, you will have to pay Rs 36,000 as a penalty for moving out during the lock-in period.",
+   "secs": 39.4,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P3",
+   "seed": 3,
+   "reply": "Given the terms of your rental agreement, if you need to move out after 4 months for a job transfer, you will be subject to the lock-in period clause. Specifically:\n\n- The first 6 months are a lock-in period.\n- If you vacate during this lock-in period, you must pay two months' rent as a penalty.\n\nSince your agreement runs from 1 December 2026 to 31 October 2027 and the current month is presumably close to December or early January, moving out after 4 months would still be within the first 6-month lock-in period. \n\nTherefore, you will have to pay:\n\n2 months' rent × Rs 18,000 per month = Rs 36,000 as a penalty.\n\nThis amount can be deducted from your security deposit if it is not already paid in full. If the security deposit does not cover this amount, you would need to pay the remaining balance directly.",
+   "secs": 34.3,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P3",
+   "seed": 4,
+   "reply": "Based on the terms of your rental agreement, you will be subject to the lock-in period for the first 6 months. Since you are planning to move out after 4 months, which falls within the lock-in period, you will need to pay a penalty.\n\nAccording to clause 10 of your agreement:\n- The first 6 months are a lock-in period.\n- If you vacate during this period, you shall pay two months' rent as a penalty.\n\nYour monthly rent is Rs 18,000. Therefore, the penalty for vacating during the lock-in period would be:\n\\[ 2 \\times 18,000 = Rs 36,000 \\]\n\nSo, if you move out after 4 months due to a job transfer, you will have to pay Rs 36,000 as a penalty. This amount can be deducted from your security deposit.\n\nIt is advisable to inform the owner about your situation as soon as possible and discuss any potential extensions or alternative arrangements that might be mutually agreeable.",
+   "secs": 35.9,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P3",
+   "seed": 5,
+   "reply": "Given the terms of your rental agreement, you would need to consider both the lock-in period and the notice requirement. Here’s how it applies:\n\n1. **Lock-In Period**: The first 6 months are a lock-in period. If you vacate during this period, you will be required to pay two months' rent as a penalty.\n\n2. **Notice Requirement**: You need to provide one month's written notice to the Owner before vacating. Since you plan to move out after 4 months, you can give your notice immediately (if it’s not already overdue).\n\nGiven these points:\n- You have already been in the property for 4 months.\n- The lock-in period ends at the end of 6 months from the start date.\n\nThus, since you are vacating within the lock-in period and without having given a full month's notice as required by the agreement (which would be due on or before January 5, 2027), you will need to pay the penalty for early termination during the lock-in period. The penalty is two months' rent.\n\n**Penalty Calculation**: \n- Two months' rent = 2 × Rs 18,000 = Rs 36,000\n\nSo, if you move out after 4 months, you will be required to pay **Rs 36,000 as a penalty**. This amount can be deducted from your security deposit upon vacating the property.\n\nIt's",
+   "secs": 50.0,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P3",
+   "seed": 6,
+   "reply": "Based on the terms of your rental agreement, you are in a lock-in period for the first 6 months. If you need to vacate during this lock-in period, you will be required to pay two months' rent as a penalty, which is Rs 36,000.\n\nHere's how it breaks down:\n\n- The monthly rent is Rs 18,000.\n- Two months' rent = 2 × Rs 18,000 = Rs 36,000\n\nThis penalty will be deducted from your security deposit if applicable. After the lock-in period ends (i.e., after 6 months), you would not have to pay this additional penalty.\n\nSo, if you need to move out after 4 months for a job transfer, you will have to pay Rs 36,000 as a penalty according to the agreement.",
+   "secs": 30.3,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P3",
+   "seed": 7,
+   "reply": "Given the conditions of your rental agreement, if you have to move out after 4 months for a job transfer, you will be subject to the lock-in period penalties. Specifically:\n\n- The first 6 months are designated as a lock-in period.\n- If you vacate during this lock-in period, you must pay two months' rent as a penalty.\n\nSince your rental term is 11 months and you have been renting for 4 months, you will still be within the lock-in period. Therefore, you would need to pay:\n\n2 months' rent = 2 × Rs 18,000 = Rs 36,000\n\nThis penalty can be deducted from your security deposit if you have not already used it for other deductions (such as unpaid bills or damage beyond normal wear and tear).\n\nTo summarize, the cost to you for vacating during the lock-in period will be Rs 36,000.",
+   "secs": 33.0,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P3",
+   "seed": 8,
+   "reply": "Given the terms of your rental agreement, you have a lock-in period for the first 6 months. If you need to vacate during this lock-in period due to a job transfer, you will be required to pay a penalty equivalent to two months' rent as specified in clause 10.\n\nHere's the calculation:\n\n- Two months' rent = 2 × Rs 18,000 = Rs 36,000\n\nSo, if you have to move out after 4 months, you will need to pay a penalty of Rs 36,000. This amount can be deducted from your security deposit upon vacating the property.\n\nPlease ensure that you provide one month's written notice as per clause 9, and discuss this situation with the Owner to avoid any misunderstandings or additional complications.",
+   "secs": 28.9,
+   "lock_in": true,
+   "painting": true,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P3",
+   "seed": 9,
+   "reply": "Given the terms of your rental agreement, if you need to move out after 4 months for a job transfer, you will be subject to the lock-in period penalties as specified in clause 10. Specifically:\n\n- The first 6 months are a lock-in period.\n- If you vacate during this lock-in period, you must pay two months' rent as a penalty.\n\nIn your case, since you have been renting for 4 months and will be moving out after 4 months, you still fall under the lock-in period. Therefore, you would need to pay:\n\n**Rs 36,000 (two months' rent) as a penalty.**\n\nThis amount can be deducted from your security deposit if it is available.\n\nPlease ensure that you provide one month's written notice to the owner according to clause 9 of the agreement, which will give them time to find another tenant and minimize any further financial impact on both parties.",
+   "secs": 31.5,
+   "lock_in": true,
+   "painting": false,
+   "notice_without_lock_in": false
+  },
+  {
+   "ask": "P3",
+   "seed": 10,
+   "reply": "Given the terms of your rental agreement, if you need to move out after 4 months for a job transfer, you will be subject to the lock-in period conditions. Specifically:\n\n- The first 6 months are a lock-in period.\n- If you vacate during this lock-in period, you must pay two months' rent as a penalty.\n\nSince your current term is 11 months and you have been renting for 4 months, you will still be within the lock-in period. Therefore, according to clause 10 of your agreement:\n\n**You will need to pay Rs 36,000 as a penalty if you vacate during the lock-in period.**\n\nThis amount can be deducted from your security deposit or paid directly. After paying this penalty, the remaining balance of the security deposit (if any) will be refunded to you after deductions for any unpaid rent, unpaid bills, and the cost of any damage beyond normal wear and tear.\n\nPlease ensure you communicate with the owner about your intention to vacate early so that both parties can finalize the necessary arrangements.",
+   "secs": 36.4,
+   "lock_in": true,
+   "painting": false,
+   "notice_without_lock_in": false
+  }
+ ]
+}
