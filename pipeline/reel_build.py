@@ -118,6 +118,8 @@ SPEAKERS = {
     "vijaya": dict(voice="af_heart", speed=1.0, lang="en-us", name="Vijaya atta", color="#F9A8D4"),
     "mohan": dict(voice="hm_omega", speed=1.0, lang="en-us", name="Mohan mama", color="#93C5FD"),
     "anusha": dict(voice="af_bella", speed=1.0, lang="en-us", name="Anusha", color="#C4B5FD"),   # Creative 32 (file takes): the tenant
+    "clip1": dict(voice="af_bella", speed=1.0, lang="en-us", name="Voice note 1", color="#86EFAC"),   # Creative 33 (file takes): the test's audio
+    "clip2": dict(voice="af_bella", speed=1.0, lang="en-us", name="Voice note 2", color="#FCA5A5"),
 }
 GAP = 0.12  # fast, reel-style pacing between lines
 

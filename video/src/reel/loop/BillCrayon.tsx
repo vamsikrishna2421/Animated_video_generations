@@ -20,7 +20,7 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "happy" | "shock" | "angry" | "calm" | "deadpan" | "worried" | "smug" | "excited";
 type Arms = "rest" | "up" | "phone" | "calc" | "five" | "fiveL" | "pay" | "fold" | "shrug";
-type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan" | "divya" | "shalini" | "naveen" | "kamala" | "sastry" | "pallavi" | "suresh" | "anusha";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
+type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan" | "divya" | "shalini" | "naveen" | "kamala" | "sastry" | "pallavi" | "suresh" | "anusha" | "padma";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const MONO = (s: number, w = 600) => `${w} ${s}px "Courier New", monospace`;
@@ -63,7 +63,8 @@ const LOOK: Record<Who, { skin: string; hair: string; top: string }> = {
   sastry: { skin: "#8d5a3b", hair: "#d4d4d8", top: "#f1f5f9" },   // Creative 23 (ProfitCrayon.tsx): Sastry garu, 62, a retired headmaster, white hair, glasses, a moustache, a white shirt
   pallavi: { skin: "#b07a52", hair: "#120d0a", top: "#0f766e" },   // his daughter, 29, a chartered accountant, long hair, a teal kurta
   suresh: { skin: "#8d5a3b", hair: "#1c1410", top: "#b45309" },   // EP49 (JobsCrayon.tsx): Suresh, 30s, Ravi's helper for eight years, a brown work shirt
-  anusha: { skin: "#a26d47", hair: "#120d0a", top: "#7c3aed" },   // Creative 32 (Lease32Crayon.tsx): Anusha, 26, a tenant packing for Pune, a violet kurti, long hair
+  anusha: { skin: "#a26d47", hair: "#120d0a", top: "#7c3aed" },
+  padma: { skin: "#9c6a45", hair: "#3f3f46", top: "#15803d" },   // Creative 33 (Clone33Crayon.tsx): Amma, 55, a green saree, a bun, grey streak   // Creative 32 (Lease32Crayon.tsx): Anusha, 26, a tenant packing for Pune, a violet kurti, long hair
 };
 const SEATS: Partial<Record<Who, number>> = { arjun: 190, nikhil: 425, meghana: 660, sneha: 895 };
 // our test, "just the amount" (3B, tries 1-10) and its working (3B, show the working, try 3, shortened)
@@ -98,7 +99,7 @@ const face = (c: Ctx, who: Who, m: Mood, talk: boolean, r: () => number) => {
   c.beginPath(); c.ellipse(0, hy, 94, 112, 0, 0, 7); c.fillStyle = L.skin; c.fill();
   stroke(c, circlePts(0, hy, 94, 112), INK, 4, r, { passes: 2, alpha: 0.55 });
   c.fillStyle = L.hair; c.beginPath();
-  if (who === "vasudha" || who === "sarojini" || who === "vijaya") {   // a bun, pulled back, grey streak
+  if (who === "vasudha" || who === "sarojini" || who === "vijaya" || who === "padma") {   // a bun, pulled back, grey streak
     c.ellipse(0, hy - 118, 46, 40, 0, 0, 7); c.moveTo(100, hy - 30); c.ellipse(0, hy - 56, 100, 70, 0, Math.PI, 0); c.lineTo(100, hy - 20); c.lineTo(-100, hy - 20);
   } else if (who === "nikhil" || who === "charan" || who === "akhil" || who === "rohit") {   // curly
     for (let q = 0; q < 7; q++) { const a = Math.PI * (1.05 + q * 0.15); c.moveTo(Math.cos(a) * 92 + 30, hy - 40 + Math.sin(a) * 84); c.arc(Math.cos(a) * 92, hy - 40 + Math.sin(a) * 84, 30, 0, 7); }
@@ -173,6 +174,7 @@ export const person = (c: Ctx, who: Who, at: Pt, sc: number, m: Mood, a: Arms, t
   c.fillStyle = L.top; c.fill(); c.clip();
   if (who === "arjun") { c.fillStyle = "#f8fafc"; c.beginPath(); c.moveTo(-46, 30); c.lineTo(0, 110); c.lineTo(46, 30); c.closePath(); c.fill(); }   // a collar
   if (who === "sneha") { c.fillStyle = "#fbcfe8"; c.fillRect(-200, 300, 400, 22); }   // a kurta's border
+  if (who === "padma") { c.fillStyle = "#facc15"; c.fillRect(-200, 300, 400, 22); c.fillStyle = "#86efac"; c.beginPath(); c.moveTo(-150, 30); c.lineTo(-60, 30); c.lineTo(190, 560); c.lineTo(110, 640); c.closePath(); c.fill(); }   // a cotton saree's border and pallu
   if (who === "sarojini") { c.fillStyle = "#fde047"; c.fillRect(-200, 300, 400, 22); c.fillStyle = "#fecdd3"; c.beginPath(); c.moveTo(-150, 30); c.lineTo(-60, 30); c.lineTo(190, 560); c.lineTo(110, 640); c.closePath(); c.fill(); }   // a silk saree's zari border and pallu
   if (who === "swapna") { c.fillStyle = "#fef3c7"; c.fillRect(-200, 300, 400, 22); }   // a kurta's border
   if (who === "thathayya") { c.fillStyle = "#d4d4d8"; c.fillRect(-6, 30, 12, 260); [80, 150, 220].forEach((y) => { c.beginPath(); c.arc(0, y, 9, 0, 7); c.fillStyle = "#a1a1aa"; c.fill(); }); }   // kurta buttons
