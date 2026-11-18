@@ -42,7 +42,16 @@ VOICE = {   # Parler speakers: Kittu and someone else, per language
     ("te", "other"): "Prakash speaks in a calm, mature voice, at a natural pace. The recording is very clear, close-up, with no background noise.",
 }
 REFS = {"en": [3, 10, 30], "te": [10]}   # seconds of Kittu's voice note given to the cloning service (whole sentences, at least this long)
-HAND = {}   # filled after the run
+HAND = {   # read after the run (series/scripts/creative33_demo/clone.json); the audio kept at 16 kHz mono (it was scored at 16 kHz)
+    "en": "Voice match with Kittu (ECAPA cosine, his two held-out sentences): Kittu vs Kittu 0.62; copy from 13.2 s (3 "
+          "sentences) 0.59 and 0.66 (avg 0.62); copy from 30.6 s (7 sentences) 0.61 and 0.68 (avg 0.65); copy from 3.6 s (1 "
+          "sentence) 0.48 and 0.52 (avg 0.50); someone else 0.09 and 0.06 (avg 0.07). The copies saying the scam line: 0.58 "
+          "(3.6 s), 0.65 (13 s), 0.72 (31 s). Each copy took 2.7-9.2 s to make.",
+    "te": "Kittu vs Kittu 0.54; copy from 13.6 s (4 sentences) 0.57 and 0.59 (avg 0.58), scam line 0.66; someone else 0.16 "
+          "and 0.15. Each copy 4.6-9.1 s.",
+    "note": "Kittu and 'someone else' are computer voices (Parler), not people; a speaker-recognition score is not a human "
+            "listener's judgement. We did not test whether people can tell them apart.",
+}
 
 
 def mono16(path):
