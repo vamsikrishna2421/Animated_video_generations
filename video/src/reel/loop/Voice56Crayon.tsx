@@ -133,7 +133,7 @@ const StVoice: React.FC<SP> = ({ s }) => {
       <Sfx key={k("p")} at={cue(i, 1, 0.5) + 20} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("b")} at={cue(i, 2, 0.8) - 2} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("z")} at={cue(i, 2, 0.8)} src="reel/sfx_buzz.wav" vol={0.35} />);
     if (b.prop === "pieces") [ln0(i), cue(i, 1, 0.45), cue(i, 2, 0.3)].forEach((t, q) => sfx.push(<Sfx key={k("p" + q)} at={t} src="audio/sfx_pop.wav" vol={0.4} />));
     if (b.prop === "test") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.3) + 6} src="audio/gag_ding.wav" vol={0.3} />, <Sfx key={k("b")} at={cue(i, 2, 0.75) - 2} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("z")} at={cue(i, 2, 0.75) + 2} src="reel/sfx_buzz.wav" vol={0.35} />);
-    if (b.prop === "madeup") sfx.push(<Sfx key={k("g")} at={cue(i, 1, 0.4)} src="reel/sfx_glitch.wav" vol={0.4} />, <Sfx key={k("b")} at={cue(i, 1, 0.4) + 2} src="reel/sfx_boom.wav" vol={0.7} />);
+    if (b.prop === "madeup") sfx.push(<Sfx key={k("g")} at={cue(i, 1, 0.4)} src="reel/sfx_glitch.wav" vol={0.5} />, <Sfx key={k("b")} at={cue(i, 1, 0.4)} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={cue(i, 1, 0.4)} src={CLAP} vol={0.4} />, <Sfx key={k("z")} at={cue(i, 1, 0.4) + 12} src="reel/sfx_buzz.wav" vol={0.35} />);
     if (b.prop === "fix") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.45)} src="audio/gag_ding.wav" vol={0.45} />, ...[0, 1, 2].map((q) => <Sfx key={k("t" + q)} at={cue(i, 2, 0.75) + q * 10} src="audio/sfx_tick.wav" vol={0.3} />));
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("p1")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.35} />, <Sfx key={k("p2")} at={cue(i, 1, 0.3) + 45} src="audio/sfx_pop.wav" vol={0.35} />, <Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />); }
   });
@@ -155,13 +155,16 @@ const StVoice: React.FC<SP> = ({ s }) => {
           const y0 = 300 + qs.length * 74 - 20;
           const y1 = bubble(c, 60, y0, W - 120, "A CUSTOMER SAYS, IN TELUGU", T.said, "#dcfce7", "#14532d", 1, 36);
           c.font = SANS(30, 700); c.fillStyle = "#cbd5e1"; c.textAlign = "left"; c.fillText(T.gloss, 80, y1 + 40);
-          const y2 = bubble(c, 60, y1 + 64, W - 120, "WHAT THE SMALL FREE MODEL WROTE: HINDI LETTERS", T.heardHi, "#fee2e2", "#7f1d1d", loopOn ? 1 : seg(f, 16, 24), 38);
-          const k1 = loopOn ? 1 : seg(f, cu(1, 0.5) + 20, cu(1, 0.5) + 28), k2 = loopOn ? 1 : seg(f, cu(2, 0.8), cu(2, 0.8) + 6);
-          block(c, 50, y2 + 26, "ENGLISH · RIGHT ORDER NUMBER", "7/10", GREEN, k1);
-          block(c, 560, y2 + 26, "TELUGU · SMALL FREE MODEL", "0/10", "#f87171", k2);
+          const typed = loopOn ? 1 : seg(f, 16, 80);   // render review: something moves from 0.5 s (the transcript types in)
+          const hi = (T.heardHi as string).slice(0, Math.max(1, Math.round((T.heardHi as string).length * typed)));
+          const y2 = bubble(c, 60, y1 + 64, W - 120, "WHAT THE SMALL FREE MODEL WROTE: HINDI LETTERS", hi, "#fee2e2", "#7f1d1d", loopOn ? 1 : seg(f, 16, 24), 38);
+          const k1 = loopOn ? 1 : seg(f, cu(1, 0.5) + 10, cu(1, 0.5) + 16), k2 = loopOn ? 1 : seg(f, cu(2, 0.8), cu(2, 0.8) + 6);
+          block(c, 50, y2 + 26, "TELUGU · RIGHT ORDER NUMBER", "0/10", "#f87171", k1);   // render review: the zero first
+          block(c, 560, y2 + 26, "ENGLISH · RIGHT ORDER NUMBER", "7/10", GREEN, k2);
+          chip(c, "a free model we ran ourselves, set to Telugu · not your phone's voice typing", W / 2, y2 + 250, "#1e293b", "#e2e8f0", loopOn ? 1 : seg(f, cu(1, 0.5) + 24, cu(1, 0.5) + 32), big(c, "a free model we ran ourselves, set to Telugu · not your phone's voice typing", 32));
         } else if (P === "pieces") {   // script review: one beat, three boxes, one code line each
           const rows: [string, string, string, string][] = [["EARS", "speech -> text · Whisper (OpenAI, open source, 2022)", T.ears, "#1e3a8a"], ["BRAIN", "EP55's bot + order server", T.brain, "#14532d"], ["MOUTH", "text -> speech", T.mouth, "#713f12"]];
-          const at3 = [ln.from + 2, cu(1, 0.45), cu(2, 0.3)];
+          const at3 = [ln.from + 2, cu(1, 0.45), cu(2, 0.3) - 14];
           c.font = SANS(fit(c, "3 PIECES · 1 LINE EACH", W - 100, 64), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("3 PIECES · 1 LINE EACH", W / 2, 320);
           rows.forEach(([t, sub, code, col], q) => {
             const k = seg(f, at3[q], at3[q] + 8); if (k <= 0) return;
@@ -171,13 +174,20 @@ const StVoice: React.FC<SP> = ({ s }) => {
             c.font = SANS(44, 900); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(t, 70, y + 54);
             c.font = SANS(fit(c, sub, 760, 32, 800), 800); c.fillStyle = "#e2e8f0"; c.textAlign = "right"; c.fillText(sub, 1010, y + 52);
             c.restore();
-            codeCard(c, y + 84, [code], seg(f, at3[q] + 4, at3[q] + 20), "voice.py", undefined, 0, 30);
+            codeCard(c, y + 84, [code], seg(f, at3[q] + 4, at3[q] + 16), "voice.py", undefined, 0, 42);
           });
           chip(c, "full code: in the pinned comment", W / 2, 1290, "#fde68a", INK, seg(f, cu(2, 0.3) + 16, cu(2, 0.3) + 24), 36);
         } else if (P === "test") {
           c.font = SANS(fit(c, "OUR TEST · 10 CUSTOMERS", W - 100, 60), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("OUR TEST · 10 CUSTOMERS", W / 2, 320);
           c.font = SANS(32, 700); c.fillStyle = "#e2e8f0"; c.fillText("computer voices · a made-up shop · a small free model", W / 2, 372);
           const k1 = seg(f, cu(1, 0.3), cu(1, 0.3) + 8);
+          if (k1 <= 0) (T.orders as string[]).forEach((o, q) => {   // render review: not an empty card before the numbers
+            const kq = seg(f, ln.from + 2 + q * 3, ln.from + 6 + q * 3); if (kq <= 0) return;
+            const x = 70 + (q % 5) * 190, y = 450 + Math.floor(q / 5) * 170;
+            c.save(); c.globalAlpha = clamp(kq * 3); c.fillStyle = "#1e293b"; rrect(c, x, y, 170, 140, 70); c.fill();
+            c.font = SANS(30, 800); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText("order", x + 85, y + 58);
+            c.font = SANS(40, 900); c.fillStyle = "#f8fafc"; c.fillText(o, x + 85, y + 106); c.restore();
+          });
           if (k1 > 0) {
             c.save(); c.globalAlpha = clamp(k1 * 3); c.fillStyle = "#1e293b"; rrect(c, 50, 410, W - 100, 330, 22); c.fill();
             c.font = SANS(44, 900); c.fillStyle = "#86efac"; c.textAlign = "left"; c.fillText("ENGLISH · right order number", 90, 480);
@@ -198,7 +208,8 @@ const StVoice: React.FC<SP> = ({ s }) => {
           }
         } else if (P === "madeup") {
           c.font = SANS(fit(c, "WHEN IT COULDN'T READ THE NUMBER", W - 100, 56), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("WHEN IT COULDN'T READ THE NUMBER", W / 2, 340);
-          const y1 = traceBox(c, 400, "THE AI SENT THE SHOP'S SYSTEM", [T.madeup], "#f87171", seg(f, ln.from + 2, ln.from + 10), "12345", "#fbbf24");
+          bubble(c, 60, 400, W - 120, "IT HEARD (small free model, order 4417)", T.heardHi, "#fee2e2", "#7f1d1d", seg(f, ln.from + 2, ln.from + 8) * (1 - seg(f, cu(1, 0.4) - 8, cu(1, 0.4))), 36);   // render review: not an empty card
+          const y1 = traceBox(c, 400, "THE AI SENT THE SHOP'S SYSTEM", [T.madeup], "#f87171", seg(f, cu(1, 0.4) - 6, cu(1, 0.4)), "12345", "#fbbf24");
           const kB = seg(f, cu(1, 0.4), cu(1, 0.4) + 6);
           if (kB > 0) { c.save(); c.globalAlpha = clamp(kB * 3); c.font = SANS(220, 900); c.fillStyle = "#fbbf24"; c.textAlign = "center"; c.fillText("12345", W / 2, y1 + 260); c.restore(); }
           stamp(c, "MADE UP · 8 OF 50 TRIES", W / 2, y1 + 400, seg(f, cu(1, 0.4) + 14, cu(1, 0.4) + 20));
@@ -208,8 +219,9 @@ const StVoice: React.FC<SP> = ({ s }) => {
           c.font = SANS(fit(c, "BEST FREE RESULT · TELUGU", W - 100, 60), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("BEST FREE RESULT · TELUGU", W / 2, 330);
           c.font = SANS(fit(c, "a bigger model (Whisper large-v3), translating to English first", W - 120, 32, 700), 700); c.fillStyle = "#e2e8f0"; c.fillText("a bigger model (Whisper large-v3), translating to English first", W / 2, 380);
           const k1 = seg(f, cu(1, 0.45), cu(1, 0.45) + 6);
+          if (k1 <= 0) codeCard(c, 430, [T.earsFix], seg(f, ln.from + 2, ln.from + 22), "the one change: translate to English");   // render review: not an empty card
           bigNum(c, "5/10", W / 2, 560, "#fbbf24", k1, 170, "");
-          bubble(c, 60, 610, W - 120, "IT HEARD (order 4611) · it answers in English", T.heardE, "#dcfce7", "#14532d", seg(f, cu(1, 0.45) + 10, cu(1, 0.45) + 18), 38);
+          bubble(c, 60, 610, W - 120, "ANOTHER CUSTOMER, ORDER 4611: IT HEARD ✓ · it answers in English", T.heardE, "#dcfce7", "#14532d", seg(f, cu(1, 0.45) + 10, cu(1, 0.45) + 18), 36);
           const k2 = seg(f, cu(2, 0.75), cu(2, 0.75) + 8);
           if (k2 > 0) {   // the time bar
             c.save(); c.globalAlpha = clamp(k2 * 3);
@@ -221,7 +233,7 @@ const StVoice: React.FC<SP> = ({ s }) => {
               if (kq > 0.5) { c.font = SANS(fit(c, `${nm} ${Math.round(v)} s`, w - 16, 36, 900), 900); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText(`${nm} ${Math.round(v)} s`, x + w / 2, 928); }
               x += w;
             });
-            c.font = SANS(64, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("≈ 35 s an answer · the mouth: 20", W / 2, 1060);
+            c.font = SANS(64, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("≈ 35 s an answer · the mouth: 20 s", W / 2, 1060);
             c.font = SANS(32, 700); c.fillStyle = "#cbd5e1"; c.fillText("on our computer (4 CPU cores, no graphics card)", W / 2, 1110);
             c.restore();
           }
@@ -232,10 +244,10 @@ const StVoice: React.FC<SP> = ({ s }) => {
             c.font = SANS(70, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(n, 100, y + 100);
             c.font = SANS(fit(c, t, W - 300, 48, 900), 900); c.fillStyle = "#f8fafc"; c.fillText(t, 190, y + 95); c.restore();
           };
-          const at3 = [ln.from + 2, cu(1, 0.3), cu(1, 0.3) + 45];   // cueAt ignores the fraction once a cue exists
+          const at3 = [ln.from - 14, cu(1, 0.3), cu(1, 0.3) + 45];   // render review: no blank frame before the line   // cueAt ignores the fraction once a cue exists
           ["these were computer voices: try yours", "until it's better: read the number back", "or let customers type it"].forEach((t, q) => row(300 + q * 180, String(q + 1), t, seg(f, at3[q], at3[q] + 8)));
           chip(c, T.full, W / 2, 900, "#fde68a", INK, seg(f, ln.from + 60, ln.from + 68), 44);
-          const kN = seg(f, cu(2, 0.85), cu(2, 0.85) + 8);
+          const kN = seg(f, cu(2, 0.85) - 10, cu(2, 0.85) - 2);
           if (kN > 0) {
             c.save(); c.globalAlpha = clamp(kN * 3);
             c.font = SANS(fit(c, "NEXT · EP57: DEPLOY YOUR AI APP", W - 120, 64), 900); c.fillStyle = "#93c5fd"; c.textAlign = "center"; c.fillText("NEXT · EP57: DEPLOY YOUR AI APP", W / 2, 1060);

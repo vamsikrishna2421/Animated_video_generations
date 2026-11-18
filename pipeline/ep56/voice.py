@@ -28,17 +28,17 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("free",), ("telugu",), ("seven", "7"), ("ten", "10")], "1b": [("telugu",), ("zero", "0")],
+MUST = {"en": {1: [("free",), ("telugu",), ("zero", "0"), ("right",)], "1b": [("english",), ("seven", "7")],
                2: [("pieces",), ("ears",), ("brain",)], "2b": [("mouth",)],
                3: [("computer",), ("prices", "price")], "3b": [("hindi",), ("letters",)],
                4: [("made",), ("five", "5"), ("fifty", "50")],
-               5: [("bigger",), ("english",), ("five", "5")], "5b": [("thirty", "35"), ("twenty", "20"), ("mouth",)],
+               5: [("bigger",), ("english",), ("five", "5"), ("answers", "answer")], "5b": [("thirty", "35"), ("twenty", "20"), ("mouth",)],
                6: [("computer",), ("number",), ("type",)], "6b": [("deploy",)]},
         "te": {}}
-JUDGE_TEXT = {1: "Can a free voice assistant understand Telugu? We built one. Right order number, in English: 7 of 10.", "1b": "In Telugu: 0.",
+JUDGE_TEXT = {1: "Can a free voice assistant understand Telugu? We built one. In Telugu, it got 0 order numbers right.", "1b": "In English: 7 of 10.",
               3: "Our test: 10 customers, in computer voices. English: 3 numbers came out like prices.",
               4: "When it couldn't read the number, the AI made one up: 1, 2, 3, 4, 5. 8 times in 50 tries.",
-              5: "Best free result: a bigger model, translating to English first. 5 of 10.",
+              5: "Best free result: a bigger model, translating to English first. 5 of 10, and it answers in English.",
               "5b": "About 35 seconds an answer on our computer, and 20 of that is the mouth."}
 
 TELUGU = re.compile(r"[ఀ-౿]")

@@ -10,7 +10,7 @@
  "music": "lofi",
  "musicVol": [
   0.12,
-  0.22
+  0.15
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
@@ -71,7 +71,8 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
+     "ears": "text = ears.transcribe(\"q.wav\")",
+     "earsFix": "ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
      "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
@@ -82,6 +83,18 @@
      ],
      "madeup": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}",
      "heardE": "\"I cancelled order 4611. Where is my money?\"",
+     "orders": [
+      "4417",
+      "4502",
+      "4388",
+      "4290",
+      "4611",
+      "4475",
+      "4533",
+      "4362",
+      "4588",
+      "4650"
+     ],
      "times": [
       [
        "ears",
@@ -108,14 +121,14 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "Can a free voice assistant understand Telugu? [1] We built one. Right order number, in English: seven of ten. <pause 0.5> [2] In Telugu: zero.",
+     "text": "Can a free voice assistant understand Telugu? [1] We built one. In Telugu, it got zero order numbers right. <pause 0.5> [2] In English: seven of ten.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Can a free voice assistant understand Telugu? We built one. Right order number, in English: 7 of 10. <pause 0.5> In Telugu: 0.",
+     "show": "Can a free voice assistant understand Telugu? We built one. In Telugu, it got 0 order numbers right. <pause 0.5> In English: 7 of 10.",
      "tempo": 1.08,
-     "tts": "Can a free voice assistant understand Telugu? We built one. Right order number, in English: seven of ten.",
+     "tts": "Can a free voice assistant understand Telugu? We built one. In Telugu, it got zero order numbers right.",
      "file2": "01b_storyteller.wav",
-     "tts2": "In Telugu: zero.",
+     "tts2": "In English: seven of ten.",
      "pause": 0.5
     }
    ]
@@ -139,7 +152,8 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
+     "ears": "text = ears.transcribe(\"q.wav\")",
+     "earsFix": "ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
      "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
@@ -150,6 +164,18 @@
      ],
      "madeup": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}",
      "heardE": "\"I cancelled order 4611. Where is my money?\"",
+     "orders": [
+      "4417",
+      "4502",
+      "4388",
+      "4290",
+      "4611",
+      "4475",
+      "4533",
+      "4362",
+      "4588",
+      "4650"
+     ],
      "times": [
       [
        "ears",
@@ -192,7 +218,7 @@
    "id": "s_c",
    "type": "sk_voice56",
    "tail": 0.0,
-   "boost": 1.1,
+   "boost": 1.35,
    "lift": 0.7,
    "drop_at": [
     [
@@ -232,7 +258,8 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
+     "ears": "text = ears.transcribe(\"q.wav\")",
+     "earsFix": "ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
      "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
@@ -243,6 +270,18 @@
      ],
      "madeup": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}",
      "heardE": "\"I cancelled order 4611. Where is my money?\"",
+     "orders": [
+      "4417",
+      "4502",
+      "4388",
+      "4290",
+      "4611",
+      "4475",
+      "4533",
+      "4362",
+      "4588",
+      "4650"
+     ],
      "times": [
       [
        "ears",
@@ -291,12 +330,12 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "Best free result: a bigger model, translating to English first. [1] Five of ten. <pause 0.5> [2] About thirty-five seconds an answer on our computer, and twenty of that is the mouth.",
+     "text": "Best free result: a bigger model, translating to English first. [1] Five of ten, and it answers in English. <pause 0.5> [2] About thirty-five seconds an answer on our computer, and twenty of that is the mouth.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Best free result: a bigger model, translating to English first. 5 of 10. <pause 0.5> About 35 seconds an answer on our computer, and 20 of that is the mouth.",
+     "show": "Best free result: a bigger model, translating to English first. 5 of 10, and it answers in English. <pause 0.5> About 35 seconds an answer on our computer, and 20 of that is the mouth.",
      "tempo": 1.08,
-     "tts": "Best free result: a bigger model, translating to English first. Five of ten.",
+     "tts": "Best free result: a bigger model, translating to English first. Five of ten, and it answers in English.",
      "file2": "05b_storyteller.wav",
      "tts2": "About thirty-five seconds an answer on our computer, and twenty of that is the mouth.",
      "pause": 0.5
@@ -325,7 +364,8 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
+     "ears": "text = ears.transcribe(\"q.wav\")",
+     "earsFix": "ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
      "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
@@ -336,6 +376,18 @@
      ],
      "madeup": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}",
      "heardE": "\"I cancelled order 4611. Where is my money?\"",
+     "orders": [
+      "4417",
+      "4502",
+      "4388",
+      "4290",
+      "4611",
+      "4475",
+      "4533",
+      "4362",
+      "4588",
+      "4650"
+     ],
      "times": [
       [
        "ears",

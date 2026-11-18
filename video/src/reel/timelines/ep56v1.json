@@ -5,7 +5,7 @@
  "banner": "Build a voice assistant",
  "musicVol": [
   0.12,
-  0.22
+  0.15
  ],
  "title": "Can a Free Voice Assistant Understand Telugu? (EP56)",
  "handle": "@ai_maastaaru",
@@ -13,8 +13,8 @@
  "fps": 30,
  "musicDrops": [
   [
-   207,
-   243
+   196,
+   232
   ],
   [
    942,
@@ -28,33 +28,33 @@
  "musicBoosts": [
   [
    0,
-   290,
+   288,
    1.8
   ],
   [
-   290,
-   573,
+   288,
+   572,
    0.8
   ],
   [
    573,
-   1473,
-   1.1
+   1534,
+   1.35
   ],
   [
-   1473,
-   1810,
+   1534,
+   1872,
    2.6
   ],
   [
-   1324,
-   1473,
+   1370,
+   1534,
    1.9,
    1
   ],
   [
-   1473,
-   1810,
+   1534,
+   1872,
    3.0,
    1
   ]
@@ -62,7 +62,7 @@
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1810,
+ "totalFrames": 1872,
  "music": "reel/ep56v1/score.wav",
  "scenes": [
   {
@@ -81,7 +81,8 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
+     "ears": "text = ears.transcribe(\"q.wav\")",
+     "earsFix": "ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
      "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
@@ -92,6 +93,18 @@
      ],
      "madeup": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}",
      "heardE": "\"I cancelled order 4611. Where is my money?\"",
+     "orders": [
+      "4417",
+      "4502",
+      "4388",
+      "4290",
+      "4611",
+      "4475",
+      "4533",
+      "4362",
+      "4588",
+      "4650"
+     ],
      "times": [
       [
        "ears",
@@ -118,7 +131,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 290,
+   "frames": 288,
    "lines": [
     {
      "who": "storyteller",
@@ -127,117 +140,127 @@
      "sub": null,
      "audio": "reel/ep56v1/line_01.wav",
      "from": 10,
-     "frames": 267,
+     "frames": 266,
      "words": [
       {
        "w": "Can",
-       "from": 12,
-       "to": 23
+       "from": 11,
+       "to": 22
       },
       {
        "w": "a",
-       "from": 23,
-       "to": 26
+       "from": 22,
+       "to": 25
       },
       {
        "w": "free",
-       "from": 26,
-       "to": 34
+       "from": 25,
+       "to": 33
       },
       {
        "w": "voice",
-       "from": 34,
-       "to": 44
+       "from": 33,
+       "to": 43
       },
       {
        "w": "assistant",
-       "from": 44,
+       "from": 43,
        "to": 59
       },
       {
        "w": "understand",
        "from": 59,
-       "to": 81
+       "to": 76
       },
       {
        "w": "Telugu?",
-       "from": 81,
-       "to": 102
+       "from": 76,
+       "to": 98
       },
       {
        "w": "We",
-       "from": 102,
-       "to": 106
+       "from": 98,
+       "to": 102
       },
       {
        "w": "built",
-       "from": 106,
-       "to": 116
+       "from": 102,
+       "to": 112
       },
       {
        "w": "one.",
-       "from": 116,
-       "to": 132
-      },
-      {
-       "w": "Right",
-       "from": 132,
-       "to": 142
-      },
-      {
-       "w": "order",
-       "from": 142,
-       "to": 151
-      },
-      {
-       "w": "number,",
-       "from": 151,
-       "to": 172
-      },
-      {
-       "w": "in",
-       "from": 172,
-       "to": 177
-      },
-      {
-       "w": "English:",
-       "from": 177,
-       "to": 202
-      },
-      {
-       "w": "7",
-       "from": 202,
-       "to": 205
-      },
-      {
-       "w": "of",
-       "from": 205,
-       "to": 209
-      },
-      {
-       "w": "10.",
-       "from": 209,
-       "to": 216
+       "from": 112,
+       "to": 129
       },
       {
        "w": "In",
-       "from": 231,
-       "to": 239
+       "from": 129,
+       "to": 133
       },
       {
-       "w": "Telugu:",
-       "from": 239,
-       "to": 269
+       "w": "Telugu,",
+       "from": 133,
+       "to": 151
       },
       {
-       "w": "0.",
-       "from": 269,
-       "to": 277
+       "w": "it",
+       "from": 151,
+       "to": 156
+      },
+      {
+       "w": "got",
+       "from": 156,
+       "to": 162
+      },
+      {
+       "w": "0",
+       "from": 162,
+       "to": 165
+      },
+      {
+       "w": "order",
+       "from": 165,
+       "to": 175
+      },
+      {
+       "w": "numbers",
+       "from": 175,
+       "to": 188
+      },
+      {
+       "w": "right.",
+       "from": 188,
+       "to": 199
+      },
+      {
+       "w": "In",
+       "from": 220,
+       "to": 226
+      },
+      {
+       "w": "English:",
+       "from": 226,
+       "to": 256
+      },
+      {
+       "w": "7",
+       "from": 256,
+       "to": 261
+      },
+      {
+       "w": "of",
+       "from": 261,
+       "to": 267
+      },
+      {
+       "w": "10.",
+       "from": 267,
+       "to": 276
       }
      ],
      "cues": {
-      "1": 98,
-      "2": 231
+      "1": 95,
+      "2": 220
      }
     }
    ]
@@ -258,7 +281,8 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
+     "ears": "text = ears.transcribe(\"q.wav\")",
+     "earsFix": "ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
      "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
@@ -269,6 +293,18 @@
      ],
      "madeup": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}",
      "heardE": "\"I cancelled order 4611. Where is my money?\"",
+     "orders": [
+      "4417",
+      "4502",
+      "4388",
+      "4290",
+      "4611",
+      "4475",
+      "4533",
+      "4362",
+      "4588",
+      "4650"
+     ],
      "times": [
       [
        "ears",
@@ -294,8 +330,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 290,
-   "frames": 283,
+   "from": 288,
+   "frames": 284,
    "lines": [
     {
      "who": "storyteller",
@@ -468,7 +504,8 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
+     "ears": "text = ears.transcribe(\"q.wav\")",
+     "earsFix": "ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
      "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
@@ -479,6 +516,18 @@
      ],
      "madeup": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}",
      "heardE": "\"I cancelled order 4611. Where is my money?\"",
+     "orders": [
+      "4417",
+      "4502",
+      "4388",
+      "4290",
+      "4611",
+      "4475",
+      "4533",
+      "4362",
+      "4588",
+      "4650"
+     ],
      "times": [
       [
        "ears",
@@ -505,7 +554,7 @@
     "hardCuts": true
    },
    "from": 573,
-   "frames": 900,
+   "frames": 961,
    "lines": [
     {
      "who": "storyteller",
@@ -763,152 +812,177 @@
      "sub": null,
      "audio": "reel/ep56v1/line_05.wav",
      "from": 582,
-     "frames": 303,
+     "frames": 353,
      "words": [
       {
        "w": "Best",
        "from": 582,
-       "to": 596
+       "to": 597
       },
       {
        "w": "free",
-       "from": 596,
-       "to": 602
+       "from": 597,
+       "to": 605
       },
       {
        "w": "result:",
-       "from": 602,
-       "to": 625
+       "from": 605,
+       "to": 628
       },
       {
        "w": "a",
-       "from": 625,
-       "to": 627
+       "from": 628,
+       "to": 631
       },
       {
        "w": "bigger",
-       "from": 627,
-       "to": 637
+       "from": 631,
+       "to": 641
       },
       {
        "w": "model,",
-       "from": 637,
-       "to": 656
+       "from": 641,
+       "to": 659
       },
       {
        "w": "translating",
-       "from": 656,
-       "to": 672
-      },
-      {
-       "w": "to",
-       "from": 672,
+       "from": 659,
        "to": 676
       },
       {
-       "w": "English",
+       "w": "to",
        "from": 676,
-       "to": 710
+       "to": 681
+      },
+      {
+       "w": "English",
+       "from": 681,
+       "to": 692
       },
       {
        "w": "first.",
-       "from": 710,
+       "from": 692,
        "to": 719
       },
       {
        "w": "5",
        "from": 719,
+       "to": 722
+      },
+      {
+       "w": "of",
+       "from": 722,
        "to": 726
       },
       {
-       "w": "of",
+       "w": "10,",
        "from": 726,
-       "to": 730
-      },
-      {
-       "w": "10.",
-       "from": 730,
-       "to": 735
-      },
-      {
-       "w": "About",
-       "from": 751,
-       "to": 764
-      },
-      {
-       "w": "35",
-       "from": 764,
-       "to": 769
-      },
-      {
-       "w": "seconds",
-       "from": 769,
-       "to": 781
-      },
-      {
-       "w": "an",
-       "from": 781,
-       "to": 786
-      },
-      {
-       "w": "answer",
-       "from": 786,
-       "to": 796
-      },
-      {
-       "w": "on",
-       "from": 796,
-       "to": 801
-      },
-      {
-       "w": "our",
-       "from": 801,
-       "to": 807
-      },
-      {
-       "w": "computer,",
-       "from": 807,
-       "to": 826
+       "to": 732
       },
       {
        "w": "and",
-       "from": 826,
-       "to": 832
+       "from": 732,
+       "to": 745
       },
       {
-       "w": "20",
-       "from": 832,
+       "w": "it",
+       "from": 745,
+       "to": 750
+      },
+      {
+       "w": "answers",
+       "from": 750,
+       "to": 761
+      },
+      {
+       "w": "in",
+       "from": 761,
+       "to": 765
+      },
+      {
+       "w": "English.",
+       "from": 765,
+       "to": 778
+      },
+      {
+       "w": "About",
+       "from": 797,
+       "to": 811
+      },
+      {
+       "w": "35",
+       "from": 811,
+       "to": 816
+      },
+      {
+       "w": "seconds",
+       "from": 816,
+       "to": 829
+      },
+      {
+       "w": "an",
+       "from": 829,
+       "to": 834
+      },
+      {
+       "w": "answer",
+       "from": 834,
        "to": 845
       },
       {
-       "w": "of",
+       "w": "on",
        "from": 845,
-       "to": 849
+       "to": 850
+      },
+      {
+       "w": "our",
+       "from": 850,
+       "to": 856
+      },
+      {
+       "w": "computer,",
+       "from": 856,
+       "to": 873
+      },
+      {
+       "w": "and",
+       "from": 873,
+       "to": 888
+      },
+      {
+       "w": "20",
+       "from": 888,
+       "to": 893
+      },
+      {
+       "w": "of",
+       "from": 893,
+       "to": 898
       },
       {
        "w": "that",
-       "from": 849,
-       "to": 857
+       "from": 898,
+       "to": 906
       },
       {
        "w": "is",
-       "from": 857,
-       "to": 861
+       "from": 906,
+       "to": 911
       },
       {
        "w": "the",
-       "from": 861,
-       "to": 868
+       "from": 911,
+       "to": 918
       },
       {
        "w": "mouth.",
-       "from": 868,
-       "to": 878
+       "from": 918,
+       "to": 929
       }
      ],
      "cues": {
       "1": 715,
-      "2": 751
+      "2": 797
      }
     }
    ]
@@ -929,7 +1003,8 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
+     "ears": "text = ears.transcribe(\"q.wav\")",
+     "earsFix": "ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
      "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
@@ -940,6 +1015,18 @@
      ],
      "madeup": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}",
      "heardE": "\"I cancelled order 4611. Where is my money?\"",
+     "orders": [
+      "4417",
+      "4502",
+      "4388",
+      "4290",
+      "4611",
+      "4475",
+      "4533",
+      "4362",
+      "4588",
+      "4650"
+     ],
      "times": [
       [
        "ears",
@@ -965,8 +1052,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1473,
-   "frames": 337,
+   "from": 1534,
+   "frames": 338,
    "lines": [
     {
      "who": "storyteller",
