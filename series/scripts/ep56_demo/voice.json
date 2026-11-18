@@ -1,0 +1,1110 @@
+{
+ "rows": [
+  {
+   "ears": "A",
+   "lang": "en",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4417",
+   "said": "I returned my earphones, order forty-four seventeen. Has my refund of twelve ninety-nine rupees come?",
+   "heard": "I returned my earphones or a $44.17. Has my refund of Rs 12.99 come?",
+   "ears_seconds": 1.83,
+   "brain_seconds": 13.4,
+   "final": "It seems there was no order found with that ID. Could you provide more details or check the order number?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"OR123456\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "It seems there was no order found with that ID. Could you provide more details or check the order number?"
+    }
+   ],
+   "called": true,
+   "order_sent": "OR123456",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "A",
+   "lang": "en",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4502",
+   "said": "Order forty-five oh two: has my power bank shipped?",
+   "heard": "Order 4502. Has my power bank shipped?",
+   "ears_seconds": 1.36,
+   "brain_seconds": 8.7,
+   "final": "Your power bank has been packed but hasn't shipped yet.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4502}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"20,000 mAh power bank\",\n  \"amount\": \"Rs 1,799\",\n  \"status\": \"packed, not shipped yet\",\n  \"refund\": \"none\"\n}"
+    },
+    {
+     "ai": "Your power bank has been packed but hasn't shipped yet."
+    }
+   ],
+   "called": true,
+   "order_sent": "4502",
+   "right_number": true,
+   "right_auto": true
+  },
+  {
+   "ears": "A",
+   "lang": "en",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4388",
+   "said": "When will my smartwatch arrive? Order forty-three eighty-eight.",
+   "heard": "When will my smartwatch arrive? Order 4388.",
+   "ears_seconds": 1.54,
+   "brain_seconds": 10.2,
+   "final": "Your smartwatch was shipped on November 13th and is expected to arrive by November 18th.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4388}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"smartwatch\",\n  \"amount\": \"Rs 3,499\",\n  \"status\": \"shipped Nov 13, expected Nov 18\",\n  \"refund\": \"none\"\n}"
+    },
+    {
+     "ai": "Your smartwatch was shipped on November 13th and is expected to arrive by November 18th."
+    }
+   ],
+   "called": true,
+   "order_sent": "4388",
+   "right_number": true,
+   "right_auto": true
+  },
+  {
+   "ears": "A",
+   "lang": "en",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4290",
+   "said": "Did my charger get delivered? Order forty-two ninety.",
+   "heard": "Did my charger get delivered? Order 42.90",
+   "ears_seconds": 1.46,
+   "brain_seconds": 13.4,
+   "final": "It seems there was an error with the order ID. Please provide a valid order number, and I'll check the status for you.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 42.90}}"
+    },
+    {
+     "tool_result": "Error executing tool get_order: 2 validation errors for get_orderArguments\norder_id.str\n  Input should be a valid string [type=string_type, input_value=42.9, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\norder_id.int\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=42.9, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float"
+    },
+    {
+     "ai": "It seems there was an error with the order ID. Please provide a valid order number, and I'll check the status for you."
+    }
+   ],
+   "called": true,
+   "order_sent": "42.9",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "A",
+   "lang": "en",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4611",
+   "said": "I cancelled order forty-six eleven. Where is my money?",
+   "heard": "I cancelled order 46.11. Where is my money?",
+   "ears_seconds": 1.49,
+   "brain_seconds": 9.2,
+   "final": "It seems there was no such order found. Could you please provide more details or check the order number?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"46.11\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "It seems there was no such order found. Could you please provide more details or check the order number?"
+    }
+   ],
+   "called": true,
+   "order_sent": "46.11",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "A",
+   "lang": "en",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4475",
+   "said": "Order forty-four seventy-five, when is my mouse coming?",
+   "heard": "Ordo 4475, when is my mouse coming?",
+   "ears_seconds": 1.32,
+   "brain_seconds": 8.8,
+   "final": "Your wireless mouse is out for delivery today. It should be with you soon!",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4475}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"wireless mouse\",\n  \"amount\": \"Rs 749\",\n  \"status\": \"out for delivery today\",\n  \"refund\": \"none\"\n}"
+    },
+    {
+     "ai": "Your wireless mouse is out for delivery today. It should be with you soon!"
+    }
+   ],
+   "called": true,
+   "order_sent": "4475",
+   "right_number": true,
+   "right_auto": true
+  },
+  {
+   "ears": "A",
+   "lang": "en",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4533",
+   "said": "Why hasn't order forty-five thirty-three reached me?",
+   "heard": "Why hasn't Odell 4533 reached me?",
+   "ears_seconds": 1.43,
+   "brain_seconds": 10.2,
+   "final": "There was a failure in delivery for your order as the address was not found. Please call us for further assistance.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4533}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"phone tripod\",\n  \"amount\": \"Rs 1,099\",\n  \"status\": \"delivery failed: address not found, call us\",\n  \"refund\": \"none\"\n}"
+    },
+    {
+     "ai": "There was a failure in delivery for your order as the address was not found. Please call us for further assistance."
+    }
+   ],
+   "called": true,
+   "order_sent": "4533",
+   "right_number": true,
+   "right_auto": true
+  },
+  {
+   "ears": "A",
+   "lang": "en",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4362",
+   "said": "Was order forty-three sixty-two delivered?",
+   "heard": "was order 4362 delivered.",
+   "ears_seconds": 1.3,
+   "brain_seconds": 8.7,
+   "final": "Yes, order 4362 was delivered on November 9.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4362}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"USB-C cable, pack of 2\",\n  \"amount\": \"Rs 399\",\n  \"status\": \"delivered Nov 9\",\n  \"refund\": \"none\"\n}"
+    },
+    {
+     "ai": "Yes, order 4362 was delivered on November 9."
+    }
+   ],
+   "called": true,
+   "order_sent": "4362",
+   "right_number": true,
+   "right_auto": true
+  },
+  {
+   "ears": "A",
+   "lang": "en",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4588",
+   "said": "My speaker return, order forty-five eighty-eight: refund done?",
+   "heard": "MySpeaker Return Order 4588. Refund Done.",
+   "ears_seconds": 1.48,
+   "brain_seconds": 12.2,
+   "final": "Your refund of Rs 2,999 has been approved and will reach your bank account in 5-7 working days. Thank you for your patience.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4588}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"smart speaker\",\n  \"amount\": \"Rs 2,999\",\n  \"status\": \"returned and received Nov 14\",\n  \"refund\": \"Rs 2,999 approved Nov 15; reaches the bank in 5-7 working days\"\n}"
+    },
+    {
+     "ai": "Your refund of Rs 2,999 has been approved and will reach your bank account in 5-7 working days. Thank you for your patience."
+    }
+   ],
+   "called": true,
+   "order_sent": "4588",
+   "right_number": true,
+   "right_auto": true
+  },
+  {
+   "ears": "A",
+   "lang": "en",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4650",
+   "said": "Is my order forty-six fifty confirmed?",
+   "heard": "Is my order 4650 confirmed?",
+   "ears_seconds": 1.36,
+   "brain_seconds": 8.9,
+   "final": "Your order 4650 is not confirmed yet; the payment is still pending.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4650}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"screen guard\",\n  \"amount\": \"Rs 299\",\n  \"status\": \"payment pending: not confirmed yet\",\n  \"refund\": \"none\"\n}"
+    },
+    {
+     "ai": "Your order 4650 is not confirmed yet; the payment is still pending."
+    }
+   ],
+   "called": true,
+   "order_sent": "4650",
+   "right_number": true,
+   "right_auto": true
+  },
+  {
+   "ears": "B",
+   "lang": "te",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4417",
+   "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
+   "heard": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु। नारी फ़न वच्चिन्दा।",
+   "ears_seconds": 4.54,
+   "brain_seconds": 9.1,
+   "final": "I couldn't find the order. Could you provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find the order. Could you provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "12345",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "B",
+   "lang": "te",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4502",
+   "said": "ఆర్డర్ నలభై ఐదు సున్నా రెండు, నా పవర్ బ్యాంక్ షిప్ అయిందా?",
+   "heard": "आलेर नलभाए आइदू सुन्ना रेंदू, ना पावर्बांक शिप हैंदा?",
+   "ears_seconds": 3.26,
+   "brain_seconds": 23.8,
+   "final": "माफ़ करें, आपका सवाल मुझे स्पष्ट नहीं हो रहा है। कृपया अपना ऑर्डर नंबर दें ताकि मैं आपकी प्रश्न-जवाब कर सकूं।",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "माफ़ करें, आपका सवाल मुझे स्पष्ट नहीं हो रहा है। कृपया अपना ऑर्डर नंबर दें ताकि मैं आपकी प्रश्न-जवाब कर सकूं।"
+    }
+   ],
+   "called": true,
+   "order_sent": "12345",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "B",
+   "lang": "te",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4388",
+   "said": "నా స్మార్ట్‌వాచ్ ఎప్పుడు వస్తుంది? ఆర్డర్ నలభై మూడు ఎనభై ఎనిమిది.",
+   "heard": "వ్త్త్రిన్నుత్తునినినిన్త్త్త్త్ . ఆటిండిచిండిఎనిముండి.",
+   "ears_seconds": 38.54,
+   "brain_seconds": 32.3,
+   "final": "ఎన్నిక నివేదికల మధ్య వ్యవస్థా పరిష్కరణకు తాజా సమాచారం లేదు. కొన్ని విషయాలను పరిశీలన చేయడం లో మद్దత్ ఉంట",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "ఎన్నిక నివేదికల మధ్య వ్యవస్థా పరిష్కరణకు తాజా సమాచారం లేదు. కొన్ని విషయాలను పరిశీలన చేయడం లో మद్దత్ ఉంట"
+    }
+   ],
+   "called": true,
+   "order_sent": "12345",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "B",
+   "lang": "te",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4290",
+   "said": "నా ఛార్జర్ డెలివరీ అయిందా? ఆర్డర్ నలభై రెండు తొంభై.",
+   "heard": "cervd",
+   "ears_seconds": 45.76,
+   "brain_seconds": 6.6,
+   "final": "I couldn't find your order. Could you provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"cervd\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find your order. Could you provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "cervd",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "B",
+   "lang": "te",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4611",
+   "said": "ఆర్డర్ నలభై ఆరు పదకొండు క్యాన్సిల్ చేశాను. నా డబ్బులు ఎక్కడ?",
+   "heard": "अर्दर नालबाई अर्व पदकोंड खांसिल चेसान। ना दबलू यकडा",
+   "ears_seconds": 3.0,
+   "brain_seconds": 8.9,
+   "final": "I couldn't find the order. Could you please provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"Nala Bai Arv Padakond\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find the order. Could you please provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "Nala Bai Arv Padakond",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "B",
+   "lang": "te",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4475",
+   "said": "ఆర్డర్ నలభై నాలుగు డెబ్భై ఐదు, నా మౌస్ ఎప్పుడు వస్తుంది?",
+   "heard": "अडर नलबाए नालगुट अबभाए आदू, ना माँस येप्टू वसत्तूंदू।",
+   "ears_seconds": 3.61,
+   "brain_seconds": 22.8,
+   "final": "माफ आहे, तुमच्या अडरद्वारीत कोणत्याही संपूर्ण प्रशंसा नव्हती. कृपया अपने ऑर्डर नंबर पुन: तयार करा.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"N0123456789\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "माफ आहे, तुमच्या अडरद्वारीत कोणत्याही संपूर्ण प्रशंसा नव्हती. कृपया अपने ऑर्डर नंबर पुन: तयार करा."
+    }
+   ],
+   "called": true,
+   "order_sent": "N0123456789",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "B",
+   "lang": "te",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4533",
+   "said": "ఆర్డర్ నలభై ఐదు ముప్పై మూడు ఇంకా ఎందుకు రాలేదు?",
+   "heard": "",
+   "ears_seconds": 37.15,
+   "brain_seconds": 7.3,
+   "final": "I couldn't find the order you're looking for. Could you provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 12345}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find the order you're looking for. Could you provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "12345",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "B",
+   "lang": "te",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4362",
+   "said": "ఆర్డర్ నలభై మూడు అరవై రెండు డెలివరీ అయిందా?",
+   "heard": "अड़र नालभाई, मुडु आरवाई रेंदू डेलवरी हैंदा",
+   "ears_seconds": 2.86,
+   "brain_seconds": 10.3,
+   "final": "Sorry, it seems you didn't provide the correct order ID. Can you check and try again?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"20231012123456\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "Sorry, it seems you didn't provide the correct order ID. Can you check and try again?"
+    }
+   ],
+   "called": true,
+   "order_sent": "20231012123456",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "B",
+   "lang": "te",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4588",
+   "said": "నా స్పీకర్ రిటర్న్, ఆర్డర్ నలభై ఐదు ఎనభై ఎనిమిది: రిఫండ్ అయిందా?",
+   "heard": "ना स्पीकर रेटान अडर नलबाई आएदु यनबाई यनमिदी रेफन आएंदा",
+   "ears_seconds": 3.6,
+   "brain_seconds": 8.7,
+   "final": "I couldn't find your order. Could you please provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"R123456\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find your order. Could you please provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "R123456",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "B",
+   "lang": "te",
+   "model": "small",
+   "task": "transcribe",
+   "order": "4650",
+   "said": "నా ఆర్డర్ నలభై ఆరు యాభై కన్ఫర్మ్ అయిందా?",
+   "heard": "ఆ ల఻తరнопకాధి మారాచిీచీపి లిటణిర్లని",
+   "ears_seconds": 44.7,
+   "brain_seconds": 11.4,
+   "final": "సరైన భాషలో చేయండి. నువ్వు లెక్కపోతాము.",
+   "trace": [
+    {
+     "ai": "సరైన భాషలో చేయండి. నువ్వు లెక్కపోతాము."
+    }
+   ],
+   "called": false,
+   "order_sent": null,
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "C",
+   "lang": "te",
+   "model": "small",
+   "task": "translate",
+   "order": "4417",
+   "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
+   "heard": "Order 40, 417, my earphones are returned Did my refund come?",
+   "ears_seconds": 1.68,
+   "brain_seconds": 8.2,
+   "final": "I couldn't find your order. Could you provide more details or check the order number?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 40417}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find your order. Could you provide more details or check the order number?"
+    }
+   ],
+   "called": true,
+   "order_sent": "40417",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "C",
+   "lang": "te",
+   "model": "small",
+   "task": "translate",
+   "order": "4502",
+   "said": "ఆర్డర్ నలభై ఐదు సున్నా రెండు, నా పవర్ బ్యాంక్ షిప్ అయిందా?",
+   "heard": "Has my power bank ship been shipped for 2 hours and 45 minutes?",
+   "ears_seconds": 1.51,
+   "brain_seconds": 9.0,
+   "final": "I couldn't find your order. Could you provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"20230915123456\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find your order. Could you provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "20230915123456",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "C",
+   "lang": "te",
+   "model": "small",
+   "task": "translate",
+   "order": "4388",
+   "said": "నా స్మార్ట్‌వాచ్ ఎప్పుడు వస్తుంది? ఆర్డర్ నలభై మూడు ఎనభై ఎనిమిది.",
+   "heard": "My smartwatch will always come Order on 43rd January",
+   "ears_seconds": 1.55,
+   "brain_seconds": 7.8,
+   "final": "It seems there was no order on 43rd January. Could you provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 43}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "It seems there was no order on 43rd January. Could you provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "43",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "C",
+   "lang": "te",
+   "model": "small",
+   "task": "translate",
+   "order": "4290",
+   "said": "నా ఛార్జర్ డెలివరీ అయిందా? ఆర్డర్ నలభై రెండు తొంభై.",
+   "heard": "I am Charger Delivery Ainda Order 4295",
+   "ears_seconds": 1.48,
+   "brain_seconds": 7.0,
+   "final": "I couldn't find your order. Could you provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4295}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find your order. Could you provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "4295",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "C",
+   "lang": "te",
+   "model": "small",
+   "task": "translate",
+   "order": "4611",
+   "said": "ఆర్డర్ నలభై ఆరు పదకొండు క్యాన్సిల్ చేశాను. నా డబ్బులు ఎక్కడ?",
+   "heard": "Order 40, 6, 11, and I cancelled Where is my money?",
+   "ears_seconds": 1.6,
+   "brain_seconds": 8.2,
+   "final": "I couldn't find order 40. Could you please provide more details or check the order number?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 40}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find order 40. Could you please provide more details or check the order number?"
+    }
+   ],
+   "called": true,
+   "order_sent": "40",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "C",
+   "lang": "te",
+   "model": "small",
+   "task": "translate",
+   "order": "4475",
+   "said": "ఆర్డర్ నలభై నాలుగు డెబ్భై ఐదు, నా మౌస్ ఎప్పుడు వస్తుంది?",
+   "heard": "Order is 44.25, my mouse will come anytime",
+   "ears_seconds": 1.53,
+   "brain_seconds": 11.5,
+   "final": "It seems there was an error with the order ID. Could you please provide the correct order number?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 44.25}}"
+    },
+    {
+     "tool_result": "Error executing tool get_order: 2 validation errors for get_orderArguments\norder_id.str\n  Input should be a valid string [type=string_type, input_value=44.25, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\norder_id.int\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=44.25, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float"
+    },
+    {
+     "ai": "It seems there was an error with the order ID. Could you please provide the correct order number?"
+    }
+   ],
+   "called": true,
+   "order_sent": "44.25",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "C",
+   "lang": "te",
+   "model": "small",
+   "task": "translate",
+   "order": "4533",
+   "said": "ఆర్డర్ నలభై ఐదు ముప్పై మూడు ఇంకా ఎందుకు రాలేదు?",
+   "heard": "Order is 45, 30. Why hasn't the mood changed yet?",
+   "ears_seconds": 1.47,
+   "brain_seconds": 8.2,
+   "final": "I couldn't find the order 45. Could you please provide more details or check the order number?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 45}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find the order 45. Could you please provide more details or check the order number?"
+    }
+   ],
+   "called": true,
+   "order_sent": "45",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "C",
+   "lang": "te",
+   "model": "small",
+   "task": "translate",
+   "order": "4362",
+   "said": "ఆర్డర్ నలభై మూడు అరవై రెండు డెలివరీ అయిందా?",
+   "heard": "Order 403 62 Delivery",
+   "ears_seconds": 1.17,
+   "brain_seconds": 7.6,
+   "final": "I couldn't find the order 403. Could you provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 403}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find the order 403. Could you provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "403",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "C",
+   "lang": "te",
+   "model": "small",
+   "task": "translate",
+   "order": "4588",
+   "said": "నా స్పీకర్ రిటర్న్, ఆర్డర్ నలభై ఐదు ఎనభై ఎనిమిది: రిఫండ్ అయిందా?",
+   "heard": "My Speaker Return Order On August 5th, 2017 Refund",
+   "ears_seconds": 1.47,
+   "brain_seconds": 9.5,
+   "final": "I couldn't find the order from August 5th, 2017. Could you provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 51708}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find the order from August 5th, 2017. Could you provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "51708",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "C",
+   "lang": "te",
+   "model": "small",
+   "task": "translate",
+   "order": "4650",
+   "said": "నా ఆర్డర్ నలభై ఆరు యాభై కన్ఫర్మ్ అయిందా?",
+   "heard": "Did I confirm the order by 6 or 7?",
+   "ears_seconds": 1.23,
+   "brain_seconds": 8.1,
+   "final": "It seems there was no order found with that ID. Could you provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "It seems there was no order found with that ID. Could you provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "12345",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "D",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "transcribe",
+   "order": "4417",
+   "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
+   "heard": "ఆల్డార్ 40, 4, 17 నా ఇర్ఫోన్స్ రిటన్ చేసాను. నా రిఫన్డ్ వచ్చిందా?",
+   "ears_seconds": 16.29,
+   "brain_seconds": 28.6,
+   "final": "స్వాగతం! నిమ్న నంబర్లలో ఇక్కడ కలదు. రిఫన్డ్ ప్రక्रియలో ఉంటుందని తనిఖీ చేసినా మాకు కావాలి.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"40417\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "స్వాగతం! నిమ్న నంబర్లలో ఇక్కడ కలదు. రిఫన్డ్ ప్రక्रియలో ఉంటుందని తనిఖీ చేసినా మాకు కావాలి."
+    }
+   ],
+   "called": true,
+   "order_sent": "40417",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "D",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "transcribe",
+   "order": "4502",
+   "said": "ఆర్డర్ నలభై ఐదు సున్నా రెండు, నా పవర్ బ్యాంక్ షిప్ అయిందా?",
+   "heard": "ఆలేర్ నలబై ఆయ్దు సున్నా రేండు నా పవర్ బంక్ శిప్ హైందా?",
+   "ears_seconds": 15.16,
+   "brain_seconds": 12.1,
+   "final": "ఎల్ల自来了，发货状态显示为已发货。您可以在物流网站上查看最新的配送信息。如果有其他问题，请告诉我！",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 12345}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "ఎల్ల自来了，发货状态显示为已发货。您可以在物流网站上查看最新的配送信息。如果有其他问题，请告诉我！"
+    }
+   ],
+   "called": true,
+   "order_sent": "12345",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "D",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "transcribe",
+   "order": "4388",
+   "said": "నా స్మార్ట్‌వాచ్ ఎప్పుడు వస్తుంది? ఆర్డర్ నలభై మూడు ఎనభై ఎనిమిది.",
+   "heard": "నా స్మార్ట్ వాచ్ ఎప్పుడు వస్తుంది ఆర్డర్ 4388 ఇది",
+   "ears_seconds": 13.6,
+   "brain_seconds": 12.1,
+   "final": "Your smartwatch was shipped on Nov 13 and is expected by Nov 18. Thank you for your patience!",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4388}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"smartwatch\",\n  \"amount\": \"Rs 3,499\",\n  \"status\": \"shipped Nov 13, expected Nov 18\",\n  \"refund\": \"none\"\n}"
+    },
+    {
+     "ai": "Your smartwatch was shipped on Nov 13 and is expected by Nov 18. Thank you for your patience!"
+    }
+   ],
+   "called": true,
+   "order_sent": "4388",
+   "right_number": true,
+   "right_auto": true
+  },
+  {
+   "ears": "D",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "transcribe",
+   "order": "4290",
+   "said": "నా ఛార్జర్ డెలివరీ అయిందా? ఆర్డర్ నలభై రెండు తొంభై.",
+   "heard": "నా చార్జర్ డెలివరి ఆయిందా. ఆర్డర్ నలభై రెండు తోంబాయ్.",
+   "ears_seconds": 15.09,
+   "brain_seconds": 19.2,
+   "final": "సorry, ని కనుక్కోవడం లేదు. మరణోత్తర ప్రశ్నలను తెలుస్తాీ.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 12345}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "సorry, ని కనుక్కోవడం లేదు. మరణోత్తర ప్రశ్నలను తెలుస్తాీ."
+    }
+   ],
+   "called": true,
+   "order_sent": "12345",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "D",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "transcribe",
+   "order": "4611",
+   "said": "ఆర్డర్ నలభై ఆరు పదకొండు క్యాన్సిల్ చేశాను. నా డబ్బులు ఎక్కడ?",
+   "heard": "ఆర్డర్ 4611 కేంసిల్ చేసాను. నా డబ్బులు ఏకడా?",
+   "ears_seconds": 12.05,
+   "brain_seconds": 15.2,
+   "final": "Your order for the tablet cover was cancelled on Nov 12 and the refund of Rs 649 has been initiated. Please wait 5-7 working days for it to reflect in your bank account.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4611}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"tablet cover\",\n  \"amount\": \"Rs 649\",\n  \"status\": \"cancelled by the customer on Nov 12\",\n  \"refund\": \"Rs 649 sent on Nov 13; banks take 5-7 working days\"\n}"
+    },
+    {
+     "ai": "Your order for the tablet cover was cancelled on Nov 12 and the refund of Rs 649 has been initiated. Please wait 5-7 working days for it to reflect in your bank account."
+    }
+   ],
+   "called": true,
+   "order_sent": "4611",
+   "right_number": true,
+   "right_auto": true
+  },
+  {
+   "ears": "D",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "transcribe",
+   "order": "4475",
+   "said": "ఆర్డర్ నలభై నాలుగు డెబ్భై ఐదు, నా మౌస్ ఎప్పుడు వస్తుంది?",
+   "heard": "ఆడర్ 40475 నా మాఉస్ ఇప్పడు వస్తుంది",
+   "ears_seconds": 10.01,
+   "brain_seconds": 9.3,
+   "final": "I couldn't find order 40475. Could you provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 40475}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find order 40475. Could you provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "40475",
+   "right_number": false,
+   "right_auto": false
+  },
+  {
+   "ears": "D",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "transcribe",
+   "order": "4533",
+   "said": "ఆర్డర్ నలభై ఐదు ముప్పై మూడు ఇంకా ఎందుకు రాలేదు?",
+   "heard": "ఆడర్ 45, 30, 3 ఇంకా ఎందుకు రాలేదు",
+   "ears_seconds": 9.54
+  },
+  {
+   "ears": "D",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "transcribe",
+   "order": "4362",
+   "said": "ఆర్డర్ నలభై మూడు అరవై రెండు డెలివరీ అయిందా?",
+   "heard": "ఆడ్డర్ 43-62 డెలివరి ఆయిందా?",
+   "ears_seconds": 9.11
+  },
+  {
+   "ears": "D",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "transcribe",
+   "order": "4588",
+   "said": "నా స్పీకర్ రిటర్న్, ఆర్డర్ నలభై ఐదు ఎనభై ఎనిమిది: రిఫండ్ అయిందా?",
+   "heard": "నా స్పీకర్ రేటర్న్ ఆడ్డర్ 4588 రేఫాండ్ ఆయింద?",
+   "ears_seconds": 12.79
+  },
+  {
+   "ears": "D",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "transcribe",
+   "order": "4650",
+   "said": "నా ఆర్డర్ నలభై ఆరు యాభై కన్ఫర్మ్ అయిందా?",
+   "heard": "నా ఆడర్ నలబై ఆరు యాబై కంఫర్మ్ ఆయిందా",
+   "ears_seconds": 11.35
+  },
+  {
+   "ears": "E",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "translate",
+   "order": "4417",
+   "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
+   "heard": "Order 40, 4, 17. I returned my earphones. Did you get my refund?",
+   "ears_seconds": 6.33
+  },
+  {
+   "ears": "E",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "translate",
+   "order": "4502",
+   "said": "ఆర్డర్ నలభై ఐదు సున్నా రెండు, నా పవర్ బ్యాంక్ షిప్ అయిందా?",
+   "heard": "Order 4502 from my power bank has been shipped?",
+   "ears_seconds": 5.36
+  },
+  {
+   "ears": "E",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "translate",
+   "order": "4388",
+   "said": "నా స్మార్ట్‌వాచ్ ఎప్పుడు వస్తుంది? ఆర్డర్ నలభై మూడు ఎనభై ఎనిమిది.",
+   "heard": "When will my smart watch come? 43.88",
+   "ears_seconds": 5.48
+  },
+  {
+   "ears": "E",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "translate",
+   "order": "4290",
+   "said": "నా ఛార్జర్ డెలివరీ అయిందా? ఆర్డర్ నలభై రెండు తొంభై.",
+   "heard": "My charger has been delivered. Order 429",
+   "ears_seconds": 5.36
+  },
+  {
+   "ears": "E",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "translate",
+   "order": "4611",
+   "said": "ఆర్డర్ నలభై ఆరు పదకొండు క్యాన్సిల్ చేశాను. నా డబ్బులు ఎక్కడ?",
+   "heard": "I cancelled order 4611. Where is my money?",
+   "ears_seconds": 5.43
+  },
+  {
+   "ears": "E",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "translate",
+   "order": "4475",
+   "said": "ఆర్డర్ నలభై నాలుగు డెబ్భై ఐదు, నా మౌస్ ఎప్పుడు వస్తుంది?",
+   "heard": "Order 4475. My mouse will come now.",
+   "ears_seconds": 5.23
+  },
+  {
+   "ears": "E",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "translate",
+   "order": "4533",
+   "said": "ఆర్డర్ నలభై ఐదు ముప్పై మూడు ఇంకా ఎందుకు రాలేదు?",
+   "heard": "Order 4530. Why haven't 3 come yet?",
+   "ears_seconds": 5.73
+  },
+  {
+   "ears": "E",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "translate",
+   "order": "4362",
+   "said": "ఆర్డర్ నలభై మూడు అరవై రెండు డెలివరీ అయిందా?",
+   "heard": "Order 43-62 has been delivered.",
+   "ears_seconds": 5.08
+  },
+  {
+   "ears": "E",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "translate",
+   "order": "4588",
+   "said": "నా స్పీకర్ రిటర్న్, ఆర్డర్ నలభై ఐదు ఎనభై ఎనిమిది: రిఫండ్ అయిందా?",
+   "heard": "My speaker, return order is 4588. Is the refund done?",
+   "ears_seconds": 5.54
+  },
+  {
+   "ears": "E",
+   "lang": "te",
+   "model": "large-v3",
+   "task": "translate",
+   "order": "4650",
+   "said": "నా ఆర్డర్ నలభై ఆరు యాభై కన్ఫర్మ్ అయిందా?",
+   "heard": "Is my order 4650 confirmed?",
+   "ears_seconds": 4.86
+  }
+ ]
+}
