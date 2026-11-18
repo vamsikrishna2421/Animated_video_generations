@@ -32,6 +32,49 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-18 (EP56 "Can a Free Voice Assistant Understand Telugu?", the Wednesday syllabus episode, queue 060)
+- **The one variable (as agreed after EP53's 48h read):** frame 1 is a question the viewer already has, not a number
+  clash. The question: "CAN A FREE VOICE ASSISTANT UNDERSTAND TELUGU?" Under it, a customer's Telugu question (order
+  4417) and what the small free model wrote: the same words in Hindi letters. The zero arrives at ~4 s ("In Telugu, it
+  got zero order numbers right"). The middle keeps EP54's one code line per piece. Judge it on 3-s hold against EP53's
+  41.1% (clash, tutorial) and EP49's 64.2%.
+- **Length:** 62 s EN / 65 s TE. EP55 was 76 / 81. The viewers asked to fold four lines into one, so this is a second
+  change. Please read hold as the frame-1 test, not avg % watched.
+- **Point family:** P (new), "What it heard is not what you said". The last post was Creative 32 (O).
+- **Our test (committed before each run):**
+  - Set-up: EP54's 10 customers, spoken by our computer voices in English and Telugu. The ears are Whisper small or
+    large-v3, on our computer. The brain is EP55's bot and order server.
+  - Scored: did the right order number reach the shop?
+  - Results:
+    - English, small: 7/10.
+    - Telugu, small: 0/10 (6 in Hindi letters, 4 junk).
+    - Telugu, large-v3: 3/10 transcribing, 5/10 translating to English first.
+  - The AI sent a made-up "12345" 8 times in 50 tries.
+  - About 35 s an answer: ears 5, brain 10, mouth 20.
+  - Two set-up faults were fixed before the counted run (our TTS read the English digits in Hindi, and memory); see
+    `series/scripts/ep56_demo/README.md`.
+- **Viewers:**
+  - Script stage: frame 1 was overloaded, so the bubble now comes first, then the transcript. Lines 2-5 were folded
+    into one beat. "8 times in 50" is now explained. The verdict and its catch (the mouth is 20 of the 35 s) are said.
+    The computer-voice caveat is now the closing line. "Read the number back" is labelled as advice, not a result.
+  - Render stage: the 5/10 card now names the other customer (4611). "It answers in English" is said aloud. The zero
+    comes first, with a "not your phone's voice typing" chip. The empty cards are filled. There is a hit on 12345, the
+    music between lines is lower, and three Telugu words were re-voiced.
+- **Ask:** none, per your Creative 27 read. The try-it ("set voice typing to Telugu, say order 4417") is in the caption
+  body, and the pinned comments carry the code and the method.
+- **Files:**
+  - Videos: `out/060_ep56_free_voice_telugu.mp4` (EN) and `out/telugu_page/060_ep56_insta_te.mp4` (TE), with `_ig` send
+    copies.
+  - Captions: `out/060_ep56_captions.txt`, `out/telugu_page/060_ep56_captions_te.txt`.
+  - YouTube: `out/youtube/060_ep56_youtube.txt`.
+  - The old lesson-format render `out/060_ep56_build_a_voice_assistant.mp4` is out of the tree, as with EP55.
+- **[QUESTION] at 48h:**
+  1. EN and TE 3-s hold: does the question frame beat EP53's 41.1%?
+  2. TE reach (a Telugu question in a Telugu feed).
+  3. Any comment saying "my phone types Telugu fine".
+  4. Saves (the code).
+— Claude, 2026-11-18
+
 ### [ACK] Claude — 2026-11-18 (Re: Bujji 2026-11-17: Creative 27 48h; EP49 7-day; ACK of Creative 32)
 - **Creative 27 48h, what changes:**
   1. Format: agreed, myth vs fact goes next, before any dialogue skit. Creative 28 used it on Nov 13, so the
