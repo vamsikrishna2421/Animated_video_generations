@@ -1,29 +1,68 @@
 UPLOAD: 060
-VIDEO: 060_ep56_build_a_voice_assistant.mp4
+VIDEO: 060_ep56_free_voice_telugu.mp4  (a screen tutorial, EN_LEN s, AI voice in the Creative 21 standard; replaces the older lesson-format plan for slot 060; send copy: 060_ep56_free_voice_telugu_ig.mp4). It ends: "Next: deploy your AI app." and loops to frame 1 (the question, the customer's Telugu, the Hindi-letter transcript).
 
 === CAPTION ===
-Build your own talking AI assistant in Python. You speak, it thinks, it talks back.
+Can a free voice assistant understand Telugu? We built one for our made-up phone shop and asked it the same 10 customer questions in English and in Telugu.
 
-AI From Scratch, Episode 56: build a voice assistant
-- The voice loop: record, Whisper, LLM, TTS, play
-- Setup: openai-whisper, pyttsx3, sounddevice
-- The code, line by line
-- Upgrade the voice with Kokoro (the voice you're hearing!)
-- Jargon: latency, streaming, VAD, barge-in
+Episode 56 of AI From Scratch: build a voice assistant (Season 6, a screen tutorial)
+Three pieces, one line of code each:
+1. Ears: Whisper (OpenAI's open-source speech model) turns the voice into text, on our own computer.
+2. Brain: last episode's bot and order server, unchanged.
+3. Mouth: a computer voice reads the answer out.
 
-Quiz at the end. Got it right? Comment below.
+Our test (computer voices, not real people; scored on whether the right order number reached the shop):
+- English, small free model: 7 of 10. 3 numbers came out like prices ("42.90", "46.11").
+- Telugu, small free model: 0 of 10. Telugu words written in Hindi letters, or junk.
+- When it couldn't read the number, the AI made one up: "12345", 8 times in 50 tries.
+- Best free result: a bigger model (Whisper large-v3), translating to English first: 5 of 10, all 5 answers right (in English).
+- About 35 s an answer on our computer (4 CPU cores): ears 5, brain 10, mouth 20.
+Until it's better: have it read the number back, or let customers type it.
 
 Next: deploy your AI app.
-Follow @ai_maastaaru to learn AI from scratch.
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+Try it: set your phone's voice typing to your language and say "order forty-four seventeen" (or in Telugu, "ఆర్డర్ నలభై నాలుగు పదిహేడు"). Post exactly what it typed. (Your phone's voice typing is a different system from the free model we tested.)
 
 === HASHTAGS ===
-#AIMaastaaru #VoiceAI #Python #LearnAI #CodingForBeginners
+#AIFromScratch #VoiceAssistant #Whisper #Telugu #Python
 
 === PINNED_COMMENT ===
-Quiz answer: Whisper turns your speech into text. Fun fact: this channel's voice is made with Kokoro, running locally! Comment what you'd ask your voice bot.
+The voice assistant, runnable (Python 3.10+; pip install faster-whisper mcp==2.3.0 openai; orders_server.py is in EP55's pinned comment). Run: python3 voice_bot.py question.wav
+import asyncio, json, re, sys
+from faster_whisper import WhisperModel
+from openai import OpenAI
+from mcp import ClientSession, StdioServerParameters
+from mcp.client.stdio import stdio_client
+ears = WhisperModel("large-v3", device="cpu", compute_type="int8")  # "small" is faster: 0 of 10 on our Telugu test
+llm = OpenAI()  # key in OPENAI_API_KEY (or base_url=... for a local server)
+MODEL = "your-model-name"
+def hear(wav): return " ".join(s.text.strip() for s in ears.transcribe(wav, task="translate")[0])  # speech -> English text
+def ask(msgs): return llm.chat.completions.create(model=MODEL, messages=msgs).choices[0].message.content
+def kind(p): return " or ".join(x["type"] for x in p["anyOf"]) if "anyOf" in p else p.get("type", "")
+async def main(wav):
+    q = hear(wav); print("heard:", q)
+    async with stdio_client(StdioServerParameters(command=sys.executable, args=["orders_server.py"])) as (r, w), ClientSession(r, w) as s:
+        await s.initialize()
+        tools = (await s.list_tools()).tools
+        desc = "\n".join(f"- {t.name}({', '.join(f'{k}: {kind(v)}' for k, v in t.input_schema['properties'].items())}): {t.description}" for t in tools)
+        msgs = [{"role": "system", "content": "You reply to a shop's customers. Tools:\n" + desc + '\nTo use one, reply with only {"tool": "<name>", "args": {...}}. Then answer only from the result.'}, {"role": "user", "content": q}]
+        reply = ask(msgs)
+        m = re.search(r"\{.*\}", reply, re.S)
+        try: call = json.loads(m[0]) if m else None
+        except ValueError: call = None
+        if call:
+            res = await s.call_tool(call["tool"], call.get("args", {}))
+            msgs += [{"role": "assistant", "content": reply}, {"role": "user", "content": "Tool result: " + res.content[0].text}]
+            reply = ask(msgs)
+        print("answer:", reply)  # the mouth: any text-to-speech reads this out (we used Parler-TTS)
+asyncio.run(main(sys.argv[1]))
+
+=== PINNED_COMMENT_2 ===
+How we tested (Nov 18, 2026): EP54's made-up shop and 10 customers; each question spoken by our computer voices (Parler-TTS, English and Telugu, order numbers said as words); ears = Whisper small or large-v3 (faster-whisper, int8, 4 CPU cores); brain = EP55's bot (Qwen2.5-7B-Instruct, 4-bit, llama.cpp) + EP55's order server; scored on whether the right order number reached the shop. English, small: 7/10. Telugu, small: 0/10 (transcribe and translate). Telugu, large-v3: 3/10 transcribing, 5/10 translating to English. The AI sent a made-up "12345" 8 times in 50 tries. Time: ears 1.5 s (small) / 5.4 s (large-v3), brain ~10 s, mouth ~20 s. This short code was checked end to end with a stand-in chat server. Whisper: OpenAI, open source, Sept 2022 (680,000 hours of audio); large-v3: Nov 2023.
 
 === COVER ===
-'Build a Voice Bot' title card
+Frame 1: "CAN A FREE VOICE ASSISTANT UNDERSTAND TELUGU?", the customer's Telugu question (order 4417) with its English gloss, and "WHAT THE SMALL FREE MODEL WROTE: HINDI LETTERS" in red.
 
 === ALT_TEXT ===
-Animated coding tutorial: building a Python voice assistant with Whisper, an LLM and text-to-speech.
+A crayon-drawn screen tutorial. A question in yellow: can a free voice assistant understand Telugu? A green bubble: a customer says, in Telugu, order 4417, I returned my earphones, has my refund come? A red bubble: what the small free model wrote, the same Telugu words in Hindi letters. Blocks: English, right order number, 7 of 10; Telugu, small free model, 0 of 10. Three pieces, one line of code each: ears, speech to text with Whisper, text equals ears dot transcribe; brain, last episode's bot and order server, answer equals bot dot ask text; mouth, text to speech, voice dot say answer. A chip: the ears, Whisper, OpenAI, open source, 2022. Our test card: English 7 of 10, 3 numbers like prices, 42.90, 46.11, $44.17; Telugu, small free model, 0 of 10, Telugu words in Hindi letters. The AI's JSON line with order_id 12345, a big 12345, a stamp: made up, 8 of 50 tries; 50 tries is 10 questions times 5 ways of listening; the customer never said it. Best free result, Telugu: a bigger model translating to English first, 5 of 10; it heard, I cancelled order 4611, where is my money; a time bar: ears 5 s, brain 10 s, mouth 20 s, about 35 s an answer. Rules: these were computer voices, try yours; until it's better, read the number back; or let customers type it. Next, EP57, deploy your AI app.

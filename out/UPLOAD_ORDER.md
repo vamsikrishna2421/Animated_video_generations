@@ -64,7 +64,7 @@ Already posted: `out/posted/`.
 | 057 | ep53 | 15,373 Tokens or 247? Build RAG Over Your PDFs, Part 2 (EP53; a screen tutorial, AI voice) | ready |
 | 058 | ep54 | ₹1,299 or ₹0? Build an AI Agent with Tools (EP54; a screen tutorial, AI voice) | ready |
 | 059 | ep55 | 1 Right or 10? Build Your Own MCP Server (EP55; a screen tutorial, AI voice) | ready |
-| 060 | ep56 | Build a Voice Assistant | ready |
+| 060 | ep56 | Can a Free Voice Assistant Understand Telugu? (EP56: build a voice assistant; a screen tutorial, AI voice) | ready |
 | 061 | ep57 | Deploy Your AI App | ready |
 | 062 | ep58 | Your AI Career Roadmap | ready |
 | 063 | q06 | Quiz #6: Episodes 50–58 | ready |

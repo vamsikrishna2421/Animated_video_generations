@@ -1,0 +1,31 @@
+UPLOAD: 060 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/060_ep56_insta_te.mp4  (a screen tutorial, TE_LEN s, Telugu voice on our TTS, English on-screen text; send copy: telugu_page/060_ep56_insta_te_ig.mp4). It ends: "తర్వాత: మీ యాప్ ని లైవ్ కి తీసుకెళ్ళడం." taruvaata frame 1.
+
+=== CAPTION ===
+Free voice assistant ki Telugu ardham avutundaa? Maa made-up phone shop kosam okati tayaaru chesaam; ade 10 mandi customers prashnalu English lo, Telugu lo adigaam.
+
+AI From Scratch Episode 56: voice assistant (Season 6, screen tutorial)
+Moodu bhaagaalu, okkodaaniki okka line code:
+1. Chevulu: Whisper (OpenAI open-source speech model) maata ni text ga maarustundi, maa computer lone.
+2. Medadu: poyina episode bot, order server, maarpu lekundaa.
+3. Noru: computer voice javaabu chadivi chebutundi.
+
+Maa test (computer voices, nijamaina manushulu kaadu; correct order number shop ki cherindaa ane score):
+- English, chinna free model: 10 lo 7. 3 numbers dharallaa vachaayi ("42.90", "46.11").
+- Telugu, chinna free model: 10 lo 0. Telugu maata, Hindi aksharaallo; leda junk.
+- Number ardham kaanappudu, chatbot tane "12345" pettesindi: 50 prayatnaallo 8 saarlu.
+- Best free result: pedda model (Whisper large-v3), mundu English loki translate chesthe: 10 lo 5 (javaabulu English lo).
+- Okka javaabuki daadaapu 35 seconds: chevulu 5, medadu 10, noru 20.
+Appatidaaka: number tirigi chadivi cheppinchandi, leda number type lo teesukondi.
+
+Next: mee app ni live ki teesukellatam.
+Follow @ai_maastaaru_telugu.
+
+=== COMMENT PROMPT ===
+Try it: mee phone voice typing ni Telugu ki set chesi "ఆర్డర్ నలభై నాలుగు పదిహేడు" ani cheppandi. Adi type chesindi exact ga comment lo pettandi. (Mee phone voice typing, memu test chesina free model kante veru system.)
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #VoiceAssistant #Whisper #Python
+
+=== PINNED_COMMENT ===
+Code (Python; full runnable voice_bot.py English page pinned comment lo): ears = WhisperModel("large-v3"); hear(wav) = transcribe(task="translate"); EP55 bot + order server; "small" model Telugu lo 0/10. Test (Nov 18, 2026): computer voices (Parler-TTS), Whisper small / large-v3 (int8, 4 CPU cores), EP55 bot (Qwen2.5-7B-Instruct, 4-bit), correct order number score: English small 7/10, Telugu small 0/10, Telugu large-v3 translate 5/10; "12345" 8/50. Whisper: OpenAI, open source, Sept 2022.

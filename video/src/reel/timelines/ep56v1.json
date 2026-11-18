@@ -1,0 +1,1129 @@
+{
+ "id": "ep56v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Build a voice assistant",
+ "musicVol": [
+  0.12,
+  0.22
+ ],
+ "title": "Can a Free Voice Assistant Understand Telugu? (EP56)",
+ "handle": "@ai_maastaaru",
+ "label": "EP56",
+ "fps": 30,
+ "musicDrops": [
+  [
+   207,
+   243
+  ],
+  [
+   942,
+   980
+  ],
+  [
+   1264,
+   1303
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   290,
+   1.8
+  ],
+  [
+   290,
+   573,
+   0.8
+  ],
+  [
+   573,
+   1473,
+   1.1
+  ],
+  [
+   1473,
+   1810,
+   2.6
+  ],
+  [
+   1324,
+   1473,
+   1.9,
+   1
+  ],
+  [
+   1473,
+   1810,
+   3.0,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1810,
+ "music": "reel/ep56v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_voice56",
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     }
+    ],
+    "captionTop": 1360,
+    "t": {
+     "question": "CAN A FREE VOICE ASSISTANT UNDERSTAND TELUGU?",
+     "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
+     "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
+     "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
+     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
+     "brain": "answer = bot.ask(text)",
+     "mouth": "voice.say(answer)",
+     "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
+     "enBad": [
+      "\"Order 42.90\"",
+      "\"order 46.11\"",
+      "\"or a $44.17\""
+     ],
+     "madeup": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}",
+     "heardE": "\"I cancelled order 4611. Where is my money?\"",
+     "times": [
+      [
+       "ears",
+       5.4
+      ],
+      [
+       "brain",
+       9.5
+      ],
+      [
+       "mouth",
+       20.2
+      ]
+     ],
+     "full": "full code: in the pinned comment"
+    },
+    "yt": {
+     "chapter": "Can it understand Telugu?",
+     "title": "Can it understand Telugu?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 290,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep56v1/line_01.wav",
+     "from": 10,
+     "frames": 267,
+     "words": [
+      {
+       "w": "Can",
+       "from": 12,
+       "to": 23
+      },
+      {
+       "w": "a",
+       "from": 23,
+       "to": 26
+      },
+      {
+       "w": "free",
+       "from": 26,
+       "to": 34
+      },
+      {
+       "w": "voice",
+       "from": 34,
+       "to": 44
+      },
+      {
+       "w": "assistant",
+       "from": 44,
+       "to": 59
+      },
+      {
+       "w": "understand",
+       "from": 59,
+       "to": 81
+      },
+      {
+       "w": "Telugu?",
+       "from": 81,
+       "to": 102
+      },
+      {
+       "w": "We",
+       "from": 102,
+       "to": 106
+      },
+      {
+       "w": "built",
+       "from": 106,
+       "to": 116
+      },
+      {
+       "w": "one.",
+       "from": 116,
+       "to": 132
+      },
+      {
+       "w": "Right",
+       "from": 132,
+       "to": 142
+      },
+      {
+       "w": "order",
+       "from": 142,
+       "to": 151
+      },
+      {
+       "w": "number,",
+       "from": 151,
+       "to": 172
+      },
+      {
+       "w": "in",
+       "from": 172,
+       "to": 177
+      },
+      {
+       "w": "English:",
+       "from": 177,
+       "to": 202
+      },
+      {
+       "w": "7",
+       "from": 202,
+       "to": 205
+      },
+      {
+       "w": "of",
+       "from": 205,
+       "to": 209
+      },
+      {
+       "w": "10.",
+       "from": 209,
+       "to": 216
+      },
+      {
+       "w": "In",
+       "from": 231,
+       "to": 239
+      },
+      {
+       "w": "Telugu:",
+       "from": 239,
+       "to": 269
+      },
+      {
+       "w": "0.",
+       "from": 269,
+       "to": 277
+      }
+     ],
+     "cues": {
+      "1": 98,
+      "2": 231
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_voice56",
+   "data": {
+    "beats": [
+     {
+      "prop": "pieces",
+      "n": 2
+     }
+    ],
+    "captionTop": 1360,
+    "t": {
+     "question": "CAN A FREE VOICE ASSISTANT UNDERSTAND TELUGU?",
+     "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
+     "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
+     "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
+     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
+     "brain": "answer = bot.ask(text)",
+     "mouth": "voice.say(answer)",
+     "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
+     "enBad": [
+      "\"Order 42.90\"",
+      "\"order 46.11\"",
+      "\"or a $44.17\""
+     ],
+     "madeup": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}",
+     "heardE": "\"I cancelled order 4611. Where is my money?\"",
+     "times": [
+      [
+       "ears",
+       5.4
+      ],
+      [
+       "brain",
+       9.5
+      ],
+      [
+       "mouth",
+       20.2
+      ]
+     ],
+     "full": "full code: in the pinned comment"
+    },
+    "yt": {
+     "chapter": "Ears, brain, mouth",
+     "title": "Ears, brain, mouth",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 290,
+   "frames": 283,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep56v1/line_02.wav",
+     "from": 0,
+     "frames": 261,
+     "words": [
+      {
+       "w": "Three",
+       "from": 2,
+       "to": 10
+      },
+      {
+       "w": "pieces,",
+       "from": 10,
+       "to": 21
+      },
+      {
+       "w": "one",
+       "from": 21,
+       "to": 34
+      },
+      {
+       "w": "line",
+       "from": 34,
+       "to": 41
+      },
+      {
+       "w": "of",
+       "from": 41,
+       "to": 45
+      },
+      {
+       "w": "code",
+       "from": 45,
+       "to": 56
+      },
+      {
+       "w": "each:",
+       "from": 56,
+       "to": 68
+      },
+      {
+       "w": "ears",
+       "from": 68,
+       "to": 85
+      },
+      {
+       "w": "turn",
+       "from": 85,
+       "to": 91
+      },
+      {
+       "w": "the",
+       "from": 91,
+       "to": 97
+      },
+      {
+       "w": "voice",
+       "from": 97,
+       "to": 105
+      },
+      {
+       "w": "into",
+       "from": 105,
+       "to": 112
+      },
+      {
+       "w": "text,",
+       "from": 112,
+       "to": 120
+      },
+      {
+       "w": "the",
+       "from": 120,
+       "to": 142
+      },
+      {
+       "w": "brain",
+       "from": 142,
+       "to": 150
+      },
+      {
+       "w": "is",
+       "from": 150,
+       "to": 154
+      },
+      {
+       "w": "last",
+       "from": 154,
+       "to": 161
+      },
+      {
+       "w": "episode's",
+       "from": 161,
+       "to": 183
+      },
+      {
+       "w": "bot,",
+       "from": 183,
+       "to": 190
+      },
+      {
+       "w": "and",
+       "from": 207,
+       "to": 212
+      },
+      {
+       "w": "a",
+       "from": 212,
+       "to": 215
+      },
+      {
+       "w": "mouth",
+       "from": 215,
+       "to": 223
+      },
+      {
+       "w": "reads",
+       "from": 223,
+       "to": 231
+      },
+      {
+       "w": "the",
+       "from": 231,
+       "to": 236
+      },
+      {
+       "w": "answer",
+       "from": 236,
+       "to": 246
+      },
+      {
+       "w": "out.",
+       "from": 246,
+       "to": 253
+      }
+     ],
+     "cues": {
+      "1": 68,
+      "2": 207
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_voice56",
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 3
+     },
+     {
+      "prop": "madeup",
+      "n": 4
+     },
+     {
+      "prop": "fix",
+      "n": 5
+     }
+    ],
+    "captionTop": 1360,
+    "t": {
+     "question": "CAN A FREE VOICE ASSISTANT UNDERSTAND TELUGU?",
+     "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
+     "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
+     "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
+     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
+     "brain": "answer = bot.ask(text)",
+     "mouth": "voice.say(answer)",
+     "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
+     "enBad": [
+      "\"Order 42.90\"",
+      "\"order 46.11\"",
+      "\"or a $44.17\""
+     ],
+     "madeup": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}",
+     "heardE": "\"I cancelled order 4611. Where is my money?\"",
+     "times": [
+      [
+       "ears",
+       5.4
+      ],
+      [
+       "brain",
+       9.5
+      ],
+      [
+       "mouth",
+       20.2
+      ]
+     ],
+     "full": "full code: in the pinned comment"
+    },
+    "yt": {
+     "chapter": "Our test, the best free result",
+     "title": "Our test, the best free result",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 573,
+   "frames": 900,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep56v1/line_03.wav",
+     "from": 0,
+     "frames": 321,
+     "words": [
+      {
+       "w": "Our",
+       "from": 0,
+       "to": 6
+      },
+      {
+       "w": "test:",
+       "from": 6,
+       "to": 15
+      },
+      {
+       "w": "10",
+       "from": 15,
+       "to": 34
+      },
+      {
+       "w": "customers,",
+       "from": 34,
+       "to": 50
+      },
+      {
+       "w": "in",
+       "from": 50,
+       "to": 54
+      },
+      {
+       "w": "computer",
+       "from": 54,
+       "to": 73
+      },
+      {
+       "w": "voices.",
+       "from": 73,
+       "to": 104
+      },
+      {
+       "w": "English:",
+       "from": 104,
+       "to": 128
+      },
+      {
+       "w": "3",
+       "from": 128,
+       "to": 131
+      },
+      {
+       "w": "numbers",
+       "from": 131,
+       "to": 142
+      },
+      {
+       "w": "came",
+       "from": 142,
+       "to": 150
+      },
+      {
+       "w": "out",
+       "from": 150,
+       "to": 155
+      },
+      {
+       "w": "like",
+       "from": 155,
+       "to": 168
+      },
+      {
+       "w": "prices.",
+       "from": 168,
+       "to": 183
+      },
+      {
+       "w": "Telugu,",
+       "from": 199,
+       "to": 212
+      },
+      {
+       "w": "small",
+       "from": 212,
+       "to": 228
+      },
+      {
+       "w": "free",
+       "from": 228,
+       "to": 236
+      },
+      {
+       "w": "model:",
+       "from": 236,
+       "to": 248
+      },
+      {
+       "w": "Telugu",
+       "from": 248,
+       "to": 266
+      },
+      {
+       "w": "words,",
+       "from": 266,
+       "to": 277
+      },
+      {
+       "w": "in",
+       "from": 277,
+       "to": 292
+      },
+      {
+       "w": "Hindi",
+       "from": 292,
+       "to": 301
+      },
+      {
+       "w": "letters.",
+       "from": 301,
+       "to": 316
+      }
+     ],
+     "cues": {
+      "1": 83,
+      "2": 199
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep56v1/line_04.wav",
+     "from": 331,
+     "frames": 239,
+     "words": [
+      {
+       "w": "When",
+       "from": 331,
+       "to": 346
+      },
+      {
+       "w": "it",
+       "from": 346,
+       "to": 351
+      },
+      {
+       "w": "couldn't",
+       "from": 351,
+       "to": 366
+      },
+      {
+       "w": "read",
+       "from": 366,
+       "to": 383
+      },
+      {
+       "w": "the",
+       "from": 383,
+       "to": 390
+      },
+      {
+       "w": "number,",
+       "from": 390,
+       "to": 404
+      },
+      {
+       "w": "the",
+       "from": 404,
+       "to": 410
+      },
+      {
+       "w": "AI",
+       "from": 410,
+       "to": 428
+      },
+      {
+       "w": "made",
+       "from": 428,
+       "to": 446
+      },
+      {
+       "w": "one",
+       "from": 446,
+       "to": 453
+      },
+      {
+       "w": "up:",
+       "from": 453,
+       "to": 468
+      },
+      {
+       "w": "1,",
+       "from": 468,
+       "to": 483
+      },
+      {
+       "w": "2,",
+       "from": 483,
+       "to": 488
+      },
+      {
+       "w": "3,",
+       "from": 488,
+       "to": 501
+      },
+      {
+       "w": "4,",
+       "from": 501,
+       "to": 506
+      },
+      {
+       "w": "5.",
+       "from": 506,
+       "to": 520
+      },
+      {
+       "w": "8",
+       "from": 520,
+       "to": 524
+      },
+      {
+       "w": "times",
+       "from": 524,
+       "to": 534
+      },
+      {
+       "w": "in",
+       "from": 534,
+       "to": 539
+      },
+      {
+       "w": "50",
+       "from": 539,
+       "to": 544
+      },
+      {
+       "w": "tries.",
+       "from": 544,
+       "to": 564
+      }
+     ],
+     "cues": {
+      "1": 393
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep56v1/line_05.wav",
+     "from": 582,
+     "frames": 303,
+     "words": [
+      {
+       "w": "Best",
+       "from": 582,
+       "to": 596
+      },
+      {
+       "w": "free",
+       "from": 596,
+       "to": 602
+      },
+      {
+       "w": "result:",
+       "from": 602,
+       "to": 625
+      },
+      {
+       "w": "a",
+       "from": 625,
+       "to": 627
+      },
+      {
+       "w": "bigger",
+       "from": 627,
+       "to": 637
+      },
+      {
+       "w": "model,",
+       "from": 637,
+       "to": 656
+      },
+      {
+       "w": "translating",
+       "from": 656,
+       "to": 672
+      },
+      {
+       "w": "to",
+       "from": 672,
+       "to": 676
+      },
+      {
+       "w": "English",
+       "from": 676,
+       "to": 710
+      },
+      {
+       "w": "first.",
+       "from": 710,
+       "to": 719
+      },
+      {
+       "w": "5",
+       "from": 719,
+       "to": 726
+      },
+      {
+       "w": "of",
+       "from": 726,
+       "to": 730
+      },
+      {
+       "w": "10.",
+       "from": 730,
+       "to": 735
+      },
+      {
+       "w": "About",
+       "from": 751,
+       "to": 764
+      },
+      {
+       "w": "35",
+       "from": 764,
+       "to": 769
+      },
+      {
+       "w": "seconds",
+       "from": 769,
+       "to": 781
+      },
+      {
+       "w": "an",
+       "from": 781,
+       "to": 786
+      },
+      {
+       "w": "answer",
+       "from": 786,
+       "to": 796
+      },
+      {
+       "w": "on",
+       "from": 796,
+       "to": 801
+      },
+      {
+       "w": "our",
+       "from": 801,
+       "to": 807
+      },
+      {
+       "w": "computer,",
+       "from": 807,
+       "to": 826
+      },
+      {
+       "w": "and",
+       "from": 826,
+       "to": 832
+      },
+      {
+       "w": "20",
+       "from": 832,
+       "to": 845
+      },
+      {
+       "w": "of",
+       "from": 845,
+       "to": 849
+      },
+      {
+       "w": "that",
+       "from": 849,
+       "to": 857
+      },
+      {
+       "w": "is",
+       "from": 857,
+       "to": 861
+      },
+      {
+       "w": "the",
+       "from": 861,
+       "to": 868
+      },
+      {
+       "w": "mouth.",
+       "from": 868,
+       "to": 878
+      }
+     ],
+     "cues": {
+      "1": 715,
+      "2": 751
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_voice56",
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 6
+     }
+    ],
+    "captionTop": 1360,
+    "t": {
+     "question": "CAN A FREE VOICE ASSISTANT UNDERSTAND TELUGU?",
+     "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
+     "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
+     "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
+     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
+     "brain": "answer = bot.ask(text)",
+     "mouth": "voice.say(answer)",
+     "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
+     "enBad": [
+      "\"Order 42.90\"",
+      "\"order 46.11\"",
+      "\"or a $44.17\""
+     ],
+     "madeup": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"12345\"}}",
+     "heardE": "\"I cancelled order 4611. Where is my money?\"",
+     "times": [
+      [
+       "ears",
+       5.4
+      ],
+      [
+       "brain",
+       9.5
+      ],
+      [
+       "mouth",
+       20.2
+      ]
+     ],
+     "full": "full code: in the pinned comment"
+    },
+    "yt": {
+     "chapter": "Try it with your voice",
+     "title": "Try it with your voice",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1473,
+   "frames": 337,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/ep56v1/line_06.wav",
+     "from": 12,
+     "frames": 290,
+     "words": [
+      {
+       "w": "These",
+       "from": 12,
+       "to": 18
+      },
+      {
+       "w": "were",
+       "from": 18,
+       "to": 23
+      },
+      {
+       "w": "computer",
+       "from": 23,
+       "to": 36
+      },
+      {
+       "w": "voices,",
+       "from": 36,
+       "to": 48
+      },
+      {
+       "w": "so",
+       "from": 48,
+       "to": 51
+      },
+      {
+       "w": "try",
+       "from": 51,
+       "to": 66
+      },
+      {
+       "w": "it",
+       "from": 66,
+       "to": 69
+      },
+      {
+       "w": "with",
+       "from": 69,
+       "to": 74
+      },
+      {
+       "w": "yours.",
+       "from": 74,
+       "to": 81
+      },
+      {
+       "w": "Until",
+       "from": 81,
+       "to": 88
+      },
+      {
+       "w": "it's",
+       "from": 88,
+       "to": 109
+      },
+      {
+       "w": "better,",
+       "from": 109,
+       "to": 121
+      },
+      {
+       "w": "have",
+       "from": 121,
+       "to": 126
+      },
+      {
+       "w": "it",
+       "from": 126,
+       "to": 138
+      },
+      {
+       "w": "read",
+       "from": 138,
+       "to": 143
+      },
+      {
+       "w": "the",
+       "from": 143,
+       "to": 147
+      },
+      {
+       "w": "number",
+       "from": 147,
+       "to": 154
+      },
+      {
+       "w": "back,",
+       "from": 154,
+       "to": 160
+      },
+      {
+       "w": "or",
+       "from": 160,
+       "to": 163
+      },
+      {
+       "w": "let",
+       "from": 163,
+       "to": 180
+      },
+      {
+       "w": "customers",
+       "from": 180,
+       "to": 195
+      },
+      {
+       "w": "type",
+       "from": 195,
+       "to": 200
+      },
+      {
+       "w": "it.",
+       "from": 200,
+       "to": 209
+      },
+      {
+       "w": "Next:",
+       "from": 232,
+       "to": 257
+      },
+      {
+       "w": "deploy",
+       "from": 257,
+       "to": 272
+      },
+      {
+       "w": "your",
+       "from": 272,
+       "to": 280
+      },
+      {
+       "w": "AI",
+       "from": 280,
+       "to": 285
+      },
+      {
+       "w": "app.",
+       "from": 285,
+       "to": 294
+      }
+     ],
+     "cues": {
+      "1": 81,
+      "2": 232
+     }
+    }
+   ]
+  }
+ ]
+}
