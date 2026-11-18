@@ -13,6 +13,7 @@
 # Writes series/scripts/ep56_demo/voice.json.
 #   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep56/voice_demo.py
 import asyncio
+import gc
 import json
 import re
 import secrets
@@ -54,7 +55,9 @@ async def main():
     heard = []
     models = {}
     for tag, lang, size, task in EARS:   # 1. the ears
-        if size not in models:
+        if size not in models:   # one ears model in memory at a time (the first run ran out of memory at D)
+            models.clear()
+            gc.collect()
             models[size] = WhisperModel(size, device="cpu", compute_type="int8", cpu_threads=4)
         for q in [r for r in qs if r["lang"] == lang]:
             t0 = time.time()

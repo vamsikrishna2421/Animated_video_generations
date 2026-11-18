@@ -3,7 +3,7 @@
 # (Parler, on our machine: no real person's voice). The Telugu questions say the order number the way people say it,
 # in words ("నలభై నాలుగు పదిహేడు" for 4417). Also times the "mouth": how long Parler takes to say 3 typical answers.
 # Writes series/scripts/ep56_demo/audio/{en,te}_<order>.wav (16 kHz mono) and series/scripts/ep56_demo/questions.json.
-#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep56/make_questions.py
+#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep56/make_questions.py [en|te]
 import json
 import sys
 import time
@@ -33,6 +33,20 @@ TE = {
     "4588": "నా స్పీకర్ రిటర్న్, ఆర్డర్ నలభై ఐదు ఎనభై ఎనిమిది: రిఫండ్ అయిందా?",
     "4650": "నా ఆర్డర్ నలభై ఆరు యాభై కన్ఫర్మ్ అయిందా?",
 }
+# Fix after a first run (series/scripts/ep56_demo/README.md): Parler read the English questions' digits ("order 4417",
+# "Rs 1,299") in Hindi, so the English clips are remade with the numbers in English words, the way people say them.
+EN = {
+    "4417": "I returned my earphones, order forty-four seventeen. Has my refund of twelve ninety-nine rupees come?",
+    "4502": "Order forty-five oh two: has my power bank shipped?",
+    "4388": "When will my smartwatch arrive? Order forty-three eighty-eight.",
+    "4290": "Did my charger get delivered? Order forty-two ninety.",
+    "4611": "I cancelled order forty-six eleven. Where is my money?",
+    "4475": "Order forty-four seventy-five, when is my mouse coming?",
+    "4533": "Why hasn't order forty-five thirty-three reached me?",
+    "4362": "Was order forty-three sixty-two delivered?",
+    "4588": "My speaker return, order forty-five eighty-eight: refund done?",
+    "4650": "Is my order forty-six fifty confirmed?",
+}
 VOICE = {   # Parler speakers (one woman, one man per language would mix two variables; one voice per language)
     "en": "Mary speaks English with an Indian accent in a clear, natural voice, like a customer asking a question on the "
           "phone, at a moderate pace. The recording is very clear, close-up, with no background noise.",
@@ -55,9 +69,13 @@ def to16k(path):
 
 def main():
     (OUT / "audio").mkdir(parents=True, exist_ok=True)
-    rows = []
+    only = sys.argv[1:]   # e.g. "en": remake one language, keep the other's rows
+    old = json.loads((OUT / "questions.json").read_text()) if (OUT / "questions.json").exists() else {}
+    rows = [r for r in old.get("rows", []) if only and r["lang"] not in only]
     for oid, q_en, must in e54.QS:
-        for lang, text in (("en", q_en), ("te", TE[oid])):
+        for lang, text in (("en", EN[oid]), ("te", TE[oid])):
+            if only and lang not in only:
+                continue
             out = OUT / "audio" / f"{lang}_{oid}.wav"
             t0 = time.time()
             say(lang, text, out, voice=VOICE[lang], pause=0.15)
@@ -67,6 +85,9 @@ def main():
                          "seconds_audio": dur, "seconds_to_make": secs})
             print(lang, oid, dur, "s audio,", secs, "s to make", flush=True)
             (OUT / "questions.json").write_text(json.dumps({"rows": rows}, indent=1, ensure_ascii=False))
+    if only:   # the mouth was timed on the first run
+        (OUT / "questions.json").write_text(json.dumps({"rows": rows, "mouth": old.get("mouth", [])}, indent=1, ensure_ascii=False))
+        return
     mouth = []
     for a in ANSWERS:   # the mouth: our TTS saying a typical answer
         out = OUT / "audio" / "_mouth.wav"
