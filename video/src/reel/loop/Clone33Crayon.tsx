@@ -127,6 +127,7 @@ const StClone: React.FC<SP> = ({ s }) => {
               c.fillStyle = INK; c.textAlign = "left"; c.fillText(t, PH.x + PH.w - 20 - w, PH.y + 725); c.restore();
             }
           } else payCard(c, T.pay, f / 30);   // render review: the PAY card stays while the copy asks for money
+          if (P === "hook") chip(c, "our own test · no real person was copied", PH.x + PH.w / 2, PH.y + 560, "#1e293b", "#e2e8f0", 1, fit(c, "our own test · no real person was copied", 680, 32, 800));   // honesty tag in frame 1
           if (P === "clip3") chip(c, "what a scammer makes the copy say", PH.x + PH.w / 2, PH.y + 560, "#fee2e2", "#7f1d1d", seg(f, ln.from, ln.from + 8), fit(c, "what a scammer makes the copy say", 680, 36, 800));
           if (P === "guess") {
             const c1 = cu(1, 0.3), t = f - c1;
@@ -159,7 +160,6 @@ const StClone: React.FC<SP> = ({ s }) => {
             c.fillStyle = "#334155"; rrect(c, 70, y + 62, 800, 80, 14); c.fill(); c.restore();
             if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3);
-            c.font = SANS(fit(c, name, 700, 40, 800), 800); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(name, 70, y + 40);
             const col = last ? "#94a3b8" : q === 0 ? "#4ade80" : "#f87171";   // the copy scores like Kittu
             c.fillStyle = col; rrect(c, 70, y + 62, 800 * (v / 100) * easeOut(k), 80, 14); c.fill();
             c.font = SANS(80, 900); c.fillStyle = col; c.textAlign = "right"; c.fillText(String(v), 1020, y + 132);

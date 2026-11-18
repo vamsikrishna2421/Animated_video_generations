@@ -72,6 +72,7 @@ SCENES = [("s_a", (1, 2, 3, 4), {"boost": 2.0, "duck_lines": [[1, 0.0], [2, 0.0]
           ("s_c", (10,), {"boost": 1.8, "lift": 0.6, "rise": 2.2, "tail": 0.0}),   # render check: the arc was flat into the end
           ("s_d", (11,), {"outro": True, "pre": 0.2, "boost": 2.6, "lift": 0.7, "rise": 3.0, "tail": 0.0})]
 GAP = {1: 0.35, 2: 0.4, 3: 0.35, 4: 0.7, 5: 0.3, 6: 0.4, 7: 0.35, 8: 0.35, 10: 0.35, 11: 0.0}
+GAP_TE = {**GAP, 1: 0.25, 3: 0.25, 6: 0.3, 8: 0.25, 10: 0.25}   # render v2: TE ran 60.9 s
 FLAGS_TE = {"s_c": {"boost": 2.0, "rise": 2.4}, "s_d": {"boost": 2.8, "rise": 3.2}}
 YT = {"s_a": "Which one is really Kittu?", "s_b": "A copy from 13 seconds", "s_c": "A family code word", "s_d": "What's our code word?"}
 MARK = re.compile(r"\[\d+\]\s*")
@@ -87,7 +88,7 @@ def spec(lang="en"):
          "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimer": True, "tempo": 1.0, "captionTop": 1370}
     if te:
-        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.4})
+        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.4, "endPad": 0.1})
     scenes = []
     for scid, ns, flags in SCENES:
         lines, beats = [], []
@@ -95,8 +96,8 @@ def spec(lang="en"):
             who, prop, en, tel = LINES[n]
             raw = tel if te else en
             show = (SHOW_TE.get(n) if te else None) or SHOW.get(n) or SHOW_EN_CLIPS.get(n) or MARK.sub("", en).replace(" | ", " ").strip()
-            ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": raw, "maxgap": 0.3, "gap": GAP.get(n, 0.3), "show": show,
-                  "tempo": 1.0 if who.startswith("clip") else (1.15 if te else 1.12)}
+            ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": raw, "maxgap": 0.3, "gap": (GAP_TE if te else GAP).get(n, 0.3), "show": show,
+                  "tempo": 1.0 if who.startswith("clip") else (1.16 if te else 1.12)}
             if " | " in raw:
                 p1, p2 = raw.split(" | ")
                 pz = (SPLIT_PAUSE_TE if te else SPLIT_PAUSE).get(n, 0.4)

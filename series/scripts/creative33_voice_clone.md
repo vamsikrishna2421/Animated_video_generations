@@ -59,7 +59,7 @@ line in the reel took 7.6 s (EN) and 9.1 s (TE). A program's score, not people's
 | 4 | storyteller | Which one is Kittu? Three, two, one. | నిజమైన కిట్టు ఎవరు? మూడు, రెండు, ఒకటి. |
 | 5 | storyteller | Two is the copy, made from thirteen seconds of his voice note. Here's what a scammer makes it say. | రెండోది కాపీ; కిట్టు వాయిస్ నోట్ లోని పదమూడు సెకన్లతో చేసింది. స్కామర్ దానితో ఇలా చెప్పిస్తాడు. |
 | 6 | clip3 | I had a small accident. Please send fifty thousand rupees to this number. | చిన్న యాక్సిడెంట్ అయింది. ఈ నంబర్ కి యాభై వేలు పంపు, ఇప్పుడే. |
-| 7 | storyteller | A voice-matching program scored them. Real Kittu: sixty-two. | The copy: sixty-two. A stranger: seven. | వాయిస్ మ్యాచ్ ప్రోగ్రామ్ స్కోర్ చేసింది. నిజమైన కిట్టు: యాభై నాలుగు. | కాపీ: యాభై ఎనిమిది. బయటి వ్యక్తి: పదహారు. |
+| 7 | storyteller | A voice-matching program scored them. Original Kittu: sixty-two. | The copy: sixty-two. A stranger: seven. | వాయిస్ మ్యాచ్ ప్రోగ్రామ్ స్కోర్ చేసింది. అసలు కిట్టు: యాభై నాలుగు. | కాపీ: యాభై ఎనిమిది. బయటి వ్యక్తి: పదహారు. |
 | 8 | storyteller | And note one? A computer voice too. We didn't copy a real person, on purpose. Scammers do, from your reels. | మరి ఒకటో వాయిస్ నోట్? అదీ కంప్యూటర్ వాయిస్ నే. నిజమైన మనిషిని మేము కావాలనే కాపీ చేయలేదు; స్కామర్లు మీ రీల్స్ నుంచి చేస్తారు. |
 | 10 | storyteller | So set a family code word, in person. A money call or voice note: cut it, call his saved number, ask the code word. | Report it on 1930. | అందుకే, ఇంట్లో వాళ్ళకే తెలిసిన ఒక కోడ్ వర్డ్ పెట్టుకోండి. డబ్బులు అడిగితే: కట్ చేసి, సేవ్ చేసిన నంబర్ కి ఫోన్ చేసి, కోడ్ వర్డ్ అడగండి. | ఒకటి, తొమ్మిది, మూడు, సున్నా కి చెప్పండి. |
 | 11 | storyteller | A new voice note from Kittu. This time, Amma types back: what's our code word? | కిట్టు నుంచి కొత్త వాయిస్ నోట్. ఈసారి అమ్మ రిప్లై: మన కోడ్ వర్డ్ చెప్పు? |
@@ -78,3 +78,14 @@ line in the reel took 7.6 s (EN) and 9.1 s (TE). A program's score, not people's
 
 ## Caption try-it (no comment ask, per Bujji's Nov 17 read)
 "Today: agree a family code word with your parents, in person. Never post it."
+
+## Render review (human-viewer, v1 render), what changed for v2
+Both viewers flagged:
+- 28-31 s: the score card was empty while the voice read "Original Kittu: sixty-two". Now all three labels and empty bars are up from the first word, and each bar fills as its number is spoken. The chip "it can't tell them apart" overclaimed; it now reads "couldn't tell? the program scored them the same", with "a program's score, not human ears" underneath.
+- "Real Kittu" sat badly next to the twist (Kittu is a computer voice), so it is now "original Kittu" in voice, bars and caption. The frame-1 subtitle "Kittu = a made-up computer voice" spoiled the twist; it is gone. The subtitle now reads only "one of them is an AI copy of his voice".
+- The two notes showed different lengths (0:04 / 0:03) and waveforms, a tell before the guess. Both now read 0:03 with the same waveform until the reveal.
+- The ₹50,000 PAY card disappeared while the copy asked for money. It now stays up and pulsing through the scam line.
+- The reveal and twist chips covered Amma's face. They moved to the phone column.
+- Telugu: the title collided with the header badge on the zoom cut, so the title and phone moved down. The narration said 13 seconds while the test used 13.6 s; it now says పదమూడున్నర (13.5), and the screen shows 13.5 s.
+- The rule card: text is bigger. "1930" now comes up 1/3 s before it is spoken and stays big for the rest of the line.
+- Audio: there is a 0.7 s pause plus a music drop before the copy's score, the key number. The guess gap is now 0.7 s.

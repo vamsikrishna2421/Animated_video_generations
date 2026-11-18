@@ -20,7 +20,7 @@
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.3,
+ "endPad": 0.1,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -127,9 +127,9 @@
      "file": "01_storyteller.wav",
      "text": "ఈ రెండు వాయిస్ నోట్స్ లో, ఒక్కటే నిజంగా కిట్టుది. [1] ఇంకోటి, కంప్యూటర్ చేసిన అతని గొంతు కాపీ. మీరు చెప్పగలరా?",
      "maxgap": 0.3,
-     "gap": 0.35,
+     "gap": 0.25,
      "show": "Of these 2 voice notes, only one is really Kittu's. The other is a computer-made copy of his voice. Can you tell?",
-     "tempo": 1.15
+     "tempo": 1.16
     },
     {
      "who": "clip1",
@@ -145,7 +145,7 @@
      "file": "03_clip2.wav",
      "text": "అమ్మా, ఈరోజు టాబ్లెట్లు వేసుకున్నావా?",
      "maxgap": 0.3,
-     "gap": 0.35,
+     "gap": 0.25,
      "show": "(voice note 2) \"Amma, did you take your tablets today?\"",
      "tempo": 1.0
     },
@@ -156,7 +156,7 @@
      "maxgap": 0.3,
      "gap": 0.7,
      "show": "Who is the real Kittu? 3, 2, 1.",
-     "tempo": 1.15
+     "tempo": 1.16
     }
    ]
   },
@@ -240,14 +240,14 @@
      "maxgap": 0.3,
      "gap": 0.3,
      "show": "Number 2 is the copy, made from 13.5 seconds of Kittu's voice note. This is what a scammer makes it say.",
-     "tempo": 1.15
+     "tempo": 1.16
     },
     {
      "who": "clip3",
      "file": "06_clip3.wav",
      "text": "చిన్న యాక్సిడెంట్ అయింది. ఈ నంబర్ కి యాభై వేలు పంపు, ఇప్పుడే.",
      "maxgap": 0.3,
-     "gap": 0.4,
+     "gap": 0.3,
      "show": "(the copy) \"I had a small accident. Send ₹50,000 to this number, right now.\"",
      "tempo": 1.0
     },
@@ -258,7 +258,7 @@
      "maxgap": 0.3,
      "gap": 0.35,
      "show": "A voice-matching program scored them. Original Kittu: 54. <pause 0.7> The copy: 58. A stranger: 16.",
-     "tempo": 1.15,
+     "tempo": 1.16,
      "tts": "వాయిస్ మ్యాచ్ ప్రోగ్రామ్ స్కోర్ చేసింది. అసలు కిట్టు: యాభై నాలుగు.",
      "file2": "07b_storyteller.wav",
      "tts2": "కాపీ: యాభై ఎనిమిది. బయటి వ్యక్తి: పదహారు.",
@@ -269,9 +269,9 @@
      "file": "08_storyteller.wav",
      "text": "మరి ఒకటో వాయిస్ నోట్? అదీ కంప్యూటర్ వాయిస్ నే. [1] నిజమైన మనిషిని మేము కావాలనే కాపీ చేయలేదు; స్కామర్లు మీ రీల్స్ నుంచి చేస్తారు.",
      "maxgap": 0.3,
-     "gap": 0.35,
+     "gap": 0.25,
      "show": "And voice note 1? That's a computer voice too. We didn't copy a real person, on purpose; scammers do it from your reels.",
-     "tempo": 1.15
+     "tempo": 1.16
     }
    ]
   },
@@ -326,9 +326,9 @@
      "file": "10_storyteller.wav",
      "text": "అందుకే, ఇంట్లో వాళ్ళకే తెలిసిన ఒక కోడ్ వర్డ్ పెట్టుకోండి. [1] డబ్బులు అడిగితే: కట్ చేసి, సేవ్ చేసిన నంబర్ కి ఫోన్ చేసి, కోడ్ వర్డ్ అడగండి. <pause 0.4> [2] ఒకటి, తొమ్మిది, మూడు, సున్నా కి చెప్పండి.",
      "maxgap": 0.3,
-     "gap": 0.35,
+     "gap": 0.25,
      "show": "So set a code word only your family knows. If they ask for money: cut it, call the saved number, ask the code word. <pause 0.4> Report on 1930.",
-     "tempo": 1.15,
+     "tempo": 1.16,
      "tts": "అందుకే, ఇంట్లో వాళ్ళకే తెలిసిన ఒక కోడ్ వర్డ్ పెట్టుకోండి. డబ్బులు అడిగితే: కట్ చేసి, సేవ్ చేసిన నంబర్ కి ఫోన్ చేసి, కోడ్ వర్డ్ అడగండి.",
      "file2": "10b_storyteller.wav",
      "tts2": "ఒకటి, తొమ్మిది, మూడు, సున్నా కి చెప్పండి.",
@@ -391,7 +391,7 @@
      "maxgap": 0.3,
      "gap": 0.0,
      "show": "A new voice note from Kittu. This time Amma replies: tell me our code word?",
-     "tempo": 1.15
+     "tempo": 1.16
     }
    ]
   }
