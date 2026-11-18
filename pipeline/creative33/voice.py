@@ -40,7 +40,7 @@ MUST = {"en": {1: [("kittu",), ("copy",), ("tell",)], 4: [("kittu",), ("three", 
                10: [("code",), ("word",), ("money",), ("saved",)], "10b": [("report",), ("1930", "nineteen")], 11: [("kittu",), ("code",)]},
         "te": {}}
 JUDGE_TEXT = {4: "Which one is Kittu? 3, 2, 1.", 5: "2 is the copy, made from 13 seconds of his voice note. Here's what a scammer makes it say.",
-              7: "A voice-matching program scored them. Real Kittu: 62.", "7b": "The copy: 62. A stranger: 7.",
+              7: "A voice-matching program scored them. Original Kittu: 62.", "7b": "The copy: 62. A stranger: 7.",
               "10b": "Report it on 1930."}
 
 TELUGU = re.compile(r"[ఀ-౿]")

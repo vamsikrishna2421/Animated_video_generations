@@ -23,7 +23,7 @@ const CLAP = "reel/creative09v1/clap.wav";
 const GREEN = "#16a34a", RED = "#dc2626";
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, "Noto Sans Telugu", "Noto Color Emoji", sans-serif`;
 
-const PH = { x: 300, y: 380, w: 740, h: 880 };
+const PH = { x: 300, y: 410, w: 740, h: 860 };
 const phone = (c: Ctx, contact: string, buzz = 0) => {
   c.save(); c.translate(Math.sin(buzz * 60) * 8 * buzz, 0);
   c.fillStyle = "rgba(4,8,40,0.35)"; rrect(c, PH.x + 12, PH.y + 14, PH.w, PH.h, 56); c.fill();
@@ -104,9 +104,9 @@ const StClone: React.FC<SP> = ({ s }) => {
         const inChat = ["hook", "clip1", "clip2", "guess", "reveal", "clip3", "twist", "loop"].includes(P);
         if (inChat) {
           c.font = SANS(fit(c, "WHICH ONE IS REALLY KITTU?", W - 100, 60), 900); c.fillStyle = "#fde68a"; c.textAlign = "center";
-          c.fillText("WHICH ONE IS REALLY KITTU?", W / 2, 300);   // script review: say AI in frame 1
-          c.font = SANS(fit(c, "one is an AI copy of his voice · Kittu = a made-up computer voice", W - 100, 32, 800), 800); c.fillStyle = "#fca5a5";
-          c.fillText("one is an AI copy of his voice · Kittu = a made-up computer voice", W / 2, 350);
+          c.fillText("WHICH ONE IS REALLY KITTU?", W / 2, 330);   // render review: lower, clear of the badge when the cut zooms in
+          c.font = SANS(fit(c, "one of them is an AI copy of his voice", W - 100, 40, 800), 800); c.fillStyle = "#fca5a5";
+          c.fillText("one of them is an AI copy of his voice", W / 2, 378);
           const mood = P === "reveal" || P === "clip3" ? "shock" : "worried";
           person(c, "padma" as BillWho, [170, 960], 0.5, mood, "phone", false, r);
           phone(c, T.contact, P === "loop" ? seg(f, ln.from, ln.from + 20) * (1 - seg(f, ln.from + 20, ln.from + 24)) : 0);
@@ -114,8 +114,8 @@ const StClone: React.FC<SP> = ({ s }) => {
           const p1 = P === "clip1" ? seg(f, ln.from, endL) : i1 >= 0 && f > ls[i1].from + ls[i1].frames ? 1 : 0;
           const p2 = P === "clip2" || P === "clip3" ? seg(f, ln.from, endL) : i2 >= 0 && f > ls[i2].from + ls[i2].frames ? 1 : 0;
           const twisted = P === "twist" && seg(f, cu(1, 0.3), cu(1, 0.3) + 1) > 0;
-          note(c, PH.y + 170, "voice note 1", "0:04", loopOn ? 0 : p1, P === "clip1", 11, twisted ? "#ede9fe" : "#fff");
-          note(c, PH.y + 330, P === "clip3" ? "voice note 2 · the copy" : "voice note 2", P === "clip3" ? "0:07" : "0:03", loopOn ? 0 : p2, P === "clip2" || P === "clip3", 22, P === "reveal" || P === "clip3" || P === "twist" ? "#fee2e2" : "#fff");
+          note(c, PH.y + 170, "voice note 1", "0:03", loopOn ? 0 : p1, P === "clip1", 11, twisted ? "#ede9fe" : "#fff");   // render review: identical until the reveal
+          note(c, PH.y + 330, P === "clip3" ? "voice note 2 · the copy" : "voice note 2", P === "clip3" ? "0:06" : "0:03", loopOn ? 0 : p2, P === "clip2" || P === "clip3", 11, P === "reveal" || P === "clip3" || P === "twist" ? "#fee2e2" : "#fff");
           if (P === "loop") {   // script review: end on the code word (the moment people forward)
             const kN = seg(f, ln.from, ln.from + 8);
             if (kN > 0) { c.save(); c.globalAlpha = clamp(kN * 3); note(c, PH.y + 490, "voice note 3 · new", "0:04", 0, false, 33, "#fff"); c.restore(); }
@@ -126,8 +126,8 @@ const StClone: React.FC<SP> = ({ s }) => {
               c.fillStyle = "#dcf8c6"; rrect(c, PH.x + PH.w - 50 - w, PH.y + 660, w, 100, 24); c.fill();
               c.fillStyle = INK; c.textAlign = "left"; c.fillText(t, PH.x + PH.w - 20 - w, PH.y + 725); c.restore();
             }
-          } else if (P !== "clip3") payCard(c, T.pay, f / 30);
-          if (P === "clip3") chip(c, "what a scammer makes the copy say", W / 2, PH.y + 560, "#fee2e2", "#7f1d1d", seg(f, ln.from, ln.from + 8), 40);
+          } else payCard(c, T.pay, f / 30);   // render review: the PAY card stays while the copy asks for money
+          if (P === "clip3") chip(c, "what a scammer makes the copy say", PH.x + PH.w / 2, PH.y + 560, "#fee2e2", "#7f1d1d", seg(f, ln.from, ln.from + 8), fit(c, "what a scammer makes the copy say", 680, 36, 800));
           if (P === "guess") {
             const c1 = cu(1, 0.3), t = f - c1;
             const n = t < 0 ? 3 : t < 14 ? 3 : t < 28 ? 2 : 1;
@@ -137,33 +137,36 @@ const StClone: React.FC<SP> = ({ s }) => {
           }
           if (P === "reveal") {
             stamp(c, "A COPY", PH.x + PH.w / 2 + 40, PH.y + 395, 70, RED, seg(f, ln.from, ln.from + 6));
-            chip(c, `made from ${T.refSecs} of his voice note`, W / 2, PH.y + 560, "#1e293b", "#f8fafc", seg(f, ln.from + 10, ln.from + 18), 40);
-            chip(c, `by a voice-cloning service · ${T.made}`, W / 2, PH.y + 650, "#1e293b", "#f8fafc", seg(f, ln.from + 24, ln.from + 32), 38);
+            chip(c, `copied from ${T.refSecs} of his voice note`, PH.x + PH.w / 2, PH.y + 520, "#1e293b", "#f8fafc", seg(f, ln.from + 10, ln.from + 18), fit(c, `copied from ${T.refSecs} of his voice note`, 680, 38, 800));
+            chip(c, `the copy was ${T.made}`, PH.x + PH.w / 2, PH.y + 600, "#1e293b", "#f8fafc", seg(f, ln.from + 24, ln.from + 32), fit(c, `the copy was ${T.made}`, 680, 38, 800));
           }
           if (P === "twist") {
             stamp(c, "ALSO A COMPUTER VOICE", PH.x + PH.w / 2 + 20, PH.y + 235, 52, "#7c3aed", seg(f, ln.from + 4, ln.from + 10), -0.06);
-            chip(c, "we didn't copy a real person, on purpose", W / 2, PH.y + 560, "#ede9fe", "#4c1d95", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), 38);
-            chip(c, "scammers copy real voices: from reels, or one call", W / 2, PH.y + 650, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.3) + 24, cu(1, 0.3) + 32), fit(c, "scammers copy real voices: from reels, or one call", 980, 38, 800));
+            chip(c, "we didn't copy a real person, on purpose", PH.x + PH.w / 2, PH.y + 520, "#ede9fe", "#4c1d95", seg(f, cu(1, 0.3), cu(1, 0.3) + 8), fit(c, "we didn't copy a real person, on purpose", 680, 36, 800));
+            chip(c, "scammers copy real voices from reels", PH.x + PH.w / 2, PH.y + 600, "#fee2e2", "#7f1d1d", seg(f, cu(1, 0.3) + 24, cu(1, 0.3) + 32), fit(c, "scammers copy real voices from reels", 680, 36, 800));
           }
         } else if (P === "score") {
           c.font = SANS(fit(c, "HOW CLOSE TO KITTU?", W - 100, 62), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("HOW CLOSE TO KITTU?", W / 2, 330);
           c.font = SANS(fit(c, "a voice-matching program, against another sentence Kittu said", W - 120, 34, 700), 700); c.fillStyle = "#e2e8f0"; c.fillText("a voice-matching program, against another sentence Kittu said", W / 2, 385);
           const rows = T.scores as [string, number][];
-          rows.forEach(([name, v], q) => {
+          rows.forEach(([name, v], q) => {   // render review: the rows are there from the first word (28-31 s was empty)
             const last = q === rows.length - 1;
-            const at = q === 0 ? cu(1, 0.3) : q === 1 ? cu(2, 0.4) : cu(2, 0.4) + 50;
-            const k = seg(f, at, at + 14); if (k <= 0) return;
-            const y = 450 + q * 190;
+            const at = q === 0 ? cu(1, 0.3) : q === 1 ? cu(2, 0.4) : cu(2, 0.4) + 32;
+            const k = seg(f, at, at + 14);
+            const y = 450 + q * 210;
+            c.save(); c.globalAlpha = clamp(seg(f, ln.from + q * 4, ln.from + 6 + q * 4) * 3);
+            c.font = SANS(fit(c, name, 700, 44, 800), 800); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(name, 70, y + 40);
+            c.fillStyle = "#334155"; rrect(c, 70, y + 62, 800, 80, 14); c.fill(); c.restore();
+            if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3);
             c.font = SANS(fit(c, name, 700, 40, 800), 800); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(name, 70, y + 40);
             const col = last ? "#94a3b8" : q === 0 ? "#4ade80" : "#f87171";   // the copy scores like Kittu
-            c.fillStyle = "#334155"; rrect(c, 70, y + 62, 800, 70, 14); c.fill();
-            c.fillStyle = col; rrect(c, 70, y + 62, 800 * (v / 100) * easeOut(k), 70, 14); c.fill();
-            c.font = SANS(70, 900); c.fillStyle = col; c.textAlign = "right"; c.fillText(String(v), 1020, y + 122);
+            c.fillStyle = col; rrect(c, 70, y + 62, 800 * (v / 100) * easeOut(k), 80, 14); c.fill();
+            c.font = SANS(80, 900); c.fillStyle = col; c.textAlign = "right"; c.fillText(String(v), 1020, y + 132);
             c.restore();
           });
-          chip(c, "it can't tell them apart", W / 2, 1100, "#fee2e2", "#7f1d1d", seg(f, cu(2, 0.4) + 20, cu(2, 0.4) + 28), 46);
-          chip(c, "a program's score, not your ears · we didn't test people", W / 2, 1210, "#1e293b", "#cbd5e1", seg(f, cu(2, 0.4) + 50, cu(2, 0.4) + 58), fit(c, "a program's score, not your ears · we didn't test people", 980, 32, 800));
+          chip(c, "couldn't tell? the program scored them the same", W / 2, 1140, "#fee2e2", "#7f1d1d", seg(f, cu(2, 0.4) + 20, cu(2, 0.4) + 28), fit(c, "couldn't tell? the program scored them the same", 980, 44, 800));
+          chip(c, "a program's score, not human ears", W / 2, 1260, "#1e293b", "#e2e8f0", seg(f, cu(2, 0.4) + 44, cu(2, 0.4) + 52), 38);
         } else if (P === "fact") {   // (moved to the caption after the script review; kept for reference)
           const k = seg(f, cu(1, 0.3), cu(1, 0.3) + 8);
           c.font = SANS(fit(c, "NOT JUST A TRICK FOR A REEL", W - 100, 56), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("NOT JUST A TRICK FOR A REEL", W / 2, 340);
@@ -177,13 +180,15 @@ const StClone: React.FC<SP> = ({ s }) => {
             if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, 190, 22); c.fill();
             c.font = SANS(76, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(n, 100, y + 120);
-            c.font = SANS(fit(c, t, W - 300, 50, 900), 900); c.fillStyle = "#f8fafc"; c.fillText(t, 190, y + 88);
-            c.font = SANS(fit(c, sub, W - 300, 34, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(sub, 190, y + 145); c.restore();
+            c.font = SANS(fit(c, t, W - 300, 58, 900), 900); c.fillStyle = "#f8fafc"; c.fillText(t, 190, y + 88);
+            c.font = SANS(fit(c, sub, W - 300, 40, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(sub, 190, y + 150); c.restore();
           };
           c.font = SANS(fit(c, "BEFORE THE CALL COMES", W - 100, 60), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("BEFORE THE CALL COMES", W / 2, 330);
           row(390, "1", "a family code word", "agree it in person · never post it", seg(f, ln.from + 2, ln.from + 10));
           row(610, "2", "asked for money? cut it", "call the saved number · ask the code word", seg(f, cu(1, 0.3), cu(1, 0.3) + 8));
-          row(830, "3", "report it: 1930", "or cybercrime.gov.in", seg(f, cu(2, 0.3), cu(2, 0.3) + 8));
+          row(830, "3", "report it: 1930", "or cybercrime.gov.in", seg(f, cu(2, 0.3) - 10, cu(2, 0.3) - 2));
+          const k19 = seg(f, cu(2, 0.3) - 10, cu(2, 0.3) - 2);   // render review: 1930 big and up for the whole line
+          if (k19 > 0) { c.save(); c.globalAlpha = clamp(k19 * 3); c.font = SANS(150, 900); c.fillStyle = "#f87171"; c.textAlign = "center"; c.fillText("1930", W / 2, 1200); c.restore(); }
         }
       }} />
     </>
