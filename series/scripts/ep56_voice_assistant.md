@@ -73,6 +73,6 @@ WhatsApp bot (Qwen2.5-7B-Instruct, 4-bit) + EP55's fixed order server. Scored: d
 7. Telugu, bigger ears (large-v3), translate: 5/10; a time bar: ears 5 s + brain 10 s + mouth 20 s = ~35 s.
 8. Rule card: test in your language · real numbers · read the number back; "NEXT · EP57: DEPLOY YOUR AI APP".
 
-## Caption ask (a try-it with a posted answer)
+## Caption try-it (no comment ask: Bujji's Creative 27 48h read, Nov 17)
 "Try it: set your phone's voice typing to Telugu and say 'ఆర్డర్ నలభై నాలుగు పదిహేడు' (order 4417), or any 4-digit
 number. Post exactly what it typed." (Your phone's voice typing is a different system from the free model we tested.)
