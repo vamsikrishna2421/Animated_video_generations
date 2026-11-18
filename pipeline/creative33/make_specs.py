@@ -3,6 +3,8 @@
 # voice notes from "Kittu", and a payment screen for ₹50,000. Which one is really him? Voice note 2 is a copy made by a
 # voice-cloning service from 13 seconds of his voice note (our test: pipeline/creative33/clone_demo.py). Kittu is a
 # computer voice too; nobody real was cloned. The two voice notes are the test's own audio (clip1, clip2: no TTS).
+# Script review: both notes say the same neutral line (the guess is about the voice); the scam line plays after the
+# reveal; the score is against another sentence Kittu said; 1930 spoken; McAfee moved to the caption.
 # Writes reels/creative33v1.json and reels/creative33te.json. [n] marks the words the picture waits for; " | " = two takes.
 #   python3 pipeline/creative33/make_specs.py
 import json
@@ -13,67 +15,67 @@ ROOT = Path(__file__).resolve().parents[2]
 R = ROOT / "reels"
 
 LINES = {
-    1: ("storyteller", "hook", "One of these voice notes is really Kittu. [1] The other wants fifty thousand rupees from his mother.",
-        "ఈ రెండు వాయిస్ నోట్స్ లో, ఒక్కటే నిజమైన కిట్టు. [1] ఇంకోటి, వాళ్ళ అమ్మ దగ్గర యాభై వేలు అడుగుతోంది."),
-    2: ("clip1", "clip1", "Hi Amma, I reached the hostel.", "అమ్మా, హాస్టల్ కి చేరుకున్నాను."),
-    3: ("clip2", "clip2", "Amma, it's me, Kittu. I had a small accident.", "అమ్మా, నేను కిట్టుని. చిన్న యాక్సిడెంట్ అయింది."),
+    1: ("storyteller", "hook", "One of these voice notes is really Kittu. [1] The other is an AI copy of his voice. Can you tell?",
+        "ఈ రెండు వాయిస్ నోట్స్ లో, ఒక్కటే నిజంగా కిట్టుది. [1] ఇంకోటి, కంప్యూటర్ చేసిన అతని గొంతు కాపీ. మీరు చెప్పగలరా?"),
+    2: ("clip1", "clip1", "Amma, did you take your tablets today?", "అమ్మా, ఈరోజు టాబ్లెట్లు వేసుకున్నావా?"),
+    3: ("clip2", "clip2", "Amma, did you take your tablets today?", "అమ్మా, ఈరోజు టాబ్లెట్లు వేసుకున్నావా?"),
     4: ("storyteller", "guess", "Which one is Kittu? [1] Three, two, one.", "నిజమైన కిట్టు ఎవరు? [1] మూడు, రెండు, ఒకటి."),
-    5: ("storyteller", "reveal", "Voice note two is a copy. [1] A voice-cloning service made it from thirteen seconds of his voice note, in under ten seconds.",
-        "రెండో వాయిస్ నోట్, ఒక కాపీ. [1] వాయిస్ క్లోనింగ్ సర్వీస్, అతని వాయిస్ నోట్ లోని పదమూడు సెకన్లతో, పది సెకన్ల లోపే దీన్ని తయారు చేసింది."),
-    6: ("storyteller", "score", "A voice-matching program scored them. [1] Kittu against his own voice: sixty-two. The copy: sixty-two. | [2] Someone else: seven.",
-        "వాయిస్ మ్యాచ్ చేసే ప్రోగ్రామ్ తో స్కోర్ చేశాం. [1] కిట్టు, తన గొంతుతో: యాభై నాలుగు. కాపీ: యాభై ఎనిమిది. | [2] వేరే వ్యక్తి: పదహారు."),
-    7: ("storyteller", "twist", "And voice note one? Also a computer voice. [1] Kittu isn't a real person: we made both, to show you how easy it is.",
-        "మరి ఒకటో వాయిస్ నోట్? అది కూడా కంప్యూటర్ వాయిస్. [1] కిట్టు నిజమైన మనిషి కాదు; ఎంత సులువో చూపించడానికి, రెండూ మేమే చేశాం."),
-    8: ("storyteller", "fact", "In McAfee's survey, [1] forty-seven percent of Indians had faced an AI voice scam, or knew someone who had.",
-        "మెకఫీ సర్వే లో, [1] నలభై ఏడు శాతం భారతీయులు, వాయిస్ క్లోన్ స్కామ్ ని ఎదుర్కొన్నారు, లేదా ఎదుర్కొన్నవాళ్ళు తెలుసు."),
-    9: ("storyteller", "rule", "So set a family code word today. [1] Any call asking for money: hang up, and call back on the number you saved.",
-        "అందుకే ఈరోజే, ఇంట్లో ఒక కోడ్ వర్డ్ పెట్టుకోండి. [1] డబ్బులు అడిగే కాల్ వస్తే: పెట్టేసి, సేవ్ చేసిన నంబర్ కి మీరే తిరిగి కాల్ చేసుకోండి."),
-    10: ("storyteller", "loop", "Amma's phone buzzes again. [1] A new voice note from Kittu...",
-         "అమ్మ ఫోన్ మళ్ళీ మోగింది. [1] కిట్టు నుంచి, కొత్త వాయిస్ నోట్..."),
+    5: ("storyteller", "reveal", "Two is the copy, made from thirteen seconds of his voice note. [1] Here's what a scammer makes it say.",
+        "రెండోది కాపీ; కిట్టు వాయిస్ నోట్ లోని పదమూడు సెకన్లతో చేసింది. [1] స్కామర్ దానితో ఇలా చెప్పిస్తాడు."),
+    6: ("clip3", "clip3", "I had a small accident. Please send fifty thousand rupees to this number.",
+        "చిన్న యాక్సిడెంట్ అయింది. ఈ నంబర్ కి యాభై వేలు పంపు, ఇప్పుడే."),
+    7: ("storyteller", "score", "A voice-matching program scored them. [1] Real Kittu: sixty-two. | [2] The copy: sixty-two. A stranger: seven.",
+        "వాయిస్ మ్యాచ్ ప్రోగ్రామ్ స్కోర్ చేసింది. [1] నిజమైన కిట్టు: యాభై నాలుగు. | [2] కాపీ: యాభై ఎనిమిది. బయటి వ్యక్తి: పదహారు."),
+    8: ("storyteller", "twist", "And note one? A computer voice too. [1] We didn't copy a real person, on purpose. Scammers do, from your reels.",
+        "మరి ఒకటో వాయిస్ నోట్? అదీ కంప్యూటర్ వాయిస్ నే. [1] నిజమైన మనిషిని మేము కావాలనే కాపీ చేయలేదు; స్కామర్లు మీ రీల్స్ నుంచి చేస్తారు."),
+    10: ("storyteller", "rule", "So set a family code word, in person. [1] A money call or voice note: cut it, call his saved number, ask the code word. | [2] Report it on 1930.",
+         "అందుకే, ఇంట్లో వాళ్ళకే తెలిసిన ఒక కోడ్ వర్డ్ పెట్టుకోండి. [1] డబ్బులు అడిగితే: కట్ చేసి, సేవ్ చేసిన నంబర్ కి ఫోన్ చేసి, కోడ్ వర్డ్ అడగండి. | [2] ఒకటి, తొమ్మిది, మూడు, సున్నా కి చెప్పండి."),
+    11: ("storyteller", "loop", "A new voice note from Kittu. [1] This time, Amma types back: what's our code word?",
+         "కిట్టు నుంచి కొత్త వాయిస్ నోట్. [1] ఈసారి అమ్మ రిప్లై: మన కోడ్ వర్డ్ చెప్పు?"),
 }
-SHOW = {1: "One of these voice notes is really Kittu. The other wants ₹50,000 from his mother.",
+SHOW = {7: "A voice-matching program scored them. Real Kittu: 62. <pause 0.5> The copy: 62. A stranger: 7.",
         4: "Which one is Kittu? 3, 2, 1.",
-        5: "Voice note 2 is a copy. A voice-cloning service made it from 13 seconds of his voice note, in under 10 seconds.",
-        6: "A voice-matching program scored them. Kittu against his own voice: 62. The copy: 62. <pause 0.5> Someone else: 7.",
-        7: "And voice note 1? Also a computer voice. Kittu isn't a real person: we made both, to show you how easy it is.",
-        8: "In McAfee's survey, 47% of Indians had faced an AI voice scam, or knew someone who had."}
+        5: "2 is the copy, made from 13 seconds of his voice note. Here's what a scammer makes it say.",
+        10: "So set a family code word, in person. A money call or voice note: cut it, call his saved number, ask the code word. <pause 0.4> Report it on 1930."}
 SHOW_TE = {
-    1: "Of these 2 voice notes, only one is the real Kittu. The other is asking his mother for ₹50,000.",
-    2: "(voice note 1) \"Amma, I reached the hostel.\"",
-    3: "(voice note 2) \"Amma, it's me, Kittu. I had a small accident.\"",
+    1: "Of these 2 voice notes, only one is really Kittu's. The other is a computer-made copy of his voice. Can you tell?",
+    2: "(voice note 1) \"Amma, did you take your tablets today?\"",
+    3: "(voice note 2) \"Amma, did you take your tablets today?\"",
     4: "Who is the real Kittu? 3, 2, 1.",
-    5: "Voice note 2 is a copy. A voice-cloning service made it from 13 seconds of his voice note, in under 10 seconds.",
-    6: "We scored them with a voice-matching program. Kittu against his own voice: 54. The copy: 58. <pause 0.5> Someone else: 16.",
-    7: "And voice note 1? Also a computer voice. Kittu isn't a real person; we made both, to show how easy it is.",
-    8: "In McAfee's survey, 47% of Indians had faced a voice-clone scam, or knew someone who had.",
-    9: "So set a family code word today. Any call asking for money: hang up, and call back yourself on the number you saved.",
-    10: "Amma's phone rings again. A new voice note from Kittu...",
+    5: "Number 2 is the copy, made from 13 seconds of Kittu's voice note. This is what a scammer makes it say.",
+    6: "(the copy) \"I had a small accident. Send ₹50,000 to this number, right now.\"",
+    7: "A voice-matching program scored them. Real Kittu: 54. <pause 0.5> The copy: 58. A stranger: 16.",
+    8: "And voice note 1? That's a computer voice too. We didn't copy a real person, on purpose; scammers do it from your reels.",
+    10: "So set a code word only your family knows. If they ask for money: cut it, call the saved number, ask the code word. <pause 0.4> Tell 1930.",
+    11: "A new voice note from Kittu. This time Amma replies: tell me our code word?",
 }
-SHOW_EN_CLIPS = {2: "(voice note 1) \"Hi Amma, I reached the hostel.\"", 3: "(voice note 2) \"Amma, it's me, Kittu. I had a small accident.\""}
-SPLIT_PAUSE = {6: 0.5}
-SPLIT_PAUSE_TE = {6: 0.5}
-CLIPS = {   # the test's own audio, trimmed at the pauses (series/scripts/creative33_demo/audio): (file, start s, end s)
-    ("en", 2): ("en_note_00.wav", 0.0, 3.57), ("en", 3): ("en_clone10s_scam.wav", 0.0, 4.4),
-    ("te", 2): ("te_note_00.wav", 0.0, 2.23), ("te", 3): ("te_clone10s_scam.wav", 0.0, 3.5),
+SHOW_EN_CLIPS = {2: "(voice note 1) \"Amma, did you take your tablets today?\"", 3: "(voice note 2) \"Amma, did you take your tablets today?\"",
+                 6: "(the copy) \"I had a small accident. Please send ₹50,000 to this number.\""}
+SPLIT_PAUSE = {7: 0.5, 10: 0.4}
+SPLIT_PAUSE_TE = {7: 0.5, 10: 0.4}
+CLIPS = {   # the test's own audio (series/scripts/creative33_demo/audio): (file, start s, end s); notes 1 and 2 say the same
+    ("en", 2): ("en_kittu_held_0.wav", 0.0, 3.64), ("en", 3): ("en_clone10s_held_0.wav", 0.0, 3.16), ("en", 6): ("en_clone10s_scam.wav", 2.5, 8.05),
+    ("te", 2): ("te_kittu_held_0.wav", 0.0, 3.57), ("te", 3): ("te_clone10s_held_0.wav", 0.0, 2.41), ("te", 6): ("te_clone10s_scam.wav", 2.3, 6.5),
 }
 T = {   # on screen (English in both versions); the scores are the language's own test (series/scripts/creative33_demo/clone.json)
     "contact": "Kittu ❤",
     "pay": "₹50,000",
-    "scores": {"en": [["Kittu vs his own voice", 62], ["the copy (from 13 s)", 62], ["a copy from 3.6 s", 50], ["someone else", 7]],
-               "te": [["Kittu vs his own voice", 54], ["the copy (from 13.6 s)", 58], ["someone else", 16]]},
+    "scores": {"en": [["real Kittu", 62], ["the copy (from 13 s of his voice)", 62], ["a stranger", 7]],
+               "te": [["real Kittu", 54], ["the copy (from 13.6 s of his voice)", 58], ["a stranger", 16]]},
     "refSecs": {"en": "13 s", "te": "13.6 s"},
+    "made": {"en": "made in 8 seconds", "te": "made in 9 seconds"},
     "mcafee": "47% of Indians faced an AI voice scam or know someone who did",
     "mcafeeSrc": "McAfee survey, 1,010 adults in India, May 2023",
 }
-SCENES = [("s_a", (1, 2, 3, 4), {"boost": 1.6, "duck_lines": [[1, 0.0], [2, 0.0]], "tail": 0.0}),
-          ("s_b", (5, 6, 7), {"boost": 1.0, "lift": 0.6, "drop_at": [[1, 2, 0.45]], "tail": 0.0}),
-          ("s_c", (8, 9), {"boost": 1.3, "lift": 0.5, "tail": 0.0}),
-          ("s_d", (10,), {"outro": True, "pre": 0.3, "boost": 2.2, "lift": 0.7, "rise": 2.6, "tail": 0.0})]
-GAP = {1: 0.4, 2: 0.6, 3: 0.6, 4: 0.5, 5: 0.35, 6: 0.4, 7: 0.4, 8: 0.35, 9: 0.4, 10: 0.0}
+SCENES = [("s_a", (1, 2, 3, 4), {"boost": 1.7, "duck_lines": [[1, 0.0], [2, 0.0]], "tail": 0.0}),
+          ("s_b", (5, 6, 7, 8), {"boost": 1.1, "lift": 0.6, "duck_lines": [[1, 0.0]], "drop_at": [[2, 2, 0.5]], "tail": 0.0}),
+          ("s_c", (10,), {"boost": 1.3, "lift": 0.5, "tail": 0.0}),
+          ("s_d", (11,), {"outro": True, "pre": 0.2, "boost": 2.2, "lift": 0.7, "rise": 2.6, "tail": 0.0})]
+GAP = {1: 0.35, 2: 0.4, 3: 0.35, 4: 0.45, 5: 0.3, 6: 0.4, 7: 0.35, 8: 0.35, 10: 0.35, 11: 0.0}
 FLAGS_TE = {"s_d": {"boost": 2.4, "rise": 2.8}}
-YT = {"s_a": "Which one is really Kittu?", "s_b": "A copy from 13 seconds", "s_c": "A family code word", "s_d": "A new voice note"}
+YT = {"s_a": "Which one is really Kittu?", "s_b": "A copy from 13 seconds", "s_c": "A family code word", "s_d": "What's our code word?"}
 MARK = re.compile(r"\[\d+\]\s*")
-NAMES = {"en": {"storyteller": "", "clip1": "Voice note 1", "clip2": "Voice note 2"}, "te": {"storyteller": "", "clip1": "Voice note 1", "clip2": "Voice note 2"}}
+NAMES = {"en": {"storyteller": "", "clip1": "Voice note 1", "clip2": "Voice note 2", "clip3": "The copy"}, "te": {"storyteller": "", "clip1": "Voice note 1", "clip2": "Voice note 2", "clip3": "The copy"}}
 
 
 def spec(lang="en"):
@@ -81,7 +83,7 @@ def spec(lang="en"):
     sid = "creative33te" if te else "creative33v1"
     s = {"id": sid, "title": "Which One Is Really Kittu? (Creative 33)" + (" (Telugu audio)" if te else ""), "label": "", "banner": "",
          "topic": "", "look": "classic", "gap": 0.14, "lead": 0.3, "music": "lofi", "names": NAMES[lang],
-         "musicVol": [0.13, 0.16], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 0.9, "captionMode": "phrase",
+         "musicVol": [0.13, 0.16], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase",
          "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimer": True, "tempo": 1.0, "captionTop": 1370}
     if te:
@@ -94,7 +96,7 @@ def spec(lang="en"):
             raw = tel if te else en
             show = (SHOW_TE.get(n) if te else None) or SHOW.get(n) or SHOW_EN_CLIPS.get(n) or MARK.sub("", en).replace(" | ", " ").strip()
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": raw, "maxgap": 0.3, "gap": GAP.get(n, 0.3), "show": show,
-                  "tempo": 1.0 if who.startswith("clip") else (1.1 if te else 1.06)}
+                  "tempo": 1.0 if who.startswith("clip") else (1.15 if te else 1.12)}
             if " | " in raw:
                 p1, p2 = raw.split(" | ")
                 pz = (SPLIT_PAUSE_TE if te else SPLIT_PAUSE).get(n, 0.4)
@@ -102,7 +104,7 @@ def spec(lang="en"):
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             lines.append(ln)
             beats.append({"who": who, "prop": prop, "n": n})
-        data = {"beats": beats, "captionTop": 1370, "t": {**T, "scores": T["scores"][lang], "refSecs": T["refSecs"][lang]},
+        data = {"beats": beats, "captionTop": 1370, "t": {**T, "scores": T["scores"][lang], "refSecs": T["refSecs"][lang], "made": T["made"][lang]},
                 "yt": {"chapter": YT[scid], "title": YT[scid], "notes": []}}
         if te:
             data["handle"] = "@ai_maastaaru_telugu"

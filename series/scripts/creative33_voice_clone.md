@@ -1,4 +1,4 @@
-# Creative 33 "Which One Is Really Kittu?" · Nov 18 creative slot · script v1
+# Creative 33 "Which One Is Really Kittu?" · Nov 18 creative slot · script v2
 
 ## Format and rotation
 - **A one-question challenge** (last used by Creative 25, Nov 10; not a dialogue skit: agreed with Bujji, Nov 18-19).
@@ -36,19 +36,33 @@ line in the reel took 7.6 s (EN) and 9.1 s (TE). A program's score, not people's
 - What to do (FTC's family-emergency-scam advice, widely reported): a family code word; hang up and call back on a number
   you know. In India, report cyber fraud on 1930 or cybercrime.gov.in.
 
-## Script v1 (EN | TE)
+## Script review (human-viewer, v1), what changed for v2
+- The guess was too easy: note 2 talked about an accident and money, so the words gave it away, not the voice. Both
+  notes now say the same neutral sentence from the test ("Amma, did you take your tablets today?": Kittu, and the copy
+  from 13 s). The scam line plays only after the reveal ("here's what a scammer makes it say").
+- "Kittu against his own voice: 62" confused everyone: the scores are now "real Kittu / the copy / a stranger", against
+  another sentence Kittu said (on screen), with the drop before "the copy"; the 3.6 s bar moved to the caption;
+  "a program's score, not your ears" on screen.
+- Frame 1 says AI ("one is an AI copy of his voice · Kittu = a made-up computer voice"); the twist says why: "We didn't
+  copy a real person, on purpose. Scammers do, from your reels."
+- The advice is spoken in full, 1930 included, for calls and voice notes; the loop ends on Amma typing "What's our code
+  word?" (the forward moment). "Made in 8 seconds" on the stamp (7.6 s; TE 9 s), not in the voice.
+- McAfee's 47% moved to the caption (the reel is 60 s; a stat card after the answer was a swipe point).
+- Telugu: "నిజంగా కిట్టుది"; "కిట్టు" for "అతని"; "కట్ చేసి"; "ఇంట్లో వాళ్ళకే తెలిసిన"; no "కాల్ చేసుకోండి".
+
+## Script v2 (EN | TE)
 | # | who | English | Telugu |
 |---|---|---|---|
-| 1 | storyteller | One of these voice notes is really Kittu. The other wants fifty thousand rupees from his mother. | ఈ రెండు వాయిస్ నోట్స్ లో, ఒక్కటే నిజమైన కిట్టు. ఇంకోటి, వాళ్ళ అమ్మ దగ్గర యాభై వేలు అడుగుతోంది. |
-| 2 | clip1 | Hi Amma, I reached the hostel. | అమ్మా, హాస్టల్ కి చేరుకున్నాను. |
-| 3 | clip2 | Amma, it's me, Kittu. I had a small accident. | అమ్మా, నేను కిట్టుని. చిన్న యాక్సిడెంట్ అయింది. |
+| 1 | storyteller | One of these voice notes is really Kittu. The other is an AI copy of his voice. Can you tell? | ఈ రెండు వాయిస్ నోట్స్ లో, ఒక్కటే నిజంగా కిట్టుది. ఇంకోటి, కంప్యూటర్ చేసిన అతని గొంతు కాపీ. మీరు చెప్పగలరా? |
+| 2 | clip1 | Amma, did you take your tablets today? | అమ్మా, ఈరోజు టాబ్లెట్లు వేసుకున్నావా? |
+| 3 | clip2 | Amma, did you take your tablets today? | అమ్మా, ఈరోజు టాబ్లెట్లు వేసుకున్నావా? |
 | 4 | storyteller | Which one is Kittu? Three, two, one. | నిజమైన కిట్టు ఎవరు? మూడు, రెండు, ఒకటి. |
-| 5 | storyteller | Voice note two is a copy. A voice-cloning service made it from thirteen seconds of his voice note, in under ten seconds. | రెండో వాయిస్ నోట్, ఒక కాపీ. వాయిస్ క్లోనింగ్ సర్వీస్, అతని వాయిస్ నోట్ లోని పదమూడు సెకన్లతో, పది సెకన్ల లోపే దీన్ని తయారు చేసింది. |
-| 6 | storyteller | A voice-matching program scored them. Kittu against his own voice: sixty-two. The copy: sixty-two. | Someone else: seven. | వాయిస్ మ్యాచ్ చేసే ప్రోగ్రామ్ తో స్కోర్ చేశాం. కిట్టు, తన గొంతుతో: యాభై నాలుగు. కాపీ: యాభై ఎనిమిది. | వేరే వ్యక్తి: పదహారు. |
-| 7 | storyteller | And voice note one? Also a computer voice. Kittu isn't a real person: we made both, to show you how easy it is. | మరి ఒకటో వాయిస్ నోట్? అది కూడా కంప్యూటర్ వాయిస్. కిట్టు నిజమైన మనిషి కాదు; ఎంత సులువో చూపించడానికి, రెండూ మేమే చేశాం. |
-| 8 | storyteller | In McAfee's survey, forty-seven percent of Indians had faced an AI voice scam, or knew someone who had. | మెకఫీ సర్వే లో, నలభై ఏడు శాతం భారతీయులు, వాయిస్ క్లోన్ స్కామ్ ని ఎదుర్కొన్నారు, లేదా ఎదుర్కొన్నవాళ్ళు తెలుసు. |
-| 9 | storyteller | So set a family code word today. Any call asking for money: hang up, and call back on the number you saved. | అందుకే ఈరోజే, ఇంట్లో ఒక కోడ్ వర్డ్ పెట్టుకోండి. డబ్బులు అడిగే కాల్ వస్తే: పెట్టేసి, సేవ్ చేసిన నంబర్ కి మీరే తిరిగి కాల్ చేసుకోండి. |
-| 10 | storyteller | Amma's phone buzzes again. A new voice note from Kittu... | అమ్మ ఫోన్ మళ్ళీ మోగింది. కిట్టు నుంచి, కొత్త వాయిస్ నోట్... |
+| 5 | storyteller | Two is the copy, made from thirteen seconds of his voice note. Here's what a scammer makes it say. | రెండోది కాపీ; కిట్టు వాయిస్ నోట్ లోని పదమూడు సెకన్లతో చేసింది. స్కామర్ దానితో ఇలా చెప్పిస్తాడు. |
+| 6 | clip3 | I had a small accident. Please send fifty thousand rupees to this number. | చిన్న యాక్సిడెంట్ అయింది. ఈ నంబర్ కి యాభై వేలు పంపు, ఇప్పుడే. |
+| 7 | storyteller | A voice-matching program scored them. Real Kittu: sixty-two. | The copy: sixty-two. A stranger: seven. | వాయిస్ మ్యాచ్ ప్రోగ్రామ్ స్కోర్ చేసింది. నిజమైన కిట్టు: యాభై నాలుగు. | కాపీ: యాభై ఎనిమిది. బయటి వ్యక్తి: పదహారు. |
+| 8 | storyteller | And note one? A computer voice too. We didn't copy a real person, on purpose. Scammers do, from your reels. | మరి ఒకటో వాయిస్ నోట్? అదీ కంప్యూటర్ వాయిస్ నే. నిజమైన మనిషిని మేము కావాలనే కాపీ చేయలేదు; స్కామర్లు మీ రీల్స్ నుంచి చేస్తారు. |
+| 10 | storyteller | So set a family code word, in person. A money call or voice note: cut it, call his saved number, ask the code word. | Report it on 1930. | అందుకే, ఇంట్లో వాళ్ళకే తెలిసిన ఒక కోడ్ వర్డ్ పెట్టుకోండి. డబ్బులు అడిగితే: కట్ చేసి, సేవ్ చేసిన నంబర్ కి ఫోన్ చేసి, కోడ్ వర్డ్ అడగండి. | ఒకటి, తొమ్మిది, మూడు, సున్నా కి చెప్పండి. |
+| 11 | storyteller | A new voice note from Kittu. This time, Amma types back: what's our code word? | కిట్టు నుంచి కొత్త వాయిస్ నోట్. ఈసారి అమ్మ రిప్లై: మన కోడ్ వర్డ్ చెప్పు? |
 
 ## On screen (English in both versions)
 1. Frame 1: Amma (glasses, a green saree) holding her phone; the chat "Kittu ❤" with voice notes 1 and 2 (waveforms, play

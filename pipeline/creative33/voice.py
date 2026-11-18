@@ -33,17 +33,15 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("kittu",), ("fifty", "50"), ("mother",)], 4: [("kittu",), ("three", "3"), ("one", "1")],
-               5: [("copy",), ("cloning",), ("thirteen", "13"), ("ten", "10")],
-               6: [("program",), ("sixty", "62")], "6b": [("seven", "7")],
-               7: [("computer",), ("real",)], 8: [("mcafee", "mcafee's", "mcafees"), ("forty", "47")],
-               9: [("code",), ("word",), ("hang",), ("back",)], 10: [("phone",), ("kittu",)]},
+MUST = {"en": {1: [("kittu",), ("copy",), ("tell",)], 4: [("kittu",), ("three", "3"), ("one", "1")],
+               5: [("copy",), ("thirteen", "13"), ("scammer",)],
+               7: [("program",), ("sixty", "62")], "7b": [("copy",), ("seven", "7")],
+               8: [("computer",), ("purpose",), ("reels",)],
+               10: [("code",), ("word",), ("money",), ("saved",)], "10b": [("report",), ("1930", "nineteen")], 11: [("kittu",), ("code",)]},
         "te": {}}
-JUDGE_TEXT = {1: "One of these voice notes is really Kittu. The other wants 50,000 rupees from his mother.",
-              4: "Which one is Kittu? 3, 2, 1.",
-              5: "Voice note 2 is a copy. A voice-cloning service made it from 13 seconds of his voice note, in under 10 seconds.",
-              6: "A voice-matching program scored them. Kittu against his own voice: 62. The copy: 62.", "6b": "Someone else: 7.",
-              8: "In McAfee's survey, 47% of Indians had faced an AI voice scam, or knew someone who had."}
+JUDGE_TEXT = {4: "Which one is Kittu? 3, 2, 1.", 5: "2 is the copy, made from 13 seconds of his voice note. Here's what a scammer makes it say.",
+              7: "A voice-matching program scored them. Real Kittu: 62.", "7b": "The copy: 62. A stranger: 7.",
+              "10b": "Report it on 1930."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

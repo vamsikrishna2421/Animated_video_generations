@@ -11,7 +11,8 @@
  "names": {
   "storyteller": "",
   "clip1": "Voice note 1",
-  "clip2": "Voice note 2"
+  "clip2": "Voice note 2",
+  "clip3": "The copy"
  },
  "musicVol": [
   0.13,
@@ -19,7 +20,7 @@
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.9,
+ "endPad": 0.5,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -54,7 +55,7 @@
    "id": "s_a",
    "type": "sk_clone33",
    "tail": 0.0,
-   "boost": 1.6,
+   "boost": 1.7,
    "duck_lines": [
     [
      1,
@@ -94,23 +95,20 @@
      "pay": "₹50,000",
      "scores": [
       [
-       "Kittu vs his own voice",
+       "real Kittu",
        62
       ],
       [
-       "the copy (from 13 s)",
+       "the copy (from 13 s of his voice)",
        62
       ],
       [
-       "a copy from 3.6 s",
-       50
-      ],
-      [
-       "someone else",
+       "a stranger",
        7
       ]
      ],
      "refSecs": "13 s",
+     "made": "made in 8 seconds",
      "mcafee": "47% of Indians faced an AI voice scam or know someone who did",
      "mcafeeSrc": "McAfee survey, 1,010 adults in India, May 2023"
     },
@@ -124,28 +122,28 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "One of these voice notes is really Kittu. [1] The other wants fifty thousand rupees from his mother.",
+     "text": "One of these voice notes is really Kittu. [1] The other is an AI copy of his voice. Can you tell?",
      "maxgap": 0.3,
-     "gap": 0.4,
-     "show": "One of these voice notes is really Kittu. The other wants ₹50,000 from his mother.",
-     "tempo": 1.06
+     "gap": 0.35,
+     "show": "One of these voice notes is really Kittu. The other is an AI copy of his voice. Can you tell?",
+     "tempo": 1.12
     },
     {
      "who": "clip1",
      "file": "02_clip1.wav",
-     "text": "Hi Amma, I reached the hostel.",
+     "text": "Amma, did you take your tablets today?",
      "maxgap": 0.3,
-     "gap": 0.6,
-     "show": "(voice note 1) \"Hi Amma, I reached the hostel.\"",
+     "gap": 0.4,
+     "show": "(voice note 1) \"Amma, did you take your tablets today?\"",
      "tempo": 1.0
     },
     {
      "who": "clip2",
      "file": "03_clip2.wav",
-     "text": "Amma, it's me, Kittu. I had a small accident.",
+     "text": "Amma, did you take your tablets today?",
      "maxgap": 0.3,
-     "gap": 0.6,
-     "show": "(voice note 2) \"Amma, it's me, Kittu. I had a small accident.\"",
+     "gap": 0.35,
+     "show": "(voice note 2) \"Amma, did you take your tablets today?\"",
      "tempo": 1.0
     },
     {
@@ -153,9 +151,9 @@
      "file": "04_storyteller.wav",
      "text": "Which one is Kittu? [1] Three, two, one.",
      "maxgap": 0.3,
-     "gap": 0.5,
+     "gap": 0.45,
      "show": "Which one is Kittu? 3, 2, 1.",
-     "tempo": 1.06
+     "tempo": 1.12
     }
    ]
   },
@@ -163,13 +161,19 @@
    "id": "s_b",
    "type": "sk_clone33",
    "tail": 0.0,
-   "boost": 1.0,
+   "boost": 1.1,
    "lift": 0.6,
-   "drop_at": [
+   "duck_lines": [
     [
      1,
+     0.0
+    ]
+   ],
+   "drop_at": [
+    [
      2,
-     0.45
+     2,
+     0.5
     ]
    ],
    "data": {
@@ -180,14 +184,19 @@
       "n": 5
      },
      {
-      "who": "storyteller",
-      "prop": "score",
+      "who": "clip3",
+      "prop": "clip3",
       "n": 6
      },
      {
       "who": "storyteller",
-      "prop": "twist",
+      "prop": "score",
       "n": 7
+     },
+     {
+      "who": "storyteller",
+      "prop": "twist",
+      "n": 8
      }
     ],
     "captionTop": 1370,
@@ -196,23 +205,20 @@
      "pay": "₹50,000",
      "scores": [
       [
-       "Kittu vs his own voice",
+       "real Kittu",
        62
       ],
       [
-       "the copy (from 13 s)",
+       "the copy (from 13 s of his voice)",
        62
       ],
       [
-       "a copy from 3.6 s",
-       50
-      ],
-      [
-       "someone else",
+       "a stranger",
        7
       ]
      ],
      "refSecs": "13 s",
+     "made": "made in 8 seconds",
      "mcafee": "47% of Indians faced an AI voice scam or know someone who did",
      "mcafeeSrc": "McAfee survey, 1,010 adults in India, May 2023"
     },
@@ -226,33 +232,42 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "Voice note two is a copy. [1] A voice-cloning service made it from thirteen seconds of his voice note, in under ten seconds.",
+     "text": "Two is the copy, made from thirteen seconds of his voice note. [1] Here's what a scammer makes it say.",
      "maxgap": 0.3,
-     "gap": 0.35,
-     "show": "Voice note 2 is a copy. A voice-cloning service made it from 13 seconds of his voice note, in under 10 seconds.",
-     "tempo": 1.06
+     "gap": 0.3,
+     "show": "2 is the copy, made from 13 seconds of his voice note. Here's what a scammer makes it say.",
+     "tempo": 1.12
     },
     {
-     "who": "storyteller",
-     "file": "06_storyteller.wav",
-     "text": "A voice-matching program scored them. [1] Kittu against his own voice: sixty-two. The copy: sixty-two. <pause 0.5> [2] Someone else: seven.",
+     "who": "clip3",
+     "file": "06_clip3.wav",
+     "text": "I had a small accident. Please send fifty thousand rupees to this number.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "A voice-matching program scored them. Kittu against his own voice: 62. The copy: 62. <pause 0.5> Someone else: 7.",
-     "tempo": 1.06,
-     "tts": "A voice-matching program scored them. Kittu against his own voice: sixty-two. The copy: sixty-two.",
-     "file2": "06b_storyteller.wav",
-     "tts2": "Someone else: seven.",
-     "pause": 0.5
+     "show": "(the copy) \"I had a small accident. Please send ₹50,000 to this number.\"",
+     "tempo": 1.0
     },
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "And voice note one? Also a computer voice. [1] Kittu isn't a real person: we made both, to show you how easy it is.",
+     "text": "A voice-matching program scored them. [1] Real Kittu: sixty-two. <pause 0.5> [2] The copy: sixty-two. A stranger: seven.",
      "maxgap": 0.3,
-     "gap": 0.4,
-     "show": "And voice note 1? Also a computer voice. Kittu isn't a real person: we made both, to show you how easy it is.",
-     "tempo": 1.06
+     "gap": 0.35,
+     "show": "A voice-matching program scored them. Real Kittu: 62. <pause 0.5> The copy: 62. A stranger: 7.",
+     "tempo": 1.12,
+     "tts": "A voice-matching program scored them. Real Kittu: sixty-two.",
+     "file2": "07b_storyteller.wav",
+     "tts2": "The copy: sixty-two. A stranger: seven.",
+     "pause": 0.5
+    },
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "And note one? A computer voice too. [1] We didn't copy a real person, on purpose. Scammers do, from your reels.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "show": "And note one? A computer voice too. We didn't copy a real person, on purpose. Scammers do, from your reels.",
+     "tempo": 1.12
     }
    ]
   },
@@ -266,13 +281,8 @@
     "beats": [
      {
       "who": "storyteller",
-      "prop": "fact",
-      "n": 8
-     },
-     {
-      "who": "storyteller",
       "prop": "rule",
-      "n": 9
+      "n": 10
      }
     ],
     "captionTop": 1370,
@@ -281,23 +291,20 @@
      "pay": "₹50,000",
      "scores": [
       [
-       "Kittu vs his own voice",
+       "real Kittu",
        62
       ],
       [
-       "the copy (from 13 s)",
+       "the copy (from 13 s of his voice)",
        62
       ],
       [
-       "a copy from 3.6 s",
-       50
-      ],
-      [
-       "someone else",
+       "a stranger",
        7
       ]
      ],
      "refSecs": "13 s",
+     "made": "made in 8 seconds",
      "mcafee": "47% of Indians faced an AI voice scam or know someone who did",
      "mcafeeSrc": "McAfee survey, 1,010 adults in India, May 2023"
     },
@@ -310,21 +317,16 @@
    "lines": [
     {
      "who": "storyteller",
-     "file": "08_storyteller.wav",
-     "text": "In McAfee's survey, [1] forty-seven percent of Indians had faced an AI voice scam, or knew someone who had.",
+     "file": "10_storyteller.wav",
+     "text": "So set a family code word, in person. [1] A money call or voice note: cut it, call his saved number, ask the code word. <pause 0.4> [2] Report it on 1930.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "In McAfee's survey, 47% of Indians had faced an AI voice scam, or knew someone who had.",
-     "tempo": 1.06
-    },
-    {
-     "who": "storyteller",
-     "file": "09_storyteller.wav",
-     "text": "So set a family code word today. [1] Any call asking for money: hang up, and call back on the number you saved.",
-     "maxgap": 0.3,
-     "gap": 0.4,
-     "show": "So set a family code word today. Any call asking for money: hang up, and call back on the number you saved.",
-     "tempo": 1.06
+     "show": "So set a family code word, in person. A money call or voice note: cut it, call his saved number, ask the code word. <pause 0.4> Report it on 1930.",
+     "tempo": 1.12,
+     "tts": "So set a family code word, in person. A money call or voice note: cut it, call his saved number, ask the code word.",
+     "file2": "10b_storyteller.wav",
+     "tts2": "Report it on 1930.",
+     "pause": 0.4
     }
    ]
   },
@@ -333,7 +335,7 @@
    "type": "sk_clone33",
    "tail": 0.0,
    "outro": true,
-   "pre": 0.3,
+   "pre": 0.2,
    "boost": 2.2,
    "lift": 0.7,
    "rise": 2.6,
@@ -342,7 +344,7 @@
      {
       "who": "storyteller",
       "prop": "loop",
-      "n": 10
+      "n": 11
      }
     ],
     "captionTop": 1370,
@@ -351,41 +353,38 @@
      "pay": "₹50,000",
      "scores": [
       [
-       "Kittu vs his own voice",
+       "real Kittu",
        62
       ],
       [
-       "the copy (from 13 s)",
+       "the copy (from 13 s of his voice)",
        62
       ],
       [
-       "a copy from 3.6 s",
-       50
-      ],
-      [
-       "someone else",
+       "a stranger",
        7
       ]
      ],
      "refSecs": "13 s",
+     "made": "made in 8 seconds",
      "mcafee": "47% of Indians faced an AI voice scam or know someone who did",
      "mcafeeSrc": "McAfee survey, 1,010 adults in India, May 2023"
     },
     "yt": {
-     "chapter": "A new voice note",
-     "title": "A new voice note",
+     "chapter": "What's our code word?",
+     "title": "What's our code word?",
      "notes": []
     }
    },
    "lines": [
     {
      "who": "storyteller",
-     "file": "10_storyteller.wav",
-     "text": "Amma's phone buzzes again. [1] A new voice note from Kittu...",
+     "file": "11_storyteller.wav",
+     "text": "A new voice note from Kittu. [1] This time, Amma types back: what's our code word?",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "Amma's phone buzzes again. A new voice note from Kittu...",
-     "tempo": 1.06
+     "show": "A new voice note from Kittu. This time, Amma types back: what's our code word?",
+     "tempo": 1.12
     }
    ]
   }
