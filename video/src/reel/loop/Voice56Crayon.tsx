@@ -221,7 +221,7 @@ const StVoice: React.FC<SP> = ({ s }) => {
           const k1 = seg(f, cu(1, 0.45), cu(1, 0.45) + 6);
           if (k1 <= 0) codeCard(c, 430, [T.earsFix], seg(f, ln.from + 2, ln.from + 22), "the one change: translate to English");   // render review: not an empty card
           bigNum(c, "5/10", W / 2, 560, "#fbbf24", k1, 170, "");
-          bubble(c, 60, 610, W - 120, "ANOTHER CUSTOMER, ORDER 4611: IT HEARD ✓ · it answers in English", T.heardE, "#dcfce7", "#14532d", seg(f, cu(1, 0.45) + 10, cu(1, 0.45) + 18), 36);
+          bubble(c, 60, 610, W - 120, "ORDER 4611 (ANOTHER CUSTOMER): HEARD RIGHT ✓", T.heardE, "#dcfce7", "#14532d", seg(f, cu(1, 0.45) + 10, cu(1, 0.45) + 18), 36);
           const k2 = seg(f, cu(2, 0.75), cu(2, 0.75) + 8);
           if (k2 > 0) {   // the time bar
             c.save(); c.globalAlpha = clamp(k2 * 3);

@@ -65,7 +65,7 @@ SCENES = [("s_a", (1,), {"boost": 1.8, "drop_at": [[0, 2, 0.4]], "tail": 0.0}),
           ("s_c", (3, 4, 5), {"boost": 1.35, "lift": 0.7, "drop_at": [[1, 1, 0.45], [2, 1, 0.5]], "swell": [2, 2, 1.9], "tail": 0.0}),
           ("s_d", (6,), {"outro": True, "pre": 0.4, "boost": 2.6, "lift": 0.8, "rise": 3.0, "tail": 0.0})]
 GAP = {1: 0.4, 2: 0.35, 3: 0.35, 4: 0.4, 5: 0.4, 6: 0.0}
-FLAGS_TE = {"s_c": {"boost": 1.2}, "s_d": {"boost": 2.8, "rise": 3.2}}
+FLAGS_TE = {"s_a": {"boost": 2.4}, "s_c": {"boost": 1.4}, "s_d": {"boost": 2.8, "rise": 3.2}}   # render check: the TE hook was quieter than its middle
 YT = {"s_a": "Can it understand Telugu?", "s_b": "Ears, brain, mouth", "s_c": "Our test, the best free result", "s_d": "Try it with your voice"}
 MARK = re.compile(r"\[\d+\]\s*")
 

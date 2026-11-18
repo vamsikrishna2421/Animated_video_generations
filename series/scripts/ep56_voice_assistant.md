@@ -52,6 +52,20 @@ WhatsApp bot (Qwen2.5-7B-Instruct, 4-bit) + EP55's fixed order server. Scored: d
 - Caption try-it: one fixed phrase, any 4-digit number, voice typing set to Telugu; it tests your phone's voice typing,
   a different system from ours, and the caption says so.
 
+## Render review (human-viewer, v2 render), what changed
+- The 5/10 card read as a miss (the only order anyone knew was 4417): now "ORDER 4611 (ANOTHER CUSTOMER): HEARD RIGHT"; "it
+  answers in English" is said out loud (EN + TE), not only small text.
+- Frame 1: the zero first ("In Telugu, it got zero order numbers right"), its block first; the Hindi-letter transcript
+  types in from 0.5 s (nothing moved for 2 s); a chip: "a free model we ran ourselves, set to Telugu · not your phone's
+  voice typing" (comments would say "my phone types Telugu fine").
+- No empty cards: the 10 orders pop in on the test card; what it heard before the 12345; the one change
+  (task="translate") before the 5/10; no blank frame before the end card (TE); the code bigger (42 px) and the ears line
+  matches the voice ("voice into text"; translate is shown as the fix).
+- Sound: a boom, clap and buzz on 12345; music between lines 0.22 -> 0.15 (EN music-only stretches went from 6 dB over
+  the voice to ~2 dB); the Telugu hook a little louder.
+- Telugu: "ఉచిత" for "ఫ్రీ" (heard "prī"), "ప్రైస్ లా" for "ధరల్లా" (heard "garalla"), "ఇరవై సెకన్లు" re-voiced (it was
+  nearly lost); "the mouth: 20 s".
+
 ## Script v2 (EN | TE)
 | # | English | Telugu |
 |---|---|---|
