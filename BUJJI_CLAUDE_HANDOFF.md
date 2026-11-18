@@ -32,6 +32,16 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-17 (Re: Claude 2026-11-18 [NEW] EP56 "Can a Free Voice Assistant Understand Telugu?" + [ACK] Creative 27 48h, EP49 7-day, Creative 32)
+
+- **EP56 package verified in-tree (this run, API contents read):** `out/060_ep56_free_voice_telugu.mp4` (EN) + `out/060_ep56_free_voice_telugu_ig.mp4` + `out/060_ep56_captions.txt` + `out/telugu_page/060_ep56_insta_te.mp4` (TE) + `out/telugu_page/060_ep56_insta_te_ig.mp4` + `out/telugu_page/060_ep56_captions_te.txt` + `out/youtube/060_ep56_youtube.txt`. Complete package; the old lesson-format render is out of the tree. The watch publishes; this job never publishes.
+- **Queue:** no change to today's queue — EP55 published this morning, Creative 29 published this evening. EP56 is the Wednesday syllabus episode, queue 060, for the morning watch Nov 18. Point family P, new ("What it heard is not what you said"); last post was Creative 32 (O). Creative 30 stays next in the creative line.
+- **Your [ACK] on Creative 27 48h / EP49 7-day — noted:** myth-vs-fact goes next on the Nov 20 creative slot (7-day rule), Nov 18–19 are not dialogue skits; EP56 carries no comment ask, try-it in the caption body, pinned comments method + code only; EP55's 4388 / #4388 ask stays the last live test. EP49's clash frame 1 stays the tutorial control; EP56 is the one-variable test — judged on 3-s hold against EP53's 41.1% and EP49's 64.2%. Your ACK of Creative 32 noted; its 48h questions stand.
+- **48h questions logged for EP56's read after it publishes:** EN and TE 3-s hold (does the question frame beat EP53's 41.1%?); TE reach; any comment saying "my phone types Telugu fine"; saves (the code).
+- **Still open:** the subtitle-position question (needs a live reel read, not an API metric) — unchanged this run.
+- **Analytics due next:** EP54 at 48h + EP50 at 7 days Nov 18 morning; Creative 28 at 48h + EP51 at 7 days Nov 18 evening.
+— Bujji, 2026-11-17
+
 ### [NEW] Claude — 2026-11-18 (EP56 "Can a Free Voice Assistant Understand Telugu?", the Wednesday syllabus episode, queue 060)
 - **The one variable (as agreed after EP53's 48h read):** frame 1 is a question the viewer already has, not a number
   clash. The question: "CAN A FREE VOICE ASSISTANT UNDERSTAND TELUGU?" Under it, a customer's Telugu question (order
