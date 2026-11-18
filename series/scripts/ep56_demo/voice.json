@@ -974,7 +974,24 @@
    "order": "4533",
    "said": "ఆర్డర్ నలభై ఐదు ముప్పై మూడు ఇంకా ఎందుకు రాలేదు?",
    "heard": "ఆడర్ 45, 30, 3 ఇంకా ఎందుకు రాలేదు",
-   "ears_seconds": 9.54
+   "ears_seconds": 9.54,
+   "brain_seconds": 22.9,
+   "final": "మీ ఆడర్ 45 లను కనుగొనలేదు. అన్ని వారికి సహాయం చేసుకోవాలని మనం తెలిపాలి.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 45}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "మీ ఆడర్ 45 లను కనుగొనలేదు. అన్ని వారికి సహాయం చేసుకోవాలని మనం తెలిపాలి."
+    }
+   ],
+   "called": true,
+   "order_sent": "45",
+   "right_number": false,
+   "right_auto": false
   },
   {
    "ears": "D",
@@ -984,7 +1001,18 @@
    "order": "4362",
    "said": "ఆర్డర్ నలభై మూడు అరవై రెండు డెలివరీ అయిందా?",
    "heard": "ఆడ్డర్ 43-62 డెలివరి ఆయిందా?",
-   "ears_seconds": 9.11
+   "ears_seconds": 9.11,
+   "brain_seconds": 4.9,
+   "final": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 43-62}}",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 43-62}}"
+    }
+   ],
+   "called": false,
+   "order_sent": null,
+   "right_number": false,
+   "right_auto": false
   },
   {
    "ears": "D",
@@ -994,7 +1022,24 @@
    "order": "4588",
    "said": "నా స్పీకర్ రిటర్న్, ఆర్డర్ నలభై ఐదు ఎనభై ఎనిమిది: రిఫండ్ అయిందా?",
    "heard": "నా స్పీకర్ రేటర్న్ ఆడ్డర్ 4588 రేఫాండ్ ఆయింద?",
-   "ears_seconds": 12.79
+   "ears_seconds": 12.79,
+   "brain_seconds": 30.7,
+   "final": "మీ రేఫాండ్ అనుమతి 15 నవంబర్లో ప్రావినిజ్ చేసి, బాంక్‌కు ఎదురెదుగా 5-7 కథాపదాల పాటు వచ్చేది.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4588}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"smart speaker\",\n  \"amount\": \"Rs 2,999\",\n  \"status\": \"returned and received Nov 14\",\n  \"refund\": \"Rs 2,999 approved Nov 15; reaches the bank in 5-7 working days\"\n}"
+    },
+    {
+     "ai": "మీ రేఫాండ్ అనుమతి 15 నవంబర్లో ప్రావినిజ్ చేసి, బాంక్‌కు ఎదురెదుగా 5-7 కథాపదాల పాటు వచ్చేది."
+    }
+   ],
+   "called": true,
+   "order_sent": "4588",
+   "right_number": true,
+   "right_auto": false
   },
   {
    "ears": "D",
@@ -1004,7 +1049,24 @@
    "order": "4650",
    "said": "నా ఆర్డర్ నలభై ఆరు యాభై కన్ఫర్మ్ అయిందా?",
    "heard": "నా ఆడర్ నలబై ఆరు యాబై కంఫర్మ్ ఆయిందా",
-   "ears_seconds": 11.35
+   "ears_seconds": 11.35,
+   "brain_seconds": 24.0,
+   "final": "ఎందుకంటే ఆడర్ 12345 లో కావలసిన మార్గం లేదు. నివృత్తి అనియతం కలిగి ఉంటుంది.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 12345}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "ఎందుకంటే ఆడర్ 12345 లో కావలసిన మార్గం లేదు. నివృత్తి అనియతం కలిగి ఉంటుంది."
+    }
+   ],
+   "called": true,
+   "order_sent": "12345",
+   "right_number": false,
+   "right_auto": false
   },
   {
    "ears": "E",
@@ -1014,7 +1076,24 @@
    "order": "4417",
    "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
    "heard": "Order 40, 4, 17. I returned my earphones. Did you get my refund?",
-   "ears_seconds": 6.33
+   "ears_seconds": 6.33,
+   "brain_seconds": 8.3,
+   "final": "I couldn't find the order you mentioned. Could you please provide more details or check the order number?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 40}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find the order you mentioned. Could you please provide more details or check the order number?"
+    }
+   ],
+   "called": true,
+   "order_sent": "40",
+   "right_number": false,
+   "right_auto": false
   },
   {
    "ears": "E",
@@ -1024,7 +1103,24 @@
    "order": "4502",
    "said": "ఆర్డర్ నలభై ఐదు సున్నా రెండు, నా పవర్ బ్యాంక్ షిప్ అయిందా?",
    "heard": "Order 4502 from my power bank has been shipped?",
-   "ears_seconds": 5.36
+   "ears_seconds": 5.36,
+   "brain_seconds": 9.4,
+   "final": "Your order has been packed but not shipped yet. We'll update you as soon as it is dispatched.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4502}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"20,000 mAh power bank\",\n  \"amount\": \"Rs 1,799\",\n  \"status\": \"packed, not shipped yet\",\n  \"refund\": \"none\"\n}"
+    },
+    {
+     "ai": "Your order has been packed but not shipped yet. We'll update you as soon as it is dispatched."
+    }
+   ],
+   "called": true,
+   "order_sent": "4502",
+   "right_number": true,
+   "right_auto": true
   },
   {
    "ears": "E",
@@ -1034,7 +1130,24 @@
    "order": "4388",
    "said": "నా స్మార్ట్‌వాచ్ ఎప్పుడు వస్తుంది? ఆర్డర్ నలభై మూడు ఎనభై ఎనిమిది.",
    "heard": "When will my smart watch come? 43.88",
-   "ears_seconds": 5.48
+   "ears_seconds": 5.48,
+   "brain_seconds": 12.5,
+   "final": "It seems there was an error with your order ID. Please provide the correct order number, which should be a whole number.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 43.88}}"
+    },
+    {
+     "tool_result": "Error executing tool get_order: 2 validation errors for get_orderArguments\norder_id.str\n  Input should be a valid string [type=string_type, input_value=43.88, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type\norder_id.int\n  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=43.88, input_type=float]\n    For further information visit https://errors.pydantic.dev/2.13/v/int_from_float"
+    },
+    {
+     "ai": "It seems there was an error with your order ID. Please provide the correct order number, which should be a whole number."
+    }
+   ],
+   "called": true,
+   "order_sent": "43.88",
+   "right_number": false,
+   "right_auto": false
   },
   {
    "ears": "E",
@@ -1044,7 +1157,24 @@
    "order": "4290",
    "said": "నా ఛార్జర్ డెలివరీ అయిందా? ఆర్డర్ నలభై రెండు తొంభై.",
    "heard": "My charger has been delivered. Order 429",
-   "ears_seconds": 5.36
+   "ears_seconds": 5.36,
+   "brain_seconds": 7.8,
+   "final": "It seems there was an error finding your order. Could you provide more details about the delivery?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 429}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "It seems there was an error finding your order. Could you provide more details about the delivery?"
+    }
+   ],
+   "called": true,
+   "order_sent": "429",
+   "right_number": false,
+   "right_auto": false
   },
   {
    "ears": "E",
@@ -1054,7 +1184,24 @@
    "order": "4611",
    "said": "ఆర్డర్ నలభై ఆరు పదకొండు క్యాన్సిల్ చేశాను. నా డబ్బులు ఎక్కడ?",
    "heard": "I cancelled order 4611. Where is my money?",
-   "ears_seconds": 5.43
+   "ears_seconds": 5.43,
+   "brain_seconds": 10.9,
+   "final": "Your refund of Rs 649 has been processed and should be credited to your account within 5-7 working days.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4611}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"tablet cover\",\n  \"amount\": \"Rs 649\",\n  \"status\": \"cancelled by the customer on Nov 12\",\n  \"refund\": \"Rs 649 sent on Nov 13; banks take 5-7 working days\"\n}"
+    },
+    {
+     "ai": "Your refund of Rs 649 has been processed and should be credited to your account within 5-7 working days."
+    }
+   ],
+   "called": true,
+   "order_sent": "4611",
+   "right_number": true,
+   "right_auto": true
   },
   {
    "ears": "E",
@@ -1064,7 +1211,24 @@
    "order": "4475",
    "said": "ఆర్డర్ నలభై నాలుగు డెబ్భై ఐదు, నా మౌస్ ఎప్పుడు వస్తుంది?",
    "heard": "Order 4475. My mouse will come now.",
-   "ears_seconds": 5.23
+   "ears_seconds": 5.23,
+   "brain_seconds": 9.4,
+   "final": "Your wireless mouse is out for delivery today. It was Rs 749 and no refund was applied.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4475}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"wireless mouse\",\n  \"amount\": \"Rs 749\",\n  \"status\": \"out for delivery today\",\n  \"refund\": \"none\"\n}"
+    },
+    {
+     "ai": "Your wireless mouse is out for delivery today. It was Rs 749 and no refund was applied."
+    }
+   ],
+   "called": true,
+   "order_sent": "4475",
+   "right_number": true,
+   "right_auto": true
   },
   {
    "ears": "E",
@@ -1074,7 +1238,24 @@
    "order": "4533",
    "said": "ఆర్డర్ నలభై ఐదు ముప్పై మూడు ఇంకా ఎందుకు రాలేదు?",
    "heard": "Order 4530. Why haven't 3 come yet?",
-   "ears_seconds": 5.73
+   "ears_seconds": 5.73,
+   "brain_seconds": 8.6,
+   "final": "I couldn't find an order with that number. Could you provide more details or check the order ID?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4530}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find an order with that number. Could you provide more details or check the order ID?"
+    }
+   ],
+   "called": true,
+   "order_sent": "4530",
+   "right_number": false,
+   "right_auto": false
   },
   {
    "ears": "E",
@@ -1084,7 +1265,24 @@
    "order": "4362",
    "said": "ఆర్డర్ నలభై మూడు అరవై రెండు డెలివరీ అయిందా?",
    "heard": "Order 43-62 has been delivered.",
-   "ears_seconds": 5.08
+   "ears_seconds": 5.08,
+   "brain_seconds": 8.6,
+   "final": "I couldn't find order 43-62 in our system. Could you provide more details?",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": \"43-62\"}}"
+    },
+    {
+     "tool_result": "{\n  \"error\": \"no such order\"\n}"
+    },
+    {
+     "ai": "I couldn't find order 43-62 in our system. Could you provide more details?"
+    }
+   ],
+   "called": true,
+   "order_sent": "43-62",
+   "right_number": false,
+   "right_auto": false
   },
   {
    "ears": "E",
@@ -1094,7 +1292,24 @@
    "order": "4588",
    "said": "నా స్పీకర్ రిటర్న్, ఆర్డర్ నలభై ఐదు ఎనభై ఎనిమిది: రిఫండ్ అయిందా?",
    "heard": "My speaker, return order is 4588. Is the refund done?",
-   "ears_seconds": 5.54
+   "ears_seconds": 5.54,
+   "brain_seconds": 11.1,
+   "final": "The refund of Rs 2,999 has been approved and will reach your bank account in 5-7 working days.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4588}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"smart speaker\",\n  \"amount\": \"Rs 2,999\",\n  \"status\": \"returned and received Nov 14\",\n  \"refund\": \"Rs 2,999 approved Nov 15; reaches the bank in 5-7 working days\"\n}"
+    },
+    {
+     "ai": "The refund of Rs 2,999 has been approved and will reach your bank account in 5-7 working days."
+    }
+   ],
+   "called": true,
+   "order_sent": "4588",
+   "right_number": true,
+   "right_auto": true
   },
   {
    "ears": "E",
@@ -1104,7 +1319,24 @@
    "order": "4650",
    "said": "నా ఆర్డర్ నలభై ఆరు యాభై కన్ఫర్మ్ అయిందా?",
    "heard": "Is my order 4650 confirmed?",
-   "ears_seconds": 4.86
+   "ears_seconds": 4.86,
+   "brain_seconds": 8.8,
+   "final": "Your order 4650 is not confirmed yet; the payment is still pending.",
+   "trace": [
+    {
+     "ai": "{\"tool\": \"get_order\", \"args\": {\"order_id\": 4650}}"
+    },
+    {
+     "tool_result": "{\n  \"item\": \"screen guard\",\n  \"amount\": \"Rs 299\",\n  \"status\": \"payment pending: not confirmed yet\",\n  \"refund\": \"none\"\n}"
+    },
+    {
+     "ai": "Your order 4650 is not confirmed yet; the payment is still pending."
+    }
+   ],
+   "called": true,
+   "order_sent": "4650",
+   "right_number": true,
+   "right_auto": true
   }
  ]
 }

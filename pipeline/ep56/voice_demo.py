@@ -37,7 +37,23 @@ OUT = ROOT / "series/scripts/ep56_demo"
 SERVER = ROOT / "pipeline/ep55/orders_server_v2.py"
 EARS = [("A", "en", "small", "transcribe"), ("B", "te", "small", "transcribe"), ("C", "te", "small", "translate"),
         ("D", "te", "large-v3", "transcribe"), ("E", "te", "large-v3", "translate")]
-HAND = {}   # filled after the run, every transcript and reply read by hand
+HAND = {   # read by hand after the run (series/scripts/ep56_demo/voice.json)
+    "A": "English, small ears: 7 of 10 order numbers reached the shop right; 3 came out like money ('$44.17', '42.90', "
+         "'46.11'): for 4417 the AI sent a made-up 'OR123456'; 4290 and 4611 went as 42.9 and 46.11, 'no such order'. "
+         "The 7 answers were right. Ears 1.5 s, brain 10.4 s a question.",
+    "B": "Telugu, small ears, transcribe: 0 of 10. 6 transcripts in Hindi letters, 4 looping junk (37-46 s each). The AI "
+         "made up order numbers: '12345' 4 times, also 'R123456', 'N0123456789', '20231012123456'; 3 replies in Hindi "
+         "letters, 1 in Marathi, 1 broken Telugu.",
+    "C": "Telugu, small ears, translate: 0 of 10 ('Order 40, 417', '43rd January', 'August 5th, 2017'); the AI sent 40417, "
+         "43, 40, 45, 403, 51708, '12345'.",
+    "D": "Telugu, large-v3, transcribe: 3 of 10 (4388, 4611, 4588); numbers in Telugu script came out as '40, 4, 17', "
+         "'40475', '45, 30, 3'; '12345' 3 times; replies in Telugu (often broken), Hindi letters, and once Chinese "
+         "claiming 4502 had shipped (the record: packed, not shipped). Ears 12.5 s a question.",
+    "E": "Telugu, large-v3, translate to English: 5 of 10 (4502, 4611, 4475, 4588, 4650), all 5 answers right; misses: "
+         "'40, 4, 17' (sent 40), '43.88', '429', '4530', '43-62'; no made-up numbers. Ears 5.4 s, brain 9.5 s.",
+    "all": "'12345' sent as the order number 8 times in 50 (B 4, C 1, D 3). Mouth (our Parler voice): 15.7-23.5 s to say "
+           "one answer on our CPU (average 20.2 s). So one answer took about 5 + 10 + 20 = 35 s on our computer.",
+}
 
 
 def first_call_id(trace):
