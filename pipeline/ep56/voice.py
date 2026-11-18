@@ -1,6 +1,6 @@
-# EP56 voices: one narrator, as EP54. English on Fish with Creative 22's American storyteller clip (the Creative 21
+# EP56 voices: one narrator, as EP54/EP55. English on Fish with Creative 22's American storyteller clip (the Creative 21
 # voice standard); Telugu on Parler (Lalitha, a calm teacher). Judged takes cached by text + voice.
-#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep55/voice.py en|te [--keep] [line numbers ...]
+#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep56/voice.py en|te [--keep] [line numbers ...]
 import hashlib
 import json
 import re
@@ -28,18 +28,18 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("bot",), ("ten", "10"), ("mcp", "server"), ("one", "1")], "1b": [("input",), ("ten", "10")],
-               2: [("plug",), ("once",), ("server",)], 3: [("anthropic",), ("openai", "open ai"), ("standard",)],
-               4: [("step",), ("twelve", "12"), ("function",), ("text",)], 5: [("step",), ("tools",), ("nothing",)],
-               6: [("one", "1"), ("number",), ("text",), ("refused",), ("worked",)], 7: [("fix",), ("types",), ("ten", "10")],
-               "7b": [("zero", "0"), ("seven", "7"), ("json", "jason")],
-               8: [("server",), ("refund",), ("whatsapp", "what's app")], 9: [("app",), ("server",), ("accept",), ("test",)], "9b": [("voice",)]},
+MUST = {"en": {1: [("free",), ("telugu",), ("seven", "7"), ("ten", "10")], "1b": [("telugu",), ("zero", "0")],
+               2: [("pieces",), ("ears",), ("brain",)], "2b": [("mouth",)],
+               3: [("computer",), ("prices", "price")], "3b": [("hindi",), ("letters",)],
+               4: [("made",), ("five", "5"), ("fifty", "50")],
+               5: [("bigger",), ("english",), ("five", "5")], "5b": [("thirty", "35"), ("twenty", "20"), ("mouth",)],
+               6: [("computer",), ("number",), ("type",)], "6b": [("deploy",)]},
         "te": {}}
-JUDGE_TEXT = {1: "Same bot, same 10 customers. Plugged into our new MCP server: 1 right.", "1b": "After we fixed its input: 10.",
-              4: "Step 1: the server. 12 lines: one function, a one-line description, and its input: the order number, as text.",
-              6: "Our test: 1 right. The AI sent the order number as a number; the server wanted text, and refused. The one time it sent text, it worked.",
-              7: "The fix: accept a number or text, and show the AI the types. 10 out of 10.", "7b": "Our second bot: 0, then 7; 3 broken JSON lines.",
-              9: "One app: a plain tool. Two or more: a server. Accept whatever the AI sends; test 10 real questions.", "9b": "Next: a voice assistant."}
+JUDGE_TEXT = {1: "Can a free voice assistant understand Telugu? We built one. Right order number, in English: 7 of 10.", "1b": "In Telugu: 0.",
+              3: "Our test: 10 customers, in computer voices. English: 3 numbers came out like prices.",
+              4: "When it couldn't read the number, the AI made one up: 1, 2, 3, 4, 5. 8 times in 50 tries.",
+              5: "Best free result: a bigger model, translating to English first. 5 of 10.",
+              "5b": "About 35 seconds an answer on our computer, and 20 of that is the mouth."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

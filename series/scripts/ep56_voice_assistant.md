@@ -36,18 +36,31 @@ WhatsApp bot (Qwen2.5-7B-Instruct, 4-bit) + EP55's fixed order server. Scored: d
 - Time on our computer (4 CPU cores): ears 1.5 s (small) / 5.4 s (large-v3, translate); brain ~10 s; mouth (our TTS)
   ~20 s. One answer ≈ 35 s with the bigger ears.
 
-## Script v1 (EN | TE)
+## Script review (human-viewer, v1), what changed for v2
+- Frame 1 was overloaded: the customer's bubble first (with an English gloss), the Hindi-letter transcript at ~0.6 s,
+  the scores on the voice; labels say what was scored ("right order number") and which model got 0 ("small free model").
+  Telugu "తెలుగులో: సున్నా" (not "Telugu is a zero").
+- Lines 2-5 (pieces, Whisper's history, three steps) folded into one ~12 s beat: three rows, one code line each, Whisper
+  as a chip. "Small ears" -> "small free model".
+- "8 times in 50" explained on screen: 10 questions × 5 ways of listening.
+- The verdict and the catch said plainly: best free result 5/10, ~35 s an answer, 20 of it the mouth; it answers in
+  English.
+- The computer-voice caveat said once and turned into the ask ("these were computer voices: try yours"); "read the
+  number back" is said as advice until it's better (not tested), with "or let customers type it".
+- Telugu: "తనే ఒక నంబర్ పెట్టేసింది" (not "ఒకటి సృష్టించింది: ఒకటి..."); "ట్రాన్స్‌లేట్ చేస్తే"; "తెలుగు మాట, హిందీ
+  అక్షరాల్లో"; no "పని చేసే ముందు".
+- Caption try-it: one fixed phrase, any 4-digit number, voice typing set to Telugu; it tests your phone's voice typing,
+  a different system from ours, and the caption says so.
+
+## Script v2 (EN | TE)
 | # | English | Telugu |
 |---|---|---|
-| 1 | Can a free voice assistant understand Telugu? We built one. English: seven of ten. | Telugu: zero. | ఫ్రీ వాయిస్ అసిస్టెంట్ కి తెలుగు అర్థమవుతుందా? మేం ఒకటి తయారు చేశాం. ఇంగ్లీష్: పదిలో ఏడు. | తెలుగు: సున్నా. |
-| 2 | A voice assistant is three pieces: ears turn speech into text, a brain answers, and a mouth says it. | వాయిస్ అసిస్టెంట్ లో మూడు భాగాలు: మాటని టెక్స్ట్ గా మార్చే చెవులు, జవాబిచ్చే మెదడు, అది చెప్పే నోరు. |
-| 3 | The ears: Whisper, OpenAI's speech model, free and open since 2022. It runs on our own computer. | చెవులు: విస్పర్, ఓపెన్ సోర్స్ స్పీచ్ మోడల్, రెండు వేల ఇరవై రెండు నుంచి ఫ్రీ. మా కంప్యూటర్ లోనే నడుస్తుంది. |
-| 4 | Step one, the ears: one line turns the customer's voice into text. Step two, the brain: last episode's bot and order server, unchanged. | స్టెప్ వన్, చెవులు: ఒక్క లైన్, కస్టమర్ మాటని టెక్స్ట్ గా మారుస్తుంది. స్టెప్ టూ, మెదడు: పోయిన ఎపిసోడ్ బాట్, ఆర్డర్ సర్వర్, మార్పు లేకుండా. |
-| 5 | Step three, the mouth: a computer voice reads the answer out. | స్టెప్ త్రీ, నోరు: కంప్యూటర్ వాయిస్ జవాబు చదివి చెబుతుంది. |
-| 6 | Our test: ten customers' questions, spoken by computer voices. English: seven right; three numbers came out like prices. | Telugu, small ears: Hindi letters. Zero. | మా టెస్ట్: పది మంది కస్టమర్ల ప్రశ్నలు, కంప్యూటర్ వాయిస్ లతో. ఇంగ్లీష్: ఏడు కరెక్ట్; మూడు నంబర్లు ధరల్లా వచ్చాయి. | తెలుగు, చిన్న చెవులు: హిందీ అక్షరాలు. సున్నా. |
-| 7 | And when it couldn't read the number, the AI made one up: one, two, three, four, five. | నంబర్ అర్థం కానప్పుడు, చాట్‌బాట్ ఒకటి సృష్టించింది: ఒకటి, రెండు, మూడు, నాలుగు, ఐదు. |
-| 8 | Bigger ears, translating to English first: five of ten. | And on our computer, one answer took about thirty-five seconds. | పెద్ద చెవులు, ముందు ఇంగ్లీష్ లోకి అనువదిస్తే: పదిలో ఐదు. | మా కంప్యూటర్ లో, ఒక్క జవాబుకి దాదాపు ముప్పై ఐదు సెకన్లు. |
-| 9 | So test it in your language, with real numbers, and make it read the number back before it acts. Next: deploy your AI app. | అందుకే మీ భాషలో, నిజమైన నంబర్లతో టెస్ట్ చేసుకోండి; పని చేసే ముందు, నంబర్ తిరిగి చదివి చెప్పేలా చేసుకోండి. | తర్వాత: మీ యాప్ ని లైవ్ కి తీసుకెళ్ళడం. |
+| 1 | Can a free voice assistant understand Telugu? We built one. Right order number, in English: seven of ten. | In Telugu: zero. | ఫ్రీ వాయిస్ అసిస్టెంట్ కి తెలుగు అర్థమవుతుందా? మేం ఒకటి తయారు చేశాం. ఇంగ్లీష్ లో, ఆర్డర్ నంబర్ పదిలో ఏడుసార్లు కరెక్ట్. | తెలుగులో: సున్నా. |
+| 2 | Three pieces, one line of code each: ears turn the voice into text, the brain is last episode's bot, | and a mouth reads the answer out. | మూడు భాగాలు, ఒక్కోదానికి ఒక్క లైన్: మాటని టెక్స్ట్ గా మార్చే చెవులు, పోయిన ఎపిసోడ్ బాట్ మెదడు, | జవాబు చదివి చెప్పే నోరు. |
+| 3 | Our test: ten customers, in computer voices. English: three numbers came out like prices. | Telugu, small free model: Telugu words, in Hindi letters. | మా టెస్ట్: పది మంది కస్టమర్లు, కంప్యూటర్ వాయిస్ లలో. ఇంగ్లీష్: మూడు నంబర్లు ధరల్లా వచ్చాయి. | తెలుగు, చిన్న ఫ్రీ మోడల్: తెలుగు మాట, హిందీ అక్షరాల్లో. |
+| 4 | When it couldn't read the number, the AI made one up: one, two, three, four, five. Eight times in fifty tries. | నంబర్ అర్థం కానప్పుడు, చాట్‌బాట్ తనే ఒక నంబర్ పెట్టేసింది: ఒకటి, రెండు, మూడు, నాలుగు, ఐదు. యాభై ప్రయత్నాల్లో ఎనిమిదిసార్లు. |
+| 5 | Best free result: a bigger model, translating to English first. Five of ten. | About thirty-five seconds an answer on our computer, and twenty of that is the mouth. | బెస్ట్ ఫ్రీ రిజల్ట్: పెద్ద మోడల్, ముందు ఇంగ్లీష్ లోకి ట్రాన్స్‌లేట్ చేస్తే. పదిలో ఐదు. | ఒక్క జవాబుకి దాదాపు ముప్పై ఐదు సెకన్లు; అందులో ఇరవై, నోరే. |
+| 6 | These were computer voices, so try it with yours. Until it's better, have it read the number back, or let customers type it. | Next: deploy your AI app. | ఇవి కంప్యూటర్ వాయిస్ లు; మీ గొంతుతో ట్రై చేసుకోండి. అప్పటిదాకా, నంబర్ తిరిగి చదివి చెప్పించండి, లేదా నంబర్ ని టైప్ లో తీసుకోండి. | తర్వాత: మీ యాప్ ని లైవ్ కి తీసుకెళ్ళడం. |
 
 ## On screen (English in both versions)
 1. Frame 1: "CAN A FREE VOICE ASSISTANT UNDERSTAND TELUGU?"; a customer's bubble in Telugu (the 4417 question) and "WHAT
@@ -61,4 +74,5 @@ WhatsApp bot (Qwen2.5-7B-Instruct, 4-bit) + EP55's fixed order server. Scored: d
 8. Rule card: test in your language · real numbers · read the number back; "NEXT · EP57: DEPLOY YOUR AI APP".
 
 ## Caption ask (a try-it with a posted answer)
-"Try it: say your order number (or any 4-digit number) in Telugu to your phone's voice typing. Post exactly what it typed."
+"Try it: set your phone's voice typing to Telugu and say 'ఆర్డర్ నలభై నాలుగు పదిహేడు' (order 4417), or any 4-digit
+number. Post exactly what it typed." (Your phone's voice typing is a different system from the free model we tested.)

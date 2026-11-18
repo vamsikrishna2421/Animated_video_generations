@@ -52,7 +52,7 @@
    "id": "s_a",
    "type": "sk_voice56",
    "tail": 0.0,
-   "boost": 1.7,
+   "boost": 1.8,
    "drop_at": [
     [
      0,
@@ -65,14 +65,6 @@
      {
       "prop": "hook",
       "n": 1
-     },
-     {
-      "prop": "what",
-      "n": 2
-     },
-     {
-      "prop": "who",
-      "n": 3
      }
     ],
     "captionTop": 1360,
@@ -81,9 +73,10 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"question.wav\")",
+     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
+     "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "enBad": [
       "\"Order 42.90\"",
       "\"order 46.11\"",
@@ -118,33 +111,15 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "ఫ్రీ వాయిస్ అసిస్టెంట్ కి తెలుగు అర్థమవుతుందా? [1] మేం ఒకటి తయారు చేశాం. ఇంగ్లీష్: పదిలో ఏడు. <pause 0.5> [2] తెలుగు: సున్నా.",
+     "text": "ఫ్రీ వాయిస్ అసిస్టెంట్ కి తెలుగు అర్థమవుతుందా? [1] మేం ఒకటి తయారు చేశాం. ఇంగ్లీష్ లో, ఆర్డర్ నంబర్ పదిలో ఏడుసార్లు కరెక్ట్. <pause 0.5> [2] తెలుగులో: సున్నా.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Can a free voice assistant understand Telugu? We built one. English: 7 of 10. <pause 0.5> Telugu: 0.",
+     "show": "Can a free voice assistant understand Telugu? We built one. In English, the order number was right 7 times in 10. <pause 0.5> In Telugu: 0.",
      "tempo": 1.1,
-     "tts": "ఫ్రీ వాయిస్ అసిస్టెంట్ కి తెలుగు అర్థమవుతుందా? మేం ఒకటి తయారు చేశాం. ఇంగ్లీష్: పదిలో ఏడు.",
+     "tts": "ఫ్రీ వాయిస్ అసిస్టెంట్ కి తెలుగు అర్థమవుతుందా? మేం ఒకటి తయారు చేశాం. ఇంగ్లీష్ లో, ఆర్డర్ నంబర్ పదిలో ఏడుసార్లు కరెక్ట్.",
      "file2": "01b_storyteller.wav",
-     "tts2": "తెలుగు: సున్నా.",
+     "tts2": "తెలుగులో: సున్నా.",
      "pause": 0.5
-    },
-    {
-     "who": "storyteller",
-     "file": "02_storyteller.wav",
-     "text": "వాయిస్ అసిస్టెంట్ లో మూడు భాగాలు: [1] మాటని టెక్స్ట్ గా మార్చే చెవులు, జవాబిచ్చే మెదడు, అది చెప్పే నోరు.",
-     "maxgap": 0.3,
-     "gap": 0.3,
-     "show": "A voice assistant has 3 parts: ears that turn speech into text, a brain that answers, a mouth that says it.",
-     "tempo": 1.1
-    },
-    {
-     "who": "storyteller",
-     "file": "03_storyteller.wav",
-     "text": "చెవులు: విస్పర్, ఓపెన్ సోర్స్ స్పీచ్ మోడల్, రెండు వేల ఇరవై రెండు నుంచి ఫ్రీ. [1] మా కంప్యూటర్ లోనే నడుస్తుంది.",
-     "maxgap": 0.3,
-     "gap": 0.35,
-     "show": "The ears: Whisper, an open-source speech model, free since 2022. It runs on our own computer.",
-     "tempo": 1.1
     }
    ]
   },
@@ -157,12 +132,8 @@
    "data": {
     "beats": [
      {
-      "prop": "steps",
-      "n": 4
-     },
-     {
-      "prop": "mouth",
-      "n": 5
+      "prop": "pieces",
+      "n": 2
      }
     ],
     "captionTop": 1360,
@@ -171,9 +142,10 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"question.wav\")",
+     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
+     "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "enBad": [
       "\"Order 42.90\"",
       "\"order 46.11\"",
@@ -207,21 +179,16 @@
    "lines": [
     {
      "who": "storyteller",
-     "file": "04_storyteller.wav",
-     "text": "స్టెప్ వన్, చెవులు: ఒక్క లైన్, కస్టమర్ మాటని టెక్స్ట్ గా మారుస్తుంది. [1] స్టెప్ టూ, మెదడు: పోయిన ఎపిసోడ్ బాట్, ఆర్డర్ సర్వర్, మార్పు లేకుండా.",
-     "maxgap": 0.3,
-     "gap": 0.3,
-     "show": "Step 1, the ears: one line turns the customer's speech into text. Step 2, the brain: last episode's bot and order server, unchanged.",
-     "tempo": 1.1
-    },
-    {
-     "who": "storyteller",
-     "file": "05_storyteller.wav",
-     "text": "స్టెప్ త్రీ, నోరు: [1] కంప్యూటర్ వాయిస్ జవాబు చదివి చెబుతుంది.",
+     "file": "02_storyteller.wav",
+     "text": "మూడు భాగాలు, ఒక్కోదానికి ఒక్క లైన్: [1] మాటని టెక్స్ట్ గా మార్చే చెవులు, పోయిన ఎపిసోడ్ బాట్ మెదడు, <pause 0.4> [2] జవాబు చదివి చెప్పే నోరు.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Step 3, the mouth: a computer voice reads the answer out.",
-     "tempo": 1.1
+     "show": "3 parts, one line each: ears that turn speech into text, last episode's bot as the brain, <pause 0.4> a mouth that reads the answer.",
+     "tempo": 1.1,
+     "tts": "మూడు భాగాలు, ఒక్కోదానికి ఒక్క లైన్: మాటని టెక్స్ట్ గా మార్చే చెవులు, పోయిన ఎపిసోడ్ బాట్ మెదడు,",
+     "file2": "02b_storyteller.wav",
+     "tts2": "జవాబు చదివి చెప్పే నోరు.",
+     "pause": 0.4
     }
    ]
   },
@@ -240,27 +207,27 @@
     [
      2,
      1,
-     0.4
+     0.5
     ]
    ],
    "swell": [
     2,
-    1,
+    2,
     1.9
    ],
    "data": {
     "beats": [
      {
       "prop": "test",
-      "n": 6
+      "n": 3
      },
      {
       "prop": "madeup",
-      "n": 7
+      "n": 4
      },
      {
       "prop": "fix",
-      "n": 8
+      "n": 5
      }
     ],
     "captionTop": 1360,
@@ -269,9 +236,10 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"question.wav\")",
+     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
+     "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "enBad": [
       "\"Order 42.90\"",
       "\"order 46.11\"",
@@ -296,8 +264,8 @@
      "full": "full code: in the pinned comment"
     },
     "yt": {
-     "chapter": "Our test",
-     "title": "Our test",
+     "chapter": "Our test, the best free result",
+     "title": "Our test, the best free result",
      "notes": []
     },
     "handle": "@ai_maastaaru_telugu"
@@ -305,37 +273,37 @@
    "lines": [
     {
      "who": "storyteller",
-     "file": "06_storyteller.wav",
-     "text": "మా టెస్ట్: పది మంది కస్టమర్ల ప్రశ్నలు, కంప్యూటర్ వాయిస్ లతో. [1] ఇంగ్లీష్: ఏడు కరెక్ట్; మూడు నంబర్లు ధరల్లా వచ్చాయి. <pause 0.5> [2] తెలుగు, చిన్న చెవులు: హిందీ అక్షరాలు. సున్నా.",
+     "file": "03_storyteller.wav",
+     "text": "మా టెస్ట్: పది మంది కస్టమర్లు, కంప్యూటర్ వాయిస్ లలో. [1] ఇంగ్లీష్: మూడు నంబర్లు ధరల్లా వచ్చాయి. <pause 0.5> [2] తెలుగు, చిన్న ఫ్రీ మోడల్: తెలుగు మాట, హిందీ అక్షరాల్లో.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Our test: 10 customers' questions, in computer voices. English: 7 right; 3 numbers came out like prices. <pause 0.5> Telugu, small ears: Hindi letters. 0.",
+     "show": "Our test: 10 customers, in computer voices. English: 3 numbers came out like prices. <pause 0.5> Telugu, small free model: Telugu words, in Hindi letters.",
      "tempo": 1.1,
-     "tts": "మా టెస్ట్: పది మంది కస్టమర్ల ప్రశ్నలు, కంప్యూటర్ వాయిస్ లతో. ఇంగ్లీష్: ఏడు కరెక్ట్; మూడు నంబర్లు ధరల్లా వచ్చాయి.",
-     "file2": "06b_storyteller.wav",
-     "tts2": "తెలుగు, చిన్న చెవులు: హిందీ అక్షరాలు. సున్నా.",
+     "tts": "మా టెస్ట్: పది మంది కస్టమర్లు, కంప్యూటర్ వాయిస్ లలో. ఇంగ్లీష్: మూడు నంబర్లు ధరల్లా వచ్చాయి.",
+     "file2": "03b_storyteller.wav",
+     "tts2": "తెలుగు, చిన్న ఫ్రీ మోడల్: తెలుగు మాట, హిందీ అక్షరాల్లో.",
      "pause": 0.5
     },
     {
      "who": "storyteller",
-     "file": "07_storyteller.wav",
-     "text": "నంబర్ అర్థం కానప్పుడు, [1] చాట్‌బాట్ ఒకటి సృష్టించింది: ఒకటి, రెండు, మూడు, నాలుగు, ఐదు.",
+     "file": "04_storyteller.wav",
+     "text": "నంబర్ అర్థం కానప్పుడు, [1] చాట్‌బాట్ తనే ఒక నంబర్ పెట్టేసింది: ఒకటి, రెండు, మూడు, నాలుగు, ఐదు. యాభై ప్రయత్నాల్లో ఎనిమిదిసార్లు.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "When it couldn't understand the number, the chatbot made one up: 1, 2, 3, 4, 5.",
+     "show": "When it couldn't understand the number, the chatbot put in a number of its own: 1, 2, 3, 4, 5. 8 times in 50 tries.",
      "tempo": 1.1
     },
     {
      "who": "storyteller",
-     "file": "08_storyteller.wav",
-     "text": "పెద్ద చెవులు, ముందు ఇంగ్లీష్ లోకి అనువదిస్తే: [1] పదిలో ఐదు. <pause 0.5> [2] మా కంప్యూటర్ లో, ఒక్క జవాబుకి దాదాపు ముప్పై ఐదు సెకన్లు.",
+     "file": "05_storyteller.wav",
+     "text": "బెస్ట్ ఫ్రీ రిజల్ట్: పెద్ద మోడల్, ముందు ఇంగ్లీష్ లోకి ట్రాన్స్‌లేట్ చేస్తే. [1] పదిలో ఐదు. <pause 0.5> [2] ఒక్క జవాబుకి దాదాపు ముప్పై ఐదు సెకన్లు; అందులో ఇరవై, నోరే.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Bigger ears, translating to English first: 5 of 10. <pause 0.5> On our computer, one answer took about 35 seconds.",
+     "show": "Best free result: a bigger model, translating to English first. 5 of 10. <pause 0.5> About 35 seconds an answer; 20 of that is the mouth alone.",
      "tempo": 1.1,
-     "tts": "పెద్ద చెవులు, ముందు ఇంగ్లీష్ లోకి అనువదిస్తే: పదిలో ఐదు.",
-     "file2": "08b_storyteller.wav",
-     "tts2": "మా కంప్యూటర్ లో, ఒక్క జవాబుకి దాదాపు ముప్పై ఐదు సెకన్లు.",
+     "tts": "బెస్ట్ ఫ్రీ రిజల్ట్: పెద్ద మోడల్, ముందు ఇంగ్లీష్ లోకి ట్రాన్స్‌లేట్ చేస్తే. పదిలో ఐదు.",
+     "file2": "05b_storyteller.wav",
+     "tts2": "ఒక్క జవాబుకి దాదాపు ముప్పై ఐదు సెకన్లు; అందులో ఇరవై, నోరే.",
      "pause": 0.5
     }
    ]
@@ -353,7 +321,7 @@
     "beats": [
      {
       "prop": "loop",
-      "n": 9
+      "n": 6
      }
     ],
     "captionTop": 1360,
@@ -362,9 +330,10 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"question.wav\")",
+     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
+     "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "enBad": [
       "\"Order 42.90\"",
       "\"order 46.11\"",
@@ -389,8 +358,8 @@
      "full": "full code: in the pinned comment"
     },
     "yt": {
-     "chapter": "Next: deploy your AI app",
-     "title": "Next: deploy your AI app",
+     "chapter": "Try it with your voice",
+     "title": "Try it with your voice",
      "notes": []
     },
     "handle": "@ai_maastaaru_telugu"
@@ -398,14 +367,14 @@
    "lines": [
     {
      "who": "storyteller",
-     "file": "09_storyteller.wav",
-     "text": "అందుకే మీ భాషలో, నిజమైన నంబర్లతో టెస్ట్ చేసుకోండి; పని చేసే ముందు, నంబర్ తిరిగి చదివి చెప్పేలా చేసుకోండి. <pause 0.4> [1] తర్వాత: మీ యాప్ ని లైవ్ కి తీసుకెళ్ళడం.",
+     "file": "06_storyteller.wav",
+     "text": "ఇవి కంప్యూటర్ వాయిస్ లు; మీ గొంతుతో ట్రై చేసుకోండి. [1] అప్పటిదాకా, నంబర్ తిరిగి చదివి చెప్పించండి, లేదా నంబర్ ని టైప్ లో తీసుకోండి. <pause 0.4> [2] తర్వాత: మీ యాప్ ని లైవ్ కి తీసుకెళ్ళడం.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "So test it in your language, with real numbers; make it read the number back before it acts. <pause 0.4> Next: taking your app live.",
+     "show": "These were computer voices; try it with your own voice. Until then, have it read the number back, or take the number by typing. <pause 0.4> Next: taking your app live.",
      "tempo": 1.1,
-     "tts": "అందుకే మీ భాషలో, నిజమైన నంబర్లతో టెస్ట్ చేసుకోండి; పని చేసే ముందు, నంబర్ తిరిగి చదివి చెప్పేలా చేసుకోండి.",
-     "file2": "09b_storyteller.wav",
+     "tts": "ఇవి కంప్యూటర్ వాయిస్ లు; మీ గొంతుతో ట్రై చేసుకోండి. అప్పటిదాకా, నంబర్ తిరిగి చదివి చెప్పించండి, లేదా నంబర్ ని టైప్ లో తీసుకోండి.",
+     "file2": "06b_storyteller.wav",
      "tts2": "తర్వాత: మీ యాప్ ని లైవ్ కి తీసుకెళ్ళడం.",
      "pause": 0.4
     }

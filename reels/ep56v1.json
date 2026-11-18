@@ -50,7 +50,7 @@
    "id": "s_a",
    "type": "sk_voice56",
    "tail": 0.0,
-   "boost": 1.7,
+   "boost": 1.8,
    "drop_at": [
     [
      0,
@@ -63,14 +63,6 @@
      {
       "prop": "hook",
       "n": 1
-     },
-     {
-      "prop": "what",
-      "n": 2
-     },
-     {
-      "prop": "who",
-      "n": 3
      }
     ],
     "captionTop": 1360,
@@ -79,9 +71,10 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"question.wav\")",
+     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
+     "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "enBad": [
       "\"Order 42.90\"",
       "\"order 46.11\"",
@@ -115,33 +108,15 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "Can a free voice assistant understand Telugu? [1] We built one. English: seven of ten. <pause 0.5> [2] Telugu: zero.",
+     "text": "Can a free voice assistant understand Telugu? [1] We built one. Right order number, in English: seven of ten. <pause 0.5> [2] In Telugu: zero.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Can a free voice assistant understand Telugu? We built one. English: 7 of 10. <pause 0.5> Telugu: 0.",
+     "show": "Can a free voice assistant understand Telugu? We built one. Right order number, in English: 7 of 10. <pause 0.5> In Telugu: 0.",
      "tempo": 1.08,
-     "tts": "Can a free voice assistant understand Telugu? We built one. English: seven of ten.",
+     "tts": "Can a free voice assistant understand Telugu? We built one. Right order number, in English: seven of ten.",
      "file2": "01b_storyteller.wav",
-     "tts2": "Telugu: zero.",
+     "tts2": "In Telugu: zero.",
      "pause": 0.5
-    },
-    {
-     "who": "storyteller",
-     "file": "02_storyteller.wav",
-     "text": "A voice assistant is three pieces: [1] ears turn speech into text, a brain answers, and a mouth says it.",
-     "maxgap": 0.3,
-     "gap": 0.3,
-     "show": "A voice assistant is three pieces: ears turn speech into text, a brain answers, and a mouth says it.",
-     "tempo": 1.08
-    },
-    {
-     "who": "storyteller",
-     "file": "03_storyteller.wav",
-     "text": "The ears: Whisper, OpenAI's speech model, free and open since 2022. [1] It runs on our own computer.",
-     "maxgap": 0.3,
-     "gap": 0.35,
-     "show": "The ears: Whisper, OpenAI's speech model, free and open since 2022. It runs on our own computer.",
-     "tempo": 1.08
     }
    ]
   },
@@ -154,12 +129,8 @@
    "data": {
     "beats": [
      {
-      "prop": "steps",
-      "n": 4
-     },
-     {
-      "prop": "mouth",
-      "n": 5
+      "prop": "pieces",
+      "n": 2
      }
     ],
     "captionTop": 1360,
@@ -168,9 +139,10 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"question.wav\")",
+     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
+     "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "enBad": [
       "\"Order 42.90\"",
       "\"order 46.11\"",
@@ -203,21 +175,16 @@
    "lines": [
     {
      "who": "storyteller",
-     "file": "04_storyteller.wav",
-     "text": "Step one, the ears: one line turns the customer's voice into text. [1] Step two, the brain: last episode's bot and order server, unchanged.",
-     "maxgap": 0.3,
-     "gap": 0.3,
-     "show": "Step one, the ears: one line turns the customer's voice into text. Step two, the brain: last episode's bot and order server, unchanged.",
-     "tempo": 1.08
-    },
-    {
-     "who": "storyteller",
-     "file": "05_storyteller.wav",
-     "text": "Step three, the mouth: [1] a computer voice reads the answer out.",
+     "file": "02_storyteller.wav",
+     "text": "Three pieces, one line of code each: [1] ears turn the voice into text, the brain is last episode's bot, <pause 0.4> [2] and a mouth reads the answer out.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Step three, the mouth: a computer voice reads the answer out.",
-     "tempo": 1.08
+     "show": "Three pieces, one line of code each: ears turn the voice into text, the brain is last episode's bot, and a mouth reads the answer out.",
+     "tempo": 1.08,
+     "tts": "Three pieces, one line of code each: ears turn the voice into text, the brain is last episode's bot,",
+     "file2": "02b_storyteller.wav",
+     "tts2": "and a mouth reads the answer out.",
+     "pause": 0.4
     }
    ]
   },
@@ -236,27 +203,27 @@
     [
      2,
      1,
-     0.4
+     0.5
     ]
    ],
    "swell": [
     2,
-    1,
+    2,
     1.9
    ],
    "data": {
     "beats": [
      {
       "prop": "test",
-      "n": 6
+      "n": 3
      },
      {
       "prop": "madeup",
-      "n": 7
+      "n": 4
      },
      {
       "prop": "fix",
-      "n": 8
+      "n": 5
      }
     ],
     "captionTop": 1360,
@@ -265,9 +232,10 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"question.wav\")",
+     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
+     "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "enBad": [
       "\"Order 42.90\"",
       "\"order 46.11\"",
@@ -292,45 +260,45 @@
      "full": "full code: in the pinned comment"
     },
     "yt": {
-     "chapter": "Our test",
-     "title": "Our test",
+     "chapter": "Our test, the best free result",
+     "title": "Our test, the best free result",
      "notes": []
     }
    },
    "lines": [
     {
      "who": "storyteller",
-     "file": "06_storyteller.wav",
-     "text": "Our test: ten customers' questions, spoken by computer voices. [1] English: seven right; three numbers came out like prices. <pause 0.5> [2] Telugu, small ears: Hindi letters. Zero.",
+     "file": "03_storyteller.wav",
+     "text": "Our test: ten customers, in computer voices. [1] English: three numbers came out like prices. <pause 0.5> [2] Telugu, small free model: Telugu words, in Hindi letters.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "show": "Our test: 10 customers' questions, spoken by computer voices. English: 7 right; 3 numbers came out like prices. <pause 0.5> Telugu, small ears: Hindi letters. 0.",
+     "show": "Our test: 10 customers, in computer voices. English: 3 numbers came out like prices. <pause 0.5> Telugu, small free model: Telugu words, in Hindi letters.",
      "tempo": 1.08,
-     "tts": "Our test: ten customers' questions, spoken by computer voices. English: seven right; three numbers came out like prices.",
-     "file2": "06b_storyteller.wav",
-     "tts2": "Telugu, small ears: Hindi letters. Zero.",
+     "tts": "Our test: ten customers, in computer voices. English: three numbers came out like prices.",
+     "file2": "03b_storyteller.wav",
+     "tts2": "Telugu, small free model: Telugu words, in Hindi letters.",
      "pause": 0.5
     },
     {
      "who": "storyteller",
-     "file": "07_storyteller.wav",
-     "text": "And when it couldn't read the number, [1] the AI made one up: one, two, three, four, five.",
+     "file": "04_storyteller.wav",
+     "text": "When it couldn't read the number, [1] the AI made one up: one, two, three, four, five. Eight times in fifty tries.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "And when it couldn't read the number, the AI made one up: 1, 2, 3, 4, 5.",
+     "show": "When it couldn't read the number, the AI made one up: 1, 2, 3, 4, 5. 8 times in 50 tries.",
      "tempo": 1.08
     },
     {
      "who": "storyteller",
-     "file": "08_storyteller.wav",
-     "text": "Bigger ears, translating to English first: [1] five of ten. <pause 0.5> [2] And on our computer, one answer took about thirty-five seconds.",
+     "file": "05_storyteller.wav",
+     "text": "Best free result: a bigger model, translating to English first. [1] Five of ten. <pause 0.5> [2] About thirty-five seconds an answer on our computer, and twenty of that is the mouth.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "show": "Bigger ears, translating to English first: 5 of 10. <pause 0.5> And on our computer, one answer took about 35 seconds.",
+     "show": "Best free result: a bigger model, translating to English first. 5 of 10. <pause 0.5> About 35 seconds an answer on our computer, and 20 of that is the mouth.",
      "tempo": 1.08,
-     "tts": "Bigger ears, translating to English first: five of ten.",
-     "file2": "08b_storyteller.wav",
-     "tts2": "And on our computer, one answer took about thirty-five seconds.",
+     "tts": "Best free result: a bigger model, translating to English first. Five of ten.",
+     "file2": "05b_storyteller.wav",
+     "tts2": "About thirty-five seconds an answer on our computer, and twenty of that is the mouth.",
      "pause": 0.5
     }
    ]
@@ -348,7 +316,7 @@
     "beats": [
      {
       "prop": "loop",
-      "n": 9
+      "n": 6
      }
     ],
     "captionTop": 1360,
@@ -357,9 +325,10 @@
      "said": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
      "saidEn": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "heardHi": "आल्डर नालभाई, नालगु पदिहेडु, ना एर फोंस रिटन चेसानु।",
-     "ears": "text = ears.transcribe(\"question.wav\")",
+     "ears": "text = ears.transcribe(\"q.wav\", task=\"translate\")",
      "brain": "answer = bot.ask(text)",
      "mouth": "voice.say(answer)",
+     "gloss": "\"Order 4417, I returned my earphones. Has my refund come?\"",
      "enBad": [
       "\"Order 42.90\"",
       "\"order 46.11\"",
@@ -384,20 +353,24 @@
      "full": "full code: in the pinned comment"
     },
     "yt": {
-     "chapter": "Next: deploy your AI app",
-     "title": "Next: deploy your AI app",
+     "chapter": "Try it with your voice",
+     "title": "Try it with your voice",
      "notes": []
     }
    },
    "lines": [
     {
      "who": "storyteller",
-     "file": "09_storyteller.wav",
-     "text": "So test it in your language, with real numbers, and make it read the number back before it acts. [1] Next: deploy your AI app.",
+     "file": "06_storyteller.wav",
+     "text": "These were computer voices, so try it with yours. [1] Until it's better, have it read the number back, or let customers type it. <pause 0.4> [2] Next: deploy your AI app.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "show": "So test it in your language, with real numbers, and make it read the number back before it acts. Next: deploy your AI app.",
-     "tempo": 1.08
+     "show": "These were computer voices, so try it with yours. Until it's better, have it read the number back, or let customers type it. <pause 0.4> Next: deploy your AI app.",
+     "tempo": 1.08,
+     "tts": "These were computer voices, so try it with yours. Until it's better, have it read the number back, or let customers type it.",
+     "file2": "06b_storyteller.wav",
+     "tts2": "Next: deploy your AI app.",
+     "pause": 0.4
     }
    ]
   }
