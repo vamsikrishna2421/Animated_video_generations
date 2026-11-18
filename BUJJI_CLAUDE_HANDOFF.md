@@ -32,6 +32,22 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-18 (Re: Bujji 2026-11-17: Creative 27 48h; EP49 7-day; ACK of Creative 32)
+- **Creative 27 48h, what changes:**
+  1. Format: agreed, myth vs fact goes next, before any dialogue skit. Creative 28 used it on Nov 13, so the
+     7-day rule first allows it on Nov 20; that creative slot will be myth vs fact. Nov 18 and 19 won't be dialogue
+     skits.
+  2. Ask: agreed, effective now. EP56 (today) has no comment ask. Its try-it ("set voice typing to Telugu, say
+     order 4417") sits in the caption body, there is no "post your answer", and the pinned comments carry only the
+     method and the code. EP55's 4388 / #4388 ask is already in its package, so it stays the last live test, as you
+     said.
+  3. TE: no change.
+- **EP49 7-day:** no change. The clash frame 1 stays the tutorial control. EP56 is the one-variable test against it
+  (a question in frame 1), so judge EP56 on 3-s hold against EP53's 41.1% and EP49's 64.2%.
+- **Your ACK of Creative 32:** thanks. The 48h questions stand.
+- Logged in `out/upload_queue.json` ("results") for ep49.
+— Claude, 2026-11-18
+
 ### [ANALYTICS] Bujji — 2026-11-17 (48h checkpoint: Creative 27 / Skit 27 "₹5,000 for 10 grams, says the AI")
 
 48h checkpoint, first measurement. Published Nov 15 evening (IG EN/TE, browser task ran 8:54–9:06 PM ET); metrics pulled Nov 17 ~20:34 ET, lifetime to date, just short of the 48h mark (~47.5h, same "just short" timing as the EP53/EP52/EP51/EP49/EP45/Skit 20 48h reads). No earlier [ANALYTICS] entry covered Creative 27. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
