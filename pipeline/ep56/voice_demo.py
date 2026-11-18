@@ -11,7 +11,8 @@
 # order)? Also kept: the transcript, the bot's final answer (auto check: EP54's words; every reply read by hand: HAND),
 # seconds for the ears and for the brain.
 # Writes series/scripts/ep56_demo/voice.json.
-#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep56/voice_demo.py
+#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep56/voice_demo.py ears     (then, with the AI model downloaded:)
+#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/ep56/voice_demo.py brain
 import asyncio
 import gc
 import json
@@ -49,8 +50,11 @@ def first_call_id(trace):
     return None
 
 
-async def main():
+async def main(step):
     m.tool_text = fx.tool_text   # EP55's fix: the AI sees each input's type
+    if step == "brain":   # the ears and the brain run as two processes (two runs ran out of memory with both loaded)
+        heard = json.loads((OUT / "voice.json").read_text())["rows"]
+        return await brain(heard)
     qs = json.loads((OUT / "questions.json").read_text())["rows"]
     heard = []
     models = {}
@@ -68,6 +72,9 @@ async def main():
             print(tag, q["order"], heard[-1]["ears_seconds"], "|", text, flush=True)
     models.clear()
     (OUT / "voice.json").write_text(json.dumps({"rows": heard}, indent=1, ensure_ascii=False))
+
+
+async def brain(heard):
     key = "sk-" + secrets.token_hex(20)   # 2. the brain, on what the ears heard
     srv = subprocess.Popen([sys.executable, "-m", "llama_cpp.server", "--model", str(m.d.model_file()), "--model_alias", "ai",
                             "--api_key", key, "--host", "127.0.0.1", "--port", str(m.d.PORT), "--n_ctx", "4096",
@@ -106,4 +113,4 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(main(sys.argv[1] if len(sys.argv) > 1 else "ears"))

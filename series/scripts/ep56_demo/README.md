@@ -9,3 +9,7 @@ First attempt of step 2 (Nov 18, before any result was kept): two faults in our 
 What the first attempt showed before it stopped (Telugu clips, unchanged): Whisper small writing Telugu speech in Hindi
 letters (B: 6 of 10) or looping text (B: 4 of 10, 45-50 s each); small translating to English (C) got "Order 40, 417",
 "4295", "43rd January"; large-v3 (D) wrote "ఆల్డార్ 40, 4, 17 ..." for 4417. These are re-run below, unchanged.
+
+Second attempt (the English clips remade): the ears A, B, C ran; it ran out of memory again at D (Whisper large-v3
+loading while the AI model sat in the RAM disk). voice_demo.py now runs as two steps, `ears` then `brain`, with the AI
+model downloaded only for the brain. Nothing else changed.
