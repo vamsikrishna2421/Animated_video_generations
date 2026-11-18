@@ -67,12 +67,12 @@ T = {   # on screen (English in both versions); the scores are the language's ow
     "mcafee": "47% of Indians faced an AI voice scam or know someone who did",
     "mcafeeSrc": "McAfee survey, 1,010 adults in India, May 2023",
 }
-SCENES = [("s_a", (1, 2, 3, 4), {"boost": 1.7, "duck_lines": [[1, 0.0], [2, 0.0]], "tail": 0.0}),
+SCENES = [("s_a", (1, 2, 3, 4), {"boost": 2.0, "duck_lines": [[1, 0.0], [2, 0.0]], "tail": 0.0}),
           ("s_b", (5, 6, 7, 8), {"boost": 1.1, "lift": 0.6, "duck_lines": [[1, 0.0]], "drop_at": [[2, 2, 0.5]], "tail": 0.0}),
-          ("s_c", (10,), {"boost": 1.3, "lift": 0.5, "tail": 0.0}),
-          ("s_d", (11,), {"outro": True, "pre": 0.2, "boost": 2.2, "lift": 0.7, "rise": 2.6, "tail": 0.0})]
+          ("s_c", (10,), {"boost": 1.8, "lift": 0.6, "rise": 2.2, "tail": 0.0}),   # render check: the arc was flat into the end
+          ("s_d", (11,), {"outro": True, "pre": 0.2, "boost": 2.6, "lift": 0.7, "rise": 3.0, "tail": 0.0})]
 GAP = {1: 0.35, 2: 0.4, 3: 0.35, 4: 0.45, 5: 0.3, 6: 0.4, 7: 0.35, 8: 0.35, 10: 0.35, 11: 0.0}
-FLAGS_TE = {"s_d": {"boost": 2.4, "rise": 2.8}}
+FLAGS_TE = {"s_c": {"boost": 2.0, "rise": 2.4}, "s_d": {"boost": 2.8, "rise": 3.2}}
 YT = {"s_a": "Which one is really Kittu?", "s_b": "A copy from 13 seconds", "s_c": "A family code word", "s_d": "What's our code word?"}
 MARK = re.compile(r"\[\d+\]\s*")
 NAMES = {"en": {"storyteller": "", "clip1": "Voice note 1", "clip2": "Voice note 2", "clip3": "The copy"}, "te": {"storyteller": "", "clip1": "Voice note 1", "clip2": "Voice note 2", "clip3": "The copy"}}
@@ -83,7 +83,7 @@ def spec(lang="en"):
     sid = "creative33te" if te else "creative33v1"
     s = {"id": sid, "title": "Which One Is Really Kittu? (Creative 33)" + (" (Telugu audio)" if te else ""), "label": "", "banner": "",
          "topic": "", "look": "classic", "gap": 0.14, "lead": 0.3, "music": "lofi", "names": NAMES[lang],
-         "musicVol": [0.13, 0.16], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase",
+         "musicVol": [0.13, 0.2], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 0.5, "captionMode": "phrase",
          "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimer": True, "tempo": 1.0, "captionTop": 1370}
     if te:

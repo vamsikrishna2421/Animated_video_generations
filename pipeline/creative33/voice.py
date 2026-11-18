@@ -145,7 +145,11 @@ def main(lang, only):
             if who.startswith("clip"):   # a voice note from the test: trimmed, copied as it is
                 f, t0, t1 = CLIPS[(lang, n)]
                 a, sr = sf.read(DEMO / f)
-                sf.write(src / line["file"], a[int(t0 * sr):int(t1 * sr)].astype(np.float32), sr)
+                x = a[int(t0 * sr):int(t1 * sr)]
+                x = x.mean(axis=1) if x.ndim > 1 else x
+                act = x[np.abs(x) > 0.01]   # every note at the same speech loudness (-18 dB): a quieter note would give itself away
+                x = x * (10 ** (-18 / 20) / (np.sqrt(np.mean(act ** 2)) + 1e-9))
+                sf.write(src / line["file"], np.clip(x, -0.98, 0.98).astype(np.float32), sr)
                 print(f"{n:02d} {who}: the test's audio {f} {t0}-{t1} s", flush=True)
                 continue
             parts = [(line.get("tts") or line["text"], line["file"], n)] + ([(line["tts2"], line["file2"], f"{n}b")] if line.get("file2") else [])
