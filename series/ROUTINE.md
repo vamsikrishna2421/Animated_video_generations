@@ -41,6 +41,8 @@ opinion ask lives in the caption. A hook missing any part of the stack fails the
      model lands in `~/.cache` and fills the disk.
    - Node: `cd video && npm ci` if `node_modules` is missing. Chromium headless shell under `/opt/pw-browsers`.
    - Fish TTS key: `FISH_API_KEY` from the environment. Never print it, never ask for it in chat.
+   - Fonts for Telugu / Devanagari text drawn on screen (EP56): `apt-get install -y fonts-noto-core` (Noto Sans Telugu,
+     Noto Sans Devanagari); without it the canvas draws boxes or unshaped letters. Check with `fc-list : family | grep -i telugu`.
 
 ### A fresh container (a new session, Oct 27)
 A new session clones the repo fresh, and nothing outside git survives: every committed render is checked out again

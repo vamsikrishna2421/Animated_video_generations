@@ -160,21 +160,20 @@ const StVoice: React.FC<SP> = ({ s }) => {
           block(c, 50, y2 + 26, "ENGLISH · RIGHT ORDER NUMBER", "7/10", GREEN, k1);
           block(c, 560, y2 + 26, "TELUGU · SMALL FREE MODEL", "0/10", "#f87171", k2);
         } else if (P === "pieces") {   // script review: one beat, three boxes, one code line each
-          const rows: [string, string, string, string][] = [["EARS", "speech -> text (Whisper)", T.ears, "#1e3a8a"], ["BRAIN", "EP55's bot + order server", T.brain, "#14532d"], ["MOUTH", "text -> speech", T.mouth, "#713f12"]];
+          const rows: [string, string, string, string][] = [["EARS", "speech -> text · Whisper (OpenAI, open source, 2022)", T.ears, "#1e3a8a"], ["BRAIN", "EP55's bot + order server", T.brain, "#14532d"], ["MOUTH", "text -> speech", T.mouth, "#713f12"]];
           const at3 = [ln.from + 2, cu(1, 0.45), cu(2, 0.3)];
           c.font = SANS(fit(c, "3 PIECES · 1 LINE EACH", W - 100, 64), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("3 PIECES · 1 LINE EACH", W / 2, 320);
           rows.forEach(([t, sub, code, col], q) => {
             const k = seg(f, at3[q], at3[q] + 8); if (k <= 0) return;
-            const y = 370 + q * 250;
+            const y = 360 + q * 300;   // render check: the wrapped ears line ran into the brain row
             c.save(); c.globalAlpha = clamp(k * 3);
             c.fillStyle = col; rrect(c, 40, y, 1000, 76, 18); c.fill();
             c.font = SANS(44, 900); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(t, 70, y + 54);
-            c.font = SANS(fit(c, sub, 600, 32, 800), 800); c.fillStyle = "#e2e8f0"; c.textAlign = "right"; c.fillText(sub, 1010, y + 52);
+            c.font = SANS(fit(c, sub, 760, 32, 800), 800); c.fillStyle = "#e2e8f0"; c.textAlign = "right"; c.fillText(sub, 1010, y + 52);
             c.restore();
-            codeCard(c, y + 84, [code], seg(f, at3[q] + 4, at3[q] + 20), "voice.py");
+            codeCard(c, y + 84, [code], seg(f, at3[q] + 4, at3[q] + 20), "voice.py", undefined, 0, 30);
           });
-          chip(c, "the ears: Whisper · OpenAI · open source · 2022", W / 2, 1150, "#1e293b", "#e2e8f0", seg(f, ln.from + 20, ln.from + 28), big(c, "the ears: Whisper · OpenAI · open source · 2022", 36));
-          chip(c, "full code: in the pinned comment", W / 2, 1250, "#fde68a", INK, seg(f, cu(2, 0.3) + 16, cu(2, 0.3) + 24), 36);
+          chip(c, "full code: in the pinned comment", W / 2, 1290, "#fde68a", INK, seg(f, cu(2, 0.3) + 16, cu(2, 0.3) + 24), 36);
         } else if (P === "test") {
           c.font = SANS(fit(c, "OUR TEST · 10 CUSTOMERS", W - 100, 60), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("OUR TEST · 10 CUSTOMERS", W / 2, 320);
           c.font = SANS(32, 700); c.fillStyle = "#e2e8f0"; c.fillText("computer voices · a made-up shop · a small free model", W / 2, 372);
