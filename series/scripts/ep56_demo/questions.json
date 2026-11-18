@@ -2,19 +2,6 @@
  "rows": [
   {
    "order": "4417",
-   "lang": "en",
-   "text": "I returned my earphones, order 4417. Has my refund of Rs 1,299 come?",
-   "must": [
-    "not started",
-    "not yet",
-    "not received"
-   ],
-   "file": "series/scripts/ep56_demo/audio/en_4417.wav",
-   "seconds_audio": 7.65,
-   "seconds_to_make": 75.0
-  },
-  {
-   "order": "4417",
    "lang": "te",
    "text": "ఆర్డర్ నలభై నాలుగు పదిహేడు, నా ఇయర్‌ఫోన్స్ రిటర్న్ చేశాను. నా రిఫండ్ వచ్చిందా?",
    "must": [
@@ -25,18 +12,6 @@
    "file": "series/scripts/ep56_demo/audio/te_4417.wav",
    "seconds_audio": 7.02,
    "seconds_to_make": 29.9
-  },
-  {
-   "order": "4502",
-   "lang": "en",
-   "text": "Order 4502: has my power bank shipped?",
-   "must": [
-    "not shipped",
-    "packed"
-   ],
-   "file": "series/scripts/ep56_demo/audio/en_4502.wav",
-   "seconds_audio": 3.71,
-   "seconds_to_make": 16.2
   },
   {
    "order": "4502",
@@ -52,17 +27,6 @@
   },
   {
    "order": "4388",
-   "lang": "en",
-   "text": "When will my smartwatch arrive? Order 4388.",
-   "must": [
-    "18"
-   ],
-   "file": "series/scripts/ep56_demo/audio/en_4388.wav",
-   "seconds_audio": 4.64,
-   "seconds_to_make": 20.1
-  },
-  {
-   "order": "4388",
    "lang": "te",
    "text": "నా స్మార్ట్‌వాచ్ ఎప్పుడు వస్తుంది? ఆర్డర్ నలభై మూడు ఎనభై ఎనిమిది.",
    "must": [
@@ -74,17 +38,6 @@
   },
   {
    "order": "4290",
-   "lang": "en",
-   "text": "Did my charger get delivered? Order 4290.",
-   "must": [
-    "delivered"
-   ],
-   "file": "series/scripts/ep56_demo/audio/en_4290.wav",
-   "seconds_audio": 4.72,
-   "seconds_to_make": 20.0
-  },
-  {
-   "order": "4290",
    "lang": "te",
    "text": "నా ఛార్జర్ డెలివరీ అయిందా? ఆర్డర్ నలభై రెండు తొంభై.",
    "must": [
@@ -93,18 +46,6 @@
    "file": "series/scripts/ep56_demo/audio/te_4290.wav",
    "seconds_audio": 4.62,
    "seconds_to_make": 20.9
-  },
-  {
-   "order": "4611",
-   "lang": "en",
-   "text": "I cancelled order 4611. Where is my money?",
-   "must": [
-    "649",
-    "13"
-   ],
-   "file": "series/scripts/ep56_demo/audio/en_4611.wav",
-   "seconds_audio": 4.39,
-   "seconds_to_make": 19.5
   },
   {
    "order": "4611",
@@ -120,17 +61,6 @@
   },
   {
    "order": "4475",
-   "lang": "en",
-   "text": "Order 4475, when is my mouse coming?",
-   "must": [
-    "today"
-   ],
-   "file": "series/scripts/ep56_demo/audio/en_4475.wav",
-   "seconds_audio": 3.52,
-   "seconds_to_make": 15.4
-  },
-  {
-   "order": "4475",
    "lang": "te",
    "text": "ఆర్డర్ నలభై నాలుగు డెబ్భై ఐదు, నా మౌస్ ఎప్పుడు వస్తుంది?",
    "must": [
@@ -139,17 +69,6 @@
    "file": "series/scripts/ep56_demo/audio/te_4475.wav",
    "seconds_audio": 4.4,
    "seconds_to_make": 19.3
-  },
-  {
-   "order": "4533",
-   "lang": "en",
-   "text": "Why hasn't order 4533 reached me?",
-   "must": [
-    "address"
-   ],
-   "file": "series/scripts/ep56_demo/audio/en_4533.wav",
-   "seconds_audio": 3.19,
-   "seconds_to_make": 13.5
   },
   {
    "order": "4533",
@@ -164,17 +83,6 @@
   },
   {
    "order": "4362",
-   "lang": "en",
-   "text": "Was order 4362 delivered?",
-   "must": [
-    "delivered"
-   ],
-   "file": "series/scripts/ep56_demo/audio/en_4362.wav",
-   "seconds_audio": 2.79,
-   "seconds_to_make": 11.5
-  },
-  {
-   "order": "4362",
    "lang": "te",
    "text": "ఆర్డర్ నలభై మూడు అరవై రెండు డెలివరీ అయిందా?",
    "must": [
@@ -183,18 +91,6 @@
    "file": "series/scripts/ep56_demo/audio/te_4362.wav",
    "seconds_audio": 4.18,
    "seconds_to_make": 18.2
-  },
-  {
-   "order": "4588",
-   "lang": "en",
-   "text": "My speaker return, order 4588: refund done?",
-   "must": [
-    "approved",
-    "2,999"
-   ],
-   "file": "series/scripts/ep56_demo/audio/en_4588.wav",
-   "seconds_audio": 4.86,
-   "seconds_to_make": 21.0
   },
   {
    "order": "4588",
@@ -210,18 +106,6 @@
   },
   {
    "order": "4650",
-   "lang": "en",
-   "text": "Is my order 4650 confirmed?",
-   "must": [
-    "pending",
-    "not confirmed"
-   ],
-   "file": "series/scripts/ep56_demo/audio/en_4650.wav",
-   "seconds_audio": 3.22,
-   "seconds_to_make": 14.1
-  },
-  {
-   "order": "4650",
    "lang": "te",
    "text": "నా ఆర్డర్ నలభై ఆరు యాభై కన్ఫర్మ్ అయిందా?",
    "must": [
@@ -231,6 +115,122 @@
    "file": "series/scripts/ep56_demo/audio/te_4650.wav",
    "seconds_audio": 4.28,
    "seconds_to_make": 19.0
+  },
+  {
+   "order": "4417",
+   "lang": "en",
+   "text": "I returned my earphones, order forty-four seventeen. Has my refund of twelve ninety-nine rupees come?",
+   "must": [
+    "not started",
+    "not yet",
+    "not received"
+   ],
+   "file": "series/scripts/ep56_demo/audio/en_4417.wav",
+   "seconds_audio": 7.32,
+   "seconds_to_make": 50.2
+  },
+  {
+   "order": "4502",
+   "lang": "en",
+   "text": "Order forty-five oh two: has my power bank shipped?",
+   "must": [
+    "not shipped",
+    "packed"
+   ],
+   "file": "series/scripts/ep56_demo/audio/en_4502.wav",
+   "seconds_audio": 3.62,
+   "seconds_to_make": 16.6
+  },
+  {
+   "order": "4388",
+   "lang": "en",
+   "text": "When will my smartwatch arrive? Order forty-three eighty-eight.",
+   "must": [
+    "18"
+   ],
+   "file": "series/scripts/ep56_demo/audio/en_4388.wav",
+   "seconds_audio": 4.7,
+   "seconds_to_make": 21.4
+  },
+  {
+   "order": "4290",
+   "lang": "en",
+   "text": "Did my charger get delivered? Order forty-two ninety.",
+   "must": [
+    "delivered"
+   ],
+   "file": "series/scripts/ep56_demo/audio/en_4290.wav",
+   "seconds_audio": 4.6,
+   "seconds_to_make": 21.5
+  },
+  {
+   "order": "4611",
+   "lang": "en",
+   "text": "I cancelled order forty-six eleven. Where is my money?",
+   "must": [
+    "649",
+    "13"
+   ],
+   "file": "series/scripts/ep56_demo/audio/en_4611.wav",
+   "seconds_audio": 4.62,
+   "seconds_to_make": 21.0
+  },
+  {
+   "order": "4475",
+   "lang": "en",
+   "text": "Order forty-four seventy-five, when is my mouse coming?",
+   "must": [
+    "today"
+   ],
+   "file": "series/scripts/ep56_demo/audio/en_4475.wav",
+   "seconds_audio": 4.05,
+   "seconds_to_make": 17.8
+  },
+  {
+   "order": "4533",
+   "lang": "en",
+   "text": "Why hasn't order forty-five thirty-three reached me?",
+   "must": [
+    "address"
+   ],
+   "file": "series/scripts/ep56_demo/audio/en_4533.wav",
+   "seconds_audio": 3.37,
+   "seconds_to_make": 15.0
+  },
+  {
+   "order": "4362",
+   "lang": "en",
+   "text": "Was order forty-three sixty-two delivered?",
+   "must": [
+    "delivered"
+   ],
+   "file": "series/scripts/ep56_demo/audio/en_4362.wav",
+   "seconds_audio": 3.27,
+   "seconds_to_make": 14.8
+  },
+  {
+   "order": "4588",
+   "lang": "en",
+   "text": "My speaker return, order forty-five eighty-eight: refund done?",
+   "must": [
+    "approved",
+    "2,999"
+   ],
+   "file": "series/scripts/ep56_demo/audio/en_4588.wav",
+   "seconds_audio": 4.92,
+   "seconds_to_make": 23.6
+  },
+  {
+   "order": "4650",
+   "lang": "en",
+   "text": "Is my order forty-six fifty confirmed?",
+   "must": [
+    "pending",
+    "not confirmed"
+   ],
+   "file": "series/scripts/ep56_demo/audio/en_4650.wav",
+   "seconds_audio": 3.04,
+   "seconds_to_make": 13.9
   }
  ],
  "mouth": [
