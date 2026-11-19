@@ -4,8 +4,8 @@
  "topic": "",
  "banner": "",
  "musicVol": [
-  0.14,
-  0.2
+  0.16,
+  0.3
  ],
  "title": "Team of 15? Real Number: 0 (Creative 34)",
  "handle": "@ai_maastaaru",
@@ -13,46 +13,46 @@
  "fps": 30,
  "musicDrops": [
   [
-   475,
-   529
+   494,
+   548
   ]
  ],
  "musicBoosts": [
   [
    0,
    266,
-   1.5
+   2.0
   ],
   [
    266,
-   614,
-   1.0
+   634,
+   0.9
   ],
   [
-   614,
-   1106,
+   634,
+   1207,
    1.2
   ],
   [
-   1105,
-   1309,
-   1.6
+   1207,
+   1412,
+   2.0
   ],
   [
-   1309,
-   1447,
-   2.4
+   1411,
+   1566,
+   3.0
   ],
   [
-   1309,
-   1447,
-   2.6,
+   1411,
+   1566,
+   3.2,
    1
   ]
  ],
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1447,
+ "totalFrames": 1566,
  "music": "reel/creative34v1/score.wav",
  "scenes": [
   {
@@ -116,6 +116,10 @@
      "usualAdded": 10,
      "betterAdded": 4,
      "betterAsked": 5,
+     "asked": "\"Did you handle any sales-related tasks?\"",
+     "fixShort": "\"Don't add anything I didn't write. Ask me.\"",
+     "reworded": "the 10th: reworded, added nothing",
+     "ticker2": "OUR TEST: 10 OF 10 POLISHED RESUMES PADDED",
      "usualWhat": [
       "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
@@ -328,6 +332,10 @@
      "usualAdded": 10,
      "betterAdded": 4,
      "betterAsked": 5,
+     "asked": "\"Did you handle any sales-related tasks?\"",
+     "fixShort": "\"Don't add anything I didn't write. Ask me.\"",
+     "reworded": "the 10th: reworded, added nothing",
+     "ticker2": "OUR TEST: 10 OF 10 POLISHED RESUMES PADDED",
      "usualWhat": [
       "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
@@ -362,7 +370,7 @@
     "hardCuts": true
    },
    "from": 266,
-   "frames": 348,
+   "frames": 368,
    "lines": [
     {
      "who": "storyteller",
@@ -371,98 +379,118 @@
      "sub": null,
      "audio": "reel/creative34v1/line_02.wav",
      "from": 0,
-     "frames": 177,
+     "frames": 195,
      "words": [
       {
        "w": "One",
-       "from": 0,
+       "from": 1,
        "to": 7
       },
       {
        "w": "reply",
        "from": 7,
-       "to": 16
+       "to": 15
       },
       {
        "w": "added",
-       "from": 16,
-       "to": 26
+       "from": 15,
+       "to": 24
       },
       {
        "w": "a",
-       "from": 26,
-       "to": 29
+       "from": 24,
+       "to": 27
       },
       {
        "w": "thirty",
-       "from": 29,
+       "from": 27,
        "to": 40
       },
       {
        "w": "percent",
        "from": 40,
-       "to": 53
+       "to": 52
       },
       {
        "w": "drop",
-       "from": 53,
-       "to": 60
+       "from": 52,
+       "to": 59
       },
       {
        "w": "in",
-       "from": 60,
-       "to": 65
+       "from": 59,
+       "to": 63
       },
       {
        "w": "errors,",
-       "from": 65,
+       "from": 63,
+       "to": 75
+      },
+      {
+       "w": "a",
+       "from": 75,
        "to": 78
       },
       {
-       "w": "a",
-       "from": 78,
-       "to": 81
-      },
-      {
        "w": "certificate,",
-       "from": 81,
-       "to": 122
+       "from": 78,
+       "to": 107
       },
       {
        "w": "even",
-       "from": 122,
-       "to": 130
+       "from": 107,
+       "to": 124
       },
       {
        "w": "a",
-       "from": 130,
+       "from": 124,
+       "to": 127
+      },
+      {
+       "w": "job",
+       "from": 127,
        "to": 133
       },
       {
-       "w": "job,",
+       "w": "where",
        "from": 133,
        "to": 141
       },
       {
-       "w": "at",
+       "w": "it",
        "from": 141,
-       "to": 155
+       "to": 146
+      },
+      {
+       "w": "left",
+       "from": 146,
+       "to": 153
+      },
+      {
+       "w": "the",
+       "from": 153,
+       "to": 163
       },
       {
        "w": "company",
-       "from": 155,
-       "to": 167
+       "from": 163,
+       "to": 174
       },
       {
-       "w": "name.",
-       "from": 167,
-       "to": 177
+       "w": "name",
+       "from": 174,
+       "to": 182
+      },
+      {
+       "w": "blank.",
+       "from": 182,
+       "to": 192
       }
      ],
      "cues": {
-      "1": 26,
-      "2": 78,
-      "3": 122
+      "1": 24,
+      "2": 75,
+      "3": 107
      }
     },
     {
@@ -471,67 +499,67 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative34v1/line_03.wav",
-     "from": 192,
+     "from": 210,
      "frames": 105,
      "words": [
       {
        "w": "The",
-       "from": 192,
-       "to": 197
+       "from": 211,
+       "to": 216
       },
       {
        "w": "interview's",
-       "from": 197,
-       "to": 213
+       "from": 216,
+       "to": 231
       },
       {
        "w": "first",
-       "from": 213,
-       "to": 220
+       "from": 231,
+       "to": 239
       },
       {
        "w": "question?",
-       "from": 220,
-       "to": 233
-      },
-      {
-       "w": "Tell",
-       "from": 233,
-       "to": 248
-      },
-      {
-       "w": "us",
-       "from": 248,
+       "from": 239,
        "to": 252
       },
       {
-       "w": "about",
+       "w": "Tell",
        "from": 252,
-       "to": 260
+       "to": 267
+      },
+      {
+       "w": "us",
+       "from": 267,
+       "to": 271
+      },
+      {
+       "w": "about",
+       "from": 271,
+       "to": 279
       },
       {
        "w": "your",
-       "from": 260,
-       "to": 266
-      },
-      {
-       "w": "team",
-       "from": 266,
-       "to": 273
-      },
-      {
-       "w": "of",
-       "from": 273,
+       "from": 279,
        "to": 285
       },
       {
-       "w": "fifteen.",
+       "w": "team",
        "from": 285,
-       "to": 297
+       "to": 292
+      },
+      {
+       "w": "of",
+       "from": 292,
+       "to": 304
+      },
+      {
+       "w": "fifteen.",
+       "from": 304,
+       "to": 315
       }
      ],
      "cues": {
-      "1": 233
+      "1": 252
      }
     }
    ]
@@ -601,6 +629,10 @@
      "usualAdded": 10,
      "betterAdded": 4,
      "betterAsked": 5,
+     "asked": "\"Did you handle any sales-related tasks?\"",
+     "fixShort": "\"Don't add anything I didn't write. Ask me.\"",
+     "reworded": "the 10th: reworded, added nothing",
+     "ticker2": "OUR TEST: 10 OF 10 POLISHED RESUMES PADDED",
      "usualWhat": [
       "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
@@ -634,8 +666,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 614,
-   "frames": 492,
+   "from": 634,
+   "frames": 573,
    "lines": [
     {
      "who": "storyteller",
@@ -644,7 +676,7 @@
      "sub": null,
      "audio": "reel/creative34v1/line_04.wav",
      "from": 0,
-     "frames": 219,
+     "frames": 291,
      "words": [
       {
        "w": "We",
@@ -654,117 +686,142 @@
       {
        "w": "asked",
        "from": 5,
+       "to": 15
+      },
+      {
+       "w": "a",
+       "from": 15,
        "to": 19
       },
       {
-       "w": "a",
-       "from": 19,
-       "to": 23
-      },
-      {
        "w": "small",
-       "from": 23,
-       "to": 37
+       "from": 19,
+       "to": 33
       },
       {
        "w": "free",
-       "from": 37,
-       "to": 45
+       "from": 33,
+       "to": 41
       },
       {
        "w": "AI",
-       "from": 45,
-       "to": 50
+       "from": 41,
+       "to": 47
+      },
+      {
+       "w": "on",
+       "from": 47,
+       "to": 52
+      },
+      {
+       "w": "our",
+       "from": 52,
+       "to": 59
+      },
+      {
+       "w": "computer,",
+       "from": 59,
+       "to": 87
+      },
+      {
+       "w": "not",
+       "from": 87,
+       "to": 94
+      },
+      {
+       "w": "ChatGPT,",
+       "from": 94,
+       "to": 109
       },
       {
        "w": "ten",
-       "from": 50,
-       "to": 57
+       "from": 109,
+       "to": 116
       },
       {
        "w": "times.",
-       "from": 57,
-       "to": 69
+       "from": 116,
+       "to": 137
       },
       {
        "w": "All",
-       "from": 69,
-       "to": 86
+       "from": 137,
+       "to": 143
       },
       {
        "w": "ten",
-       "from": 86,
-       "to": 93
+       "from": 143,
+       "to": 160
       },
       {
        "w": "added",
-       "from": 93,
-       "to": 103
+       "from": 160,
+       "to": 170
       },
       {
        "w": "things",
-       "from": 103,
-       "to": 115
+       "from": 170,
+       "to": 182
       },
       {
        "w": "he",
-       "from": 115,
-       "to": 120
+       "from": 182,
+       "to": 187
       },
       {
        "w": "never",
-       "from": 120,
-       "to": 130
+       "from": 187,
+       "to": 197
       },
       {
        "w": "did.",
-       "from": 130,
-       "to": 139
+       "from": 197,
+       "to": 206
       },
       {
        "w": "Seven",
-       "from": 139,
-       "to": 159
+       "from": 206,
+       "to": 226
       },
       {
        "w": "pushed",
-       "from": 159,
-       "to": 171
+       "from": 226,
+       "to": 238
       },
       {
        "w": "his",
-       "from": 171,
-       "to": 178
+       "from": 238,
+       "to": 245
       },
       {
        "w": "basic",
-       "from": 178,
-       "to": 188
+       "from": 245,
+       "to": 255
       },
       {
        "w": "Excel",
-       "from": 188,
-       "to": 199
+       "from": 255,
+       "to": 270
       },
       {
        "w": "up",
-       "from": 199,
-       "to": 204
+       "from": 270,
+       "to": 275
       },
       {
        "w": "a",
-       "from": 204,
-       "to": 207
+       "from": 275,
+       "to": 278
       },
       {
        "w": "level.",
-       "from": 207,
-       "to": 219
+       "from": 278,
+       "to": 290
       }
      ],
      "cues": {
-      "1": 69,
-      "2": 139
+      "1": 137,
+      "2": 206
      }
     },
     {
@@ -773,122 +830,122 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative34v1/line_05.wav",
-     "from": 231,
-     "frames": 240,
+     "from": 303,
+     "frames": 242,
      "words": [
       {
-       "w": "Add",
-       "from": 231,
-       "to": 237
-      },
-      {
-       "w": "this",
-       "from": 237,
-       "to": 244
-      },
-      {
-       "w": "line",
-       "from": 244,
-       "to": 251
-      },
-      {
-       "w": "first:",
-       "from": 251,
-       "to": 274
-      },
-      {
-       "w": "don't",
-       "from": 274,
-       "to": 283
+       "w": "So",
+       "from": 304,
+       "to": 308
       },
       {
        "w": "add",
-       "from": 283,
-       "to": 288
+       "from": 308,
+       "to": 314
+      },
+      {
+       "w": "this",
+       "from": 314,
+       "to": 325
+      },
+      {
+       "w": "line:",
+       "from": 325,
+       "to": 333
+      },
+      {
+       "w": "don't",
+       "from": 333,
+       "to": 350
+      },
+      {
+       "w": "add",
+       "from": 350,
+       "to": 355
       },
       {
        "w": "anything",
-       "from": 288,
-       "to": 301
+       "from": 355,
+       "to": 368
       },
       {
        "w": "I",
-       "from": 301,
-       "to": 303
+       "from": 368,
+       "to": 370
       },
       {
        "w": "didn't",
-       "from": 303,
-       "to": 313
+       "from": 370,
+       "to": 380
       },
       {
        "w": "write;",
-       "from": 313,
-       "to": 323
+       "from": 380,
+       "to": 390
       },
       {
        "w": "ask",
-       "from": 323,
-       "to": 336
+       "from": 390,
+       "to": 395
       },
       {
        "w": "me.",
-       "from": 336,
-       "to": 342
+       "from": 395,
+       "to": 411
       },
       {
        "w": "Four",
-       "from": 342,
-       "to": 349
+       "from": 411,
+       "to": 422
       },
       {
        "w": "still",
-       "from": 349,
-       "to": 369
+       "from": 422,
+       "to": 441
       },
       {
        "w": "added",
-       "from": 369,
-       "to": 377
+       "from": 441,
+       "to": 449
       },
       {
        "w": "something,",
-       "from": 377,
-       "to": 392
+       "from": 449,
+       "to": 469
       },
       {
        "w": "but",
-       "from": 392,
-       "to": 398
+       "from": 469,
+       "to": 483
       },
       {
        "w": "five",
-       "from": 398,
-       "to": 418
+       "from": 483,
+       "to": 495
       },
       {
        "w": "asked",
-       "from": 418,
-       "to": 427
+       "from": 495,
+       "to": 503
       },
       {
        "w": "him",
-       "from": 427,
-       "to": 432
+       "from": 503,
+       "to": 509
       },
       {
        "w": "questions",
-       "from": 432,
-       "to": 446
+       "from": 509,
+       "to": 522
       },
       {
        "w": "first.",
-       "from": 446,
-       "to": 460
+       "from": 522,
+       "to": 544
       }
      ],
      "cues": {
-      "1": 342
+      "1": 411
      }
     }
    ]
@@ -954,6 +1011,10 @@
      "usualAdded": 10,
      "betterAdded": 4,
      "betterAsked": 5,
+     "asked": "\"Did you handle any sales-related tasks?\"",
+     "fixShort": "\"Don't add anything I didn't write. Ask me.\"",
+     "reworded": "the 10th: reworded, added nothing",
+     "ticker2": "OUR TEST: 10 OF 10 POLISHED RESUMES PADDED",
      "usualWhat": [
       "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
@@ -987,8 +1048,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1105,
-   "frames": 204,
+   "from": 1207,
+   "frames": 205,
    "lines": [
     {
      "who": "storyteller",
@@ -1163,6 +1224,10 @@
      "usualAdded": 10,
      "betterAdded": 4,
      "betterAsked": 5,
+     "asked": "\"Did you handle any sales-related tasks?\"",
+     "fixShort": "\"Don't add anything I didn't write. Ask me.\"",
+     "reworded": "the 10th: reworded, added nothing",
+     "ticker2": "OUR TEST: 10 OF 10 POLISHED RESUMES PADDED",
      "usualWhat": [
       "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
@@ -1196,8 +1261,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1309,
-   "frames": 138,
+   "from": 1411,
+   "frames": 155,
    "lines": [
     {
      "who": "storyteller",
@@ -1206,51 +1271,51 @@
      "sub": null,
      "audio": "reel/creative34v1/line_07.wav",
      "from": 9,
-     "frames": 111,
+     "frames": 110,
      "words": [
       {
        "w": "Back",
        "from": 9,
-       "to": 18
+       "to": 17
       },
       {
        "w": "to",
-       "from": 18,
-       "to": 23
+       "from": 17,
+       "to": 22
       },
       {
        "w": "our",
-       "from": 23,
+       "from": 22,
        "to": 29
       },
       {
        "w": "top",
        "from": 29,
-       "to": 36
+       "to": 35
       },
       {
        "w": "story:",
-       "from": 36,
-       "to": 48
+       "from": 35,
+       "to": 47
       },
       {
        "w": "a",
-       "from": 48,
+       "from": 47,
        "to": 59
       },
       {
        "w": "team",
        "from": 59,
-       "to": 68
+       "to": 67
       },
       {
        "w": "of",
-       "from": 68,
-       "to": 76
+       "from": 67,
+       "to": 72
       },
       {
        "w": "fifteen",
-       "from": 76,
+       "from": 72,
        "to": 89
       },
       {
@@ -1266,11 +1331,11 @@
       {
        "w": "explain.",
        "from": 104,
-       "to": 119
+       "to": 118
       }
      ],
      "cues": {
-      "1": 48
+      "1": 89
      }
     }
    ]

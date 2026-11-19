@@ -105,3 +105,37 @@ Telugu, a job-seeker's father). All three would share "Can you explain it in the
 "Paste your resume into your AI app with this line first: 'Do not add any skill, number, title, tool, certificate or
 achievement that is not in my text. If something useful is missing, ask me instead.' Then read every line it gives
 you: could you explain it in an interview?"
+
+## Render review (human-viewer, v2 render), what changed for v3
+All three viewers stopped on frame 1 and would share "Can you explain it in the interview?". None of them could read
+the line they were meant to copy.
+- **The takeaway is now screenshot-able:**
+  - THE FIX shows "Don't add anything I didn't write. Ask me." in 56 px, in the same words as the voice. The long
+    tested line is in the caption.
+  - The voice now says "a small free AI on our computer, not ChatGPT".
+  - A chip covers the tenth reply (4 + 5 + 1): "the 10th: reworded, added nothing".
+- **22-43 s was a slideshow:**
+  - Ten resumes come in one by one and turn red on "all ten".
+  - The chips arrive on "seven".
+  - The BREAKING bar stays through the test, fix and rule cards.
+  - Frame 1's blocks pop in, and Tarun trembles.
+- **"[Company Name]":** the row zooms in full-width and the voice says "a job where it left the company name blank".
+  "NEVER DID" is bigger, on its own line.
+- **Interview:** the bubble comes after the voice starts the question, the sweat is on his forehead, and Tarun is
+  drawn younger (the old look read as 40).
+- **Sound a phone can play:**
+  - A news sting plus a clap on 0 s, on "10 of 10" and on the end stamp. Phones drop the 30-64 Hz booms.
+  - The music is higher in the gaps: EN 0.16 / 0.30, TE 0.18 / 0.32.
+  - The end is louder (boost 3.0, rise 3.2).
+  - The stamp lands on "he can't explain".
+  - The Telugu pause after the question is 1.2 s.
+- **Telugu re-voiced:**
+  - రెజ్యూమ్ (was heard as "resiyam");
+  - "నడిపాడని, రెజ్యూమ్ లో రాసుంది" (the ట was dropped);
+  - సర్టిఫికేట్;
+  - "రాయండి / కలపకు" (పెట్టండి / పెట్టకు stuttered);
+  - "చివరి చెక్ మీదే";
+  - "తీసేయండి" (ఉంచకండి was heard as "vanchakandi");
+  - "కంపెనీ పేరు ఖాళీగా వదిలేసిన";
+  - "చాట్‌జీపీటీ కాదు".
+  - The Telugu cut ran 61.9 s and is trimmed to 58.6 s (tempo 1.12, shorter gaps and end pad).

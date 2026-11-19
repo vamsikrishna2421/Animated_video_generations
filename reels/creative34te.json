@@ -9,12 +9,12 @@
  "lead": 0.5,
  "music": "lofi",
  "musicVol": [
-  0.16,
-  0.22
+  0.18,
+  0.32
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.6,
+ "endPad": 0.8,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -111,6 +111,9 @@
      "betterAdded": 4,
      "betterAsked": 5,
      "asked": "\"Did you handle any sales-related tasks?\"",
+     "fixShort": "\"Don't add anything I didn't write. Ask me.\"",
+     "reworded": "the 10th: reworded, added nothing",
+     "ticker2": "OUR TEST: 10 OF 10 POLISHED RESUMES PADDED",
      "usualWhat": [
       "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
@@ -146,11 +149,11 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "బ్రేకింగ్ న్యూస్: రెస్యూమ్ లో, పదిహేను మంది టీమ్ ని నడిపాడట. అసలు టీమ్: సున్నా. [1] తరుణ్ చాట్‌బాట్ ని అడిగింది ఒక్కటే: నా రెస్యూమ్ ని ఇంకా ఇంప్రెసివ్ గా మార్చు.",
+     "text": "బ్రేకింగ్ న్యూస్: పదిహేను మంది టీమ్ ని నడిపాడని, రెజ్యూమ్ లో రాసుంది. అసలు టీమ్: సున్నా. [1] తరుణ్ చాట్‌బాట్ ని అడిగింది ఒక్కటే: నా రెజ్యూమ్ ని ఇంకా ఇంప్రెసివ్ గా మార్చు.",
      "show": "Breaking: a resume says, team of fifteen. Real team: zero. Tarun only asked an AI to make it impressive.",
      "maxgap": 0.3,
-     "gap": 0.4,
-     "tempo": 1.08
+     "gap": 0.3,
+     "tempo": 1.12
     }
    ]
   },
@@ -230,6 +233,9 @@
      "betterAdded": 4,
      "betterAsked": 5,
      "asked": "\"Did you handle any sales-related tasks?\"",
+     "fixShort": "\"Don't add anything I didn't write. Ask me.\"",
+     "reworded": "the 10th: reworded, added nothing",
+     "ticker2": "OUR TEST: 10 OF 10 POLISHED RESUMES PADDED",
      "usualWhat": [
       "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
@@ -265,11 +271,11 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "ఒక రిప్లై అయితే, [1] తప్పులు ముప్పై శాతం తగ్గించాడట, [2] ఒక సర్టిఫికెట్, [3] కంపెనీ పేరు కూడా లేని ఒక ఉద్యోగం కలిపింది.",
-     "show": "One reply added a thirty percent drop in errors, a certificate, even a job, at company name.",
+     "text": "ఒక రిప్లై అయితే, [1] తప్పులు ముప్పై శాతం తగ్గించాడట, [2] ఒక సర్టిఫికేట్, [3] కంపెనీ పేరు ఖాళీగా వదిలేసిన ఒక ఉద్యోగం కూడా కలిపింది.",
+     "show": "One reply added a thirty percent drop in errors, a certificate, even a job where it left the company name blank.",
      "maxgap": 0.3,
-     "gap": 0.5,
-     "tempo": 1.08
+     "gap": 0.4,
+     "tempo": 1.12
     },
     {
      "who": "storyteller",
@@ -277,8 +283,8 @@
      "text": "ఇంటర్వ్యూ లో తొలి ప్రశ్న? [1] మీ పదిహేను మంది టీమ్ గురించి చెప్పండి.",
      "show": "The interview's first question? Tell us about your team of fifteen.",
      "maxgap": 0.3,
-     "gap": 1.1,
-     "tempo": 1.08
+     "gap": 1.2,
+     "tempo": 1.12
     }
    ]
   },
@@ -351,6 +357,9 @@
      "betterAdded": 4,
      "betterAsked": 5,
      "asked": "\"Did you handle any sales-related tasks?\"",
+     "fixShort": "\"Don't add anything I didn't write. Ask me.\"",
+     "reworded": "the 10th: reworded, added nothing",
+     "ticker2": "OUR TEST: 10 OF 10 POLISHED RESUMES PADDED",
      "usualWhat": [
       "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
@@ -386,20 +395,20 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "ఒక చిన్న ఫ్రీ చాట్‌బాట్ ని పది సార్లు అడిగాం. [1] పదికి పది సార్లూ, అతను చేయనివి కలిపింది. [2] ఏడు సార్లు, బేసిక్ ఎక్సెల్ ని ఇంటర్మీడియట్, అడ్వాన్స్డ్ చేసింది.",
-     "show": "We asked a small free AI ten times. All ten added things he never did. Seven pushed his basic Excel up a level.",
+     "text": "చాట్‌జీపీటీ కాదు, మా కంప్యూటర్ లోని ఒక చిన్న ఫ్రీ చాట్‌బాట్ ని పది సార్లు అడిగాం. [1] పదికి పది సార్లూ, అతను చేయనివి కలిపింది. [2] ఏడు సార్లు, బేసిక్ ఎక్సెల్ ని ఇంటర్మీడియట్, అడ్వాన్స్డ్ చేసింది.",
+     "show": "We asked a small free AI on our computer, not ChatGPT, ten times. All ten added things he never did. Seven pushed his basic Excel up a level.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "tempo": 1.08
+     "tempo": 1.12
     },
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "ఈ లైన్ కూడా పెట్టండి: నేను రాయనిది పెట్టకు, నన్నే అడుగు. [1] అయినా నాలుగు సార్లు కలిపింది, కానీ ఐదు సార్లు ముందు ప్రశ్నలు అడిగింది.",
-     "show": "Add this line first: don't add anything I didn't write; ask me. Four still added something, but five asked him questions first.",
+     "text": "అందుకే ఈ లైన్ కూడా రాయండి: నేను రాయనిది కలపకు, నన్నే అడుగు. [1] అయినా నాలుగు సార్లు కలిపింది; కానీ ఐదు సార్లు, ముందు ప్రశ్నలు అడిగింది.",
+     "show": "So add this line: don't add anything I didn't write; ask me. Four still added something, but five asked him questions first.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "tempo": 1.08
+     "tempo": 1.12
     }
    ]
   },
@@ -468,6 +477,9 @@
      "betterAdded": 4,
      "betterAsked": 5,
      "asked": "\"Did you handle any sales-related tasks?\"",
+     "fixShort": "\"Don't add anything I didn't write. Ask me.\"",
+     "reworded": "the 10th: reworded, added nothing",
+     "ticker2": "OUR TEST: 10 OF 10 POLISHED RESUMES PADDED",
      "usualWhat": [
       "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
@@ -503,11 +515,11 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "చివరి చెక్ మీరే: ప్రతి లైన్ చదవండి. [1] ఇంటర్వ్యూ లో దాని గురించి చెప్పగలరా? [2] లేకపోతే, ఆ లైన్ ఉంచకండి.",
+     "text": "చివరి చెక్ మీదే: ప్రతి లైన్ చదవండి. [1] ఇంటర్వ్యూ లో దాని గురించి చెప్పగలరా? [2] లేకపోతే, ఆ లైన్ తీసేయండి.",
      "show": "The last check is you: read every line. Can you explain it in the interview? If not, delete it.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "tempo": 1.08
+     "tempo": 1.12
     }
    ]
   },
@@ -579,6 +591,9 @@
      "betterAdded": 4,
      "betterAsked": 5,
      "asked": "\"Did you handle any sales-related tasks?\"",
+     "fixShort": "\"Don't add anything I didn't write. Ask me.\"",
+     "reworded": "the 10th: reworded, added nothing",
+     "ticker2": "OUR TEST: 10 OF 10 POLISHED RESUMES PADDED",
      "usualWhat": [
       "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
@@ -614,11 +629,11 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "మళ్ళీ మన టాప్ స్టోరీ కి: [1] చెప్పలేని పదిహేను మంది టీమ్.",
+     "text": "మళ్ళీ మన టాప్ స్టోరీ కి: పదిహేను మంది టీమ్, [1] ఇంటర్వ్యూ లో చెప్పలేనిది.",
      "show": "Back to our top story: a team of fifteen he can't explain.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "tempo": 1.08
+     "tempo": 1.12
     }
    ]
   }

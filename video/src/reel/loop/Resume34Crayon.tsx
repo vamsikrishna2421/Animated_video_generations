@@ -88,13 +88,13 @@ const StResume: React.FC<SP> = ({ s }) => {
   beats.forEach((b, i) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
-    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.5} />, <Sfx key={k("s")} at={4} src={STING} vol={0.45} />, <Sfx key={k("c")} at={cue(i, 1, 0.5) - 6} src={CLAP} vol={0.3} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.5} />, <Sfx key={k("s")} at={0} src={STING} vol={0.6} />, <Sfx key={k("c0")} at={30} src={CLAP} vol={0.4} />, <Sfx key={k("c")} at={cue(i, 1, 0.5) - 6} src={CLAP} vol={0.3} />);
     if (b.prop === "ask") [cue(i, 1, 0.3), cue(i, 2, 0.4), cue(i, 3, 0.4)].forEach((t, q) => sfx.push(<Sfx key={k("p" + q)} at={t - 6} src="audio/sfx_pop.wav" vol={0.35} />));
     if (b.prop === "interview") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 10)} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("g")} at={cue(i, 1, 0.4) - 6} src="reel/sfx_glitch.wav" vol={0.35} />, <Sfx key={k("h")} at={cue(i, 1, 0.4) - 4} src="reel/sfx_boom.wav" vol={0.55} />);
-    if (b.prop === "test") sfx.push(<Sfx key={k("s")} at={Math.max(0, at - 20)} src={STING} vol={0.3} />, <Sfx key={k("h")} at={cue(i, 1, 0.4) - 6} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.6} />);
-    if (b.prop === "fix") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 10)} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("d")} at={cue(i, 1, 0.4) - 4} src="audio/gag_ding.wav" vol={0.35} />);
+    if (b.prop === "test") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.4) - 10} src={STING} vol={0.5} />, <Sfx key={k("h")} at={cue(i, 1, 0.4) - 6} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.6} />, <Sfx key={k("c")} at={cue(i, 1, 0.4) - 4} src={CLAP} vol={0.35} />, ...[0, 1, 2, 3].map((q) => <Sfx key={k("p" + q)} at={cue(i, 2, 0.4) - 6 + q * 10} src="audio/sfx_pop.wav" vol={0.3} />));   // render review: a sting a phone can play on "10 of 10"
+    if (b.prop === "fix") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 10)} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("d")} at={cue(i, 1, 0.4) - 4} src="audio/gag_ding.wav" vol={0.35} />, <Sfx key={k("s")} at={cue(i, 1, 0.6) - 4} src="audio/sfx_success.wav" vol={0.35} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("s")} at={cue(i, 1, 0.4) - 6} src="audio/sfx_success.wav" vol={0.3} />);
-    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("s")} at={slam - 10} src={STING} vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.45} />); }
+    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("st")} at={cue(i, 1, 0.4) - 6} src={STING} vol={0.5} />, <Sfx key={k("cl")} at={cue(i, 1, 0.4)} src={CLAP} vol={0.4} />, <Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("s")} at={slam - 10} src={STING} vol={0.45} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.45} />); }
   });
   return (
     <>
@@ -110,11 +110,14 @@ const StResume: React.FC<SP> = ({ s }) => {
         c.textAlign = "left";
         if (P === "hook") {
           // frame 1: the job's pay, the resume line, the real number
-          c.fillStyle = "#111827"; rrect(c, 60, 290, W - 120, 92, 18); c.fill();
-          c.font = SANS(fit(c, T.job, W - 160, 44, 900), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(T.job, W / 2, 352);
-          bigBlock(c, 60, 410, 470, "HIS RESUME SAYS", T.claim, "#fca5a5", "#7f1d1d", 1);   // script review: thinner frame 1
-          bigBlock(c, 550, 410, 470, "REAL TEAM", T.real, "#86efac", "#14532d", 1);
-          who(c, "kumar" as BillWho, [540, 1060], 1.15, ["shock", "up"], r);   // render: the frame was half empty
+          c.fillStyle = "#fde68a"; rrect(c, 40, 280, W - 80, 110, 20); c.fill();   // render review: the job line was missed
+          c.font = SANS(fit(c, T.job, W - 120, 56, 900), 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText(T.job, W / 2, 355);
+          const pop = (k: number) => 1 + 0.12 * Math.sin(clamp(k) * Math.PI);
+          c.save(); c.translate(295, 520); const z1 = loopOn ? 1 : pop(seg(f, 0, 8)); c.scale(z1, z1); c.translate(-295, -520);
+          bigBlock(c, 60, 410, 470, "HIS RESUME SAYS", T.claim, "#fca5a5", "#7f1d1d", 1); c.restore();   // script review: thinner frame 1
+          c.save(); c.translate(785, 520); const z2 = loopOn ? 1 : pop(seg(f, 30, 38)); c.scale(z2, z2); c.translate(-785, -520);
+          bigBlock(c, 550, 410, 470, "REAL TEAM", T.real, "#86efac", "#14532d", 1); c.restore();
+          c.save(); c.translate(Math.sin(f * 0.9) * 3, 0); who(c, "harsha" as BillWho, [540, 1060], 1.15, ["shock", "up"], r); c.restore();   // render review: younger, and he trembles
           chip(c, T.madeUp, W / 2, 1395, "#1e293b", "#cbd5e1", 1, 32);
           stamp(c, "ADDED BY AN AI", W / 2, 720, 60, RED, loopOn ? 1 : seg(f, cu(1, 0.4), cu(1, 0.4) + 8));
           breaking(c, W, f, T.ticker);
@@ -135,22 +138,32 @@ const StResume: React.FC<SP> = ({ s }) => {
             if (k > 0) { c.save(); c.globalAlpha = 0.9; c.fillStyle = "#fecaca"; c.fillRect(80, yy - 44, (W - 160) * easeOut(clamp(k * 2)), bh + 50); c.restore(); }
             c.font = SANS(42, 700); c.fillStyle = k > 0 ? "#991b1b" : "#334155";
             lines.forEach((l, j) => c.fillText(l, 100, yy + j * 54));
-            if (k > 0) { c.save(); c.globalAlpha = clamp(k * 3); c.font = SANS(30, 900); c.fillStyle = RED; c.fillText("✗ NEVER DID", 100, yy + bh + 2); c.restore(); }
+            if (k > 0) { c.save(); c.globalAlpha = clamp(k * 3); c.font = SANS(34, 900); c.fillStyle = RED; c.fillText("✗ NEVER DID", 100, yy + bh + 8); c.restore(); }
             yy += bh + (k > 0 || n > 0 ? 60 : 24);
           });
+          const kz = seg(f, cu(3, 0.5) + 6, cu(3, 0.5) + 14);   // render review: zoom in on "[Company Name]"
+          if (kz > 0) {
+            c.save(); c.globalAlpha = clamp(kz * 3);
+            c.fillStyle = "rgba(15,23,42,0.6)"; c.fillRect(0, 440, W, 960);
+            c.fillStyle = "#fffdf7"; rrect(c, 50, 760, W - 100, 280, 24); c.fill(); c.strokeStyle = RED; c.lineWidth = 8; rrect(c, 50, 760, W - 100, 280, 24); c.stroke();
+            c.font = SANS(fit(c, "Sales Assistant, [Company Name]", W - 160, 72, 900), 900); c.fillStyle = INK; c.textAlign = "center";
+            c.fillText("Sales Assistant,", W / 2, 860); c.fillStyle = RED; c.fillText("[Company Name]", W / 2, 950);
+            c.font = SANS(34, 800); c.fillStyle = "#475569"; c.fillText("the AI left the company blank", W / 2, 1010);
+            c.restore(); c.textAlign = "left";
+          }
           breaking(c, W, f, T.ticker);
         } else if (P === "interview") {
           // the HR cabin: the interviewer reads the line out
           c.fillStyle = "#e7c9a0"; c.fillRect(0, 760, W, 700);   // render: the desk sat above their heads
           const sweat = f >= cu(1, 0.4);
-          who(c, "kumar" as BillWho, [260, 1010], 0.8, sweat ? ["shock", "up"] : ["worried", "rest"], r);
+          who(c, "harsha" as BillWho, [260, 1010], 0.8, sweat ? ["shock", "up"] : ["worried", "rest"], r);
           who(c, "sastry" as BillWho, [830, 1010], 0.8, ["smug", "fold"], r);
           c.fillStyle = "#7c4a1e"; c.fillRect(40, 1180, W - 80, 60); c.fillStyle = "#5b3514"; c.fillRect(40, 1240, W - 80, 160);
           c.fillStyle = "#fffdf7"; c.save(); c.translate(700, 1200); c.rotate(-0.06); c.fillRect(-90, -20, 180, 30); c.restore();   // his resume on the desk
           if (f >= endL - 6) {   // the beat of silence after the question: drops of sweat
-            [0, 1, 2].forEach((q) => { const y = 760 + ((f - endL) * 6 + q * 40) % 140; c.fillStyle = "#7dd3fc"; c.beginPath(); c.ellipse(340 + q * 22, y, 9, 13, 0, 0, 7); c.fill(); });
+            [0, 1].forEach((q) => { const y = 860 + ((f - endL) * 4 + q * 30) % 70; c.fillStyle = "#7dd3fc"; c.beginPath(); c.ellipse(318 + q * 26, y, 9, 13, 0, 0, 7); c.fill(); });   // on his forehead
           }
-          const k = seg(f, cu(1, 0.4) - 6, cu(1, 0.4) + 4);
+          const k = seg(f, cu(1, 0.4) + 4, cu(1, 0.4) + 12);   // render review: the bubble came before the voice
           if (k > 0) {
             c.save(); c.globalAlpha = clamp(k * 3);
             c.fillStyle = "#fff"; rrect(c, 420, 420, 600, 230, 30); c.fill();
@@ -166,18 +179,31 @@ const StResume: React.FC<SP> = ({ s }) => {
           c.textAlign = "center";
           c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.fillText(P === "test" ? "OUR TEST" : "THE FIX", W / 2, 330);
           c.font = SANS(fit(c, T.model, W - 100, 30, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(T.model, W / 2, 380);
-          const ask = P === "test" ? T.askShort : T.fixAsk;
+          const ask = P === "test" ? T.askShort : T.fixShort;   // render review: one wording, big enough to screenshot
           c.fillStyle = P === "test" ? "#1e293b" : "#14532d"; rrect(c, 70, 420, W - 140, 200, 22); c.fill();
-          c.font = SANS(fit(c, ask, W - 220, 40, 800), 800); c.fillStyle = "#f8fafc";
-          wrap(c, ask, W - 200).forEach((t, q) => c.fillText(t, W / 2, 495 + q * 50));
+          c.font = SANS(P === "test" ? 40 : 56, 900); c.fillStyle = "#f8fafc";
+          wrap(c, ask, W - 200).forEach((t, q, a2) => c.fillText(t, W / 2, (a2.length > 1 ? 505 : 535) + q * (P === "test" ? 50 : 66)));
           const c1 = cu(1, 0.4), k = seg(f, c1 - 6, c1 + 4);
-          if (P === "test") bigBlock(c, 140, 660, W - 280, "added things he never did", `${T.usualAdded} of 10`, "#fca5a5", "#7f1d1d", k);
+          if (P === "test") {   // render review: the card was empty for 2.5 s; ten resumes come in, then all ten turn red
+            for (let q = 0; q < 10; q++) {
+              const kq = seg(f, ln.from + 6 + q * 6, ln.from + 12 + q * 6); if (kq <= 0) continue;
+              const x = 95 + (q % 5) * 182, y = 650 + Math.floor(q / 5) * 150, red = f >= c1 + q * 2;
+              c.save(); c.globalAlpha = clamp(kq * 3); c.fillStyle = red ? "#fecaca" : "#f8fafc"; rrect(c, x, y, 150, 130, 10); c.fill();
+              c.fillStyle = red ? RED : "#94a3b8"; for (let l = 0; l < 4; l++) c.fillRect(x + 18, y + 22 + l * 24, 114 - (l % 2) * 30, 8);
+              if (red) { c.font = SANS(44, 900); c.fillStyle = RED; c.textAlign = "center"; c.fillText("✗", x + 120, y + 120); }
+              c.restore();
+            }
+            c.textAlign = "center";
+            if (k > 0) { c.save(); c.globalAlpha = clamp(k * 3); c.font = SANS(110, 900); c.fillStyle = "#fca5a5"; c.fillText(`${T.usualAdded} of 10`, W / 2, 1060); c.font = SANS(40, 900); c.fillStyle = "#fee2e2"; c.fillText("added things he never did", W / 2, 1115); c.restore(); }
+          }
           else {   // script review: say both halves (4 still added, 5 asked him first)
             bigBlock(c, 60, 660, 470, "still added something", `${T.betterAdded} of 10`, "#fca5a5", "#7f1d1d", k);
             bigBlock(c, 550, 660, 470, "asked him first", `${T.betterAsked} of 10`, "#86efac", "#14532d", seg(f, cu(1, 0.6), cu(1, 0.6) + 8));
           }
           const chips = (P === "test" ? T.usualWhat : T.betterWhat) as string[];
-          chips.forEach((t, q) => chip(c, t, W / 2, 970 + q * 92, "#f8fafc", INK, seg(f, c1 + 14 + q * 8, c1 + 22 + q * 8), fit(c, t, W - 180, 44, 800)));
+          if (P === "test") chips.forEach((t, q) => chip(c, t, W / 2, 1180 + q * 66, "#f8fafc", INK, seg(f, cu(2, 0.4) - 6 + q * 10, cu(2, 0.4) + 2 + q * 10), fit(c, t, W - 180, 40, 800)));
+          else chip(c, T.reworded, W / 2, 935, "#1e293b", "#cbd5e1", seg(f, cu(1, 0.6) + 16, cu(1, 0.6) + 24), 34);
+          breaking(c, W, f, T.ticker2);
           if (P === "fix") {   // render: the empty bottom; a real question it asked instead (the better ask, run 6)
             const kq = seg(f, cu(1, 0.75), cu(1, 0.75) + 8);
             if (kq > 0) {
@@ -201,6 +227,7 @@ const StResume: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, a, W - 300, 56, 900), 900); c.fillStyle = "#f8fafc"; c.fillText(a, 190, y + 88);
             c.font = SANS(fit(c, t, W - 300, 38, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(t, 190, y + 150); c.restore();
           });
+          breaking(c, W, f, T.ticker);
         } else if (P === "loop") {   // the anchor: back to the top story (the resume comes back, the stamp lands)
           paper(c, 195, 420, 690, 520, T.hookRows, seg(f, ln.from + 4, ln.from + 14), "");
           stamp(c, "REAL TEAM: 0", W / 2, 1050, 80, RED, seg(f, cu(1, 0.4), cu(1, 0.4) + 8));

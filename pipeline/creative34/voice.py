@@ -30,9 +30,9 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
 MUST = {"en": {1: [("breaking",), ("team",), ("fifteen", "15"), ("zero", "0"), ("tarun",), ("impressive",)],
-               2: [("reply",), ("thirty", "30"), ("errors", "error"), ("certificate",), ("job",), ("company",)],
+               2: [("reply",), ("thirty", "30"), ("errors", "error"), ("certificate",), ("job",), ("company",), ("blank",)],
                3: [("interview", "interview's"), ("first",), ("team",), ("fifteen", "15")],
-               4: [("ten", "10"), ("all",), ("seven", "7"), ("excel",), ("level",)],
+               4: [("chatgpt", "gpt", "chat"), ("ten", "10"), ("all",), ("seven", "7"), ("excel",), ("level",)],
                5: [("line",), ("add",), ("ask",), ("four", "4"), ("five", "5"), ("questions", "question")],
                6: [("read",), ("line",), ("explain",), ("interview",), ("delete",)],
                7: [("top",), ("story",), ("team",), ("fifteen", "15"), ("explain",)]},
