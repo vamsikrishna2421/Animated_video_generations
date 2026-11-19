@@ -41,7 +41,8 @@ Line 1 says both numbers within about 2 s.
   - Shot 3, frame 8 -> 9: one blue umbrella becomes two.
   - Two walkers melt into one shape, and a head rises from the bottom edge with no body.
 - **Check 2, label:**
-  - Our file carries no C2PA Content Credentials, no IPTC AI tag and no SynthID mark.
+  - Our file carries no C2PA Content Credentials and no IPTC AI tag in its metadata. (A scan can't see an invisible
+    pixel watermark such as SynthID, so the reel doesn't claim anything about one.)
   - YouTube labels a video as AI when:
     - the creator discloses it;
     - it carries C2PA data;

@@ -86,11 +86,13 @@ const stamp = (c: Ctx, t: string, x: number, y: number, s: number, col: string, 
   c.fillStyle = col; c.textAlign = "center"; c.fillText(t, 0, s * 0.1); c.restore();
 };
 // script review: a screen recording of the clip must never pass as a real flood: "FAKE · made by us" on every frame shown
-const fakeBand = (c: Ctx, x: number, y: number, w: number, h: number) => {
+const fakeBand = (c: Ctx, x: number, y: number, w: number, h: number, strip = false) => {
   c.save(); c.beginPath(); c.rect(x, y, w, h); c.clip();
-  c.translate(x + w / 2, y + h / 2); c.rotate(-0.42);
-  const t = "FAKE · MADE BY US", fs = Math.max(26, Math.round(w * 0.12));
-  c.font = SANS(fs, 900); const tw = c.measureText(t).width;
+  const t = "FAKE · MADE BY US";
+  let fs = Math.round(w * 0.12); c.font = SANS(fs, 900);
+  while (fs > 16 && c.measureText(t).width > w * 0.82) { fs -= 2; c.font = SANS(fs, 900); }   // render: the band was cut off
+  if (strip) { c.translate(x + w / 2, y + h - fs * 0.9); } else { c.translate(x + w / 2, y + h * 0.42); c.rotate(-0.42); }
+  const tw = c.measureText(t).width;
   c.fillStyle = "rgba(220,38,38,0.82)"; c.fillRect(-tw / 2 - 40, -fs * 0.85, tw + 80, fs * 1.3);
   c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(t, 0, fs * 0.25); c.restore();
 };
@@ -160,7 +162,7 @@ const StFake: React.FC<SP> = ({ s }) => {
               const im = imgs[n as number];
               c.fillStyle = "#fbf8f0"; rrect(c, (x as number) - 10, y0 - 10, fw + 20, fh + 20, 14); c.fill();
               if (im) c.drawImage(im, x as number, y0, fw, fh);
-              fakeBand(c, x as number, y0, fw, fh);
+              fakeBand(c, x as number, y0, fw, fh, true);   // a strip at the bottom: the band covered the umbrellas
               c.font = SANS(40, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(t as string, (x as number) + fw / 2, y0 + fh + 56);
             });
             c.restore();
@@ -196,13 +198,24 @@ const StFake: React.FC<SP> = ({ s }) => {
           row(400, "Instagram, YouTube: label says AI", "then it's AI", "#15803d", k1);
           row(640, "WhatsApp forward", "Meta's labels don't cover it", RED, k2);
           if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.font = SANS(fit(c, T.metaSrc, W - 200, 26, 700), 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText(T.metaSrc, W / 2, 880); c.restore(); }
-          stamp(c, "NO LABEL? STILL MAYBE FAKE", W / 2, 1050, fit(c, "NO LABEL? STILL MAYBE FAKE", W - 200, 64, 900), RED, k3);
-          if (k3 > 0) chip(c, "our fake carried no AI tag at all", W / 2, 1220, "#1e293b", "#e2e8f0", k3, 40);
+          const k4 = seg(f, cu(1, 0.5), cu(1, 0.5) + 8);   // render: our fake's own file, playing, and what the scan found
+          if (k4 > 0) {
+            c.save(); c.globalAlpha = clamp(k4 * 3);
+            const vx = 110, vy = 920, vw = 170, vh = 302;
+            c.fillStyle = "#fbf8f0"; rrect(c, vx - 8, vy - 8, vw + 16, vh + 16, 10); c.fill();
+            const im = play(f); if (im) c.drawImage(im, vx, vy, vw, vh);
+            fakeBand(c, vx, vy, vw, vh);
+            c.textAlign = "left"; c.font = SANS(40, 900); c.fillStyle = "#f8fafc"; c.fillText("our fake's file:", 320, 975);
+            (["C2PA credentials: none", "IPTC AI tag: none", "other AI markers: none"]).forEach((t, q) => { c.font = SANS(36, 800); c.fillStyle = "#fca5a5"; c.fillText(t, 320, 1040 + q * 56); });
+            c.font = SANS(30, 700); c.fillStyle = "#94a3b8"; c.fillText("so no app gets told it's AI", 320, 1210);
+            c.restore(); c.textAlign = "center";
+          }
+          stamp(c, "NO LABEL? STILL MAYBE FAKE", W / 2, 1320, fit(c, "NO LABEL? STILL MAYBE FAKE", W - 200, 60, 900), RED, k3);
         } else if (P === "ask") {
           c.textAlign = "center";
           c.font = SANS(fit(c, "CHECK 3 MATTERS MOST", W - 100, 66, 900), 900); c.fillStyle = "#fde68a"; c.fillText("CHECK 3 MATTERS MOST", W / 2, 330);
           chip(c, "paid AI: cleaner fakes, fewer clues", W / 2, 410, "#fee2e2", "#7f1d1d", seg(f, ln.from + 4, ln.from + 12), 40);
-          const k0 = seg(f, cu(1, 0.3) - 8, cu(1, 0.3)), k1 = seg(f, cu(1, 0.6), cu(1, 0.6) + 8), k2 = seg(f, cu(2, 0.4) - 4, cu(2, 0.4) + 4);
+          const k0 = seg(f, ln.from + 10, ln.from + 18), k1 = seg(f, cu(1, 0.6), cu(1, 0.6) + 8), k2 = seg(f, cu(2, 0.4) - 4, cu(2, 0.4) + 4);
           if (k0 > 0) {
             c.save(); c.globalAlpha = clamp(k0 * 2);
             c.fillStyle = "#f8fafc"; rrect(c, 80, 470, W - 160, 270, 24); c.fill();
@@ -218,8 +231,7 @@ const StFake: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, T.pib, W - 220, 116, 900), 900); c.fillStyle = "#fff"; c.fillText(T.pib, W / 2, 1000);
             c.restore();
           }
-          if (k2 > 0) chip(c, "📸 screenshot this · it's in the caption", W / 2, 1150, "#fde68a", INK, k2, 42);
-          smallRavi(c, 150, 1210, 0.36, "hope", f, r);
+          if (k2 > 0) chip(c, "📸 screenshot this · it's in the caption", W / 2, 1170, "#fde68a", INK, k2, 44);
         } else if (P === "loop") {
           c.textAlign = "center";
           c.font = SANS(fit(c, "IF YOU DO ONE THING", W - 100, 66, 900), 900); c.fillStyle = "#fde68a"; c.fillText("IF YOU DO ONE THING", W / 2, 330);
@@ -228,6 +240,24 @@ const StFake: React.FC<SP> = ({ s }) => {
             c.save(); c.globalAlpha = clamp(k0 * 3); c.fillStyle = RED; rrect(c, 70, 380, W - 140, 200, 24); c.fill();
             c.font = SANS(fit(c, "never pay a UPI ID", W - 200, 80, 900), 900); c.fillStyle = "#fff"; c.fillText("never pay a UPI ID", W / 2, 470);
             c.font = SANS(fit(c, "that came in a forward", W - 200, 54, 800), 800); c.fillStyle = "#fee2e2"; c.fillText("that came in a forward", W / 2, 545); c.restore();
+          }
+          const kx = seg(f, ln.from + 6, ln.from + 14) * (1 - seg(f, cu(1, 0.3) - 6, cu(1, 0.3)));   // render: 3.5 s were still
+          if (kx > 0) {
+            c.save(); c.globalAlpha = clamp(kx * 3);
+            const qx = W / 2 - 220, qy = 660;
+            c.fillStyle = "#fff"; rrect(c, qx, qy, 440, 520, 24); c.fill();
+            const cell = 300 / 9, rq = rng(77);
+            for (let a2 = 0; a2 < 9; a2++) for (let b2 = 0; b2 < 9; b2++) {
+              const corner = (a2 < 3 && b2 < 3) || (a2 > 5 && b2 < 3) || (a2 < 3 && b2 > 5);
+              if (corner || rq() > 0.55) { c.fillStyle = INK; c.fillRect(qx + 70 + a2 * cell, qy + 50 + b2 * cell, cell - 3, cell - 3); }
+            }
+            c.font = SANS(40, 800); c.fillStyle = "#334155"; c.fillText("UPI: relief•••@•••", W / 2, qy + 420);
+            c.font = SANS(40, 900); c.fillStyle = RED; c.fillText("scan & pay ₹2,000", W / 2, qy + 480);
+            const kk = seg(f, ln.from + 18, ln.from + 30);   // the cross
+            c.strokeStyle = RED; c.lineWidth = 26; c.lineCap = "round";
+            c.beginPath(); c.moveTo(qx - 20, qy - 20); c.lineTo(qx - 20 + 480 * easeOut(kk), qy - 20 + 560 * easeOut(kk)); c.stroke();
+            if (kk > 0.5) { const k2x = seg(f, ln.from + 26, ln.from + 38); c.beginPath(); c.moveTo(qx + 460, qy - 20); c.lineTo(qx + 460 - 480 * easeOut(k2x), qy - 20 + 560 * easeOut(k2x)); c.stroke(); }
+            c.restore();
           }
           const rows: [string, string][] = [["PAUSE", "a sign, a hand, an umbrella"], ["LABEL", "no label? still maybe fake"], ["ASK PIB", T.pibShort]];
           rows.forEach(([a, t], q) => {

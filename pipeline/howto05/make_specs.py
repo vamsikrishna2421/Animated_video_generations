@@ -34,12 +34,12 @@ T = {
     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help",
 }
 SCENES = [("s_a", (1,), {"boost": 1.0, "tail": 0.0}),
-          ("s_b", (2,), {"boost": 1.1, "lift": 0.5, "tail": 0.3}),
+          ("s_b", (2,), {"boost": 0.9, "lift": 0.5, "tail": 0.3}),   # render v1: quarters 2-4 flat; a dip here
           ("s_c", (3,), {"boost": 1.2, "lift": 0.5, "drop_at": [[0, 2, 0.6]], "tail": 0.3}),   # a drop before "So no label?"
-          ("s_d", (4,), {"boost": 1.5, "lift": 0.6, "swell": [0, 1, 1.3], "tail": 0.8}),   # review: lift under the number card, hold it 3 s+
-          ("s_e", (5,), {"outro": True, "pre": 0.3, "boost": 2.0, "lift": 0.7, "rise": 2.0, "tail": 0.0})]
+          ("s_d", (4,), {"boost": 1.8, "lift": 0.7, "swell": [0, 1, 1.4], "tail": 0.8}),   # review: lift under the number card, hold it 3 s+
+          ("s_e", (5,), {"outro": True, "pre": 0.3, "boost": 2.6, "lift": 0.7, "rise": 2.8, "tail": 0.0})]   # render v1: the end did not rise
 GAP = {1: 0.4, 2: 0.4, 3: 0.4, 4: 0.4, 5: 0.0}
-FLAGS_TE = {"s_e": {"boost": 1.8, "rise": 1.8}}
+FLAGS_TE = {"s_e": {"boost": 2.4, "rise": 2.6}}
 YT = {"s_a": "₹2,000 for a 4.5-minute fake", "s_b": "Check 1: pause it", "s_c": "Check 2: look for a label", "s_d": "Check 3: ask PIB Fact Check", "s_e": "Pause, label, ask"}
 MARK = re.compile(r"\[\d+\]\s*")
 

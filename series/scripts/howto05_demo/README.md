@@ -8,8 +8,9 @@ VAE slicing, came after the first start was killed for memory before any shot wa
   plus 10.5 s to load and a one-time 5 GB download. Every shot it made is kept; nothing re-rolled.
 - **Check 1, pause (`sheet1-3.jpg`, HAND in the script):** sign text, 0 readable words in 48 of 48 frames (we asked
   for "AMEERPET"); frame 8 -> 9 of shot 3, one umbrella becomes two; walkers merge; a head rises with no body.
-- **Check 2, label (`label.json`):** no C2PA Content Credentials, no IPTC "trainedAlgorithmicMedia" tag, no SynthID
-  marker in the clip or a frame. YouTube labels a video as AI when the creator discloses it, when it carries C2PA
+- **Check 2, label (`label.json`):** no C2PA Content Credentials, no IPTC "trainedAlgorithmicMedia" tag and no other AI
+  marker in the metadata of the clip or a frame (an invisible pixel watermark such as Google's SynthID can't be seen by
+  this scan; our free model adds none that we know of, and the reel doesn't claim it). YouTube labels a video as AI when the creator discloses it, when it carries C2PA
   data, when it was made with YouTube's own tools, or when YouTube's systems detect it (YouTube Help, "Disclosing use
   of altered or synthetic content", read Nov 19). Meta adds "AI info" when it detects industry-standard AI indicators
   or when people disclose it (Meta newsroom, labeling post, updates of July 1 and Sept 12, 2024). Ours carries no
