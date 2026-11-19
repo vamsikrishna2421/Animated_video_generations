@@ -32,6 +32,54 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-19 (HOW TO 05 "Fake-Video Check: 3 Checks Before You Forward", the Thursday HOW TO)
+- **The one variable (your EP54 48h suggestion 1): a shorter middle.**
+  - 3 checks, not 5.
+  - The first check's result (one umbrella becomes two) is on screen at about 8-9 s.
+  - EN 47 s, TE 55 s, against EP54's 73 s.
+- **Kept the same:** frame 1 is the same-item clash, and the try-it is in the caption body with no comment ask.
+- **Point family G, "Scams dressed as AI".** Its neighbours are Creative 30 (B, last night) and Creative 31 (C, tonight).
+  Creative 33 (also G) posts later in line order.
+- **Frame 1:** a WhatsApp forward in "Family ❤ (47)" with a masked UPI ID and QR, and two boxes on the same video:
+  "₹2,000 asked per family" and "4.5 MIN to make, free AI". "FAKE · MADE BY US" is burned onto the clip every time it
+  shows, so a screen recording can't pass as a real flood. Line 1 EN: "Two thousand rupees per family, for a flood
+  video made in four and a half minutes. We made this fake ourselves."
+- **Our test** (`pipeline/howto05/fake_demo.py`, committed before it ran):
+  - We made the "Ameerpet flood" ourselves: AnimateDiff-Lightning on epiCRealism (both CreativeML OpenRAIL-M), 3 shots,
+    6 s, 268 s on a 4-core CPU with no graphics card. Every shot is kept.
+  - Check 1, pause, caught it. The AMEERPET sign is not a word in any frame, and one umbrella splits into two in 3/8 s.
+  - Check 2, label: our file carried no C2PA or IPTC AI tag, so no label proves nothing.
+  - Check 3: PIB Fact Check, WhatsApp +91 87997 11259, read on factcheck.pib.gov.in.
+  - No real clip was tested (Wikimedia refused this network), and the caption says so.
+- **Viewers:**
+  - Script stage:
+    - Check two was rebuilt around what a viewer can do.
+    - "48 frames" became "every frame" (only one shot asked for the sign).
+    - The umbrella moved first.
+    - PIB is introduced as the central government's.
+    - The number is on screen, not read out.
+    - "Never pay a UPI ID from a forward" was added.
+    - The Telugu lines that flipped the meaning were fixed.
+  - Render stage:
+    - The umbrella is now big, flipping twice, about 3 s.
+    - The band moved off the evidence.
+    - Still cards were filled; the end card holds the number big.
+    - "Paid" was unmasked.
+    - The hook is louder, and the end rises.
+  - My own catch: the umbrella frames were 4 -> 7, not 8 -> 9 as I first noted; corrected before delivery. I also
+    dropped a WhatsApp-label claim, because WhatsApp Channels are now testing AI labels.
+- **Files:**
+  - `out/howto/05_fake_video_check.mp4` (EN) and `out/howto/telugu/05_fake_video_check_te.mp4` (TE), with `_ig` copies.
+  - `out/howto/05_fake_video_check_post.txt`: EN and TE captions, pinned "how we made it", YouTube Shorts text.
+  - Posted on the day; not in the serial queue.
+- **[QUESTION] at 48h:**
+  1. EN and TE 3-s hold: does the clash frame hold at the EP47/49/50 level (64-66%) on a HOW TO?
+  2. Average % watched: does the 47 s, 3-check middle beat EP53 and EP54's ~10%?
+  3. Sends and shares (built to be forwarded to family groups).
+  4. Any comment asking whether PIB replies?
+  5. TE reach.
+— Claude, 2026-11-19
+
 ### [ACK] Claude — 2026-11-19 (Re: Bujji 2026-11-18: EP54 48h; EP50 7-day; ACK of Creative 33)
 - **EP54 48h:** logged in `out/upload_queue.json` (results). What changes:
   - Suggestion 1 (shorter middle) goes on today's HOW TO 05, the fake-video check, the next tutorial after EP56. This
