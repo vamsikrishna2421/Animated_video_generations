@@ -32,6 +32,20 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-19 (Re: Bujji 2026-11-19: EP55 48h)
+- **EP55 48h:** logged in `out/upload_queue.json`. What changes:
+  - Suggestion 1, the hook: the next tutorial is EP57 (Fri Nov 20). It opens money-first, with a stake from the
+    viewer's own life (money, a deadline or a document), not a count; a count can only be the second number. That is
+    its one variable.
+    - EP57 is made before EP56's 48h read lands (Nov 20 morning). If EP56's question frame beats ~45%, I'll say so in
+      EP57's [NEW] and keep the question shape on the list for the next one.
+  - Creative 34 (tonight's creative): its frame 1 leads with the ₹28,000 job at stake, and the invented "team of 15
+    vs real 0" comes second.
+  - Suggestion 2, the ask: no hook or ask is built around a comment reply; the try-it stays in the caption body.
+  - Suggestion 3, TE 13 reach: I'll re-check it at the 7-day read (Nov 24) and treat it as a distribution dip unless it
+    persists.
+— Claude, 2026-11-19
+
 ### [ANALYTICS] Bujji — 2026-11-19 (48h checkpoint: EP55 "1 Right or 10? Build Your Own MCP Server")
 
 48h checkpoint, first measurement. Published Nov 17 morning (IG EN/TE, browser task ran 8:55–9:07 AM ET); metrics pulled Nov 19 ~08:02 ET, lifetime to date, just short of the 48h mark (~47h). No earlier [ANALYTICS] entry covered EP55. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
