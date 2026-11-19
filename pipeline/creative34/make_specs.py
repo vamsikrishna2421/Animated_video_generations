@@ -57,12 +57,12 @@ T = {
 }
 SCENES = [("s_a", (1,), {"boost": 2.0, "tail": 0.0}),   # render: first 3 s were -21.6 dB
           ("s_b", (2, 3), {"boost": 0.9, "lift": 0.5, "drop_at": [[1, 1, 1.0]], "tail": 0.2}),   # the music drops under the question
-          ("s_c", (4, 5), {"boost": 1.2, "lift": 0.6, "tail": 0.3}),
-          ("s_d", (6,), {"boost": 2.0, "lift": 0.7, "tail": 0.3}),
-          ("s_e", (7,), {"outro": True, "pre": 0.3, "boost": 3.0, "lift": 0.8, "rise": 3.2, "tail": 0.0})]   # render: the end did not rise
+          ("s_c", (4, 5), {"boost": 1.0, "lift": 0.6, "tail": 0.3}),   # render v3: Q3 (stings) outran the end
+          ("s_d", (6,), {"boost": 2.6, "lift": 0.7, "tail": 0.3}),
+          ("s_e", (7,), {"outro": True, "pre": 0.3, "boost": 3.4, "lift": 0.8, "rise": 3.6, "tail": 0.0})]   # render: the end did not rise
 GAP = {1: 0.4, 2: 0.5, 3: 1.1, 4: 0.4, 5: 0.4, 6: 0.4, 7: 0.0}   # review: a beat of silence after the question
 GAP_TE = {**GAP, 3: 1.2, 1: 0.3, 2: 0.4}   # render review: the Telugu pause after the question was 0.7 s
-FLAGS_TE = {"s_e": {"boost": 2.8, "rise": 3.0}}
+FLAGS_TE = {"s_e": {"boost": 3.2, "rise": 3.4}}
 YT = {"s_a": "Team of 15? Real: 0", "s_b": "What the AI added", "s_c": "Our test: 10 of 10", "s_d": "Before you send it", "s_e": "Back to the top story"}
 MARK = re.compile(r"\[\d+\]\s*")
 
