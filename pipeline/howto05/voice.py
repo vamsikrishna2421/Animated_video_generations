@@ -31,9 +31,9 @@ NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
 MUST = {"en": {1: [("two", "2", "2000"), ("thousand", "000", "2000"), ("rupees", "rupee"), ("four", "4", "4.5"), ("minutes", "minute"), ("fake",), ("ourselves",)],
                2: [("pause",), ("umbrella",), ("two", "2"), ("sign",), ("ameerpet", "amirpet", "ameerpeth", "amirpeth", "ameer", "amir", "mearpet", "mirpet", "meerpet", "mere", "meer"), ("word",)],
-               3: [("label",), ("instagram",), ("youtube",), ("meta", "meta's", "metas"), ("whatsapp",)], "3b": [("label",), ("fake",)],
+               3: [("label",), ("says", "say"), ("fake",), ("tag",)], "3b": [("label",), ("fake",)],
                4: [("paid",), ("clues", "clue"), ("forward",), ("pay",), ("pib", "p", "pi", "pib's"), ("fact",), ("whatsapp",), ("screenshot",)],
-               5: [("upi", "u"), ("forward",), ("pause",), ("label",), ("pib", "p", "pi")]},
+               5: [("never",), ("upi", "u"), ("forward",), ("pause",), ("label",), ("pib", "p", "pi")]},
         "te": {}}
 JUDGE_TEXT = {1: "2,000 rupees per family, for a flood video made in 4 and a half minutes. We made this fake ourselves."}
 

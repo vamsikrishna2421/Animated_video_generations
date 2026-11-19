@@ -31,8 +31,9 @@ HAND = {   # check 1, by hand after looking at all 48 frames (sheet1-3.jpg, Nov 
     "shot2": "Building signs: no readable word in any frame. The car's front and roof change shape from frame to frame; its "
              "plate never reads.",
     "shot3": "Frames 1-8: two walkers under the blue umbrella melt into one dark shape, and a head with no body rises from "
-             "the bottom edge. Frame 8 -> 9: one blue umbrella becomes two, and the people under it change. The yellow "
-             "sign has no readable word.",
+             "the bottom edge. Frames 4 -> 6: one blue umbrella splits into two (frame 7 shows two; 3/8 s after frame 4). "
+             "The yellow sign has no readable word. (First written as 'frame 8 -> 9', a misreading of the contact sheet; "
+             "corrected Nov 19 after looking at the frames one by one, before the reel was delivered.)",
     "total": "Sign text: 0 readable words in 48 of 48 frames. At normal speed on a phone (6 s, 8 frames a second) none of "
              "this is easy to see; paused, every shot shows it.",
 }

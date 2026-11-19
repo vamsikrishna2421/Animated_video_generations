@@ -38,7 +38,8 @@ Line 1 says both numbers within about 2 s.
   - CPU only (4 cores, no graphics card): 268 s, about 4.5 minutes. Every shot made is kept.
 - **Check 1, pause:**
   - We asked for a sign that says AMEERPET. In 48 of 48 frames the sign text is not a word.
-  - Shot 3, frame 8 -> 9: one blue umbrella becomes two.
+  - Shot 3, frames 4 -> 6: one blue umbrella splits into two (frame 7 shows two, 3/8 s later; first misread as
+    frames 8 -> 9 on the contact sheet).
   - Two walkers melt into one shape, and a head rises from the bottom edge with no body.
 - **Check 2, label:**
   - Our file carries no C2PA Content Credentials and no IPTC AI tag in its metadata. (A scan can't see an invisible
@@ -108,7 +109,7 @@ called the umbrella "the reel", and lost the thread at check two.
 - **1:** Ravi's phone with the WhatsApp forward. The clip plays (shot 1, then 2, then 3), with the message, the
   ₹2,000 and a "Pay" button. The two big numbers. The tag "we made this fake ourselves".
 - **2:** a freeze on shot 1 with a zoom on the sign: "ASKED FOR: AMEERPET" / "GOT:" (the real crop) /
-  "0 of 48 frames: a real word". Then shot 3, frames 8 and 9 side by side, ringed: "1 umbrella -> 2".
+  "0 of 48 frames: a real word". Then shot 3, frames 4 and 7 (corrected from 8 and 9), ringed: "1 umbrella -> 2".
 - **3:** a file card: "Content Credentials (C2PA): none · AI tag: none". Under it: "Apps label a video when: the maker
   says so · the file carries a tag · their own systems catch it". Stamp: "NO LABEL ≠ REAL".
 - **4:** a PIB Fact Check card: "WhatsApp +91 87997 11259", "before you forward or pay".

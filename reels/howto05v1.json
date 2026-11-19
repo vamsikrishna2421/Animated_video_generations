@@ -10,11 +10,11 @@
  "music": "lofi",
  "musicVol": [
   0.14,
-  0.24
+  0.2
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.6,
+ "endPad": 1.6,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -50,7 +50,7 @@
    "id": "s_a",
    "type": "sk_fakecheck",
    "tail": 0.0,
-   "boost": 1.0,
+   "boost": 1.5,
    "data": {
     "beats": [
      {
@@ -61,8 +61,7 @@
     "captionTop": 1440,
     "t": {
      "pib": "+91 87997 11259",
-     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
-     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259"
     },
     "yt": {
      "chapter": "₹2,000 for a 4.5-minute fake",
@@ -98,8 +97,7 @@
     "captionTop": 1440,
     "t": {
      "pib": "+91 87997 11259",
-     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
-     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259"
     },
     "yt": {
      "chapter": "Check 1: pause it",
@@ -115,7 +113,8 @@
      "show": "Check one: pause it. One umbrella turns into two. And the sign we asked to say Ameerpet? In every frame, not a word.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "tempo": 1.08
+     "tempo": 1.12,
+     "tts": "Check one: pause it. One umbrella turns into two. And the sign we asked to say Aameer-pet? In every frame, not a word."
     }
    ]
   },
@@ -142,8 +141,7 @@
     "captionTop": 1440,
     "t": {
      "pib": "+91 87997 11259",
-     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
-     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259"
     },
     "yt": {
      "chapter": "Check 2: look for a label",
@@ -155,14 +153,14 @@
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "Check two: the label. [1] On Instagram or YouTube, an AI label means AI. But Meta's labels don't cover WhatsApp. <pause 0.6> [2] So no label? It can still be fake.",
-     "show": "Check two: the label. On Instagram or YouTube, an AI label means AI. But Meta's labels don't cover WhatsApp. So no label? It can still be fake.",
+     "text": "Check two: look for an AI label. [1] If it says AI, it's AI. But our fake carried no AI tag at all. <pause 0.6> [2] So no label? Still maybe fake.",
+     "show": "Check two: look for an AI label. If it says AI, it's AI. But our fake carried no AI tag at all. So no label? Still maybe fake.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.08,
-     "tts": "Check two: the label. On Instagram or YouTube, an AI label means AI. But Meta's labels don't cover WhatsApp.",
+     "tts": "Check two: look for an AI label. If it says AI, it's AI. But our fake carried no AI tag at all.",
      "file2": "03b_storyteller.wav",
-     "tts2": "So no label? It can still be fake.",
+     "tts2": "So no label? Still maybe fake.",
      "pause": 0.6
     }
    ]
@@ -173,6 +171,7 @@
    "tail": 0.8,
    "boost": 1.8,
    "lift": 0.7,
+   "pre": 0.35,
    "swell": [
     0,
     1,
@@ -188,8 +187,7 @@
     "captionTop": 1440,
     "t": {
      "pib": "+91 87997 11259",
-     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
-     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259"
     },
     "yt": {
      "chapter": "Check 3: ask PIB Fact Check",
@@ -228,8 +226,7 @@
     "captionTop": 1440,
     "t": {
      "pib": "+91 87997 11259",
-     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
-     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259"
     },
     "yt": {
      "chapter": "Pause, label, ask",
@@ -241,8 +238,8 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "If you do one thing: never pay a UPI ID from a forward. [1] Pause, label, ask PIB.",
-     "show": "If you do one thing: never pay a UPI ID from a forward. Pause, label, ask PIB.",
+     "text": "And never pay a UPI ID that came in a forward. [1] Pause, label, ask PIB.",
+     "show": "And never pay a UPI ID that came in a forward. Pause, label, ask PIB.",
      "maxgap": 0.3,
      "gap": 0.0,
      "tempo": 1.08

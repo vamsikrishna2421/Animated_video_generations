@@ -7,7 +7,8 @@ VAE slicing, came after the first start was killed for memory before any shot wa
   frames a second = 6 s. CPU only (4 cores, bfloat16, no graphics card): 92 + 88 + 88 s = 268 s (4.5 minutes) of making,
   plus 10.5 s to load and a one-time 5 GB download. Every shot it made is kept; nothing re-rolled.
 - **Check 1, pause (`sheet1-3.jpg`, HAND in the script):** sign text, 0 readable words in 48 of 48 frames (we asked
-  for "AMEERPET"); frame 8 -> 9 of shot 3, one umbrella becomes two; walkers merge; a head rises with no body.
+  for "AMEERPET"); shot 3, frames 4 -> 6 (3/8 s), one umbrella splits into two
+  (first noted as frames 8 -> 9, a misread of the contact sheet; corrected before delivery); walkers merge; a head rises with no body.
 - **Check 2, label (`label.json`):** no C2PA Content Credentials, no IPTC "trainedAlgorithmicMedia" tag and no other AI
   marker in the metadata of the clip or a frame (an invisible pixel watermark such as Google's SynthID can't be seen by
   this scan; our free model adds none that we know of, and the reel doesn't claim it). YouTube labels a video as AI when the creator discloses it, when it carries C2PA

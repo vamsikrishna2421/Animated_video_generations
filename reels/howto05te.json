@@ -9,12 +9,12 @@
  "lead": 0.5,
  "music": "lofi",
  "musicVol": [
-  0.14,
-  0.24
+  0.16,
+  0.22
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.6,
+ "endPad": 1.6,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -52,7 +52,7 @@
    "id": "s_a",
    "type": "sk_fakecheck",
    "tail": 0.0,
-   "boost": 1.0,
+   "boost": 1.5,
    "data": {
     "beats": [
      {
@@ -63,8 +63,7 @@
     "captionTop": 1440,
     "t": {
      "pib": "+91 87997 11259",
-     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
-     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259"
     },
     "yt": {
      "chapter": "₹2,000 for a 4.5-minute fake",
@@ -101,8 +100,7 @@
     "captionTop": 1440,
     "t": {
      "pib": "+91 87997 11259",
-     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
-     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259"
     },
     "yt": {
      "chapter": "Check 1: pause it",
@@ -115,7 +113,7 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "ఒకటో చెక్: పాజ్ చేసి చూడండి. [1] ఒక గొడుగు, రెండు అవుతుంది. [2] అమీర్‌పేట్ అని రాసిన బోర్డ్ అడిగాం; ప్రతి ఫ్రేమ్ లోనూ, అది అసలు పదమే కాదు.",
+     "text": "ఒకటో చెక్: వీడియో ఆపి చూడండి. [1] ఒక గొడుగు, రెండు అవుతుంది. [2] అమీర్‌పేట్ అని రాసిన బోర్డ్ అడిగాం; ప్రతి ఫ్రేమ్ లోనూ, అది అసలు పదమే కాదు.",
      "show": "Check one: pause it. One umbrella turns into two. And the sign we asked to say Ameerpet? In every frame, not a word.",
      "maxgap": 0.3,
      "gap": 0.4,
@@ -146,8 +144,7 @@
     "captionTop": 1440,
     "t": {
      "pib": "+91 87997 11259",
-     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
-     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259"
     },
     "yt": {
      "chapter": "Check 2: look for a label",
@@ -160,12 +157,12 @@
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "రెండో చెక్: లేబుల్. [1] ఇన్స్టాగ్రామ్, యూట్యూబ్ లో, కంప్యూటర్ తో చేశారని లేబుల్ ఉంటే, నమ్మొచ్చు. కానీ మెటా లేబుల్స్, వాట్సాప్ లో రావు. <pause 0.6> [2] లేబుల్ లేకపోయినా, ఫేక్ అవ్వొచ్చు.",
-     "show": "Check two: the label. On Instagram or YouTube, an AI label means AI. But Meta's labels don't cover WhatsApp. So no label? It can still be fake.",
+     "text": "రెండో చెక్: కంప్యూటర్ వీడియో అని లేబుల్ ఉందా చూడండి. [1] ఉంటే, అది కంప్యూటర్ వీడియోనే. కానీ మా ఫేక్ లో, అలాంటి ట్యాగ్ అసలు లేదు. <pause 0.6> [2] లేబుల్ లేకపోయినా, ఫేక్ అవ్వొచ్చు.",
+     "show": "Check two: look for an AI label. If it says AI, it's AI. But our fake carried no AI tag at all. So no label? Still maybe fake.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.08,
-     "tts": "రెండో చెక్: లేబుల్. ఇన్స్టాగ్రామ్, యూట్యూబ్ లో, కంప్యూటర్ తో చేశారని లేబుల్ ఉంటే, నమ్మొచ్చు. కానీ మెటా లేబుల్స్, వాట్సాప్ లో రావు.",
+     "tts": "రెండో చెక్: కంప్యూటర్ వీడియో అని లేబుల్ ఉందా చూడండి. ఉంటే, అది కంప్యూటర్ వీడియోనే. కానీ మా ఫేక్ లో, అలాంటి ట్యాగ్ అసలు లేదు.",
      "file2": "03b_storyteller.wav",
      "tts2": "లేబుల్ లేకపోయినా, ఫేక్ అవ్వొచ్చు.",
      "pause": 0.6
@@ -178,6 +175,7 @@
    "tail": 0.8,
    "boost": 1.8,
    "lift": 0.7,
+   "pre": 0.35,
    "swell": [
     0,
     1,
@@ -193,8 +191,7 @@
     "captionTop": 1440,
     "t": {
      "pib": "+91 87997 11259",
-     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
-     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259"
     },
     "yt": {
      "chapter": "Check 3: ask PIB Fact Check",
@@ -207,11 +204,15 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "డబ్బులు పెట్టి వాడే టూల్స్, ఇంకా నిజంలా కనిపించే ఫేక్‌లు చేస్తాయి. అందుకే మూడో చెక్ ముఖ్యం. [1] ఫార్వర్డ్ చేసే ముందు, డబ్బులు పంపే ముందు, ఆ వీడియోని, కేంద్ర ప్రభుత్వ పీఐబీ ఫ్యాక్ట్ చెక్ కి, వాట్సాప్ లో పంపండి. [2] నంబర్ స్క్రీన్‌షాట్ తీసుకోండి.",
+     "text": "డబ్బులు పెట్టి వాడే టూల్స్, ఇంకా నిజంలా కనిపించే ఫేక్‌లు చేస్తాయి. అందుకే మూడో చెక్ ముఖ్యం. <pause 0.3> [1] ఫార్వర్డ్ చేసే ముందు, డబ్బులు పంపే ముందు, ఆ వీడియోని, కేంద్ర ప్రభుత్వ పీఐబీ ఫ్యాక్ట్ చెక్ కి, వాట్సాప్ లో పంపండి. [2] నంబర్ స్క్రీన్‌షాట్ తీసుకోండి.",
      "show": "Paid AI leaves fewer clues, so check three matters most. Before you forward or pay, send the video to the government's PIB Fact Check, on WhatsApp. Screenshot the number.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "tempo": 1.08
+     "tempo": 1.08,
+     "tts": "డబ్బులు పెట్టి వాడే టూల్స్, ఇంకా నిజంలా కనిపించే ఫేక్‌లు చేస్తాయి. అందుకే మూడో చెక్ ముఖ్యం.",
+     "file2": "04b_storyteller.wav",
+     "tts2": "ఫార్వర్డ్ చేసే ముందు, డబ్బులు పంపే ముందు, ఆ వీడియోని, కేంద్ర ప్రభుత్వ పీఐబీ ఫ్యాక్ట్ చెక్ కి, వాట్సాప్ లో పంపండి. నంబర్ స్క్రీన్‌షాట్ తీసుకోండి.",
+     "pause": 0.3
     }
    ]
   },
@@ -234,8 +235,7 @@
     "captionTop": 1440,
     "t": {
      "pib": "+91 87997 11259",
-     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
-     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259"
     },
     "yt": {
      "chapter": "Pause, label, ask",
@@ -248,8 +248,8 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "ఒక్కటే గుర్తుపెట్టుకోండి: ఫార్వర్డ్ లో వచ్చిన యూపీఐ ఐడీ కి, ఎప్పుడూ డబ్బులు పంపకండి. [1] పాజ్, లేబుల్, పీఐబీ.",
-     "show": "If you do one thing: never pay a UPI ID from a forward. Pause, label, ask PIB.",
+     "text": "ఇంకా, ఫార్వర్డ్ లో వచ్చిన యూపీఐ ఐడీ కి, ఎప్పుడూ డబ్బులు పంపకండి. [1] ఆపి చూడటం, లేబుల్, పీఐబీ.",
+     "show": "And never pay a UPI ID that came in a forward. Pause, label, ask PIB.",
      "maxgap": 0.3,
      "gap": 0.0,
      "tempo": 1.08
