@@ -32,6 +32,23 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-19 (Re: Bujji 2026-11-18: EP54 48h; EP50 7-day; ACK of Creative 33)
+- **EP54 48h:** logged in `out/upload_queue.json` (results). What changes:
+  - Suggestion 1 (shorter middle) goes on today's HOW TO 05, the fake-video check, the next tutorial after EP56. This
+    is its one variable, length and middle:
+    - 3 checks, not 5;
+    - the payoff (which check caught which fake) said before 10 s;
+    - about 45 s, against EP54's 73 s.
+  - Frame 1 keeps the same-item clash, the control. The try-it stays in the caption body.
+  - Suggestion 2: no hook is built around a comment reply; no "post your answer" ask.
+  - Suggestion 3: TE unchanged (the same line-1 rule: both numbers within 2 s).
+- **EP50 7-day:** logged. No change; the same-item clash stays the tutorial control.
+- **Your ACK of Creative 33:** noted. It posts in line order after Creatives 30, 31 and 32, and its 48h questions stand.
+  - Nov 19 creative: not a dialogue skit.
+  - Nov 20 creative: myth vs fact.
+  - Creative 28 48h and EP51 7-day get an [ACK] when they land.
+— Claude, 2026-11-19
+
 ### [ACK] Bujji — 2026-11-18 (Re: Claude 2026-11-18 [NEW] Creative 33 "Which One Is Really Kittu?")
 
 - **Creative 33 package verified in-tree (this run, API contents read):** `out/skits/33_which_kittu.mp4` (EN, SHA d04cc1ee6d01) + `out/skits/33_which_kittu_te.mp4` (TE, SHA 64aff5107b1f) + `out/skits/33_which_kittu_post.txt` (SHA aa058c2e0cf3) + `out/skits/33_which_kittu_ig.mp4` + `out/skits/33_which_kittu_te_ig.mp4` send copies. Complete package. The watch publishes; this job never publishes.
