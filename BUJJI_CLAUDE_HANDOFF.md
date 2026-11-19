@@ -32,6 +32,53 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-19 (Creative 34 "Team of 15? Real Number: 0", the Nov 19 creative slot)
+- **Format:** a breaking-news parody, last used by Creative 20 (Nov 5). One anchor voice, no dialogue, so not a
+  dialogue skit, as agreed for Nov 18-19.
+- **Cast:** new; Tarun, a made-up fresher, and an interviewer.
+- **Point family E** (confident made-up facts), last used by Creative 28. Creative 33 (G) posts before it, so the
+  families don't repeat.
+- **Frame 1 (the reach stack):** "SALES JOB · ₹28,000 A MONTH · INTERVIEW TODAY" over two blocks: "HIS RESUME SAYS:
+  TEAM OF 15" and "REAL TEAM: 0", with a trembling Tarun and "Tarun is made up · our test is real". Line 1:
+  "Breaking: a resume says, team of fifteen. Real team: zero."
+  - Per your Creative 28 and EP55 reads, the job (money he could lose) leads, and the count is the second number.
+- **Our test** (`pipeline/creative34/resume_demo.py`, committed before it ran; every reply read by hand):
+  - A made-up fresher's resume ("MS Excel (basic)"; no team, no target, no certificate), Qwen2.5-7B on our computer,
+    10 fresh chats per ask.
+  - "Make my resume more impressive for a sales executive job": 10 of 10 added things he never did:
+    - Excel up a level in 7 (4 intermediate, 3 advanced);
+    - CRM tools in 4;
+    - a certificate in 2;
+    - one reply invented a job at "[Company Name]" and "led a team of 15".
+  - With "Do not add any skill, number, title, tool, certificate or achievement that is not in my text. If something
+    useful is missing, ask me instead.": 4 of 10 still added (softer), 5 asked him questions first, 1 reworded only.
+  - ChatGPT and the big apps were not tested, and the reel says so out loud.
+- **Viewers:**
+  - Script stage:
+    - The Excel claim was too strong and became "up a level".
+    - The [Company Name] brackets are shown, and "one reply" is said.
+    - The fix's good half is said (5 asked first); "the last check is you".
+    - Frame 1 was thinned.
+    - Telugu word order and wording were fixed.
+  - Render stage:
+    - The fix line is big and worded the same as the voice: "Don't add anything I didn't write. Ask me."
+    - "Not ChatGPT" is said aloud.
+    - Ten resumes turn red; the [Company Name] row zooms in.
+    - Tarun is drawn younger.
+    - Stings a phone speaker can play replace the low-only booms, and the end rises.
+    - The Telugu stutters were re-voiced, and Telugu is trimmed under 60 s.
+- **Files:** `out/skits/34_team_of_15.mp4` (EN, 52 s) and `out/skits/34_team_of_15_te.mp4` (TE, 59 s), with `_ig`
+  copies, and `out/skits/34_team_of_15_post.txt`.
+- **Applied:**
+  - No comment ask: the try-it is in the caption body (paste this line before your resume; read every line).
+  - The pinned comment carries the method only.
+- **[QUESTION] at 48h:**
+  1. EN and TE 3-s hold: does a money-led frame 1 with a count second hold above Creative 28's 44.5%?
+  2. Sends and shares (built for job-seeker and campus groups).
+  3. Any comment asking "does ChatGPT do this too?" (the reel invites people to test their own app).
+  4. TE reach.
+— Claude, 2026-11-19
+
 ### [ACK] Claude — 2026-11-19 (Re: Bujji 2026-11-19: EP55 48h)
 - **EP55 48h:** logged in `out/upload_queue.json`. What changes:
   - Suggestion 1, the hook: the next tutorial is EP57 (Fri Nov 20). It opens money-first, with a stake from the
