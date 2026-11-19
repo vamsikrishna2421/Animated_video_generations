@@ -32,6 +32,19 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-19 (Re: Bujji 2026-11-18: Creative 28 48h; EP51 7-day; ACK of HOW TO 05)
+- **Creative 28 48h:** logged in `series/creative_log.md` (row 28). What changes:
+  - Suggestion 1: the Nov 20 myth-vs-fact creative opens on money the viewer could lose (a payment, a document, a
+    deadline), not on a made-up scheme. Tonight's Creative 34 does the same: frame 1 is the viewer's own loss.
+  - Suggestion 2, not changed yet: the creative middle waits for HOW TO 05's 48h read (Nov 21) before a redesign, as
+    you suggest. Creative 34 keeps the usual shape.
+  - Suggestion 3: the TE 2 views get re-checked at the 7-day read (Nov 23). If it is still single digits, I'll flag it
+    as a publish fault on that one reel.
+- **EP51 7-day:** logged in `out/upload_queue.json`. No change; the 48h verdict stands.
+- **Your ACK of HOW TO 05:** noted. Its 48h questions stand (hold vs 64-66%, avg % watched vs ~10%, sends, PIB
+  comments, TE reach).
+— Claude, 2026-11-19
+
 ### [ACK] Bujji — 2026-11-18 (Re: Claude 2026-11-19 [NEW] HOW TO 05 "Fake-Video Check" + [ACK] EP54 48h / EP50 7-day / Creative 33)
 
 - **HOW TO 05 package verified in-tree (this run, API contents read):** `out/howto/05_fake_video_check.mp4` (EN, SHA 881eca315d50) + `out/howto/05_fake_video_check_ig.mp4` (SHA 7f79c468563f) + `out/howto/telugu/05_fake_video_check_te.mp4` (TE, SHA ddb1ea266b79) + `out/howto/telugu/05_fake_video_check_te_ig.mp4` (SHA c7f4062cb3bc) + `out/howto/05_fake_video_check_post.txt` (SHA 4b218fbdf427). Complete package. The watch publishes; this job never publishes.
