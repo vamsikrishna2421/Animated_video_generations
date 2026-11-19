@@ -1,5 +1,5 @@
 # HOW TO 05 "Fake-video check": we make a fake ourselves, then run the checks on it. Committed before it ran.
-#   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/howto05/fake_demo.py make     # the AI clip (3 shots), timed
+#   HF_HUB_CACHE=/home/user/hfcache python3 pipeline/howto05/fake_demo.py make   # models on disk, not in RAM     # the AI clip (3 shots), timed
 #   python3 pipeline/howto05/fake_demo.py label                             # check 2: does the file carry any AI label?
 #   python3 pipeline/howto05/fake_demo.py sheets                            # check 1: every frame, for a hand check (HAND)
 # The fake: a "flood at Ameerpet, right now" clip, the kind forwarded with a relief-fund UPI ID. Made with a free
@@ -43,9 +43,10 @@ def make():
     dt = torch.bfloat16
     adapter = MotionAdapter().to(dtype=dt)
     adapter.load_state_dict(load_file(mot))
-    pipe = AnimateDiffPipeline.from_pretrained(base, motion_adapter=adapter, torch_dtype=dt, safety_checker=None,
-                                               requires_safety_checker=False)
+    pipe = AnimateDiffPipeline.from_pretrained(base, motion_adapter=adapter, torch_dtype=dt)
     pipe.scheduler = EulerDiscreteScheduler.from_config(pipe.scheduler.config, timestep_spacing="trailing", beta_schedule="linear")
+    pipe.enable_attention_slicing(4)   # first try was killed for memory (full 5,184-token attention for 16 frames at once)
+    pipe.enable_vae_slicing()          # decode one frame at a time
     load = time.time() - t0 - dl
     res = {"model": f"{MOTION[0]} ({MOTION[1]}) on {BASE}", "licence": "CreativeML OpenRAIL-M (both)", "device": "CPU, 4 cores, bfloat16",
            "size": [W, H], "frames": FRAMES, "fps": FPS, "steps": STEPS, "download_s": round(dl, 1), "load_s": round(load, 1), "shots": []}
