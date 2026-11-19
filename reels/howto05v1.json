@@ -1,0 +1,253 @@
+{
+ "id": "howto05v1",
+ "title": "HOW TO 05: Fake-Video Check",
+ "label": "HOW TO 05",
+ "banner": "Fake-video check",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.14,
+  0.24
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.6,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1440,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_fakecheck",
+   "tail": 0.0,
+   "boost": 1.0,
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "pib": "+91 87997 11259",
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
+     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+    },
+    "yt": {
+     "chapter": "₹2,000 for a 4.5-minute fake",
+     "title": "₹2,000 for a 4.5-minute fake",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "Two thousand rupees per family, for a flood video made in four and a half minutes. [1] We made this fake ourselves.",
+     "show": "Two thousand rupees per family, for a flood video made in four and a half minutes. We made this fake ourselves.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_fakecheck",
+   "tail": 0.3,
+   "boost": 1.1,
+   "lift": 0.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "pause",
+      "n": 2
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "pib": "+91 87997 11259",
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
+     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+    },
+    "yt": {
+     "chapter": "Check 1: pause it",
+     "title": "Check 1: pause it",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "Check one: pause it. [1] One umbrella turns into two. [2] And the sign we asked to say Ameerpet? In every frame, not a word.",
+     "show": "Check one: pause it. One umbrella turns into two. And the sign we asked to say Ameerpet? In every frame, not a word.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_fakecheck",
+   "tail": 0.3,
+   "boost": 1.2,
+   "lift": 0.5,
+   "drop_at": [
+    [
+     0,
+     2,
+     0.6
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "label",
+      "n": 3
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "pib": "+91 87997 11259",
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
+     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+    },
+    "yt": {
+     "chapter": "Check 2: look for a label",
+     "title": "Check 2: look for a label",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "Check two: the label. [1] On Instagram or YouTube, an AI label means AI. But Meta's labels don't cover WhatsApp. <pause 0.6> [2] So no label? It can still be fake.",
+     "show": "Check two: the label. On Instagram or YouTube, an AI label means AI. But Meta's labels don't cover WhatsApp. So no label? It can still be fake.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08,
+     "tts": "Check two: the label. On Instagram or YouTube, an AI label means AI. But Meta's labels don't cover WhatsApp.",
+     "file2": "03b_storyteller.wav",
+     "tts2": "So no label? It can still be fake.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_fakecheck",
+   "tail": 0.8,
+   "boost": 1.5,
+   "lift": 0.6,
+   "swell": [
+    0,
+    1,
+    1.3
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "ask",
+      "n": 4
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "pib": "+91 87997 11259",
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
+     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+    },
+    "yt": {
+     "chapter": "Check 3: ask PIB Fact Check",
+     "title": "Check 3: ask PIB Fact Check",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "Paid AI leaves fewer clues, so check three matters most. [1] Before you forward or pay, send the video to the government's PIB Fact Check, on WhatsApp. [2] Screenshot the number.",
+     "show": "Paid AI leaves fewer clues, so check three matters most. Before you forward or pay, send the video to the government's PIB Fact Check, on WhatsApp. Screenshot the number.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_fakecheck",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 2.0,
+   "lift": 0.7,
+   "rise": 2.0,
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 5
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "pib": "+91 87997 11259",
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
+     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+    },
+    "yt": {
+     "chapter": "Pause, label, ask",
+     "title": "Pause, label, ask",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "If you do one thing: never pay a UPI ID from a forward. [1] Pause, label, ask PIB.",
+     "show": "If you do one thing: never pay a UPI ID from a forward. Pause, label, ask PIB.",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "tempo": 1.08
+    }
+   ]
+  }
+ ]
+}

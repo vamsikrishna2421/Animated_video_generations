@@ -10,33 +10,33 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 R = ROOT / "reels"
 
-LINES = {   # n: (prop, English, Telugu)
-    1: ("hook", "Two thousand rupees asked, for a video made in four and a half minutes. [1] We made this flood video ourselves, with a free AI.",
-        "రెండు వేల రూపాయలు అడుగుతోంది; ఈ వీడియో చేయడానికి పట్టింది నాలుగున్నర నిమిషాలు. [1] ఈ వరద వీడియో, మేమే ఒక ఫ్రీ టూల్ తో, కంప్యూటర్ లో చేశాం."),
-    2: ("pause", "Check one: pause it. [1] We asked for a sign that says Ameerpet. In all forty-eight frames, it's not a word. [2] And here, one umbrella turns into two.",
-        "ఒకటో చెక్: పాజ్ చేసి చూడండి. [1] అమీర్‌పేట్ అని బోర్డ్ అడిగాం. నలభై ఎనిమిది ఫ్రేముల్లోనూ, అది ఒక్క పదం కూడా కాదు. [2] ఇక్కడ, ఒక గొడుగు రెండు అవుతుంది."),
-    3: ("label", "Check two: look for an AI label. [1] Our file carries no AI tag, so Instagram or YouTube label it only if their own systems catch it. [2] No label doesn't mean real.",
-        "రెండో చెక్: కంప్యూటర్ చేసిందని లేబుల్ ఉందా చూడండి. [1] మా ఫైల్ లో అలాంటి ట్యాగ్ లేదు; ఇన్స్టాగ్రామ్, యూట్యూబ్ సొంతంగా పట్టుకుంటేనే లేబుల్ వస్తుంది. [2] లేబుల్ లేదంటే, నిజమని కాదు."),
-    4: ("ask", "Check three: before you forward or pay, [1] send it to PIB Fact Check on WhatsApp: eight seven nine nine seven, one one two five nine.",
-        "మూడో చెక్: ఫార్వర్డ్ చేసే ముందు, డబ్బులు పంపే ముందు, [1] పీఐబీ ఫ్యాక్ట్ చెక్ వాట్సాప్ కి పంపండి: ఎనిమిది ఏడు తొమ్మిది తొమ్మిది ఏడు, ఒకటి ఒకటి రెండు ఐదు తొమ్మిది."),
-    5: ("loop", "Paid tools make cleaner fakes, with less to pause on. So do all three: [1] pause, label, ask.",
-        "డబ్బులు కట్టే టూల్స్ ఇంకా శుభ్రమైన ఫేక్ లు చేస్తాయి. అందుకే మూడూ చేసుకోండి: [1] పాజ్, లేబుల్, అడగడం."),
+LINES = {   # n: (prop, English, Telugu). v2 (script review): the umbrella first, "every frame" (only shot 1 asked for the
+    # sign), check two fits a WhatsApp forward (Meta's labels name Facebook, Instagram and Threads), PIB as "the
+    # government's", the number on screen not read out, paid tools as the reason check three matters, "if you do one thing"
+    1: ("hook", "Two thousand rupees per family, for a flood video made in four and a half minutes. [1] We made this fake ourselves.",
+        "రెండు వేలు అడిగే వరద వీడియో; చేసింది నాలుగున్నర నిమిషాల్లో. [1] ఈ ఫేక్ ని, మేమే చేశాం."),
+    2: ("pause", "Check one: pause it. [1] One umbrella turns into two. [2] And the sign we asked to say Ameerpet? In every frame, not a word.",
+        "ఒకటో చెక్: పాజ్ చేసి చూడండి. [1] ఒక గొడుగు, రెండు అవుతుంది. [2] అమీర్‌పేట్ అని రాసిన బోర్డ్ అడిగాం; ప్రతి ఫ్రేమ్ లోనూ, అది అసలు పదమే కాదు."),
+    3: ("label", "Check two: the label. [1] On Instagram or YouTube, an AI label means AI. But Meta's labels don't cover WhatsApp. | [2] So no label? It can still be fake.",
+        "రెండో చెక్: లేబుల్. [1] ఇన్స్టాగ్రామ్, యూట్యూబ్ లో, కంప్యూటర్ తో చేశారని లేబుల్ ఉంటే, నమ్మొచ్చు. కానీ మెటా లేబుల్స్, వాట్సాప్ లో రావు. | [2] లేబుల్ లేకపోయినా, ఫేక్ అవ్వొచ్చు."),
+    4: ("ask", "Paid AI leaves fewer clues, so check three matters most. [1] Before you forward or pay, send the video to the government's PIB Fact Check, on WhatsApp. [2] Screenshot the number.",
+        "డబ్బులు పెట్టి వాడే టూల్స్, ఇంకా నిజంలా కనిపించే ఫేక్‌లు చేస్తాయి. అందుకే మూడో చెక్ ముఖ్యం. [1] ఫార్వర్డ్ చేసే ముందు, డబ్బులు పంపే ముందు, ఆ వీడియోని, కేంద్ర ప్రభుత్వ పీఐబీ ఫ్యాక్ట్ చెక్ కి, వాట్సాప్ లో పంపండి. [2] నంబర్ స్క్రీన్‌షాట్ తీసుకోండి."),
+    5: ("loop", "If you do one thing: never pay a UPI ID from a forward. [1] Pause, label, ask PIB.",
+        "ఒక్కటే గుర్తుపెట్టుకోండి: ఫార్వర్డ్ లో వచ్చిన యూపీఐ ఐడీ కి, ఎప్పుడూ డబ్బులు పంపకండి. [1] పాజ్, లేబుల్, పీఐబీ."),
 }
 TTS_EN = {}
 SHOW = {}
 SHOW_TE = {}
-SPLIT_PAUSE = {}
-SPLIT_PAUSE_TE = {}
+SPLIT_PAUSE = {3: 0.6}
+SPLIT_PAUSE_TE = {3: 0.6}
 T = {
-    "scan": [["Content Credentials (C2PA)", "none"], ["AI tag (IPTC)", "none"], ["SynthID watermark", "none"]],
-    "when": ["the maker says it's AI", "the file carries a tag like C2PA", "their own systems catch it"],
-    "whenSrc": "YouTube Help, \"Disclosing use of altered or synthetic content\"; Meta's labelling post",
     "pib": "+91 87997 11259", "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
+    "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help",
 }
 SCENES = [("s_a", (1,), {"boost": 1.0, "tail": 0.0}),
           ("s_b", (2,), {"boost": 1.1, "lift": 0.5, "tail": 0.3}),
-          ("s_c", (3,), {"boost": 1.2, "lift": 0.5, "drop_at": [[0, 2, 0.6]], "tail": 0.3}),
-          ("s_d", (4,), {"boost": 1.4, "lift": 0.6, "tail": 0.5}),
+          ("s_c", (3,), {"boost": 1.2, "lift": 0.5, "drop_at": [[0, 2, 0.6]], "tail": 0.3}),   # a drop before "So no label?"
+          ("s_d", (4,), {"boost": 1.5, "lift": 0.6, "swell": [0, 1, 1.3], "tail": 0.8}),   # review: lift under the number card, hold it 3 s+
           ("s_e", (5,), {"outro": True, "pre": 0.3, "boost": 2.0, "lift": 0.7, "rise": 2.0, "tail": 0.0})]
 GAP = {1: 0.4, 2: 0.4, 3: 0.4, 4: 0.4, 5: 0.0}
 FLAGS_TE = {"s_e": {"boost": 1.8, "rise": 1.8}}

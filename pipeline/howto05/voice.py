@@ -29,14 +29,13 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("three", "3"), ("years", "year"), ("seventy", "72"), ("hours", "hour"), ("customers", "customer"), ("gemini",)],
-               2: [("google",), ("person",), ("three", "3"), ("years", "year"), ("delete",)], "2b": [("keep",), ("seventy", "72"), ("hours", "hour"), ("activity",)],
-               4: [("passwords", "password"), ("aadhaar", "aadhar", "adhaar", "adhar"), ("bank",), ("medical",)],
-               5: [("google",), ("reviewer",)], 6: [("gemini",), ("website",), ("activity",), ("off",), ("history",), ("temporary",)],
-               7: [("settings", "setting"), ("data",), ("improve",), ("everyone",), ("default",), ("temporary",)], 8: [("switch",), ("reviewed",), ("customer",), ("phone",)],
-               9: [("settings", "setting"), ("on",), ("off",)]},
+MUST = {"en": {1: [("two", "2", "2000"), ("thousand", "000", "2000"), ("rupees", "rupee"), ("four", "4", "4.5"), ("minutes", "minute"), ("fake",), ("ourselves",)],
+               2: [("pause",), ("umbrella",), ("two", "2"), ("sign",), ("ameerpet", "amirpet", "ameerpeth", "amirpeth", "ameer", "amir", "mearpet", "mirpet", "meerpet", "mere", "meer"), ("word",)],
+               3: [("label",), ("instagram",), ("youtube",), ("meta", "meta's", "metas"), ("whatsapp",)], "3b": [("label",), ("fake",)],
+               4: [("paid",), ("clues", "clue"), ("forward",), ("pay",), ("pib", "p", "pi", "pib's"), ("fact",), ("whatsapp",), ("screenshot",)],
+               5: [("upi", "u"), ("forward",), ("pause",), ("label",), ("pib", "p", "pi")]},
         "te": {}}
-JUDGE_TEXT = {1: "3 years, or 72 hours. Ravi just pasted his customers' dues list into Gemini.", "2b": "With the Keep Activity switch off: 72 hours."}
+JUDGE_TEXT = {1: "2,000 rupees per family, for a flood video made in 4 and a half minutes. We made this fake ourselves."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

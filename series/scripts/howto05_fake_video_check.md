@@ -1,4 +1,4 @@
-# HOW TO 05 "Fake-video check: 3 checks before you forward" · Thu Nov 19 · script v1
+# HOW TO 05 "Fake-video check: 3 checks before you forward" · Thu Nov 19 · script v2
 
 ## The format and the one variable
 A screen tutorial, as HOW TO 04 was: one narrator, phone screens drawn in our crayon style, Ravi's shop in the
@@ -56,14 +56,52 @@ Line 1 says both numbers within about 2 s.
   - We tested no real clip (Wikimedia Commons refused this network; there is no camera here).
   - We tested no detector apps.
 
-## Script v1 (EN | TE). One narrator: EN on Fish (the storyteller clip), TE on Parler (Lalitha)
+## Script review (human-viewer, v1), what changed for v2
+All three viewers (a shop owner in seven family groups, a fast forwarder, a Telugu-first mother) stopped on frame 1,
+called the umbrella "the reel", and lost the thread at check two.
+- **Check two didn't fit a WhatsApp forward**, and "NO LABEL ≠ REAL" reads as "=" at phone size. It is rebuilt in
+  words:
+  - "On Instagram or YouTube, an AI label means AI. But Meta's labels don't cover WhatsApp. So no label? It can still
+    be fake."
+  - Meta's own labelling posts name Facebook, Instagram and Threads (Feb 6, 2024, updated Apr 1, 2025; Apr 5, 2024,
+    updated Oct 23, 2025). WhatsApp is not named.
+  - The card is three short rows.
+- **The 48-frame claim was wrong:** only shot 1's prompt asked for the AMEERPET sign. The voice now says "in every
+  frame", and the screen says "every frame of that shot".
+- **The umbrella comes first now** (about 7-8 s), so check one's result lands before 10 s. The sign follows.
+- **Frame 1:**
+  - ₹2,000 comes first, as line 1 says it.
+  - The forward carries a masked UPI ID and a QR, not a "Pay" button.
+  - The message is cut to one line.
+  - "FAKE · MADE BY US" is burned onto the clip every time it is shown, so a screen recording can't pass as a real flood.
+- **"So which one do I do?"** The last line is now "If you do one thing: never pay a UPI ID from a forward", and the
+  save card reads PAUSE · LABEL · ASK PIB.
+- **The PIB line:**
+  - PIB is introduced as "the government's" (the central government's, on screen).
+  - The number is on screen and held, not read out: ten spoken digits sounded like a bank phone menu.
+  - "Screenshot the number" is spoken.
+  - The paid-tools line moved here, as the reason check three matters most.
+- **Telugu:**
+  - "who is asking?" is fixed: "రెండు వేలు అడిగే వరద వీడియో".
+  - "అమీర్‌పేట్ అని రాసిన బోర్డ్".
+  - "లేబుల్ లేకపోయినా, ఫేక్ అవ్వొచ్చు", where "లేబుల్ లేదంటే, నిజమని కాదు" flipped the meaning.
+  - "ఆ వీడియోని" before "పంపండి" (it sounded like "send the money to PIB").
+  - "డబ్బులు పెట్టి వాడే టూల్స్, ఇంకా నిజంలా కనిపించే ఫేక్‌లు".
+  - "గుర్తుపెట్టుకోండి".
+  - "పాజ్, లేబుల్, పీఐబీ".
+- **Sound:**
+  - A glitch and a hit on the umbrella frames.
+  - A 0.6 s silence and a music drop before "So no label?".
+  - A swell under the number card, which holds 3 s or more.
+
+## Script v2 (EN | TE). One narrator: EN on Fish (the storyteller clip), TE on Parler (Lalitha)
 | # | prop | English | Telugu |
 |---|---|---|---|
-| 1 | hook | Two thousand rupees asked, for a video made in four and a half minutes. [1] We made this flood video ourselves, with a free AI. | రెండు వేల రూపాయలు అడుగుతోంది; ఈ వీడియో చేయడానికి పట్టింది నాలుగున్నర నిమిషాలు. [1] ఈ వరద వీడియో, మేమే ఒక ఫ్రీ టూల్ తో, కంప్యూటర్ లో చేశాం. |
-| 2 | pause | Check one: pause it. [1] We asked for a sign that says Ameerpet. In all forty-eight frames, it's not a word. [2] And here, one umbrella turns into two. | ఒకటో చెక్: పాజ్ చేసి చూడండి. [1] అమీర్‌పేట్ అని బోర్డ్ అడిగాం. నలభై ఎనిమిది ఫ్రేముల్లోనూ, అది ఒక్క పదం కూడా కాదు. [2] ఇక్కడ, ఒక గొడుగు రెండు అవుతుంది. |
-| 3 | label | Check two: look for an AI label. [1] Our file carries no AI tag, so Instagram or YouTube label it only if their own systems catch it. [2] No label doesn't mean real. | రెండో చెక్: కంప్యూటర్ చేసిందని లేబుల్ ఉందా చూడండి. [1] మా ఫైల్ లో అలాంటి ట్యాగ్ లేదు; ఇన్స్టాగ్రామ్, యూట్యూబ్ సొంతంగా పట్టుకుంటేనే లేబుల్ వస్తుంది. [2] లేబుల్ లేదంటే, నిజమని కాదు. |
-| 4 | ask | Check three: before you forward or pay, [1] send it to PIB Fact Check on WhatsApp: eight seven nine nine seven, one one two five nine. | మూడో చెక్: ఫార్వర్డ్ చేసే ముందు, డబ్బులు పంపే ముందు, [1] పీఐబీ ఫ్యాక్ట్ చెక్ వాట్సాప్ కి పంపండి: ఎనిమిది ఏడు తొమ్మిది తొమ్మిది ఏడు, ఒకటి ఒకటి రెండు ఐదు తొమ్మిది. |
-| 5 | loop | Paid tools make cleaner fakes, with less to pause on. So do all three: [1] pause, label, ask. | డబ్బులు కట్టే టూల్స్ ఇంకా శుభ్రమైన ఫేక్ లు చేస్తాయి. అందుకే మూడూ చేసుకోండి: [1] పాజ్, లేబుల్, అడగడం. |
+| 1 | hook | Two thousand rupees per family, for a flood video made in four and a half minutes. [1] We made this fake ourselves. | రెండు వేలు అడిగే వరద వీడియో; చేసింది నాలుగున్నర నిమిషాల్లో. [1] ఈ ఫేక్ ని, మేమే చేశాం. |
+| 2 | pause | Check one: pause it. [1] One umbrella turns into two. [2] And the sign we asked to say Ameerpet? In every frame, not a word. | ఒకటో చెక్: పాజ్ చేసి చూడండి. [1] ఒక గొడుగు, రెండు అవుతుంది. [2] అమీర్‌పేట్ అని రాసిన బోర్డ్ అడిగాం; ప్రతి ఫ్రేమ్ లోనూ, అది అసలు పదమే కాదు. |
+| 3 | label | Check two: the label. [1] On Instagram or YouTube, an AI label means AI. But Meta's labels don't cover WhatsApp. / [2] So no label? It can still be fake. | రెండో చెక్: లేబుల్. [1] ఇన్స్టాగ్రామ్, యూట్యూబ్ లో, కంప్యూటర్ తో చేశారని లేబుల్ ఉంటే, నమ్మొచ్చు. కానీ మెటా లేబుల్స్, వాట్సాప్ లో రావు. / [2] లేబుల్ లేకపోయినా, ఫేక్ అవ్వొచ్చు. |
+| 4 | ask | Paid AI leaves fewer clues, so check three matters most. [1] Before you forward or pay, send the video to the government's PIB Fact Check, on WhatsApp. [2] Screenshot the number. | డబ్బులు పెట్టి వాడే టూల్స్, ఇంకా నిజంలా కనిపించే ఫేక్‌లు చేస్తాయి. అందుకే మూడో చెక్ ముఖ్యం. [1] ఫార్వర్డ్ చేసే ముందు, డబ్బులు పంపే ముందు, ఆ వీడియోని, కేంద్ర ప్రభుత్వ పీఐబీ ఫ్యాక్ట్ చెక్ కి, వాట్సాప్ లో పంపండి. [2] నంబర్ స్క్రీన్‌షాట్ తీసుకోండి. |
+| 5 | loop | If you do one thing: never pay a UPI ID from a forward. [1] Pause, label, ask PIB. | ఒక్కటే గుర్తుపెట్టుకోండి: ఫార్వర్డ్ లో వచ్చిన యూపీఐ ఐడీ కి, ఎప్పుడూ డబ్బులు పంపకండి. [1] పాజ్, లేబుల్, పీఐబీ. |
 
 ## On screen (English in both versions)
 - **1:** Ravi's phone with the WhatsApp forward. The clip plays (shot 1, then 2, then 3), with the message, the

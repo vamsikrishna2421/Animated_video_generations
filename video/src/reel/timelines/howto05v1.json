@@ -1,0 +1,874 @@
+{
+ "id": "howto05v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "Fake-video check",
+ "musicVol": [
+  0.14,
+  0.24
+ ],
+ "title": "HOW TO 05: Fake-Video Check",
+ "handle": "@ai_maastaaru",
+ "label": "HOW TO 05",
+ "fps": 30,
+ "musicDrops": [
+  [
+   721,
+   763
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   225,
+   1.0
+  ],
+  [
+   225,
+   491,
+   1.1
+  ],
+  [
+   491,
+   839,
+   1.2
+  ],
+  [
+   839,
+   1207,
+   1.5
+  ],
+  [
+   1207,
+   1429,
+   2.0
+  ],
+  [
+   941,
+   1207,
+   1.3,
+   1
+  ],
+  [
+   1207,
+   1429,
+   2.0,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1429,
+ "music": "reel/howto05v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_fakecheck",
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "pib": "+91 87997 11259",
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
+     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+    },
+    "yt": {
+     "chapter": "₹2,000 for a 4.5-minute fake",
+     "title": "₹2,000 for a 4.5-minute fake",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 225,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto05v1/line_01.wav",
+     "from": 10,
+     "frames": 191,
+     "words": [
+      {
+       "w": "Two",
+       "from": 10,
+       "to": 16
+      },
+      {
+       "w": "thousand",
+       "from": 16,
+       "to": 27
+      },
+      {
+       "w": "rupees",
+       "from": 27,
+       "to": 37
+      },
+      {
+       "w": "per",
+       "from": 37,
+       "to": 42
+      },
+      {
+       "w": "family,",
+       "from": 42,
+       "to": 52
+      },
+      {
+       "w": "for",
+       "from": 52,
+       "to": 57
+      },
+      {
+       "w": "a",
+       "from": 57,
+       "to": 60
+      },
+      {
+       "w": "flood",
+       "from": 60,
+       "to": 81
+      },
+      {
+       "w": "video",
+       "from": 81,
+       "to": 89
+      },
+      {
+       "w": "made",
+       "from": 89,
+       "to": 95
+      },
+      {
+       "w": "in",
+       "from": 95,
+       "to": 99
+      },
+      {
+       "w": "four",
+       "from": 99,
+       "to": 106
+      },
+      {
+       "w": "and",
+       "from": 106,
+       "to": 115
+      },
+      {
+       "w": "a",
+       "from": 115,
+       "to": 117
+      },
+      {
+       "w": "half",
+       "from": 117,
+       "to": 124
+      },
+      {
+       "w": "minutes.",
+       "from": 124,
+       "to": 136
+      },
+      {
+       "w": "We",
+       "from": 136,
+       "to": 144
+      },
+      {
+       "w": "made",
+       "from": 144,
+       "to": 160
+      },
+      {
+       "w": "this",
+       "from": 160,
+       "to": 166
+      },
+      {
+       "w": "fake",
+       "from": 166,
+       "to": 177
+      },
+      {
+       "w": "ourselves.",
+       "from": 177,
+       "to": 191
+      }
+     ],
+     "cues": {
+      "1": 136
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_fakecheck",
+   "data": {
+    "beats": [
+     {
+      "prop": "pause",
+      "n": 2
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "pib": "+91 87997 11259",
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
+     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+    },
+    "yt": {
+     "chapter": "Check 1: pause it",
+     "title": "Check 1: pause it",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 225,
+   "frames": 266,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto05v1/line_02.wav",
+     "from": 0,
+     "frames": 240,
+     "words": [
+      {
+       "w": "Check",
+       "from": 2,
+       "to": 10
+      },
+      {
+       "w": "one:",
+       "from": 10,
+       "to": 18
+      },
+      {
+       "w": "pause",
+       "from": 18,
+       "to": 37
+      },
+      {
+       "w": "it.",
+       "from": 37,
+       "to": 43
+      },
+      {
+       "w": "One",
+       "from": 43,
+       "to": 58
+      },
+      {
+       "w": "umbrella",
+       "from": 58,
+       "to": 71
+      },
+      {
+       "w": "turns",
+       "from": 71,
+       "to": 80
+      },
+      {
+       "w": "into",
+       "from": 80,
+       "to": 87
+      },
+      {
+       "w": "two.",
+       "from": 87,
+       "to": 95
+      },
+      {
+       "w": "And",
+       "from": 95,
+       "to": 100
+      },
+      {
+       "w": "the",
+       "from": 100,
+       "to": 119
+      },
+      {
+       "w": "sign",
+       "from": 119,
+       "to": 126
+      },
+      {
+       "w": "we",
+       "from": 126,
+       "to": 130
+      },
+      {
+       "w": "asked",
+       "from": 130,
+       "to": 139
+      },
+      {
+       "w": "to",
+       "from": 139,
+       "to": 150
+      },
+      {
+       "w": "say",
+       "from": 150,
+       "to": 156
+      },
+      {
+       "w": "Ameerpet?",
+       "from": 156,
+       "to": 183
+      },
+      {
+       "w": "In",
+       "from": 183,
+       "to": 188
+      },
+      {
+       "w": "every",
+       "from": 188,
+       "to": 200
+      },
+      {
+       "w": "frame,",
+       "from": 200,
+       "to": 218
+      },
+      {
+       "w": "not",
+       "from": 218,
+       "to": 223
+      },
+      {
+       "w": "a",
+       "from": 223,
+       "to": 226
+      },
+      {
+       "w": "word.",
+       "from": 226,
+       "to": 240
+      }
+     ],
+     "cues": {
+      "1": 43,
+      "2": 95
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_fakecheck",
+   "data": {
+    "beats": [
+     {
+      "prop": "label",
+      "n": 3
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "pib": "+91 87997 11259",
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
+     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+    },
+    "yt": {
+     "chapter": "Check 2: look for a label",
+     "title": "Check 2: look for a label",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 491,
+   "frames": 348,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto05v1/line_03.wav",
+     "from": 0,
+     "frames": 319,
+     "words": [
+      {
+       "w": "Check",
+       "from": 1,
+       "to": 14
+      },
+      {
+       "w": "two:",
+       "from": 14,
+       "to": 30
+      },
+      {
+       "w": "the",
+       "from": 30,
+       "to": 36
+      },
+      {
+       "w": "label.",
+       "from": 36,
+       "to": 47
+      },
+      {
+       "w": "On",
+       "from": 47,
+       "to": 61
+      },
+      {
+       "w": "Instagram",
+       "from": 61,
+       "to": 80
+      },
+      {
+       "w": "or",
+       "from": 80,
+       "to": 84
+      },
+      {
+       "w": "YouTube,",
+       "from": 84,
+       "to": 107
+      },
+      {
+       "w": "an",
+       "from": 107,
+       "to": 112
+      },
+      {
+       "w": "AI",
+       "from": 112,
+       "to": 116
+      },
+      {
+       "w": "label",
+       "from": 116,
+       "to": 125
+      },
+      {
+       "w": "means",
+       "from": 125,
+       "to": 135
+      },
+      {
+       "w": "AI.",
+       "from": 135,
+       "to": 145
+      },
+      {
+       "w": "But",
+       "from": 145,
+       "to": 151
+      },
+      {
+       "w": "Meta's",
+       "from": 151,
+       "to": 170
+      },
+      {
+       "w": "labels",
+       "from": 170,
+       "to": 181
+      },
+      {
+       "w": "don't",
+       "from": 181,
+       "to": 190
+      },
+      {
+       "w": "cover",
+       "from": 190,
+       "to": 199
+      },
+      {
+       "w": "WhatsApp.",
+       "from": 199,
+       "to": 218
+      },
+      {
+       "w": "So",
+       "from": 218,
+       "to": 226
+      },
+      {
+       "w": "no",
+       "from": 254,
+       "to": 259
+      },
+      {
+       "w": "label?",
+       "from": 259,
+       "to": 268
+      },
+      {
+       "w": "It",
+       "from": 268,
+       "to": 272
+      },
+      {
+       "w": "can",
+       "from": 272,
+       "to": 287
+      },
+      {
+       "w": "still",
+       "from": 287,
+       "to": 296
+      },
+      {
+       "w": "be",
+       "from": 296,
+       "to": 300
+      },
+      {
+       "w": "fake.",
+       "from": 300,
+       "to": 312
+      }
+     ],
+     "cues": {
+      "1": 57,
+      "2": 254
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_fakecheck",
+   "data": {
+    "beats": [
+     {
+      "prop": "ask",
+      "n": 4
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "pib": "+91 87997 11259",
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
+     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+    },
+    "yt": {
+     "chapter": "Check 3: ask PIB Fact Check",
+     "title": "Check 3: ask PIB Fact Check",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 839,
+   "frames": 368,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto05v1/line_04.wav",
+     "from": 0,
+     "frames": 323,
+     "words": [
+      {
+       "w": "Paid",
+       "from": 2,
+       "to": 8
+      },
+      {
+       "w": "AI",
+       "from": 8,
+       "to": 12
+      },
+      {
+       "w": "leaves",
+       "from": 12,
+       "to": 22
+      },
+      {
+       "w": "fewer",
+       "from": 22,
+       "to": 30
+      },
+      {
+       "w": "clues,",
+       "from": 30,
+       "to": 45
+      },
+      {
+       "w": "so",
+       "from": 45,
+       "to": 49
+      },
+      {
+       "w": "check",
+       "from": 49,
+       "to": 69
+      },
+      {
+       "w": "three",
+       "from": 69,
+       "to": 78
+      },
+      {
+       "w": "matters",
+       "from": 78,
+       "to": 93
+      },
+      {
+       "w": "most.",
+       "from": 93,
+       "to": 102
+      },
+      {
+       "w": "Before",
+       "from": 102,
+       "to": 127
+      },
+      {
+       "w": "you",
+       "from": 127,
+       "to": 133
+      },
+      {
+       "w": "forward",
+       "from": 133,
+       "to": 144
+      },
+      {
+       "w": "or",
+       "from": 144,
+       "to": 148
+      },
+      {
+       "w": "pay,",
+       "from": 148,
+       "to": 155
+      },
+      {
+       "w": "send",
+       "from": 155,
+       "to": 166
+      },
+      {
+       "w": "the",
+       "from": 166,
+       "to": 180
+      },
+      {
+       "w": "video",
+       "from": 180,
+       "to": 189
+      },
+      {
+       "w": "to",
+       "from": 189,
+       "to": 193
+      },
+      {
+       "w": "the",
+       "from": 193,
+       "to": 198
+      },
+      {
+       "w": "government's",
+       "from": 198,
+       "to": 222
+      },
+      {
+       "w": "PIB",
+       "from": 222,
+       "to": 228
+      },
+      {
+       "w": "Fact",
+       "from": 228,
+       "to": 235
+      },
+      {
+       "w": "Check,",
+       "from": 235,
+       "to": 251
+      },
+      {
+       "w": "on",
+       "from": 251,
+       "to": 263
+      },
+      {
+       "w": "WhatsApp.",
+       "from": 263,
+       "to": 291
+      },
+      {
+       "w": "Screenshot",
+       "from": 291,
+       "to": 306
+      },
+      {
+       "w": "the",
+       "from": 306,
+       "to": 312
+      },
+      {
+       "w": "number.",
+       "from": 312,
+       "to": 323
+      }
+     ],
+     "cues": {
+      "1": 102,
+      "2": 291
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_fakecheck",
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 5
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "pib": "+91 87997 11259",
+     "pibShort": "PIB Fact Check · WhatsApp +91 87997 11259",
+     "metaSrc": "Meta labels AI on Facebook, Instagram, Threads (Meta newsroom) · YouTube Help"
+    },
+    "yt": {
+     "chapter": "Pause, label, ask",
+     "title": "Pause, label, ask",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1207,
+   "frames": 222,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/howto05v1/line_05.wav",
+     "from": 9,
+     "frames": 195,
+     "words": [
+      {
+       "w": "If",
+       "from": 9,
+       "to": 15
+      },
+      {
+       "w": "you",
+       "from": 15,
+       "to": 22
+      },
+      {
+       "w": "do",
+       "from": 22,
+       "to": 28
+      },
+      {
+       "w": "one",
+       "from": 28,
+       "to": 35
+      },
+      {
+       "w": "thing:",
+       "from": 35,
+       "to": 57
+      },
+      {
+       "w": "never",
+       "from": 57,
+       "to": 68
+      },
+      {
+       "w": "pay",
+       "from": 68,
+       "to": 75
+      },
+      {
+       "w": "a",
+       "from": 75,
+       "to": 79
+      },
+      {
+       "w": "UPI",
+       "from": 79,
+       "to": 86
+      },
+      {
+       "w": "ID",
+       "from": 86,
+       "to": 91
+      },
+      {
+       "w": "from",
+       "from": 91,
+       "to": 101
+      },
+      {
+       "w": "a",
+       "from": 101,
+       "to": 104
+      },
+      {
+       "w": "forward.",
+       "from": 104,
+       "to": 137
+      },
+      {
+       "w": "Pause,",
+       "from": 137,
+       "to": 160
+      },
+      {
+       "w": "label,",
+       "from": 160,
+       "to": 188
+      },
+      {
+       "w": "ask",
+       "from": 188,
+       "to": 195
+      },
+      {
+       "w": "PIB.",
+       "from": 195,
+       "to": 204
+      }
+     ],
+     "cues": {
+      "1": 137
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -55,19 +55,25 @@ const forward = (c: Ctx, im: HTMLImageElement | undefined, playing: boolean, f: 
   c.fillStyle = "#334155"; c.fillRect(VID.x, VID.y, VID.w, VID.h);
   if (im) c.drawImage(im, VID.x, VID.y, VID.w, VID.h);
   c.restore();
+  fakeBand(c, VID.x, VID.y, VID.w, VID.h);
   if (!playing) {   // the pause sign
     c.fillStyle = "rgba(0,0,0,0.45)"; c.beginPath(); c.arc(VID.x + VID.w / 2, VID.y + VID.h / 2, 54, 0, 7); c.fill();
     c.fillStyle = "#fff"; c.fillRect(VID.x + VID.w / 2 - 22, VID.y + VID.h / 2 - 26, 14, 52); c.fillRect(VID.x + VID.w / 2 + 8, VID.y + VID.h / 2 - 26, 14, 52);
   }
   const tx = VID.x + VID.w + 18, tw = PH.x + PH.w - 60 - tx;
-  c.font = SANS(28, 800); c.fillStyle = INK;
-  wrap(c, "Ameerpet RIGHT NOW 🙏 water up to the doors.", tw).forEach((t, q) => c.fillText(t, tx, VID.y + 30 + q * 36));
-  c.font = SANS(26, 700); c.fillStyle = "#334155";
-  wrap(c, "Send ₹2,000 per family for relief.", tw).forEach((t, q) => c.fillText(t, tx, VID.y + 220 + q * 34));
-  const s = 1 + 0.06 * Math.sin(pay * 6);   // the pay button
-  c.save(); c.translate(tx + tw / 2, VID.y + VID.h - 60); c.scale(s, s);
-  c.fillStyle = RED; rrect(c, -tw / 2, -40, tw, 80, 40); c.fill();
-  c.font = SANS(fit(c, "PAY ₹2,000", tw - 20, 34, 900), 900); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText("PAY ₹2,000", 0, 12); c.restore();
+  c.font = SANS(32, 900); c.fillStyle = INK;
+  wrap(c, "Ameerpet NOW 🙏 ₹2,000 per family", tw).forEach((t, q) => c.fillText(t, tx, VID.y + 34 + q * 40));
+  const s = 1 + 0.05 * Math.sin(pay * 6);   // script review: a forward carries a UPI ID and a QR, not a button (masked: no real ID)
+  c.save(); c.translate(tx + tw / 2, VID.y + 330); c.scale(s, s);
+  c.fillStyle = "#fff"; c.strokeStyle = INK; c.lineWidth = 4; rrect(c, -tw / 2, -110, tw, 220, 16); c.fill(); c.stroke();
+  const q0 = -60, qs = 120, cell = qs / 7, rq = rng(77);
+  for (let a = 0; a < 7; a++) for (let b2 = 0; b2 < 7; b2++) {
+    const corner = (a < 2 && b2 < 2) || (a > 4 && b2 < 2) || (a < 2 && b2 > 4);
+    if (corner || rq() > 0.55) { c.fillStyle = INK; c.fillRect(q0 + a * cell, -100 + b2 * cell, cell - 2, cell - 2); }
+  }
+  c.font = SANS(fit(c, "UPI: relief•••@•••", tw - 20, 26, 800), 800); c.fillStyle = "#334155"; c.textAlign = "center"; c.fillText("UPI: relief•••@•••", 0, 60);
+  c.font = SANS(fit(c, "scan & pay ₹2,000", tw - 20, 26, 900), 900); c.fillStyle = RED; c.fillText("scan & pay ₹2,000", 0, 95);
+  c.restore();
   c.textAlign = "left";
   void f;
 };
@@ -78,6 +84,15 @@ const stamp = (c: Ctx, t: string, x: number, y: number, s: number, col: string, 
   c.fillStyle = "rgba(255,255,255,0.94)"; rrect(c, -w / 2 - 26, -s * 0.9, w + 52, s * 1.3, 16); c.fill();
   c.strokeStyle = col; c.lineWidth = 10; rrect(c, -w / 2 - 26, -s * 0.9, w + 52, s * 1.3, 16); c.stroke();
   c.fillStyle = col; c.textAlign = "center"; c.fillText(t, 0, s * 0.1); c.restore();
+};
+// script review: a screen recording of the clip must never pass as a real flood: "FAKE · made by us" on every frame shown
+const fakeBand = (c: Ctx, x: number, y: number, w: number, h: number) => {
+  c.save(); c.beginPath(); c.rect(x, y, w, h); c.clip();
+  c.translate(x + w / 2, y + h / 2); c.rotate(-0.42);
+  const t = "FAKE · MADE BY US", fs = Math.max(26, Math.round(w * 0.12));
+  c.font = SANS(fs, 900); const tw = c.measureText(t).width;
+  c.fillStyle = "rgba(220,38,38,0.82)"; c.fillRect(-tw / 2 - 40, -fs * 0.85, tw + 80, fs * 1.3);
+  c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(t, 0, fs * 0.25); c.restore();
 };
 const ring = (c: Ctx, x: number, y: number, rx: number, ry: number, k: number) => {
   if (k <= 0) return;
@@ -101,9 +116,9 @@ const StFake: React.FC<SP> = ({ s }) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={te ? 0.9 : 0.85} />, <Sfx key={k("z")} at={4} src="reel/sfx_buzz.wav" vol={0.35} />, <Sfx key={k("p")} at={cue(i, 1, 0.5) - 8} src="audio/sfx_pop.wav" vol={0.3} />);
-    if (b.prop === "pause") sfx.push(<Sfx key={k("t")} at={at} src="audio/sfx_snap.wav" vol={0.5} />, <Sfx key={k("w")} at={cue(i, 1, 0.3) - 8} src="audio/sfx_whoosh.wav" vol={0.35} />, <Sfx key={k("g")} at={cue(i, 2, 0.7) - 6} src="reel/sfx_glitch.wav" vol={0.4} />);
-    if (b.prop === "label") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.35} />, <Sfx key={k("b")} at={cue(i, 2, 0.8) - 8} src="reel/sfx_boom.wav" vol={0.6} />);
-    if (b.prop === "ask") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.35} />, <Sfx key={k("d")} at={cue(i, 1, 0.4) - 6} src="audio/gag_ding.wav" vol={0.35} />);
+    if (b.prop === "pause") sfx.push(<Sfx key={k("t")} at={at} src="audio/sfx_snap.wav" vol={0.5} />, <Sfx key={k("g")} at={cue(i, 1, 0.3) - 8} src="reel/sfx_glitch.wav" vol={0.45} />, <Sfx key={k("b")} at={cue(i, 1, 0.3) - 6} src="reel/sfx_boom.wav" vol={0.55} />, <Sfx key={k("w")} at={cue(i, 2, 0.5) - 8} src="audio/sfx_whoosh.wav" vol={0.35} />);
+    if (b.prop === "label") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.35} />, <Sfx key={k("p")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("b")} at={cue(i, 2, 0.5) - 8} src="reel/sfx_boom.wav" vol={0.6} />);
+    if (b.prop === "ask") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.35} />, <Sfx key={k("p")} at={cue(i, 1, 0.3) - 8} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("d")} at={cue(i, 1, 0.6) - 4} src="audio/gag_ding.wav" vol={0.4} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("p")} at={at + 2} src="audio/sfx_pop.wav" vol={0.35} />, <Sfx key={k("d")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.95} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.45} />); }
   });
   return (
@@ -122,12 +137,12 @@ const StFake: React.FC<SP> = ({ s }) => {
           // the reach stack: two numbers on the same video, readable with the sound off
           c.textAlign = "center";
           c.font = SANS(fit(c, "THIS FLOOD VIDEO", W - 100, 46, 900), 900); c.fillStyle = "#e2e8f0"; c.fillText("THIS FLOOD VIDEO", W / 2, 300);
-          c.fillStyle = "#14532d"; rrect(c, 60, 330, 470, 190, 24); c.fill();
-          c.fillStyle = "#7f1d1d"; rrect(c, 550, 330, 470, 190, 24); c.fill();
-          c.font = SANS(96, 900); c.fillStyle = "#86efac"; c.fillText("4.5 MIN", 295, 440);
-          c.font = SANS(fit(c, "to make, free AI", 420, 36, 800), 800); c.fillStyle = "#dcfce7"; c.fillText("to make, free AI", 295, 494);
-          c.font = SANS(96, 900); c.fillStyle = "#fecaca"; c.fillText("₹2,000", 785, 440);
-          c.font = SANS(fit(c, "asked per family", 420, 36, 800), 800); c.fillStyle = "#fee2e2"; c.fillText("asked per family", 785, 494);
+          c.fillStyle = "#7f1d1d"; rrect(c, 60, 330, 470, 190, 24); c.fill();   // script review: the money first, as line 1 says it
+          c.fillStyle = "#14532d"; rrect(c, 550, 330, 470, 190, 24); c.fill();
+          c.font = SANS(96, 900); c.fillStyle = "#fecaca"; c.fillText("₹2,000", 295, 440);
+          c.font = SANS(fit(c, "asked per family", 420, 36, 800), 800); c.fillStyle = "#fee2e2"; c.fillText("asked per family", 295, 494);
+          c.font = SANS(96, 900); c.fillStyle = "#86efac"; c.fillText("4.5 MIN", 785, 440);
+          c.font = SANS(fit(c, "to make, free AI", 420, 36, 800), 800); c.fillStyle = "#dcfce7"; c.fillText("to make, free AI", 785, 494);
           forward(c, loopOn ? imgs[0] : play(f), true, f, f / 30);
           smallRavi(c, 150, 1150, 0.5, loopOn ? "worried" : "worried", f, r);
           const k1 = loopOn ? 0 : seg(f, cu(1, 0.5), cu(1, 0.5) + 8);
@@ -135,10 +150,25 @@ const StFake: React.FC<SP> = ({ s }) => {
         } else if (P === "pause") {
           c.textAlign = "center";
           c.font = SANS(fit(c, "CHECK 1: PAUSE IT", W - 100, 66, 900), 900); c.fillStyle = "#fde68a"; c.fillText("CHECK 1: PAUSE IT", W / 2, 330);
-          const c1 = cu(1, 0.3), c2 = cu(2, 0.7);
-          if (f < c1) { forward(c, imgs[0], false, f, f / 30); }
-          else if (f < c2) {   // the sign we asked for, and what came out (the real crop of shot 1, frame 1)
-            const k = seg(f, c1, c1 + 10), im = imgs[Math.floor(((f - c1) / 30) * 8) % 16];
+          const c1 = cu(1, 0.3), c2 = cu(2, 0.5);
+          if (f < c1) { forward(c, imgs[39], false, f, f / 30); }
+          else if (f < c2) {   // script review: the umbrella first (shot 3, frames 8 and 9: one blue umbrella becomes two)
+            const k = seg(f, c1 - 4, c1 + 4);
+            c.save(); c.globalAlpha = clamp(k * 2);
+            const fw = 430, fh = 764, y0 = 390;
+            [[32 + 7, 70, "paused"], [32 + 8, 580, "1/8 second later"]].forEach(([n, x, t]) => {
+              const im = imgs[n as number];
+              c.fillStyle = "#fbf8f0"; rrect(c, (x as number) - 10, y0 - 10, fw + 20, fh + 20, 14); c.fill();
+              if (im) c.drawImage(im, x as number, y0, fw, fh);
+              fakeBand(c, x as number, y0, fw, fh);
+              c.font = SANS(40, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(t as string, (x as number) + fw / 2, y0 + fh + 56);
+            });
+            c.restore();
+            ring(c, 70 + fw * 0.62, y0 + fh * 0.5, 95, 62, seg(f, c1 + 6, c1 + 20));
+            ring(c, 580 + fw * 0.5, y0 + fh * 0.5, 185, 78, seg(f, c1 + 12, c1 + 26));
+            chip(c, "1 umbrella → 2", W / 2, 1300, "#fee2e2", "#7f1d1d", seg(f, c1 + 14, c1 + 22), 56);
+          } else {   // the sign we asked to say AMEERPET (shot 1, the real crop, playing)
+            const k = seg(f, c2 - 4, c2 + 6), im = imgs[Math.floor(((f - c2) / 30) * 8) % 16];
             c.save(); c.globalAlpha = clamp(k * 2);
             c.font = SANS(44, 800); c.fillStyle = "#e2e8f0"; c.fillText("we asked for a sign that says", W / 2, 410);
             c.font = SANS(84, 900); c.fillStyle = "#86efac"; c.fillText("AMEERPET", W / 2, 505);
@@ -146,79 +176,70 @@ const StFake: React.FC<SP> = ({ s }) => {
             const bw = 700, bh = 634, bx = (W - bw) / 2, by = 620;   // shot 1's signboard: source (0, 60, 160, 145), same aspect
             c.fillStyle = "#fbf8f0"; rrect(c, bx - 14, by - 14, bw + 28, bh + 28, 18); c.fill();
             if (im) c.drawImage(im, 0, 60, 160, 145, bx, by, bw, bh);
+            c.font = SANS(30, 900); const tg = "FAKE · MADE BY US"; const tw2 = c.measureText(tg).width;
+            c.fillStyle = "rgba(220,38,38,0.88)"; rrect(c, bx + bw - tw2 - 36, by + 12, tw2 + 24, 44, 10); c.fill();
+            c.fillStyle = "#fff"; c.textAlign = "right"; c.fillText(tg, bx + bw - 24, by + 45); c.textAlign = "center";
             c.restore();
-            chip(c, "48 of 48 frames: not a word", W / 2, 1300, "#fee2e2", "#7f1d1d", seg(f, c1 + 30, c1 + 38), 48);
-          } else {   // shot 3, frames 8 and 9: one umbrella becomes two
-            const k = seg(f, c2, c2 + 8);
-            c.save(); c.globalAlpha = clamp(k * 2);
-            const fw = 430, fh = 764, y0 = 400;
-            [[32 + 7, 70, "frame 8"], [32 + 8, 580, "frame 9"]].forEach(([n, x, t]) => {
-              const im = imgs[n as number];
-              c.fillStyle = "#fbf8f0"; rrect(c, (x as number) - 10, y0 - 10, fw + 20, fh + 20, 14); c.fill();
-              if (im) c.drawImage(im, x as number, y0, fw, fh);
-              c.font = SANS(40, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(t as string, (x as number) + fw / 2, y0 + fh + 60);
-            });
-            c.restore();
-            ring(c, 70 + fw * 0.6, y0 + fh * 0.5, 90, 60, seg(f, c2 + 10, c2 + 26));
-            ring(c, 580 + fw * 0.5, y0 + fh * 0.5, 175, 75, seg(f, c2 + 18, c2 + 34));
-            chip(c, "1 umbrella → 2", W / 2, 1290, "#fee2e2", "#7f1d1d", seg(f, c2 + 20, c2 + 28), 52);
+            chip(c, "every frame of that shot: not a word", W / 2, 1300, "#fee2e2", "#7f1d1d", seg(f, c2 + 24, c2 + 32), 46);
           }
         } else if (P === "label") {
           c.textAlign = "center";
-          c.font = SANS(fit(c, "CHECK 2: LOOK FOR A LABEL", W - 100, 62, 900), 900); c.fillStyle = "#fde68a"; c.fillText("CHECK 2: LOOK FOR A LABEL", W / 2, 330);
-          const k0 = seg(f, ln.from, ln.from + 8), k1 = seg(f, cu(1, 0.3), cu(1, 0.3) + 8), k2 = seg(f, cu(2, 0.8) - 8, cu(2, 0.8));
-          c.save(); c.globalAlpha = clamp(k0 * 2);
-          c.fillStyle = "#f8fafc"; rrect(c, 80, 390, W - 160, 400, 24); c.fill();
-          c.font = SANS(40, 900); c.fillStyle = INK; c.textAlign = "left"; c.fillText("our fake: fake_flood.mp4", 120, 460);
-          (T.scan as string[][]).forEach(([a, v], q) => {
-            const y = 540 + q * 80;
-            c.font = SANS(fit(c, a, 600, 38, 700), 700); c.fillStyle = "#334155"; c.fillText(a, 120, y);
-            c.font = SANS(42, 900); c.fillStyle = RED; c.textAlign = "right"; c.fillText(v, W - 120, y); c.textAlign = "left";
-          });
-          c.restore();
-          if (k1 > 0) {
-            c.save(); c.globalAlpha = clamp(k1 * 2);
-            c.fillStyle = "#1e293b"; rrect(c, 80, 830, W - 160, 330, 24); c.fill();
-            c.font = SANS(40, 900); c.fillStyle = "#fde68a"; c.fillText("Instagram, YouTube label a video when:", 120, 895);
-            (T.when as string[]).forEach((t, q) => { c.font = SANS(fit(c, "· " + t, W - 260, 38, 700), 700); c.fillStyle = "#f8fafc"; c.fillText("· " + t, 130, 965 + q * 60); });
-            c.font = SANS(fit(c, T.whenSrc, W - 260, 26, 700), 700); c.fillStyle = "#94a3b8"; c.fillText(T.whenSrc, 120, 1140);
-            c.restore();
-          }
-          stamp(c, "NO LABEL ≠ REAL", W / 2, 1290, 72, RED, k2);
+          c.font = SANS(fit(c, "CHECK 2: THE LABEL", W - 100, 66, 900), 900); c.fillStyle = "#fde68a"; c.fillText("CHECK 2: THE LABEL", W / 2, 330);
+          const k1 = seg(f, cu(1, 0.3), cu(1, 0.3) + 8), k2 = seg(f, cu(1, 0.75), cu(1, 0.75) + 8), k3 = seg(f, cu(2, 0.5) - 6, cu(2, 0.5) + 2);
+          const row = (y: number, app: string, says: string, col: string, k: number) => {
+            if (k <= 0) return;
+            c.save(); c.globalAlpha = clamp(k * 3);
+            c.fillStyle = "#f8fafc"; rrect(c, 80, y, W - 160, 200, 24); c.fill();
+            c.font = SANS(fit(c, app, W - 240, 52, 900), 900); c.fillStyle = INK; c.textAlign = "left"; c.fillText(app, 120, y + 80);
+            c.font = SANS(fit(c, says, W - 240, 52, 900), 900); c.fillStyle = col; c.fillText(says, 120, y + 160); c.restore();
+          };
+          row(400, "Instagram, YouTube: label says AI", "then it's AI", "#15803d", k1);
+          row(640, "WhatsApp forward", "Meta's labels don't cover it", RED, k2);
+          if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.font = SANS(fit(c, T.metaSrc, W - 200, 26, 700), 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText(T.metaSrc, W / 2, 880); c.restore(); }
+          stamp(c, "NO LABEL? STILL MAYBE FAKE", W / 2, 1050, fit(c, "NO LABEL? STILL MAYBE FAKE", W - 200, 64, 900), RED, k3);
+          if (k3 > 0) chip(c, "our fake carried no AI tag at all", W / 2, 1220, "#1e293b", "#e2e8f0", k3, 40);
         } else if (P === "ask") {
           c.textAlign = "center";
-          c.font = SANS(fit(c, "CHECK 3: ASK BEFORE YOU FORWARD", W - 80, 58, 900), 900); c.fillStyle = "#fde68a"; c.fillText("CHECK 3: ASK BEFORE YOU FORWARD", W / 2, 330);
-          const k0 = seg(f, ln.from, ln.from + 8), k1 = seg(f, cu(1, 0.4) - 10, cu(1, 0.4) - 2);
-          c.save(); c.globalAlpha = clamp(k0 * 2);
-          c.fillStyle = "#f8fafc"; rrect(c, 80, 400, W - 160, 300, 24); c.fill();
-          c.font = SANS(56, 900); c.fillStyle = "#1e3a8a"; c.fillText("PIB FACT CHECK", W / 2, 490);
-          c.font = SANS(fit(c, "the Government of India's fact-check unit", W - 220, 34, 700), 700); c.fillStyle = "#334155"; c.fillText("the Government of India's fact-check unit", W / 2, 545);
-          c.font = SANS(fit(c, "factcheck.pib.gov.in", W - 220, 32, 700), 700); c.fillStyle = "#64748b"; c.fillText("factcheck.pib.gov.in", W / 2, 600);
-          c.restore();
-          if (k1 > 0) {
-            c.save(); c.globalAlpha = clamp(k1 * 3);
-            c.fillStyle = "#075e54"; rrect(c, 80, 740, W - 160, 300, 24); c.fill();
-            c.font = SANS(48, 900); c.fillStyle = "#dcfce7"; c.fillText("WhatsApp", W / 2, 820);
-            c.font = SANS(fit(c, T.pib, W - 220, 110, 900), 900); c.fillStyle = "#fff"; c.fillText(T.pib, W / 2, 950);
+          c.font = SANS(fit(c, "CHECK 3 MATTERS MOST", W - 100, 66, 900), 900); c.fillStyle = "#fde68a"; c.fillText("CHECK 3 MATTERS MOST", W / 2, 330);
+          chip(c, "paid AI: cleaner fakes, fewer clues", W / 2, 410, "#fee2e2", "#7f1d1d", seg(f, ln.from + 4, ln.from + 12), 40);
+          const k0 = seg(f, cu(1, 0.3) - 8, cu(1, 0.3)), k1 = seg(f, cu(1, 0.6), cu(1, 0.6) + 8), k2 = seg(f, cu(2, 0.4) - 4, cu(2, 0.4) + 4);
+          if (k0 > 0) {
+            c.save(); c.globalAlpha = clamp(k0 * 2);
+            c.fillStyle = "#f8fafc"; rrect(c, 80, 470, W - 160, 270, 24); c.fill();
+            c.font = SANS(fit(c, "before you forward or pay, send the video to", W - 220, 34, 800), 800); c.fillStyle = "#334155"; c.fillText("before you forward or pay, send the video to", W / 2, 530);
+            c.font = SANS(64, 900); c.fillStyle = "#1e3a8a"; c.fillText("PIB FACT CHECK", W / 2, 615);
+            c.font = SANS(fit(c, "the central government's fact check · factcheck.pib.gov.in", W - 220, 30, 700), 700); c.fillStyle = "#475569"; c.fillText("the central government's fact check · factcheck.pib.gov.in", W / 2, 690);
             c.restore();
           }
-          chip(c, "before you forward · before you pay", W / 2, 1110, "#fee2e2", "#7f1d1d", seg(f, ln.from + 6, ln.from + 14), 44);
-          smallRavi(c, 170, 1180, 0.4, "hope", f, r);
+          if (k1 > 0) {
+            c.save(); c.globalAlpha = clamp(k1 * 3);
+            c.fillStyle = "#075e54"; rrect(c, 80, 780, W - 160, 300, 24); c.fill();
+            c.font = SANS(48, 900); c.fillStyle = "#dcfce7"; c.fillText("WhatsApp", W / 2, 860);
+            c.font = SANS(fit(c, T.pib, W - 220, 116, 900), 900); c.fillStyle = "#fff"; c.fillText(T.pib, W / 2, 1000);
+            c.restore();
+          }
+          if (k2 > 0) chip(c, "📸 screenshot this · it's in the caption", W / 2, 1150, "#fde68a", INK, k2, 42);
+          smallRavi(c, 150, 1210, 0.36, "hope", f, r);
         } else if (P === "loop") {
           c.textAlign = "center";
-          c.font = SANS(fit(c, "SAVE THIS: NEXT FLOOD VIDEO", W - 80, 58, 900), 900); c.fillStyle = "#fde68a"; c.fillText("SAVE THIS: NEXT FLOOD VIDEO", W / 2, 330);
-          const rows: [string, string][] = [["PAUSE", "a sign, a hand, an umbrella"], ["LABEL", "no label ≠ real"], ["ASK", T.pibShort]];
+          c.font = SANS(fit(c, "IF YOU DO ONE THING", W - 100, 66, 900), 900); c.fillStyle = "#fde68a"; c.fillText("IF YOU DO ONE THING", W / 2, 330);
+          const k0 = seg(f, ln.from, ln.from + 8);
+          if (k0 > 0) {
+            c.save(); c.globalAlpha = clamp(k0 * 3); c.fillStyle = RED; rrect(c, 70, 380, W - 140, 200, 24); c.fill();
+            c.font = SANS(fit(c, "never pay a UPI ID", W - 200, 80, 900), 900); c.fillStyle = "#fff"; c.fillText("never pay a UPI ID", W / 2, 470);
+            c.font = SANS(fit(c, "that came in a forward", W - 200, 54, 800), 800); c.fillStyle = "#fee2e2"; c.fillText("that came in a forward", W / 2, 545); c.restore();
+          }
+          const rows: [string, string][] = [["PAUSE", "a sign, a hand, an umbrella"], ["LABEL", "no label? still maybe fake"], ["ASK PIB", T.pibShort]];
           rows.forEach(([a, t], q) => {
-            const st = q === 0 ? ln.from : cu(1, 0.3) + (q - 1) * 10, k = seg(f, st, st + 8);
+            const st = cu(1, 0.3) + q * 9, k = seg(f, st, st + 8);
             if (k <= 0) return;
-            const y = 400 + q * 200;
+            const y = 630 + q * 190;
             c.save(); c.globalAlpha = clamp(k * 3);
-            c.fillStyle = "#1e293b"; rrect(c, 70, y, W - 140, 170, 22); c.fill();
-            c.font = SANS(70, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(`${q + 1}`, 110, y + 110);
-            c.font = SANS(66, 900); c.fillStyle = "#f8fafc"; c.fillText(a, 200, y + 82);
-            c.font = SANS(fit(c, t, W - 330, 38, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(t, 200, y + 138); c.restore();
+            c.fillStyle = "#1e293b"; rrect(c, 70, y, W - 140, 165, 22); c.fill();
+            c.font = SANS(70, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(`${q + 1}`, 110, y + 108);
+            c.font = SANS(62, 900); c.fillStyle = "#f8fafc"; c.fillText(a, 200, y + 78);
+            c.font = SANS(fit(c, t, W - 330, 38, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(t, 200, y + 134); c.restore();
           });
-          chip(c, "paid AI video: cleaner, fewer clues to pause on", W / 2, 1060, "#fee2e2", "#7f1d1d", seg(f, ln.from + 4, ln.from + 12), fit(c, "paid AI video: cleaner, fewer clues to pause on", 960, 38, 800));
         }
         c.textAlign = "left";
       }} />
