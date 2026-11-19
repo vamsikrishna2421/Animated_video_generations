@@ -51,7 +51,7 @@ from EP33). The shop cast (Ravi anna and the shop AI) now belongs to the episode
 | D. AI tricked by words | EP47 (prompt injection), 29 (a hidden line on a seller's page: 4.8★ vs 3.1★) |
 | E. Confident made-up facts | 11 (the Goa confirmation), 14 (made-up references), 15 (the wedding card translation), 28 (a made-up pension scheme: ₹3,000 a month) |
 | F. Your data / privacy | EP44 |
-| G. Scams dressed as AI | EP45 (deepfakes), 33 (a voice clone from 13 s of a voice note: the copy scored 62, the original 62) |
+| G. Scams dressed as AI | EP45 (deepfakes), 33 (a voice clone from 13 s of a voice note: the copy scored 62, the original 62), HOW TO 05 (a fake flood video made in 4.5 min: pausing caught it, a label check can't) |
 | H. Cost / speed asymmetry, who owns it | EP46 (40 hours vs 40 seconds) |
 | I. Out of date: an AI's answer has a date (and can be wrong and sure) | EP48 (AI laws: "no label needed", 2 of 25 right), 27 (gold: ₹5,000 "as of October 2023" vs ₹1,28,150) |
 | L. AI writes for anyone, unless you give it you | 25 (the birthday wish: "May this special day" 10/10; "I miss you" from next door) |

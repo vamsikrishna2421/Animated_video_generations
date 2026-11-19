@@ -1,4 +1,4 @@
-# HOW TO 05 "Fake-video check: 3 checks before you forward" · Thu Nov 19 · script v2
+# HOW TO 05 "Fake-video check: 3 checks before you forward" · Thu Nov 19 · script v3 (as rendered)
 
 ## The format and the one variable
 A screen tutorial, as HOW TO 04 was: one narrator, phone screens drawn in our crayon style, Ravi's shop in the
@@ -119,3 +119,46 @@ called the umbrella "the reel", and lost the thread at check two.
 ## Caption try-it (no comment ask)
 "Next flood or accident video in your family group: pause it on a sign or a hand, look under it for an AI label, and
 send it to PIB Fact Check (WhatsApp +91 87997 11259) before you forward or pay."
+
+## Render review (human-viewer, v2 render), what changed for v3
+All three viewers stopped on frame 1 and kept "never pay a UPI ID from a forward". All three missed the umbrella and
+drifted during check two.
+- **The umbrella:**
+  - It was up for 1.7 s, small, with the FAKE band across the ringed umbrellas. Now one big frame shows from the first
+    words of check one. It pauses, then flips twice between "paused: 1 umbrella" and "3/8 of a second later: 2", with
+    a corner tag instead of the band.
+  - Looking frame by frame for this fix showed the split happens over frames 4-6, not 8 -> 9. My contact-sheet reading
+    was wrong. The reel shows frames 4 and 7, and the demo notes and caption are corrected.
+- **Check two is a step:**
+  - "Check two: look for an AI label. If it says AI, it's AI. But our fake carried no AI tag at all. So no label?
+    Still maybe fake." The Meta/WhatsApp line is gone.
+  - Why: reports from Aug 2026 (9to5Mac, WABetaInfo) say WhatsApp is testing an "AI content" label for Channels, so
+    "Meta's labels don't cover WhatsApp" was no longer safe.
+  - The cards slide in, and our clip plays beside its file scan.
+  - The scan no longer claims "no SynthID": that is a pixel watermark a metadata scan can't see.
+- **Dead screens:**
+  - The PIB card comes up with the first words of check three.
+  - Ravi, who covered the "screenshot this" chip, is gone.
+  - The save card shows a crossed-out QR until its rows come, puts the number big in row 3, and holds 1.6 s longer.
+- **"Which is the one thing?"** Two "one things" clashed. The last line is now "And never pay a UPI ID that came in a
+  forward."
+- **Words:**
+  - English: "Paid" was masked by the whoosh at the cut (now a 0.35 s pre).
+  - "Ameerpet" got a spoken form.
+  - "Check one. Pause it." runs 12% faster.
+  - Telugu: "ఆపి చూడండి" for "pause" (heard as "Pog").
+  - Telugu: "ఉంటే, అది కంప్యూటర్ వీడియోనే" for "నమ్మొచ్చు", which sounded like "trust a labelled video".
+  - Telugu: line 4 is voiced in two takes; "పంపండి" slurred in one long take.
+- **Sound:**
+  - The hook is louder (boost 1.5).
+  - Check one dips (0.9).
+  - Check three swells under the number.
+  - The end rises (boost 2.6, rise 2.8; TE 2.4 / 2.6).
+  - The English gaps are quieter; the Telugu bed is up 1 to 2 dB.
+- **Quarters after the fix:**
+  - EN -22.1 / -25.1 / -23.3 / -21.8 (was -21.8 / -23.8 / -23.4 / -23.2).
+  - TE -20.5 / -23.9 / -23.6 / -22.0.
+- **Not changed:**
+  - The Telugu pack's speech recogniser can't read Telugu (even the clean source lines come out as noise), so its
+    "unclear 0-15 s" was checked against the judge's transcripts, which follow the script.
+  - Whether PIB answers, and how fast, is not on PIB's page, so the reel promises nothing about it.
