@@ -1,0 +1,624 @@
+{
+ "id": "creative34te",
+ "title": "Team of 15? Real Number: 0 (Creative 34) (Telugu audio)",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.22
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 0.6,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1440,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_resume34",
+   "tail": 0.0,
+   "boost": 1.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "job": "SALES JOB · ₹28,000 A MONTH · INTERVIEW TODAY",
+     "claim": "TEAM OF 15",
+     "ticker": "RESUME GAINS A TEAM OF 15 OVERNIGHT",
+     "hookRows": [
+      [
+       "Billing intern, a rice distributor (6 months)",
+       false
+      ],
+      [
+       "Entered daily bills in Tally",
+       false
+      ],
+      [
+       "Led a team of 15 members",
+       true
+      ],
+      [
+       "MS Excel (basic)",
+       false
+      ]
+     ],
+     "ask": "Make my resume more impressive for a sales executive job.",
+     "reply": [
+      [
+       "Billing Intern, a wholesale rice distributor",
+       0
+      ],
+      [
+       "Streamlined billing in Tally, resulting in a 30% reduction in errors",
+       1
+      ],
+      [
+       "Certified Sales Professional (CSP)",
+       2
+      ],
+      [
+       "Sales Assistant, May to July 2024",
+       3
+      ],
+      [
+       "Head, Student Chapter: led a team of 15 members",
+       3
+      ]
+     ],
+     "question": "Tell us about your team of 15.",
+     "model": "a small free AI on our computer (Qwen2.5 7B) · 10 fresh chats",
+     "askShort": "\"Make my resume more impressive for a sales executive job.\"",
+     "fixAsk": "+ \"Don't add any skill, number, title, tool, certificate or achievement that isn't in my text. Ask me instead.\"",
+     "usualAdded": 10,
+     "betterAdded": 4,
+     "usualWhat": [
+      "basic Excel → intermediate / advanced: 7",
+      "CRM tools he never used: 4",
+      "a certificate: 2",
+      "a whole job + a team of 15: 1"
+     ],
+     "betterWhat": [
+      "softer: Excel level, \"CRM basics\"",
+      "5 of 10 asked him questions first"
+     ],
+     "rule": [
+      [
+       "read every line",
+       "the AI's polish can add things"
+      ],
+      [
+       "can you explain it?",
+       "in the interview, with an example"
+      ],
+      [
+       "if not, delete it",
+       "no number you didn't measure"
+      ]
+     ]
+    },
+    "yt": {
+     "chapter": "Team of 15? Real: 0",
+     "title": "Team of 15? Real: 0",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "పదిహేను మంది టీమ్ ని నడిపాడట, రెస్యూమ్ లో. అసలు నంబర్: సున్నా. [1] తరుణ్ చాట్‌బాట్ ని అడిగింది ఒక్కటే: నా రెస్యూమ్ ని ఇంకా ఇంప్రెసివ్ గా మార్చు.",
+     "show": "Team of fifteen, says his resume. Real number: zero. Tarun only asked an AI to make it impressive.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_resume34",
+   "tail": 0.2,
+   "boost": 1.0,
+   "lift": 0.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "ask",
+      "n": 2
+     },
+     {
+      "prop": "interview",
+      "n": 3
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "job": "SALES JOB · ₹28,000 A MONTH · INTERVIEW TODAY",
+     "claim": "TEAM OF 15",
+     "ticker": "RESUME GAINS A TEAM OF 15 OVERNIGHT",
+     "hookRows": [
+      [
+       "Billing intern, a rice distributor (6 months)",
+       false
+      ],
+      [
+       "Entered daily bills in Tally",
+       false
+      ],
+      [
+       "Led a team of 15 members",
+       true
+      ],
+      [
+       "MS Excel (basic)",
+       false
+      ]
+     ],
+     "ask": "Make my resume more impressive for a sales executive job.",
+     "reply": [
+      [
+       "Billing Intern, a wholesale rice distributor",
+       0
+      ],
+      [
+       "Streamlined billing in Tally, resulting in a 30% reduction in errors",
+       1
+      ],
+      [
+       "Certified Sales Professional (CSP)",
+       2
+      ],
+      [
+       "Sales Assistant, May to July 2024",
+       3
+      ],
+      [
+       "Head, Student Chapter: led a team of 15 members",
+       3
+      ]
+     ],
+     "question": "Tell us about your team of 15.",
+     "model": "a small free AI on our computer (Qwen2.5 7B) · 10 fresh chats",
+     "askShort": "\"Make my resume more impressive for a sales executive job.\"",
+     "fixAsk": "+ \"Don't add any skill, number, title, tool, certificate or achievement that isn't in my text. Ask me instead.\"",
+     "usualAdded": 10,
+     "betterAdded": 4,
+     "usualWhat": [
+      "basic Excel → intermediate / advanced: 7",
+      "CRM tools he never used: 4",
+      "a certificate: 2",
+      "a whole job + a team of 15: 1"
+     ],
+     "betterWhat": [
+      "softer: Excel level, \"CRM basics\"",
+      "5 of 10 asked him questions first"
+     ],
+     "rule": [
+      [
+       "read every line",
+       "the AI's polish can add things"
+      ],
+      [
+       "can you explain it?",
+       "in the interview, with an example"
+      ],
+      [
+       "if not, delete it",
+       "no number you didn't measure"
+      ]
+     ]
+    },
+    "yt": {
+     "chapter": "What the AI added",
+     "title": "What the AI added",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "అది కలిపింది: [1] ముప్పై శాతం రిజల్ట్, [2] ఒక సర్టిఫికెట్, [3] అతను ఎప్పుడూ చేయని ఒక పూర్తి ఉద్యోగం.",
+     "show": "It added a thirty percent result, a certificate, and a whole job he never had.",
+     "maxgap": 0.3,
+     "gap": 0.5,
+     "tempo": 1.08
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "ఇంటర్వ్యూ లో తొలి ప్రశ్న? [1] మీ పదిహేను మంది టీమ్ గురించి చెప్పండి.",
+     "show": "The interview's first question? Tell us about your team of fifteen.",
+     "maxgap": 0.3,
+     "gap": 0.6,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_resume34",
+   "tail": 0.3,
+   "boost": 1.2,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 4
+     },
+     {
+      "prop": "fix",
+      "n": 5
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "job": "SALES JOB · ₹28,000 A MONTH · INTERVIEW TODAY",
+     "claim": "TEAM OF 15",
+     "ticker": "RESUME GAINS A TEAM OF 15 OVERNIGHT",
+     "hookRows": [
+      [
+       "Billing intern, a rice distributor (6 months)",
+       false
+      ],
+      [
+       "Entered daily bills in Tally",
+       false
+      ],
+      [
+       "Led a team of 15 members",
+       true
+      ],
+      [
+       "MS Excel (basic)",
+       false
+      ]
+     ],
+     "ask": "Make my resume more impressive for a sales executive job.",
+     "reply": [
+      [
+       "Billing Intern, a wholesale rice distributor",
+       0
+      ],
+      [
+       "Streamlined billing in Tally, resulting in a 30% reduction in errors",
+       1
+      ],
+      [
+       "Certified Sales Professional (CSP)",
+       2
+      ],
+      [
+       "Sales Assistant, May to July 2024",
+       3
+      ],
+      [
+       "Head, Student Chapter: led a team of 15 members",
+       3
+      ]
+     ],
+     "question": "Tell us about your team of 15.",
+     "model": "a small free AI on our computer (Qwen2.5 7B) · 10 fresh chats",
+     "askShort": "\"Make my resume more impressive for a sales executive job.\"",
+     "fixAsk": "+ \"Don't add any skill, number, title, tool, certificate or achievement that isn't in my text. Ask me instead.\"",
+     "usualAdded": 10,
+     "betterAdded": 4,
+     "usualWhat": [
+      "basic Excel → intermediate / advanced: 7",
+      "CRM tools he never used: 4",
+      "a certificate: 2",
+      "a whole job + a team of 15: 1"
+     ],
+     "betterWhat": [
+      "softer: Excel level, \"CRM basics\"",
+      "5 of 10 asked him questions first"
+     ],
+     "rule": [
+      [
+       "read every line",
+       "the AI's polish can add things"
+      ],
+      [
+       "can you explain it?",
+       "in the interview, with an example"
+      ],
+      [
+       "if not, delete it",
+       "no number you didn't measure"
+      ]
+     ]
+    },
+    "yt": {
+     "chapter": "Our test: 10 of 10",
+     "title": "Our test: 10 of 10",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "ఒక చిన్న ఫ్రీ చాట్‌బాట్ ని పది సార్లు అడిగాం. [1] పదికి పది సార్లూ, అతను చేయనివి కలిపింది. [2] ఏడు సార్లు, బేసిక్ ఎక్సెల్ ని అడ్వాన్స్డ్ చేసింది.",
+     "show": "We asked a small free AI ten times. All ten added things he never did. Seven made his basic Excel advanced.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08
+    },
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "ఒక లైన్ కలపండి: నేను రాయనిది కలపకు, నన్ను అడుగు. [1] అయినా, పదిలో నాలుగు సార్లు కలిపింది.",
+     "show": "Add one line: don't add anything I didn't write; ask me. Still, four of ten added something.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_resume34",
+   "tail": 0.3,
+   "boost": 1.6,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "prop": "rule",
+      "n": 6
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "job": "SALES JOB · ₹28,000 A MONTH · INTERVIEW TODAY",
+     "claim": "TEAM OF 15",
+     "ticker": "RESUME GAINS A TEAM OF 15 OVERNIGHT",
+     "hookRows": [
+      [
+       "Billing intern, a rice distributor (6 months)",
+       false
+      ],
+      [
+       "Entered daily bills in Tally",
+       false
+      ],
+      [
+       "Led a team of 15 members",
+       true
+      ],
+      [
+       "MS Excel (basic)",
+       false
+      ]
+     ],
+     "ask": "Make my resume more impressive for a sales executive job.",
+     "reply": [
+      [
+       "Billing Intern, a wholesale rice distributor",
+       0
+      ],
+      [
+       "Streamlined billing in Tally, resulting in a 30% reduction in errors",
+       1
+      ],
+      [
+       "Certified Sales Professional (CSP)",
+       2
+      ],
+      [
+       "Sales Assistant, May to July 2024",
+       3
+      ],
+      [
+       "Head, Student Chapter: led a team of 15 members",
+       3
+      ]
+     ],
+     "question": "Tell us about your team of 15.",
+     "model": "a small free AI on our computer (Qwen2.5 7B) · 10 fresh chats",
+     "askShort": "\"Make my resume more impressive for a sales executive job.\"",
+     "fixAsk": "+ \"Don't add any skill, number, title, tool, certificate or achievement that isn't in my text. Ask me instead.\"",
+     "usualAdded": 10,
+     "betterAdded": 4,
+     "usualWhat": [
+      "basic Excel → intermediate / advanced: 7",
+      "CRM tools he never used: 4",
+      "a certificate: 2",
+      "a whole job + a team of 15: 1"
+     ],
+     "betterWhat": [
+      "softer: Excel level, \"CRM basics\"",
+      "5 of 10 asked him questions first"
+     ],
+     "rule": [
+      [
+       "read every line",
+       "the AI's polish can add things"
+      ],
+      [
+       "can you explain it?",
+       "in the interview, with an example"
+      ],
+      [
+       "if not, delete it",
+       "no number you didn't measure"
+      ]
+     ]
+    },
+    "yt": {
+     "chapter": "Before you send it",
+     "title": "Before you send it",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "అందుకే పంపే ముందు ప్రతి లైన్ చదవండి: [1] ఇంటర్వ్యూ లో దీని గురించి చెప్పగలరా? లేకపోతే, ఆ లైన్ వద్దు.",
+     "show": "So read every line before you send it: can you explain this in the interview? If not, delete it.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_resume34",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 2.2,
+   "lift": 0.7,
+   "rise": 2.4,
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 7
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "job": "SALES JOB · ₹28,000 A MONTH · INTERVIEW TODAY",
+     "claim": "TEAM OF 15",
+     "ticker": "RESUME GAINS A TEAM OF 15 OVERNIGHT",
+     "hookRows": [
+      [
+       "Billing intern, a rice distributor (6 months)",
+       false
+      ],
+      [
+       "Entered daily bills in Tally",
+       false
+      ],
+      [
+       "Led a team of 15 members",
+       true
+      ],
+      [
+       "MS Excel (basic)",
+       false
+      ]
+     ],
+     "ask": "Make my resume more impressive for a sales executive job.",
+     "reply": [
+      [
+       "Billing Intern, a wholesale rice distributor",
+       0
+      ],
+      [
+       "Streamlined billing in Tally, resulting in a 30% reduction in errors",
+       1
+      ],
+      [
+       "Certified Sales Professional (CSP)",
+       2
+      ],
+      [
+       "Sales Assistant, May to July 2024",
+       3
+      ],
+      [
+       "Head, Student Chapter: led a team of 15 members",
+       3
+      ]
+     ],
+     "question": "Tell us about your team of 15.",
+     "model": "a small free AI on our computer (Qwen2.5 7B) · 10 fresh chats",
+     "askShort": "\"Make my resume more impressive for a sales executive job.\"",
+     "fixAsk": "+ \"Don't add any skill, number, title, tool, certificate or achievement that isn't in my text. Ask me instead.\"",
+     "usualAdded": 10,
+     "betterAdded": 4,
+     "usualWhat": [
+      "basic Excel → intermediate / advanced: 7",
+      "CRM tools he never used: 4",
+      "a certificate: 2",
+      "a whole job + a team of 15: 1"
+     ],
+     "betterWhat": [
+      "softer: Excel level, \"CRM basics\"",
+      "5 of 10 asked him questions first"
+     ],
+     "rule": [
+      [
+       "read every line",
+       "the AI's polish can add things"
+      ],
+      [
+       "can you explain it?",
+       "in the interview, with an example"
+      ],
+      [
+       "if not, delete it",
+       "no number you didn't measure"
+      ]
+     ]
+    },
+    "yt": {
+     "chapter": "Back to the top story",
+     "title": "Back to the top story",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "మళ్ళీ మన టాప్ స్టోరీ కి: [1] పదిహేను మంది టీమ్. అసలు నంబర్, సున్నా.",
+     "show": "Back to our top story: team of fifteen. Real number, zero.",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "tempo": 1.08
+    }
+   ]
+  }
+ ]
+}
