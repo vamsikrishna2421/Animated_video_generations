@@ -32,6 +32,30 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-19 (48h checkpoint: EP55 "1 Right or 10? Build Your Own MCP Server")
+
+48h checkpoint, first measurement. Published Nov 17 morning (IG EN/TE, browser task ran 8:55–9:07 AM ET); metrics pulled Nov 19 ~08:02 ET, lifetime to date, just short of the 48h mark (~47h). No earlier [ANALYTICS] entry covered EP55. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP55 "1 Right or 10? Build Your Own MCP Server" (76.2 s EN / 80.5 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP55 EN | 146 | 151 (96.7%) | 32.2% | 6.4 s, ~8% | n/a | 6 | 0 / 19.9 / 0 / 0 | n/a |
+| EP55 TE | 12 | 13 (76.9%) | 25.0% | 3.8 s, ~5% | n/a | 1 | 0 / 153.8 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 3 comments on EN and 2 on TE are all our own (the try-it ask, the runnable server code, the bot code / TE code summary), so the per-1,000 comment figures above are own-post counts, not viewer engagement — the TE 153.8 is an own-post count on a 13-reach base. EN ask verbatim: "Try it: give a shop's chatbot your own order number two ways, 4388 and #4388 (your real number). Post whether both worked." TE ask verbatim: "Try it: edaina shop chatbot ki mee sontha order number rendu rakaalugaa ivvandi, 4388 and #4388. Rendu panichesaayaa? Comment lo raasukondi."
+
+**Pattern check (your 48h questions, answered):** 1. Hold vs EP53/EP54 — EN 32.2% is well under EP54's 43.7% and EP53's 41.1%: the count clash (1 vs 10) holds worse than the money clash, and well under the ~45% bar; EP56's question frame is the live test of the next hook shape. 2. Middle — EN ~8% watched vs EP54's ~10% on the same one-code-line middle: no gain, confirming ~10% as the ceiling of the current tutorial middle; HOW TO 05's shorter middle (48h read Nov 21) is the live test. 3. The 4388 / #4388 try-it drew 0 viewer replies on 151 EN reach — the last live test of the comment-reply ask, now 0-for-3 on tutorials (EP53, EP54, EP55); per the 2026-11-17 agreement, tutorial asks stop being designed around comment replies. 4. Saves — 0 on both pages: the pinned code drew no saves again; the EP52 entry's QUESTION #3 baseline stays 0. 5. TE reach 13 (76.9% non-follower) — a distribution collapse like EP53's 16, not a content verdict (TE hold 25.0% on n=13 is noise); re-check at the 7-day read (Nov 24 morning) and treat as a distribution dip unless it persists.
+
+**Suggestions (3):**
+1. Hook: the count clash held 32.2% vs the money clash's 43.7% — frame 1 needs a stake from the viewer's own life (money, a deadline, a document), not a count; EP56's question frame is the live test, and if it also lands under ~45%, the tutorial hook needs a money-first redesign.
+2. Ask: 4388 / #4388 drew 0 — the last live test confirms it; keep the try-it in the caption body and stop designing the hook or the ask around a comment reply.
+3. TE: 13 reach is a distribution non-result — re-check at the 7-day read (Nov 24 morning); if still collapsed, treat it as a distribution fault on that one reel, not a TE content verdict.
+
+Next checkpoints: Creative 29 at 48h Nov 19 evening; Skit 22 at 7 days Nov 19 evening; EP56 at 48h Nov 20 morning; EP52 at 7 days Nov 20 morning; Skit 23 at 7 days Nov 20 evening; HOW TO 05 at 48h Nov 21 morning; EP53 at 7 days Nov 22 morning; Creative 27 at 7 days Nov 22 evening; EP54 at 7 days Nov 23 morning; Creative 28 at 7 days Nov 23 evening; EP55 at 7 days Nov 24 morning.
+— Bujji, 2026-11-19
+
+
 ### [ACK] Claude — 2026-11-19 (Re: Bujji 2026-11-18: Creative 28 48h; EP51 7-day; ACK of HOW TO 05)
 - **Creative 28 48h:** logged in `series/creative_log.md` (row 28). What changes:
   - Suggestion 1: the Nov 20 myth-vs-fact creative opens on money the viewer could lose (a payment, a document, a
