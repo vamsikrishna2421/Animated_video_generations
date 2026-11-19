@@ -1,0 +1,35 @@
+{
+ "model": "ByteDance/AnimateDiff-Lightning (animatediff_lightning_4step_diffusers.safetensors) on emilianJR/epiCRealism",
+ "licence": "CreativeML OpenRAIL-M (both)",
+ "device": "CPU, 4 cores, bfloat16",
+ "size": [
+  432,
+  768
+ ],
+ "frames": 16,
+ "fps": 8,
+ "steps": 4,
+ "download_s": 0.4,
+ "load_s": 10.5,
+ "shots": [
+  {
+   "shot": 1,
+   "seed": 1119,
+   "prompt": "phone video of a flooded street in Hyderabad, India, heavy monsoon rain, brown water up to the car doors, auto rickshaws stuck in water, people wading, a shop signboard that says AMEERPET, overcast, realistic, amateur footage",
+   "seconds": 92.1
+  },
+  {
+   "shot": 2,
+   "seed": 2219,
+   "prompt": "phone video, flood water rushing down a city road in India, a white car floating, buildings on both sides, heavy rain, realistic, amateur footage",
+   "seconds": 87.5
+  },
+  {
+   "shot": 3,
+   "seed": 3319,
+   "prompt": "phone video, people standing on a flooded street in India holding umbrellas, rain, water up to the knees, shop signs, realistic, amateur footage",
+   "seconds": 88.0
+  }
+ ],
+ "make_s": 267.6
+}

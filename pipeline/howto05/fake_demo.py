@@ -25,7 +25,17 @@ SHOTS = [   # (seed, prompt): a phone video of a flooded street; shot 1 asks for
     (3319, "phone video, people standing on a flooded street in India holding umbrellas, rain, water up to the knees, "
            "shop signs, realistic, amateur footage"),
 ]
-HAND = {}   # check 1, filled in by hand after looking at every frame (sheets): what a pause shows
+HAND = {   # check 1, by hand after looking at all 48 frames (sheet1-3.jpg, Nov 19): what a pause shows
+    "shot1": "We asked for a signboard that says AMEERPET. In 16 of 16 frames it is not a word (letters like 'ЯЙ ЭIИOЯIИI'). "
+             "A black cable bends up out of the water. The water moves; nothing else does.",
+    "shot2": "Building signs: no readable word in any frame. The car's front and roof change shape from frame to frame; its "
+             "plate never reads.",
+    "shot3": "Frames 1-8: two walkers under the blue umbrella melt into one dark shape, and a head with no body rises from "
+             "the bottom edge. Frame 8 -> 9: one blue umbrella becomes two, and the people under it change. The yellow "
+             "sign has no readable word.",
+    "total": "Sign text: 0 readable words in 48 of 48 frames. At normal speed on a phone (6 s, 8 frames a second) none of "
+             "this is easy to see; paused, every shot shows it.",
+}
 
 
 def make():
