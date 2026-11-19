@@ -114,8 +114,8 @@ const StResume: React.FC<SP> = ({ s }) => {
           c.font = SANS(fit(c, T.job, W - 160, 44, 900), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(T.job, W / 2, 352);
           bigBlock(c, 60, 410, 470, "HIS RESUME SAYS", T.claim, "#fca5a5", "#7f1d1d", 1);   // script review: thinner frame 1
           bigBlock(c, 550, 410, 470, "REAL TEAM", T.real, "#86efac", "#14532d", 1);
-          who(c, "kumar" as BillWho, [540, 1300], 0.85, ["shock", "up"], r);
-          chip(c, T.madeUp, W / 2, 1400, "#1e293b", "#cbd5e1", 1, 30);
+          who(c, "kumar" as BillWho, [540, 1060], 1.15, ["shock", "up"], r);   // render: the frame was half empty
+          chip(c, T.madeUp, W / 2, 1395, "#1e293b", "#cbd5e1", 1, 32);
           stamp(c, "ADDED BY AN AI", W / 2, 720, 60, RED, loopOn ? 1 : seg(f, cu(1, 0.4), cu(1, 0.4) + 8));
           breaking(c, W, f, T.ticker);
         } else if (P === "ask") {
@@ -125,30 +125,31 @@ const StResume: React.FC<SP> = ({ s }) => {
           wrap(c, T.ask, W - 260).forEach((t, q) => c.fillText(t, 170, 342 + q * 44));
           const rows = T.reply as [string, number][];   // [text, which cue marks it (0 = not added)]
           const kk = (n: number) => n === 0 ? 0 : seg(f, cu(n, 0.3), cu(n, 0.3) + 8);
-          c.fillStyle = "#fffdf7"; rrect(c, 60, 450, W - 120, 860, 18); c.fill();
-          c.font = SANS(30, 900); c.fillStyle = "#64748b"; c.fillText("AI: Here's an enhanced version:", 90, 500);
-          let yy = 560;
-          rows.forEach(([t, n]) => {
-            const k = kk(n), lines = wrap(c, t, W - 220);
-            c.font = SANS(34, 700);
-            const bh = lines.length * 44;
-            if (k > 0) { c.save(); c.globalAlpha = 0.9; c.fillStyle = "#fecaca"; c.fillRect(80, yy - 36, (W - 160) * easeOut(clamp(k * 2)), bh + 6); c.restore(); }
-            c.font = SANS(34, 700); c.fillStyle = k > 0 ? "#991b1b" : "#334155";
-            lines.forEach((l, j) => c.fillText(l, 100, yy + j * 44));
-            if (k > 0) { c.save(); c.globalAlpha = clamp(k * 3); c.font = SANS(26, 900); c.fillStyle = RED; c.textAlign = "right"; c.fillText("NEVER DID", W - 90, yy - 6); c.restore(); }
-            yy += bh + 22;
+          c.fillStyle = "#fffdf7"; rrect(c, 60, 450, W - 120, 940, 18); c.fill();
+          c.font = SANS(34, 900); c.fillStyle = "#64748b"; c.fillText("AI: Here's an enhanced version:", 90, 510);
+          let yy = 580;
+          rows.forEach(([t, n]) => {   // render: bigger rows, and the NEVER DID tag on its own line (it ran into the text)
+            const k = kk(n);
+            c.font = SANS(42, 700);
+            const lines = wrap(c, t, W - 220), bh = lines.length * 54;
+            if (k > 0) { c.save(); c.globalAlpha = 0.9; c.fillStyle = "#fecaca"; c.fillRect(80, yy - 44, (W - 160) * easeOut(clamp(k * 2)), bh + 50); c.restore(); }
+            c.font = SANS(42, 700); c.fillStyle = k > 0 ? "#991b1b" : "#334155";
+            lines.forEach((l, j) => c.fillText(l, 100, yy + j * 54));
+            if (k > 0) { c.save(); c.globalAlpha = clamp(k * 3); c.font = SANS(30, 900); c.fillStyle = RED; c.fillText("✗ NEVER DID", 100, yy + bh + 2); c.restore(); }
+            yy += bh + (k > 0 || n > 0 ? 60 : 24);
           });
           breaking(c, W, f, T.ticker);
         } else if (P === "interview") {
           // the HR cabin: the interviewer reads the line out
-          c.fillStyle = "#e7c9a0"; c.fillRect(0, 980, W, 500);
-          c.fillStyle = "#7c4a1e"; c.fillRect(80, 1040, W - 160, 40);
+          c.fillStyle = "#e7c9a0"; c.fillRect(0, 760, W, 700);   // render: the desk sat above their heads
           const sweat = f >= cu(1, 0.4);
-          who(c, "kumar" as BillWho, [250, 1300], 0.62, sweat ? ["shock", "up"] : ["worried", "rest"], r);
-          if (f >= endL) {   // the beat of silence after the question: drops of sweat, a ticking clock
-            [0, 1, 2].forEach((q) => { const y = 860 + ((f - endL) * 6 + q * 40) % 120; c.fillStyle = "#7dd3fc"; c.beginPath(); c.ellipse(330 + q * 18, y, 8, 12, 0, 0, 7); c.fill(); });
+          who(c, "kumar" as BillWho, [260, 1010], 0.8, sweat ? ["shock", "up"] : ["worried", "rest"], r);
+          who(c, "sastry" as BillWho, [830, 1010], 0.8, ["smug", "fold"], r);
+          c.fillStyle = "#7c4a1e"; c.fillRect(40, 1180, W - 80, 60); c.fillStyle = "#5b3514"; c.fillRect(40, 1240, W - 80, 160);
+          c.fillStyle = "#fffdf7"; c.save(); c.translate(700, 1200); c.rotate(-0.06); c.fillRect(-90, -20, 180, 30); c.restore();   // his resume on the desk
+          if (f >= endL - 6) {   // the beat of silence after the question: drops of sweat
+            [0, 1, 2].forEach((q) => { const y = 760 + ((f - endL) * 6 + q * 40) % 140; c.fillStyle = "#7dd3fc"; c.beginPath(); c.ellipse(340 + q * 22, y, 9, 13, 0, 0, 7); c.fill(); });
           }
-          who(c, "sastry" as BillWho, [830, 1300], 0.62, ["smug", "fold"], r);
           const k = seg(f, cu(1, 0.4) - 6, cu(1, 0.4) + 4);
           if (k > 0) {
             c.save(); c.globalAlpha = clamp(k * 3);
@@ -176,7 +177,16 @@ const StResume: React.FC<SP> = ({ s }) => {
             bigBlock(c, 550, 660, 470, "asked him first", `${T.betterAsked} of 10`, "#86efac", "#14532d", seg(f, cu(1, 0.6), cu(1, 0.6) + 8));
           }
           const chips = (P === "test" ? T.usualWhat : T.betterWhat) as string[];
-          chips.forEach((t, q) => chip(c, t, W / 2, 960 + q * 78, "#f8fafc", INK, seg(f, c1 + 14 + q * 8, c1 + 22 + q * 8), fit(c, t, W - 200, 36, 800)));
+          chips.forEach((t, q) => chip(c, t, W / 2, 970 + q * 92, "#f8fafc", INK, seg(f, c1 + 14 + q * 8, c1 + 22 + q * 8), fit(c, t, W - 180, 44, 800)));
+          if (P === "fix") {   // render: the empty bottom; a real question it asked instead (the better ask, run 6)
+            const kq = seg(f, cu(1, 0.75), cu(1, 0.75) + 8);
+            if (kq > 0) {
+              c.save(); c.globalAlpha = clamp(kq * 3); c.fillStyle = "#f8fafc"; rrect(c, 90, 1090, W - 180, 230, 22); c.fill();
+              c.font = SANS(32, 900); c.fillStyle = "#15803d"; c.textAlign = "left"; c.fillText("it asked him instead:", 130, 1150);
+              c.font = SANS(40, 800); c.fillStyle = INK; wrap(c, T.asked, W - 280).forEach((t, q) => c.fillText(t, 130, 1210 + q * 50));
+              c.restore(); c.textAlign = "center";
+            }
+          }
         } else if (P === "rule") {
           c.textAlign = "center";
           c.font = SANS(fit(c, "BEFORE YOU SEND IT", W - 100, 60, 900), 900); c.fillStyle = "#fde68a"; c.fillText("BEFORE YOU SEND IT", W / 2, 330);

@@ -48,17 +48,18 @@ T = {
     "askShort": "\"Make my resume more impressive for a sales executive job.\"",
     "fixAsk": "+ \"Don't add any skill, number, title, tool, certificate or achievement that isn't in my text. Ask me instead.\"",
     "usualAdded": 10, "betterAdded": 4, "betterAsked": 5,
+    "asked": "\"Did you handle any sales-related tasks?\"",   # the better ask, run 6, question 2 (resume.json)
     "usualWhat": ["basic Excel → intermediate 4 · advanced 3", "CRM tools he never used: 4", "a certificate: 2", "a whole job + a team of 15: 1"],
     "betterWhat": ["what it still added was softer: Excel level, \"CRM basics\""],
     "rule": [["the last check is you", "read every line"], ["can you explain it?", "in the interview, with an example"], ["if not, delete it", "no number you didn't measure"]],
 }
-SCENES = [("s_a", (1,), {"boost": 1.5, "tail": 0.0}),
-          ("s_b", (2, 3), {"boost": 1.0, "lift": 0.5, "drop_at": [[1, 1, 1.0]], "tail": 0.2}),   # the music drops under the question
+SCENES = [("s_a", (1,), {"boost": 2.0, "tail": 0.0}),   # render: first 3 s were -21.6 dB
+          ("s_b", (2, 3), {"boost": 0.9, "lift": 0.5, "drop_at": [[1, 1, 1.0]], "tail": 0.2}),   # the music drops under the question
           ("s_c", (4, 5), {"boost": 1.2, "lift": 0.6, "tail": 0.3}),
-          ("s_d", (6,), {"boost": 1.6, "lift": 0.6, "tail": 0.3}),
-          ("s_e", (7,), {"outro": True, "pre": 0.3, "boost": 2.4, "lift": 0.7, "rise": 2.6, "tail": 0.0})]
+          ("s_d", (6,), {"boost": 2.0, "lift": 0.7, "tail": 0.3}),
+          ("s_e", (7,), {"outro": True, "pre": 0.3, "boost": 3.0, "lift": 0.8, "rise": 3.2, "tail": 0.0})]   # render: the end did not rise
 GAP = {1: 0.4, 2: 0.5, 3: 1.1, 4: 0.4, 5: 0.4, 6: 0.4, 7: 0.0}   # review: a beat of silence after the question
-FLAGS_TE = {"s_e": {"boost": 2.2, "rise": 2.4}}
+FLAGS_TE = {"s_e": {"boost": 2.8, "rise": 3.0}}
 YT = {"s_a": "Team of 15? Real: 0", "s_b": "What the AI added", "s_c": "Our test: 10 of 10", "s_d": "Before you send it", "s_e": "Back to the top story"}
 MARK = re.compile(r"\[\d+\]\s*")
 
