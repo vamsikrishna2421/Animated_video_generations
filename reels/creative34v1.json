@@ -61,6 +61,8 @@
     "t": {
      "job": "SALES JOB · ₹28,000 A MONTH · INTERVIEW TODAY",
      "claim": "TEAM OF 15",
+     "real": "0",
+     "madeUp": "Tarun is made up · our test is real",
      "ticker": "RESUME GAINS A TEAM OF 15 OVERNIGHT",
      "hookRows": [
       [
@@ -68,11 +70,7 @@
        false
       ],
       [
-       "Entered daily bills in Tally",
-       false
-      ],
-      [
-       "Led a team of 15 members",
+       "Head, Student Chapter: led a team of 15 members",
        true
       ],
       [
@@ -91,11 +89,11 @@
        1
       ],
       [
-       "Certified Sales Professional (CSP)",
+       "Certified Sales Professional (CSP) - [Issuing Organization]",
        2
       ],
       [
-       "Sales Assistant, May to July 2024",
+       "Sales Assistant, [Company Name], May to July 2024",
        3
       ],
       [
@@ -104,25 +102,25 @@
       ]
      ],
      "question": "Tell us about your team of 15.",
-     "model": "a small free AI on our computer (Qwen2.5 7B) · 10 fresh chats",
+     "model": "a small free AI on our computer · ChatGPT and the big apps not tested",
      "askShort": "\"Make my resume more impressive for a sales executive job.\"",
      "fixAsk": "+ \"Don't add any skill, number, title, tool, certificate or achievement that isn't in my text. Ask me instead.\"",
      "usualAdded": 10,
      "betterAdded": 4,
+     "betterAsked": 5,
      "usualWhat": [
-      "basic Excel → intermediate / advanced: 7",
+      "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
       "a certificate: 2",
       "a whole job + a team of 15: 1"
      ],
      "betterWhat": [
-      "softer: Excel level, \"CRM basics\"",
-      "5 of 10 asked him questions first"
+      "what it still added was softer: Excel level, \"CRM basics\""
      ],
      "rule": [
       [
-       "read every line",
-       "the AI's polish can add things"
+       "the last check is you",
+       "read every line"
       ],
       [
        "can you explain it?",
@@ -144,8 +142,8 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "Team of fifteen, says his resume. Real number: zero. [1] Tarun only asked an AI to make it impressive.",
-     "show": "Team of fifteen, says his resume. Real number: zero. Tarun only asked an AI to make it impressive.",
+     "text": "Breaking: a resume says, team of fifteen. Real team: zero. [1] Tarun only asked an AI to make it impressive.",
+     "show": "Breaking: a resume says, team of fifteen. Real team: zero. Tarun only asked an AI to make it impressive.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.08
@@ -158,6 +156,13 @@
    "tail": 0.2,
    "boost": 1.0,
    "lift": 0.5,
+   "drop_at": [
+    [
+     1,
+     1,
+     1.0
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -173,6 +178,8 @@
     "t": {
      "job": "SALES JOB · ₹28,000 A MONTH · INTERVIEW TODAY",
      "claim": "TEAM OF 15",
+     "real": "0",
+     "madeUp": "Tarun is made up · our test is real",
      "ticker": "RESUME GAINS A TEAM OF 15 OVERNIGHT",
      "hookRows": [
       [
@@ -180,11 +187,7 @@
        false
       ],
       [
-       "Entered daily bills in Tally",
-       false
-      ],
-      [
-       "Led a team of 15 members",
+       "Head, Student Chapter: led a team of 15 members",
        true
       ],
       [
@@ -203,11 +206,11 @@
        1
       ],
       [
-       "Certified Sales Professional (CSP)",
+       "Certified Sales Professional (CSP) - [Issuing Organization]",
        2
       ],
       [
-       "Sales Assistant, May to July 2024",
+       "Sales Assistant, [Company Name], May to July 2024",
        3
       ],
       [
@@ -216,25 +219,25 @@
       ]
      ],
      "question": "Tell us about your team of 15.",
-     "model": "a small free AI on our computer (Qwen2.5 7B) · 10 fresh chats",
+     "model": "a small free AI on our computer · ChatGPT and the big apps not tested",
      "askShort": "\"Make my resume more impressive for a sales executive job.\"",
      "fixAsk": "+ \"Don't add any skill, number, title, tool, certificate or achievement that isn't in my text. Ask me instead.\"",
      "usualAdded": 10,
      "betterAdded": 4,
+     "betterAsked": 5,
      "usualWhat": [
-      "basic Excel → intermediate / advanced: 7",
+      "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
       "a certificate: 2",
       "a whole job + a team of 15: 1"
      ],
      "betterWhat": [
-      "softer: Excel level, \"CRM basics\"",
-      "5 of 10 asked him questions first"
+      "what it still added was softer: Excel level, \"CRM basics\""
      ],
      "rule": [
       [
-       "read every line",
-       "the AI's polish can add things"
+       "the last check is you",
+       "read every line"
       ],
       [
        "can you explain it?",
@@ -256,8 +259,8 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "It added [1] a thirty percent result, [2] a certificate, [3] and a whole job he never had.",
-     "show": "It added a thirty percent result, a certificate, and a whole job he never had.",
+     "text": "One reply added [1] a thirty percent drop in errors, [2] a certificate, [3] even a job, at company name.",
+     "show": "One reply added a thirty percent drop in errors, a certificate, even a job, at company name.",
      "maxgap": 0.3,
      "gap": 0.5,
      "tempo": 1.08
@@ -268,7 +271,7 @@
      "text": "The interview's first question? [1] Tell us about your team of fifteen.",
      "show": "The interview's first question? Tell us about your team of fifteen.",
      "maxgap": 0.3,
-     "gap": 0.6,
+     "gap": 1.1,
      "tempo": 1.08
     }
    ]
@@ -294,6 +297,8 @@
     "t": {
      "job": "SALES JOB · ₹28,000 A MONTH · INTERVIEW TODAY",
      "claim": "TEAM OF 15",
+     "real": "0",
+     "madeUp": "Tarun is made up · our test is real",
      "ticker": "RESUME GAINS A TEAM OF 15 OVERNIGHT",
      "hookRows": [
       [
@@ -301,11 +306,7 @@
        false
       ],
       [
-       "Entered daily bills in Tally",
-       false
-      ],
-      [
-       "Led a team of 15 members",
+       "Head, Student Chapter: led a team of 15 members",
        true
       ],
       [
@@ -324,11 +325,11 @@
        1
       ],
       [
-       "Certified Sales Professional (CSP)",
+       "Certified Sales Professional (CSP) - [Issuing Organization]",
        2
       ],
       [
-       "Sales Assistant, May to July 2024",
+       "Sales Assistant, [Company Name], May to July 2024",
        3
       ],
       [
@@ -337,25 +338,25 @@
       ]
      ],
      "question": "Tell us about your team of 15.",
-     "model": "a small free AI on our computer (Qwen2.5 7B) · 10 fresh chats",
+     "model": "a small free AI on our computer · ChatGPT and the big apps not tested",
      "askShort": "\"Make my resume more impressive for a sales executive job.\"",
      "fixAsk": "+ \"Don't add any skill, number, title, tool, certificate or achievement that isn't in my text. Ask me instead.\"",
      "usualAdded": 10,
      "betterAdded": 4,
+     "betterAsked": 5,
      "usualWhat": [
-      "basic Excel → intermediate / advanced: 7",
+      "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
       "a certificate: 2",
       "a whole job + a team of 15: 1"
      ],
      "betterWhat": [
-      "softer: Excel level, \"CRM basics\"",
-      "5 of 10 asked him questions first"
+      "what it still added was softer: Excel level, \"CRM basics\""
      ],
      "rule": [
       [
-       "read every line",
-       "the AI's polish can add things"
+       "the last check is you",
+       "read every line"
       ],
       [
        "can you explain it?",
@@ -377,8 +378,8 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "We asked a small free AI ten times. [1] All ten added things he never did. [2] Seven made his basic Excel advanced.",
-     "show": "We asked a small free AI ten times. All ten added things he never did. Seven made his basic Excel advanced.",
+     "text": "We asked a small free AI ten times. [1] All ten added things he never did. [2] Seven pushed his basic Excel up a level.",
+     "show": "We asked a small free AI ten times. All ten added things he never did. Seven pushed his basic Excel up a level.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.08
@@ -386,8 +387,8 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "Add one line: don't add anything I didn't write; ask me. [1] Still, four of ten added something.",
-     "show": "Add one line: don't add anything I didn't write; ask me. Still, four of ten added something.",
+     "text": "Add this line first: don't add anything I didn't write; ask me. [1] Four still added something, but five asked him questions first.",
+     "show": "Add this line first: don't add anything I didn't write; ask me. Four still added something, but five asked him questions first.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.08
@@ -411,6 +412,8 @@
     "t": {
      "job": "SALES JOB · ₹28,000 A MONTH · INTERVIEW TODAY",
      "claim": "TEAM OF 15",
+     "real": "0",
+     "madeUp": "Tarun is made up · our test is real",
      "ticker": "RESUME GAINS A TEAM OF 15 OVERNIGHT",
      "hookRows": [
       [
@@ -418,11 +421,7 @@
        false
       ],
       [
-       "Entered daily bills in Tally",
-       false
-      ],
-      [
-       "Led a team of 15 members",
+       "Head, Student Chapter: led a team of 15 members",
        true
       ],
       [
@@ -441,11 +440,11 @@
        1
       ],
       [
-       "Certified Sales Professional (CSP)",
+       "Certified Sales Professional (CSP) - [Issuing Organization]",
        2
       ],
       [
-       "Sales Assistant, May to July 2024",
+       "Sales Assistant, [Company Name], May to July 2024",
        3
       ],
       [
@@ -454,25 +453,25 @@
       ]
      ],
      "question": "Tell us about your team of 15.",
-     "model": "a small free AI on our computer (Qwen2.5 7B) · 10 fresh chats",
+     "model": "a small free AI on our computer · ChatGPT and the big apps not tested",
      "askShort": "\"Make my resume more impressive for a sales executive job.\"",
      "fixAsk": "+ \"Don't add any skill, number, title, tool, certificate or achievement that isn't in my text. Ask me instead.\"",
      "usualAdded": 10,
      "betterAdded": 4,
+     "betterAsked": 5,
      "usualWhat": [
-      "basic Excel → intermediate / advanced: 7",
+      "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
       "a certificate: 2",
       "a whole job + a team of 15: 1"
      ],
      "betterWhat": [
-      "softer: Excel level, \"CRM basics\"",
-      "5 of 10 asked him questions first"
+      "what it still added was softer: Excel level, \"CRM basics\""
      ],
      "rule": [
       [
-       "read every line",
-       "the AI's polish can add things"
+       "the last check is you",
+       "read every line"
       ],
       [
        "can you explain it?",
@@ -494,8 +493,8 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "So read every line before you send it: [1] can you explain this in the interview? If not, delete it.",
-     "show": "So read every line before you send it: can you explain this in the interview? If not, delete it.",
+     "text": "The last check is you: read every line. [1] Can you explain it in the interview? [2] If not, delete it.",
+     "show": "The last check is you: read every line. Can you explain it in the interview? If not, delete it.",
      "maxgap": 0.3,
      "gap": 0.4,
      "tempo": 1.08
@@ -522,6 +521,8 @@
     "t": {
      "job": "SALES JOB · ₹28,000 A MONTH · INTERVIEW TODAY",
      "claim": "TEAM OF 15",
+     "real": "0",
+     "madeUp": "Tarun is made up · our test is real",
      "ticker": "RESUME GAINS A TEAM OF 15 OVERNIGHT",
      "hookRows": [
       [
@@ -529,11 +530,7 @@
        false
       ],
       [
-       "Entered daily bills in Tally",
-       false
-      ],
-      [
-       "Led a team of 15 members",
+       "Head, Student Chapter: led a team of 15 members",
        true
       ],
       [
@@ -552,11 +549,11 @@
        1
       ],
       [
-       "Certified Sales Professional (CSP)",
+       "Certified Sales Professional (CSP) - [Issuing Organization]",
        2
       ],
       [
-       "Sales Assistant, May to July 2024",
+       "Sales Assistant, [Company Name], May to July 2024",
        3
       ],
       [
@@ -565,25 +562,25 @@
       ]
      ],
      "question": "Tell us about your team of 15.",
-     "model": "a small free AI on our computer (Qwen2.5 7B) · 10 fresh chats",
+     "model": "a small free AI on our computer · ChatGPT and the big apps not tested",
      "askShort": "\"Make my resume more impressive for a sales executive job.\"",
      "fixAsk": "+ \"Don't add any skill, number, title, tool, certificate or achievement that isn't in my text. Ask me instead.\"",
      "usualAdded": 10,
      "betterAdded": 4,
+     "betterAsked": 5,
      "usualWhat": [
-      "basic Excel → intermediate / advanced: 7",
+      "basic Excel → intermediate 4 · advanced 3",
       "CRM tools he never used: 4",
       "a certificate: 2",
       "a whole job + a team of 15: 1"
      ],
      "betterWhat": [
-      "softer: Excel level, \"CRM basics\"",
-      "5 of 10 asked him questions first"
+      "what it still added was softer: Excel level, \"CRM basics\""
      ],
      "rule": [
       [
-       "read every line",
-       "the AI's polish can add things"
+       "the last check is you",
+       "read every line"
       ],
       [
        "can you explain it?",
@@ -605,8 +602,8 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "Back to our top story: [1] team of fifteen. Real number, zero.",
-     "show": "Back to our top story: team of fifteen. Real number, zero.",
+     "text": "Back to our top story: [1] a team of fifteen he can't explain.",
+     "show": "Back to our top story: a team of fifteen he can't explain.",
      "maxgap": 0.3,
      "gap": 0.0,
      "tempo": 1.08

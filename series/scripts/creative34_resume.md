@@ -1,4 +1,4 @@
-# Creative 34 "Team of 15? Real Number: 0" · Nov 19 creative slot · script v1
+# Creative 34 "Team of 15? Real Number: 0" · Nov 19 creative slot · script v2
 
 ## Format and rotation
 - **Format:** a breaking-news parody, last used by Creative 20 on Nov 5. One anchor voice, no dialogue, so not a dialogue
@@ -37,16 +37,46 @@ certificate) and Qwen2.5-7B-Instruct on our computer, 10 fresh chats per ask.
   - the additions were softer: Excel level, "CRM basics", "analysed sales trends";
   - 5 of 10 asked him questions first.
 
-## Script v1 (EN | TE). One narrator, the anchor: EN on Fish (Creative 22's storyteller clip), TE on Parler (Lalitha)
+## Script review (human-viewer, v1), what changed for v2
+All three viewers stopped on frame 1: Sandeep (24, job hunting), Priya (28, HR, interviews freshers) and Ramesh (45,
+Telugu, a job-seeker's father). All three would share "Can you explain it in the interview?".
+- **Facts (checked against resume.json):**
+  - "Seven made his basic Excel advanced" was too strong: 4 said intermediate, 3 advanced or "expertise". It is now
+    "seven pushed his basic Excel up a level". The chip shows "intermediate 4 · advanced 3", and the Telugu says
+    ఇంటర్మీడియట్, అడ్వాన్స్డ్.
+  - Reply 1's job and certificate carry "[Company Name]" and "[Issuing Organization]". The screen shows the brackets,
+    and the voice says "even a job, at company name".
+  - Reply 1's team of 15 is under "Head, Student Chapter", and the screen says so.
+- **Honesty labels:**
+  - "one reply" is spoken;
+  - "Tarun is made up · our test is real" is on frame 1;
+  - "ChatGPT and the big apps not tested" is on the test card;
+  - the model's name moved to the caption (Sandeep: "never heard of it").
+  - The stamp is now "ADDED BY AN AI" (Priya: he hit send, not the AI).
+- **The fix sounded useless:** "Still four of ten" now reads "Four still added something, but five asked him questions
+  first". Then "the last check is you: read every line." That answers "which one do I do?": both.
+- **Frame 1 was busy:** now only the job line, "TEAM OF 15" against "REAL TEAM: 0", and Tarun's face.
+- **News voice:** the parody needed a spoken opener: "Breaking: a resume says, team of fifteen."
+- **Interview:** a 1.1 s beat of silence after the question, with a music drop and Tarun sweating, before the test.
+- **The loop:** it ends on "a team of fifteen he can't explain", not on "zero" twice, and the rule stays on screen under
+  the last line.
+- **Telugu:**
+  - "రెస్యూమ్ లో, పదిహేను మంది టీమ్ ని నడిపాడట" (word order);
+  - "తప్పులు ముప్పై శాతం తగ్గించాడట";
+  - the quote cue "ఈ లైన్ కూడా పెట్టండి:" with "నన్నే అడుగు" inside the quote;
+  - fewer kalap- words;
+  - "ఆ లైన్ ఉంచకండి".
+
+## Script v2 (EN | TE). One narrator, the anchor: EN on Fish (Creative 22's storyteller clip), TE on Parler (Lalitha)
 | # | prop | English | Telugu |
 |---|---|---|---|
-| 1 | hook | Team of fifteen, says his resume. Real number: zero. [1] Tarun only asked an AI to make it impressive. | పదిహేను మంది టీమ్ ని నడిపాడట, రెస్యూమ్ లో. అసలు నంబర్: సున్నా. [1] తరుణ్ చాట్‌బాట్ ని అడిగింది ఒక్కటే: నా రెస్యూమ్ ని ఇంకా ఇంప్రెసివ్ గా మార్చు. |
-| 2 | ask | It added [1] a thirty percent result, [2] a certificate, [3] and a whole job he never had. | అది కలిపింది: [1] ముప్పై శాతం రిజల్ట్, [2] ఒక సర్టిఫికెట్, [3] అతను ఎప్పుడూ చేయని ఒక పూర్తి ఉద్యోగం. |
+| 1 | hook | Breaking: a resume says, team of fifteen. Real team: zero. [1] Tarun only asked an AI to make it impressive. | బ్రేకింగ్ న్యూస్: రెస్యూమ్ లో, పదిహేను మంది టీమ్ ని నడిపాడట. అసలు టీమ్: సున్నా. [1] తరుణ్ చాట్‌బాట్ ని అడిగింది ఒక్కటే: నా రెస్యూమ్ ని ఇంకా ఇంప్రెసివ్ గా మార్చు. |
+| 2 | ask | One reply added [1] a thirty percent drop in errors, [2] a certificate, [3] even a job, at company name. | ఒక రిప్లై అయితే, [1] తప్పులు ముప్పై శాతం తగ్గించాడట, [2] ఒక సర్టిఫికెట్, [3] కంపెనీ పేరు కూడా లేని ఒక ఉద్యోగం కలిపింది. |
 | 3 | interview | The interview's first question? [1] Tell us about your team of fifteen. | ఇంటర్వ్యూ లో తొలి ప్రశ్న? [1] మీ పదిహేను మంది టీమ్ గురించి చెప్పండి. |
-| 4 | test | We asked a small free AI ten times. [1] All ten added things he never did. [2] Seven made his basic Excel advanced. | ఒక చిన్న ఫ్రీ చాట్‌బాట్ ని పది సార్లు అడిగాం. [1] పదికి పది సార్లూ, అతను చేయనివి కలిపింది. [2] ఏడు సార్లు, బేసిక్ ఎక్సెల్ ని అడ్వాన్స్డ్ చేసింది. |
-| 5 | fix | Add one line: don't add anything I didn't write; ask me. [1] Still, four of ten added something. | ఒక లైన్ కలపండి: నేను రాయనిది కలపకు, నన్ను అడుగు. [1] అయినా, పదిలో నాలుగు సార్లు కలిపింది. |
-| 6 | rule | So read every line before you send it: [1] can you explain this in the interview? If not, delete it. | అందుకే పంపే ముందు ప్రతి లైన్ చదవండి: [1] ఇంటర్వ్యూ లో దీని గురించి చెప్పగలరా? లేకపోతే, ఆ లైన్ వద్దు. |
-| 7 | loop | Back to our top story: [1] team of fifteen. Real number, zero. | మళ్ళీ మన టాప్ స్టోరీ కి: [1] పదిహేను మంది టీమ్. అసలు నంబర్, సున్నా. |
+| 4 | test | We asked a small free AI ten times. [1] All ten added things he never did. [2] Seven pushed his basic Excel up a level. | ఒక చిన్న ఫ్రీ చాట్‌బాట్ ని పది సార్లు అడిగాం. [1] పదికి పది సార్లూ, అతను చేయనివి కలిపింది. [2] ఏడు సార్లు, బేసిక్ ఎక్సెల్ ని ఇంటర్మీడియట్, అడ్వాన్స్డ్ చేసింది. |
+| 5 | fix | Add this line first: don't add anything I didn't write; ask me. [1] Four still added something, but five asked him questions first. | ఈ లైన్ కూడా పెట్టండి: నేను రాయనిది పెట్టకు, నన్నే అడుగు. [1] అయినా నాలుగు సార్లు కలిపింది, కానీ ఐదు సార్లు ముందు ప్రశ్నలు అడిగింది. |
+| 6 | rule | The last check is you: read every line. [1] Can you explain it in the interview? [2] If not, delete it. | చివరి చెక్ మీరే: ప్రతి లైన్ చదవండి. [1] ఇంటర్వ్యూ లో దాని గురించి చెప్పగలరా? [2] లేకపోతే, ఆ లైన్ ఉంచకండి. |
+| 7 | loop | Back to our top story: [1] a team of fifteen he can't explain. | మళ్ళీ మన టాప్ స్టోరీ కి: [1] చెప్పలేని పదిహేను మంది టీమ్. |
 
 ## On screen (English in both versions)
 - **1:**

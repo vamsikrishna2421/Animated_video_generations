@@ -112,11 +112,11 @@ const StResume: React.FC<SP> = ({ s }) => {
           // frame 1: the job's pay, the resume line, the real number
           c.fillStyle = "#111827"; rrect(c, 60, 290, W - 120, 92, 18); c.fill();
           c.font = SANS(fit(c, T.job, W - 160, 44, 900), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(T.job, W / 2, 352);
-          bigBlock(c, 60, 410, 470, "HIS RESUME SAYS", T.claim, "#fca5a5", "#7f1d1d", 1);
-          bigBlock(c, 550, 410, 470, "REAL NUMBER", "0", "#86efac", "#14532d", 1);
-          paper(c, 330, 680, 690, 520, T.hookRows, 1, "");
-          stamp(c, "THE AI ADDED IT", 675, 1150, 56, RED, loopOn ? 1 : seg(f, cu(1, 0.4), cu(1, 0.4) + 8));
-          who(c, "kumar" as BillWho, [175, 1250], 0.62, ["shock", "up"], r);
+          bigBlock(c, 60, 410, 470, "HIS RESUME SAYS", T.claim, "#fca5a5", "#7f1d1d", 1);   // script review: thinner frame 1
+          bigBlock(c, 550, 410, 470, "REAL TEAM", T.real, "#86efac", "#14532d", 1);
+          who(c, "kumar" as BillWho, [540, 1300], 0.85, ["shock", "up"], r);
+          chip(c, T.madeUp, W / 2, 1400, "#1e293b", "#cbd5e1", 1, 30);
+          stamp(c, "ADDED BY AN AI", W / 2, 720, 60, RED, loopOn ? 1 : seg(f, cu(1, 0.4), cu(1, 0.4) + 8));
           breaking(c, W, f, T.ticker);
         } else if (P === "ask") {
           // his ask, and the AI's reply with the added lines marked (copied from reply 1 of our test)
@@ -143,7 +143,11 @@ const StResume: React.FC<SP> = ({ s }) => {
           // the HR cabin: the interviewer reads the line out
           c.fillStyle = "#e7c9a0"; c.fillRect(0, 980, W, 500);
           c.fillStyle = "#7c4a1e"; c.fillRect(80, 1040, W - 160, 40);
-          who(c, "kumar" as BillWho, [250, 1300], 0.62, f >= cu(1, 0.4) ? ["shock", "up"] : ["worried", "rest"], r);
+          const sweat = f >= cu(1, 0.4);
+          who(c, "kumar" as BillWho, [250, 1300], 0.62, sweat ? ["shock", "up"] : ["worried", "rest"], r);
+          if (f >= endL) {   // the beat of silence after the question: drops of sweat, a ticking clock
+            [0, 1, 2].forEach((q) => { const y = 860 + ((f - endL) * 6 + q * 40) % 120; c.fillStyle = "#7dd3fc"; c.beginPath(); c.ellipse(330 + q * 18, y, 8, 12, 0, 0, 7); c.fill(); });
+          }
           who(c, "sastry" as BillWho, [830, 1300], 0.62, ["smug", "fold"], r);
           const k = seg(f, cu(1, 0.4) - 6, cu(1, 0.4) + 4);
           if (k > 0) {
@@ -160,14 +164,17 @@ const StResume: React.FC<SP> = ({ s }) => {
         } else if (P === "test" || P === "fix") {
           c.textAlign = "center";
           c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.fillText(P === "test" ? "OUR TEST" : "THE FIX", W / 2, 330);
-          c.font = SANS(fit(c, T.model, W - 120, 30, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(T.model, W / 2, 380);
+          c.font = SANS(fit(c, T.model, W - 100, 30, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(T.model, W / 2, 380);
           const ask = P === "test" ? T.askShort : T.fixAsk;
           c.fillStyle = P === "test" ? "#1e293b" : "#14532d"; rrect(c, 70, 420, W - 140, 200, 22); c.fill();
           c.font = SANS(fit(c, ask, W - 220, 40, 800), 800); c.fillStyle = "#f8fafc";
           wrap(c, ask, W - 200).forEach((t, q) => c.fillText(t, W / 2, 495 + q * 50));
           const c1 = cu(1, 0.4), k = seg(f, c1 - 6, c1 + 4);
-          const n = P === "test" ? T.usualAdded : T.betterAdded;
-          bigBlock(c, 140, 660, W - 280, "added things he never did", `${n} of 10`, P === "test" ? "#fca5a5" : "#86efac", P === "test" ? "#7f1d1d" : "#14532d", k);
+          if (P === "test") bigBlock(c, 140, 660, W - 280, "added things he never did", `${T.usualAdded} of 10`, "#fca5a5", "#7f1d1d", k);
+          else {   // script review: say both halves (4 still added, 5 asked him first)
+            bigBlock(c, 60, 660, 470, "still added something", `${T.betterAdded} of 10`, "#fca5a5", "#7f1d1d", k);
+            bigBlock(c, 550, 660, 470, "asked him first", `${T.betterAsked} of 10`, "#86efac", "#14532d", seg(f, cu(1, 0.6), cu(1, 0.6) + 8));
+          }
           const chips = (P === "test" ? T.usualWhat : T.betterWhat) as string[];
           chips.forEach((t, q) => chip(c, t, W / 2, 960 + q * 78, "#f8fafc", INK, seg(f, c1 + 14 + q * 8, c1 + 22 + q * 8), fit(c, t, W - 200, 36, 800)));
         } else if (P === "rule") {
@@ -185,8 +192,9 @@ const StResume: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, t, W - 300, 38, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(t, 190, y + 150); c.restore();
           });
         } else if (P === "loop") {   // the anchor: back to the top story (the resume comes back, the stamp lands)
-          paper(c, 195, 420, 690, 600, T.hookRows, seg(f, ln.from + 4, ln.from + 14), "");
-          stamp(c, "REAL: 0", W / 2, 1150, 90, RED, seg(f, cu(1, 0.4), cu(1, 0.4) + 8));
+          paper(c, 195, 420, 690, 520, T.hookRows, seg(f, ln.from + 4, ln.from + 14), "");
+          stamp(c, "REAL TEAM: 0", W / 2, 1050, 80, RED, seg(f, cu(1, 0.4), cu(1, 0.4) + 8));
+          chip(c, "can you explain it? if not, delete it", W / 2, 1220, "#fde68a", INK, 1, 42);   // review: the rule stays under the last line
           c.font = SANS(52, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("BACK TO OUR TOP STORY", W / 2, 340);
           breaking(c, W, f, T.ticker);
         }
