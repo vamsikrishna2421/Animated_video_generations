@@ -29,13 +29,14 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("two", "2", "2000"), ("thousand", "000", "2000"), ("rupees", "rupee"), ("four", "4", "4.5"), ("minutes", "minute"), ("fake",), ("ourselves",)],
-               2: [("pause",), ("umbrella",), ("two", "2"), ("sign",), ("ameerpet", "amirpet", "ameerpeth", "amirpeth", "ameer", "amir", "mearpet", "mirpet", "meerpet", "mere", "meer"), ("word",)],
-               3: [("label",), ("says", "say"), ("fake",), ("tag",)], "3b": [("label",), ("fake",)],
-               4: [("paid",), ("clues", "clue"), ("forward",), ("pay",), ("pib", "p", "pi", "pib's"), ("fact",), ("whatsapp",), ("screenshot",)],
-               5: [("never",), ("upi", "u"), ("forward",), ("pause",), ("label",), ("pib", "p", "pi")]},
+MUST = {"en": {1: [("gpu",), ("twenty", "27"), ("seven", "27"), ("thousand", "000"), ("zero", "0"), ("questions",)],
+               2: [("laptop",), ("sleeps", "sleep"), ("deploying", "deploy"), ("always",)],
+               3: [("prices", "price"), ("gpu",), ("free",), ("seconds", "second"), ("short",), ("tiny",), ("month",)],
+               4: [("shop",), ("free",), ("smarter",), ("gpu",), ("fifty", "50"), ("thousand", "000")],
+               5: [("three", "3"), ("hugging",), ("face",), ("space",), ("secrets", "secret"), ("code",), ("whatsapp",), ("callback",)],
+               6: [("catch",), ("days", "day"), ("sleeps", "sleep"), ("half",), ("minute",), ("gpu",), ("zero", "0")]},
         "te": {}}
-JUDGE_TEXT = {1: "2,000 rupees per family, for a flood video made in 4 and a half minutes. We made this fake ourselves."}
+JUDGE_TEXT = {}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

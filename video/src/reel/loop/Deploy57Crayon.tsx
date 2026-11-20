@@ -107,15 +107,25 @@ const StDeploy: React.FC<SP> = ({ s }) => {
         const P = loopOn ? "hook" : b.prop;
         bg(c, W, H);
         c.textAlign = "left";
-        if (P === "hook" || P === "loop") {
-          // frame 1: the quote against the same bot the cheap way; Ravi with the bot on his phone
+        const frame1 = (ask: boolean) => {
           block(c, 50, 300, 480, 300, "GPU SERVER QUOTE", T.gpu, "a month", "#7f1d1d", "#fecaca", 1);
-          block(c, 550, 300, 480, 300, "THE SAME BOT", T.api, "a month", "#14532d", "#bbf7d0", loopOn || P === "hook" ? 1 : seg(f, cu(1, 0.4), cu(1, 0.4) + 8));
+          block(c, 550, 300, 480, 300, "OUR TEST", T.zero, T.zeroSub, "#14532d", "#bbf7d0", 1);
           phoneChat(c, 560, 650, 460, 380, [["Toor dal 1 kg entha?", true], ["₹165", false], ["Is curd available?", true], ["Out of stock.", false]], 1);
-          smallRavi(c, 270, 900, 0.62, P === "loop" && !loopOn ? "hope" : "shock", f, r);
+          smallRavi(c, 270, 900, 0.62, "shock", f, r);
           c.save(); c.translate(250, 1180); c.rotate(-0.08); c.fillStyle = "#fffdf7"; rrect(c, -150, -70, 300, 140, 10); c.fill();
           c.font = SANS(28, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("QUOTE: GPU SERVER", 0, -24); c.font = SANS(40, 900); c.fillStyle = RED; c.fillText(T.gpu + "/mo", 0, 30); c.restore();
-          if (P === "loop" && !loopOn) chip(c, T.ask, W / 2, 1300, "#fde68a", INK, seg(f, cu(1, 0.4) - 6, cu(1, 0.4) + 2), fit(c, T.ask, W - 160, 44, 900));
+          if (ask) chip(c, T.ask, W / 2, 1310, "#fde68a", INK, 1, 52);
+        };
+        if (P === "hook") frame1(loopOn);
+        else if (P === "loop") {   // the catch (the free box sleeps), then back to frame 1 with the question
+          const c1 = cu(1, 0.2);
+          if (f < c1 - 4) {
+            c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("ONE CATCH", W / 2, 330);
+            c.fillStyle = "#1e293b"; rrect(c, 70, 420, W - 140, 620, 26); c.fill();
+            c.font = SANS(150, 900); c.fillStyle = "#93c5fd"; c.fillText("z z z", W / 2, 680 - (f % 40));
+            c.font = SANS(fit(c, T.sleep, W - 200, 42, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.sleep, W / 2, 840);
+            c.font = SANS(fit(c, T.wake, W - 200, 36, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(T.wake, W / 2, 920);
+          } else frame1(true);
         } else if (P === "laptop") {
           c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("DEPLOY = ALWAYS ON", W / 2, 330);
           const close = seg(f, cu(1, 0.3), cu(1, 0.3) + 10);
@@ -144,40 +154,34 @@ const StDeploy: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, sub, W - 140, 32, 700), 700); c.fillStyle = "#cbd5e1"; c.textAlign = "left"; c.fillText(sub, 70, y + 160);
             c.restore();
           });
-        } else if (P === "why") {
-          c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("WHY SO CHEAP?", W / 2, 330);
-          const k1 = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 10), k2 = seg(f, cu(1, 0.7), cu(1, 0.7) + 10), k3 = seg(f, cu(2, 0.3), cu(2, 0.3) + 8);
-          if (k1 > 0) {   // the model's memory: a big box
-            c.save(); c.globalAlpha = clamp(k1 * 3); const s1 = easeOut(k1);
-            c.fillStyle = "#7f1d1d"; rrect(c, 90, 420, 560 * s1, 560 * s1, 20); c.fill();
-            c.font = SANS(44, 900); c.fillStyle = "#fecaca"; c.textAlign = "center"; c.fillText("the model", 90 + 280 * s1, 420 + 230 * s1); c.font = SANS(76, 900); c.fillText(T.modelMb, 90 + 280 * s1, 420 + 330 * s1); c.restore();
-          }
-          if (k2 > 0) {   // the tiny server: a dot
-            c.save(); c.globalAlpha = clamp(k2 * 3); c.fillStyle = "#22c55e"; c.fillRect(760, 690, 24, 24);
-            c.font = SANS(40, 900); c.fillStyle = "#bbf7d0"; c.textAlign = "center"; c.fillText("tiny server", 840, 780); c.font = SANS(64, 900); c.fillText(T.thinMb, 840, 860); c.restore();
-          }
-          if (k3 > 0) chip(c, T.perChat, W / 2, 1120, "#f8fafc", INK, k3, fit(c, T.perChat, W - 140, 42, 800));
-          if (k3 > 0) chip(c, T.where, W / 2, 1220, "#1e293b", "#cbd5e1", k3, fit(c, T.where, W - 140, 34, 700));
-        } else if (P === "catch") {
-          c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("TWO CATCHES", W / 2, 330);
-          const k1 = seg(f, cu(1, 0.3) - 6, cu(1, 0.3) + 4), k2 = seg(f, cu(2, 0.3) - 6, cu(2, 0.3) + 4);
-          if (k1 > 0) {
-            c.save(); c.globalAlpha = clamp(k1 * 3);
-            c.fillStyle = "#0f172a"; rrect(c, 70, 400, W - 140, 150, 16); c.fill();
-            c.font = SANS(36, 800); c.fillStyle = "#fca5a5"; c.textAlign = "left"; c.fillText('key = "sk-..."   ✗ never in code', 100, 490);
-            c.fillStyle = "#f8fafc"; rrect(c, 70, 580, W - 140, 200, 16); c.fill();
-            c.font = SANS(36, 900); c.fillStyle = INK; c.fillText("Host settings › Secrets", 100, 640);
-            c.font = SANS(40, 800); c.fillStyle = "#15803d"; c.fillText("API_KEY = ••••••••••   ✓", 100, 720);
-            c.restore();
-          }
-          if (k2 > 0) {
-            c.save(); c.globalAlpha = clamp(k2 * 3);
-            c.fillStyle = "#1e293b"; rrect(c, 70, 830, W - 140, 330, 22); c.fill();
-            c.font = SANS(110, 900); c.fillStyle = "#93c5fd"; c.textAlign = "center"; c.fillText("z z z", W / 2, 990);
-            c.font = SANS(fit(c, T.sleep, W - 200, 36, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.sleep, W / 2, 1080);
-            c.font = SANS(fit(c, T.wake, W - 200, 32, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(T.wake, W / 2, 1130);
-            c.restore();
-          }
+        } else if (P === "pick") {
+          c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("FOR A SHOP", W / 2, 330);
+          const card = (x: number, [t, v, sub]: string[], k: number) => {
+            if (k <= 0) return;
+            c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = "#14532d"; rrect(c, x, 400, 450, 420, 26); c.fill();
+            c.font = SANS(fit(c, t, 400, 38, 900), 900); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; c.fillText(t, x + 225, 470);
+            c.font = SANS(fit(c, v, 400, 110, 900), 900); c.fillStyle = "#bbf7d0"; c.fillText(v, x + 225, 640);
+            c.font = SANS(28, 800); c.fillStyle = "#dcfce7"; wrap(c, sub, 400).forEach((l, q) => c.fillText(l, x + 225, 720 + q * 36)); c.restore();
+          };
+          card(60, T.pickA, seg(f, ln.from, ln.from + 8));
+          card(570, T.pickB, seg(f, ln.from + 18, ln.from + 26));
+          const kb = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 4);
+          if (kb > 0) { c.save(); c.globalAlpha = clamp(kb * 3); c.fillStyle = "#7f1d1d"; rrect(c, 60, 880, W - 120, 200, 24); c.fill();
+            c.font = SANS(40, 900); c.fillStyle = "#fecaca"; c.textAlign = "center"; c.fillText("GPU?", W / 2, 950);
+            c.font = SANS(fit(c, T.breakeven, W - 180, 44, 900), 900); c.fillStyle = "#fff"; c.fillText(T.breakeven, W / 2, 1030); c.restore(); }
+        } else if (P === "steps") {
+          c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("3 STEPS", W / 2, 330);
+          (T.steps as [string, string][]).forEach(([a, sub], q) => {
+            const st = cu(q + 1, 0.3), k = seg(f, st - 6, st + 4);
+            if (k <= 0) return;
+            const y = 400 + q * 250;
+            c.save(); c.globalAlpha = clamp(k * 3); c.translate((1 - easeOut(clamp(k * 1.5))) * 200, 0);
+            c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, 220, 22); c.fill();
+            c.font = SANS(80, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(`${q + 1}`, 100, y + 130);
+            c.font = SANS(fit(c, a, W - 300, 54, 900), 900); c.fillStyle = "#f8fafc"; c.fillText(a, 190, y + 90);
+            c.fillStyle = "#0f172a"; rrect(c, 190, y + 120, W - 320, 70, 12); c.fill();
+            c.font = SANS(fit(c, sub, W - 360, 32, 700), 700); c.fillStyle = "#86efac"; c.fillText(sub, 210, y + 166); c.restore();
+          });
         }
         c.textAlign = "left";
       }} />

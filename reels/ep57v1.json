@@ -1,0 +1,529 @@
+{
+ "id": "ep57v1",
+ "title": "EP57: Deploy Your AI App",
+ "label": "EP57",
+ "banner": "Deploy your AI app",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "musicVol": [
+  0.16,
+  0.28
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.0,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1440,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_deploy57",
+   "tail": 0.0,
+   "boost": 1.8,
+   "drop_at": [
+    [
+     0,
+     1,
+     0.6
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "gpu": "₹27,400",
+     "zero": "₹0",
+     "zeroSub": "a free 2-core box",
+     "api": "₹28",
+     "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
+     "bars": [
+      [
+       "GPU server (Nvidia T4), all month",
+       "Hugging Face: $288 a month",
+       "₹27,432",
+       1.0,
+       "#dc2626"
+      ],
+      [
+       "free 2-core box (16 GB)",
+       "our test: ~2 s a reply · short shop answers",
+       "₹0",
+       0.0,
+       "#16a34a"
+      ],
+      [
+       "tiny server + an AI company's model",
+       "1.85 paise a chat × 50 chats a day",
+       "₹28",
+       0.004,
+       "#16a34a"
+      ]
+     ],
+     "pickA": [
+      "FREE BOX",
+      "₹0",
+      "our 7B model fits (8 GB of 16)"
+     ],
+     "pickB": [
+      "TINY SERVER + MODEL",
+      "₹28/mo",
+      "a smarter model, any small host"
+     ],
+     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "steps": [
+      [
+       "Put the code on a host",
+       "huggingface.co › New Space › CPU basic (free)"
+      ],
+      [
+       "Any key in its Secrets",
+       "Settings › Variables and secrets › New secret"
+      ],
+      [
+       "Give WhatsApp its link",
+       "WhatsApp › Configuration › Callback URL"
+      ]
+     ],
+     "sleep": "free box: sleeps after 48 h with no messages",
+     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "ask": "₹27,400 a month, or ₹0?"
+    },
+    "yt": {
+     "chapter": "₹27,400 or ₹0?",
+     "title": "₹27,400 or ₹0?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "A GPU server for a shop bot: twenty-seven thousand rupees a month. [1] Our test: zero rupees. Same bot, same questions.",
+     "show": "A GPU server for a shop bot: twenty-seven thousand rupees a month. Our test: zero rupees. Same bot, same questions.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_deploy57",
+   "tail": 0.2,
+   "boost": 0.9,
+   "lift": 0.5,
+   "data": {
+    "beats": [
+     {
+      "prop": "laptop",
+      "n": 2
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "gpu": "₹27,400",
+     "zero": "₹0",
+     "zeroSub": "a free 2-core box",
+     "api": "₹28",
+     "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
+     "bars": [
+      [
+       "GPU server (Nvidia T4), all month",
+       "Hugging Face: $288 a month",
+       "₹27,432",
+       1.0,
+       "#dc2626"
+      ],
+      [
+       "free 2-core box (16 GB)",
+       "our test: ~2 s a reply · short shop answers",
+       "₹0",
+       0.0,
+       "#16a34a"
+      ],
+      [
+       "tiny server + an AI company's model",
+       "1.85 paise a chat × 50 chats a day",
+       "₹28",
+       0.004,
+       "#16a34a"
+      ]
+     ],
+     "pickA": [
+      "FREE BOX",
+      "₹0",
+      "our 7B model fits (8 GB of 16)"
+     ],
+     "pickB": [
+      "TINY SERVER + MODEL",
+      "₹28/mo",
+      "a smarter model, any small host"
+     ],
+     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "steps": [
+      [
+       "Put the code on a host",
+       "huggingface.co › New Space › CPU basic (free)"
+      ],
+      [
+       "Any key in its Secrets",
+       "Settings › Variables and secrets › New secret"
+      ],
+      [
+       "Give WhatsApp its link",
+       "WhatsApp › Configuration › Callback URL"
+      ]
+     ],
+     "sleep": "free box: sleeps after 48 h with no messages",
+     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "ask": "₹27,400 a month, or ₹0?"
+    },
+    "yt": {
+     "chapter": "Deploy = always on",
+     "title": "Deploy = always on",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "Today the bot runs on Suresh's laptop. [1] Laptop sleeps, the bot sleeps. Deploying means moving it to a computer that's always on.",
+     "show": "Today the bot runs on Suresh's laptop. Laptop sleeps, the bot sleeps. Deploying means moving it to a computer that's always on.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_deploy57",
+   "tail": 0.3,
+   "boost": 1.1,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "prop": "bars",
+      "n": 3
+     },
+     {
+      "prop": "pick",
+      "n": 4
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "gpu": "₹27,400",
+     "zero": "₹0",
+     "zeroSub": "a free 2-core box",
+     "api": "₹28",
+     "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
+     "bars": [
+      [
+       "GPU server (Nvidia T4), all month",
+       "Hugging Face: $288 a month",
+       "₹27,432",
+       1.0,
+       "#dc2626"
+      ],
+      [
+       "free 2-core box (16 GB)",
+       "our test: ~2 s a reply · short shop answers",
+       "₹0",
+       0.0,
+       "#16a34a"
+      ],
+      [
+       "tiny server + an AI company's model",
+       "1.85 paise a chat × 50 chats a day",
+       "₹28",
+       0.004,
+       "#16a34a"
+      ]
+     ],
+     "pickA": [
+      "FREE BOX",
+      "₹0",
+      "our 7B model fits (8 GB of 16)"
+     ],
+     "pickB": [
+      "TINY SERVER + MODEL",
+      "₹28/mo",
+      "a smarter model, any small host"
+     ],
+     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "steps": [
+      [
+       "Put the code on a host",
+       "huggingface.co › New Space › CPU basic (free)"
+      ],
+      [
+       "Any key in its Secrets",
+       "Settings › Variables and secrets › New secret"
+      ],
+      [
+       "Give WhatsApp its link",
+       "WhatsApp › Configuration › Callback URL"
+      ]
+     ],
+     "sleep": "free box: sleeps after 48 h with no messages",
+     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "ask": "₹27,400 a month, or ₹0?"
+    },
+    "yt": {
+     "chapter": "Three ways, priced",
+     "title": "Three ways, priced",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "Prices from the companies' own pages. [1] A GPU server, all month: twenty-seven thousand four hundred. [2] A free two-core box: zero, and our bot still answered in about two seconds, because shop answers are short. [3] Or a tiny server that sends each message to an AI company: about twenty-eight rupees a month.",
+     "show": "Prices from the companies' own pages. A GPU server, all month: twenty-seven thousand four hundred. A free two-core box: zero, and our bot still answered in about two seconds, because shop answers are short. Or a tiny server that sends each message to an AI company: about twenty-eight rupees a month.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08
+    },
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "For a shop: the free box, or twenty-eight a month for a smarter model. [1] A GPU only pays off above about fifty thousand chats a day.",
+     "show": "For a shop: the free box, or twenty-eight a month for a smarter model. A GPU only pays off above about fifty thousand chats a day.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_deploy57",
+   "tail": 0.4,
+   "boost": 1.5,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "prop": "steps",
+      "n": 5
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "gpu": "₹27,400",
+     "zero": "₹0",
+     "zeroSub": "a free 2-core box",
+     "api": "₹28",
+     "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
+     "bars": [
+      [
+       "GPU server (Nvidia T4), all month",
+       "Hugging Face: $288 a month",
+       "₹27,432",
+       1.0,
+       "#dc2626"
+      ],
+      [
+       "free 2-core box (16 GB)",
+       "our test: ~2 s a reply · short shop answers",
+       "₹0",
+       0.0,
+       "#16a34a"
+      ],
+      [
+       "tiny server + an AI company's model",
+       "1.85 paise a chat × 50 chats a day",
+       "₹28",
+       0.004,
+       "#16a34a"
+      ]
+     ],
+     "pickA": [
+      "FREE BOX",
+      "₹0",
+      "our 7B model fits (8 GB of 16)"
+     ],
+     "pickB": [
+      "TINY SERVER + MODEL",
+      "₹28/mo",
+      "a smarter model, any small host"
+     ],
+     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "steps": [
+      [
+       "Put the code on a host",
+       "huggingface.co › New Space › CPU basic (free)"
+      ],
+      [
+       "Any key in its Secrets",
+       "Settings › Variables and secrets › New secret"
+      ],
+      [
+       "Give WhatsApp its link",
+       "WhatsApp › Configuration › Callback URL"
+      ]
+     ],
+     "sleep": "free box: sleeps after 48 h with no messages",
+     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "ask": "₹27,400 a month, or ₹0?"
+    },
+    "yt": {
+     "chapter": "Three steps",
+     "title": "Three steps",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "Three steps: [1] put the bot's code on a free Hugging Face Space. [2] Any key goes in its Secrets, never in the code. [3] Paste the Space's link into WhatsApp's callback URL.",
+     "show": "Three steps: put the bot's code on a free Hugging Face Space. Any key goes in its Secrets, never in the code. Paste the Space's link into WhatsApp's callback URL.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.08
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_deploy57",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 3.0,
+   "lift": 0.8,
+   "rise": 3.2,
+   "drop_at": [
+    [
+     0,
+     1,
+     0.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 6
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "gpu": "₹27,400",
+     "zero": "₹0",
+     "zeroSub": "a free 2-core box",
+     "api": "₹28",
+     "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
+     "bars": [
+      [
+       "GPU server (Nvidia T4), all month",
+       "Hugging Face: $288 a month",
+       "₹27,432",
+       1.0,
+       "#dc2626"
+      ],
+      [
+       "free 2-core box (16 GB)",
+       "our test: ~2 s a reply · short shop answers",
+       "₹0",
+       0.0,
+       "#16a34a"
+      ],
+      [
+       "tiny server + an AI company's model",
+       "1.85 paise a chat × 50 chats a day",
+       "₹28",
+       0.004,
+       "#16a34a"
+      ]
+     ],
+     "pickA": [
+      "FREE BOX",
+      "₹0",
+      "our 7B model fits (8 GB of 16)"
+     ],
+     "pickB": [
+      "TINY SERVER + MODEL",
+      "₹28/mo",
+      "a smarter model, any small host"
+     ],
+     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "steps": [
+      [
+       "Put the code on a host",
+       "huggingface.co › New Space › CPU basic (free)"
+      ],
+      [
+       "Any key in its Secrets",
+       "Settings › Variables and secrets › New secret"
+      ],
+      [
+       "Give WhatsApp its link",
+       "WhatsApp › Configuration › Callback URL"
+      ]
+     ],
+     "sleep": "free box: sleeps after 48 h with no messages",
+     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "ask": "₹27,400 a month, or ₹0?"
+    },
+    "yt": {
+     "chapter": "The catch",
+     "title": "The catch",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "One catch: after two days with no messages, the free box sleeps, and the next reply takes half a minute or more. [1] So before anyone rents you a GPU: twenty-seven thousand a month, or zero?",
+     "show": "One catch: after two days with no messages, the free box sleeps, and the next reply takes half a minute or more. So before anyone rents you a GPU: twenty-seven thousand a month, or zero?",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "tempo": 1.08
+    }
+   ]
+  }
+ ]
+}

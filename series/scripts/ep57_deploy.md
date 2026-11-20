@@ -84,3 +84,35 @@ Notes for Telugu: line 5 "మొదటి" must change (banned spoken word), and
 ## Caption try-it (no comment ask)
 "Before you pay for any server, count your chats: tokens per chat × chats per day × your API's price. Ours: 1.85 paise
 a chat, ₹28 a month at 50 chats a day."
+
+## Script review (human-viewer, v1), what changed for v2
+All three viewers stopped on frame 1: Kiran (26, built the EP51 bot), Arjun (30, a developer) and Narsimha (50, a
+kirana owner, Telugu). None of them knew where to deploy afterwards.
+- **Honesty (Arjun, checked against our own README):**
+  - The CPU bar paired an 8-core price with a 2-core speed. Our test ran on 2 cores, and a free 2-core, 16 GB box
+    (Hugging Face CPU Basic, free on its pricing page) fits the 8 GB model.
+  - So the clash is now ₹27,400 against ₹0, and ₹28 a month is the smarter-model option.
+  - "Same answers" is now "same questions" (gpt-5.4-mini never answered our 5).
+  - A break-even is on screen: a GPU pays off only above ~50,000 chats a day (₹27,432 ÷ 1.85 paise ÷ 30).
+- **"Which one, and where?":**
+  - The pick is said ("for a shop: the free box, or ₹28 a month for a smarter model").
+  - Three steps follow:
+    1. A free Hugging Face Space.
+    2. Any key in its Secrets: the HF docs, "Secrets to store access tokens, API keys".
+    3. Its link pasted into WhatsApp's Callback URL: Meta's docs, the Callback URL field in the app's WhatsApp
+       Configuration.
+- **Numbers:** "a month" every time ₹28 comes up. The pile of "twos" is gone (no ₹2,096 bar, no "two catches").
+- **The catch tied to the host:** "after two days with no messages, the free box sleeps; the next reply takes half a
+  minute or more" (HF: 48 h; our cold start: 24 s).
+- **No next-episode tease** (the career roadmap felt like a different show). It goes in the caption.
+- **Telugu:**
+  - no ఏపీఐ (each started with a lone ఏ): "ఒక పెద్ద కంపెనీ మోడల్ కి పంపే చిన్న సర్వర్";
+  - "బాట్ కూడా నిద్రపోతుంది";
+  - "ధరలు, ఆ కంపెనీల సొంత పేజీల నుంచే";
+  - "నెలకి" every time;
+  - "నిద్ర లేపిన మెసేజ్ కి జవాబు" (not మొదటి);
+  - "అద్దెకి ఇస్తామనేవాళ్ళని" (rent, not buy);
+  - no ఏఐ.
+- **Sound (for the build):** a drop before "zero" in lines 1 and 6, and a hit when the green block lands.
+
+## Script v2 (as voiced): see pipeline/ep57/make_specs.py (LINES)
