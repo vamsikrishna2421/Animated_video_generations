@@ -1,0 +1,1291 @@
+{
+ "id": "creative35v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "",
+ "musicVol": [
+  0.16,
+  0.28
+ ],
+ "title": "30 Days or 30 Weeks? (Creative 35)",
+ "handle": "@ai_maastaaru",
+ "label": "",
+ "fps": 30,
+ "musicDrops": [
+  [
+   110,
+   149
+  ],
+  [
+   1098,
+   1146
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   307,
+   2.2
+  ],
+  [
+   307,
+   962,
+   0.9
+  ],
+  [
+   961,
+   1209,
+   1.4
+  ],
+  [
+   1210,
+   1657,
+   2.6
+  ],
+  [
+   1657,
+   1763,
+   3.4
+  ],
+  [
+   814,
+   962,
+   1.7,
+   1
+  ],
+  [
+   1210,
+   1657,
+   1.8,
+   1
+  ],
+  [
+   1657,
+   1763,
+   3.6,
+   1
+  ]
+ ],
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1763,
+ "music": "reel/creative35v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_policy35",
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bill": "₹48,000 hospital claim",
+     "policy": "30 DAYS",
+     "ai": "30 WEEKS",
+     "aiGloss": "30 వారాల = 30 weeks",
+     "teLine": "30 వారాల మీద",
+     "story": "a story · our test is real",
+     "myth": "If the numbers match, the translation is right.",
+     "fact": "The number stayed. The unit changed.",
+     "factPic": [
+      "30 days",
+      "30 వారాల (weeks)"
+     ],
+     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "ask": "Translate this into Telugu for my mother:",
+     "askSub": "+ a 10-line health policy we wrote",
+     "tiles": [
+      [
+       "\"claim within 30 days\"",
+       "30 వారాల మీద ...",
+       "= on 30 weeks (one reply)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"covered only after 2 years\"",
+       "2 వారాల ...",
+       "= 2 weeks (one reply)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"maternity: not covered\"",
+       "జనన ఖర్చులు పరిష్కరించబడతాయి",
+       "= birth expenses will be settled (one reply)",
+       "kept 0 of 5",
+       false
+      ]
+     ],
+     "betterAsk": "+ \"KEEP EVERY NUMBER AND EVERY 'NOT'\"",
+     "betterNum": "4 of 5",
+     "betterNumLab": "\"30 days\" kept",
+     "betterNumSub": "\"2 years\": still only 2 of 5",
+     "betterNot": "0 of 5",
+     "betterLesson": "it helped some numbers, never the \"not\"",
+     "card": "Please send my policy's Customer Information Sheet in Telugu.",
+     "cardSrc": "IRDAI rule since Sep 2024: insurers must give it when you ask",
+     "cardNote": "it's a summary: the policy wording stays the reference",
+     "checkLab": "WITH ANY APP: SOMEONE WHO READS BOTH CHECKS",
+     "check": "days · weeks · months · every \"not\""
+    },
+    "yt": {
+     "chapter": "30 days or 30 weeks?",
+     "title": "30 days or 30 weeks?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 307,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative35v1/line_01.wav",
+     "from": 10,
+     "frames": 258,
+     "words": [
+      {
+       "w": "Imagine",
+       "from": 11,
+       "to": 21
+      },
+      {
+       "w": "Sarojini",
+       "from": 21,
+       "to": 33
+      },
+      {
+       "w": "garu's",
+       "from": 33,
+       "to": 43
+      },
+      {
+       "w": "policy:",
+       "from": 43,
+       "to": 58
+      },
+      {
+       "w": "claim",
+       "from": 58,
+       "to": 80
+      },
+      {
+       "w": "within",
+       "from": 80,
+       "to": 90
+      },
+      {
+       "w": "thirty",
+       "from": 90,
+       "to": 99
+      },
+      {
+       "w": "days.",
+       "from": 99,
+       "to": 107
+      },
+      {
+       "w": "Her",
+       "from": 107,
+       "to": 112
+      },
+      {
+       "w": "AI's",
+       "from": 134,
+       "to": 141
+      },
+      {
+       "w": "Telugu",
+       "from": 141,
+       "to": 151
+      },
+      {
+       "w": "said",
+       "from": 151,
+       "to": 158
+      },
+      {
+       "w": "thirty",
+       "from": 158,
+       "to": 168
+      },
+      {
+       "w": "weeks.",
+       "from": 168,
+       "to": 182
+      },
+      {
+       "w": "She",
+       "from": 182,
+       "to": 187
+      },
+      {
+       "w": "thought",
+       "from": 187,
+       "to": 215
+      },
+      {
+       "w": "she",
+       "from": 215,
+       "to": 220
+      },
+      {
+       "w": "had",
+       "from": 220,
+       "to": 226
+      },
+      {
+       "w": "time.",
+       "from": 226,
+       "to": 238
+      },
+      {
+       "w": "Rejected.",
+       "from": 238,
+       "to": 260
+      }
+     ],
+     "cues": {
+      "1": 134
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_policy35",
+   "data": {
+    "beats": [
+     {
+      "prop": "myth",
+      "n": 2
+     },
+     {
+      "prop": "test",
+      "n": 3
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bill": "₹48,000 hospital claim",
+     "policy": "30 DAYS",
+     "ai": "30 WEEKS",
+     "aiGloss": "30 వారాల = 30 weeks",
+     "teLine": "30 వారాల మీద",
+     "story": "a story · our test is real",
+     "myth": "If the numbers match, the translation is right.",
+     "fact": "The number stayed. The unit changed.",
+     "factPic": [
+      "30 days",
+      "30 వారాల (weeks)"
+     ],
+     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "ask": "Translate this into Telugu for my mother:",
+     "askSub": "+ a 10-line health policy we wrote",
+     "tiles": [
+      [
+       "\"claim within 30 days\"",
+       "30 వారాల మీద ...",
+       "= on 30 weeks (one reply)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"covered only after 2 years\"",
+       "2 వారాల ...",
+       "= 2 weeks (one reply)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"maternity: not covered\"",
+       "జనన ఖర్చులు పరిష్కరించబడతాయి",
+       "= birth expenses will be settled (one reply)",
+       "kept 0 of 5",
+       false
+      ]
+     ],
+     "betterAsk": "+ \"KEEP EVERY NUMBER AND EVERY 'NOT'\"",
+     "betterNum": "4 of 5",
+     "betterNumLab": "\"30 days\" kept",
+     "betterNumSub": "\"2 years\": still only 2 of 5",
+     "betterNot": "0 of 5",
+     "betterLesson": "it helped some numbers, never the \"not\"",
+     "card": "Please send my policy's Customer Information Sheet in Telugu.",
+     "cardSrc": "IRDAI rule since Sep 2024: insurers must give it when you ask",
+     "cardNote": "it's a summary: the policy wording stays the reference",
+     "checkLab": "WITH ANY APP: SOMEONE WHO READS BOTH CHECKS",
+     "check": "days · weeks · months · every \"not\""
+    },
+    "yt": {
+     "chapter": "Myth vs fact, our test",
+     "title": "Myth vs fact, our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 307,
+   "frames": 655,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative35v1/line_02.wav",
+     "from": 0,
+     "frames": 195,
+     "words": [
+      {
+       "w": "Myth:",
+       "from": 0,
+       "to": 6
+      },
+      {
+       "w": "if",
+       "from": 6,
+       "to": 18
+      },
+      {
+       "w": "the",
+       "from": 18,
+       "to": 22
+      },
+      {
+       "w": "numbers",
+       "from": 22,
+       "to": 31
+      },
+      {
+       "w": "match,",
+       "from": 31,
+       "to": 38
+      },
+      {
+       "w": "the",
+       "from": 38,
+       "to": 51
+      },
+      {
+       "w": "translation",
+       "from": 51,
+       "to": 64
+      },
+      {
+       "w": "is",
+       "from": 64,
+       "to": 67
+      },
+      {
+       "w": "right.",
+       "from": 67,
+       "to": 74
+      },
+      {
+       "w": "Fact:",
+       "from": 74,
+       "to": 96
+      },
+      {
+       "w": "in",
+       "from": 96,
+       "to": 99
+      },
+      {
+       "w": "our",
+       "from": 99,
+       "to": 103
+      },
+      {
+       "w": "test,",
+       "from": 103,
+       "to": 117
+      },
+      {
+       "w": "the",
+       "from": 117,
+       "to": 125
+      },
+      {
+       "w": "number",
+       "from": 125,
+       "to": 142
+      },
+      {
+       "w": "stayed",
+       "from": 142,
+       "to": 154
+      },
+      {
+       "w": "and",
+       "from": 154,
+       "to": 158
+      },
+      {
+       "w": "the",
+       "from": 158,
+       "to": 167
+      },
+      {
+       "w": "unit",
+       "from": 167,
+       "to": 172
+      },
+      {
+       "w": "changed.",
+       "from": 172,
+       "to": 186
+      }
+     ],
+     "cues": {
+      "1": 74
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative35v1/line_03.wav",
+     "from": 207,
+     "frames": 426,
+     "words": [
+      {
+       "w": "We",
+       "from": 207,
+       "to": 212
+      },
+      {
+       "w": "tested",
+       "from": 212,
+       "to": 221
+      },
+      {
+       "w": "a",
+       "from": 221,
+       "to": 224
+      },
+      {
+       "w": "small",
+       "from": 224,
+       "to": 241
+      },
+      {
+       "w": "free",
+       "from": 241,
+       "to": 248
+      },
+      {
+       "w": "AI",
+       "from": 248,
+       "to": 252
+      },
+      {
+       "w": "five",
+       "from": 252,
+       "to": 263
+      },
+      {
+       "w": "times,",
+       "from": 263,
+       "to": 272
+      },
+      {
+       "w": "not",
+       "from": 272,
+       "to": 278
+      },
+      {
+       "w": "ChatGPT",
+       "from": 278,
+       "to": 296
+      },
+      {
+       "w": "or",
+       "from": 296,
+       "to": 300
+      },
+      {
+       "w": "Google",
+       "from": 300,
+       "to": 314
+      },
+      {
+       "w": "Translate.",
+       "from": 314,
+       "to": 329
+      },
+      {
+       "w": "Thirty",
+       "from": 329,
+       "to": 339
+      },
+      {
+       "w": "days",
+       "from": 339,
+       "to": 346
+      },
+      {
+       "w": "was",
+       "from": 346,
+       "to": 366
+      },
+      {
+       "w": "right",
+       "from": 366,
+       "to": 374
+      },
+      {
+       "w": "only",
+       "from": 374,
+       "to": 382
+      },
+      {
+       "w": "once.",
+       "from": 382,
+       "to": 390
+      },
+      {
+       "w": "Once,",
+       "from": 390,
+       "to": 398
+      },
+      {
+       "w": "it",
+       "from": 398,
+       "to": 403
+      },
+      {
+       "w": "said",
+       "from": 403,
+       "to": 425
+      },
+      {
+       "w": "thirty",
+       "from": 425,
+       "to": 435
+      },
+      {
+       "w": "weeks.",
+       "from": 435,
+       "to": 445
+      },
+      {
+       "w": "Two",
+       "from": 445,
+       "to": 450
+      },
+      {
+       "w": "years",
+       "from": 450,
+       "to": 475
+      },
+      {
+       "w": "once",
+       "from": 475,
+       "to": 482
+      },
+      {
+       "w": "became",
+       "from": 482,
+       "to": 492
+      },
+      {
+       "w": "two",
+       "from": 492,
+       "to": 497
+      },
+      {
+       "w": "weeks.",
+       "from": 497,
+       "to": 507
+      },
+      {
+       "w": "And",
+       "from": 507,
+       "to": 513
+      },
+      {
+       "w": "one",
+       "from": 513,
+       "to": 534
+      },
+      {
+       "w": "reply",
+       "from": 534,
+       "to": 542
+      },
+      {
+       "w": "turned",
+       "from": 542,
+       "to": 552
+      },
+      {
+       "w": "maternity",
+       "from": 552,
+       "to": 566
+      },
+      {
+       "w": "'not",
+       "from": 566,
+       "to": 573
+      },
+      {
+       "w": "covered'",
+       "from": 573,
+       "to": 586
+      },
+      {
+       "w": "into",
+       "from": 586,
+       "to": 601
+      },
+      {
+       "w": "'will",
+       "from": 601,
+       "to": 610
+      },
+      {
+       "w": "be",
+       "from": 610,
+       "to": 614
+      },
+      {
+       "w": "settled'.",
+       "from": 614,
+       "to": 628
+      }
+     ],
+     "cues": {
+      "1": 329,
+      "2": 445,
+      "3": 507
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_policy35",
+   "data": {
+    "beats": [
+     {
+      "prop": "better",
+      "n": 4
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bill": "₹48,000 hospital claim",
+     "policy": "30 DAYS",
+     "ai": "30 WEEKS",
+     "aiGloss": "30 వారాల = 30 weeks",
+     "teLine": "30 వారాల మీద",
+     "story": "a story · our test is real",
+     "myth": "If the numbers match, the translation is right.",
+     "fact": "The number stayed. The unit changed.",
+     "factPic": [
+      "30 days",
+      "30 వారాల (weeks)"
+     ],
+     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "ask": "Translate this into Telugu for my mother:",
+     "askSub": "+ a 10-line health policy we wrote",
+     "tiles": [
+      [
+       "\"claim within 30 days\"",
+       "30 వారాల మీద ...",
+       "= on 30 weeks (one reply)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"covered only after 2 years\"",
+       "2 వారాల ...",
+       "= 2 weeks (one reply)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"maternity: not covered\"",
+       "జనన ఖర్చులు పరిష్కరించబడతాయి",
+       "= birth expenses will be settled (one reply)",
+       "kept 0 of 5",
+       false
+      ]
+     ],
+     "betterAsk": "+ \"KEEP EVERY NUMBER AND EVERY 'NOT'\"",
+     "betterNum": "4 of 5",
+     "betterNumLab": "\"30 days\" kept",
+     "betterNumSub": "\"2 years\": still only 2 of 5",
+     "betterNot": "0 of 5",
+     "betterLesson": "it helped some numbers, never the \"not\"",
+     "card": "Please send my policy's Customer Information Sheet in Telugu.",
+     "cardSrc": "IRDAI rule since Sep 2024: insurers must give it when you ask",
+     "cardNote": "it's a summary: the policy wording stays the reference",
+     "checkLab": "WITH ANY APP: SOMEONE WHO READS BOTH CHECKS",
+     "check": "days · weeks · months · every \"not\""
+    },
+    "yt": {
+     "chapter": "A better prompt?",
+     "title": "A better prompt?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 961,
+   "frames": 248,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative35v1/line_04.wav",
+     "from": 0,
+     "frames": 230,
+     "words": [
+      {
+       "w": "Telling",
+       "from": 2,
+       "to": 13
+      },
+      {
+       "w": "it",
+       "from": 13,
+       "to": 21
+      },
+      {
+       "w": "to",
+       "from": 21,
+       "to": 25
+      },
+      {
+       "w": "keep",
+       "from": 25,
+       "to": 32
+      },
+      {
+       "w": "every",
+       "from": 32,
+       "to": 40
+      },
+      {
+       "w": "number",
+       "from": 40,
+       "to": 56
+      },
+      {
+       "w": "and",
+       "from": 56,
+       "to": 62
+      },
+      {
+       "w": "every",
+       "from": 62,
+       "to": 70
+      },
+      {
+       "w": "'not'",
+       "from": 70,
+       "to": 88
+      },
+      {
+       "w": "fixed",
+       "from": 88,
+       "to": 96
+      },
+      {
+       "w": "thirty",
+       "from": 96,
+       "to": 117
+      },
+      {
+       "w": "days:",
+       "from": 117,
+       "to": 125
+      },
+      {
+       "w": "four",
+       "from": 125,
+       "to": 132
+      },
+      {
+       "w": "of",
+       "from": 132,
+       "to": 136
+      },
+      {
+       "w": "five.",
+       "from": 161,
+       "to": 167
+      },
+      {
+       "w": "But",
+       "from": 167,
+       "to": 171
+      },
+      {
+       "w": "'not",
+       "from": 171,
+       "to": 182
+      },
+      {
+       "w": "covered'",
+       "from": 182,
+       "to": 201
+      },
+      {
+       "w": "still",
+       "from": 201,
+       "to": 207
+      },
+      {
+       "w": "never",
+       "from": 207,
+       "to": 213
+      },
+      {
+       "w": "survived.",
+       "from": 213,
+       "to": 224
+      }
+     ],
+     "cues": {
+      "1": 161
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_policy35",
+   "data": {
+    "beats": [
+     {
+      "prop": "rule",
+      "n": 5
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bill": "₹48,000 hospital claim",
+     "policy": "30 DAYS",
+     "ai": "30 WEEKS",
+     "aiGloss": "30 వారాల = 30 weeks",
+     "teLine": "30 వారాల మీద",
+     "story": "a story · our test is real",
+     "myth": "If the numbers match, the translation is right.",
+     "fact": "The number stayed. The unit changed.",
+     "factPic": [
+      "30 days",
+      "30 వారాల (weeks)"
+     ],
+     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "ask": "Translate this into Telugu for my mother:",
+     "askSub": "+ a 10-line health policy we wrote",
+     "tiles": [
+      [
+       "\"claim within 30 days\"",
+       "30 వారాల మీద ...",
+       "= on 30 weeks (one reply)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"covered only after 2 years\"",
+       "2 వారాల ...",
+       "= 2 weeks (one reply)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"maternity: not covered\"",
+       "జనన ఖర్చులు పరిష్కరించబడతాయి",
+       "= birth expenses will be settled (one reply)",
+       "kept 0 of 5",
+       false
+      ]
+     ],
+     "betterAsk": "+ \"KEEP EVERY NUMBER AND EVERY 'NOT'\"",
+     "betterNum": "4 of 5",
+     "betterNumLab": "\"30 days\" kept",
+     "betterNumSub": "\"2 years\": still only 2 of 5",
+     "betterNot": "0 of 5",
+     "betterLesson": "it helped some numbers, never the \"not\"",
+     "card": "Please send my policy's Customer Information Sheet in Telugu.",
+     "cardSrc": "IRDAI rule since Sep 2024: insurers must give it when you ask",
+     "cardNote": "it's a summary: the policy wording stays the reference",
+     "checkLab": "WITH ANY APP: SOMEONE WHO READS BOTH CHECKS",
+     "check": "days · weeks · months · every \"not\""
+    },
+    "yt": {
+     "chapter": "What to ask for",
+     "title": "What to ask for",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1210,
+   "frames": 447,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative35v1/line_05.wav",
+     "from": 0,
+     "frames": 404,
+     "words": [
+      {
+       "w": "So",
+       "from": 2,
+       "to": 6
+      },
+      {
+       "w": "for",
+       "from": 6,
+       "to": 11
+      },
+      {
+       "w": "money",
+       "from": 11,
+       "to": 18
+      },
+      {
+       "w": "papers,",
+       "from": 18,
+       "to": 43
+      },
+      {
+       "w": "ask",
+       "from": 43,
+       "to": 47
+      },
+      {
+       "w": "your",
+       "from": 47,
+       "to": 53
+      },
+      {
+       "w": "agent",
+       "from": 53,
+       "to": 60
+      },
+      {
+       "w": "or",
+       "from": 60,
+       "to": 64
+      },
+      {
+       "w": "customer",
+       "from": 64,
+       "to": 74
+      },
+      {
+       "w": "care",
+       "from": 74,
+       "to": 84
+      },
+      {
+       "w": "for",
+       "from": 84,
+       "to": 88
+      },
+      {
+       "w": "the",
+       "from": 88,
+       "to": 102
+      },
+      {
+       "w": "Customer",
+       "from": 102,
+       "to": 116
+      },
+      {
+       "w": "Information",
+       "from": 116,
+       "to": 130
+      },
+      {
+       "w": "Sheet",
+       "from": 130,
+       "to": 140
+      },
+      {
+       "w": "in",
+       "from": 140,
+       "to": 144
+      },
+      {
+       "w": "Telugu.",
+       "from": 144,
+       "to": 170
+      },
+      {
+       "w": "Since",
+       "from": 170,
+       "to": 182
+      },
+      {
+       "w": "2024,",
+       "from": 182,
+       "to": 189
+      },
+      {
+       "w": "insurers",
+       "from": 189,
+       "to": 200
+      },
+      {
+       "w": "must",
+       "from": 200,
+       "to": 214
+      },
+      {
+       "w": "give",
+       "from": 214,
+       "to": 220
+      },
+      {
+       "w": "it",
+       "from": 220,
+       "to": 224
+      },
+      {
+       "w": "when",
+       "from": 224,
+       "to": 234
+      },
+      {
+       "w": "you",
+       "from": 234,
+       "to": 239
+      },
+      {
+       "w": "ask.",
+       "from": 239,
+       "to": 245
+      },
+      {
+       "w": "With",
+       "from": 245,
+       "to": 251
+      },
+      {
+       "w": "any",
+       "from": 251,
+       "to": 271
+      },
+      {
+       "w": "app,",
+       "from": 271,
+       "to": 277
+      },
+      {
+       "w": "get",
+       "from": 277,
+       "to": 282
+      },
+      {
+       "w": "someone",
+       "from": 282,
+       "to": 306
+      },
+      {
+       "w": "who",
+       "from": 306,
+       "to": 311
+      },
+      {
+       "w": "reads",
+       "from": 311,
+       "to": 318
+      },
+      {
+       "w": "both",
+       "from": 318,
+       "to": 324
+      },
+      {
+       "w": "languages",
+       "from": 324,
+       "to": 340
+      },
+      {
+       "w": "to",
+       "from": 340,
+       "to": 343
+      },
+      {
+       "w": "check",
+       "from": 343,
+       "to": 358
+      },
+      {
+       "w": "every",
+       "from": 358,
+       "to": 365
+      },
+      {
+       "w": "unit",
+       "from": 365,
+       "to": 371
+      },
+      {
+       "w": "and",
+       "from": 371,
+       "to": 376
+      },
+      {
+       "w": "every",
+       "from": 376,
+       "to": 387
+      },
+      {
+       "w": "'not'.",
+       "from": 387,
+       "to": 395
+      }
+     ],
+     "cues": {
+      "1": 170,
+      "2": 245
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_policy35",
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 6
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bill": "₹48,000 hospital claim",
+     "policy": "30 DAYS",
+     "ai": "30 WEEKS",
+     "aiGloss": "30 వారాల = 30 weeks",
+     "teLine": "30 వారాల మీద",
+     "story": "a story · our test is real",
+     "myth": "If the numbers match, the translation is right.",
+     "fact": "The number stayed. The unit changed.",
+     "factPic": [
+      "30 days",
+      "30 వారాల (weeks)"
+     ],
+     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "ask": "Translate this into Telugu for my mother:",
+     "askSub": "+ a 10-line health policy we wrote",
+     "tiles": [
+      [
+       "\"claim within 30 days\"",
+       "30 వారాల మీద ...",
+       "= on 30 weeks (one reply)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"covered only after 2 years\"",
+       "2 వారాల ...",
+       "= 2 weeks (one reply)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"maternity: not covered\"",
+       "జనన ఖర్చులు పరిష్కరించబడతాయి",
+       "= birth expenses will be settled (one reply)",
+       "kept 0 of 5",
+       false
+      ]
+     ],
+     "betterAsk": "+ \"KEEP EVERY NUMBER AND EVERY 'NOT'\"",
+     "betterNum": "4 of 5",
+     "betterNumLab": "\"30 days\" kept",
+     "betterNumSub": "\"2 years\": still only 2 of 5",
+     "betterNot": "0 of 5",
+     "betterLesson": "it helped some numbers, never the \"not\"",
+     "card": "Please send my policy's Customer Information Sheet in Telugu.",
+     "cardSrc": "IRDAI rule since Sep 2024: insurers must give it when you ask",
+     "cardNote": "it's a summary: the policy wording stays the reference",
+     "checkLab": "WITH ANY APP: SOMEONE WHO READS BOTH CHECKS",
+     "check": "days · weeks · months · every \"not\""
+    },
+    "yt": {
+     "chapter": "30 days or 30 weeks?",
+     "title": "30 days or 30 weeks?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1657,
+   "frames": 106,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative35v1/line_06.wav",
+     "from": 9,
+     "frames": 67,
+     "words": [
+      {
+       "w": "Thirty",
+       "from": 10,
+       "to": 20
+      },
+      {
+       "w": "days,",
+       "from": 20,
+       "to": 27
+      },
+      {
+       "w": "or",
+       "from": 27,
+       "to": 43
+      },
+      {
+       "w": "thirty",
+       "from": 43,
+       "to": 57
+      },
+      {
+       "w": "weeks?",
+       "from": 57,
+       "to": 70
+      }
+     ],
+     "cues": {
+      "1": 27
+     }
+    }
+   ]
+  }
+ ]
+}
