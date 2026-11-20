@@ -32,6 +32,51 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-20 (EP57 "₹27,400 or ₹0? Deploy Your AI App", the Friday syllabus episode, queue 061)
+- **The one variable (your EP55 48h read): a money-first frame 1.** No count; the viewer's own monthly bill.
+  - "GPU SERVER QUOTE: ₹27,400 a month" against "FREE CPU BOX: ₹0 · our 2-core test: ~2 s a reply", next to Ravi's shop
+    bot answering "₹165".
+  - Line 1 EN: "A GPU server for a shop bot: twenty-seven thousand four hundred rupees a month. … A free CPU box:
+    zero." The green block lands on "zero" with a hit.
+  - The middle stays the Season 6 shape. EN 75 s, TE 73 s.
+  - Point family H (cost asymmetry), last used by EP46.
+- **Our test** (`pipeline/ep57/deploy_demo.py`, committed before it ran; `series/scripts/ep57_demo/README.md`):
+  - EP51's shop bot on Qwen2.5-7B: 8,017 MB of memory, a 24 s cold start, 1.2-2.3 s a reply on 4 or 2 CPU cores (shop
+    answers are 3-4 words). All 5 answers right.
+  - A tiny server that forwards to an API: 22 MB.
+  - Prices from the companies' own pages (Nov 20):
+    - Hugging Face T4 $288 a month, about ₹27,400;
+    - Hugging Face CPU Basic (2 vCPU, 16 GB) free, and it sleeps after 48 h idle;
+    - gpt-5.4-mini: 1.85 paise a chat, ₹28 a month at 50 chats a day.
+  - The steps follow Hugging Face's docs (Secrets) and Meta's WhatsApp docs (Callback URL).
+- **Viewers:**
+  - Script stage:
+    - The CPU bar mixed an 8-core price with a 2-core speed, so the clash became ₹27,400 vs ₹0.
+    - Added: the pick and three named steps; "a month" every time; the break-even (a GPU beats the API only above
+      ~50,000 chats a day).
+    - The next-episode tease went to the caption.
+    - Telugu: no ఏపీఐ / ఏఐ / మొదటి.
+  - Render stage:
+    - One GPU number (₹27,400) everywhere.
+    - A beat and a hit on "zero"; an honest green block.
+    - The steps text twice the size and held; bars and step slots from the first word; a wake-up timer on the catch.
+    - The Telugu steps say plain words, with the names on screen.
+    - Re-voiced Telugu lines where Parler dropped an opening or stuttered.
+    - A stronger audio arc.
+- **Files:**
+  - `out/061_ep57_deploy_your_ai_app.mp4` (+ `_ig`), `out/061_ep57_captions.txt`.
+  - `out/telugu_page/061_ep57_insta_te.mp4` (+ `_ig`), `out/telugu_page/061_ep57_captions_te.txt`.
+  - `out/youtube/061_ep57_youtube.txt`.
+  - The old lesson-format render for slot 061 is replaced.
+  - The try-it is in the caption body; the pinned comment has the method and the tiny server's code (tested here
+    against a stand-in API).
+- **[QUESTION] at 48h:**
+  1. EN and TE 3-s hold: does the money-first frame beat EP55's 32.2% and EP54's 43.7%, towards the 64-66% control?
+  2. Saves (the three steps are built to be saved).
+  3. Any comment asking which host, or about WhatsApp.
+  4. TE reach.
+— Claude, 2026-11-20
+
 ### [ACK] Claude — 2026-11-20 (Re: Bujji 2026-11-19: Creative 29 48h; Skit 22 7-day; TE-graphics flag closed)
 - **Creative 29 48h:** logged in `series/creative_log.md` (row 29). What changes:
   - Suggestion 1: every frame-1 stake is the viewer's own money. Tonight's myth-vs-fact (Nov 20 creative) opens on a
