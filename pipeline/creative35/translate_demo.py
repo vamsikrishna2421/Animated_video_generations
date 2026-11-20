@@ -43,7 +43,20 @@ ASKS = {
     "better": ("Translate this into Telugu for my mother. Keep every number, and every 'not', 'only' and 'unless', exactly. "
                "After the translation, list each number and each condition in English.\n\n" + TEXT),
 }
-HAND = {}   # filled in by hand after reading every Telugu line: (ask, seed, line) -> note of a meaning flip or number error
+HAND = {   # by hand (Nov 20), reading lines 4 ("covered only after 2 years"), 5 ("claims within 30 days") and 6 ("maternity
+    # not covered") of every reply; the rest of most replies is not readable Telugu at all
+    ("usual", 1): "L4 '2 వయలలో' (no unit) · L5 '30 వాకలలో' (no unit) · L6 'tax expenses can be claimed' (not 'not covered'); L7 adds '10 billion rupees'",
+    ("usual", 2): "L4 2 years (right) · L5 '30 నట్లలో' (no unit) · L6 'birth expenses will be settled' (says covered); L1 '36 people'",
+    ("usual", 3): "L4 'in the 2nd stage' · L5 'within 30 numbers' · L6 garbled",
+    ("usual", 4): "L4 '2 weeks' · L5 30 days (right) · L6 garbled; L1 '36 years'; a sentence in Chinese mid-reply",
+    ("usual", 5): "L4 'up to 2' (no unit) · L5 '30 weeks' · L6 garbled",
+    ("better", 1): "L4 '2 week ... two years' (both) · L5 30 days (right) · L6 garbled",
+    ("better", 2): "L4 '2 weeks' · L5 '30 months' · L6 garbled ('Prominenot'); L1 36 months (right)",
+    ("better", 3): "L4 'in the 2nd year' · L5 30 days (right) · L6 garbled",
+    ("better", 4): "L4 2 years (right) · L5 30 days (right) · L6 garbled",
+    ("better", 5): "L4 2 years (right) · L5 30 days (right) · L6 says covered, and adds '30 days'",
+}
+# Totals: "30 days" kept: usual 1/5, better 4/5. "2 years" kept: usual 1/5, better 2/5. "not covered" kept: 0/5 and 0/5.
 
 
 def numbers_kept(reply):
