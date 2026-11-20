@@ -1,0 +1,28 @@
+UPLOAD: 061 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/061_ep57_insta_te.mp4  (a screen tutorial, TE_LEN s, Telugu voice on our TTS, English on-screen text; send copy: telugu_page/061_ep57_insta_te_ig.mp4). It ends on frame 1: "₹27,400 a month, or ₹0?"
+
+=== CAPTION ===
+Shop bot ki GPU server: nelaki ₹27,400. Maa test lo: ₹0. Ade bot, ave prashnalu.
+
+AI From Scratch Episode 57: mee AI app ni deploy cheyyadam (Season 6, screen tutorial)
+Deploy ante: bot ni mee laptop nunchi, eppudu on lo unde computer ki maarchadam. Moodu daarulu, aa companies sontha pages lo dharalu (Nov 20, 2026; dollar ki ₹95.25, RBI reference rate Nov 6):
+1. GPU server meeda model, nelanthaa (Hugging Face, Nvidia T4 small): $288 = nelaki daadaapu ₹27,400.
+2. Free 2-core computer (Hugging Face CPU Basic: 2 vCPU, 16 GB, free): ₹0. Maa 7B model (8 GB) saripotundi; shop javaabulu 3-4 maatale kaabatti, daadaapu 2 seconds lo javaabichchindi.
+3. Prathi message ni oka pedda company model ki pampe chinna server (22 MB): rojuki 50 chats ki nelaki daadaapu ₹28 (OpenAI gpt-5.4-mini dhara: okka chat ki 1.85 paisalu; idi okka model dhara maatrame).
+Rojuki 50,000 chats daatithene GPU laabham.
+
+Steps: 1) bot code ni oka host lo pettandi, udaaharanaku free Hugging Face Space (CPU basic). 2) Key unte, Space Settings > Variables and secrets > New secret lo pettandi, code lo kaadu. 3) Space link ni WhatsApp > Configuration > Callback URL lo paste cheyyandi (Meta WhatsApp Business Platform docs).
+Okka jaagratha: 48 gantalu evaroo raakapothe free Space nidrapotundi; nidra lepina message ki javaabu ara nimisham pine (maa cold start: 24 s).
+
+Server ki dabbulu katte mundu lekka veyyandi: okka chat tokens × rojuki chats × mee model dhara. Maadi: chat ki 1.85 paisalu, rojuki 50 chats ki nelaki ₹28.
+
+Next: mee AI career roadmap.
+
+=== COMMENT PROMPT ===
+(none)
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #AIFromScratch #Deploy #WhatsAppBot
+
+=== PINNED_COMMENT ===
+Ela test chesam (Nov 20, 2026): EP51 shop bot (price list system prompt lo), Qwen2.5-7B-Instruct 4-bit (llama.cpp) maa computer lo. Self-hosted: 8,017 MB memory, cold start nunchi modati javaabuki 24 s, 4 cores lo 1.2-1.5 s, 2 cores lo 1.7-2.3 s okka javaabuki (5 javaabulu correct). API ki pampe chinna server: 21.7 MB, 0.2 s lo start. Nijamaina cloud lo deploy, paid API, GPU test cheyyaledu. Code English page pinned comment lo undi.

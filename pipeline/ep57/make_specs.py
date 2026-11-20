@@ -43,10 +43,10 @@ T = {
     "sleep": "free box: sleeps after 48 h with no messages", "wake": "the next reply: half a minute or more (our cold start: 24 s)",
     "ask": "₹27,400 a month, or ₹0?",
 }
-SCENES = [("s_a", (1,), {"boost": 1.8, "drop_at": [[0, 1, 0.6]], "tail": 0.0}),   # review: a drop before "zero"
+SCENES = [("s_a", (1,), {"boost": 2.2, "drop_at": [[0, 1, 0.6]], "tail": 0.0}),   # review: a drop before "zero"
           ("s_b", (2,), {"boost": 0.9, "lift": 0.5, "tail": 0.2}),
-          ("s_c", (3, 4), {"boost": 1.1, "lift": 0.6, "tail": 0.3}),
-          ("s_d", (5,), {"boost": 1.5, "lift": 0.6, "tail": 0.4}),
+          ("s_c", (3, 4), {"boost": 0.95, "lift": 0.6, "tail": 0.3}),   # render v1: quarters 1-3 flat; a dip under the bars
+          ("s_d", (5,), {"boost": 1.9, "lift": 0.7, "tail": 0.4}),   # a lift under the steps
           ("s_e", (6,), {"outro": True, "pre": 0.3, "boost": 3.0, "lift": 0.8, "rise": 3.2, "drop_at": [[0, 1, 0.5]], "tail": 0.0})]
 GAP = {1: 0.4, 2: 0.4, 3: 0.4, 4: 0.4, 5: 0.4, 6: 0.0}
 FLAGS_TE = {"s_e": {"boost": 2.8, "rise": 3.0}}

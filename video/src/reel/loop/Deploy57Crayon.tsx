@@ -120,14 +120,14 @@ const StDeploy: React.FC<SP> = ({ s }) => {
         else if (P === "loop") {   // the catch (the free box sleeps), then back to frame 1 with the question
           const c1 = cu(1, 0.2);
           if (f < c1 - 4) {
-            c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("ONE CATCH", W / 2, 330);
+            c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("ONE CATCH", W / 2, 365);
             c.fillStyle = "#1e293b"; rrect(c, 70, 420, W - 140, 620, 26); c.fill();
             c.font = SANS(150, 900); c.fillStyle = "#93c5fd"; c.fillText("z z z", W / 2, 680 - (f % 40));
             c.font = SANS(fit(c, T.sleep, W - 200, 42, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.sleep, W / 2, 840);
             c.font = SANS(fit(c, T.wake, W - 200, 36, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(T.wake, W / 2, 920);
           } else frame1(true);
         } else if (P === "laptop") {
-          c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("DEPLOY = ALWAYS ON", W / 2, 330);
+          c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("DEPLOY = ALWAYS ON", W / 2, 365);
           const close = seg(f, cu(1, 0.3), cu(1, 0.3) + 10);
           laptop(c, 330, 900, 420, 1 - close * 0.96, f);
           c.font = SANS(32, 800); c.fillStyle = "#cbd5e1"; c.textAlign = "center"; c.fillText("Suresh's laptop", 330, 980);
@@ -139,8 +139,8 @@ const StDeploy: React.FC<SP> = ({ s }) => {
           }
           rack(c, 820, 900, seg(f, cu(1, 0.75), cu(1, 0.75) + 8), f);
         } else if (P === "bars") {
-          c.font = SANS(fit(c, "A MONTH, 24×7", W - 100, 56, 900), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("A MONTH, 24×7", W / 2, 330);
-          c.font = SANS(fit(c, T.src, W - 100, 28, 700), 700); c.fillStyle = "#94a3b8"; c.fillText(T.src, W / 2, 380);
+          c.font = SANS(fit(c, "A MONTH, 24×7", W - 100, 56, 900), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("A MONTH, 24×7", W / 2, 365);
+          c.font = SANS(fit(c, T.src, W - 100, 28, 700), 700); c.fillStyle = "#94a3b8"; c.fillText(T.src, W / 2, 410);
           const bars = T.bars as [string, string, string, number, string][];   // [label, sub, value, fraction of the biggest, colour]
           bars.forEach(([lab, sub, val, frac, col], q) => {
             const st = cu(q + 1, 0.3), k = seg(f, st - 4, st + 14);
@@ -155,7 +155,7 @@ const StDeploy: React.FC<SP> = ({ s }) => {
             c.restore();
           });
         } else if (P === "pick") {
-          c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("FOR A SHOP", W / 2, 330);
+          c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("FOR A SHOP", W / 2, 365);
           const card = (x: number, [t, v, sub]: string[], k: number) => {
             if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = "#14532d"; rrect(c, x, 400, 450, 420, 26); c.fill();
@@ -170,7 +170,7 @@ const StDeploy: React.FC<SP> = ({ s }) => {
             c.font = SANS(40, 900); c.fillStyle = "#fecaca"; c.textAlign = "center"; c.fillText("GPU?", W / 2, 950);
             c.font = SANS(fit(c, T.breakeven, W - 180, 44, 900), 900); c.fillStyle = "#fff"; c.fillText(T.breakeven, W / 2, 1030); c.restore(); }
         } else if (P === "steps") {
-          c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("3 STEPS", W / 2, 330);
+          c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("3 STEPS", W / 2, 365);
           (T.steps as [string, string][]).forEach(([a, sub], q) => {
             const st = cu(q + 1, 0.3), k = seg(f, st - 6, st + 4);
             if (k <= 0) return;
