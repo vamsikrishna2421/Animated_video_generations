@@ -32,6 +32,59 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-20 (Creative 35 "30 Days or 30 Weeks?", the Nov 20 creative slot)
+- **Format:** myth vs fact, last used by Creative 28 (Nov 13). One narrator, no dialogue.
+- **Cast:** new; Sarojini garu (60, made up by us) and her phone.
+- **Point family Q (new): lost in translation.** The AI's Telugu keeps the number and changes the meaning. Creative 34
+  (E) and EP57 (H) post before it, so the families don't repeat.
+- **Frame 1 (the reach stack):**
+  - Two numbers on the same policy line: "POLICY: CLAIM WITHIN 30 DAYS" against "THE AI'S TELUGU: 30 WEEKS".
+  - Sarojini garu's phone shows the model's own words, "30 వారాల మీద", tagged "a story · our test is real".
+  - The ₹48,000 claim bar lands at 1.5 s.
+  - The CLAIM REJECTED stamp lands on the word.
+  - Line 1: "Imagine Sarojini garu's policy: claim within thirty days."
+- **Our test** (`pipeline/creative35/translate_demo.py`, committed before it ran; every reply read by hand):
+  - Setup: a 10-line health policy we wrote, Qwen2.5-7B on our computer, 5 fresh chats per ask.
+  - "Translate this into Telugu for my mother":
+    - "30 days" right 1 of 5 (once "30 weeks");
+    - "2 years" right 1 of 5 (once "2 weeks");
+    - "not covered" kept 0 of 5 (one reply: "birth expenses will be settled").
+  - Adding "keep every number and every 'not'": 4 of 5, 2 of 5 and 0 of 5.
+  - ChatGPT and Google Translate were not tested, and the voice says so.
+- **The fact we checked:** IRDAI's Master Circular on Protection of Policyholders' Interests (Sep 5, 2024). The
+  Customer Information Sheet must be given in regional languages on request (Business Standard, Sep 6, 2024; TeamLease
+  RegTech; Angel One).
+- **Viewers:**
+  - Script stage:
+    - The myth was changed so the reel no longer argues against itself.
+    - "Customer Information Sheet" is said, plus who to ask, with a card to screenshot.
+    - The story is labelled.
+    - The counts are honest ("once").
+  - Render stage:
+    - Two overclaims were fixed: "will be settled" is now "one reply", and the better ask's "every 'not'" is said.
+    - "2 years: still only 2 of 5" is shown.
+    - The three findings are three short sentences.
+    - The English check now says "someone who reads both languages".
+    - The text is larger and the stamp holds.
+    - A 0.7 s silence before "never survived", then the ask builds louder.
+    - Telugu: "మా టెస్ట్ లో" is back (without it, the result sounded like a rule), the check is "ఇంగ్లీష్, తెలుగు
+      రెండూ చదివే వాళ్ళతో", the captions now follow the Telugu voice, there is a breath before the ask, and
+      "ఉందనుకున్నారు" for a garu.
+    - Both cuts are under 60 s (EN 58.9 s, TE 58.6 s).
+- **Files:**
+  - `out/skits/35_30_days_or_30_weeks.mp4` (EN, 59 s) and `out/skits/35_30_days_or_30_weeks_te.mp4` (TE, 59 s), each
+    with an `_ig` copy.
+  - `out/skits/35_30_days_or_30_weeks_post.txt`.
+- **Applied:**
+  - No comment ask: the try-it is in the caption body (ask your agent or customer care for the Telugu sheet this week).
+  - The pinned comment carries the method only.
+- **[QUESTION] at 48h:**
+  1. Saves: the ASK FOR THIS card is built to be screenshotted. Do saves beat Creative 34's?
+  2. TE vs EN reach: this is the first Telugu-language-specific point.
+  3. Any comment saying "ChatGPT/Google gets it right": we'd test the big apps next if people ask.
+  4. Shares into family groups (sends per reach).
+— Claude, 2026-11-20
+
 ### [NEW] Claude — 2026-11-20 (EP57 "₹27,400 or ₹0? Deploy Your AI App", the Friday syllabus episode, queue 061)
 - **The one variable (your EP55 48h read): a money-first frame 1.** No count; the viewer's own monthly bill.
   - "GPU SERVER QUOTE: ₹27,400 a month" against "FREE CPU BOX: ₹0 · our 2-core test: ~2 s a reply", next to Ravi's shop
