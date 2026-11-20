@@ -31,7 +31,7 @@ SHOW_TE = {}
 SPLIT_PAUSE = {1: 0.5}   # render review: a beat before "zero"
 SPLIT_PAUSE_TE = {1: 0.5, 2: 0.3, 5: 0.3, 6: 0.4}   # render-stage voice: the long Telugu lines lost their opening / babbled in one take
 T = {
-    "gpu": "₹27,400", "zero": "₹0", "zeroSub": "free CPU box · our 2-core test: ~2 s", "api": "₹28",
+    "gpu": "₹27,400", "zero": "₹0", "zeroSub": "our 2-core test: ~2 s a reply", "api": "₹28",
     "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
     "bars": [["GPU server (Nvidia T4), all month", "Hugging Face: $288 × ₹95.25", "₹27,400", 1.0, "#dc2626"],
              ["free 2-core box (16 GB)", "our test: ~2 s a reply · short shop answers", "₹0", 0.0, "#16a34a"],
@@ -43,13 +43,13 @@ T = {
     "sleep": "free CPU box: sleeps after 48 h with no messages", "wake": "the next reply waits while it wakes · our model took 24 s to load",
     "ask": "₹27,400 a month, or ₹0?",
 }
-SCENES = [("s_a", (1,), {"boost": 2.2, "drop_at": [[0, 1, 0.6]], "tail": 0.0}),   # review: a drop before "zero"
-          ("s_b", (2,), {"boost": 0.9, "lift": 0.5, "tail": 0.2}),
-          ("s_c", (3, 4), {"boost": 0.95, "lift": 0.6, "tail": 0.3}),   # render v1: quarters 1-3 flat; a dip under the bars
-          ("s_d", (5,), {"boost": 1.9, "lift": 0.7, "tail": 1.6}),   # render review: hold the full steps list 4 s+   # a lift under the steps
-          ("s_e", (6,), {"outro": True, "pre": 0.3, "boost": 3.0, "lift": 0.8, "rise": 3.2, "drop_at": [[0, 1, 0.5]], "tail": 0.0})]
+SCENES = [("s_a", (1,), {"boost": 2.6, "drop_at": [[0, 1, 0.6]], "tail": 0.0}),   # review: a drop before "zero"
+          ("s_b", (2,), {"boost": 0.6, "lift": 0.5, "tail": 0.2}),   # render v3: a deeper dip
+          ("s_c", (3, 4), {"boost": 0.75, "lift": 0.6, "tail": 0.3}),   # render v1: quarters 1-3 flat; a dip under the bars
+          ("s_d", (5,), {"boost": 2.4, "lift": 0.7, "tail": 1.6}),   # render review: hold the full steps list 4 s+   # a lift under the steps
+          ("s_e", (6,), {"outro": True, "pre": 0.3, "boost": 3.6, "lift": 0.8, "rise": 3.6, "drop_at": [[0, 1, 0.5]], "tail": 0.0})]
 GAP = {1: 0.4, 2: 0.4, 3: 0.4, 4: 0.4, 5: 0.4, 6: 0.0}
-FLAGS_TE = {"s_e": {"boost": 2.8, "rise": 3.0}}
+FLAGS_TE = {"s_e": {"boost": 3.4, "rise": 3.6}}
 YT = {"s_a": "₹27,400 or ₹0?", "s_b": "Deploy = always on", "s_c": "Three ways, priced", "s_d": "Three steps", "s_e": "The catch"}
 MARK = re.compile(r"\[\d+\]\s*")
 

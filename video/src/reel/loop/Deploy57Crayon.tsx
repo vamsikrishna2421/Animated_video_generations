@@ -181,11 +181,11 @@ const StDeploy: React.FC<SP> = ({ s }) => {
           (T.steps as [string, string][]).forEach(([a, sub], q) => {
             const st = cu(q + 1, 0.3), k = seg(f, st - 6, st + 4);
             const y = 400 + q * 290;
-            c.save(); c.globalAlpha = 0.4; c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, 260, 22); c.fill(); c.font = SANS(80, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(`${q + 1}`, 100, y + 150); c.restore();
+            c.save(); c.globalAlpha = 0.4; c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, 260, 22); c.fill(); c.font = SANS(80, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(`${q + 1}`, 100, y + 92); c.restore();
             if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3); c.translate((1 - easeOut(clamp(k * 1.5))) * 200, 0);
             c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, 260, 22); c.fill();
-            c.font = SANS(80, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(`${q + 1}`, 100, y + 150);
+            c.font = SANS(80, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(`${q + 1}`, 100, y + 92);   // render v3: the number hid under the path box
             c.font = SANS(fit(c, a, W - 300, 54, 900), 900); c.fillStyle = "#f8fafc"; c.fillText(a, 190, y + 80);
             c.fillStyle = "#0f172a"; rrect(c, 80, y + 110, W - 160, 130, 12); c.fill();   // render review: the paths were unreadable; twice the size
             c.font = SANS(fit(c, sub, W - 200, 54, 800), 800); c.fillStyle = "#86efac"; wrap(c, sub, W - 200).slice(0, 2).forEach((l, j) => c.fillText(l, 100, y + 170 + j * 0)); c.restore();
