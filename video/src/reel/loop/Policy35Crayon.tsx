@@ -67,7 +67,7 @@ const StPolicy: React.FC<SP> = ({ s }) => {
   beats.forEach((b, i) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
-    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.5} />, <Sfx key={k("c")} at={2} src={CLAP} vol={0.45} />, <Sfx key={k("m")} at={BILL_AT} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("g")} at={cue(i, 1, 0.4) - 4} src="reel/sfx_glitch.wav" vol={0.4} />, <Sfx key={k("r")} at={rejAt(l)} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("rc")} at={rejAt(l)} src={CLAP} vol={0.4} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.8 : 0.5} />, <Sfx key={k("c")} at={2} src={CLAP} vol={te ? 0.7 : 0.45} />, <Sfx key={k("m")} at={BILL_AT} src="audio/sfx_pop.wav" vol={0.4} />, <Sfx key={k("g")} at={cue(i, 1, 0.4) - 4} src="reel/sfx_glitch.wav" vol={0.4} />, <Sfx key={k("r")} at={rejAt(l)} src="reel/sfx_boom.wav" vol={0.6} />, <Sfx key={k("rc")} at={rejAt(l)} src={CLAP} vol={0.4} />);
     if (b.prop === "myth") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("x")} at={cue(i, 1, 0.3) - 6} src="audio/gag_bonk.wav" vol={0.45} />, <Sfx key={k("d")} at={cue(i, 1, 0.3) + 4} src="audio/gag_ding.wav" vol={0.35} />);
     if (b.prop === "test") [1, 2, 3].forEach((n) => sfx.push(<Sfx key={k("p" + n)} at={cue(i, n, 0.3) - 6} src={n === 3 ? "reel/sfx_boom.wav" : "audio/sfx_pop.wav"} vol={n === 3 ? 0.55 : 0.35} />));
     if (b.prop === "better") sfx.push(<Sfx key={k("d")} at={at + 4} src="audio/gag_ding.wav" vol={0.3} />, <Sfx key={k("b")} at={end - 4} src="reel/sfx_buzz.wav" vol={0.4} />);
@@ -126,16 +126,16 @@ const StPolicy: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, z, 350, 56, 900), 900); c.fillStyle = RED; c.fillText(z, 785, 974);
             c.font = SANS(64, 900); c.fillStyle = "#fde68a"; c.fillText("→", W / 2, 978);
             c.font = SANS(40, 900); c.fillStyle = "#bbf7d0"; c.fillText("same 30 · different unit", W / 2, 1095);
-            c.font = SANS(30, 700); c.fillStyle = "#86efac"; c.fillText("from our test's own reply", W / 2, 1150); c.restore();
+            c.font = SANS(38, 800); c.fillStyle = "#86efac"; c.fillText("from our test's own reply", W / 2, 1150); c.restore();
           }
         } else if (P === "test") {
           c.textAlign = "center"; c.font = SANS(56, 900); c.fillStyle = "#7c2d12"; c.fillText("OUR TEST · 5 CHATS", W / 2, 340);
-          c.font = SANS(fit(c, T.model, W - 120, 32, 700), 700); c.fillStyle = "#475569"; c.fillText(T.model, W / 2, 390);
+          c.font = SANS(fit(c, T.model, W - 100, 36, 800), 800); c.fillStyle = "#475569"; c.fillText(T.model, W / 2, 390);
           const kA = seg(f, ln.from + 2, ln.from + 10) * (1 - seg(f, cu(1, 0.3) - 10, cu(1, 0.3) - 2));
           if (kA > 0) {
             c.save(); c.globalAlpha = clamp(kA * 3);
             c.fillStyle = "#dcf8c6"; rrect(c, 120, 520, W - 240, 220, 28); c.fill();
-            c.textAlign = "left"; c.font = SANS(28, 800); c.fillStyle = "#475569"; c.fillText("our ask, 5 fresh chats:", 160, 575);
+            c.textAlign = "left"; c.font = SANS(34, 800); c.fillStyle = "#475569"; c.fillText("our ask, 5 fresh chats:", 160, 578);
             c.font = SANS(54, 900); c.fillStyle = INK; wrap(c, T.ask, W - 320).slice(0, 2).forEach((t, q) => c.fillText(t, 160, 645 + q * 64));
             c.font = SANS(32, 800); c.fillStyle = "#7c2d12"; c.textAlign = "center"; c.fillText(T.askSub, W / 2, 810);
             for (let q = 0; q < 5; q++) { c.fillStyle = "#1e293b"; rrect(c, W / 2 - 230 + q * 96, 860, 76, 60, 14); c.fill(); c.fillStyle = "#fde68a"; c.font = SANS(32, 900); c.fillText(`${q + 1}`, W / 2 - 192 + q * 96, 902); }
@@ -163,7 +163,7 @@ const StPolicy: React.FC<SP> = ({ s }) => {
           if (k1 > 0) {
             c.save(); c.globalAlpha = clamp(k1 * 3); c.fillStyle = "#14532d"; rrect(c, 60, 800, W - 120, 220, 22); c.fill();
             c.textAlign = "center"; c.font = SANS(42, 900); c.fillStyle = "#f0fdf4"; wrap(c, T.cardSrc, W - 180).slice(0, 2).forEach((t, q) => c.fillText(t, W / 2, 866 + q * 52));
-            c.font = SANS(fit(c, T.cardNote, W - 180, 32, 700), 700); c.fillStyle = "#bbf7d0"; c.fillText(T.cardNote, W / 2, 990); c.restore();
+            c.font = SANS(fit(c, T.cardNote, W - 160, 36, 800), 800); c.fillStyle = "#bbf7d0"; c.fillText(T.cardNote, W / 2, 990); c.restore();
           }
           if (k2 > 0) {
             c.save(); c.globalAlpha = clamp(k2 * 3); c.fillStyle = "#7f1d1d"; rrect(c, 60, 1050, W - 120, 190, 22); c.fill();

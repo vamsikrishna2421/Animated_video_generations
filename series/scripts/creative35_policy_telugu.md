@@ -134,12 +134,30 @@ All three viewers (Sandeep, Priya, Lakshmi) stopped on frame 1 and would save th
   - The ask scene builds (boost 2.6, rise 1.8) into the louder loop.
 - **Length:** EN tempo 1.12 (58.8 s). TE drops "మా టెస్ట్ లో" from line 2 and line 5 runs at 1.13 (59.3 s).
 
-## Script v3 (as voiced)
+## Script final (as voiced)
 | # | prop | English | Telugu |
 |---|---|---|---|
-| 1 | hook | Imagine Sarojini garu's policy: claim within thirty days. | [1] Her AI's Telugu said thirty weeks. She thought she had time. Rejected. | ఒకవేళ సరోజిని గారి పాలసీలో: ముప్పై రోజుల్లో క్లెయిమ్ పెట్టాలి. | [1] చాట్‌బాట్ తెలుగులో మాత్రం: ముప్పై వారాలు. టైం ఉందనుకుంది; క్లెయిమ్ రిజెక్ట్. |
-| 2 | myth | Myth: if the numbers match, the translation is right. [1] Fact: in our test, the number stayed and the unit changed. | అపోహ: నంబర్ సరిగ్గా ఉంటే, ట్రాన్స్‌లేషన్ సరైనదే. [1] నిజం: నంబర్ అలాగే ఉంది; రోజులు, వారాలు అయ్యాయి. |
-| 3 | test | We tested a small free AI five times, not ChatGPT or Google Translate. [1] Thirty days was right only once. Once, it said thirty weeks. [2] Two years once became two weeks. [3] And one reply turned maternity 'not covered' into 'will be settled'. | ఒక చిన్న ఫ్రీ చాట్‌బాట్, ఐదు సార్లు; చాట్‌జీపీటీ, గూగుల్ ట్రాన్స్‌లేట్ కాదు. | [1] ముప్పై రోజులు, ఒక్కసారే సరిగ్గా వచ్చింది. [2] రెండు సంవత్సరాలు, ఒకసారి రెండు వారాలు అయింది. [3] ఒక రిప్లై లో, మెటర్నిటీ కవర్ కాదు అనేది, సెటిల్ చేస్తారు అని మారింది. |
-| 4 | better | Telling it to keep every number and every 'not' fixed thirty days: four of five. | [1] But 'not covered' still never survived. | ప్రతి నంబర్, ప్రతి కాదు ఉంచు అని చెప్తే, ముప్పై రోజులు ఐదులో నాలుగు సార్లు వచ్చింది. | [1] కానీ కవర్ కాదు అనేది, ఒక్కసారి కూడా రాలేదు. |
-| 5 | rule | So for money papers, ask your agent or customer care for the Customer Information Sheet in Telugu. [1] Since 2024, insurers must give it when you ask. [2] With any app, get someone who reads both languages to check every unit and every 'not'. | అందుకే డబ్బు పేపర్లకి, మీ ఏజెంట్ ని గానీ కస్టమర్ కేర్ ని గానీ, కస్టమర్ ఇన్ఫర్మేషన్ షీట్ తెలుగులో అడగండి. | [1] అడిగితే ఇవ్వాలని ఇన్సూరెన్స్ రెగ్యులేటర్ రూల్. [2] ఎలాంటి యాప్ వాడినా, రోజులా వారాలా, కవర్ కాదా, తెలిసిన వాళ్ళతో చదివించుకోండి. |
+| 1 | hook | Imagine Sarojini garu's policy: claim within thirty days. | [1] Her AI's Telugu said thirty weeks. She thought she had time. Rejected. | ఒకవేళ సరోజిని గారి పాలసీలో: ముప్పై రోజుల్లో క్లెయిమ్ పెట్టాలి. | [1] చాట్‌బాట్ తెలుగులో మాత్రం: ముప్పై వారాలు. టైం ఉందనుకున్నారు; క్లెయిమ్ రిజెక్ట్. |
+| 2 | myth | Myth: if the numbers match, the translation is right. [1] Fact: in our test, the number stayed and the unit changed. | అపోహ: నంబర్ సరిగ్గా ఉంటే, ట్రాన్స్‌లేషన్ సరైనదే. [1] నిజం: మా టెస్ట్ లో, నంబర్ అలాగే ఉంది; రోజులు, వారాలు అయ్యాయి. |
+| 3 | test | We tested a small free AI five times, not ChatGPT or Google Translate. [1] Thirty days was right only once. Once, it said thirty weeks. [2] Two years once became two weeks. [3] And one reply turned maternity 'not covered' into 'will be settled'. | ఒక చిన్న ఫ్రీ చాట్‌బాట్, ఐదు సార్లు; చాట్‌జీపీటీ కాదు, గూగుల్ ట్రాన్స్‌లేట్ కాదు. | [1] ముప్పై రోజులు, ఒక్కసారే సరిగ్గా వచ్చింది. [2] రెండు సంవత్సరాలు, ఒకసారి రెండు వారాలు. [3] ఒక రిప్లై లో, మెటర్నిటీ కవర్ కాదు అనేది, సెటిల్ చేస్తారు అని మారింది. |
+| 4 | better | Telling it to keep every number and every 'not' fixed thirty days: four of five. | [1] But 'not covered' still never survived. | ప్రతి నంబర్, కాదు అనే ప్రతి మాట ఉంచమంటే, ముప్పై రోజులు ఐదులో నాలుగు సార్లు వచ్చింది. | [1] కానీ కవర్ కాదు అనేది, ఒక్కసారి కూడా రాలేదు. |
+| 5 | rule | So for money papers, ask your agent or customer care for the Customer Information Sheet in Telugu. [1] Since 2024, insurers must give it when you ask. [2] With any app, get someone who reads both languages to check every unit and every 'not'. | అందుకే, మీ ఏజెంట్ ని గానీ కస్టమర్ కేర్ ని గానీ, కస్టమర్ ఇన్ఫర్మేషన్ షీట్ తెలుగులో అడగండి. | [1] అడిగితే ఇవ్వాలని ఇన్సూరెన్స్ రెగ్యులేటర్ రూల్. [2] ఎలాంటి యాప్ వాడినా, ఇంగ్లీష్, తెలుగు రెండూ చదివే వాళ్ళతో, రోజులు, వారాలు, కాదు అనే మాటలు చెక్ చేయించుకోండి. |
 | 6 | loop | Thirty days, [1] or thirty weeks? | ముప్పై రోజులా, [1] ముప్పై వారాలా? |
+
+## Render review (human-viewer, Telugu v3 render), what changed for the final
+Lakshmi (52), Ramesh (45) and Sandeep (24) all stopped on frame 1 and would save or forward the ask card.
+- **All three agreed:**
+  - "మా టెస్ట్ లో" is back in line 2. Without it, "fact: the number stayed, days became weeks" sounded like a general
+    rule rather than one reply in our test.
+  - "తెలిసిన వాళ్ళతో" became "ఇంగ్లీష్, తెలుగు రెండూ చదివే వాళ్ళతో". Someone who reads the same Telugu can't catch it;
+    this now matches the English voice and the check bar.
+  - The Telugu cut's English captions now say what the Telugu voice says (SHOW_TE), not the English script.
+  - A 0.5 s breath before the ask. The ask is back at tempo 1.1, and "డబ్బు పేపర్లకి" (it sounded translated) is cut
+    to make room.
+- **Also fixed:**
+  - "టైం ఉందనుకున్నారు": a garu needs the respectful verb.
+  - "కాదు అనే ప్రతి మాట ఉంచమంటే" ("ప్రతి కాదు" was heard as "not every").
+  - "చాట్‌జీపీటీ కాదు, గూగుల్ ట్రాన్స్‌లేట్ కాదు" (said fast, it could land as "they are no good"). The test subtitle
+    on screen also names ChatGPT now.
+  - Larger "from our test's own reply", "our ask, 5 fresh chats" and "it's a summary".
+  - A louder frame-1 hit on the Telugu cut.

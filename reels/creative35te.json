@@ -14,7 +14,7 @@
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
- "endPad": 0.5,
+ "endPad": 0.4,
  "captionMode": "phrase",
  "musicEQ": [
   [
@@ -80,7 +80,7 @@
       "30 days",
       "30 వారాల (weeks)"
      ],
-     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "model": "a small free AI on our computer · 5 tries · not ChatGPT or Google Translate",
      "ask": "Translate this into Telugu for my mother:",
      "askSub": "+ a 10-line health policy we wrote",
      "tiles": [
@@ -129,14 +129,14 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "ఒకవేళ సరోజిని గారి పాలసీలో: ముప్పై రోజుల్లో క్లెయిమ్ పెట్టాలి. <pause 0.35> [1] చాట్‌బాట్ తెలుగులో మాత్రం: ముప్పై వారాలు. టైం ఉందనుకుంది; క్లెయిమ్ రిజెక్ట్.",
-     "show": "Imagine Sarojini garu's policy: claim within thirty days. Her AI's Telugu said thirty weeks. She thought she had time. Rejected.",
-     "maxgap": 0.22,
+     "text": "ఒకవేళ సరోజిని గారి పాలసీలో: ముప్పై రోజుల్లో క్లెయిమ్ పెట్టాలి. <pause 0.35> [1] చాట్‌బాట్ తెలుగులో మాత్రం: ముప్పై వారాలు. టైం ఉందనుకున్నారు; క్లెయిమ్ రిజెక్ట్.",
+     "show": "Imagine Sarojini garu's policy: file the claim within thirty days. The chatbot's Telugu: thirty weeks. She thought she had time. Claim rejected.",
+     "maxgap": 0.18,
      "gap": 0.2,
-     "tempo": 1.1,
+     "tempo": 1.13,
      "tts": "ఒకవేళ సరోజిని గారి పాలసీలో: ముప్పై రోజుల్లో క్లెయిమ్ పెట్టాలి.",
      "file2": "01b_storyteller.wav",
-     "tts2": "చాట్‌బాట్ తెలుగులో మాత్రం: ముప్పై వారాలు. టైం ఉందనుకుంది; క్లెయిమ్ రిజెక్ట్.",
+     "tts2": "చాట్‌బాట్ తెలుగులో మాత్రం: ముప్పై వారాలు. టైం ఉందనుకున్నారు; క్లెయిమ్ రిజెక్ట్.",
      "pause": 0.35
     }
    ]
@@ -144,7 +144,7 @@
   {
    "id": "s_b",
    "type": "sk_policy35",
-   "tail": 0.2,
+   "tail": 0.1,
    "boost": 0.9,
    "lift": 0.6,
    "swell": [
@@ -177,7 +177,7 @@
       "30 days",
       "30 వారాల (weeks)"
      ],
-     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "model": "a small free AI on our computer · 5 tries · not ChatGPT or Google Translate",
      "ask": "Translate this into Telugu for my mother:",
      "askSub": "+ a 10-line health policy we wrote",
      "tiles": [
@@ -226,23 +226,23 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "అపోహ: నంబర్ సరిగ్గా ఉంటే, ట్రాన్స్‌లేషన్ సరైనదే. [1] నిజం: నంబర్ అలాగే ఉంది; రోజులు, వారాలు అయ్యాయి.",
-     "show": "Myth: if the numbers match, the translation is right. Fact: in our test, the number stayed and the unit changed.",
-     "maxgap": 0.22,
+     "text": "అపోహ: నంబర్ సరిగ్గా ఉంటే, ట్రాన్స్‌లేషన్ సరైనదే. [1] నిజం: మా టెస్ట్ లో, నంబర్ అలాగే ఉంది; రోజులు, వారాలు అయ్యాయి.",
+     "show": "Myth: if the number is right, the translation is right. Fact: in our test, the number stayed; days became weeks.",
+     "maxgap": 0.18,
      "gap": 0.2,
-     "tempo": 1.1
+     "tempo": 1.13
     },
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "ఒక చిన్న ఫ్రీ చాట్‌బాట్, ఐదు సార్లు; చాట్‌జీపీటీ, గూగుల్ ట్రాన్స్‌లేట్ కాదు. <pause 0.2> [1] ముప్పై రోజులు, ఒక్కసారే సరిగ్గా వచ్చింది. [2] రెండు సంవత్సరాలు, ఒకసారి రెండు వారాలు అయింది. [3] ఒక రిప్లై లో, మెటర్నిటీ కవర్ కాదు అనేది, సెటిల్ చేస్తారు అని మారింది.",
-     "show": "We tested a small free AI five times, not ChatGPT or Google Translate. Thirty days was right only once. Once, it said thirty weeks. Two years once became two weeks. And one reply turned maternity 'not covered' into 'will be settled'.",
-     "maxgap": 0.22,
+     "text": "ఒక చిన్న ఫ్రీ చాట్‌బాట్, ఐదు సార్లు; చాట్‌జీపీటీ కాదు, గూగుల్ ట్రాన్స్‌లేట్ కాదు. <pause 0.2> [1] ముప్పై రోజులు, ఒక్కసారే సరిగ్గా వచ్చింది. [2] రెండు సంవత్సరాలు, ఒకసారి రెండు వారాలు. [3] ఒక రిప్లై లో, మెటర్నిటీ కవర్ కాదు అనేది, సెటిల్ చేస్తారు అని మారింది.",
+     "show": "A small free chatbot, five tries; not ChatGPT, not Google Translate. Thirty days came out right only once. Two years, once, became two weeks. In one reply, maternity 'not covered' became 'will be settled'.",
+     "maxgap": 0.18,
      "gap": 0.2,
      "tempo": 1.1,
-     "tts": "ఒక చిన్న ఫ్రీ చాట్‌బాట్, ఐదు సార్లు; చాట్‌జీపీటీ, గూగుల్ ట్రాన్స్‌లేట్ కాదు.",
+     "tts": "ఒక చిన్న ఫ్రీ చాట్‌బాట్, ఐదు సార్లు; చాట్‌జీపీటీ కాదు, గూగుల్ ట్రాన్స్‌లేట్ కాదు.",
      "file2": "03b_storyteller.wav",
-     "tts2": "ముప్పై రోజులు, ఒక్కసారే సరిగ్గా వచ్చింది. రెండు సంవత్సరాలు, ఒకసారి రెండు వారాలు అయింది. ఒక రిప్లై లో, మెటర్నిటీ కవర్ కాదు అనేది, సెటిల్ చేస్తారు అని మారింది.",
+     "tts2": "ముప్పై రోజులు, ఒక్కసారే సరిగ్గా వచ్చింది. రెండు సంవత్సరాలు, ఒకసారి రెండు వారాలు. ఒక రిప్లై లో, మెటర్నిటీ కవర్ కాదు అనేది, సెటిల్ చేస్తారు అని మారింది.",
      "pause": 0.2
     }
    ]
@@ -250,7 +250,7 @@
   {
    "id": "s_c",
    "type": "sk_policy35",
-   "tail": 0.2,
+   "tail": 0.1,
    "boost": 1.4,
    "lift": 0.6,
    "drop_at": [
@@ -281,7 +281,7 @@
       "30 days",
       "30 వారాల (weeks)"
      ],
-     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "model": "a small free AI on our computer · 5 tries · not ChatGPT or Google Translate",
      "ask": "Translate this into Telugu for my mother:",
      "askSub": "+ a 10-line health policy we wrote",
      "tiles": [
@@ -330,12 +330,12 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "ప్రతి నంబర్, ప్రతి కాదు ఉంచు అని చెప్తే, ముప్పై రోజులు ఐదులో నాలుగు సార్లు వచ్చింది. <pause 0.5> [1] కానీ కవర్ కాదు అనేది, ఒక్కసారి కూడా రాలేదు.",
-     "show": "Telling it to keep every number and every 'not' fixed thirty days: four of five. But 'not covered' still never survived.",
-     "maxgap": 0.22,
-     "gap": 0.2,
-     "tempo": 1.1,
-     "tts": "ప్రతి నంబర్, ప్రతి కాదు ఉంచు అని చెప్తే, ముప్పై రోజులు ఐదులో నాలుగు సార్లు వచ్చింది.",
+     "text": "ప్రతి నంబర్, కాదు అనే ప్రతి మాట ఉంచమంటే, ముప్పై రోజులు ఐదులో నాలుగు సార్లు వచ్చింది. <pause 0.5> [1] కానీ కవర్ కాదు అనేది, ఒక్కసారి కూడా రాలేదు.",
+     "show": "Told to keep every number and every 'not', thirty days came out right 4 times in 5. But 'not covered' didn't come through even once.",
+     "maxgap": 0.18,
+     "gap": 0.45,
+     "tempo": 1.13,
+     "tts": "ప్రతి నంబర్, కాదు అనే ప్రతి మాట ఉంచమంటే, ముప్పై రోజులు ఐదులో నాలుగు సార్లు వచ్చింది.",
      "file2": "04b_storyteller.wav",
      "tts2": "కానీ కవర్ కాదు అనేది, ఒక్కసారి కూడా రాలేదు.",
      "pause": 0.5
@@ -370,7 +370,7 @@
       "30 days",
       "30 వారాల (weeks)"
      ],
-     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "model": "a small free AI on our computer · 5 tries · not ChatGPT or Google Translate",
      "ask": "Translate this into Telugu for my mother:",
      "askSub": "+ a 10-line health policy we wrote",
      "tiles": [
@@ -419,14 +419,14 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "అందుకే డబ్బు పేపర్లకి, మీ ఏజెంట్ ని గానీ కస్టమర్ కేర్ ని గానీ, కస్టమర్ ఇన్ఫర్మేషన్ షీట్ తెలుగులో అడగండి. <pause 0.25> [1] అడిగితే ఇవ్వాలని ఇన్సూరెన్స్ రెగ్యులేటర్ రూల్. [2] ఎలాంటి యాప్ వాడినా, రోజులా వారాలా, కవర్ కాదా, తెలిసిన వాళ్ళతో చదివించుకోండి.",
-     "show": "So for money papers, ask your agent or customer care for the Customer Information Sheet in Telugu. Since 2024, insurers must give it when you ask. With any app, get someone who reads both languages to check every unit and every 'not'.",
-     "maxgap": 0.22,
+     "text": "అందుకే, మీ ఏజెంట్ ని గానీ కస్టమర్ కేర్ ని గానీ, కస్టమర్ ఇన్ఫర్మేషన్ షీట్ తెలుగులో అడగండి. <pause 0.25> [1] అడిగితే ఇవ్వాలని ఇన్సూరెన్స్ రెగ్యులేటర్ రూల్. [2] యాప్ ఏదైనా, ఇంగ్లీష్, తెలుగు రెండూ చదివే వాళ్ళతో చెక్ చేయించుకోండి.",
+     "show": "So ask your agent or customer care for the Customer Information Sheet in Telugu. The insurance regulator's rule: they must give it when you ask. Whatever the app, have someone who reads both English and Telugu check it.",
+     "maxgap": 0.18,
      "gap": 0.2,
-     "tempo": 1.13,
-     "tts": "అందుకే డబ్బు పేపర్లకి, మీ ఏజెంట్ ని గానీ కస్టమర్ కేర్ ని గానీ, కస్టమర్ ఇన్ఫర్మేషన్ షీట్ తెలుగులో అడగండి.",
+     "tempo": 1.1,
+     "tts": "అందుకే, మీ ఏజెంట్ ని గానీ కస్టమర్ కేర్ ని గానీ, కస్టమర్ ఇన్ఫర్మేషన్ షీట్ తెలుగులో అడగండి.",
      "file2": "05b_storyteller.wav",
-     "tts2": "అడిగితే ఇవ్వాలని ఇన్సూరెన్స్ రెగ్యులేటర్ రూల్. ఎలాంటి యాప్ వాడినా, రోజులా వారాలా, కవర్ కాదా, తెలిసిన వాళ్ళతో చదివించుకోండి.",
+     "tts2": "అడిగితే ఇవ్వాలని ఇన్సూరెన్స్ రెగ్యులేటర్ రూల్. యాప్ ఏదైనా, ఇంగ్లీష్, తెలుగు రెండూ చదివే వాళ్ళతో చెక్ చేయించుకోండి.",
      "pause": 0.25
     }
    ]
@@ -461,7 +461,7 @@
       "30 days",
       "30 వారాల (weeks)"
      ],
-     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "model": "a small free AI on our computer · 5 tries · not ChatGPT or Google Translate",
      "ask": "Translate this into Telugu for my mother:",
      "askSub": "+ a 10-line health policy we wrote",
      "tiles": [
@@ -512,7 +512,7 @@
      "file": "06_storyteller.wav",
      "text": "ముప్పై రోజులా, [1] ముప్పై వారాలా?",
      "show": "Thirty days, or thirty weeks?",
-     "maxgap": 0.22,
+     "maxgap": 0.18,
      "gap": 0.0,
      "tempo": 1.1
     }
