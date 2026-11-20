@@ -35,7 +35,7 @@ MUST = {"en": {1: [("gpu",), ("twenty", "27"), ("seven", "27"), ("thousand", "00
                4: [("shop",), ("free",), ("smarter",), ("gpu",), ("fifty", "50"), ("thousand", "000")],
                5: [("three", "3"), ("hugging",), ("face",), ("space",), ("secrets", "secret"), ("code",), ("whatsapp",), ("callback",)],
                6: [("catch",), ("days", "day"), ("sleeps", "sleep"), ("half",), ("minute",), ("gpu",), ("zero", "0")]},
-        "te": {}}
+        "te": {5: [("स्टेप", "स्टॆप", "स्तेप", "स्टेब", "स्टॉप")]}}   # Parler dropped "మూడు స్టెప్స్" twice
 JUDGE_TEXT = {}
 
 TELUGU = re.compile(r"[ఀ-౿]")

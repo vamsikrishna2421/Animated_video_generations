@@ -21,15 +21,15 @@ LINES = {   # n: (prop, English, Telugu). v2 (script review): ₹0 on a free 2-c
     4: ("pick", "For a shop: the free box, or twenty-eight a month for a smarter model. [1] A GPU only pays off above about fifty thousand chats a day.",
         "షాప్ కి: ఫ్రీ కంప్యూటర్, లేదా తెలివైన మోడల్ కోసం నెలకి ఇరవై ఎనిమిది. [1] రోజుకి యాభై వేల చాట్లు దాటితేనే, జీపీయూ లాభం."),
     5: ("steps", "Three steps: [1] put the bot's code on a free Hugging Face Space. [2] Any key goes in its Secrets, never in the code. [3] Paste the Space's link into WhatsApp's callback URL.",
-        "మూడు స్టెప్స్: [1] బాట్ కోడ్ ని, ఫ్రీ హగ్గింగ్ ఫేస్ స్పేస్ లో పెట్టండి. [2] కీ ఉంటే, దాని సీక్రెట్స్ లోనే పెట్టాలి, కోడ్ లో కాదు. [3] స్పేస్ లింక్ ని, వాట్సాప్ కాల్‌బ్యాక్ యూఆర్ఎల్ లో పేస్ట్ చేసుకోండి."),
+        "మూడు స్టెప్స్ ఇవే, [1] బాట్ కోడ్ ని ఫ్రీ హగ్గింగ్ ఫేస్ స్పేస్ లో పెట్టండి. | [2] కీ ఉంటే, దాని సీక్రెట్స్ లోనే పెట్టాలి, కోడ్ లో కాదు. [3] స్పేస్ లింక్ ని, వాట్సాప్ కాల్‌బ్యాక్ యూఆర్ఎల్ లో పేస్ట్ చేసుకోండి."),
     6: ("loop", "One catch: after two days with no messages, the free box sleeps, and the next reply takes half a minute or more. [1] So before anyone rents you a GPU: twenty-seven thousand a month, or zero?",
-        "ఒక్క జాగ్రత్త: రెండు రోజులు మెసేజ్ రాకపోతే, ఫ్రీ కంప్యూటర్ నిద్రపోతుంది; నిద్ర లేపిన మెసేజ్ కి జవాబు, అర నిమిషం లేట్. [1] అందుకే జీపీయూ అద్దెకి ఇస్తామనేవాళ్ళని అడగండి: ఇరవై ఏడు వేలా, లేక సున్నానా?"),
+        "ఒక్క జాగ్రత్త: రెండు రోజులు మెసేజ్ రాకపోతే, ఫ్రీ కంప్యూటర్ నిద్రపోతుంది; నిద్ర లేపిన మెసేజ్ కి జవాబు, అర నిమిషం లేట్. | [1] అందుకే జీపీయూ అద్దెకి ఇస్తామనేవాళ్ళని అడగండి: ఇరవై ఏడు వేలా, లేక సున్నానా?"),
 }
 TTS_EN = {}
 SHOW = {}
 SHOW_TE = {}
 SPLIT_PAUSE = {}
-SPLIT_PAUSE_TE = {}
+SPLIT_PAUSE_TE = {5: 0.3, 6: 0.4}   # render-stage voice: the long Telugu lines lost their opening / babbled in one take
 T = {
     "gpu": "₹27,400", "zero": "₹0", "zeroSub": "a free 2-core box", "api": "₹28",
     "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
