@@ -13,43 +13,43 @@
  "fps": 30,
  "musicDrops": [
   [
-   117,
-   159
+   149,
+   191
   ],
   [
-   1885,
-   1924
+   2051,
+   2090
   ]
  ],
  "musicBoosts": [
   [
    0,
-   286,
-   1.8
+   327,
+   2.2
   ],
   [
-   286,
-   552,
+   327,
+   593,
    0.9
   ],
   [
-   552,
-   1370,
-   1.1
+   593,
+   1411,
+   0.95
   ],
   [
-   1370,
-   1680,
-   1.5
+   1411,
+   1759,
+   1.9
   ],
   [
-   1680,
-   2062,
+   1759,
+   2249,
    3.0
   ],
   [
-   1680,
-   2062,
+   1759,
+   2249,
    3.2,
    1
   ]
@@ -57,7 +57,7 @@
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 2062,
+ "totalFrames": 2249,
  "music": "reel/ep57v1/score.wav",
  "scenes": [
   {
@@ -74,14 +74,14 @@
     "t": {
      "gpu": "₹27,400",
      "zero": "₹0",
-     "zeroSub": "a free 2-core box",
+     "zeroSub": "free CPU box · our 2-core test: ~2 s",
      "api": "₹28",
      "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
      "bars": [
       [
        "GPU server (Nvidia T4), all month",
-       "Hugging Face: $288 a month",
-       "₹27,432",
+       "Hugging Face: $288 × ₹95.25",
+       "₹27,400",
        1.0,
        "#dc2626"
       ],
@@ -101,16 +101,16 @@
       ]
      ],
      "pickA": [
-      "FREE BOX",
+      "FREE CPU BOX",
       "₹0",
-      "our 7B model fits (8 GB of 16)"
+      "the bot with its model inside: 8 GB of 16"
      ],
      "pickB": [
-      "TINY SERVER + MODEL",
+      "TINY SERVER",
       "₹28/mo",
-      "a smarter model, any small host"
+      "the bot calls a company's smarter model"
      ],
-     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "breakeven": "a GPU beats the API only above ~50,000 chats a day",
      "steps": [
       [
        "Put the code on a host",
@@ -125,8 +125,8 @@
        "WhatsApp › Configuration › Callback URL"
       ]
      ],
-     "sleep": "free box: sleeps after 48 h with no messages",
-     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "sleep": "free CPU box: sleeps after 48 h with no messages",
+     "wake": "the next reply waits while it wakes · our model took 24 s to load",
      "ask": "₹27,400 a month, or ₹0?"
     },
     "yt": {
@@ -139,7 +139,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 286,
+   "frames": 327,
    "lines": [
     {
      "who": "storyteller",
@@ -148,7 +148,7 @@
      "sub": null,
      "audio": "reel/ep57v1/line_01.wav",
      "from": 10,
-     "frames": 250,
+     "frames": 298,
      "words": [
       {
        "w": "A",
@@ -163,31 +163,31 @@
       {
        "w": "server",
        "from": 20,
-       "to": 31
+       "to": 32
       },
       {
        "w": "for",
-       "from": 31,
-       "to": 37
+       "from": 32,
+       "to": 38
       },
       {
        "w": "a",
-       "from": 37,
-       "to": 40
+       "from": 38,
+       "to": 41
       },
       {
        "w": "shop",
-       "from": 40,
-       "to": 48
+       "from": 41,
+       "to": 50
       },
       {
        "w": "bot:",
-       "from": 48,
-       "to": 60
+       "from": 50,
+       "to": 58
       },
       {
        "w": "twenty-seven",
-       "from": 60,
+       "from": 58,
        "to": 92
       },
       {
@@ -196,63 +196,78 @@
        "to": 107
       },
       {
-       "w": "rupees",
+       "w": "four",
        "from": 107,
-       "to": 117
+       "to": 119
+      },
+      {
+       "w": "hundred",
+       "from": 119,
+       "to": 132
+      },
+      {
+       "w": "rupees",
+       "from": 132,
+       "to": 143
       },
       {
        "w": "a",
-       "from": 117,
-       "to": 121
+       "from": 143,
+       "to": 147
       },
       {
        "w": "month.",
-       "from": 121,
-       "to": 141
+       "from": 147,
+       "to": 158
       },
       {
-       "w": "Our",
-       "from": 141,
-       "to": 148
+       "w": "A",
+       "from": 173,
+       "to": 181
       },
       {
-       "w": "test:",
-       "from": 148,
-       "to": 170
+       "w": "free",
+       "from": 181,
+       "to": 195
       },
       {
-       "w": "zero",
-       "from": 170,
-       "to": 178
+       "w": "CPU",
+       "from": 195,
+       "to": 203
       },
       {
-       "w": "rupees.",
-       "from": 178,
-       "to": 205
+       "w": "box:",
+       "from": 203,
+       "to": 212
+      },
+      {
+       "w": "zero.",
+       "from": 212,
+       "to": 234
       },
       {
        "w": "Same",
-       "from": 205,
-       "to": 213
+       "from": 234,
+       "to": 253
       },
       {
        "w": "bot,",
-       "from": 213,
-       "to": 221
+       "from": 253,
+       "to": 263
       },
       {
        "w": "same",
-       "from": 221,
-       "to": 236
+       "from": 263,
+       "to": 283
       },
       {
        "w": "questions.",
-       "from": 236,
-       "to": 257
+       "from": 283,
+       "to": 304
       }
      ],
      "cues": {
-      "1": 141
+      "1": 173
      }
     }
    ]
@@ -271,14 +286,14 @@
     "t": {
      "gpu": "₹27,400",
      "zero": "₹0",
-     "zeroSub": "a free 2-core box",
+     "zeroSub": "free CPU box · our 2-core test: ~2 s",
      "api": "₹28",
      "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
      "bars": [
       [
        "GPU server (Nvidia T4), all month",
-       "Hugging Face: $288 a month",
-       "₹27,432",
+       "Hugging Face: $288 × ₹95.25",
+       "₹27,400",
        1.0,
        "#dc2626"
       ],
@@ -298,16 +313,16 @@
       ]
      ],
      "pickA": [
-      "FREE BOX",
+      "FREE CPU BOX",
       "₹0",
-      "our 7B model fits (8 GB of 16)"
+      "the bot with its model inside: 8 GB of 16"
      ],
      "pickB": [
-      "TINY SERVER + MODEL",
+      "TINY SERVER",
       "₹28/mo",
-      "a smarter model, any small host"
+      "the bot calls a company's smarter model"
      ],
-     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "breakeven": "a GPU beats the API only above ~50,000 chats a day",
      "steps": [
       [
        "Put the code on a host",
@@ -322,8 +337,8 @@
        "WhatsApp › Configuration › Callback URL"
       ]
      ],
-     "sleep": "free box: sleeps after 48 h with no messages",
-     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "sleep": "free CPU box: sleeps after 48 h with no messages",
+     "wake": "the next reply waits while it wakes · our model took 24 s to load",
      "ask": "₹27,400 a month, or ₹0?"
     },
     "yt": {
@@ -335,7 +350,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 286,
+   "from": 327,
    "frames": 266,
    "lines": [
     {
@@ -482,14 +497,14 @@
     "t": {
      "gpu": "₹27,400",
      "zero": "₹0",
-     "zeroSub": "a free 2-core box",
+     "zeroSub": "free CPU box · our 2-core test: ~2 s",
      "api": "₹28",
      "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
      "bars": [
       [
        "GPU server (Nvidia T4), all month",
-       "Hugging Face: $288 a month",
-       "₹27,432",
+       "Hugging Face: $288 × ₹95.25",
+       "₹27,400",
        1.0,
        "#dc2626"
       ],
@@ -509,16 +524,16 @@
       ]
      ],
      "pickA": [
-      "FREE BOX",
+      "FREE CPU BOX",
       "₹0",
-      "our 7B model fits (8 GB of 16)"
+      "the bot with its model inside: 8 GB of 16"
      ],
      "pickB": [
-      "TINY SERVER + MODEL",
+      "TINY SERVER",
       "₹28/mo",
-      "a smarter model, any small host"
+      "the bot calls a company's smarter model"
      ],
-     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "breakeven": "a GPU beats the API only above ~50,000 chats a day",
      "steps": [
       [
        "Put the code on a host",
@@ -533,8 +548,8 @@
        "WhatsApp › Configuration › Callback URL"
       ]
      ],
-     "sleep": "free box: sleeps after 48 h with no messages",
-     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "sleep": "free CPU box: sleeps after 48 h with no messages",
+     "wake": "the next reply waits while it wakes · our model took 24 s to load",
      "ask": "₹27,400 a month, or ₹0?"
     },
     "yt": {
@@ -546,7 +561,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 552,
+   "from": 593,
    "frames": 818,
    "lines": [
     {
@@ -980,14 +995,14 @@
     "t": {
      "gpu": "₹27,400",
      "zero": "₹0",
-     "zeroSub": "a free 2-core box",
+     "zeroSub": "free CPU box · our 2-core test: ~2 s",
      "api": "₹28",
      "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
      "bars": [
       [
        "GPU server (Nvidia T4), all month",
-       "Hugging Face: $288 a month",
-       "₹27,432",
+       "Hugging Face: $288 × ₹95.25",
+       "₹27,400",
        1.0,
        "#dc2626"
       ],
@@ -1007,16 +1022,16 @@
       ]
      ],
      "pickA": [
-      "FREE BOX",
+      "FREE CPU BOX",
       "₹0",
-      "our 7B model fits (8 GB of 16)"
+      "the bot with its model inside: 8 GB of 16"
      ],
      "pickB": [
-      "TINY SERVER + MODEL",
+      "TINY SERVER",
       "₹28/mo",
-      "a smarter model, any small host"
+      "the bot calls a company's smarter model"
      ],
-     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "breakeven": "a GPU beats the API only above ~50,000 chats a day",
      "steps": [
       [
        "Put the code on a host",
@@ -1031,8 +1046,8 @@
        "WhatsApp › Configuration › Callback URL"
       ]
      ],
-     "sleep": "free box: sleeps after 48 h with no messages",
-     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "sleep": "free CPU box: sleeps after 48 h with no messages",
+     "wake": "the next reply waits while it wakes · our model took 24 s to load",
      "ask": "₹27,400 a month, or ₹0?"
     },
     "yt": {
@@ -1044,8 +1059,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1370,
-   "frames": 310,
+   "from": 1411,
+   "frames": 348,
    "lines": [
     {
      "who": "storyteller",
@@ -1229,14 +1244,14 @@
     "t": {
      "gpu": "₹27,400",
      "zero": "₹0",
-     "zeroSub": "a free 2-core box",
+     "zeroSub": "free CPU box · our 2-core test: ~2 s",
      "api": "₹28",
      "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
      "bars": [
       [
        "GPU server (Nvidia T4), all month",
-       "Hugging Face: $288 a month",
-       "₹27,432",
+       "Hugging Face: $288 × ₹95.25",
+       "₹27,400",
        1.0,
        "#dc2626"
       ],
@@ -1256,16 +1271,16 @@
       ]
      ],
      "pickA": [
-      "FREE BOX",
+      "FREE CPU BOX",
       "₹0",
-      "our 7B model fits (8 GB of 16)"
+      "the bot with its model inside: 8 GB of 16"
      ],
      "pickB": [
-      "TINY SERVER + MODEL",
+      "TINY SERVER",
       "₹28/mo",
-      "a smarter model, any small host"
+      "the bot calls a company's smarter model"
      ],
-     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "breakeven": "a GPU beats the API only above ~50,000 chats a day",
      "steps": [
       [
        "Put the code on a host",
@@ -1280,8 +1295,8 @@
        "WhatsApp › Configuration › Callback URL"
       ]
      ],
-     "sleep": "free box: sleeps after 48 h with no messages",
-     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "sleep": "free CPU box: sleeps after 48 h with no messages",
+     "wake": "the next reply waits while it wakes · our model took 24 s to load",
      "ask": "₹27,400 a month, or ₹0?"
     },
     "yt": {
@@ -1293,8 +1308,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1680,
-   "frames": 382,
+   "from": 1759,
+   "frames": 490,
    "lines": [
     {
      "who": "storyteller",
@@ -1303,76 +1318,76 @@
      "sub": null,
      "audio": "reel/ep57v1/line_06.wav",
      "from": 9,
-     "frames": 342,
+     "frames": 451,
      "words": [
       {
        "w": "One",
        "from": 9,
-       "to": 14
+       "to": 15
       },
       {
        "w": "catch:",
-       "from": 14,
-       "to": 40
+       "from": 15,
+       "to": 42
       },
       {
        "w": "after",
-       "from": 40,
-       "to": 48
+       "from": 42,
+       "to": 51
       },
       {
        "w": "two",
-       "from": 48,
-       "to": 53
+       "from": 51,
+       "to": 57
       },
       {
        "w": "days",
-       "from": 53,
-       "to": 60
+       "from": 57,
+       "to": 64
       },
       {
        "w": "with",
-       "from": 60,
-       "to": 66
+       "from": 64,
+       "to": 71
       },
       {
        "w": "no",
-       "from": 66,
-       "to": 70
+       "from": 71,
+       "to": 76
       },
       {
        "w": "messages,",
-       "from": 70,
-       "to": 84
+       "from": 76,
+       "to": 90
       },
       {
        "w": "the",
-       "from": 84,
-       "to": 99
+       "from": 90,
+       "to": 107
       },
       {
        "w": "free",
-       "from": 99,
-       "to": 109
+       "from": 107,
+       "to": 114
       },
       {
        "w": "box",
-       "from": 109,
-       "to": 121
+       "from": 114,
+       "to": 125
       },
       {
        "w": "sleeps,",
-       "from": 121,
-       "to": 146
+       "from": 125,
+       "to": 151
       },
       {
        "w": "and",
-       "from": 146,
-       "to": 157
+       "from": 151,
+       "to": 156
       },
       {
        "w": "the",
-       "from": 157,
+       "from": 156,
        "to": 162
       },
       {
@@ -1383,106 +1398,146 @@
       {
        "w": "reply",
        "from": 169,
-       "to": 181
+       "to": 178
       },
       {
-       "w": "takes",
-       "from": 181,
-       "to": 189
+       "w": "waits",
+       "from": 178,
+       "to": 187
       },
       {
-       "w": "half",
-       "from": 189,
-       "to": 196
+       "w": "while",
+       "from": 187,
+       "to": 195
       },
       {
-       "w": "a",
-       "from": 196,
-       "to": 198
+       "w": "it",
+       "from": 195,
+       "to": 200
       },
       {
-       "w": "minute",
-       "from": 198,
-       "to": 217
+       "w": "wakes",
+       "from": 200,
+       "to": 222
       },
       {
-       "w": "or",
-       "from": 217,
-       "to": 221
+       "w": "up;",
+       "from": 222,
+       "to": 228
       },
       {
-       "w": "more.",
-       "from": 221,
-       "to": 229
+       "w": "loading",
+       "from": 228,
+       "to": 239
+      },
+      {
+       "w": "our",
+       "from": 239,
+       "to": 245
+      },
+      {
+       "w": "model",
+       "from": 245,
+       "to": 254
+      },
+      {
+       "w": "alone",
+       "from": 254,
+       "to": 268
+      },
+      {
+       "w": "took",
+       "from": 268,
+       "to": 275
+      },
+      {
+       "w": "twenty-four",
+       "from": 275,
+       "to": 293
+      },
+      {
+       "w": "seconds.",
+       "from": 293,
+       "to": 316
       },
       {
        "w": "So",
-       "from": 229,
-       "to": 233
-      },
-      {
-       "w": "before",
-       "from": 233,
-       "to": 242
-      },
-      {
-       "w": "anyone",
-       "from": 242,
-       "to": 255
-      },
-      {
-       "w": "rents",
-       "from": 255,
-       "to": 263
-      },
-      {
-       "w": "you",
-       "from": 263,
-       "to": 269
-      },
-      {
-       "w": "a",
-       "from": 269,
-       "to": 271
-      },
-      {
-       "w": "GPU:",
-       "from": 271,
-       "to": 289
-      },
-      {
-       "w": "twenty-seven",
-       "from": 289,
-       "to": 307
-      },
-      {
-       "w": "thousand",
-       "from": 307,
-       "to": 319
-      },
-      {
-       "w": "a",
-       "from": 319,
+       "from": 316,
        "to": 321
       },
       {
-       "w": "month,",
+       "w": "before",
        "from": 321,
-       "to": 339
+       "to": 331
+      },
+      {
+       "w": "anyone",
+       "from": 331,
+       "to": 341
+      },
+      {
+       "w": "rents",
+       "from": 341,
+       "to": 349
+      },
+      {
+       "w": "you",
+       "from": 349,
+       "to": 355
+      },
+      {
+       "w": "a",
+       "from": 355,
+       "to": 358
+      },
+      {
+       "w": "GPU:",
+       "from": 358,
+       "to": 374
+      },
+      {
+       "w": "twenty-seven",
+       "from": 374,
+       "to": 393
+      },
+      {
+       "w": "thousand",
+       "from": 393,
+       "to": 406
+      },
+      {
+       "w": "four",
+       "from": 406,
+       "to": 413
+      },
+      {
+       "w": "hundred",
+       "from": 413,
+       "to": 425
+      },
+      {
+       "w": "a",
+       "from": 425,
+       "to": 427
+      },
+      {
+       "w": "month,",
+       "from": 427,
+       "to": 447
       },
       {
        "w": "or",
-       "from": 339,
-       "to": 343
+       "from": 447,
+       "to": 451
       },
       {
        "w": "zero?",
-       "from": 343,
-       "to": 351
+       "from": 451,
+       "to": 460
       }
      ],
      "cues": {
-      "1": 229
+      "1": 316
      }
     }
    ]

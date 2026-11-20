@@ -29,13 +29,13 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("gpu",), ("twenty", "27"), ("seven", "27"), ("thousand", "000"), ("zero", "0"), ("questions",)],
+MUST = {"en": {1: [("gpu",), ("twenty", "27"), ("thousand", "000", "400"), ("hundred", "400")], "1b": [("free",), ("zero", "0"), ("questions",)],
                2: [("laptop",), ("sleeps", "sleep"), ("deploying", "deploy"), ("always",)],
                3: [("prices", "price"), ("gpu",), ("free",), ("seconds", "second"), ("short",), ("tiny",), ("month",)],
                4: [("shop",), ("free",), ("smarter",), ("gpu",), ("fifty", "50"), ("thousand", "000")],
                5: [("three", "3"), ("hugging",), ("face",), ("space",), ("secrets", "secret"), ("code",), ("whatsapp",), ("callback",)],
-               6: [("catch",), ("days", "day"), ("sleeps", "sleep"), ("half",), ("minute",), ("gpu",), ("zero", "0")]},
-        "te": {5: [("स्टेप", "स्टॆप", "स्तेप", "स्टेब", "स्टॉप", "टेप", "श्टर्प")]}}   # Parler dropped "మూడు స్టెప్స్" twice
+               6: [("catch",), ("days", "day"), ("sleeps", "sleep"), ("wakes", "wake"), ("twenty",), ("seconds",), ("gpu",), ("zero", "0")]},
+        "te": {5: [("स्टेप", "स्टॆप", "स्तेप", "स्टेब", "स्टॉप", "टेप", "श्टर्प")], "6b": [("प्रश्न", "प्रस्न", "प्रशन")], 2: [("सुरेश", "सूरेश", "सुरेष", "सुरेस")]}}   # Parler dropped the first sentence of line 2   # Parler dropped "మూడు స్టెప్స్" twice
 JUDGE_TEXT = {}
 
 TELUGU = re.compile(r"[ఀ-౿]")

@@ -50,7 +50,7 @@
    "id": "s_a",
    "type": "sk_deploy57",
    "tail": 0.0,
-   "boost": 1.8,
+   "boost": 2.2,
    "drop_at": [
     [
      0,
@@ -69,14 +69,14 @@
     "t": {
      "gpu": "₹27,400",
      "zero": "₹0",
-     "zeroSub": "a free 2-core box",
+     "zeroSub": "free CPU box · our 2-core test: ~2 s",
      "api": "₹28",
      "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
      "bars": [
       [
        "GPU server (Nvidia T4), all month",
-       "Hugging Face: $288 a month",
-       "₹27,432",
+       "Hugging Face: $288 × ₹95.25",
+       "₹27,400",
        1.0,
        "#dc2626"
       ],
@@ -96,16 +96,16 @@
       ]
      ],
      "pickA": [
-      "FREE BOX",
+      "FREE CPU BOX",
       "₹0",
-      "our 7B model fits (8 GB of 16)"
+      "the bot with its model inside: 8 GB of 16"
      ],
      "pickB": [
-      "TINY SERVER + MODEL",
+      "TINY SERVER",
       "₹28/mo",
-      "a smarter model, any small host"
+      "the bot calls a company's smarter model"
      ],
-     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "breakeven": "a GPU beats the API only above ~50,000 chats a day",
      "steps": [
       [
        "Put the code on a host",
@@ -120,8 +120,8 @@
        "WhatsApp › Configuration › Callback URL"
       ]
      ],
-     "sleep": "free box: sleeps after 48 h with no messages",
-     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "sleep": "free CPU box: sleeps after 48 h with no messages",
+     "wake": "the next reply waits while it wakes · our model took 24 s to load",
      "ask": "₹27,400 a month, or ₹0?"
     },
     "yt": {
@@ -134,11 +134,15 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "A GPU server for a shop bot: twenty-seven thousand rupees a month. [1] Our test: zero rupees. Same bot, same questions.",
-     "show": "A GPU server for a shop bot: twenty-seven thousand rupees a month. Our test: zero rupees. Same bot, same questions.",
+     "text": "A GPU server for a shop bot: twenty-seven thousand four hundred rupees a month. <pause 0.5> [1] A free CPU box: zero. Same bot, same questions.",
+     "show": "A GPU server for a shop bot: twenty-seven thousand four hundred rupees a month. A free CPU box: zero. Same bot, same questions.",
      "maxgap": 0.3,
      "gap": 0.4,
-     "tempo": 1.08
+     "tempo": 1.08,
+     "tts": "A GPU server for a shop bot: twenty-seven thousand four hundred rupees a month.",
+     "file2": "01b_storyteller.wav",
+     "tts2": "A free CPU box: zero. Same bot, same questions.",
+     "pause": 0.5
     }
    ]
   },
@@ -159,14 +163,14 @@
     "t": {
      "gpu": "₹27,400",
      "zero": "₹0",
-     "zeroSub": "a free 2-core box",
+     "zeroSub": "free CPU box · our 2-core test: ~2 s",
      "api": "₹28",
      "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
      "bars": [
       [
        "GPU server (Nvidia T4), all month",
-       "Hugging Face: $288 a month",
-       "₹27,432",
+       "Hugging Face: $288 × ₹95.25",
+       "₹27,400",
        1.0,
        "#dc2626"
       ],
@@ -186,16 +190,16 @@
       ]
      ],
      "pickA": [
-      "FREE BOX",
+      "FREE CPU BOX",
       "₹0",
-      "our 7B model fits (8 GB of 16)"
+      "the bot with its model inside: 8 GB of 16"
      ],
      "pickB": [
-      "TINY SERVER + MODEL",
+      "TINY SERVER",
       "₹28/mo",
-      "a smarter model, any small host"
+      "the bot calls a company's smarter model"
      ],
-     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "breakeven": "a GPU beats the API only above ~50,000 chats a day",
      "steps": [
       [
        "Put the code on a host",
@@ -210,8 +214,8 @@
        "WhatsApp › Configuration › Callback URL"
       ]
      ],
-     "sleep": "free box: sleeps after 48 h with no messages",
-     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "sleep": "free CPU box: sleeps after 48 h with no messages",
+     "wake": "the next reply waits while it wakes · our model took 24 s to load",
      "ask": "₹27,400 a month, or ₹0?"
     },
     "yt": {
@@ -236,7 +240,7 @@
    "id": "s_c",
    "type": "sk_deploy57",
    "tail": 0.3,
-   "boost": 1.1,
+   "boost": 0.95,
    "lift": 0.6,
    "data": {
     "beats": [
@@ -253,14 +257,14 @@
     "t": {
      "gpu": "₹27,400",
      "zero": "₹0",
-     "zeroSub": "a free 2-core box",
+     "zeroSub": "free CPU box · our 2-core test: ~2 s",
      "api": "₹28",
      "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
      "bars": [
       [
        "GPU server (Nvidia T4), all month",
-       "Hugging Face: $288 a month",
-       "₹27,432",
+       "Hugging Face: $288 × ₹95.25",
+       "₹27,400",
        1.0,
        "#dc2626"
       ],
@@ -280,16 +284,16 @@
       ]
      ],
      "pickA": [
-      "FREE BOX",
+      "FREE CPU BOX",
       "₹0",
-      "our 7B model fits (8 GB of 16)"
+      "the bot with its model inside: 8 GB of 16"
      ],
      "pickB": [
-      "TINY SERVER + MODEL",
+      "TINY SERVER",
       "₹28/mo",
-      "a smarter model, any small host"
+      "the bot calls a company's smarter model"
      ],
-     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "breakeven": "a GPU beats the API only above ~50,000 chats a day",
      "steps": [
       [
        "Put the code on a host",
@@ -304,8 +308,8 @@
        "WhatsApp › Configuration › Callback URL"
       ]
      ],
-     "sleep": "free box: sleeps after 48 h with no messages",
-     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "sleep": "free CPU box: sleeps after 48 h with no messages",
+     "wake": "the next reply waits while it wakes · our model took 24 s to load",
      "ask": "₹27,400 a month, or ₹0?"
     },
     "yt": {
@@ -338,9 +342,9 @@
   {
    "id": "s_d",
    "type": "sk_deploy57",
-   "tail": 0.4,
-   "boost": 1.5,
-   "lift": 0.6,
+   "tail": 1.6,
+   "boost": 1.9,
+   "lift": 0.7,
    "data": {
     "beats": [
      {
@@ -352,14 +356,14 @@
     "t": {
      "gpu": "₹27,400",
      "zero": "₹0",
-     "zeroSub": "a free 2-core box",
+     "zeroSub": "free CPU box · our 2-core test: ~2 s",
      "api": "₹28",
      "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
      "bars": [
       [
        "GPU server (Nvidia T4), all month",
-       "Hugging Face: $288 a month",
-       "₹27,432",
+       "Hugging Face: $288 × ₹95.25",
+       "₹27,400",
        1.0,
        "#dc2626"
       ],
@@ -379,16 +383,16 @@
       ]
      ],
      "pickA": [
-      "FREE BOX",
+      "FREE CPU BOX",
       "₹0",
-      "our 7B model fits (8 GB of 16)"
+      "the bot with its model inside: 8 GB of 16"
      ],
      "pickB": [
-      "TINY SERVER + MODEL",
+      "TINY SERVER",
       "₹28/mo",
-      "a smarter model, any small host"
+      "the bot calls a company's smarter model"
      ],
-     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "breakeven": "a GPU beats the API only above ~50,000 chats a day",
      "steps": [
       [
        "Put the code on a host",
@@ -403,8 +407,8 @@
        "WhatsApp › Configuration › Callback URL"
       ]
      ],
-     "sleep": "free box: sleeps after 48 h with no messages",
-     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "sleep": "free CPU box: sleeps after 48 h with no messages",
+     "wake": "the next reply waits while it wakes · our model took 24 s to load",
      "ask": "₹27,400 a month, or ₹0?"
     },
     "yt": {
@@ -452,14 +456,14 @@
     "t": {
      "gpu": "₹27,400",
      "zero": "₹0",
-     "zeroSub": "a free 2-core box",
+     "zeroSub": "free CPU box · our 2-core test: ~2 s",
      "api": "₹28",
      "src": "Hugging Face pricing · OpenAI gpt-5.4-mini pricing · ₹95.25 a dollar (RBI, Nov 6)",
      "bars": [
       [
        "GPU server (Nvidia T4), all month",
-       "Hugging Face: $288 a month",
-       "₹27,432",
+       "Hugging Face: $288 × ₹95.25",
+       "₹27,400",
        1.0,
        "#dc2626"
       ],
@@ -479,16 +483,16 @@
       ]
      ],
      "pickA": [
-      "FREE BOX",
+      "FREE CPU BOX",
       "₹0",
-      "our 7B model fits (8 GB of 16)"
+      "the bot with its model inside: 8 GB of 16"
      ],
      "pickB": [
-      "TINY SERVER + MODEL",
+      "TINY SERVER",
       "₹28/mo",
-      "a smarter model, any small host"
+      "the bot calls a company's smarter model"
      ],
-     "breakeven": "a GPU pays off only above ~50,000 chats a day",
+     "breakeven": "a GPU beats the API only above ~50,000 chats a day",
      "steps": [
       [
        "Put the code on a host",
@@ -503,8 +507,8 @@
        "WhatsApp › Configuration › Callback URL"
       ]
      ],
-     "sleep": "free box: sleeps after 48 h with no messages",
-     "wake": "the next reply: half a minute or more (our cold start: 24 s)",
+     "sleep": "free CPU box: sleeps after 48 h with no messages",
+     "wake": "the next reply waits while it wakes · our model took 24 s to load",
      "ask": "₹27,400 a month, or ₹0?"
     },
     "yt": {
@@ -517,8 +521,8 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "One catch: after two days with no messages, the free box sleeps, and the next reply takes half a minute or more. [1] So before anyone rents you a GPU: twenty-seven thousand a month, or zero?",
-     "show": "One catch: after two days with no messages, the free box sleeps, and the next reply takes half a minute or more. So before anyone rents you a GPU: twenty-seven thousand a month, or zero?",
+     "text": "One catch: after two days with no messages, the free box sleeps, and the next reply waits while it wakes up; loading our model alone took twenty-four seconds. [1] So before anyone rents you a GPU: twenty-seven thousand four hundred a month, or zero?",
+     "show": "One catch: after two days with no messages, the free box sleeps, and the next reply waits while it wakes up; loading our model alone took twenty-four seconds. So before anyone rents you a GPU: twenty-seven thousand four hundred a month, or zero?",
      "maxgap": 0.3,
      "gap": 0.0,
      "tempo": 1.08

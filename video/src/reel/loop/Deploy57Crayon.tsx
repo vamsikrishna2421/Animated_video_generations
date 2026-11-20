@@ -88,7 +88,7 @@ const StDeploy: React.FC<SP> = ({ s }) => {
   beats.forEach((b, i) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
-    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.5} />, <Sfx key={k("c")} at={2} src={CLAP} vol={0.45} />, <Sfx key={k("ch")} at={cue(i, 1, 0.5) - 8} src="audio/sfx_chaching.wav" vol={0.4} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.5} />, <Sfx key={k("c")} at={2} src={CLAP} vol={0.45} />, <Sfx key={k("ch")} at={cue(i, 1, 0.4) - 4} src="audio/sfx_chaching.wav" vol={0.45} />, <Sfx key={k("bz")} at={cue(i, 1, 0.4) - 2} src="reel/sfx_boom.wav" vol={0.5} />, <Sfx key={k("cz")} at={cue(i, 1, 0.4)} src={CLAP} vol={0.4} />);   // render review: a hit on "zero"
     if (b.prop === "laptop") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("s")} at={cue(i, 1, 0.3) - 4} src="audio/gag_bonk.wav" vol={0.35} />);
     if (b.prop === "bars") [1, 2, 3].forEach((n) => sfx.push(<Sfx key={k("p" + n)} at={cue(i, n, 0.3) - 6} src={n === 3 ? "audio/sfx_chaching.wav" : "audio/sfx_pop.wav"} vol={n === 3 ? 0.4 : 0.35} />));
     if (b.prop === "why") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.4) - 6} src="audio/gag_ding.wav" vol={0.35} />);
@@ -107,16 +107,19 @@ const StDeploy: React.FC<SP> = ({ s }) => {
         const P = loopOn ? "hook" : b.prop;
         bg(c, W, H);
         c.textAlign = "left";
-        const frame1 = (ask: boolean) => {
+        const frame1 = (ask: boolean, kz = 1, kc = 1) => {   // render review: frame 1 sat still; the green block lands on "zero"
           block(c, 50, 300, 480, 300, "GPU SERVER QUOTE", T.gpu, "a month", "#7f1d1d", "#fecaca", 1);
-          block(c, 550, 300, 480, 300, "OUR TEST", T.zero, T.zeroSub, "#14532d", "#bbf7d0", 1);
-          phoneChat(c, 560, 650, 460, 380, [["Toor dal 1 kg entha?", true], ["₹165", false], ["Is curd available?", true], ["Out of stock.", false]], 1);
+          if (kz > 0) { c.save(); const z = 1 + 0.25 * (1 - easeOut(clamp(kz))); c.translate(790, 450); c.scale(z, z); c.translate(-790, -450);
+            block(c, 550, 300, 480, 300, "FREE CPU BOX", T.zero, T.zeroSub, "#14532d", "#bbf7d0", 1); c.restore(); }
+          else { c.save(); c.globalAlpha = 0.5; c.fillStyle = "#14532d"; rrect(c, 550, 300, 480, 300, 24); c.fill(); c.font = SANS(110, 900); c.fillStyle = "#bbf7d0"; c.textAlign = "center"; c.fillText("?", 790, 490); c.restore(); }
+          const rows: [string, boolean][] = [["Toor dal 1 kg entha?", true], ["₹165", false], ["Is curd available?", true], ["Out of stock.", false]];
+          phoneChat(c, 560, 650, 460, 380, rows.slice(0, Math.max(1, Math.min(4, Math.floor(kc * 4) + 1))), 1);
           smallRavi(c, 270, 900, 0.62, "shock", f, r);
           c.save(); c.translate(250, 1180); c.rotate(-0.08); c.fillStyle = "#fffdf7"; rrect(c, -150, -70, 300, 140, 10); c.fill();
           c.font = SANS(28, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText("QUOTE: GPU SERVER", 0, -24); c.font = SANS(40, 900); c.fillStyle = RED; c.fillText(T.gpu + "/mo", 0, 30); c.restore();
           if (ask) chip(c, T.ask, W / 2, 1310, "#fde68a", INK, 1, 52);
         };
-        if (P === "hook") frame1(loopOn);
+        if (P === "hook") frame1(loopOn, loopOn ? 1 : seg(f, cu(1, 0.4) - 2, cu(1, 0.4) + 6), loopOn ? 1 : seg(f, ln.from + 10, ln.from + 70));
         else if (P === "loop") {   // the catch (the free box sleeps), then back to frame 1 with the question
           const c1 = cu(1, 0.2);
           if (f < c1 - 4) {
@@ -124,7 +127,9 @@ const StDeploy: React.FC<SP> = ({ s }) => {
             c.fillStyle = "#1e293b"; rrect(c, 70, 420, W - 140, 620, 26); c.fill();
             c.font = SANS(150, 900); c.fillStyle = "#93c5fd"; c.fillText("z z z", W / 2, 680 - (f % 40));
             c.font = SANS(fit(c, T.sleep, W - 200, 42, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.sleep, W / 2, 840);
-            c.font = SANS(fit(c, T.wake, W - 200, 36, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(T.wake, W / 2, 920);
+            c.font = SANS(fit(c, T.wake, W - 200, 40, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(T.wake, W / 2, 920);
+            const sec = Math.min(24, Math.floor(((f - ln.from) / 30) * 4));   // render review: the card sat still; a wake-up timer
+            c.font = SANS(90, 900); c.fillStyle = "#fde68a"; c.fillText(`waking… ${sec} s`, W / 2, 1010);
           } else frame1(true);
         } else if (P === "laptop") {
           c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("DEPLOY = ALWAYS ON", W / 2, 365);
@@ -140,18 +145,20 @@ const StDeploy: React.FC<SP> = ({ s }) => {
           rack(c, 820, 900, seg(f, cu(1, 0.75), cu(1, 0.75) + 8), f);
         } else if (P === "bars") {
           c.font = SANS(fit(c, "A MONTH, 24×7", W - 100, 56, 900), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("A MONTH, 24×7", W / 2, 365);
-          c.font = SANS(fit(c, T.src, W - 100, 28, 700), 700); c.fillStyle = "#94a3b8"; c.fillText(T.src, W / 2, 410);
+          c.font = SANS(fit(c, T.src, W - 80, 32, 700), 700); c.fillStyle = "#94a3b8"; c.fillText(T.src, W / 2, 410);
           const bars = T.bars as [string, string, string, number, string][];   // [label, sub, value, fraction of the biggest, colour]
           bars.forEach(([lab, sub, val, frac, col], q) => {
             const st = cu(q + 1, 0.3), k = seg(f, st - 4, st + 14);
-            if (k <= 0) return;
             const y = 460 + q * 290;
+            c.save(); c.globalAlpha = 0.55; c.font = SANS(fit(c, lab, W - 140, 42, 900), 900); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(lab, 70, y);
+            c.fillStyle = "#334155"; rrect(c, 70, y + 24, W - 140, 90, 14); c.fill(); c.restore();   // render review: empty under the title while the voice talked
+            if (k <= 0) return;
             c.save(); c.globalAlpha = clamp(k * 3);
             c.font = SANS(fit(c, lab, W - 140, 42, 900), 900); c.fillStyle = "#f8fafc"; c.textAlign = "left"; c.fillText(lab, 70, y);
             c.fillStyle = "#334155"; rrect(c, 70, y + 24, W - 140, 90, 14); c.fill();
             c.fillStyle = col; rrect(c, 70, y + 24, Math.max(16, (W - 140) * frac * easeOut(k)), 90, 14); c.fill();
             c.font = SANS(64, 900); c.fillStyle = "#fff"; c.textAlign = frac > 0.4 ? "right" : "left"; c.fillText(val, frac > 0.4 ? 70 + (W - 140) * frac * easeOut(k) - 20 : 110, y + 92);
-            c.font = SANS(fit(c, sub, W - 140, 32, 700), 700); c.fillStyle = "#cbd5e1"; c.textAlign = "left"; c.fillText(sub, 70, y + 160);
+            c.font = SANS(fit(c, sub, W - 140, 40, 700), 700); c.fillStyle = "#cbd5e1"; c.textAlign = "left"; c.fillText(sub, 70, y + 165);
             c.restore();
           });
         } else if (P === "pick") {
@@ -173,14 +180,15 @@ const StDeploy: React.FC<SP> = ({ s }) => {
           c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText("3 STEPS", W / 2, 365);
           (T.steps as [string, string][]).forEach(([a, sub], q) => {
             const st = cu(q + 1, 0.3), k = seg(f, st - 6, st + 4);
+            const y = 400 + q * 290;
+            c.save(); c.globalAlpha = 0.4; c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, 260, 22); c.fill(); c.font = SANS(80, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(`${q + 1}`, 100, y + 150); c.restore();
             if (k <= 0) return;
-            const y = 400 + q * 250;
             c.save(); c.globalAlpha = clamp(k * 3); c.translate((1 - easeOut(clamp(k * 1.5))) * 200, 0);
-            c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, 220, 22); c.fill();
-            c.font = SANS(80, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(`${q + 1}`, 100, y + 130);
-            c.font = SANS(fit(c, a, W - 300, 54, 900), 900); c.fillStyle = "#f8fafc"; c.fillText(a, 190, y + 90);
-            c.fillStyle = "#0f172a"; rrect(c, 190, y + 120, W - 320, 70, 12); c.fill();
-            c.font = SANS(fit(c, sub, W - 360, 32, 700), 700); c.fillStyle = "#86efac"; c.fillText(sub, 210, y + 166); c.restore();
+            c.fillStyle = "#1e293b"; rrect(c, 60, y, W - 120, 260, 22); c.fill();
+            c.font = SANS(80, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(`${q + 1}`, 100, y + 150);
+            c.font = SANS(fit(c, a, W - 300, 54, 900), 900); c.fillStyle = "#f8fafc"; c.fillText(a, 190, y + 80);
+            c.fillStyle = "#0f172a"; rrect(c, 80, y + 110, W - 160, 130, 12); c.fill();   // render review: the paths were unreadable; twice the size
+            c.font = SANS(fit(c, sub, W - 200, 54, 800), 800); c.fillStyle = "#86efac"; wrap(c, sub, W - 200).slice(0, 2).forEach((l, j) => c.fillText(l, 100, y + 170 + j * 0)); c.restore();
           });
         }
         c.textAlign = "left";

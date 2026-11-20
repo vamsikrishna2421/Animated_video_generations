@@ -116,3 +116,32 @@ kirana owner, Telugu). None of them knew where to deploy afterwards.
 - **Sound (for the build):** a drop before "zero" in lines 1 and 6, and a hit when the green block lands.
 
 ## Script v2 (as voiced): see pipeline/ep57/make_specs.py (LINES)
+
+## Render review (human-viewer, v2 render), what changed for v3
+All three viewers stopped on frame 1 and would keep the closing "₹27,400 or ₹0?".
+- **One GPU number:** the voice now says "twenty-seven thousand four hundred" everywhere, and the screen shows ₹27,400
+  everywhere. ₹27,432 moved to the fine print ($288 × ₹95.25).
+- **The hook moves and lands:**
+  - a 0.5 s beat before "zero";
+  - the green block lands on "zero" with a boom, a clap and a cha-ching (it was "?" until then);
+  - the bot's reply types in.
+- **Honest green block:**
+  - "FREE CPU BOX · our 2-core test: ~2 s". We ran on our own 2 cores, not on Hugging Face.
+  - The catch now says "the next reply waits while it wakes up; loading our model alone took 24 seconds", instead of
+    "half a minute".
+  - The break-even is "a GPU beats the API only above ~50,000 chats a day".
+- **Which code?** The pick cards say "the bot with its model inside: 8 GB of 16" and "the bot calls a company's smarter
+  model".
+- **Readable:**
+  - the step paths are twice the size, and the steps list holds 1.6 s longer;
+  - all three bars and all three step slots show from the first word;
+  - the fine print is bigger;
+  - the ONE CATCH card counts up a wake-up timer.
+- **Telugu re-voiced:**
+  - the steps say plain words ("ఫ్రీ సర్వర్", "సీక్రెట్స్", "వాట్సాప్ సెట్టింగ్స్"); the English names babbled and stay on
+    screen;
+  - line 2 is in two takes (it was rushed);
+  - the "అద్దెకి" stutter line is now "జీపీయూ అడిగే ముందు, ఒక్క ప్రశ్న";
+  - the bed between lines is lower (0.24).
+- **From my own check:** the titles moved below the header (zoom cuts), and the arc was reshaped: a louder hook (2.2),
+  a dip under the bars (0.95), a lift under the steps (1.9).
