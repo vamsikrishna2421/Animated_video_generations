@@ -1,0 +1,488 @@
+{
+ "id": "creative35te",
+ "title": "30 Days or 30 Weeks? (Creative 35) (Telugu audio)",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "musicVol": [
+  0.18,
+  0.24
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.0,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1440,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_policy35",
+   "tail": 0.0,
+   "boost": 2.2,
+   "drop_at": [
+    [
+     0,
+     1,
+     0.5
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bill": "₹48,000 hospital claim",
+     "policy": "30 DAYS",
+     "ai": "30 WEEKS",
+     "aiGloss": "30 వారాల = 30 weeks",
+     "teLine": "30 వారాల",
+     "story": "a story · our test is real",
+     "myth": "If the numbers match, the translation is right.",
+     "fact": "The number stayed. The unit changed.",
+     "factPic": [
+      "30 days",
+      "30 వారాల (weeks)"
+     ],
+     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "tiles": [
+      [
+       "\"claim within 30 days\"",
+       "30 వారాల",
+       "= 30 weeks (once)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"covered only after 2 years\"",
+       "2 వారాల",
+       "= 2 weeks (once)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"maternity: not covered\"",
+       "జనన ఖర్చులు పరిష్కరించబడతాయి",
+       "= birth expenses will be settled",
+       "kept 0 of 5",
+       false
+      ]
+     ],
+     "betterNum": "4 of 5",
+     "betterNumLab": "\"30 days\" kept",
+     "betterNumSub": "\"2 years\": 2 of 5",
+     "betterNot": "0 of 5",
+     "betterLesson": "a better prompt fixes numbers, not meaning",
+     "card": "Please send my policy's Customer Information Sheet in Telugu.",
+     "cardSrc": "IRDAI rule, Sep 2024: on request · ask your agent, customer care or the app",
+     "cardNote": "it's a summary: the policy wording stays the reference",
+     "check": "with any app: days, weeks, months · every \"not\""
+    },
+    "yt": {
+     "chapter": "30 days or 30 weeks?",
+     "title": "30 days or 30 weeks?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "ఒకవేళ సరోజిని గారి పాలసీలో: ముప్పై రోజుల్లో క్లెయిమ్ పెట్టాలి. <pause 0.4> [1] చాట్‌బాట్ తెలుగులో మాత్రం: ముప్పై వారాలు. టైం ఉందనుకుంది; క్లెయిమ్ రిజెక్ట్.",
+     "show": "Imagine Sarojini garu's policy: claim within thirty days. Her AI's Telugu said thirty weeks. She thought she had time. Rejected.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.1,
+     "tts": "ఒకవేళ సరోజిని గారి పాలసీలో: ముప్పై రోజుల్లో క్లెయిమ్ పెట్టాలి.",
+     "file2": "01b_storyteller.wav",
+     "tts2": "చాట్‌బాట్ తెలుగులో మాత్రం: ముప్పై వారాలు. టైం ఉందనుకుంది; క్లెయిమ్ రిజెక్ట్.",
+     "pause": 0.4
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_policy35",
+   "tail": 0.2,
+   "boost": 0.9,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "prop": "myth",
+      "n": 2
+     },
+     {
+      "prop": "test",
+      "n": 3
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bill": "₹48,000 hospital claim",
+     "policy": "30 DAYS",
+     "ai": "30 WEEKS",
+     "aiGloss": "30 వారాల = 30 weeks",
+     "teLine": "30 వారాల",
+     "story": "a story · our test is real",
+     "myth": "If the numbers match, the translation is right.",
+     "fact": "The number stayed. The unit changed.",
+     "factPic": [
+      "30 days",
+      "30 వారాల (weeks)"
+     ],
+     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "tiles": [
+      [
+       "\"claim within 30 days\"",
+       "30 వారాల",
+       "= 30 weeks (once)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"covered only after 2 years\"",
+       "2 వారాల",
+       "= 2 weeks (once)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"maternity: not covered\"",
+       "జనన ఖర్చులు పరిష్కరించబడతాయి",
+       "= birth expenses will be settled",
+       "kept 0 of 5",
+       false
+      ]
+     ],
+     "betterNum": "4 of 5",
+     "betterNumLab": "\"30 days\" kept",
+     "betterNumSub": "\"2 years\": 2 of 5",
+     "betterNot": "0 of 5",
+     "betterLesson": "a better prompt fixes numbers, not meaning",
+     "card": "Please send my policy's Customer Information Sheet in Telugu.",
+     "cardSrc": "IRDAI rule, Sep 2024: on request · ask your agent, customer care or the app",
+     "cardNote": "it's a summary: the policy wording stays the reference",
+     "check": "with any app: days, weeks, months · every \"not\""
+    },
+    "yt": {
+     "chapter": "Myth vs fact, our test",
+     "title": "Myth vs fact, our test",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "అపోహ: నంబర్ సరిగ్గా ఉంటే, ట్రాన్స్‌లేషన్ సరైనదే. [1] నిజం: మా టెస్ట్ లో, నంబర్ అలాగే ఉంది; రోజులు, వారాలు అయ్యాయి.",
+     "show": "Myth: if the numbers match, the translation is right. Fact: in our test, the number stayed and the unit changed.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.1
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "ఒక చిన్న ఫ్రీ చాట్‌బాట్, ఐదు సార్లు; గూగుల్ ట్రాన్స్‌లేట్ కాదు. [1] ముప్పై రోజులు, ఒక్కసారే సరిగ్గా వచ్చింది. [2] రెండు సంవత్సరాలు, ఒకసారి రెండు వారాలు అయింది. [3] మెటర్నిటీ కవర్ కాదు అనేది, సెటిల్ చేస్తారు అని మారింది.",
+     "show": "A small free AI, five tries, not Google Translate. Thirty days came out right once; once it said thirty weeks. Two years, once, became two weeks. And maternity 'not covered' became 'will be settled'.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.1
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_policy35",
+   "tail": 0.2,
+   "boost": 1.4,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     0,
+     1,
+     0.6
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "prop": "better",
+      "n": 4
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bill": "₹48,000 hospital claim",
+     "policy": "30 DAYS",
+     "ai": "30 WEEKS",
+     "aiGloss": "30 వారాల = 30 weeks",
+     "teLine": "30 వారాల",
+     "story": "a story · our test is real",
+     "myth": "If the numbers match, the translation is right.",
+     "fact": "The number stayed. The unit changed.",
+     "factPic": [
+      "30 days",
+      "30 వారాల (weeks)"
+     ],
+     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "tiles": [
+      [
+       "\"claim within 30 days\"",
+       "30 వారాల",
+       "= 30 weeks (once)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"covered only after 2 years\"",
+       "2 వారాల",
+       "= 2 weeks (once)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"maternity: not covered\"",
+       "జనన ఖర్చులు పరిష్కరించబడతాయి",
+       "= birth expenses will be settled",
+       "kept 0 of 5",
+       false
+      ]
+     ],
+     "betterNum": "4 of 5",
+     "betterNumLab": "\"30 days\" kept",
+     "betterNumSub": "\"2 years\": 2 of 5",
+     "betterNot": "0 of 5",
+     "betterLesson": "a better prompt fixes numbers, not meaning",
+     "card": "Please send my policy's Customer Information Sheet in Telugu.",
+     "cardSrc": "IRDAI rule, Sep 2024: on request · ask your agent, customer care or the app",
+     "cardNote": "it's a summary: the policy wording stays the reference",
+     "check": "with any app: days, weeks, months · every \"not\""
+    },
+    "yt": {
+     "chapter": "A better prompt?",
+     "title": "A better prompt?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "ప్రతి నంబర్ ఉంచు అని చెప్తే, ముప్పై రోజులు ఐదులో నాలుగు సార్లు వచ్చింది. <pause 0.5> [1] కానీ కవర్ కాదు అనేది, ఒక్కసారి కూడా రాలేదు.",
+     "show": "Telling it to keep every number helped: thirty days, four of five. But 'not covered' never survived.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.1,
+     "tts": "ప్రతి నంబర్ ఉంచు అని చెప్తే, ముప్పై రోజులు ఐదులో నాలుగు సార్లు వచ్చింది.",
+     "file2": "04b_storyteller.wav",
+     "tts2": "కానీ కవర్ కాదు అనేది, ఒక్కసారి కూడా రాలేదు.",
+     "pause": 0.5
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_policy35",
+   "tail": 1.2,
+   "boost": 1.9,
+   "lift": 0.7,
+   "data": {
+    "beats": [
+     {
+      "prop": "rule",
+      "n": 5
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bill": "₹48,000 hospital claim",
+     "policy": "30 DAYS",
+     "ai": "30 WEEKS",
+     "aiGloss": "30 వారాల = 30 weeks",
+     "teLine": "30 వారాల",
+     "story": "a story · our test is real",
+     "myth": "If the numbers match, the translation is right.",
+     "fact": "The number stayed. The unit changed.",
+     "factPic": [
+      "30 days",
+      "30 వారాల (weeks)"
+     ],
+     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "tiles": [
+      [
+       "\"claim within 30 days\"",
+       "30 వారాల",
+       "= 30 weeks (once)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"covered only after 2 years\"",
+       "2 వారాల",
+       "= 2 weeks (once)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"maternity: not covered\"",
+       "జనన ఖర్చులు పరిష్కరించబడతాయి",
+       "= birth expenses will be settled",
+       "kept 0 of 5",
+       false
+      ]
+     ],
+     "betterNum": "4 of 5",
+     "betterNumLab": "\"30 days\" kept",
+     "betterNumSub": "\"2 years\": 2 of 5",
+     "betterNot": "0 of 5",
+     "betterLesson": "a better prompt fixes numbers, not meaning",
+     "card": "Please send my policy's Customer Information Sheet in Telugu.",
+     "cardSrc": "IRDAI rule, Sep 2024: on request · ask your agent, customer care or the app",
+     "cardNote": "it's a summary: the policy wording stays the reference",
+     "check": "with any app: days, weeks, months · every \"not\""
+    },
+    "yt": {
+     "chapter": "What to ask for",
+     "title": "What to ask for",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "అందుకే డబ్బు పేపర్లకి, మీ ఏజెంట్ ని గానీ కస్టమర్ కేర్ ని గానీ, కస్టమర్ ఇన్ఫర్మేషన్ షీట్ తెలుగులో అడగండి. [1] రెండు వేల ఇరవై నాలుగు నుంచి, అడిగితే ఇవ్వాలని ఇన్సూరెన్స్ రెగ్యులేటర్ రూల్. [2] ఎలాంటి యాప్ వాడినా, రోజులా వారాలా నెలలా, కవర్ కాదా, తెలిసిన వాళ్ళతో చదివించుకోండి.",
+     "show": "So for money papers, ask your agent or customer care for the Customer Information Sheet in Telugu. Since 2024, insurers must give it when you ask. With any app, check every day, week and month, and every 'not'.",
+     "maxgap": 0.3,
+     "gap": 0.4,
+     "tempo": 1.1
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_policy35",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 3.2,
+   "lift": 0.8,
+   "rise": 3.4,
+   "data": {
+    "beats": [
+     {
+      "prop": "loop",
+      "n": 6
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bill": "₹48,000 hospital claim",
+     "policy": "30 DAYS",
+     "ai": "30 WEEKS",
+     "aiGloss": "30 వారాల = 30 weeks",
+     "teLine": "30 వారాల",
+     "story": "a story · our test is real",
+     "myth": "If the numbers match, the translation is right.",
+     "fact": "The number stayed. The unit changed.",
+     "factPic": [
+      "30 days",
+      "30 వారాల (weeks)"
+     ],
+     "model": "a small free AI on our computer · 5 tries · not Google Translate",
+     "tiles": [
+      [
+       "\"claim within 30 days\"",
+       "30 వారాల",
+       "= 30 weeks (once)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"covered only after 2 years\"",
+       "2 వారాల",
+       "= 2 weeks (once)",
+       "right 1 of 5",
+       false
+      ],
+      [
+       "\"maternity: not covered\"",
+       "జనన ఖర్చులు పరిష్కరించబడతాయి",
+       "= birth expenses will be settled",
+       "kept 0 of 5",
+       false
+      ]
+     ],
+     "betterNum": "4 of 5",
+     "betterNumLab": "\"30 days\" kept",
+     "betterNumSub": "\"2 years\": 2 of 5",
+     "betterNot": "0 of 5",
+     "betterLesson": "a better prompt fixes numbers, not meaning",
+     "card": "Please send my policy's Customer Information Sheet in Telugu.",
+     "cardSrc": "IRDAI rule, Sep 2024: on request · ask your agent, customer care or the app",
+     "cardNote": "it's a summary: the policy wording stays the reference",
+     "check": "with any app: days, weeks, months · every \"not\""
+    },
+    "yt": {
+     "chapter": "30 days or 30 weeks?",
+     "title": "30 days or 30 weeks?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "ముప్పై రోజులా, [1] ముప్పై వారాలా?",
+     "show": "Thirty days, or thirty weeks?",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "tempo": 1.1
+    }
+   ]
+  }
+ ]
+}

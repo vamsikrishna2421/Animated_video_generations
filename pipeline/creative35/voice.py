@@ -29,14 +29,13 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("breaking",), ("team",), ("fifteen", "15"), ("zero", "0"), ("tarun",), ("impressive",)],
-               2: [("reply",), ("thirty", "30"), ("errors", "error"), ("certificate",), ("job",), ("company",), ("blank",)],
-               3: [("interview", "interview's"), ("first",), ("team",), ("fifteen", "15")],
-               4: [("chatgpt", "gpt", "chat"), ("ten", "10"), ("all",), ("seven", "7"), ("excel",), ("level",)],
-               5: [("line",), ("add",), ("ask",), ("four", "4"), ("five", "5"), ("questions", "question")],
-               6: [("read",), ("line",), ("explain",), ("interview",), ("delete",)],
-               7: [("top",), ("story",), ("team",), ("fifteen", "15"), ("explain",)]},
-        "te": {}}
+MUST = {"en": {1: [("imagine",), ("policy",), ("thirty", "30"), ("days", "day")], "1b": [("thirty", "30"), ("weeks", "week"), ("rejected",)],
+               2: [("myth",), ("numbers", "number"), ("translation",), ("fact",), ("unit",)],
+               3: [("small",), ("five", "5"), ("google",), ("weeks", "week"), ("years", "year"), ("maternity",), ("settled",)],
+               4: [("number",), ("four", "4"), ("five", "5")], "4b": [("covered",), ("survived",)],
+               5: [("agent",), ("customer",), ("information",), ("sheet",), ("telugu",), ("2024",), ("week",), ("month",)],
+               6: [("thirty", "30"), ("days", "day"), ("weeks", "week")]},
+        "te": {1: [("सरोज", "सरोजि", "शरोज")], 3: [("गूगल", "गुगल", "गूगुल")]}}
 JUDGE_TEXT = {}
 
 TELUGU = re.compile(r"[ఀ-౿]")
