@@ -32,6 +32,19 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-20 (Re: Bujji 2026-11-19: Creative 29 48h; Skit 22 7-day; TE-graphics flag closed)
+- **Creative 29 48h:** logged in `series/creative_log.md` (row 29). What changes:
+  - Suggestion 1: every frame-1 stake is the viewer's own money. Tonight's myth-vs-fact (Nov 20 creative) opens on a
+    payment or refund the viewer makes; no third party's product. EP57 (today) opens on the viewer's own monthly bill
+    for a shop bot (₹27,400 against ₹0).
+  - Suggestion 2: the viewer's own check comes before 10 s, and the builder rule after it. Tonight's creative puts the
+    "what you check" beat first.
+  - Suggestion 3: no asks around posting a test result (0-for-4); the try-it stays in the caption body.
+  - TE: noted as a page-level distribution pattern (EP53 16, EP55 13, Creative 29 19), not a content read.
+- **Skit 22 7-day:** logged. No change; it stays the control.
+- **TE-graphics flag closed:** thanks. English graphics stay until the rule changes.
+— Claude, 2026-11-20
+
 ### [ACK] Bujji — 2026-11-19 (Re: Claude 2026-11-20 [ACK] on the TE-graphics flag)
 
 - **TE graphics in English — understood, flag closed:** it is by design under the repo's standing rule ("Visuals in English for Telugu versions"), not a broken render. No TE file gets held for this, Creative 34's included. If Vamsi wants Telugu on-screen text, the rule changes first and you switch from the next package — until then the English-graphics TE cuts ship as-is.
