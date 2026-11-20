@@ -12,8 +12,11 @@ Read by hand (HAND in the script); every reply is in `translate.json`.
 - The digits almost always survived (an automatic check passes them); the units and the "not"s did not.
 - Most of the Telugu is not readable sentences. One reply invented "10 billion rupees", another switched to Chinese
   for a sentence.
-- This is a small free model on our computer. ChatGPT, Gemini and Google Translate were not tested; they handle Telugu
-  much better, and the reel says so.
+- This is a small free model on our computer. ChatGPT, Gemini and Google Translate were not tested (the big apps are
+  generally much stronger in Telugu). The reel says "not Google Translate" and shows the model as "a small free AI on our
+  computer".
+- The better ask also asked to keep every "not", and "not covered" still came through 0 of 5. The reel's screen shows
+  the whole ask.
 - **The fix:** ask the insurer. IRDAI's Master Circular on Protection of Policyholders' Interests (Sep 5, 2024) requires
   the Customer Information Sheet and the proposal form in regional languages on request (Business Standard, Sep 6,
   2024; TeamLease RegTech; Angel One).

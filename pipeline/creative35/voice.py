@@ -31,11 +31,12 @@ NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
 MUST = {"en": {1: [("imagine",), ("policy",), ("thirty", "30"), ("days", "day")], "1b": [("thirty", "30"), ("weeks", "week"), ("rejected",)],
                2: [("myth",), ("numbers", "number"), ("translation",), ("fact",), ("unit",)],
-               3: [("small",), ("five", "5"), ("google",), ("weeks", "week"), ("years", "year"), ("maternity",), ("settled",)],
+               3: [("small",), ("five", "5"), ("chatgpt", "gpt"), ("google",), ("weeks", "week"), ("years", "year"), ("maternity",), ("settled",)],
                4: [("number",), ("four", "4"), ("five", "5")], "4b": [("covered",), ("survived",)],
-               5: [("agent",), ("customer",), ("information",), ("sheet",), ("telugu",), ("2024",), ("week",), ("month",)],
+               5: [("agent",), ("customer",), ("information",), ("sheet",), ("telugu",), ("2024",), ("languages", "language"), ("unit", "units")],
                6: [("thirty", "30"), ("days", "day"), ("weeks", "week")]},
-        "te": {1: [("सरोज", "सरोजि", "शरोज")], 3: [("गूगल", "गुगल", "गूगुल")]}}
+        "te": {1: [("सरोज", "सरोजि", "शरोज")], 3: [("गूगल", "गुगल", "गूगुल", "गोगुल", "गोगल")], "3b": [("मुप्प", "30", "मुप"), ("मेटर", "मैटर", "मेटन", "मटर")],
+               5: [("अंद", "अन्द", "अंध")], "5b": [("रूल", "रुल", "रोल")]}}
 JUDGE_TEXT = {}
 
 TELUGU = re.compile(r"[ఀ-౿]")
