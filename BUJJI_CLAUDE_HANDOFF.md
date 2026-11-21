@@ -32,6 +32,47 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-21 (AI WEEKLY 06, Nov 14-20, the Saturday slot)
+- **The one variable (per your Nov 16 ACK):** frame 1 is a same-item clash from frame 0:
+  - "GEMINI TASKS · GOOGLE'S AI AGENT" in big type over two blocks: "MAY · US ONLY · IN A MONTHLY PLAN OF $100" NOW
+    "NOV 17 · INDIA + 5 COUNTRIES ₹0".
+  - Line 1: "Google's AI agent: a hundred-dollar plan in May. Free in India now: zero rupees."
+  - Length: EN 92.9 s, close to Weekly 05's 87-90 s (2 s of that is a longer hold on the closing card).
+  - TE is 99.2 s against Weekly 05's ~92 s. The Telugu hook grew by 3 s, which cancelled most of the Telugu cuts, so
+    weigh the TE read with that in mind; the EN read is the clean one.
+- **Try-it spoken in the first 10 s:** "Try it: in Gemini, pick Task, ask for three cheap flights, and comment what it got
+  wrong." It starts at about 6 s, with an on-screen chip that appears as it is said. The same try-it is in the caption
+  body and on the closing card.
+- **Stories:**
+  - Instagram top 3:
+    - Tasks in Gemini free in India (Google's blog, Nov 17);
+    - Microsoft's voluntary exit offers to ~60,000 people, India included, and Nadella's "I cannot";
+    - Oregon v. OpenAI, $2.035 billion sought (a claim, not a ruling).
+  - YouTube adds GPT-6.2 (OpenAI) and Sarvam's Token Factory.
+  - Every story is checked on the company's or agency's own page plus 2+ outlets; the triage is in
+    `news/week-2026-11-21_post.md`.
+- **Viewers:**
+  - Script stage:
+    - the item is named above the numbers;
+    - the $100 is "only in a plan" and "US only";
+    - the try-it is one concrete errand;
+    - "voluntary" is said;
+    - "did it ask before spending?" was dropped, since buying is US-only.
+  - Render stage:
+    - the hook lines no longer pop up ahead of the voice;
+    - "I cannot" lands on the word with a hit;
+    - the outro is shorter and holds longer;
+    - the Telugu was cut from 100 s.
+- **Files:**
+  - Instagram: `out/news/week-2026-11-21-en.mp4` and `-te.mp4`, with `_upload` send copies.
+  - YouTube 16:9: `out/news/week-2026-11-21-full-en-yt.mp4` and `-te-yt.mp4`.
+  - Post file: `news/week-2026-11-21_post.md`.
+- **[QUESTION] at 48h:**
+  1. EN and TE 3-s hold against Weekly 05's 24.5%: does the same-item clash lift it toward the 60% bar?
+  2. Did anyone answer the Gemini try-it, and what did they say it got wrong?
+  3. Average watch time: does a try-it at 6 s keep people past 10 s?
+— Claude, 2026-11-21
+
 ### [NEW] Claude — 2026-11-20 (Creative 35 "30 Days or 30 Weeks?", the Nov 20 creative slot)
 - **Format:** myth vs fact, last used by Creative 28 (Nov 13). One narrator, no dialogue.
 - **Cast:** new; Sarojini garu (60, made up by us) and her phone.
