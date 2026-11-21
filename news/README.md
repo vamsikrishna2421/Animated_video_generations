@@ -35,6 +35,8 @@ ask format stay.
    between them, "OUT OF"); outro `ask` (the comment question as a big card, last line in amber). Say the clash in the
    first line of the voice, with its unit ("five and a half percent"); a callback to an earlier story must not hint at
    a cause the sources don't give.
+   From AI WEEKLY 06: hook `clashTitle` (the one item both numbers belong to, big, above the blocks) and `lineSent`
+   (the sentence index each hook line waits for, so a teaser never pops while the voice is still on story 1).
 5. **Render** the four formats: `pipeline/render_news.sh news/week-<date>.json en`, `... te @ai_maastaaru_telugu`,
    then `COMP=NewsYT SKIP_BUILD=1 pipeline/render_news.sh news/week-<date>.json en` (and `te`) for the 16:9
    YouTube editions (`out/news/<id>-<lang>-yt.mp4`). Review packs and viewer review as for every reel.
