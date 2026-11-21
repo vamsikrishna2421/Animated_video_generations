@@ -1,6 +1,6 @@
 # Creative 36 test: does "AI enhance" read a blurry number plate, or draw a new one?
 # 10 made-up plates (Indian format, made-up numbers), each drawn sharp (the truth), shrunk to a CCTV-sized blur (two
-# levels: FAR 40x10 px, NEAR 56x14 px of plate), then (a) plain bicubic resize and (b) the Stable Diffusion x4 upscaler
+# levels: FAR 36x9 px, NEAR 52x13 px of plate), then (a) plain bicubic resize and (b) the Stable Diffusion x4 upscaler
 # (a generative "AI enhance" model, run on our computer), 3 seeds each. Every output is read by hand from the contact
 # sheets (HAND below, filled in after the run); nothing is scored automatically.
 #   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/creative36/enhance_demo.py
@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "series/scripts/creative36_demo"
 IMG = ROOT / "out/local/creative36_demo"   # images stay local (git-ignored); the sheets we read are copied to OUT
 FONT = "/usr/share/fonts/truetype/noto/NotoSans-Bold.ttf"
-LEVELS = {"far": (40, 10), "near": (56, 14)}
+LEVELS = {"far": (36, 9), "near": (52, 13)}   # v2: far is blurrier (v1 at 40 px was still readable by eye)
 SEEDS = [1, 2, 3]
 PROMPT = "a sharp clear photo of a white Indian car number plate with black letters"
 
@@ -28,8 +28,13 @@ def plates(n=10, seed=36):
 def draw(text, w=512, h=128):
     im = Image.new("RGB", (w, h), (245, 245, 240)); d = ImageDraw.Draw(im)
     d.rectangle([3, 3, w - 4, h - 4], outline=(20, 20, 20), width=6)
-    f = ImageFont.truetype(FONT, 78); tw = d.textlength(text, font=f)
-    d.text(((w - tw) / 2, 10), text, font=f, fill=(15, 15, 15))
+    size = 78
+    while True:   # v2: fit inside the border (v1 clipped the first and last characters)
+        f = ImageFont.truetype(FONT, size); tw = d.textlength(text, font=f)
+        if tw <= w - 48:
+            break
+        size -= 2
+    d.text(((w - tw) / 2, (h - size * 1.36) / 2), text, font=f, fill=(15, 15, 15))
     return im
 
 
@@ -52,7 +57,7 @@ def main():
             for s in SEEDS:
                 t = time.time()
                 g = torch.Generator().manual_seed(s)
-                up = pipe(prompt=PROMPT, image=low, num_inference_steps=25, guidance_scale=7.5, noise_level=20, generator=g).images[0]
+                up = pipe(prompt=PROMPT, image=low, num_inference_steps=20, guidance_scale=7.5, noise_level=20, generator=g).images[0]
                 up.save(IMG / f"{i:02d}_{lv}_ai_s{s}.png")
                 rows.append({"plate": i, "truth": p, "level": lv, "seed": s, "secs": round(time.time() - t, 1)})
                 print(i, p, lv, s, rows[-1]["secs"], flush=True)
