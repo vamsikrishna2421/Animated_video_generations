@@ -78,7 +78,21 @@ def main():
     print("DONE")
 
 
-HAND = {}   # (plate, level, seed): what the AI-enhanced plate reads as, by hand (filled in after the run)
+HAND = {   # read by hand from the contact sheets (Nov 21), the 4-digit block unless noted; "streaks" = no readable plate
+    "far": {   # 36x9 px: a blur you can only half read
+        "s1": ["9010", "9J8S", "9458?", "0872", "2R75", "?385 (garbled)", "WQ5 (garbled)", "?14? (garbled)", "9H22", "6a17"],
+        "s2": ["streaks"] * 10,
+        "s3": ["9000", "S23S", "9424?", "0872", "2273 (right)", "J389", "7NQ3", "91?? (garbled)", "9H22", "0317"],
+        # sharp-looking plates: s1 + s3 = 20; the 4-digit block right: 1 (plate 4, s3); "TS" became "TB" / "1B" in most
+    },
+    "near": {   # 52x13 px: readable by eye; whole plate right?
+        "s1": [1, 1, "5414 -> 54?H", 1, 1, "7389 -> 73S9", 1, 1, "5822 -> 5322", 1],
+        "s2": [1, 1, "5414 -> 541?", 1, 1, 1, 1, 1, 1, 1],   # s2 stays soft, close to a plain resize
+        "s3": [1, "9233 -> 9Z33", 1, 1, "2273 -> 2Z73", "7389 -> 7339", 1, "9149 -> 9140", "5822 -> 5S22", 1],
+        # right: 21 of 30; a character changed: 9 of 30
+    },
+    "hero": "plate 0, TS 06 BA 5660, far: s1 '...9010', s2 streaks, s3 '...9000'",
+}
 
 if __name__ == "__main__":
     main()
