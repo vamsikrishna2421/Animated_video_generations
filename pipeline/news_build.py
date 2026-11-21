@@ -171,7 +171,10 @@ def build(spec_path, lang="en"):
                 if new:
                     starts.append(w["s"])
                 new = w["w"].rstrip("\"'").endswith((".", "?", "!"))
-            entry["lineAt"] = starts[:len(seg["lines"])]
+            # AI WEEKLY 06 render review: `lineSent` pins each line to its own sentence (line 2 no longer pops while the
+            # voice is still on story 1)
+            ls = seg.get("lineSent")
+            entry["lineAt"] = [starts[min(i, len(starts) - 1)] for i in ls] if ls else starts[:len(seg["lines"])]
         timeline["segments"].append(entry)
         print(name, f"{len(a) / sr:.1f}s", flush=True)
     timeline["frames"] = sum(s["frames"] for s in timeline["segments"])
