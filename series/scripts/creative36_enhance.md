@@ -1,4 +1,4 @@
-# Creative 36 "Enhance!" · Nov 21 creative slot · script v2
+# Creative 36 "Enhance!" · Nov 21 creative slot · script v3
 
 ## Format and rotation
 - **Format:** a two-character skit. The last dialogue skit was Creative 27 (Nov 12); the last creative (35) was myth vs fact,
@@ -100,5 +100,47 @@ All four viewers (Sandeep, Priya, Lakshmi, Ravi) stopped on frame 1. Ravi: "this
 | 7 | mohan | Even a US court refused AI-enhanced video as evidence. | అమెరికాలో ఒక కోర్టు కూడా, ఎన్‌హాన్స్ చేసిన వీడియోని ఒప్పుకోలేదు. |
 | 8 | vijaya | The gate camera, same car: five, six, six, zero. [1] A guest's car. [2] Sorry, Mohan garu! | గేట్ కెమెరాలో అదే కారు: ఐదు ఆరు ఆరు సున్నా. [1] ఎవరో గెస్ట్ కారు. [2] సారీ, మోహన్ గారూ! |
 | 9 | mohan | Next time: a second camera, the watchman. [1] Never blame anyone from an enhanced picture. | ఇంకోసారి: ఇంకో కెమెరా చూడండి, వాచ్‌మన్ ని అడగండి. [1] ఎన్‌హాన్స్ చేసిన ఫోటో చూసి, ఎవరి మీదా నింద వేయొద్దు. |
+| 10 | vijaya | One more enhance? | ఇంకొక్కసారి ఎన్‌హాన్స్? |
+| 11 | app | Enhanced. | Enhanced. |
+
+## Render review (human-viewer, v2 render), what changed for v3
+All four stopped on frame 1. Ravi: "that's our cellar". "Sorry, Mohan garu!" worked for everyone, and going back to
+"…9000" was the best joke.
+- **All agreed:**
+  - 0:00-0:13 was one still frame. Line 2 now has its own close-up (his plate against the AI's "…9000", "TRY 1 = HIS
+    PLATE"), so the picture changes at about 6 s.
+  - The test and court stretch was where viewers left:
+    - the test is two takes, with a breath and a music drop before "once";
+    - the "1 · last 4 digits right" box comes on the word and holds (a 1.1 s scene tail);
+    - "the other 10 tries: just streaks" is on screen in large type;
+    - the court card is light, three short lines, with readable sources.
+  - Too small on a phone: the story tag (40 px), the TRY labels, "not phone apps" (a red bar), the court sources, "look
+    again: the blur said …5660 too".
+  - Half a second of silence before "five, six, six, zero": the line is split and the bed drops.
+- **Also:**
+  - "looks likely" became "looks right".
+  - The phone says "AI ENHANCE", not a photo app.
+  - The scooter, which read as a lawnmower, is redrawn.
+  - A register chip ("the watchman's register: Flat 4B's guest") answers who pays for the dent.
+  - Mohan smiles at "Sorry".
+  - The English music between lines is lower (0.24).
+  - Telugu:
+    - "గారూ" was heard as "కారు" in a car story, so Vijaya calls him "మోహన్ అన్నయ్యా" and "సారీ, అన్నయ్యా!";
+    - "క్లియర్‌గా" for "స్పష్టంగా" (heard as "sabastaranga");
+    - "అంకెలు… వచ్చాయి";
+    - "ఇకపై" for "ఇంకోసారి" in the rule (it clashed with "press again").
+
+## Script v3 (as voiced)
+| # | who | English | Telugu |
+|---|---|---|---|
+| 1 | vijaya | Mohan garu! Someone dented my car, and AI enhance read the CCTV: nine-zero-zero-zero. Your scooter! | మోహన్ అన్నయ్యా! నా కారుకి సొట్ట పడింది; సీసీటీవీ ఫోటోని యాప్ తో క్లియర్ చేస్తే, | తొమ్మిది, సున్నా, సున్నా, సున్నా: మీ స్కూటరే! |
+| 2 | mohan | Nine-zero-zero-zero is my plate, yes. [1] Press enhance again. | తొమ్మిది సున్నా సున్నా సున్నా, నా నంబరే. [1] ఇంకోసారి ఎన్‌హాన్స్ నొక్కండి. |
+| 3 | app | Enhanced. | Enhanced. |
+| 4 | vijaya | Now it says nine, zero, one, zero?! It changed! | ఇప్పుడు తొమ్మిది సున్నా ఒకటి సున్నా?! మారిపోయింది! |
+| 5 | mohan | Because this kind of AI enhance doesn't read the blur. [1] It draws a sharp plate that looks right. | ఎందుకంటే ఇలాంటి ఎన్‌హాన్స్, మసకగా ఉన్నది చదవదు. [1] క్లియర్‌గా కనిపించే నంబర్, కొత్తగా గీస్తుంది. |
+| 6 | mohan | Ten blurry plates, three tries each: [1] twenty sharp plates. | [2] The last four digits right: once. | పది మసక ప్లేట్లు, ఒక్కోదానికి మూడు సార్లు: [1] ఇరవై సార్లు క్లియర్‌గా కనిపించే ప్లేట్. | [2] చివరి నాలుగు అంకెలు సరిగ్గా వచ్చాయి: ఒక్కసారే. |
+| 7 | mohan | Even a US court refused AI-enhanced video as evidence. | అమెరికాలో ఒక కోర్టు కూడా, ఎన్‌హాన్స్ చేసిన వీడియోని ఒప్పుకోలేదు. |
+| 8 | vijaya | The gate camera, same car: | [1] five, six, six, zero. [2] A guest's car. [3] Sorry, Mohan garu! | గేట్ కెమెరాలో అదే కారు: | [1] ఐదు ఆరు ఆరు సున్నా. [2] ఎవరో గెస్ట్ కారు. [3] సారీ, అన్నయ్యా! |
+| 9 | mohan | Next time: a second camera, the watchman. [1] Never blame anyone from an enhanced picture. | ఇకపై: ఇంకో కెమెరా చూడండి, వాచ్‌మన్ ని అడగండి. [1] ఎన్‌హాన్స్ చేసిన ఫోటో చూసి, ఎవరి మీదా నింద వేయొద్దు. |
 | 10 | vijaya | One more enhance? | ఇంకొక్కసారి ఎన్‌హాన్స్? |
 | 11 | app | Enhanced. | Enhanced. |

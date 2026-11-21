@@ -63,11 +63,6 @@
       "who": "vijaya",
       "prop": "hook",
       "n": 1
-     },
-     {
-      "who": "mohan",
-      "prop": "again",
-      "n": 2
      }
     ],
     "captionTop": 1520,
@@ -80,9 +75,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -95,16 +91,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -125,16 +128,91 @@
     {
      "who": "vijaya",
      "file": "01_vijaya.wav",
-     "text": "మోహన్ గారూ! నా కారుకి సొట్ట పడింది; సీసీటీవీ ఫోటోని యాప్ తో క్లియర్ చేస్తే, <pause 0.25> తొమ్మిది, సున్నా, సున్నా, సున్నా: మీ స్కూటరే!",
+     "text": "మోహన్ అన్నయ్యా! నా కారుకి సొట్ట పడింది; సీసీటీవీ ఫోటోని యాప్ తో క్లియర్ చేస్తే, <pause 0.25> తొమ్మిది, సున్నా, సున్నా, సున్నా: మీ స్కూటరే!",
      "maxgap": 0.25,
      "gap": 0.3,
-     "show": "Mohan garu! My car got dented, and I cleared the CCTV photo with an app: nine-zero-zero-zero. Your scooter!",
+     "show": "Mohan anna! My car got dented, and I cleared the CCTV photo with an app: nine-zero-zero-zero. Your scooter!",
      "tempo": 1.08,
-     "tts": "మోహన్ గారూ! నా కారుకి సొట్ట పడింది; సీసీటీవీ ఫోటోని యాప్ తో క్లియర్ చేస్తే,",
+     "tts": "మోహన్ అన్నయ్యా! నా కారుకి సొట్ట పడింది; సీసీటీవీ ఫోటోని యాప్ తో క్లియర్ చేస్తే,",
      "file2": "01b_vijaya.wav",
      "tts2": "తొమ్మిది, సున్నా, సున్నా, సున్నా: మీ స్కూటరే!",
      "pause": 0.25
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_enh36",
+   "tail": 0.0,
+   "boost": 1.6,
+   "data": {
+    "beats": [
+     {
+      "who": "mohan",
+      "prop": "again",
+      "n": 2
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "blurLab": "SAME CCTV BLUR",
+     "enhLab": "AI ENHANCE",
+     "tryA": "TRY 1",
+     "tryB": "TRY 2",
+     "numA": "…9000",
+     "numB": "…9010",
+     "dent": "DENTED",
+     "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
+     "plateHis": "TS 06 BA 9000",
+     "story": "a story · the plates and AI outputs are real",
+     "appName": "AI ENHANCE",
+     "changed": "IT CHANGED!",
+     "numC": "streaks",
+     "tryC": "TRY 3",
+     "drawsHead": "IT DRAWS. IT DOESN'T READ.",
+     "drawsSub": "same blur, 3 tries:",
+     "drawsNote": "tested: a free AI upscaler on our computer · not phone apps",
+     "testHead": "OUR TEST",
+     "testSub": "10 blurry plates × 3 tries · a free AI upscaler on our computer",
+     "sharpN": "20",
+     "sharpLab": "sharp-looking plates",
+     "rightN": "1",
+     "rightLab": "last 4 digits right",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
+     "court": [
+      "2024 · KING COUNTY, WASHINGTON (US)",
+      "AI-enhanced video barred from a murder trial",
+      "\"visual data not in the original\": a forensic video analyst"
+     ],
+     "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
+     "origLab": "THE GATE CAMERA · SAME CAR",
+     "numReal": "…5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
+     "sorry": "SORRY, MOHAN GARU!",
+     "ruleHead": "NEXT TIME",
+     "rule": [
+      "check a second camera",
+      "ask the watchman"
+     ],
+     "ruleX": "blame from an enhanced picture",
+     "again": "ONE MORE ENHANCE?"
     },
+    "yt": {
+     "chapter": "My plate",
+     "title": "My plate",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
     {
      "who": "mohan",
      "file": "02_mohan.wav",
@@ -147,7 +225,7 @@
    ]
   },
   {
-   "id": "s_b",
+   "id": "s_c",
    "type": "sk_enh36",
    "tail": 0.1,
    "boost": 1.3,
@@ -175,9 +253,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -190,16 +269,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -238,15 +324,17 @@
    ]
   },
   {
-   "id": "s_c",
+   "id": "s_d",
    "type": "sk_enh36",
-   "tail": 0.1,
-   "boost": 1.0,
-   "lift": 0.5,
-   "swell": [
-    1,
-    2,
-    1.6
+   "tail": 1.1,
+   "boost": 1.5,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     1,
+     2,
+     0.3
+    ]
    ],
    "data": {
     "beats": [
@@ -271,9 +359,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -286,16 +375,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -316,7 +412,7 @@
     {
      "who": "mohan",
      "file": "05_mohan.wav",
-     "text": "ఎందుకంటే ఇలాంటి ఎన్‌హాన్స్, మసకగా ఉన్నది చదవదు. [1] స్పష్టంగా కనిపించే నంబర్, కొత్తగా గీస్తుంది.",
+     "text": "ఎందుకంటే ఇలాంటి ఎన్‌హాన్స్, మసకగా ఉన్నది చదవదు. [1] క్లియర్‌గా కనిపించే నంబర్, కొత్తగా గీస్తుంది.",
      "maxgap": 0.25,
      "gap": 0.25,
      "show": "Because this kind of enhance can't read what's blurry. It draws a clear-looking number, new.",
@@ -325,25 +421,29 @@
     {
      "who": "mohan",
      "file": "06_mohan.wav",
-     "text": "పది మసక ప్లేట్లు, ఒక్కోదానికి మూడు సార్లు: [1] ఇరవై సార్లు స్పష్టమైన ప్లేట్; [2] చివరి నాలుగు అంకెలు సరిగ్గా వచ్చింది ఒక్కసారే.",
+     "text": "పది మసక ప్లేట్లు, ఒక్కోదానికి మూడు సార్లు: [1] ఇరవై సార్లు క్లియర్‌గా కనిపించే ప్లేట్. <pause 0.5> [2] చివరి నాలుగు అంకెలు సరిగ్గా వచ్చాయి: ఒక్కసారే.",
      "maxgap": 0.25,
      "gap": 0.3,
-     "show": "Ten blurry plates, three tries each: twenty times a clear plate; the last four digits right only once.",
-     "tempo": 1.08
+     "show": "Ten blurry plates, three tries each: twenty times a clear-looking plate. The last four digits right: once.",
+     "tempo": 1.08,
+     "tts": "పది మసక ప్లేట్లు, ఒక్కోదానికి మూడు సార్లు: ఇరవై సార్లు క్లియర్‌గా కనిపించే ప్లేట్.",
+     "file2": "06b_mohan.wav",
+     "tts2": "చివరి నాలుగు అంకెలు సరిగ్గా వచ్చాయి: ఒక్కసారే.",
+     "pause": 0.5
     }
    ]
   },
   {
-   "id": "s_d",
+   "id": "s_e",
    "type": "sk_enh36",
    "tail": 0.1,
-   "boost": 1.4,
-   "lift": 0.6,
-   "drop_pre": [
+   "boost": 2.0,
+   "lift": 0.7,
+   "drop_at": [
     [
      1,
-     0.0,
-     0.7
+     1,
+     0.2
     ]
    ],
    "data": {
@@ -369,9 +469,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -384,16 +485,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -423,16 +531,20 @@
     {
      "who": "vijaya",
      "file": "08_vijaya.wav",
-     "text": "గేట్ కెమెరాలో అదే కారు: ఐదు ఆరు ఆరు సున్నా. [1] ఎవరో గెస్ట్ కారు. [2] సారీ, మోహన్ గారూ!",
+     "text": "గేట్ కెమెరాలో అదే కారు: <pause 0.5> [1] ఐదు ఆరు ఆరు సున్నా. [2] ఎవరో గెస్ట్ కారు. [3] సారీ, అన్నయ్యా!",
      "maxgap": 0.25,
      "gap": 0.3,
-     "show": "In the gate camera, the same car: five-six-six-zero. Some guest's car. Sorry, Mohan garu!",
-     "tempo": 1.08
+     "show": "In the gate camera, the same car: five-six-six-zero. Some guest's car. Sorry, anna!",
+     "tempo": 1.08,
+     "tts": "గేట్ కెమెరాలో అదే కారు:",
+     "file2": "08b_vijaya.wav",
+     "tts2": "ఐదు ఆరు ఆరు సున్నా. ఎవరో గెస్ట్ కారు. సారీ, అన్నయ్యా!",
+     "pause": 0.5
     }
    ]
   },
   {
-   "id": "s_e",
+   "id": "s_f",
    "type": "sk_enh36",
    "tail": 0.0,
    "outro": true,
@@ -468,9 +580,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -483,16 +596,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -513,10 +633,10 @@
     {
      "who": "mohan",
      "file": "09_mohan.wav",
-     "text": "ఇంకోసారి: ఇంకో కెమెరా చూడండి, వాచ్‌మన్ ని అడగండి. [1] ఎన్‌హాన్స్ చేసిన ఫోటో చూసి, ఎవరి మీదా నింద వేయొద్దు.",
+     "text": "ఇకపై: ఇంకో కెమెరా చూడండి, వాచ్‌మన్ ని అడగండి. [1] ఎన్‌హాన్స్ చేసిన ఫోటో చూసి, ఎవరి మీదా నింద వేయొద్దు.",
      "maxgap": 0.25,
      "gap": 0.3,
-     "show": "Next time: check another camera, ask the watchman. Don't blame anyone from an enhanced photo.",
+     "show": "From now on: check another camera, ask the watchman. Don't blame anyone from an enhanced photo.",
      "tempo": 1.08
     },
     {

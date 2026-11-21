@@ -69,14 +69,17 @@ const car = (c: Ctx, x: number, y: number, tag: string, k: number) => {
   if (k > 0) chip(c, tag, x + 250, y - 40, RED, "#fff", k, 34);
 };
 
-// his scooter with its front plate
+// his scooter (side view: rear body, seat, floorboard, front apron, handlebar, headlight) and its plate tag
 const scooter = (c: Ctx, x: number, y: number, plate: string, hot: number) => {
   c.save(); c.translate(x, y);
-  c.fillStyle = "#15803d"; rrect(c, 30, 70, 230, 110, 50); c.fill();
-  c.fillStyle = "#166534"; c.beginPath(); c.moveTo(230, 80); c.lineTo(290, -40); c.lineTo(320, -40); c.lineTo(270, 110); c.closePath(); c.fill();
-  c.fillStyle = "#111827"; rrect(c, 270, -60, 90, 22, 10); c.fill(); rrect(c, 60, 40, 150, 34, 14); c.fill();
-  [[70, 190], [280, 190]].forEach(([wx, wy]) => { c.fillStyle = "#111827"; c.beginPath(); c.arc(wx, wy, 40, 0, Math.PI * 2); c.fill(); c.fillStyle = "#9ca3af"; c.beginPath(); c.arc(wx, wy, 15, 0, Math.PI * 2); c.fill(); });
-  // the plate, big enough to read
+  c.fillStyle = "#15803d";
+  c.beginPath(); c.moveTo(20, 150); c.quadraticCurveTo(10, 60, 110, 60); c.lineTo(180, 60); c.lineTo(190, 150); c.closePath(); c.fill();   // rear body
+  c.fillStyle = "#111827"; rrect(c, 40, 34, 150, 30, 14); c.fill();   // seat
+  c.fillStyle = "#166534"; c.fillRect(180, 135, 110, 22);   // floorboard
+  c.fillStyle = "#15803d"; c.beginPath(); c.moveTo(270, 155); c.lineTo(300, -20); c.lineTo(335, -20); c.lineTo(330, 155); c.closePath(); c.fill();   // front apron
+  c.strokeStyle = "#111827"; c.lineWidth = 10; c.beginPath(); c.moveTo(290, -30); c.lineTo(350, -50); c.stroke();   // handlebar
+  c.fillStyle = "#fde68a"; c.beginPath(); c.arc(340, -18, 14, 0, Math.PI * 2); c.fill();   // headlight
+  [[80, 175], [310, 175]].forEach(([wx, wy]) => { c.fillStyle = "#111827"; c.beginPath(); c.arc(wx, wy, 34, 0, Math.PI * 2); c.fill(); c.fillStyle = "#9ca3af"; c.beginPath(); c.arc(wx, wy, 12, 0, Math.PI * 2); c.fill(); });
   c.fillStyle = "#ffffff"; rrect(c, 120, 205, 260, 64, 8); c.fill();
   c.strokeStyle = hot > 0 ? RED : "#111827"; c.lineWidth = hot > 0 ? 8 : 4; rrect(c, 120, 205, 260, 64, 8); c.stroke();
   c.fillStyle = "#111827"; c.font = SANS(fit(c, plate, 240, 40, 900), 900); c.textAlign = "center"; c.fillText(plate, 250, 252);
@@ -104,14 +107,14 @@ const StEnhance: React.FC<SP> = ({ s }) => {
   beats.forEach((b, i) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
-    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.75 : 0.6} />, <Sfx key={k("c")} at={2} src={CLAP} vol={0.55} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("c")} at={2} src={CLAP} vol={0.55} />);
     if (b.prop === "again") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 4)} src="audio/gag_bonk.wav" vol={0.4} />);
     if (b.prop === "app" || b.prop === "loop") sfx.push(<Sfx key={k("g")} at={Math.max(0, at - 6)} src="reel/sfx_glitch.wav" vol={0.5} />, <Sfx key={k("d")} at={at + 6} src="audio/gag_ding.wav" vol={0.35} />);
     if (b.prop === "changed") sfx.push(<Sfx key={k("b")} at={at + 2} src="reel/sfx_boom.wav" vol={0.55} />);
     if (b.prop === "draws") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.3} />);
-    if (b.prop === "test") [1, 2].forEach((n) => sfx.push(<Sfx key={k("p" + n)} at={cue(i, n, 0.3 + 0.3 * n) - 4} src={n === 2 ? "reel/sfx_boom.wav" : "audio/sfx_pop.wav"} vol={n === 2 ? 0.55 : 0.4} />));
+    if (b.prop === "test") [1, 2].forEach((n) => sfx.push(<Sfx key={k("p" + n)} at={cue(i, n, 0.3 + 0.3 * n) + (n === 2 ? 14 : -4)} src={n === 2 ? "reel/sfx_boom.wav" : "audio/sfx_pop.wav"} vol={n === 2 ? 0.55 : 0.4} />));
     if (b.prop === "court") sfx.push(<Sfx key={k("g")} at={at + 2} src="audio/gag_bonk.wav" vol={0.45} />);
-    if (b.prop === "real") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 6)} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("n")} at={cue(i, 1, 0.45) - 10} src="reel/sfx_boom.wav" vol={0.5} />, <Sfx key={k("s")} at={cue(i, 2, 0.8)} src="audio/gag_ding.wav" vol={0.45} />);
+    if (b.prop === "real") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 6)} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("n")} at={cue(i, 1, 0.4) + 4} src="reel/sfx_boom.wav" vol={0.55} />, <Sfx key={k("s")} at={cue(i, 3, 0.8)} src="audio/gag_ding.wav" vol={0.45} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.5) - 4} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "loopask") sfx.push(<Sfx key={k("d")} at={at + 2} src="audio/sfx_pop.wav" vol={0.4} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 30)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />); }
@@ -127,7 +130,7 @@ const StEnhance: React.FC<SP> = ({ s }) => {
         const loopOn = b.prop === "loop" && f >= endL + HOLD;
         const P = loopOn ? "hook" : b.prop;
         c.textAlign = "left";
-        if (P === "hook" || P === "again") {
+        if (P === "hook") {
           cellar(c, W, H);
           // frame 1: the same blur, two "enhanced" plates
           c.fillStyle = "rgba(15,23,42,0.92)"; rrect(c, 30, 250, W - 60, 500, 30); c.fill();
@@ -136,13 +139,21 @@ const StEnhance: React.FC<SP> = ({ s }) => {
           c.font = SANS(30, 900); c.fillStyle = AMBER; c.fillText(T.enhLab, W / 2, 500);
           pic(c, imgs.ai_a, 60, 520, 460, 115, RED); pic(c, imgs.ai_b, 560, 520, 460, 115, RED);
           c.font = SANS(66, 900); c.fillStyle = "#fca5a5"; c.fillText(T.numA, 290, 715); c.fillText(T.numB, 790, 715);
-          c.font = SANS(28, 800); c.fillStyle = "#cbd5e1"; c.fillText(T.tryA, 290, 672 - 0); c.fillText(T.tryB, 790, 672);
+          c.font = SANS(34, 900); c.fillStyle = "#e2e8f0"; c.fillText(T.tryA, 290, 668); c.fillText(T.tryB, 790, 668);
           car(c, 40, 930, T.dent, 1);
           scooter(c, 620, 830, T.plateHis, 1);
           chip(c, T.blamed, 870, 800, RED, "#fff", 1, 40);
           person(c, "vijaya" as BillWho, [230, 1250], 0.5, "angry", "phone", false, r);
-          person(c, "mohan" as BillWho, [860, 1250], 0.5, P === "again" ? "calm" : "shock", P === "again" ? "shrug" : "up", false, r);
-          if (!loopOn) chip(c, T.story, W / 2, 1462, "#1e293b", "#f8fafc", 1, 34);
+          person(c, "mohan" as BillWho, [860, 1250], 0.5, "shock", "up", false, r);
+          if (!loopOn) chip(c, T.story, W / 2, 1458, "#1e293b", "#f8fafc", 1, 40);
+        } else if (P === "again") {
+          // a close-up: his plate against the AI's "…9000"
+          cellar(c, W, H); c.fillStyle = "rgba(15,23,42,0.35)"; c.fillRect(0, 0, W, H);
+          c.save(); c.translate(W / 2, 520); const z = 1 + 0.06 * seg(f, ln.from, ln.from + ln.frames); c.scale(1.7 * z, 1.7 * z); scooter(c, -250, -150, T.plateHis, 1); c.restore();
+          pic(c, imgs.ai_a, 140, 830, 800, 200, RED);
+          c.textAlign = "center"; c.font = SANS(40, 900); c.fillStyle = "#fde68a"; c.fillText(T.matchLab, W / 2, 1100);
+          chip(c, T.blamed, 820, 300, RED, "#fff", 1, 44);
+          person(c, "mohan" as BillWho, [860, 1300], 0.55, "calm", "shrug", false, r);
         } else if (P === "app" || P === "changed" || P === "loop") {
           cellar(c, W, H); c.fillStyle = "rgba(15,23,42,0.55)"; c.fillRect(0, 0, W, H);
           // her phone, big: the plate swaps on "Enhanced."
@@ -168,7 +179,8 @@ const StEnhance: React.FC<SP> = ({ s }) => {
           c.save(); c.globalAlpha = clamp(k2 * 3);
           c.font = SANS(30, 900); c.fillStyle = AMBER; c.fillText(T.drawsSub, W / 2, 730);
           pic(c, imgs.ai_a, 60, 760, 460, 115, RED); pic(c, imgs.ai_b, 560, 760, 460, 115, RED); pic(c, imgs.ai_c, 310, 920, 460, 115, RED);
-          c.font = SANS(28, 800); c.fillStyle = "#fecaca"; c.fillText(T.drawsNote, W / 2, 1110);
+          c.fillStyle = "#7f1d1d"; rrect(c, 60, 1080, W - 120, 90, 20); c.fill();
+          c.font = SANS(fit(c, T.drawsNote, W - 160, 38, 900), 900); c.fillStyle = "#fff"; c.fillText(T.drawsNote, W / 2, 1140);
           c.restore();
         } else if (P === "test") {
           c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
@@ -178,24 +190,24 @@ const StEnhance: React.FC<SP> = ({ s }) => {
           c.save(); c.globalAlpha = clamp(kg * 2);
           if (imgs.grid_far) c.drawImage(imgs.grid_far, 30, 430, W - 60, (W - 60) * 370 / 1050);
           c.restore();
-          const k1 = seg(f, cu(1, 0.4) - 4, cu(1, 0.4) + 6), k2 = seg(f, cu(2, 0.75) - 4, cu(2, 0.75) + 6);
+          const k1 = seg(f, cu(1, 0.4) - 4, cu(1, 0.4) + 6), k2 = seg(f, cu(2, 0.75) + 14, cu(2, 0.75) + 24);
           if (k1 > 0) { c.save(); c.globalAlpha = clamp(k1 * 3); c.fillStyle = "#1e293b"; rrect(c, 60, 820, 460, 220, 26); c.fill(); c.font = SANS(110, 900); c.fillStyle = "#f8fafc"; c.fillText(T.sharpN, 290, 950); c.font = SANS(30, 800); c.fillStyle = "#cbd5e1"; c.fillText(T.sharpLab, 290, 1005); c.restore(); }
           if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.fillStyle = "#14532d"; rrect(c, 560, 820, 460, 220, 26); c.fill(); c.font = SANS(110, 900); c.fillStyle = "#bbf7d0"; c.fillText(T.rightN, 790, 950); c.font = SANS(30, 800); c.fillStyle = "#dcfce7"; c.fillText(T.rightLab, 790, 1005); c.restore(); }
-          if (f >= cu(2, 0.75) + 12) { c.font = SANS(fit(c, T.testNote, W - 100, 30, 700), 700); c.fillStyle = "#94a3b8"; c.fillText(T.testNote, W / 2, 1100); }
+          if (k1 > 0) { c.save(); c.globalAlpha = clamp(k1 * 3); c.font = SANS(fit(c, T.testNote, W - 100, 40, 900), 900); c.fillStyle = "#fca5a5"; c.fillText(T.testNote, W / 2, 1110); c.restore(); }
+          if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.font = SANS(fit(c, T.testNote2, W - 100, 36, 800), 800); c.fillStyle = "#cbd5e1"; c.fillText(T.testNote2, W / 2, 1170); c.restore(); }
         } else if (P === "court") {
-          c.fillStyle = "#1c1917"; c.fillRect(0, 0, W, H);
+          c.fillStyle = "#f5f5f4"; c.fillRect(0, 0, W, H);
           // a courthouse: pediment, columns, steps (the scale emoji has no glyph in the render font)
-          c.fillStyle = "#e7e5e4"; c.beginPath(); c.moveTo(W / 2 - 170, 380); c.lineTo(W / 2, 290); c.lineTo(W / 2 + 170, 380); c.closePath(); c.fill();
+          c.fillStyle = "#44403c"; c.beginPath(); c.moveTo(W / 2 - 170, 380); c.lineTo(W / 2, 290); c.lineTo(W / 2 + 170, 380); c.closePath(); c.fill();
           for (let q = 0; q < 5; q++) c.fillRect(W / 2 - 150 + q * 70, 395, 30, 100);
           c.fillRect(W / 2 - 180, 500, 360, 18); c.fillRect(W / 2 - 200, 522, 400, 18);
           c.textAlign = "center";
-          (T.court as string[]).forEach((t, q) => {
-            const k = q === 0 ? seg(f, ln.from + 2, ln.from + 10) : seg(f, cu(1, 0.5) - 4 + (q - 1) * 10, cu(1, 0.5) + 6 + (q - 1) * 10);
-            if (k <= 0) return;
-            c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = q === 2 ? "#fde68a" : "#f5f5f4";
-            c.font = SANS(q === 0 ? 34 : 52, 900); wrap(c, t, W - 140).slice(0, 2).forEach((tt, j) => c.fillText(tt, W / 2, 600 + q * 170 + j * 62)); c.restore();
+          (T.court2 as string[]).forEach((t, q) => {
+            const k = seg(f, ln.from + 2 + q * 8, ln.from + 10 + q * 8); if (k <= 0) return;
+            c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = q === 2 ? RED : "#1c1917";
+            c.font = SANS(fit(c, t, W - 120, q === 0 ? 50 : 64, 900), 900); c.fillText(t, W / 2, 650 + q * 120); c.restore();
           });
-          c.font = SANS(28, 700); c.fillStyle = "#a8a29e"; c.fillText(T.courtSrc, W / 2, 1150);
+          c.font = SANS(34, 800); c.fillStyle = "#57534e"; c.fillText(T.courtSrc, W / 2, 1050);
         } else if (P === "rule") {
           c.fillStyle = "#f8fafc"; c.fillRect(0, 0, W, H);
           c.textAlign = "center"; c.font = SANS(60, 900); c.fillStyle = "#0f172a"; c.fillText(T.ruleHead, W / 2, 340);
@@ -219,13 +231,15 @@ const StEnhance: React.FC<SP> = ({ s }) => {
           c.fillStyle = "#0b1020"; rrect(c, 50, 280, W - 100, 420, 26); c.fill();
           c.textAlign = "left"; c.font = SANS(30, 900); c.fillStyle = "#ef4444"; c.fillText("● REC", 90, 335); c.fillStyle = "#e2e8f0"; c.fillText(T.origLab, 220, 335);
           pic(c, imgs.truth, 120, 380, W - 240, (W - 240) / 4, "#e2e8f0");
-          const kn = seg(f, cu(1, 0.45) - 12, cu(1, 0.45) - 2);
+          const kn = seg(f, cu(1, 0.4) + 4, cu(1, 0.4) + 14);
           c.textAlign = "center";
-          if (kn > 0) { c.save(); c.globalAlpha = clamp(kn * 3); c.font = SANS(130, 900); c.fillStyle = "#4ade80"; c.fillText(T.numReal, W / 2, 880); c.font = SANS(fit(c, T.realLab, W - 100, 34, 800), 800); c.fillStyle = "#f8fafc"; c.fillText(T.realLab, W / 2, 945); c.restore(); }
-          const ks = seg(f, cu(2, 0.8) - 2, cu(2, 0.8) + 8);
+          if (kn > 0) { c.save(); c.globalAlpha = clamp(kn * 3); c.font = SANS(130, 900); c.fillStyle = "#4ade80"; c.fillText(T.numReal, W / 2, 880); c.font = SANS(fit(c, T.realLab, W - 100, 40, 900), 900); c.fillStyle = "#f8fafc"; c.fillText(T.realLab, W / 2, 950); c.restore(); }
+          const kg = seg(f, cu(2, 0.6) - 4, cu(2, 0.6) + 6);
+          if (kg > 0) chip(c, T.register, W / 2, 1020, "#1e293b", "#f8fafc", kg, 36);
+          const ks = seg(f, cu(3, 0.8) - 2, cu(3, 0.8) + 8);
           person(c, "vijaya" as BillWho, [230, 1250], 0.5, ks > 0 ? "worried" : "calm", "phone", false, r);
-          person(c, "mohan" as BillWho, [860, 1250], 0.5, ks > 0 ? "happy" : "calm", "fold", false, r);
-          stamp(c, T.sorry, W / 2, 1080, 64, GREEN, ks, -0.05);
+          person(c, "mohan" as BillWho, [860, 1250], 0.5, ks > 0 ? "happy" : "calm", ks > 0 ? "rest" : "fold", false, r);
+          stamp(c, T.sorry, W / 2, 1120, 64, GREEN, ks, -0.05);
         } else if (P === "loopask") {
           cellar(c, W, H);
           car(c, 40, 930, T.dent, 1); scooter(c, 620, 830, T.plateHis, 0);

@@ -15,7 +15,7 @@
  },
  "musicVol": [
   0.16,
-  0.3
+  0.24
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
@@ -61,11 +61,6 @@
       "who": "vijaya",
       "prop": "hook",
       "n": 1
-     },
-     {
-      "who": "mohan",
-      "prop": "again",
-      "n": 2
      }
     ],
     "captionTop": 1520,
@@ -78,9 +73,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -93,16 +89,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -127,7 +130,81 @@
      "gap": 0.3,
      "show": "Mohan garu! Someone dented my car, and AI enhance read the CCTV: nine-zero-zero-zero. Your scooter!",
      "tempo": 1.06
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_enh36",
+   "tail": 0.0,
+   "boost": 1.6,
+   "data": {
+    "beats": [
+     {
+      "who": "mohan",
+      "prop": "again",
+      "n": 2
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "blurLab": "SAME CCTV BLUR",
+     "enhLab": "AI ENHANCE",
+     "tryA": "TRY 1",
+     "tryB": "TRY 2",
+     "numA": "…9000",
+     "numB": "…9010",
+     "dent": "DENTED",
+     "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
+     "plateHis": "TS 06 BA 9000",
+     "story": "a story · the plates and AI outputs are real",
+     "appName": "AI ENHANCE",
+     "changed": "IT CHANGED!",
+     "numC": "streaks",
+     "tryC": "TRY 3",
+     "drawsHead": "IT DRAWS. IT DOESN'T READ.",
+     "drawsSub": "same blur, 3 tries:",
+     "drawsNote": "tested: a free AI upscaler on our computer · not phone apps",
+     "testHead": "OUR TEST",
+     "testSub": "10 blurry plates × 3 tries · a free AI upscaler on our computer",
+     "sharpN": "20",
+     "sharpLab": "sharp-looking plates",
+     "rightN": "1",
+     "rightLab": "last 4 digits right",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
+     "court": [
+      "2024 · KING COUNTY, WASHINGTON (US)",
+      "AI-enhanced video barred from a murder trial",
+      "\"visual data not in the original\": a forensic video analyst"
+     ],
+     "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
+     "origLab": "THE GATE CAMERA · SAME CAR",
+     "numReal": "…5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
+     "sorry": "SORRY, MOHAN GARU!",
+     "ruleHead": "NEXT TIME",
+     "rule": [
+      "check a second camera",
+      "ask the watchman"
+     ],
+     "ruleX": "blame from an enhanced picture",
+     "again": "ONE MORE ENHANCE?"
     },
+    "yt": {
+     "chapter": "My plate",
+     "title": "My plate",
+     "notes": []
+    }
+   },
+   "lines": [
     {
      "who": "mohan",
      "file": "02_mohan.wav",
@@ -140,7 +217,7 @@
    ]
   },
   {
-   "id": "s_b",
+   "id": "s_c",
    "type": "sk_enh36",
    "tail": 0.1,
    "boost": 1.3,
@@ -168,9 +245,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -183,16 +261,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -230,15 +315,17 @@
    ]
   },
   {
-   "id": "s_c",
+   "id": "s_d",
    "type": "sk_enh36",
-   "tail": 0.1,
-   "boost": 1.0,
-   "lift": 0.5,
-   "swell": [
-    1,
-    2,
-    1.6
+   "tail": 1.1,
+   "boost": 1.5,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     1,
+     2,
+     0.3
+    ]
    ],
    "data": {
     "beats": [
@@ -263,9 +350,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -278,16 +366,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -307,34 +402,38 @@
     {
      "who": "mohan",
      "file": "05_mohan.wav",
-     "text": "Because this kind of AI enhance doesn't read the blur. [1] It draws a sharp plate that looks likely.",
+     "text": "Because this kind of AI enhance doesn't read the blur. [1] It draws a sharp plate that looks right.",
      "maxgap": 0.3,
      "gap": 0.25,
-     "show": "Because this kind of AI enhance doesn't read the blur. It draws a sharp plate that looks likely.",
+     "show": "Because this kind of AI enhance doesn't read the blur. It draws a sharp plate that looks right.",
      "tempo": 1.06
     },
     {
      "who": "mohan",
      "file": "06_mohan.wav",
-     "text": "Ten blurry plates, three tries each: [1] twenty sharp plates; [2] the last four digits right once.",
+     "text": "Ten blurry plates, three tries each: [1] twenty sharp plates. <pause 0.5> [2] The last four digits right: once.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "show": "Ten blurry plates, three tries each: twenty sharp plates; the last four digits right once.",
-     "tempo": 1.06
+     "show": "Ten blurry plates, three tries each: twenty sharp plates. The last four digits right: once.",
+     "tempo": 1.06,
+     "tts": "Ten blurry plates, three tries each: twenty sharp plates.",
+     "file2": "06b_mohan.wav",
+     "tts2": "The last four digits right: once.",
+     "pause": 0.5
     }
    ]
   },
   {
-   "id": "s_d",
+   "id": "s_e",
    "type": "sk_enh36",
    "tail": 0.1,
-   "boost": 1.4,
-   "lift": 0.6,
-   "drop_pre": [
+   "boost": 2.0,
+   "lift": 0.7,
+   "drop_at": [
     [
      1,
-     0.0,
-     0.7
+     1,
+     0.2
     ]
    ],
    "data": {
@@ -360,9 +459,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -375,16 +475,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -413,16 +520,20 @@
     {
      "who": "vijaya",
      "file": "08_vijaya.wav",
-     "text": "The gate camera, same car: five, six, six, zero. [1] A guest's car. [2] Sorry, Mohan garu!",
+     "text": "The gate camera, same car: <pause 0.5> [1] five, six, six, zero. [2] A guest's car. [3] Sorry, Mohan garu!",
      "maxgap": 0.3,
      "gap": 0.3,
      "show": "The gate camera, same car: five, six, six, zero. A guest's car. Sorry, Mohan garu!",
-     "tempo": 1.06
+     "tempo": 1.06,
+     "tts": "The gate camera, same car:",
+     "file2": "08b_vijaya.wav",
+     "tts2": "five, six, six, zero. A guest's car. Sorry, Mohan garu!",
+     "pause": 0.5
     }
    ]
   },
   {
-   "id": "s_e",
+   "id": "s_f",
    "type": "sk_enh36",
    "tail": 0.0,
    "outro": true,
@@ -458,9 +569,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -473,16 +585,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [

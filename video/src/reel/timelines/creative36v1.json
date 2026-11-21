@@ -5,7 +5,7 @@
  "banner": "",
  "musicVol": [
   0.16,
-  0.3
+  0.24
  ],
  "title": "Enhance! (Creative 36)",
  "handle": "@ai_maastaaru",
@@ -13,15 +13,24 @@
  "fps": 30,
  "musicDrops": [
   [
-   1004,
-   1025
+   828,
+   861
+  ],
+  [
+   1136,
+   1166
   ]
  ],
  "musicBoosts": [
   [
    0,
-   389,
+   245,
    2.0
+  ],
+  [
+   245,
+   388,
+   1.6
   ],
   [
    389,
@@ -30,35 +39,29 @@
   ],
   [
    552,
-   900,
-   1.0
+   964,
+   1.5
   ],
   [
-   900,
-   1248,
-   1.4
+   964,
+   1329,
+   2.0
   ],
   [
-   1248,
-   1512,
+   1330,
+   1594,
    2.6
   ],
   [
-   822,
-   900,
-   1.6,
-   1
-  ],
-  [
-   1248,
-   1512,
+   1330,
+   1594,
    2.8,
    1
   ]
  ],
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1512,
+ "totalFrames": 1594,
  "music": "reel/creative36v1/score.wav",
  "scenes": [
   {
@@ -70,11 +73,6 @@
       "who": "vijaya",
       "prop": "hook",
       "n": 1
-     },
-     {
-      "who": "mohan",
-      "prop": "again",
-      "n": 2
      }
     ],
     "captionTop": 1520,
@@ -87,9 +85,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -102,16 +101,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -131,7 +137,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 389,
+   "frames": 245,
    "lines": [
     {
      "who": "vijaya",
@@ -219,65 +225,142 @@
       }
      ],
      "cues": {}
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_enh36",
+   "data": {
+    "beats": [
+     {
+      "who": "mohan",
+      "prop": "again",
+      "n": 2
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "blurLab": "SAME CCTV BLUR",
+     "enhLab": "AI ENHANCE",
+     "tryA": "TRY 1",
+     "tryB": "TRY 2",
+     "numA": "…9000",
+     "numB": "…9010",
+     "dent": "DENTED",
+     "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
+     "plateHis": "TS 06 BA 9000",
+     "story": "a story · the plates and AI outputs are real",
+     "appName": "AI ENHANCE",
+     "changed": "IT CHANGED!",
+     "numC": "streaks",
+     "tryC": "TRY 3",
+     "drawsHead": "IT DRAWS. IT DOESN'T READ.",
+     "drawsSub": "same blur, 3 tries:",
+     "drawsNote": "tested: a free AI upscaler on our computer · not phone apps",
+     "testHead": "OUR TEST",
+     "testSub": "10 blurry plates × 3 tries · a free AI upscaler on our computer",
+     "sharpN": "20",
+     "sharpLab": "sharp-looking plates",
+     "rightN": "1",
+     "rightLab": "last 4 digits right",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
+     "court": [
+      "2024 · KING COUNTY, WASHINGTON (US)",
+      "AI-enhanced video barred from a murder trial",
+      "\"visual data not in the original\": a forensic video analyst"
+     ],
+     "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
+     "origLab": "THE GATE CAMERA · SAME CAR",
+     "numReal": "…5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
+     "sorry": "SORRY, MOHAN GARU!",
+     "ruleHead": "NEXT TIME",
+     "rule": [
+      "check a second camera",
+      "ask the watchman"
+     ],
+     "ruleX": "blame from an enhanced picture",
+     "again": "ONE MORE ENHANCE?"
     },
+    "yt": {
+     "chapter": "My plate",
+     "title": "My plate",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 245,
+   "frames": 143,
+   "lines": [
     {
      "who": "mohan",
      "name": "Mohan",
      "color": "#93C5FD",
      "sub": null,
      "audio": "reel/creative36v1/line_02.wav",
-     "from": 230,
+     "from": 0,
      "frames": 135,
      "words": [
       {
        "w": "Nine-zero-zero-zero",
-       "from": 231,
-       "to": 265
+       "from": 1,
+       "to": 35
       },
       {
        "w": "is",
-       "from": 265,
-       "to": 270
+       "from": 35,
+       "to": 40
       },
       {
        "w": "my",
-       "from": 270,
-       "to": 275
+       "from": 40,
+       "to": 45
       },
       {
        "w": "plate,",
-       "from": 275,
-       "to": 287
+       "from": 45,
+       "to": 57
       },
       {
        "w": "yes.",
-       "from": 287,
-       "to": 311
+       "from": 57,
+       "to": 81
       },
       {
        "w": "Press",
-       "from": 311,
-       "to": 332
+       "from": 81,
+       "to": 103
       },
       {
        "w": "enhance",
-       "from": 332,
-       "to": 346
+       "from": 103,
+       "to": 116
       },
       {
        "w": "again.",
-       "from": 346,
-       "to": 358
+       "from": 116,
+       "to": 128
       }
      ],
      "cues": {
-      "1": 311
+      "1": 81
      }
     }
    ]
   },
   {
-   "id": "s_b",
+   "id": "s_c",
    "type": "sk_enh36",
    "data": {
     "beats": [
@@ -302,9 +385,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -317,16 +401,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -425,7 +516,7 @@
    ]
   },
   {
-   "id": "s_c",
+   "id": "s_d",
    "type": "sk_enh36",
    "data": {
     "beats": [
@@ -450,9 +541,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -465,16 +557,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -494,7 +593,7 @@
     "hardCuts": true
    },
    "from": 552,
-   "frames": 348,
+   "frames": 412,
    "lines": [
     {
      "who": "mohan",
@@ -503,101 +602,101 @@
      "sub": null,
      "audio": "reel/creative36v1/line_05.wav",
      "from": 0,
-     "frames": 157,
+     "frames": 163,
      "words": [
       {
        "w": "Because",
        "from": 0,
-       "to": 12
+       "to": 11
       },
       {
        "w": "this",
-       "from": 12,
-       "to": 19
+       "from": 11,
+       "to": 18
       },
       {
        "w": "kind",
-       "from": 19,
-       "to": 27
+       "from": 18,
+       "to": 24
       },
       {
        "w": "of",
-       "from": 27,
-       "to": 31
+       "from": 24,
+       "to": 28
       },
       {
        "w": "AI",
-       "from": 31,
-       "to": 35
+       "from": 28,
+       "to": 33
       },
       {
        "w": "enhance",
-       "from": 35,
-       "to": 47
+       "from": 33,
+       "to": 43
       },
       {
        "w": "doesn't",
-       "from": 47,
-       "to": 59
+       "from": 43,
+       "to": 54
       },
       {
        "w": "read",
-       "from": 59,
-       "to": 66
+       "from": 54,
+       "to": 65
       },
       {
        "w": "the",
-       "from": 66,
-       "to": 72
+       "from": 65,
+       "to": 70
       },
       {
        "w": "blur.",
-       "from": 72,
-       "to": 81
+       "from": 70,
+       "to": 78
       },
       {
        "w": "It",
-       "from": 81,
-       "to": 100
+       "from": 78,
+       "to": 82
       },
       {
        "w": "draws",
-       "from": 100,
-       "to": 108
+       "from": 82,
+       "to": 103
       },
       {
        "w": "a",
-       "from": 108,
-       "to": 111
+       "from": 103,
+       "to": 106
       },
       {
        "w": "sharp",
-       "from": 111,
-       "to": 120
+       "from": 106,
+       "to": 114
       },
       {
        "w": "plate",
-       "from": 120,
-       "to": 129
+       "from": 114,
+       "to": 122
       },
       {
        "w": "that",
-       "from": 129,
-       "to": 136
+       "from": 122,
+       "to": 134
       },
       {
        "w": "looks",
-       "from": 136,
-       "to": 145
+       "from": 134,
+       "to": 147
       },
       {
-       "w": "likely.",
-       "from": 145,
-       "to": 157
+       "w": "right.",
+       "from": 147,
+       "to": 156
       }
      ],
      "cues": {
-      "1": 81
+      "1": 78
      }
     },
     {
@@ -606,94 +705,94 @@
      "color": "#93C5FD",
      "sub": null,
      "audio": "reel/creative36v1/line_06.wav",
-     "from": 164,
-     "frames": 172,
+     "from": 171,
+     "frames": 199,
      "words": [
       {
        "w": "Ten",
-       "from": 164,
-       "to": 170
+       "from": 171,
+       "to": 176
       },
       {
        "w": "blurry",
-       "from": 170,
-       "to": 180
+       "from": 176,
+       "to": 185
       },
       {
        "w": "plates,",
-       "from": 180,
-       "to": 191
+       "from": 185,
+       "to": 204
       },
       {
        "w": "three",
-       "from": 191,
-       "to": 209
+       "from": 204,
+       "to": 221
       },
       {
        "w": "tries",
-       "from": 209,
-       "to": 217
+       "from": 221,
+       "to": 229
       },
       {
        "w": "each:",
-       "from": 217,
-       "to": 226
+       "from": 229,
+       "to": 237
       },
       {
        "w": "twenty",
-       "from": 226,
-       "to": 245
+       "from": 237,
+       "to": 256
       },
       {
        "w": "sharp",
-       "from": 245,
-       "to": 253
+       "from": 256,
+       "to": 263
       },
       {
-       "w": "plates;",
-       "from": 253,
-       "to": 270
+       "w": "plates.",
+       "from": 263,
+       "to": 284
       },
       {
-       "w": "the",
-       "from": 270,
-       "to": 283
+       "w": "The",
+       "from": 300,
+       "to": 306
       },
       {
        "w": "last",
-       "from": 283,
-       "to": 290
+       "from": 306,
+       "to": 318
       },
       {
        "w": "four",
-       "from": 290,
-       "to": 301
+       "from": 318,
+       "to": 325
       },
       {
        "w": "digits",
-       "from": 301,
-       "to": 311
+       "from": 325,
+       "to": 336
       },
       {
-       "w": "right",
-       "from": 311,
-       "to": 320
+       "w": "right:",
+       "from": 336,
+       "to": 357
       },
       {
        "w": "once.",
-       "from": 320,
-       "to": 332
+       "from": 357,
+       "to": 370
       }
      ],
      "cues": {
-      "1": 226,
-      "2": 270
+      "1": 237,
+      "2": 300
      }
     }
    ]
   },
   {
-   "id": "s_d",
+   "id": "s_e",
    "type": "sk_enh36",
    "data": {
     "beats": [
@@ -718,9 +817,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -733,16 +833,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -761,8 +868,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 900,
-   "frames": 348,
+   "from": 964,
+   "frames": 365,
    "lines": [
     {
      "who": "mohan",
@@ -828,16 +935,16 @@
      "sub": null,
      "audio": "reel/creative36v1/line_08.wav",
      "from": 125,
-     "frames": 206,
+     "frames": 218,
      "words": [
       {
        "w": "The",
        "from": 125,
-       "to": 132
+       "to": 134
       },
       {
        "w": "gate",
-       "from": 132,
+       "from": 134,
        "to": 144
       },
       {
@@ -848,73 +955,74 @@
       {
        "w": "same",
        "from": 167,
-       "to": 175
+       "to": 178
       },
       {
        "w": "car:",
-       "from": 175,
-       "to": 193
+       "from": 196,
+       "to": 214
       },
       {
        "w": "five,",
-       "from": 193,
-       "to": 226
+       "from": 214,
+       "to": 224
       },
       {
        "w": "six,",
-       "from": 226,
-       "to": 240
+       "from": 224,
+       "to": 241
       },
       {
        "w": "six,",
-       "from": 240,
-       "to": 248
+       "from": 241,
+       "to": 255
       },
       {
        "w": "zero.",
-       "from": 248,
-       "to": 267
+       "from": 255,
+       "to": 265
       },
       {
        "w": "A",
-       "from": 267,
-       "to": 270
+       "from": 265,
+       "to": 277
       },
       {
        "w": "guest's",
-       "from": 270,
-       "to": 283
+       "from": 277,
+       "to": 291
       },
       {
        "w": "car.",
-       "from": 283,
-       "to": 301
+       "from": 291,
+       "to": 310
       },
       {
        "w": "Sorry,",
-       "from": 301,
-       "to": 312
+       "from": 310,
+       "to": 322
       },
       {
        "w": "Mohan",
-       "from": 312,
-       "to": 321
+       "from": 322,
+       "to": 333
       },
       {
        "w": "garu!",
-       "from": 321,
-       "to": 331
+       "from": 333,
+       "to": 343
       }
      ],
      "cues": {
-      "1": 267,
-      "2": 301
+      "1": 196,
+      "2": 260,
+      "3": 297
      }
     }
    ]
   },
   {
-   "id": "s_e",
+   "id": "s_f",
    "type": "sk_enh36",
    "data": {
     "beats": [
@@ -944,9 +1052,10 @@
      "numB": "…9010",
      "dent": "DENTED",
      "blamed": "BLAMED",
+     "matchLab": "AI ENHANCE, TRY 1 = HIS PLATE",
      "plateHis": "TS 06 BA 9000",
      "story": "a story · the plates and AI outputs are real",
-     "appName": "AI PHOTO ENHANCE",
+     "appName": "AI ENHANCE",
      "changed": "IT CHANGED!",
      "numC": "streaks",
      "tryC": "TRY 3",
@@ -959,16 +1068,23 @@
      "sharpLab": "sharp-looking plates",
      "rightN": "1",
      "rightLab": "last 4 digits right",
-     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "testNote": "the other 10 tries: just streaks",
+     "testNote2": "clearer photos: 9 of 30 got a character changed",
      "court": [
       "2024 · KING COUNTY, WASHINGTON (US)",
       "AI-enhanced video barred from a murder trial",
       "\"visual data not in the original\": a forensic video analyst"
      ],
      "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "court2": [
+      "A US COURT, 2024",
+      "refused AI-enhanced video",
+      "\"visual data not in the original\""
+     ],
      "origLab": "THE GATE CAMERA · SAME CAR",
      "numReal": "…5660",
-     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "realLab": "look again: the blur said …5660 too",
+     "register": "the watchman's register: Flat 4B's guest",
      "sorry": "SORRY, MOHAN GARU!",
      "ruleHead": "NEXT TIME",
      "rule": [
@@ -987,7 +1103,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1248,
+   "from": 1330,
    "frames": 264,
    "lines": [
     {
