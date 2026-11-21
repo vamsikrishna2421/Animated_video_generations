@@ -15,7 +15,7 @@ type Card = { k: string; v: string; f: number; drop?: boolean; big?: boolean; hu
 type Demo = { type: "bars" | "route" | "montage" | "chat" | "fumble" | "sort" | "pipe"; variant?: "s1" | "s2"; items?: { t: string; side: 1 | 2 }[]; steps?: string[]; q?: string; title?: string; note?: string; rows?: { label: string; value: number; show: string; hi?: boolean }[]; tiles?: { icon: string; label: string }[]; bins?: string[]; lines?: { who: string; t: string }[] };
 type Seg = {
   name: string; audio: string; lead: number; frames: number; words: W[];
-  org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string; hits?: number[]; lineAt?: number[]; recap?: string; clash?: { k: string; v: string; c?: string }[]; clashJoin?: string; ask?: string[];
+  org?: string; accent?: string; tag?: string; headline?: string[]; sources?: string; cards?: Card[]; lines?: string[][]; demo?: Demo; dek?: string; hits?: number[]; lineAt?: number[]; recap?: string; clash?: { k: string; v: string; c?: string }[]; clashJoin?: string; clashTitle?: string; ask?: string[];
 };
 export type NewsTimeline = { id: string; date: string; range: string; edition: string; lang: string; frames: number; segments: Seg[]; kicker?: string; title?: string; recap?: string; look?: "cards" | "broadcast"; lean?: boolean; music?: string; lock?: boolean; labs?: string[]; musicBase?: number; musicBaseYT?: number; captionMode?: "phrase"; hookMascot?: boolean; outroLift?: number };
 const A =(f: string) => staticFile(`brand/audio/brand_${f}.wav`);
@@ -488,8 +488,11 @@ const Hook: React.FC<{ seg: Seg; range: string; kicker?: string; title?: string;
   return (
     <AbsoluteFill>
       <Backdrop accent={B.rose} />
+      {seg.clash && seg.clashTitle ? (   // AI WEEKLY 06: the one item both numbers belong to
+        <div style={{ position: "absolute", top: 168, left: 34, right: 34, textAlign: "center", fontFamily: F.inter, fontWeight: 800, fontSize: 56, letterSpacing: -1, color: B.white, lineHeight: 1.05, opacity: 1 - tc }}>{seg.clashTitle}</div>
+      ) : null}
       {seg.clash && (   // AI WEEKLY 04: the reach stack's two clashing numbers, on screen from the first frame
-        <div style={{ position: "absolute", top: 250, left: 34, right: 34, display: "flex", gap: 12, opacity: 1 - tc }}>
+        <div style={{ position: "absolute", top: seg.clashTitle ? 256 : 250, left: 34, right: 34, display: "flex", gap: 12, opacity: 1 - tc }}>
           {seg.clash.map((b, i) => (
             <React.Fragment key={i}>
             {i === 1 && seg.clashJoin ? <div style={{ alignSelf: "center", fontFamily: F.inter, fontWeight: 800, fontSize: 40, color: B.white, textAlign: "center", width: 90, lineHeight: 1.05 }}>{seg.clashJoin}</div> : null}

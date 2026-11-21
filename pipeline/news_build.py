@@ -157,6 +157,8 @@ def build(spec_path, lang="en"):
             if seg.get("clash"):  # AI WEEKLY 04: frame 1 = two clashing numbers from the top story, readable sound-off
                 entry["clash"] = seg["clash"]
                 entry["clashJoin"] = seg.get("clashJoin", "")
+                if seg.get("clashTitle"):   # AI WEEKLY 06: the item both numbers belong to, big, above the blocks
+                    entry["clashTitle"] = seg["clashTitle"]
             # sound hits on hook words (an impact lands as the word is spoken); Telugu hits on Telugu words (`hits_te`)
             te_words = word_times(a, sr, " ".join(seg[key]) if isinstance(seg[key], list) else seg[key], ld) if lang != "en" else None
             if te_words and seg.get("hits_te"):
