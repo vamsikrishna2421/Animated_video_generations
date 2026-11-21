@@ -1,4 +1,4 @@
-# Creative 36 "Enhance!" · Nov 21 creative slot · script v1
+# Creative 36 "Enhance!" · Nov 21 creative slot · script v2
 
 ## Format and rotation
 - **Format:** a two-character skit. The last dialogue skit was Creative 27 (Nov 12); the last creative (35) was myth vs fact,
@@ -66,3 +66,39 @@ EN: both characters on Fish (American reference clips). TE: Parler.
 ## Caption try-it (no comment ask)
 "Try it: take a photo of a car's number plate from far away, run it through your phone's 'enhance' or an AI upscaler, and
 compare it with the real plate. Same letters?"
+
+## Script review (human-viewer, v1), what changed for v2
+All four viewers (Sandeep, Priya, Lakshmi, Ravi) stopped on frame 1. Ravi: "this is our association WhatsApp fight".
+- **All agreed:**
+  - "Nine thousand" next to "REPAIR ₹12,000" read as money. Frame 1 has no price now (the car says "DENTED"), and the
+    plate is said digit by digit.
+  - Lines 6-7 were the swipe zone: the test is one short sentence with the grid on screen, and the court is one clause
+    with a card.
+  - The payoff contradicted itself: the "original clip" was the blur. Now the gate camera shows the same car,
+    "…5660", "A guest's car. Sorry, Mohan garu!"
+  - The loop: "One more enhance?" gives the real third output, streaks, then frame 1.
+  - Sound-off: a "BLAMED" tag on the scooter; captions on every line.
+- **Also:**
+  - Mohan's alibi (Vizag) cleared him at 0:06 and is gone; try 2 clears him.
+  - The test says "the last four digits right once"; the card says "last 4 digits right · 1".
+  - The phone-app overclaim: Mohan says "this kind of AI enhance", and line 5 shows "tested: a free AI upscaler on
+    our computer · not phone apps".
+  - The milk van (it would have a yellow plate) became a guest's car.
+  - Telugu: "కారుకి సొట్ట పడింది", "సీసీటీవీ ఫోటోని యాప్ తో క్లియర్ చేస్తే", digits ("తొమ్మిది, సున్నా, సున్నా, సున్నా"),
+    "మసకగా ఉన్నది చదవదు; స్పష్టంగా కనిపించే నంబర్, కొత్తగా గీస్తుంది", "ఎన్‌హాన్స్ చేసిన ఫోటో", "ఎవరి మీదా నింద వేయొద్దు", verbs in
+    the rule ("చూడండి", "అడగండి"); the app's "Enhanced." stays English on both pages.
+
+## Script v2 (EN | TE)
+| # | who | English | Telugu |
+|---|---|---|---|
+| 1 | vijaya | Mohan garu! Someone dented my car, and AI enhance read the CCTV: nine-zero-zero-zero. Your scooter! | మోహన్ గారూ! నా కారుకి సొట్ట పడింది; సీసీటీవీ ఫోటోని యాప్ తో క్లియర్ చేస్తే, | తొమ్మిది, సున్నా, సున్నా, సున్నా: మీ స్కూటరే! |
+| 2 | mohan | Nine-zero-zero-zero is my plate, yes. [1] Press enhance again. | తొమ్మిది సున్నా సున్నా సున్నా, నా నంబరే. [1] ఇంకోసారి ఎన్‌హాన్స్ నొక్కండి. |
+| 3 | app | Enhanced. | Enhanced. |
+| 4 | vijaya | Now it says nine, zero, one, zero?! It changed! | ఇప్పుడు తొమ్మిది సున్నా ఒకటి సున్నా?! మారిపోయింది! |
+| 5 | mohan | Because this kind of AI enhance doesn't read the blur. [1] It draws a sharp plate that looks likely. | ఎందుకంటే ఇలాంటి ఎన్‌హాన్స్, మసకగా ఉన్నది చదవదు. [1] స్పష్టంగా కనిపించే నంబర్, కొత్తగా గీస్తుంది. |
+| 6 | mohan | Ten blurry plates, three tries each: [1] twenty sharp plates; [2] the last four digits right once. | పది మసక ప్లేట్లు, ఒక్కోదానికి మూడు సార్లు: [1] ఇరవై సార్లు స్పష్టమైన ప్లేట్; [2] చివరి నాలుగు అంకెలు సరిగ్గా వచ్చింది ఒక్కసారే. |
+| 7 | mohan | Even a US court refused AI-enhanced video as evidence. | అమెరికాలో ఒక కోర్టు కూడా, ఎన్‌హాన్స్ చేసిన వీడియోని ఒప్పుకోలేదు. |
+| 8 | vijaya | The gate camera, same car: five, six, six, zero. [1] A guest's car. [2] Sorry, Mohan garu! | గేట్ కెమెరాలో అదే కారు: ఐదు ఆరు ఆరు సున్నా. [1] ఎవరో గెస్ట్ కారు. [2] సారీ, మోహన్ గారూ! |
+| 9 | mohan | Next time: a second camera, the watchman. [1] Never blame anyone from an enhanced picture. | ఇంకోసారి: ఇంకో కెమెరా చూడండి, వాచ్‌మన్ ని అడగండి. [1] ఎన్‌హాన్స్ చేసిన ఫోటో చూసి, ఎవరి మీదా నింద వేయొద్దు. |
+| 10 | vijaya | One more enhance? | ఇంకొక్కసారి ఎన్‌హాన్స్? |
+| 11 | app | Enhanced. | Enhanced. |

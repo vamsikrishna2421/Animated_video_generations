@@ -83,17 +83,6 @@ const scooter = (c: Ctx, x: number, y: number, plate: string, hot: number) => {
   c.restore();
 };
 
-// a milk van with the real plate (the original clip)
-const van = (c: Ctx, x: number, y: number, im: HTMLImageElement | undefined, word: string) => {
-  c.save(); c.translate(x, y);
-  c.fillStyle = "#f8fafc"; rrect(c, 0, 0, 620, 300, 30); c.fill(); c.strokeStyle = "#0f172a"; c.lineWidth = 6; rrect(c, 0, 0, 620, 300, 30); c.stroke();
-  c.fillStyle = "#38bdf8"; rrect(c, 40, 40, 400, 120, 20); c.fill();
-  c.fillStyle = "#0c4a6e"; c.font = SANS(84, 900); c.textAlign = "center"; c.fillText(word, 240, 130);
-  c.fillStyle = "#111827"; [120, 500].forEach((wx) => { c.beginPath(); c.arc(wx, 300, 52, 0, Math.PI * 2); c.fill(); });
-  c.restore();
-  pic(c, im, x + 90, y + 190, 440, 110, "#0f172a");
-};
-
 const stamp = (c: Ctx, t: string, x: number, y: number, s: number, col: string, k: number, rot = -0.1) => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3); c.translate(x, y); c.rotate(rot); const z = 1.5 - 0.5 * easeOut(k); c.scale(z, z);
@@ -116,15 +105,16 @@ const StEnhance: React.FC<SP> = ({ s }) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.75 : 0.6} />, <Sfx key={k("c")} at={2} src={CLAP} vol={0.55} />);
-    if (b.prop === "deny") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 4)} src="audio/gag_bonk.wav" vol={0.4} />);
-    if (b.prop === "app") sfx.push(<Sfx key={k("g")} at={Math.max(0, at - 6)} src="reel/sfx_glitch.wav" vol={0.5} />, <Sfx key={k("d")} at={at + 6} src="audio/gag_ding.wav" vol={0.35} />);
+    if (b.prop === "again") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 4)} src="audio/gag_bonk.wav" vol={0.4} />);
+    if (b.prop === "app" || b.prop === "loop") sfx.push(<Sfx key={k("g")} at={Math.max(0, at - 6)} src="reel/sfx_glitch.wav" vol={0.5} />, <Sfx key={k("d")} at={at + 6} src="audio/gag_ding.wav" vol={0.35} />);
     if (b.prop === "changed") sfx.push(<Sfx key={k("b")} at={at + 2} src="reel/sfx_boom.wav" vol={0.55} />);
     if (b.prop === "draws") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.3} />);
     if (b.prop === "test") [1, 2].forEach((n) => sfx.push(<Sfx key={k("p" + n)} at={cue(i, n, 0.3 + 0.3 * n) - 4} src={n === 2 ? "reel/sfx_boom.wav" : "audio/sfx_pop.wav"} vol={n === 2 ? 0.55 : 0.4} />));
     if (b.prop === "court") sfx.push(<Sfx key={k("g")} at={at + 2} src="audio/gag_bonk.wav" vol={0.45} />);
+    if (b.prop === "real") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 6)} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("n")} at={cue(i, 1, 0.45) - 10} src="reel/sfx_boom.wav" vol={0.5} />, <Sfx key={k("s")} at={cue(i, 2, 0.8)} src="audio/gag_ding.wav" vol={0.45} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("s")} at={cue(i, 1, 0.5) - 4} src="audio/sfx_success.wav" vol={0.3} />);
-    if (b.prop === "real") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 6)} src="audio/sfx_whoosh.wav" vol={0.3} />);
-    if (b.prop === "loop") { sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.3)} src="audio/gag_ding.wav" vol={0.4} />); const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />); }
+    if (b.prop === "loopask") sfx.push(<Sfx key={k("d")} at={at + 2} src="audio/sfx_pop.wav" vol={0.4} />);
+    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 30)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />); }
   });
   return (
     <>
@@ -137,7 +127,7 @@ const StEnhance: React.FC<SP> = ({ s }) => {
         const loopOn = b.prop === "loop" && f >= endL + HOLD;
         const P = loopOn ? "hook" : b.prop;
         c.textAlign = "left";
-        if (P === "hook" || P === "deny") {
+        if (P === "hook" || P === "again") {
           cellar(c, W, H);
           // frame 1: the same blur, two "enhanced" plates
           c.fillStyle = "rgba(15,23,42,0.92)"; rrect(c, 30, 250, W - 60, 500, 30); c.fill();
@@ -147,12 +137,13 @@ const StEnhance: React.FC<SP> = ({ s }) => {
           pic(c, imgs.ai_a, 60, 520, 460, 115, RED); pic(c, imgs.ai_b, 560, 520, 460, 115, RED);
           c.font = SANS(66, 900); c.fillStyle = "#fca5a5"; c.fillText(T.numA, 290, 715); c.fillText(T.numB, 790, 715);
           c.font = SANS(28, 800); c.fillStyle = "#cbd5e1"; c.fillText(T.tryA, 290, 672 - 0); c.fillText(T.tryB, 790, 672);
-          car(c, 40, 930, T.repair, 1);
-          scooter(c, 620, 900, T.plateHis, 1);
+          car(c, 40, 930, T.dent, 1);
+          scooter(c, 620, 830, T.plateHis, 1);
+          chip(c, T.blamed, 870, 800, RED, "#fff", 1, 40);
           person(c, "vijaya" as BillWho, [230, 1250], 0.5, "angry", "phone", false, r);
-          person(c, "mohan" as BillWho, [860, 1250], 0.5, P === "deny" || loopOn ? "shock" : "worried", P === "deny" ? "up" : "rest", false, r);
-          if (!loopOn) chip(c, T.story, W / 2, 1470, "#1e293b", "#f8fafc", 1, 30);
-        } else if (P === "app" || P === "changed") {
+          person(c, "mohan" as BillWho, [860, 1250], 0.5, P === "again" ? "calm" : "shock", P === "again" ? "shrug" : "up", false, r);
+          if (!loopOn) chip(c, T.story, W / 2, 1462, "#1e293b", "#f8fafc", 1, 34);
+        } else if (P === "app" || P === "changed" || P === "loop") {
           cellar(c, W, H); c.fillStyle = "rgba(15,23,42,0.55)"; c.fillRect(0, 0, W, H);
           // her phone, big: the plate swaps on "Enhanced."
           const px = 140, py = 300, pw = 800, ph = 1100;
@@ -161,10 +152,12 @@ const StEnhance: React.FC<SP> = ({ s }) => {
           pic(c, imgs.cctv, px + 90, py + 150, pw - 180, 155);
           c.font = SANS(34, 900); c.fillStyle = AMBER; c.fillText("↓ " + T.enhLab, W / 2, py + 380);
           const swap = P === "changed" ? 1 : seg(f, ln.from, ln.from + 10);
-          const g = P === "app" && swap > 0 && swap < 1;
-          pic(c, swap >= 0.5 ? imgs.ai_b : imgs.ai_a, px + 90 + (g ? Math.sin(f * 7) * 18 : 0), py + 420, pw - 180, 155, RED);
-          c.font = SANS(110, 900); c.fillStyle = RED; c.fillText(swap >= 0.5 ? T.numB : T.numA, W / 2, py + 720);
-          c.font = SANS(32, 800); c.fillStyle = "#475569"; c.fillText(swap >= 0.5 ? T.tryB : T.tryA, W / 2, py + 780);
+          const g = (P === "app" || P === "loop") && swap > 0 && swap < 1;
+          const shown = P === "loop" ? (swap >= 0.5 ? imgs.ai_c : imgs.ai_b) : swap >= 0.5 ? imgs.ai_b : imgs.ai_a;
+          pic(c, shown, px + 90 + (g ? Math.sin(f * 7) * 18 : 0), py + 420, pw - 180, 155, RED);
+          const big = P === "loop" ? (swap >= 0.5 ? T.numC : T.numB) : swap >= 0.5 ? T.numB : T.numA;
+          c.font = SANS(fit(c, big, pw - 120, 110, 900), 900); c.fillStyle = RED; c.fillText(big, W / 2, py + 720);
+          c.font = SANS(32, 800); c.fillStyle = "#475569"; c.fillText(P === "loop" ? T.tryC : swap >= 0.5 ? T.tryB : T.tryA, W / 2, py + 780);
           if (P === "changed") stamp(c, T.changed, W / 2, py + 930, 72, RED, seg(f, ln.from + 2, ln.from + 10));
         } else if (P === "draws") {
           cellar(c, W, H); c.fillStyle = "rgba(15,23,42,0.85)"; c.fillRect(0, 0, W, H);
@@ -191,7 +184,11 @@ const StEnhance: React.FC<SP> = ({ s }) => {
           if (f >= cu(2, 0.75) + 12) { c.font = SANS(fit(c, T.testNote, W - 100, 30, 700), 700); c.fillStyle = "#94a3b8"; c.fillText(T.testNote, W / 2, 1100); }
         } else if (P === "court") {
           c.fillStyle = "#1c1917"; c.fillRect(0, 0, W, H);
-          c.textAlign = "center"; c.font = SANS(120, 900); c.fillText("⚖", W / 2, 470);
+          // a courthouse: pediment, columns, steps (the scale emoji has no glyph in the render font)
+          c.fillStyle = "#e7e5e4"; c.beginPath(); c.moveTo(W / 2 - 170, 380); c.lineTo(W / 2, 290); c.lineTo(W / 2 + 170, 380); c.closePath(); c.fill();
+          for (let q = 0; q < 5; q++) c.fillRect(W / 2 - 150 + q * 70, 395, 30, 100);
+          c.fillRect(W / 2 - 180, 500, 360, 18); c.fillRect(W / 2 - 200, 522, 400, 18);
+          c.textAlign = "center";
           (T.court as string[]).forEach((t, q) => {
             const k = q === 0 ? seg(f, ln.from + 2, ln.from + 10) : seg(f, cu(1, 0.5) - 4 + (q - 1) * 10, cu(1, 0.5) + 6 + (q - 1) * 10);
             if (k <= 0) return;
@@ -203,32 +200,38 @@ const StEnhance: React.FC<SP> = ({ s }) => {
           c.fillStyle = "#f8fafc"; c.fillRect(0, 0, W, H);
           c.textAlign = "center"; c.font = SANS(60, 900); c.fillStyle = "#0f172a"; c.fillText(T.ruleHead, W / 2, 340);
           (T.rule as string[]).forEach((t, q) => {
-            const k = seg(f, ln.from + 4 + q * 12, ln.from + 12 + q * 12); if (k <= 0) return;
+            const k = seg(f, ln.from + 4 + q * 14, ln.from + 12 + q * 14); if (k <= 0) return;
             const y = 400 + q * 190;
             c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = "#dcfce7"; rrect(c, 60, y, W - 120, 160, 24); c.fill();
             c.textAlign = "left"; c.font = SANS(70, 900); c.fillStyle = GREEN; c.fillText("✓", 100, y + 108);
-            c.font = SANS(fit(c, t, W - 320, 54, 900), 900); c.fillStyle = INK; c.fillText(t, 200, y + 100); c.restore();
+            c.font = SANS(fit(c, t, W - 320, 56, 900), 900); c.fillStyle = INK; c.fillText(t, 200, y + 100); c.restore();
           });
           const kx = seg(f, cu(1, 0.5) - 4, cu(1, 0.5) + 6);
           if (kx > 0) {
-            const y = 400 + 3 * 190;
+            const y = 400 + 2 * 190;
             c.save(); c.globalAlpha = clamp(kx * 3); c.fillStyle = "#fee2e2"; rrect(c, 60, y, W - 120, 160, 24); c.fill();
             c.textAlign = "left"; c.font = SANS(70, 900); c.fillStyle = RED; c.fillText("✗", 100, y + 108);
             c.font = SANS(fit(c, T.ruleX, W - 320, 50, 900), 900); c.fillStyle = INK; c.fillText(T.ruleX, 200, y + 100); c.restore();
           }
-        } else if (P === "real" || P === "loop") {
-          cellar(c, W, H); c.fillStyle = "rgba(15,23,42,0.35)"; c.fillRect(0, 0, W, H);
-          c.textAlign = "center"; c.font = SANS(40, 900); c.fillStyle = "#0f172a";
-          c.fillStyle = "rgba(15,23,42,0.9)"; rrect(c, 40, 250, W - 80, 110, 24); c.fill();
-          c.fillStyle = "#f8fafc"; c.font = SANS(fit(c, T.origLab, W - 140, 40, 900), 900); c.fillText(T.origLab, W / 2, 320);
-          van(c, 230, 520, imgs.truth, T.van);
-          const kr = P === "loop" ? 1 : seg(f, endL - 20, endL - 6);
-          if (kr > 0) { c.save(); c.globalAlpha = clamp(kr * 3); c.font = SANS(120, 900); c.fillStyle = GREEN; c.fillText(T.numReal, W / 2, 1040); c.font = SANS(32, 800); c.fillStyle = "#0f172a"; c.fillText(T.realLab, W / 2, 1100); c.restore(); }
-          if (P === "loop") {
-            person(c, "vijaya" as BillWho, [230, 1250], 0.5, "smug", "phone", false, r);
-            person(c, "mohan" as BillWho, [860, 1250], 0.5, "shock", "up", false, r);
-            if (f >= cu(1, 0.3)) stamp(c, T.again, W / 2, 1200, 60, AMBER, seg(f, cu(1, 0.3), cu(1, 0.3) + 8), -0.06);
-          }
+        } else if (P === "real") {
+          cellar(c, W, H); c.fillStyle = "rgba(15,23,42,0.55)"; c.fillRect(0, 0, W, H);
+          // the gate camera: close enough to read, no AI
+          c.fillStyle = "#0b1020"; rrect(c, 50, 280, W - 100, 420, 26); c.fill();
+          c.textAlign = "left"; c.font = SANS(30, 900); c.fillStyle = "#ef4444"; c.fillText("● REC", 90, 335); c.fillStyle = "#e2e8f0"; c.fillText(T.origLab, 220, 335);
+          pic(c, imgs.truth, 120, 380, W - 240, (W - 240) / 4, "#e2e8f0");
+          const kn = seg(f, cu(1, 0.45) - 12, cu(1, 0.45) - 2);
+          c.textAlign = "center";
+          if (kn > 0) { c.save(); c.globalAlpha = clamp(kn * 3); c.font = SANS(130, 900); c.fillStyle = "#4ade80"; c.fillText(T.numReal, W / 2, 880); c.font = SANS(fit(c, T.realLab, W - 100, 34, 800), 800); c.fillStyle = "#f8fafc"; c.fillText(T.realLab, W / 2, 945); c.restore(); }
+          const ks = seg(f, cu(2, 0.8) - 2, cu(2, 0.8) + 8);
+          person(c, "vijaya" as BillWho, [230, 1250], 0.5, ks > 0 ? "worried" : "calm", "phone", false, r);
+          person(c, "mohan" as BillWho, [860, 1250], 0.5, ks > 0 ? "happy" : "calm", "fold", false, r);
+          stamp(c, T.sorry, W / 2, 1080, 64, GREEN, ks, -0.05);
+        } else if (P === "loopask") {
+          cellar(c, W, H);
+          car(c, 40, 930, T.dent, 1); scooter(c, 620, 830, T.plateHis, 0);
+          person(c, "vijaya" as BillWho, [230, 1250], 0.5, "smug", "phone", false, r);
+          person(c, "mohan" as BillWho, [860, 1250], 0.5, "shock", "up", false, r);
+          stamp(c, T.again, W / 2, 560, 70, AMBER, seg(f, ln.from, ln.from + 8), -0.06);
         }
         c.textAlign = "left";
       }} />

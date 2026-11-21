@@ -1,0 +1,532 @@
+{
+ "id": "creative36v1",
+ "title": "Enhance! (Creative 36)",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.14,
+ "lead": 0.3,
+ "music": "lofi",
+ "names": {
+  "vijaya": "Vijaya",
+  "mohan": "Mohan",
+  "app": "the app"
+ },
+ "musicVol": [
+  0.16,
+  0.3
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.0,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1520,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_enh36",
+   "tail": 0.0,
+   "boost": 2.0,
+   "data": {
+    "beats": [
+     {
+      "who": "vijaya",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "mohan",
+      "prop": "again",
+      "n": 2
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "blurLab": "SAME CCTV BLUR",
+     "enhLab": "AI ENHANCE",
+     "tryA": "TRY 1",
+     "tryB": "TRY 2",
+     "numA": "…9000",
+     "numB": "…9010",
+     "dent": "DENTED",
+     "blamed": "BLAMED",
+     "plateHis": "TS 06 BA 9000",
+     "story": "a story · the plates and AI outputs are real",
+     "appName": "AI PHOTO ENHANCE",
+     "changed": "IT CHANGED!",
+     "numC": "streaks",
+     "tryC": "TRY 3",
+     "drawsHead": "IT DRAWS. IT DOESN'T READ.",
+     "drawsSub": "same blur, 3 tries:",
+     "drawsNote": "tested: a free AI upscaler on our computer · not phone apps",
+     "testHead": "OUR TEST",
+     "testSub": "10 blurry plates × 3 tries · a free AI upscaler on our computer",
+     "sharpN": "20",
+     "sharpLab": "sharp-looking plates",
+     "rightN": "1",
+     "rightLab": "last 4 digits right",
+     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "court": [
+      "2024 · KING COUNTY, WASHINGTON (US)",
+      "AI-enhanced video barred from a murder trial",
+      "\"visual data not in the original\": a forensic video analyst"
+     ],
+     "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "origLab": "THE GATE CAMERA · SAME CAR",
+     "numReal": "…5660",
+     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "sorry": "SORRY, MOHAN GARU!",
+     "ruleHead": "NEXT TIME",
+     "rule": [
+      "check a second camera",
+      "ask the watchman"
+     ],
+     "ruleX": "blame from an enhanced picture",
+     "again": "ONE MORE ENHANCE?"
+    },
+    "yt": {
+     "chapter": "Enhance! Your scooter?",
+     "title": "Enhance! Your scooter?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "vijaya",
+     "file": "01_vijaya.wav",
+     "text": "Mohan garu! Someone dented my car, and AI enhance read the CCTV: nine-zero-zero-zero. Your scooter!",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Mohan garu! Someone dented my car, and AI enhance read the CCTV: nine-zero-zero-zero. Your scooter!",
+     "tempo": 1.06
+    },
+    {
+     "who": "mohan",
+     "file": "02_mohan.wav",
+     "text": "Nine-zero-zero-zero is my plate, yes. [1] Press enhance again.",
+     "maxgap": 0.3,
+     "gap": 0.25,
+     "show": "Nine-zero-zero-zero is my plate, yes. Press enhance again.",
+     "tempo": 1.06
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_enh36",
+   "tail": 0.1,
+   "boost": 1.3,
+   "lift": 0.5,
+   "data": {
+    "beats": [
+     {
+      "who": "app",
+      "prop": "app",
+      "n": 3
+     },
+     {
+      "who": "vijaya",
+      "prop": "changed",
+      "n": 4
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "blurLab": "SAME CCTV BLUR",
+     "enhLab": "AI ENHANCE",
+     "tryA": "TRY 1",
+     "tryB": "TRY 2",
+     "numA": "…9000",
+     "numB": "…9010",
+     "dent": "DENTED",
+     "blamed": "BLAMED",
+     "plateHis": "TS 06 BA 9000",
+     "story": "a story · the plates and AI outputs are real",
+     "appName": "AI PHOTO ENHANCE",
+     "changed": "IT CHANGED!",
+     "numC": "streaks",
+     "tryC": "TRY 3",
+     "drawsHead": "IT DRAWS. IT DOESN'T READ.",
+     "drawsSub": "same blur, 3 tries:",
+     "drawsNote": "tested: a free AI upscaler on our computer · not phone apps",
+     "testHead": "OUR TEST",
+     "testSub": "10 blurry plates × 3 tries · a free AI upscaler on our computer",
+     "sharpN": "20",
+     "sharpLab": "sharp-looking plates",
+     "rightN": "1",
+     "rightLab": "last 4 digits right",
+     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "court": [
+      "2024 · KING COUNTY, WASHINGTON (US)",
+      "AI-enhanced video barred from a murder trial",
+      "\"visual data not in the original\": a forensic video analyst"
+     ],
+     "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "origLab": "THE GATE CAMERA · SAME CAR",
+     "numReal": "…5660",
+     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "sorry": "SORRY, MOHAN GARU!",
+     "ruleHead": "NEXT TIME",
+     "rule": [
+      "check a second camera",
+      "ask the watchman"
+     ],
+     "ruleX": "blame from an enhanced picture",
+     "again": "ONE MORE ENHANCE?"
+    },
+    "yt": {
+     "chapter": "Enhance again",
+     "title": "Enhance again",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "app",
+     "file": "03_app.wav",
+     "text": "Enhanced.",
+     "maxgap": 0.3,
+     "gap": 0.2,
+     "show": "Enhanced.",
+     "tempo": 1.06
+    },
+    {
+     "who": "vijaya",
+     "file": "04_vijaya.wav",
+     "text": "Now it says nine, zero, one, zero?! It changed!",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Now it says nine, zero, one, zero?! It changed!",
+     "tempo": 1.06
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_enh36",
+   "tail": 0.1,
+   "boost": 1.0,
+   "lift": 0.5,
+   "swell": [
+    1,
+    2,
+    1.6
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "mohan",
+      "prop": "draws",
+      "n": 5
+     },
+     {
+      "who": "mohan",
+      "prop": "test",
+      "n": 6
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "blurLab": "SAME CCTV BLUR",
+     "enhLab": "AI ENHANCE",
+     "tryA": "TRY 1",
+     "tryB": "TRY 2",
+     "numA": "…9000",
+     "numB": "…9010",
+     "dent": "DENTED",
+     "blamed": "BLAMED",
+     "plateHis": "TS 06 BA 9000",
+     "story": "a story · the plates and AI outputs are real",
+     "appName": "AI PHOTO ENHANCE",
+     "changed": "IT CHANGED!",
+     "numC": "streaks",
+     "tryC": "TRY 3",
+     "drawsHead": "IT DRAWS. IT DOESN'T READ.",
+     "drawsSub": "same blur, 3 tries:",
+     "drawsNote": "tested: a free AI upscaler on our computer · not phone apps",
+     "testHead": "OUR TEST",
+     "testSub": "10 blurry plates × 3 tries · a free AI upscaler on our computer",
+     "sharpN": "20",
+     "sharpLab": "sharp-looking plates",
+     "rightN": "1",
+     "rightLab": "last 4 digits right",
+     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "court": [
+      "2024 · KING COUNTY, WASHINGTON (US)",
+      "AI-enhanced video barred from a murder trial",
+      "\"visual data not in the original\": a forensic video analyst"
+     ],
+     "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "origLab": "THE GATE CAMERA · SAME CAR",
+     "numReal": "…5660",
+     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "sorry": "SORRY, MOHAN GARU!",
+     "ruleHead": "NEXT TIME",
+     "rule": [
+      "check a second camera",
+      "ask the watchman"
+     ],
+     "ruleX": "blame from an enhanced picture",
+     "again": "ONE MORE ENHANCE?"
+    },
+    "yt": {
+     "chapter": "It draws, it doesn't read",
+     "title": "It draws, it doesn't read",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "mohan",
+     "file": "05_mohan.wav",
+     "text": "Because this kind of AI enhance doesn't read the blur. [1] It draws a sharp plate that looks likely.",
+     "maxgap": 0.3,
+     "gap": 0.25,
+     "show": "Because this kind of AI enhance doesn't read the blur. It draws a sharp plate that looks likely.",
+     "tempo": 1.06
+    },
+    {
+     "who": "mohan",
+     "file": "06_mohan.wav",
+     "text": "Ten blurry plates, three tries each: [1] twenty sharp plates; [2] the last four digits right once.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Ten blurry plates, three tries each: twenty sharp plates; the last four digits right once.",
+     "tempo": 1.06
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_enh36",
+   "tail": 0.1,
+   "boost": 1.4,
+   "lift": 0.6,
+   "drop_pre": [
+    [
+     1,
+     0.0,
+     0.7
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "mohan",
+      "prop": "court",
+      "n": 7
+     },
+     {
+      "who": "vijaya",
+      "prop": "real",
+      "n": 8
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "blurLab": "SAME CCTV BLUR",
+     "enhLab": "AI ENHANCE",
+     "tryA": "TRY 1",
+     "tryB": "TRY 2",
+     "numA": "…9000",
+     "numB": "…9010",
+     "dent": "DENTED",
+     "blamed": "BLAMED",
+     "plateHis": "TS 06 BA 9000",
+     "story": "a story · the plates and AI outputs are real",
+     "appName": "AI PHOTO ENHANCE",
+     "changed": "IT CHANGED!",
+     "numC": "streaks",
+     "tryC": "TRY 3",
+     "drawsHead": "IT DRAWS. IT DOESN'T READ.",
+     "drawsSub": "same blur, 3 tries:",
+     "drawsNote": "tested: a free AI upscaler on our computer · not phone apps",
+     "testHead": "OUR TEST",
+     "testSub": "10 blurry plates × 3 tries · a free AI upscaler on our computer",
+     "sharpN": "20",
+     "sharpLab": "sharp-looking plates",
+     "rightN": "1",
+     "rightLab": "last 4 digits right",
+     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "court": [
+      "2024 · KING COUNTY, WASHINGTON (US)",
+      "AI-enhanced video barred from a murder trial",
+      "\"visual data not in the original\": a forensic video analyst"
+     ],
+     "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "origLab": "THE GATE CAMERA · SAME CAR",
+     "numReal": "…5660",
+     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "sorry": "SORRY, MOHAN GARU!",
+     "ruleHead": "NEXT TIME",
+     "rule": [
+      "check a second camera",
+      "ask the watchman"
+     ],
+     "ruleX": "blame from an enhanced picture",
+     "again": "ONE MORE ENHANCE?"
+    },
+    "yt": {
+     "chapter": "The real plate",
+     "title": "The real plate",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "mohan",
+     "file": "07_mohan.wav",
+     "text": "Even a US court refused AI-enhanced video as evidence.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Even a US court refused AI-enhanced video as evidence.",
+     "tempo": 1.06
+    },
+    {
+     "who": "vijaya",
+     "file": "08_vijaya.wav",
+     "text": "The gate camera, same car: five, six, six, zero. [1] A guest's car. [2] Sorry, Mohan garu!",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "The gate camera, same car: five, six, six, zero. A guest's car. Sorry, Mohan garu!",
+     "tempo": 1.06
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_enh36",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.2,
+   "boost": 2.6,
+   "lift": 0.8,
+   "rise": 2.8,
+   "data": {
+    "beats": [
+     {
+      "who": "mohan",
+      "prop": "rule",
+      "n": 9
+     },
+     {
+      "who": "vijaya",
+      "prop": "loopask",
+      "n": 10
+     },
+     {
+      "who": "app",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1520,
+    "t": {
+     "blurLab": "SAME CCTV BLUR",
+     "enhLab": "AI ENHANCE",
+     "tryA": "TRY 1",
+     "tryB": "TRY 2",
+     "numA": "…9000",
+     "numB": "…9010",
+     "dent": "DENTED",
+     "blamed": "BLAMED",
+     "plateHis": "TS 06 BA 9000",
+     "story": "a story · the plates and AI outputs are real",
+     "appName": "AI PHOTO ENHANCE",
+     "changed": "IT CHANGED!",
+     "numC": "streaks",
+     "tryC": "TRY 3",
+     "drawsHead": "IT DRAWS. IT DOESN'T READ.",
+     "drawsSub": "same blur, 3 tries:",
+     "drawsNote": "tested: a free AI upscaler on our computer · not phone apps",
+     "testHead": "OUR TEST",
+     "testSub": "10 blurry plates × 3 tries · a free AI upscaler on our computer",
+     "sharpN": "20",
+     "sharpLab": "sharp-looking plates",
+     "rightN": "1",
+     "rightLab": "last 4 digits right",
+     "testNote": "the other 10 tries: streaks · clearer photos: 9 of 30 got a character changed",
+     "court": [
+      "2024 · KING COUNTY, WASHINGTON (US)",
+      "AI-enhanced video barred from a murder trial",
+      "\"visual data not in the original\": a forensic video analyst"
+     ],
+     "courtSrc": "NBC News · Bloomberg Law · Gizmodo",
+     "origLab": "THE GATE CAMERA · SAME CAR",
+     "numReal": "…5660",
+     "realLab": "a guest's car · the blur, read by eye: …5660",
+     "sorry": "SORRY, MOHAN GARU!",
+     "ruleHead": "NEXT TIME",
+     "rule": [
+      "check a second camera",
+      "ask the watchman"
+     ],
+     "ruleX": "blame from an enhanced picture",
+     "again": "ONE MORE ENHANCE?"
+    },
+    "yt": {
+     "chapter": "Next time",
+     "title": "Next time",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "mohan",
+     "file": "09_mohan.wav",
+     "text": "Next time: a second camera, the watchman. [1] Never blame anyone from an enhanced picture.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "show": "Next time: a second camera, the watchman. Never blame anyone from an enhanced picture.",
+     "tempo": 1.06
+    },
+    {
+     "who": "vijaya",
+     "file": "10_vijaya.wav",
+     "text": "One more enhance?",
+     "maxgap": 0.3,
+     "gap": 0.2,
+     "show": "One more enhance?",
+     "tempo": 1.06
+    },
+    {
+     "who": "app",
+     "file": "11_app.wav",
+     "text": "Enhanced.",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "show": "Enhanced.",
+     "tempo": 1.06
+    }
+   ]
+  }
+ ]
+}

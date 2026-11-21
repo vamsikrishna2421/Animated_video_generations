@@ -39,7 +39,15 @@ VOICE_TE = {
 }
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = {"app"}   # the app's word through the phone sound
-MUST = {"en": {}, "te": {}}
+MUST = {"en": {1: [("mohan",), ("dented", "dent"), ("car",), ("enhance",), ("cctv", "cc"), ("nine", "9", "9000"), ("zero", "0", "000", "9000"), ("scooter",)],
+               2: [("nine", "9", "9000", "9-0-0-0"), ("plate",), ("enhance",), ("again",)], 3: [("enhanced", "enhance")],
+               4: [("nine", "9", "9010", "9-0-1-0"), ("one", "1", "9010", "9-0-1-0"), ("changed",)],
+               5: [("enhance", "enhanced"), ("read",), ("blur",), ("draws", "draw"), ("sharp",), ("likely",)],
+               6: [("ten", "10"), ("blurry",), ("three", "3"), ("twenty", "20"), ("four", "4"), ("once",)],
+               7: [("court",), ("refused",), ("enhanced", "enhance"), ("video",), ("evidence",)],
+               8: [("gate",), ("camera",), ("five", "5", "5660", "5-6-6-0"), ("six", "6", "5660", "5-6-6-0"), ("guest", "guest's"), ("sorry",)],
+               9: [("camera",), ("watchman",), ("blame",), ("enhanced", "enhance")], 10: [("enhance",)], 11: [("enhanced", "enhance")]},
+        "te": {1: [("मोहन", "मोहण", "मोहान")], "1b": [("सुन्न", "सुना", "सुन")], 8: [("गेट", "गेत", "गेइट")]}}
 JUDGE_TEXT = {}
 
 TELUGU = re.compile(r"[ఀ-౿]")
