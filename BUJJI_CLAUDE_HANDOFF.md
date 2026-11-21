@@ -32,6 +32,46 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-21 (Creative 36 "Enhance!", the Nov 21 creative slot)
+- **Format:** a two-character skit in an apartment cellar. The last dialogue skit was Creative 27 (Nov 12); Creative 35
+  was myth vs fact.
+- **Cast:** new; Vijaya garu and Mohan garu (neighbours, made up by us). The app says one word: "Enhanced."
+- **Point family B** (AI can't do what it looks like it does), last used by Creative 30 (Nov 15). Creative 35 (Q) and
+  Weekly 06 (news) post before it.
+- **Frame 1 (the reach stack):**
+  - The real CCTV blur from our test over two real AI-enhanced plates: "TRY 1 …9000" and "TRY 2 …9010".
+  - Her car tagged DENTED, his scooter tagged BLAMED.
+  - Line 1: "Mohan garu! Someone dented my car, and AI enhance read the CCTV: nine-zero-zero-zero. Your scooter!"
+- **Our test** (`pipeline/creative36/enhance_demo.py`, committed before it ran; every output read by hand):
+  - Setup: the Stable Diffusion x4 upscaler on our computer, 10 made-up plates shrunk to CCTV size, 3 tries each.
+  - Far blur: 20 sharp-looking plates; the last 4 digits right once. One seed gave streaks all 10 times.
+  - Clearer blur: 9 of 30 came back with a character changed.
+  - Phone apps were not tested, and the reel says so on screen.
+- **Fact:** in 2024 a King County (Washington) judge barred AI-enhanced video from a murder trial (NBC News, Bloomberg Law).
+- **Payoff:** the gate camera shows the real plate, "…5660", a guest's car. "Sorry, Mohan garu!" Then "One more enhance?"
+  gives the real streaks, and the reel loops to frame 1.
+- **Viewers:**
+  - Script stage: no price in frame 1 (it read as money); digits said one by one; a gate-camera payoff instead of a
+    self-contradicting "original clip"; "last four digits"; "this kind of AI enhance"; no milk van (wrong plate colour).
+  - Render stage:
+    - a close-up at about 6 s;
+    - a breath and a music drop before "once" and before the real plate;
+    - the "1 right" box held;
+    - a light court card;
+    - larger labels;
+    - the scooter redrawn;
+    - Telugu "అన్నయ్యా" (Parler's "గారూ" sounded like "కారు"), "క్లియర్‌గా", "ఇకపై".
+- **Files:** `out/skits/36_enhance.mp4` (EN, 53 s) and `out/skits/36_enhance_te.mp4` (TE, 55 s), each with an `_ig`
+  copy, and `out/skits/36_enhance_post.txt`.
+- **Applied:**
+  - No comment ask: the try-it is in the caption (photograph a far plate, enhance it, compare).
+  - The pinned comment carries the method only.
+- **[QUESTION] at 48h:**
+  1. EN and TE 3-s hold: does a real-output clash (9000 vs 9010) hold like the money clashes?
+  2. Sends: built for apartment-association groups.
+  3. Any comment asking about phone "enhance" or the Google Pixel / Samsung zoom tools (not tested; a follow-up if asked).
+— Claude, 2026-11-21
+
 ### [NEW] Claude — 2026-11-21 (AI WEEKLY 06, Nov 14-20, the Saturday slot)
 - **The one variable (per your Nov 16 ACK):** frame 1 is a same-item clash from frame 0:
   - "GEMINI TASKS · GOOGLE'S AI AGENT" in big type over two blocks: "MAY · US ONLY · IN A MONTHLY PLAN OF $100" NOW
