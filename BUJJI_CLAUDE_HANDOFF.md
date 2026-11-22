@@ -32,6 +32,29 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### ### [ANALYTICS] Bujji — 2026-11-22 (7-day checkpoint: Creative 27 / Skit 27 "₹5,000 for 10 grams, says the AI")
+
+7-day checkpoint, second measurement. Published Nov 15 evening (IG EN/TE, browser task ran 8:54–9:06 PM ET); metrics pulled Nov 22 ~18:35 ET, lifetime to date, ~6.9 days after publish — just short of the 7-day mark (same "just short" timing as the run's 48h reads). 48h figures below are from the 2026-11-17 [ANALYTICS] entry. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Creative 27 / Skit 27 "₹5,000 for 10 grams, says the AI" (51.6 s EN / 56.4 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 27 EN | 1610 | 2044 (99.0%) | 75.8% | 24.3 s, ~47% | n/a | 453 | 22.5 / 1.0 / 0.5 / 0 | n/a |
+| Skit 27 TE | 128 | 158 (95.6%) | 70.3% | 14.9 s, ~26% | n/a | 31 | 0 / 12.7 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the methodology note and the ask), so the per-1,000 comment figures above are own-post counts, not viewer engagement. EN ask verbatim: "Try it: ask your AI app "What's today's 22-carat gold rate?" Does the answer show today's date and a source? Comment DATE or NO DATE."
+
+**Pattern check — sub-1,000 scrutiny on EN, cycle close:** the reel went flat after 48h: EN +6 views / +8 reach in ~5 days (1604→1610, 2036→2044), hold 75.9%→75.8%, avg watch 24.3 s unchanged — the 7-day read confirms the 48h verdict with no late tail. The myth-vs-fact shape is now the run's only shape confirmed at 7 days on both ceilings: strongest hold (75.8% EN, 70.3% TE) AND strongest middle (~47% EN watched vs ~25% on EP47/EP49). The DATE vs NO DATE ask drew 0 viewer replies on 2,044 EN reach — the comment-ask shape stays 0 across the run. Saves still 0 on both pages. TE: 128 views / 158 reach, exactly unchanged since 48h — distribution, not content.
+
+**Suggestions (3):**
+1. Format: myth-vs-fact confirmed at 7 days — hold 75.8% and middle ~47% both held. Repeat this shape before another dialogue skit; judge Creative 33/34's holds against Skit 27's 75.8%, not against the dialogue skits' ~45%.
+2. Ask: DATE vs NO DATE drew 0 on 2,044 reach at 7 days — comment asks stay retired. The comment slot carries the methodology note only.
+3. TE: no redesign — TE flat at 128 views with a 70.3% hold. The fix is the account-status call (Vamsi's), not a new TE angle.
+
+Next checkpoints: EP54 at 7 days Nov 23 morning; Creative 28 at 7 days Nov 23 evening; EP55 at 7 days Nov 24 morning; Creative 29 at 7 days Nov 24 evening; EP56 at 7 days Nov 25 morning; Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning. 48h reads for Creative 32/33/34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36 and EP58 wait on their publish dates — nothing has published since Creative 31 (Nov 19 morning).
+— Bujji, 2026-11-22
+
 ### [ANALYTICS] Bujji — 2026-11-22 (7-day checkpoint: Creative 25 / Skit 25 "Which Wish Did the AI Write?")
 
 7-day checkpoint, first measurement — no 48h entry was ever posted for Skit 25 (the Nov 16 evening read did not run). Published Nov 14 evening (IG EN/TE, browser task ran 8:54–9:06 PM ET); metrics pulled Nov 22 ~15:45 ET, lifetime to date, ~7.7 days after publish — past the 7-day mark (late catch-up read; the Nov 20/21 checks did not run). Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
