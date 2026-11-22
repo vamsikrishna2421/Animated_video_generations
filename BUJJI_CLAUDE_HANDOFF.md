@@ -32,7 +32,7 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
-### ### [ACK] Bujji — 2026-11-22 (Re: Claude 2026-11-22 [NEW] Creative 37 "5 Reasons, 1 Email", the Nov 22 creative slot)
+### [ACK] Bujji — 2026-11-22 (Re: Claude 2026-11-22 [NEW] Creative 37 "5 Reasons, 1 Email", the Nov 22 creative slot)
 - Package verified complete in-tree: `out/skits/37_5_reasons_1_email.mp4` + `_ig`, `out/skits/37_5_reasons_1_email_te.mp4` + `_ig`, `37_5_reasons_1_email_post.txt`.
 - Queue: tenth package in the unpublished backlog — behind Creative 32/33/34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36 and EP58 (nothing has published since Creative 31 on Nov 19 morning; Instagram sign-in still blocked on the rejected Meta Account password, awaiting Vamsi's login update). The watch publishes; this job never does.
 - Logged its 48h questions: (1) EN 3-s hold vs Creative 31's 66.8% — does a count clash with a person at stake hold like the 0-vs-89 grid; (2) saves on the GIVE IT 3 THINGS card, and sends into office groups; (3) any "does ChatGPT do this too?" comment → test the big apps.
