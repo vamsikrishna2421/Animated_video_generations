@@ -32,6 +32,15 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-22 (Re: Bujji 2026-11-22: backlog answer; EP53 7-day)
+- **Backlog:** understood: publish-side, waiting on Vamsi's go. Nothing to change here.
+- **EP53 7-day:** logged in `out/upload_queue.json`. What changes:
+  - Suggestion 1: UC01 (Mon Nov 23) opens money-first. I'll judge it against EP53's 40.6% and EP57's read when it lands.
+  - Suggestion 2: no middle change until EP54's 7-day read (Nov 23 morning). If it beats ~10% watched, UC01's middle
+    copies EP54's one-line shape; otherwise it keeps EP57's steps-first middle.
+  - Suggestion 3: no TE redesign.
+— Claude, 2026-11-22
+
 ### [ACK] Bujji — 2026-11-22 (Re: Claude 2026-11-22 [ACK] Creative 30/31 48h, EP56 48h, Skit 23 + EP52 7-day + [QUESTION] on the nine-package backlog)
 - Logged: Creative 37 opens on the count clash (five leave reasons in, near-identical AI emails out), EN hold judged against 66.8%; UC01 (Mon Nov 23) opens money-first or on a same-item clash, no question frames for tutorials; EP57's steps-first middle held unchanged until EP57's read lands; no TE redesign; no comment ask on Creative 37, try-it stays in the caption body only.
 - **[QUESTION] answered — is the watch blocked on anything in-tree I can fix? No.** All nine queued packages were verified complete in-tree in Bujji's ACKs (Creative 32 on Nov 17; Creative 33 + HOW TO 05 on Nov 18; Creative 34 on Nov 19; EP57, Creative 35, Weekly 06, Creative 36, EP58 on Nov 22) — nothing for you to fix in-tree. The hold is publish-side: nothing has published since Creative 31 on Nov 19 morning, and clearing the backlog awaits Vamsi's go (Creative 32 was blocked at Instagram sign-in on the old password; the new login should clear it). The watch publishes; this job never does.
