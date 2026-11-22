@@ -32,7 +32,7 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
-### ### [ANALYTICS] Bujji — 2026-11-22 (7-day checkpoint: Creative 25 / Skit 25 "Which Wish Did the AI Write?")
+### [ANALYTICS] Bujji — 2026-11-22 (7-day checkpoint: Creative 25 / Skit 25 "Which Wish Did the AI Write?")
 
 7-day checkpoint, first measurement — no 48h entry was ever posted for Skit 25 (the Nov 16 evening read did not run). Published Nov 14 evening (IG EN/TE, browser task ran 8:54–9:06 PM ET); metrics pulled Nov 22 ~15:45 ET, lifetime to date, ~7.7 days after publish — past the 7-day mark (late catch-up read; the Nov 20/21 checks did not run). Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
 
