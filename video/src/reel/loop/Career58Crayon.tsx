@@ -97,6 +97,7 @@ const StCareer: React.FC<SP> = ({ s }) => {
           c.save(); c.translate(760, 1060); c.rotate(0.08); c.fillStyle = "#fff"; rrect(c, 0, 0, 200, 250, 10); c.fill(); c.strokeStyle = "#94a3b8"; c.lineWidth = 3; rrect(c, 0, 0, 200, 250, 10); c.stroke();
           c.font = SANS(26, 900); c.fillStyle = NAVY; c.textAlign = "left"; c.fillText(T.resume, 18, 40); c.fillStyle = "#cbd5e1"; for (let q = 0; q < 6; q++) c.fillRect(18, 64 + q * 28, 160 - (q % 3) * 30, 12); c.restore();
           if (P === "hook") chip(c, T.jobsChip, W / 2, 1380, NAVY, "#fde68a", seg(f, cu(2, 0.7) - 4, cu(2, 0.7) + 6), 38);
+          if (P === "loop") chip(c, T.loopChip, W / 2, 1380, NAVY, "#fde68a", seg(f, cu(1, 0.6) - 4, cu(1, 0.6) + 6), 42);
         } else if (P === "rank") {
           head(c, W, T.rankHead, T.rankSub, "#0a66c2");
           (T.rank as string[]).forEach((t, q) => {
@@ -126,7 +127,7 @@ const StCareer: React.FC<SP> = ({ s }) => {
           c.strokeStyle = "#0e7490"; c.lineWidth = 8; c.beginPath(); c.moveTo(485, 465); c.lineTo(552, 465); c.stroke();
           c.fillStyle = "#fff"; rrect(c, 560, 545, 460, 100, 22); c.fill(); c.font = SANS(fit(c, T.p2Rec, 420, 32, 800), 800); c.fillStyle = INK; c.fillText(T.p2Rec, 585, 607);
           c.restore();
-          bar(c, 60, 760, W - 120, T.p2BarA, 6, 10, RED, seg(f, cu(1, 0.45) - 4, cu(1, 0.45) + 8));
+          bar(c, 60, 760, W - 120, T.p2BarA, 3, 10, RED, seg(f, cu(1, 0.45) - 4, cu(1, 0.45) + 8));
           bar(c, 60, 920, W - 120, T.p2BarB, 10, 10, GREEN, seg(f, cu(2, 0.75) - 4, cu(2, 0.75) + 8));
           chip(c, T.p2Src, W / 2, 1100, "#1e293b", "#f8fafc", 1, 30);
         } else if (P === "ml") {
@@ -150,15 +151,18 @@ const StCareer: React.FC<SP> = ({ s }) => {
           if (kd > 0) { c.save(); c.globalAlpha = clamp(kd * 3); c.fillStyle = NAVY; rrect(c, 60, 1060, W - 120, 150, 26); c.fill(); c.textAlign = "center"; c.font = SANS(fit(c, T.twBig, W - 160, 64, 900), 900); c.fillStyle = "#fde68a"; c.fillText(T.twBig, W / 2, 1135); c.font = SANS(fit(c, T.twNote, W - 160, 30, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(T.twNote, W / 2, 1185); c.restore(); }
         } else if (P === "road") {
           c.textAlign = "center"; c.font = SANS(60, 900); c.fillStyle = NAVY; c.fillText(T.roadHead, W / 2, 320);
-          (T.road as [string, string, string, string][]).forEach(([job, start, learn, proof], q) => {
-            const st = q === 0 ? ln.from + 4 : cu(q, 0.3 + 0.3 * q) - 4;
+          (T.road as [string, string, string][]).forEach(([job, task, proof], q) => {
+            const st = q === 0 ? ln.from + 4 : cu(q, 0.3 + 0.25 * q) - 4;
             const k = seg(f, st, st + 8); if (k <= 0) return;
-            const y = 370 + q * 300, col = ["#7c3aed", "#0e7490", "#b45309"][q];
-            c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = "#fff"; rrect(c, 50, y, W - 100, 270, 24); c.fill(); c.fillStyle = col; rrect(c, 50, y, 26, 270, 12); c.fill();
-            c.textAlign = "left"; c.font = SANS(fit(c, job, W - 200, 50, 900), 900); c.fillStyle = col; c.fillText(job, 100, y + 64);
-            [["START", start], ["LEARN", learn], ["PROOF", proof]].forEach(([a, bb], j) => { c.font = SANS(28, 900); c.fillStyle = "#64748b"; c.fillText(a, 100, y + 118 + j * 52); c.font = SANS(fit(c, bb, W - 360, 34, 800), 800); c.fillStyle = INK; c.fillText(bb, 240, y + 118 + j * 52); });
+            const y = 370 + q * 250, col = ["#7c3aed", "#0e7490", "#b45309"][q];
+            c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = "#fff"; rrect(c, 50, y, W - 100, 225, 24); c.fill(); c.fillStyle = col; rrect(c, 50, y, 26, 225, 12); c.fill();
+            c.textAlign = "left"; c.font = SANS(fit(c, job, W - 200, 46, 900), 900); c.fillStyle = col; c.fillText(job, 100, y + 60);
+            c.font = SANS(fit(c, task, W - 200, 42, 900), 900); c.fillStyle = INK; c.fillText(task, 100, y + 125);
+            c.font = SANS(fit(c, "proof: " + proof, W - 200, 34, 800), 800); c.fillStyle = "#475569"; c.fillText("proof: " + proof, 100, y + 185);
             c.restore();
           });
+          const kf = seg(f, cu(3, 0.85) - 4, cu(3, 0.85) + 6);
+          if (kf > 0) { c.save(); c.globalAlpha = clamp(kf * 3); c.fillStyle = GREEN; rrect(c, 50, 1130, W - 100, 110, 24); c.fill(); c.textAlign = "center"; c.font = SANS(fit(c, T.roadFoot, W - 160, 46, 900), 900); c.fillStyle = "#fff"; c.fillText(T.roadFoot, W / 2, 1200); c.restore(); }
         }
         c.textAlign = "left";
       }} />

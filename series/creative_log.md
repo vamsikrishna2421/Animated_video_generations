@@ -63,4 +63,5 @@ from EP33). The shop cast (Ravi anna and the shop AI) now belongs to the episode
 | O. Ask for every rupee: an AI's answer can drop the small print | 32 (moving out: ₹36,000 said, ₹44,000 real; the ₹8,000 painting charge 0/10 when asked "what will it cost?", 10/10 when asked for every amount with its clause number) |
 | P. What it heard is not what you said (speech-to-text in your language) | EP56 (a voice assistant for the shop: right order number, English 7/10, Telugu with the small free model 0/10 (Hindi letters), the AI made up "12345" 8 of 50 tries, large-v3 translating 5/10, ~35 s an answer) |
 | Q. Lost in translation: the AI's Telugu keeps the number and changes the meaning | 35 (a health policy: "30 days" → "30 వారాల" once, "not covered" kept 0/5 even when asked; ask the insurer for the Telugu sheet) |
+| R. Which AI job, and what it actually does | EP58 (fresher hiring +1% vs fresher AI/ML +19%; three jobs, one real task each: 4/10 → 9/10, 3/10 → 10/10, a scam filter that caught 135/149 but missed our KYC and parcel scams) |
 

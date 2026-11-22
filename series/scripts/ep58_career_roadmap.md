@@ -1,4 +1,4 @@
-# EP58 "+1% or +19%? Your AI Career Roadmap" · Sunday Nov 22 · queue 062 · script v1
+# EP58 "+1% or +19%? Your AI Career Roadmap" · Sunday Nov 22 · queue 062 · script v2
 
 ## Format
 - The Season 6 finale, as a screen tutorial like EP51-EP57: one narrator, screens and cards, no shop skit.
@@ -38,3 +38,34 @@
 - **Try-it:** "Train our scam filter yourself (12 lines, pinned) and add 20 Indian scam texts you've received. Does it
   catch the KYC one now?"
 - **Pinned:** the method and the code only.
+
+## Script review (human-viewer, v1), what changed for v2
+Sandeep (24, B.Tech), Priya (28, HR), Lakshmi (52, Telugu parent) and Kiran (22, B.Com) all stopped on frame 1
+(Sandeep: "that's my life").
+- **All agreed:**
+  - "This week" had no task anyone could do. Each job now has one task, and the proof line is voiced: "put your
+    before-and-after score on your résumé".
+  - "+19%" with "no code, start tonight" read like a course ad. Now: "vs last year" on frame 1, "more hiring, not
+    easier hiring", and "no code to start".
+  - Line 1 teases the no-code job ("one with no code").
+  - The middle was jargon. "Ships it" became "puts it live", "this season" became episode numbers, APIs dropped.
+- **Also:**
+  - The LinkedIn ranking (all experience levels) left the voice for the caption.
+  - Job 2 counts right answers like job 1: "3 of 10 right, by luck → 10 of 10", over "ten customer questions".
+  - ML says "caught nine scams in ten" (135/149 on screen, not 98.7%) and "the computer took two seconds; the real work
+    is the data".
+  - "Three scam texts we wrote".
+  - Telugu: "పెరిగాయి", "లైవ్ లో పెడతారు", "పదిలో తొమ్మిది", "రెండో ఉద్యోగం", "లాటరీ మెసేజ్ ని", episode numbers.
+- **Length:** EN 80 s (tempo 1.12). In Telugu, lines 1 and 6 were cut, and line 6 split into two takes (it ran 22.5 s),
+  for 87 s.
+
+## Script v2 (as voiced)
+| # | prop | English | Telugu |
+|---|---|---|---|
+| 1 | hook | Fresher hiring this September: up one percent on last year. [1] Fresher AI and ML hiring: up nineteen. [2] Three AI jobs, one with no code; we tried each one here. | ఫ్రెషర్ల హైరింగ్, పోయిన ఏడాది కన్నా ఒక్క శాతమే పెరిగింది. [1] ఫ్రెషర్ల ఆర్టిఫిషియల్ ఇంటెలిజెన్స్ ఉద్యోగాలు: పంతొమ్మిది శాతం. [2] మూడు ఉద్యోగాలు, ఒకదానికి కోడ్ అక్కర్లేదు; మూడూ చేసి చూశాం. |
+| 2 | prompt | Job one, prompt engineer: writes and tests the instructions for an AI; no code. [1] Our shop bot, ten customer questions, no instructions: four right. [2] With rules and the price list: nine. | ఉద్యోగం ఒకటి, ప్రాంప్ట్ ఇంజనీర్: చాట్‌బాట్ కి సూచనలు రాసి, టెస్ట్ చేస్తారు; కోడ్ అక్కర్లేదు. [1] మా షాప్ బాట్, పది కస్టమర్ ప్రశ్నలు, సూచనలు లేకుండా: నాలుగు సరైనవి. [2] రూల్స్, ప్రైస్ లిస్ట్ ఇస్తే: తొమ్మిది. |
+| 3 | aieng | Job two, AI engineer: connects the AI to real data, and puts it live. [1] Guessing order status: three of ten right, by luck. [2] With one lookup tool: ten of ten. | ఉద్యోగం రెండు, ఆర్టిఫిషియల్ ఇంటెలిజెన్స్ ఇంజనీర్: చాట్‌బాట్ ని షాప్ డేటా కి కలిపి, లైవ్ లో పెడతారు. [1] ఊహించి చెప్తే: పదిలో మూడే సరైనవి, అదీ అదృష్టం వల్ల. [2] చూసి చెప్పే ఒక్క టూల్ ఇస్తే: పదికి పది. |
+| 4 | ml | Job three, ML engineer: builds the model itself. [1] We trained a scam-SMS filter here; the computer took two seconds. [2] In its own test, it caught nine scams in ten. | ఉద్యోగం మూడు, మెషిన్ లెర్నింగ్ ఇంజనీర్: మోడల్ నే తయారు చేస్తారు. [1] ఇక్కడే స్కామ్ మెసేజ్ ఫిల్టర్ ని ట్రెయిన్ చేశాం; కంప్యూటర్ కి రెండు సెకన్లు పట్టింది. [2] దాని టెస్ట్ లో, పదిలో తొమ్మిది స్కామ్ లు పట్టుకుంది. |
+| 5 | twist | Then three scam texts we wrote, Indian style. [1] It caught the lottery one, [2] missed KYC and parcel. [3] It learned from old UK texts: the real work is the data. | తర్వాత, మేము రాసిన మూడు ఇండియన్ స్కామ్ మెసేజ్ లు. [1] లాటరీ మెసేజ్ ని పట్టుకుంది; [2] కే వై సీ, పార్సెల్ మెసేజ్ లు వదిలేసింది. [3] అది నేర్చుకుంది పాత యూకే మెసేజ్ ల నుంచి: అసలు పని డేటా తోనే. |
+| 6 | road | This week. Prompt engineer: rules for one shop, ten test questions. [1] AI engineer: run our episode fifty-four code. [2] ML engineer: add twenty Indian scam texts to our filter. [3] Put your before-and-after score on your résumé. | ఈ వారం: ప్రాంప్ట్ ఇంజనీర్ కి, ఒక షాప్ రూల్స్, పది ప్రశ్నల టెస్ట్. [1] రెండో ఉద్యోగానికి, ఎపిసోడ్ యాభై నాలుగు కోడ్. | [2] మెషిన్ లెర్నింగ్ కి, మా ఫిల్టర్ కి ఇరవై ఇండియన్ స్కామ్ లు. [3] ముందు, తర్వాత స్కోర్, రెజ్యూమ్ లో పెట్టండి. |
+| 7 | loop | Plus one, or plus nineteen? [1] More hiring, not easier hiring. Pick one job, and start. | ఒక్క శాతమా, పంతొమ్మిదా? [1] ఎక్కువ ఉద్యోగాలు, కానీ సులభం కాదు. ఒక ఉద్యోగం ఎంచుకుని, మొదలుపెట్టండి. |

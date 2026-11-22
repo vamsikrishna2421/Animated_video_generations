@@ -1,30 +1,35 @@
 UPLOAD: 062
-VIDEO: 062_ep58_your_ai_career_roadmap.mp4
+VIDEO: 062_ep58_your_ai_career_roadmap.mp4  (the Season 6 finale, a screen tutorial, about 80 s, AI voice in the Creative 21 standard; replaces the older lesson-format version for slot 062; send copy: 062_ep58_your_ai_career_roadmap_ig.mp4). It ends on frame 1: "+1% or +19%?"
 
 === CAPTION ===
-58 episodes ago we started with 'What is AI?'. Here's where you go next: your AI career roadmap.
+Fresher hiring, Sep 2026 vs Sep 2025: +1%. Fresher AI/ML hiring: +19% (Naukri JobSpeak). More hiring, not easier hiring.
 
-AI From Scratch, Episode 58 (season finale): AI careers
-- Popular roles: AI engineer, ML engineer, data scientist, AI PM
-- Prompt engineering: a skill more than a job title
-- Path to AI engineer, and path to ML engineer
-- Portfolio project ideas that stand out
-- Myth: you don't need a PhD for AI engineering
+Episode 58 of AI From Scratch: your AI career roadmap (the Season 6 finale)
+Three AI jobs, and the one task each does, tried on our computer:
+1. Prompt engineer (no code to start): writes and tests the instructions for an AI. Our shop bot, 10 customer questions: no instructions 4 right; with rules and the price list 9 (episode 51).
+2. AI engineer (Python): connects the AI to real data and puts it live. Guessing order status: 3 of 10 right, by luck; with one lookup tool: 10 of 10 (episode 54).
+3. ML engineer (Python + maths): builds the model itself. We trained a scam-SMS filter in 1.86 seconds on 5,574 real texts: it caught 135 of 149 scams in its own test, and flagged 1 of 966 genuine texts. Then three Indian-style scam texts we wrote: it caught the lottery one and missed the KYC and the parcel ones, because it learned from UK texts from about 2012. The real work is the data.
+LinkedIn's Jobs on the Rise 2026 (India, all experience levels): Prompt Engineer #1, AI Engineer #2.
 
-Quiz at the end. Got it right? Comment below.
+Try it this week: pick one job and do its task. Prompt engineer: write rules for one shop and test 10 questions, before and after. AI engineer: run episode 54's tool code. ML engineer: run our filter (pinned) and add 20 Indian scam texts you've received: does it catch the KYC one now? Put your before → after score on your résumé.
 
-Thank you for learning AI from scratch with us! More real world breakdowns and AI news coming.
-Next: Real World AI, how AI powers the apps you use every day.
-Follow @ai_maastaaru.
+That's Season 6. Follow @ai_maastaaru for the use cases next.
+
+=== COMMENT PROMPT ===
+(none: from Bujji's reads, the try-it lives in the caption)
 
 === HASHTAGS ===
-#AIMaastaaru #AICareers #LearnAI #TechCareers #AIForBeginners
+#AIFromScratch #AICareers #PromptEngineer #MachineLearning #Freshers
 
 === PINNED_COMMENT ===
-Quiz answer: The AI engineer, building apps on top of existing models. Which AI role are you aiming for? Comment below!
-
-=== COVER ===
-'AI Career Roadmap' title card
-
-=== ALT_TEXT ===
-Animated AI career roadmap: roles, learning paths and portfolio project ideas.
+How we tested (Nov 22, 2026; pipeline/ep58/train_demo.py, committed before it ran): the UCI SMS Spam Collection (5,574 real SMS, 747 spam; UK, about 2012), split 80/20 (seed 58), TF-IDF + logistic regression (scikit-learn) on 4 CPU cores: trained in 1.86 s; on the 1,115 test texts, 135 of 149 scams caught, 1 of 966 genuine texts flagged. Our 3 Indian-style scam texts (made up): lottery caught (0.97), KYC missed (0.25), parcel missed (0.25). The filter (pip install scikit-learn; the data file from the UCI repository):
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+rows = [l.split("\t", 1) for l in open("SMSSpamCollection", encoding="utf-8") if "\t" in l]
+y = [1 if lab == "spam" else 0 for lab, _ in rows]; X = [t for _, t in rows]
+Xtr, Xte, ytr, yte = train_test_split(X, y, test_size=0.2, random_state=58, stratify=y)
+vec = TfidfVectorizer(ngram_range=(1, 2), sublinear_tf=True)
+clf = LogisticRegression(max_iter=1000, C=10).fit(vec.fit_transform(Xtr), ytr)
+print("right:", (clf.predict(vec.transform(Xte)) == yte).mean())
+print(clf.predict_proba(vec.transform(["Your KYC is pending. Update today or your account will be blocked"]))[0][1])
