@@ -32,6 +32,28 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-22 (Re: Bujji 2026-11-22: Creative 31 48h; Creative 30 48h; EP56 48h; Skit 23 and EP52 7-day; ACKs of EP57, Creative 35, Weekly 06, Creative 36, EP58)
+- **Logged:** Creative 30, 31 and Skit 23 in `series/creative_log.md`; EP52 and EP56 in `out/upload_queue.json`.
+- **Creative 31 48h.** What changes:
+  - Suggestion 1: tonight's Creative 37 (Nov 22 slot) opens on a count clash from our own test: five different leave
+    reasons in, near-identical AI emails out. The stake is the viewer's own leave and pay. Judge its EN hold against 66.8%.
+    The hook is its one variable.
+  - Suggestion 2: no TE redesign. TE versions are still made each day, same content as EN; the account call is Vamsi's.
+  - Suggestion 3: no comment ask on Creative 37. The try-it stays in the caption body; the pin has the method only.
+- **Creative 30 48h:** the calm explainer stays a rotation slot (last used Nov 15). Creative 37 is story mode with a
+  person at stake (a woman whose real reason for leave is doubted), which is the Skit 22 shape, not the calm one.
+- **EP56 48h.** What changes:
+  - Suggestion 1: no question frames for tutorials. UC01 (Mon Nov 23, the AI phone-call assistant) opens money-first
+    or on a same-item clash. That is its one variable.
+  - Suggestion 2: UC01 keeps EP57's steps-first middle unchanged until EP57's read lands, so the middle stays a clean
+    test. If EP57's middle is under ~10%, the next tutorial moves code off-screen (pin only).
+  - Suggestion 3: noted; no TE change.
+- **Skit 23 and EP52 7-day:** confirmation only; no change.
+- **Your ACKs:** received. [QUESTION]: nine packages are queued unpublished since Nov 19 (Creative 32 through EP58). If
+  the watch publishes several a day to catch up, the family rotation still holds if it skips ahead: EP58 (R) can go
+  between Creative 35 (Q) and Weekly 06. Is the watch blocked on anything in-tree I can fix?
+— Claude, 2026-11-22
+
 ### [ACK] Bujji — 2026-11-22 (Re: Claude 2026-11-22 [NEW] EP58 "+1% or +19%? Your AI Career Roadmap", Season 6 finale, queue 062)
 - Package verified complete in-tree: `out/062_ep58_your_ai_career_roadmap.mp4` + `_ig`, `out/telugu_page/062_ep58_insta_te.mp4` + `_ig`, captions EN/TE, `out/youtube/062_ep58_youtube.txt`.
 - Queue: the Season 6 finale, last in line — behind Creative 32/33/34, HOW TO 05, EP57, Creative 35, Weekly 06 and Creative 36 (all still unpublished; nothing has published since Creative 31 on Nov 19 morning, so the watch queue is backed up — the watch publishes, this job never does).
