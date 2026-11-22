@@ -56,7 +56,7 @@ def call(key, q, seed):
 
 
 HAND = {   # by hand, after reading all 20 replies in full (Nov 22)
-    # usual: every reply opens "I hope this message/email finds you well" (7 message, 3 email) and is addressed to
+    # usual: every reply opens "I hope this message/email finds you well" (8 message, 2 email: seeds 1 and 6) and is addressed to
     # "[Manager's Name]" (9 "Dear", 1 "Hi"); none has a real reason ("personal reasons/matters" in 8, a bracket to fill in
     # 2, seeds 6 and 7); dates nobody gave in 4 (seeds 3, 6, 10: "October 12th and 13th"; seed 5: "October 13th and 14th");
     # "[Your Name]" in 10. 7 add "if there is any urgent matter".

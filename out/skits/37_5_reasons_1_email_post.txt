@@ -1,0 +1,48 @@
+CREATIVE 37: "5 Reasons, 1 Email" (story mode, one storyteller: five leave emails for the same Friday, and the manager can approve two. All five asked an AI, so all five say "personal reasons". Ramya's real reason is her sister's engagement, and her email doesn't say so. All five go on hold. Our test is real: a small free AI on our computer, the same vague ask 10 times. All 10 opened "I hope this message/email finds you well", none gave a real reason, and 4 made up dates. With Ramya's facts, the facts came through, but all 10 guessed a month, 3 gave her colleague the wrong job and 1 signed off with the AI's own name. English / Telugu, 9:16; also works as a YouTube Short)
+Files: out/skits/37_5_reasons_1_email.mp4 (English page) · out/skits/37_5_reasons_1_email_te.mp4 (Telugu page)
+Send copies: out/skits/37_5_reasons_1_email_ig.mp4 · out/skits/37_5_reasons_1_email_te_ig.mp4
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+5 people. 5 different reasons. 1 AI-written leave email: "...due to personal reasons."
+
+We typed the usual vague ask into a small free AI, 10 fresh chats: "Write a leave email to my manager for 2 days, Thursday and Friday, for a personal reason." All 10 opened "I hope this message (or email) finds you well". None gave a real reason. 4 made up dates we never gave it.
+
+Then we gave it the real facts: a sister's engagement in Vijayawada, back Monday, the report done, a colleague covering the support tickets. The facts came through. But all 10 guessed a month, 3 handed the colleague the wrong job, and 1 signed off with the AI's own name.
+
+Try it before your next leave email: type the vague ask into the AI app you use and read the first line. Then give it 3 things: the reason you're comfortable sharing, your dates and return day, who covers your work. Before you send: every [bracket], every date, every name.
+
+Ramya, Kiran and Sravya are made up. The emails and counts are from our test.
+
+#AI #LeaveEmail #OfficeLife #WorkLife #LearnAI
+
+=== COMMENT PROMPT ===
+(none: from Bujji's reads, the try-it lives in the caption)
+
+=== PINNED_COMMENT ===
+How we tested (Nov 22, 2026): Qwen2.5-7B-Instruct (4-bit, llama.cpp) on our computer, one fresh chat per run, temperature 0.7, seeds 1-10; two asks, 10 runs each; all 20 replies read by hand. Vague ask: 10/10 open "I hope this message/email finds you well" (8 message, 2 email), 0/10 a real reason ("personal reasons" or a bracket to fill), 4/10 made-up dates (3 said "October 12th and 13th"). With the facts: sister's engagement, Vijayawada and the colleague covering kept 10/10, "back Monday" 9/10; a month nobody gave in 10/10; the invoice report handed to the colleague in 3/10; signed "Qwen" in 1/10. The big apps were not tested. Code: pipeline/creative37/leave_demo.py.
+
+=== YOUTUBE SHORTS ===
+Title: 5 reasons, 1 AI leave email: "personal reasons" #shorts
+Description: Five people ask an AI for a leave email and all five get the same one. We asked a small free AI 10 times: all 10 opened "I hope this message finds you well", none gave a real reason, 4 made up dates. With real facts it kept them, but guessed a month every time and once signed with its own name. Give it your reason, dates and cover, and read it before you send.
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+5 mandi. 5 veru veru kaaranaalu. AI raasina okate leave mail: "...due to personal reasons."
+
+Maa computer lo oka chinna free AI ki, andaroo adige laantidi 10 saarlu adigaam: "2 rojulu, Thursday, Friday, personal reason ki leave mail raayi." 10 lo 10, "I hope this message finds you well" tho modalayyaayi. Okkadaantlo kooda asalu kaaranam ledu. 4 mails, memu cheppani tedeelu raasaayi.
+
+Taruvaata asalu vivaraalu ichaam: chelli engagement, Vijayawada, Monday tirigi vastundi, report ayipoyindi, support tickets colleague choosukuntundi. Vivaraalu anni vachaayi. Kaani 10 lo 10 nela oohinchi raasaayi; 3 lo colleague ki verey pani appaginchaayi; 1 AI tana perutho santhakam pettindi.
+
+Try chesukondi: mee AI app lo aa vague prashna adigi, first line chadavandi. Taruvaata 3 vishayaalu cheppandi: cheppadaniki ibbandi leni kaaranam, tedeelu + eppudu tirigi vastaaru, mee pani evaru choosukuntaaru. Pampe mundu: prathi [bracket], prathi tedi, prathi peru check chesukondi.
+
+Ramya, Kiran, Sravya memu raasina perlu. Mails, counts maa test lonivi.
+
+=== COMMENT PROMPT ===
+(none)
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #LeaveLetter #OfficeLife #LearnAI
+
+=== PINNED_COMMENT ===
+Ela test chesam (Nov 22, 2026): Qwen2.5-7B-Instruct (4-bit) maa computer lo, prathi saari kotha chat, temperature 0.7, seeds 1-10; rendu prashnalu, okkodaaniki 10 saarlu; 20 replies chethito chadivaam. Vague prashna: 10/10 "I hope this message/email finds you well", 0/10 asalu kaaranam, 4/10 kalpitha tedeelu. Vivaraalatho: engagement, Vijayawada, colleague cover 10/10, "back Monday" 9/10; nela oohinchindi 10/10; invoice report colleague ki 3/10; "Qwen" ani santhakam 1/10. Pedda apps test cheyyaledu. Code: pipeline/creative37/leave_demo.py.
