@@ -32,6 +32,41 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-22 (Creative 37 "5 Reasons, 1 Email", the Nov 22 creative slot)
+- **Format:** story mode (one calm storyteller). The last story mode was Creative 29 (Nov 14). Not a dialogue skit, since
+  Creative 36 was one.
+- **Cast:** new; Ramya (a support executive, made up). Her manager Kiran and teammate Sravya appear only as names.
+- **Point family L** (AI writes for anyone, unless you give it you), last used by Creative 25 (Nov 10). EP58 (R) posts
+  before it.
+- **Frame 1 (the reach stack + your Creative 31 read):** a count clash, "5 REASONS" vs "1 EMAIL", under "SAME FRIDAY
+  OFF · ONLY 2 GET LEAVE", over an inbox of five identical "...due to personal reasons" rows. The stake is the viewer's
+  own leave; the injustice is her real reason buried. Line 1: "Five leave emails for the same Friday. Their manager can
+  approve two." Judge the EN hold against 66.8%; the hook is the one variable.
+- **Our test** (`pipeline/creative37/leave_demo.py`, committed before it ran; all 20 replies read by hand). A small free
+  AI on our computer (Qwen 7B), 10 fresh chats per ask:
+  - The vague ask ("a leave email ... for a personal reason"): 10/10 open "I hope this message/email finds you well",
+    0/10 a real reason, 4/10 made-up dates.
+  - With her facts: they came through (back Monday 9/10). But all 10 guessed a month, 3 gave the colleague the
+    finished report, and 1 signed off "Qwen".
+  - The big apps were not tested; the caption's try-it asks viewers to type the vague ask into their own app.
+- **Viewers:**
+  - Script stage: say they asked an AI; "support tickets"; the invoice report set up; brackets aren't a failure; 9/10
+    not 10/10; the drop before the bad news; all five on hold, approval earned by her facts.
+  - Render stage (EN): a big "NOT IN HER EMAIL" callout; LEAVE in the frame-1 bar; "her manager" instead of an
+    unintroduced Kiran; larger cards; "on hold" was heard "unhauled" → "All five are put on hold".
+  - Render stage (TE): slower facts and rule; "దాదాపు అన్నీ వచ్చాయి" (and EN "Almost all came through"); three items
+    that sound like three; "రమ్యకే లీవ్ ఇచ్చారు" ("అప్రూవ్" was heard "approach"); "సరిచూసి" (no stutter).
+- **Files:** `out/skits/37_5_reasons_1_email.mp4` (EN, 59.9 s) and `out/skits/37_5_reasons_1_email_te.mp4` (TE, 60.7 s:
+  0.7 s over, held by beat-snapping; flagging it so the TE read isn't blamed on length), each with an `_ig` copy, and
+  `out/skits/37_5_reasons_1_email_post.txt`.
+- **Applied:** no comment ask (posted-answer asks retired, 0-for-3); the try-it is in the caption; the pin carries the
+  method only.
+- **[QUESTION] at 48h:**
+  1. EN 3-s hold vs Creative 31's 66.8%: does a count clash with a person at stake hold like the 0-vs-89 grid?
+  2. Saves on the GIVE IT 3 THINGS card, and sends into office groups.
+  3. Any "does ChatGPT do this too?" comment: if it comes, I'll propose testing the big apps.
+— Claude, 2026-11-22
+
 ### [ACK] Claude — 2026-11-22 (Re: Bujji 2026-11-22: backlog answer; EP53 7-day)
 - **Backlog:** understood: publish-side, waiting on Vamsi's go. Nothing to change here.
 - **EP53 7-day:** logged in `out/upload_queue.json`. What changes:
