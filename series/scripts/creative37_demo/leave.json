@@ -1,0 +1,526 @@
+{
+ "asks": {
+  "usual": "Write a leave email to my manager for 2 days, Thursday and Friday, for a personal reason.",
+  "details": "Write a leave email to my manager Kiran for Thursday and Friday. My sister's engagement is on Friday in Vijayawada, so I leave Wednesday night and I'm back on Monday. The Monday invoice report is done; Sravya will cover my support tickets."
+ },
+ "totals": {
+  "usual": {
+   "hope_well": 10,
+   "unforeseen": 0,
+   "personal_reasons": 8,
+   "urgent": 7,
+   "placeholder": 10,
+   "appreciate": 7
+  },
+  "details": {
+   "hope_well": 10,
+   "unforeseen": 0,
+   "personal_reasons": 0,
+   "urgent": 5,
+   "placeholder": 10,
+   "appreciate": 10
+  }
+ },
+ "rows": [
+  {
+   "ask": "usual",
+   "seed": 1,
+   "secs": 31.9,
+   "reply": "Subject: Request for Leave - Thursday and Friday\n\nDear [Manager's Name],\n\nI hope this email finds you well. I am writing to request a couple of days off from work due to personal reasons.\n\nI would like to take the next two days, Thursday and Friday, off starting tomorrow. During my absence, I will ensure that all ongoing tasks are completed or delegated appropriately with my team members. If there is any urgent matter requiring my attention during this time, please do not hesitate to contact [Name of a colleague who can handle emergencies] in my absence.\n\nI appreciate your understanding and support regarding this request. Please let me know if you need any further information from me.\n\nThank you for considering my request.\n\nBest regards,\n\n[Your Name]\n[Your Position]",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": true,
+    "urgent": true,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": false,
+    "engagement": false,
+    "vijayawada": false,
+    "sravya": false,
+    "monday": false,
+    "invoice": false
+   },
+   "subject": "Subject: Request for Leave - Thursday and Friday",
+   "first_line": "I hope this email finds you well. I am writing to request a couple of days off from work due to personal reasons.",
+   "words": 130
+  },
+  {
+   "ask": "usual",
+   "seed": 2,
+   "secs": 40.1,
+   "reply": "Certainly! Below is a sample email you can use to request leave for two days, Thursday and Friday, due to personal reasons:\n\n---\n\nSubject: Request for Leave - [Your Name] - Thursday & Friday\n\nDear [Manager's Name],\n\nI hope this message finds you well. I am writing to inform you that I will be on leave from Thursday, [Date], to Friday, [Date].\n\nThe reason for my absence is [briefly state the personal reason if necessary]. During my time away, I will ensure all ongoing tasks are completed or handed over appropriately. If there is anything urgent during this period, please contact [colleague's name and contact information] who can assist in managing any immediate needs.\n\nI appreciate your understanding and support. Should you have any questions or need further details, please do not hesitate to reach out to me.\n\nThank you for your consideration.\n\nBest regards,\n\n[Your Name]\n[Your Position]\n\n---\n\nFeel free to adjust the content as needed to better fit your specific situation!",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": true,
+    "urgent": true,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": false,
+    "engagement": false,
+    "vijayawada": false,
+    "sravya": false,
+    "monday": false,
+    "invoice": false
+   },
+   "subject": "Subject: Request for Leave - [Your Name] - Thursday & Friday",
+   "first_line": "Certainly! Below is a sample email you can use to request leave for two days, Thursday and Friday, due to personal reasons:",
+   "words": 164
+  },
+  {
+   "ask": "usual",
+   "seed": 3,
+   "secs": 38.6,
+   "reply": "Certainly! Here's a sample email you can use to request your leave:\n\n---\n\nSubject: Request for Leave - Thursday, October 12th and Friday, October 13th\n\nDear [Manager’s Name],\n\nI hope this message finds you well. I am writing to formally request my leave on Thursday, October 12th, and Friday, October 13th, for personal reasons.\n\nDuring my absence, I will ensure that all my ongoing projects are adequately covered with clear instructions provided to my team members. If there is any urgent matter during this period, please contact [Name of Backup or Colleague]. They have been informed about my leave and are prepared to assist if needed.\n\nThank you for your understanding and support. Please let me know if there's anything specific I need to take care of before my leave or if you require further information.\n\nBest regards,\n\n[Your Name]\n[Your Position]\n\n---\n\nFeel free to adjust the details as necessary to fit your specific situation!",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": true,
+    "urgent": true,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": false,
+    "engagement": false,
+    "vijayawada": false,
+    "sravya": false,
+    "monday": false,
+    "invoice": false
+   },
+   "subject": "Subject: Request for Leave - Thursday, October 12th and Friday, October 13th",
+   "first_line": "Certainly! Here's a sample email you can use to request your leave:",
+   "words": 156
+  },
+  {
+   "ask": "usual",
+   "seed": 4,
+   "secs": 46.5,
+   "reply": "Certainly! Here's a sample email you can use to request your leave:\n\n---\n\nSubject: Request for Leave - Thursday, [Date] and Friday, [Date]\n\nDear [Manager's Name],\n\nI hope this message finds you well. I am writing to formally request my leave on Thursday, [Date], and Friday, [Date]. The reason for my absence is personal and requires my full attention during these days.\n\nTo ensure a smooth transition of responsibilities, I have prepared the following tasks to be completed before my departure:\n\n1. Hand over all ongoing projects to [Colleague's Name(s)].\n2. Ensure that all pending emails are responded to by [Date].\n3. Update our project management tool with any new information or changes.\n\nI will also ensure that all necessary documents and files are in a secure location for quick access upon my return. If there is anything specific you require from me before I leave, please do not hesitate to let me know.\n\nThank you very much for your understanding and support. I look forward to returning on [Return Date] with renewed energy and focus.\n\nBest regards,\n\n[Your Name]\n[Your Position]\n\n---\n\nFeel free to adjust the details as necessary to fit your specific situation!",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": false,
+    "urgent": false,
+    "placeholder": true,
+    "appreciate": false
+   },
+   "specific": {
+    "sister": false,
+    "engagement": false,
+    "vijayawada": false,
+    "sravya": false,
+    "monday": false,
+    "invoice": false
+   },
+   "subject": "Subject: Request for Leave - Thursday, [Date] and Friday, [Date]",
+   "first_line": "Certainly! Here's a sample email you can use to request your leave:",
+   "words": 196
+  },
+  {
+   "ask": "usual",
+   "seed": 5,
+   "secs": 34.0,
+   "reply": "Certainly! Here is a sample email you can use to inform your manager about taking two days off for personal reasons:\n\n---\n\n**Subject:** Request for Personal Leave - Thursday and Friday\n\nDear [Manager's Name],\n\nI hope this message finds you well. I am writing to request some time off next week due to personal matters.\n\nI would like to take **Thursday, October 13th, and Friday, October 14th**, as personal leave. During my absence, I will ensure that all ongoing tasks are covered or delegated appropriately in advance. If there is anything urgent during these days that requires my attention, please do not hesitate to contact me.\n\nI appreciate your understanding and support. Thank you for considering this request.\n\nBest regards,\n\n[Your Full Name]  \n[Your Position]  \n[Your Contact Information]\n\n---\n\nFeel free to adjust the details as needed to fit your specific situation!",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": true,
+    "urgent": true,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": false,
+    "engagement": false,
+    "vijayawada": false,
+    "sravya": false,
+    "monday": false,
+    "invoice": false
+   },
+   "subject": "",
+   "first_line": "Certainly! Here is a sample email you can use to inform your manager about taking two days off for personal reasons:",
+   "words": 142
+  },
+  {
+   "ask": "usual",
+   "seed": 6,
+   "secs": 40.8,
+   "reply": "Subject: Request for Personal Leave - Thursday, October 12th and Friday, October 13th\n\nDear [Manager's Name],\n\nI hope this email finds you well. I am writing to request a personal leave on Thursday, October 12th, and Friday, October 13th. The reason for my leave is [briefly explain your reason, e.g., \"to attend to a family matter\"].\n\nDuring my absence, I will ensure that all ongoing projects are handed over to the appropriate team members so that there is no disruption in workflow. If any urgent matters arise during these days, please feel free to contact [colleague's name] who can assist with immediate concerns.\n\nI will be available via email and phone if needed, but I do not expect this to be necessary. Please let me know if you need any further information or have any questions regarding my leave.\n\nThank you for considering my request. I look forward to returning to work on Monday, October 16th.\n\nBest regards,\n\n[Your Name]\n[Your Job Title]",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": false,
+    "urgent": true,
+    "placeholder": true,
+    "appreciate": false
+   },
+   "specific": {
+    "sister": false,
+    "engagement": false,
+    "vijayawada": false,
+    "sravya": false,
+    "monday": true,
+    "invoice": false
+   },
+   "subject": "Subject: Request for Personal Leave - Thursday, October 12th and Friday, October 13th",
+   "first_line": "I hope this email finds you well. I am writing to request a personal leave on Thursday, October 12th, and Friday, October 13th. The reason for my leave is [brie",
+   "words": 163
+  },
+  {
+   "ask": "usual",
+   "seed": 7,
+   "secs": 34.6,
+   "reply": "Certainly! Below is a sample email you can use to inform your manager about taking two days off, Thursday and Friday, for personal reasons:\n\n---\n\nSubject: Request for Leave - Thursday, [Date] & Friday, [Date]\n\nHi [Manager's Name],\n\nI hope this message finds you well. I am writing to request a leave of absence from Thursday, [Date], through Friday, [Date].\n\nThe reason for my absence is [briefly explain your personal reason, e.g., family emergency, doctor’s appointment, etc.]. I will make sure that all my pending tasks are completed before my leave and that any urgent matters can be handled by our team.\n\nI appreciate your understanding and support during this time. If you need any further details or assistance in covering my responsibilities while I’m away, please do not hesitate to reach out.\n\nThank you for considering my request.\n\nBest regards,\n\n[Your Name]\n[Your Position]\n\n---\n\nFeel free to adjust the content according to your specific situation and company policies.",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": true,
+    "urgent": true,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": false,
+    "engagement": false,
+    "vijayawada": false,
+    "sravya": false,
+    "monday": false,
+    "invoice": false
+   },
+   "subject": "Subject: Request for Leave - Thursday, [Date] & Friday, [Date]",
+   "first_line": "Certainly! Below is a sample email you can use to inform your manager about taking two days off, Thursday and Friday, for personal reasons:",
+   "words": 160
+  },
+  {
+   "ask": "usual",
+   "seed": 8,
+   "secs": 32.2,
+   "reply": "Certainly! Here's a sample leave email you can use:\n\n---\n\nSubject: Request for Leave - Thursday, [Date] and Friday, [Date]\n\nDear [Manager’s Name],\n\nI hope this message finds you well. I am writing to request some time off due to personal reasons.\n\nI would like to take 2 days of leave from Thursday, [Date], through Friday, [Date]. During my absence, I will ensure that all ongoing projects are covered and handed over to the team as smoothly as possible to minimize any impact on our current workflow.\n\nIf there is anything specific you need me to attend to before I go or if you have any questions regarding my responsibilities during my leave, please do not hesitate to reach out. I am happy to discuss arrangements to ensure a smooth transition.\n\nThank you for your understanding and support.\n\nBest regards,\n\n[Your Name]\n\n---\n\nFeel free to adjust the details as necessary to fit your specific situation.",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": true,
+    "urgent": false,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": false,
+    "engagement": false,
+    "vijayawada": false,
+    "sravya": false,
+    "monday": false,
+    "invoice": false
+   },
+   "subject": "Subject: Request for Leave - Thursday, [Date] and Friday, [Date]",
+   "first_line": "Certainly! Here's a sample leave email you can use:",
+   "words": 156
+  },
+  {
+   "ask": "usual",
+   "seed": 9,
+   "secs": 31.2,
+   "reply": "Certainly! Here’s a professional and concise leave email for your manager requesting 2 days off, Thursday and Friday, for personal reasons:\n\n---\n\nSubject: Request for Leave - Thursday & Friday\n\nDear [Manager's Name],\n\nI hope this message finds you well. I am writing to request my scheduled leave on Thursday and Friday next week for some personal matters.\n\nI will ensure that all my tasks are completed before my absence and will coordinate with the team in advance to minimize any impact on ongoing projects. If needed, please let me know of any meetings or deadlines that may require my presence during these days.\n\nThank you for your understanding and support.\n\nBest regards,\n\n[Your Name]\n[Your Job Title]\n\n---\n\nFeel free to adjust the details as necessary to fit your specific situation!",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": true,
+    "urgent": false,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": false,
+    "engagement": false,
+    "vijayawada": false,
+    "sravya": false,
+    "monday": false,
+    "invoice": false
+   },
+   "subject": "Subject: Request for Leave - Thursday & Friday",
+   "first_line": "Certainly! Here’s a professional and concise leave email for your manager requesting 2 days off, Thursday and Friday, for personal reasons:",
+   "words": 132
+  },
+  {
+   "ask": "usual",
+   "seed": 10,
+   "secs": 34.7,
+   "reply": "Certainly! Here's a sample leave email for your reference:\n\n---\n\nSubject: Request for Leave - Thursday, October 12th and Friday, October 13th\n\nDear [Manager's Name],\n\nI hope this message finds you well. I am writing to request my scheduled leave on Thursday, October 12th, and Friday, October 13th, for personal reasons.\n\nDuring my absence, I will ensure that all ongoing projects are covered and delegated as necessary. If there is any urgent matter that requires my attention, please do not hesitate to contact me at [your preferred method of communication, e.g., cell phone number or an alternate email address].\n\nThank you very much for your understanding and support.\n\nBest regards,\n\n[Your Full Name]  \n[Your Job Title]  \n[Contact Information]\n\n---\n\nFeel free to customize the message according to your specific situation.",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": true,
+    "urgent": true,
+    "placeholder": true,
+    "appreciate": false
+   },
+   "specific": {
+    "sister": false,
+    "engagement": false,
+    "vijayawada": false,
+    "sravya": false,
+    "monday": false,
+    "invoice": false
+   },
+   "subject": "Subject: Request for Leave - Thursday, October 12th and Friday, October 13th",
+   "first_line": "Certainly! Here's a sample leave email for your reference:",
+   "words": 130
+  },
+  {
+   "ask": "details",
+   "seed": 1,
+   "secs": 27.7,
+   "reply": "Subject: Leave Application for Thursday and Friday\n\nDear Kiran,\n\nI hope this email finds you well. I am writing to inform you that I will be on leave from Thursday, April 6th, and Friday, April 7th.\n\nMy sister’s engagement ceremony is taking place in Vijayawada on Friday, and as a family member, I need to attend it. Therefore, I will depart on Wednesday night and return on Monday morning. The invoice report for the week has already been completed, so there should be no issue with my absence during these days.\n\nAdditionally, Sravya will cover my support tickets while I am away, ensuring that all necessary tasks are handled smoothly.\n\nThank you for your understanding, and please let me know if you need any further information.\n\nBest regards,\n\n[Your Name]\n[Your Position]",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": false,
+    "urgent": false,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": true,
+    "engagement": true,
+    "vijayawada": true,
+    "sravya": true,
+    "monday": true,
+    "invoice": true
+   },
+   "subject": "Subject: Leave Application for Thursday and Friday",
+   "first_line": "I hope this email finds you well. I am writing to inform you that I will be on leave from Thursday, April 6th, and Friday, April 7th.",
+   "words": 132
+  },
+  {
+   "ask": "details",
+   "seed": 2,
+   "secs": 29.5,
+   "reply": "Subject: Request for Leave - Thursday and Friday, October [Date]\n\nDear Kiran,\n\nI hope this email finds you well. I am writing to request a leave of absence on Thursday and Friday, October [date] due to an important family event in Vijayawada.\n\nMy sister’s engagement ceremony is scheduled for Friday, and as a close family member, I will be traveling there Wednesday night to ensure my presence during the celebration. I have completed the Monday invoice report and ensured that Sravya will cover my support tickets while I am away.\n\nI appreciate your understanding and would like to assure you that all necessary transitions are in place to minimize any impact on our team's operations during my absence.\n\nThank you for considering my request. Please let me know if there is anything else I can do to prepare for this period or if you need further information.\n\nBest regards,\n\n[Your Name]\n[Your Position]",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": false,
+    "urgent": false,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": true,
+    "engagement": true,
+    "vijayawada": true,
+    "sravya": true,
+    "monday": true,
+    "invoice": true
+   },
+   "subject": "Subject: Request for Leave - Thursday and Friday, October [Date]",
+   "first_line": "I hope this email finds you well. I am writing to request a leave of absence on Thursday and Friday, October [date] due to an important family event in Vijayawa",
+   "words": 153
+  },
+  {
+   "ask": "details",
+   "seed": 3,
+   "secs": 26.9,
+   "reply": "Subject: Leave Request for Thursday and Friday, October [Date]\n\nDear Kiran,\n\nI hope this email finds you well. I am writing to inform you of my planned leave for the upcoming week due to a family commitment.\n\nMy sister’s engagement ceremony is scheduled for Friday in Vijayawada. To ensure a smooth transition during my absence, I have completed the invoice report and will be returning on Monday morning. Sravya has kindly agreed to cover any support tickets that may come in while I am away.\n\nI will leave Wednesday night and return to work on Monday morning. Please let me know if there are any urgent matters that need immediate attention during my absence, so we can make the necessary arrangements beforehand.\n\nThank you for your understanding and support.\n\nBest regards,\n\n[Your Full Name]  \n[Your Position]  \n[Your Contact Information]",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": false,
+    "urgent": true,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": true,
+    "engagement": true,
+    "vijayawada": true,
+    "sravya": true,
+    "monday": true,
+    "invoice": true
+   },
+   "subject": "Subject: Leave Request for Thursday and Friday, October [Date]",
+   "first_line": "I hope this email finds you well. I am writing to inform you of my planned leave for the upcoming week due to a family commitment.",
+   "words": 139
+  },
+  {
+   "ask": "details",
+   "seed": 4,
+   "secs": 26.0,
+   "reply": "Subject: Request for Leave - Thursday & Friday, March [Date]\n\nDear Kiran,\n\nI hope this email finds you well. I am writing to inform you that I will be on leave from Thursday, March [Date], and Friday, March [Date]. My sister's engagement is taking place in Vijayawada on Friday, and I need to attend it.\n\nI have completed the invoice report for this week, which Sravya will handle. Additionally, she has kindly offered to cover my support tickets during my absence.\n\nIf there are any urgent matters that require my attention or if you need me to complete anything before I leave, please let me know. Otherwise, everything is in good hands with Sravya's support.\n\nThank you for your understanding and support.\n\nBest regards,\n\n[Your Name]\n[Your Position]",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": false,
+    "urgent": true,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": true,
+    "engagement": true,
+    "vijayawada": true,
+    "sravya": true,
+    "monday": false,
+    "invoice": true
+   },
+   "subject": "Subject: Request for Leave - Thursday & Friday, March [Date]",
+   "first_line": "I hope this email finds you well. I am writing to inform you that I will be on leave from Thursday, March [Date], and Friday, March [Date]. My sister's engageme",
+   "words": 128
+  },
+  {
+   "ask": "details",
+   "seed": 5,
+   "secs": 37.4,
+   "reply": "Subject: Leave Application for Thursday and Friday\n\nDear Kiran,\n\nI hope this email finds you well. I am writing to inform you that I will be on leave from Thursday, March [insert date], to Friday, March [insert date]. My sister's engagement ceremony is taking place in Vijayawada on Friday, which I cannot miss.\n\nTo ensure a smooth transition during my absence:\n\n1. **Thursday:** I will wrap up any pending tasks and ensure all necessary handovers are completed.\n2. **Wednesday Night:** I will leave the office to arrive early enough for the engagement ceremony in Vijayawada.\n3. **Monday, March [insert date]:** I will be back at work. My invoice report is complete and ready for you to review.\n\nAdditionally, Sravya has kindly offered to cover my support tickets while I am away. Please let me know if there are any specific tasks or information that need to be addressed before I leave.\n\nThank you for your understanding and support. I look forward to returning on Monday with a refreshed mindset.\n\nBest regards,\n\n[Your Name]  \n[Your Position]\n\n---\n\nFeel free to adjust the dates and any other details as necessary.",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": false,
+    "urgent": false,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": true,
+    "engagement": true,
+    "vijayawada": true,
+    "sravya": true,
+    "monday": true,
+    "invoice": true
+   },
+   "subject": "Subject: Leave Application for Thursday and Friday",
+   "first_line": "I hope this email finds you well. I am writing to inform you that I will be on leave from Thursday, March [insert date], to Friday, March [insert date]. My sist",
+   "words": 188
+  },
+  {
+   "ask": "details",
+   "seed": 6,
+   "secs": 20.1,
+   "reply": "Subject: Leave Request - Thursday and Friday, November [Date]\n\nDear Kiran,\n\nI hope this email finds you well. I am writing to request a leave from work on Thursday and Friday, November [Date] due to my sister's engagement in Vijayawada.\n\nI will be leaving the office Wednesday night and returning on Monday. The invoice report for this week is completed, and Sravya has kindly offered to cover my support tickets during my absence. I have ensured that all ongoing tasks are well documented and will be handed over as needed.\n\nThank you for your understanding and support.\n\nBest regards,\n\n[Your Name]\n[Your Position]",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": false,
+    "urgent": false,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": true,
+    "engagement": true,
+    "vijayawada": true,
+    "sravya": true,
+    "monday": true,
+    "invoice": true
+   },
+   "subject": "Subject: Leave Request - Thursday and Friday, November [Date]",
+   "first_line": "I hope this email finds you well. I am writing to request a leave from work on Thursday and Friday, November [Date] due to my sister's engagement in Vijayawada.",
+   "words": 103
+  },
+  {
+   "ask": "details",
+   "seed": 7,
+   "secs": 26.4,
+   "reply": "Subject: Request for Leave - Thursday and Friday, October [Date]\n\nDear Kiran,\n\nI hope this email finds you well. I am writing to request a short leave from work for the upcoming Thursday and Friday.\n\nDue to my sister’s engagement in Vijayawada on Friday, I will be leaving work Wednesday night and returning on Monday morning. To ensure a smooth transition during my absence, Sravya has offered to cover my support tickets, and I have completed the invoice report for this week, which she can review upon my return.\n\nI would appreciate it if you could approve my leave request as soon as possible. If there are any urgent matters or tasks that need to be addressed in my absence, please let me know so I can delegate them accordingly.\n\nThank you for your understanding and support.\n\nBest regards,\n\n[Your Full Name]\n[Your Position]",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": false,
+    "urgent": true,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": true,
+    "engagement": true,
+    "vijayawada": true,
+    "sravya": true,
+    "monday": true,
+    "invoice": true
+   },
+   "subject": "Subject: Request for Leave - Thursday and Friday, October [Date]",
+   "first_line": "I hope this email finds you well. I am writing to request a short leave from work for the upcoming Thursday and Friday.",
+   "words": 144
+  },
+  {
+   "ask": "details",
+   "seed": 8,
+   "secs": 33.7,
+   "reply": "Subject: Leave Request for Thursday and Friday, July [Date]\n\nDear Kiran,\n\nI hope this email finds you well. I am writing to inform you of my plans to take leave on Thursday and Friday, July [Date] due to a family commitment.\n\nMy sister's engagement ceremony is taking place in Vijayawada on Friday, which is an important event for our family. As such, I will be leaving the office Wednesday night and returning on Monday morning, July [Date+3].\n\nTo ensure there are no disruptions during my absence:\n1. The invoice report for this week has been completed and is ready.\n2. Sravya will cover my support tickets while I am away.\n\nI will make sure to wrap up any ongoing tasks before I leave and will be available via email if anything urgent arises.\n\nThank you for your understanding and support.\n\nBest regards,\n\nQwen\n[Your Name]",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": false,
+    "urgent": true,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": true,
+    "engagement": true,
+    "vijayawada": true,
+    "sravya": true,
+    "monday": true,
+    "invoice": true
+   },
+   "subject": "Subject: Leave Request for Thursday and Friday, July [Date]",
+   "first_line": "I hope this email finds you well. I am writing to inform you of my plans to take leave on Thursday and Friday, July [Date] due to a family commitment.",
+   "words": 145
+  },
+  {
+   "ask": "details",
+   "seed": 9,
+   "secs": 29.2,
+   "reply": "Subject: Leave Request for Thursday and Friday, March [Date]\n\nDear Kiran,\n\nI hope this email finds you well. I am writing to inform you about my leave schedule due to a family commitment.\n\nMy sister’s engagement is taking place in Vijayawada on Friday, and as a result, I will be leaving the office on Wednesday night (March [Date]) and returning on Monday (March [Date+3]). During this time off, I have completed the invoice report for the week, which Sravya will handle. Additionally, she has kindly agreed to cover my support tickets.\n\nI would appreciate it if you could approve my leave request as soon as possible. If there is any urgent matter that requires my attention during these days, please let me know so that I can make necessary arrangements before leaving the office.\n\nThank you for your understanding and support.\n\nBest regards,\n\n[Your Name]\n[Your Position]",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": false,
+    "urgent": true,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": true,
+    "engagement": true,
+    "vijayawada": true,
+    "sravya": true,
+    "monday": true,
+    "invoice": true
+   },
+   "subject": "Subject: Leave Request for Thursday and Friday, March [Date]",
+   "first_line": "I hope this email finds you well. I am writing to inform you about my leave schedule due to a family commitment.",
+   "words": 147
+  },
+  {
+   "ask": "details",
+   "seed": 10,
+   "secs": 28.3,
+   "reply": "Subject: Leave Request for Thursday and Friday, November [Insert Date]\n\nDear Kiran,\n\nI hope this email finds you well. I am writing to inform you of my upcoming leave due to a family obligation.\n\nMy sister's engagement is scheduled to take place in Vijayawada on Friday, and as such, I need to be present for the celebration. Consequently, I will be leaving Wednesday night (November [Insert Date]) and returning on Monday morning (November [Insert Date]). The Monday invoice report has been completed, and Sravya will cover my support tickets during my absence.\n\nI have ensured that all ongoing tasks are either completed or handed over to colleagues who can manage them in my absence. If there is anything specific you need me to address before I leave, please let me know.\n\nThank you for your understanding and support.\n\nBest regards,\n\n[Your Full Name]\n[Your Position]",
+   "stock": {
+    "hope_well": true,
+    "unforeseen": false,
+    "personal_reasons": false,
+    "urgent": false,
+    "placeholder": true,
+    "appreciate": true
+   },
+   "specific": {
+    "sister": true,
+    "engagement": true,
+    "vijayawada": true,
+    "sravya": true,
+    "monday": true,
+    "invoice": true
+   },
+   "subject": "Subject: Leave Request for Thursday and Friday, November [Insert Date]",
+   "first_line": "I hope this email finds you well. I am writing to inform you of my upcoming leave due to a family obligation.",
+   "words": 145
+  }
+ ]
+}

@@ -55,7 +55,20 @@ def call(key, q, seed):
         return json.loads(r.read())["choices"][0]["message"]["content"]
 
 
-HAND = {}   # filled after the run, by reading every reply in full
+HAND = {   # by hand, after reading all 20 replies in full (Nov 22)
+    # usual: every reply opens "I hope this message/email finds you well" (7 message, 3 email) and is addressed to
+    # "[Manager's Name]" (9 "Dear", 1 "Hi"); none has a real reason ("personal reasons/matters" in 8, a bracket to fill in
+    # 2, seeds 6 and 7); dates nobody gave in 4 (seeds 3, 6, 10: "October 12th and 13th"; seed 5: "October 13th and 14th");
+    # "[Your Name]" in 10. 7 add "if there is any urgent matter".
+    "usual": {"opens_hope_well": 10, "manager_placeholder": 10, "no_real_reason": 10, "made_up_dates": 4, "same_oct_12_13": 3},
+    # details: all 10 keep the sister's engagement, Vijayawada and Sravya; 9 keep "back on Monday" (seed 4 drops it);
+    # still 10 of 10 open "I hope this email finds you well"; 3 give Sravya the wrong job (seeds 4 and 9: the invoice
+    # report "which Sravya will handle"; seed 7: "which she can review"); a month nobody gave in all 10 (seed 1 "April 6th";
+    # October, March, July, November elsewhere, with [Date] left in 9); seed 8 signs off "Qwen", the AI's own name,
+    # above "[Your Name]"; "[Your Name]" in 10.
+    "details": {"kept_engagement_vijayawada_sravya": 10, "kept_monday": 9, "opens_hope_well": 10, "wrong_job_for_sravya": 3,
+                "made_up_month": 10, "signed_qwen": 1},
+}
 
 
 def main():
