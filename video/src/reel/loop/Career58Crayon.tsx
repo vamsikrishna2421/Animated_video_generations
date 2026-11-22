@@ -33,8 +33,8 @@ const bigBlock = (c: Ctx, x: number, y: number, w: number, h: number, lab: strin
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3); c.translate(0, (1 - easeOut(clamp(k * 1.4))) * 40);
   c.fillStyle = bgc; rrect(c, x, y, w, h, 28); c.fill();
-  c.textAlign = "center"; c.font = SANS(fit(c, lab, w - 40, 34, 900), 900); c.fillStyle = "rgba(255,255,255,0.9)";
-  wrap(c, lab, w - 40).slice(0, 2).forEach((t, q) => c.fillText(t, x + w / 2, y + 58 + q * 40));
+  c.textAlign = "center"; c.font = SANS(fit(c, lab, w - 40, 40, 900), 900); c.fillStyle = "rgba(255,255,255,0.95)";
+  wrap(c, lab, w - 40).slice(0, 2).forEach((t, q) => c.fillText(t, x + w / 2, y + 60 + q * 46));
   c.font = SANS(fit(c, val, w - 40, 150, 900), 900); c.fillStyle = fg; c.fillText(val, x + w / 2, y + h - 50);
   c.restore();
 };
@@ -55,6 +55,12 @@ const sms = (c: Ctx, x: number, y: number, w: number, tag: string, txt: string, 
   c.font = SANS(32, 700); c.fillStyle = INK; wrap(c, txt, w - 52).slice(0, 2).forEach((t, q) => c.fillText(t, x + 26, y + 92 + q * 40));
   c.textAlign = "right"; c.font = SANS(40, 900); c.fillStyle = ok ? GREEN : RED; c.fillText(verdict, x + w - 26, y + 50);
   c.restore();
+};
+
+const task = (c: Ctx, W: number, t: string, k: number) => {
+  if (k <= 0) return;
+  c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = GREEN; rrect(c, 50, 1210, W - 100, 100, 24); c.fill();
+  c.textAlign = "center"; c.font = SANS(fit(c, t, W - 150, 40, 900), 900); c.fillStyle = "#fff"; c.fillText(t, W / 2, 1274); c.restore();
 };
 
 const StCareer: React.FC<SP> = ({ s }) => {
@@ -88,16 +94,21 @@ const StCareer: React.FC<SP> = ({ s }) => {
         const P = loopOn ? "hook" : b.prop;
         bg(c, W, H); c.textAlign = "left";
         if (P === "hook" || P === "loop") {
+          const push = P === "loop" ? 1 : 1 + 0.05 * seg(f, ln.from, ln.from + ln.frames);
+          c.save(); c.translate(W / 2, 560); c.scale(push, push); c.translate(-W / 2, -560);
           c.textAlign = "center"; c.font = SANS(44, 900); c.fillStyle = NAVY; c.fillText(T.hookHead, W / 2, 300);
           bigBlock(c, 40, 340, 490, 400, T.blockA, T.valA, "#475569", "#e2e8f0", 1);
           bigBlock(c, 550, 340, 490, 400, T.blockB, T.valB, GREEN, "#dcfce7", 1);
-          chip(c, T.src1, W / 2, 790, "#1e293b", "#f8fafc", 1, 30);
+          const kr = P === "hook" ? seg(f, cu(1, 0.4) - 2, cu(1, 0.4) + 16) : 0;
+          if (kr > 0 && kr < 1) { c.strokeStyle = "#facc15"; c.lineWidth = 12 * (1 - kr); rrect(c, 550 - 18 * kr, 340 - 18 * kr, 490 + 36 * kr, 400 + 36 * kr, 34); c.stroke(); }
+          c.restore();
+          chip(c, T.src1, W / 2, 800, "#1e293b", "#f8fafc", 1, 34);
           person(c, "akhil" as BillWho, [540, 1030], 0.55, P === "loop" ? "excited" : "worried", "phone", false, r);
           // his résumé
           c.save(); c.translate(760, 1060); c.rotate(0.08); c.fillStyle = "#fff"; rrect(c, 0, 0, 200, 250, 10); c.fill(); c.strokeStyle = "#94a3b8"; c.lineWidth = 3; rrect(c, 0, 0, 200, 250, 10); c.stroke();
           c.font = SANS(26, 900); c.fillStyle = NAVY; c.textAlign = "left"; c.fillText(T.resume, 18, 40); c.fillStyle = "#cbd5e1"; for (let q = 0; q < 6; q++) c.fillRect(18, 64 + q * 28, 160 - (q % 3) * 30, 12); c.restore();
           if (P === "hook") chip(c, T.jobsChip, W / 2, 1380, NAVY, "#fde68a", seg(f, cu(2, 0.7) - 4, cu(2, 0.7) + 6), 38);
-          if (P === "loop") chip(c, T.loopChip, W / 2, 1380, NAVY, "#fde68a", seg(f, cu(1, 0.6) - 4, cu(1, 0.6) + 6), 42);
+          if (P === "loop" && f >= cu(1, 0.6) - 4) { c.save(); c.fillStyle = NAVY; rrect(c, 60, 860, W - 120, 100, 24); c.fill(); c.textAlign = "center"; c.font = SANS(fit(c, T.loopChip, W - 160, 50, 900), 900); c.fillStyle = "#fde68a"; c.fillText(T.loopChip, W / 2, 928); c.restore(); }
         } else if (P === "rank") {
           head(c, W, T.rankHead, T.rankSub, "#0a66c2");
           (T.rank as string[]).forEach((t, q) => {
@@ -116,7 +127,8 @@ const StCareer: React.FC<SP> = ({ s }) => {
           c.font = MONO(30, 600); c.fillStyle = "#e2e8f0"; (T.p1Prompt as string[]).forEach((t, q) => c.fillText(t, 90, 510 + q * 44));
           bar(c, 60, 790, W - 120, T.p1BarA, 4, 10, RED, seg(f, cu(1, 0.45) - 4, cu(1, 0.45) + 8));
           bar(c, 60, 950, W - 120, T.p1BarB, 9, 10, GREEN, seg(f, cu(2, 0.75) - 4, cu(2, 0.75) + 8));
-          chip(c, T.p1Src, W / 2, 1130, "#1e293b", "#f8fafc", 1, 30);
+          chip(c, T.p1Src, W / 2, 1130, "#1e293b", "#f8fafc", 1, 32);
+          task(c, W, T.p1Task, seg(f, cu(2, 0.75) + 10, cu(2, 0.75) + 18));
         } else if (P === "aieng") {
           head(c, W, T.p2Head, T.p2Sub, "#0e7490");
           // the chat asks, the code looks it up
@@ -129,7 +141,8 @@ const StCareer: React.FC<SP> = ({ s }) => {
           c.restore();
           bar(c, 60, 760, W - 120, T.p2BarA, 3, 10, RED, seg(f, cu(1, 0.45) - 4, cu(1, 0.45) + 8));
           bar(c, 60, 920, W - 120, T.p2BarB, 10, 10, GREEN, seg(f, cu(2, 0.75) - 4, cu(2, 0.75) + 8));
-          chip(c, T.p2Src, W / 2, 1100, "#1e293b", "#f8fafc", 1, 30);
+          chip(c, T.p2Src, W / 2, 1100, "#1e293b", "#f8fafc", 1, 32);
+          task(c, W, T.p2Task, seg(f, cu(2, 0.75) + 10, cu(2, 0.75) + 18));
         } else if (P === "ml") {
           head(c, W, T.p3Head, T.p3Sub, "#b45309");
           c.fillStyle = NAVY; rrect(c, 60, 410, W - 120, 470, 22); c.fill();
@@ -140,7 +153,8 @@ const StCareer: React.FC<SP> = ({ s }) => {
             c.fillStyle = q === 0 ? "#86efac" : q === 3 ? "#fde68a" : "#e2e8f0"; c.fillText(t, 90, 475 + q * 64);
           });
           const kb = seg(f, cu(2, 0.75) - 2, cu(2, 0.75) + 8);
-          if (kb > 0) { c.save(); c.globalAlpha = clamp(kb * 3); c.textAlign = "center"; c.font = SANS(170, 900); c.fillStyle = GREEN; c.fillText(T.mlBig, W / 2, 1090); c.font = SANS(fit(c, T.mlBigSub, W - 120, 36, 800), 800); c.fillStyle = INK; c.fillText(T.mlBigSub, W / 2, 1150); c.restore(); }
+          if (kb > 0) { c.save(); c.globalAlpha = clamp(kb * 3); c.textAlign = "center"; c.font = SANS(150, 900); c.fillStyle = GREEN; c.fillText(T.mlBig, W / 2, 1040); c.font = SANS(fit(c, T.mlBigSub, W - 120, 38, 800), 800); c.fillStyle = INK; c.fillText(T.mlBigSub, W / 2, 1100); c.restore(); }
+          task(c, W, T.p3Task, seg(f, endL - 24, endL - 14));
         } else if (P === "twist") {
           head(c, W, T.twHead, T.twSub, "#b45309");
           (T.sms as [string, string, string, boolean][]).forEach(([tag, txt, verdict, ok], q) => {
@@ -151,14 +165,13 @@ const StCareer: React.FC<SP> = ({ s }) => {
           if (kd > 0) { c.save(); c.globalAlpha = clamp(kd * 3); c.fillStyle = NAVY; rrect(c, 60, 1060, W - 120, 150, 26); c.fill(); c.textAlign = "center"; c.font = SANS(fit(c, T.twBig, W - 160, 64, 900), 900); c.fillStyle = "#fde68a"; c.fillText(T.twBig, W / 2, 1135); c.font = SANS(fit(c, T.twNote, W - 160, 30, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(T.twNote, W / 2, 1185); c.restore(); }
         } else if (P === "road") {
           c.textAlign = "center"; c.font = SANS(60, 900); c.fillStyle = NAVY; c.fillText(T.roadHead, W / 2, 320);
-          (T.road as [string, string, string][]).forEach(([job, task, proof], q) => {
+          (T.road as [string, string][]).forEach(([job, tk], q) => {
             const st = q === 0 ? ln.from + 4 : cu(q, 0.3 + 0.25 * q) - 4;
             const k = seg(f, st, st + 8); if (k <= 0) return;
-            const y = 370 + q * 250, col = ["#7c3aed", "#0e7490", "#b45309"][q];
-            c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = "#fff"; rrect(c, 50, y, W - 100, 225, 24); c.fill(); c.fillStyle = col; rrect(c, 50, y, 26, 225, 12); c.fill();
-            c.textAlign = "left"; c.font = SANS(fit(c, job, W - 200, 46, 900), 900); c.fillStyle = col; c.fillText(job, 100, y + 60);
-            c.font = SANS(fit(c, task, W - 200, 42, 900), 900); c.fillStyle = INK; c.fillText(task, 100, y + 125);
-            c.font = SANS(fit(c, "proof: " + proof, W - 200, 34, 800), 800); c.fillStyle = "#475569"; c.fillText("proof: " + proof, 100, y + 185);
+            const y = 380 + q * 240, col = ["#7c3aed", "#0e7490", "#b45309"][q];
+            c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = "#fff"; rrect(c, 50, y, W - 100, 210, 24); c.fill(); c.fillStyle = col; rrect(c, 50, y, 26, 210, 12); c.fill();
+            c.textAlign = "left"; c.font = SANS(fit(c, job, W - 200, 48, 900), 900); c.fillStyle = col; c.fillText(job, 100, y + 74);
+            c.font = SANS(fit(c, tk, W - 200, 50, 900), 900); c.fillStyle = INK; c.fillText(tk, 100, y + 150);
             c.restore();
           });
           const kf = seg(f, cu(3, 0.85) - 4, cu(3, 0.85) + 6);

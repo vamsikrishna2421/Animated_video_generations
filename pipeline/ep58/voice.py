@@ -29,11 +29,11 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("fresher",), ("one", "1"), ("nineteen", "19"), ("three", "3"), ("code",)],
-               2: [("prompt",), ("engineer",), ("code",), ("ten", "10"), ("four", "4"), ("nine", "9")],
+MUST = {"en": {1: [("freshers", "fresher"), ("one", "1"), ("nineteen", "19"), ("three", "3"), ("code",)],
+               2: [("prompt",), ("engineer",), ("code",), ("chatbot", "chat"), ("ten", "10"), ("nine", "9")],
                3: [("engineer",), ("data",), ("live",), ("three", "3"), ("luck",), ("tool",)],
-               4: [("ml", "m.l", "ml engineer"), ("model",), ("scam",), ("two", "2"), ("nine", "9")],
-               5: [("scam",), ("lottery",), ("kyc", "k.y.c", "kayc"), ("parcel",), ("uk", "u.k"), ("data",)],
+               4: [("machine",), ("learning",), ("model",), ("scam",), ("two", "2"), ("nine", "9")],
+               5: [("scam",), ("lottery",)], "5b": [("kyc", "k.y.c", "kayc"), ("parcel",), ("uk", "u.k"), ("data",)],
                6: [("week",), ("prompt",), ("fifty", "54"), ("twenty", "20"), ("scam",), ("résumé", "resume")],
                7: [("one", "1"), ("nineteen", "19"), ("hiring",), ("easier",)]},
         "te": {}}

@@ -13,61 +13,56 @@
  "fps": 30,
  "musicDrops": [
   [
-   98,
-   134
+   100,
+   136
   ],
   [
-   1655,
-   1691
+   1703,
+   1736
   ]
  ],
  "musicBoosts": [
   [
    0,
-   368,
+   389,
    2.4
   ],
   [
-   368,
-   777,
-   1.2
+   389,
+   1187,
+   1.8
   ],
   [
-   777,
-   1166,
-   1.3
+   1186,
+   1943,
+   1.8
   ],
   [
-   1166,
-   1923,
-   1.6
-  ],
-  [
-   1923,
-   2393,
+   1943,
+   2516,
    2.2
   ],
   [
-   2393,
-   2607,
+   2516,
+   2729,
    2.8
   ],
   [
-   1923,
-   2393,
+   1943,
+   2516,
    1.6,
    1
   ],
   [
-   2393,
-   2607,
+   2516,
+   2729,
    3.0,
    1
   ]
  ],
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 2607,
+ "totalFrames": 2729,
  "music": "reel/ep58te/score.wav",
  "scenes": [
   {
@@ -87,7 +82,7 @@
      "valA": "+1%",
      "blockB": "FRESHER AI/ML HIRING",
      "valB": "+19%",
-     "src1": "Naukri JobSpeak, Sep 2026 · growth vs last year",
+     "src1": "Naukri JobSpeak (job postings) · Sep 2026 vs Sep 2025",
      "resume": "RÉSUMÉ",
      "jobsChip": "3 AI JOBS · 1 NEEDS NO CODE · EACH TRIED HERE",
      "p1Head": "JOB 1 · PROMPT ENGINEER",
@@ -101,15 +96,17 @@
      ],
      "p1BarA": "no instructions · 10 customer questions",
      "p1BarB": "rules + the price list",
-     "p1Src": "our test (episode 51) · a free AI on our computer",
+     "p1Src": "our test (episode 51) · works in any chat app",
+     "p1Task": "THIS WEEK: rules for one shop · test 10 questions · no code",
      "p2Head": "JOB 2 · AI ENGINEER",
      "p2Sub": "connects the AI to real data · puts it live",
-     "p2Ask": "Where's my order 4417?",
+     "p2Ask": "Is the refund for order 4417 done?",
      "p2Tool": "get_order(4417)",
      "p2Rec": "record: refund not started",
      "p2BarA": "guessing · 10 order questions (3 by luck)",
      "p2BarB": "one lookup tool",
      "p2Src": "our test (episode 54)",
+     "p2Task": "THIS WEEK: run episode 54's code (in its post) · Python",
      "p3Head": "JOB 3 · ML ENGINEER",
      "p3Sub": "builds and trains the model itself",
      "term": [
@@ -120,6 +117,7 @@
      ],
      "mlBig": "135/149",
      "mlBigSub": "scams caught in its own test: 9 in 10",
+     "p3Task": "THIS WEEK: add 20 Indian scam texts to our filter (pinned)",
      "twHead": "3 SCAM TEXTS WE WROTE",
      "twSub": "Indian style · made up by us",
      "sms": [
@@ -148,22 +146,19 @@
      "road": [
       [
        "PROMPT ENGINEER · no code",
-       "rules for one shop, test 10 questions",
-       "your score: before → after"
+       "rules for one shop · test 10 questions"
       ],
       [
        "AI ENGINEER · Python",
-       "run episode 54's code (pinned)",
-       "3/10 → 10/10, on your own data"
+       "run episode 54's code (in its post)"
       ],
       [
        "ML ENGINEER · Python + maths",
-       "add 20 Indian scam texts to our filter",
-       "KYC: missed → caught?"
+       "20 Indian scam texts → our filter (pinned)"
       ]
      ],
-     "roadFoot": "ON YOUR RÉSUMÉ: your before → after score",
-     "loopChip": "MORE HIRING ≠ EASIER HIRING"
+     "roadFoot": "ON YOUR RÉSUMÉ: your 10 questions + before → after",
+     "loopChip": "MORE HIRING, NOT EASIER HIRING"
     },
     "yt": {
      "chapter": "+1% or +19%?",
@@ -175,7 +170,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 368,
+   "frames": 389,
    "lines": [
     {
      "who": "storyteller",
@@ -184,132 +179,137 @@
      "sub": null,
      "audio": "reel/ep58te/line_01.wav",
      "from": 14,
-     "frames": 342,
+     "frames": 351,
      "words": [
       {
        "w": "Fresher",
        "from": 15,
-       "to": 31
+       "to": 32
       },
       {
        "w": "hiring",
-       "from": 31,
-       "to": 52
+       "from": 32,
+       "to": 54
       },
       {
        "w": "grew",
-       "from": 52,
-       "to": 62
+       "from": 54,
+       "to": 65
       },
       {
        "w": "just",
-       "from": 62,
-       "to": 72
+       "from": 65,
+       "to": 75
       },
       {
        "w": "one",
-       "from": 72,
+       "from": 75,
        "to": 84
       },
       {
        "w": "percent",
        "from": 84,
-       "to": 99
+       "to": 101
       },
       {
        "w": "over",
-       "from": 99,
-       "to": 109
+       "from": 101,
+       "to": 111
       },
       {
        "w": "last",
-       "from": 109,
-       "to": 126
+       "from": 111,
+       "to": 131
       },
       {
        "w": "year.",
-       "from": 126,
-       "to": 138
+       "from": 131,
+       "to": 144
       },
       {
        "w": "Fresher",
-       "from": 138,
-       "to": 162
+       "from": 144,
+       "to": 161
       },
       {
        "w": "AI",
-       "from": 162,
-       "to": 168
+       "from": 161,
+       "to": 167
       },
       {
-       "w": "jobs:",
-       "from": 168,
-       "to": 180
+       "w": "jobs",
+       "from": 167,
+       "to": 178
+      },
+      {
+       "w": "grew",
+       "from": 178,
+       "to": 188
       },
       {
        "w": "nineteen",
-       "from": 180,
-       "to": 205
+       "from": 188,
+       "to": 215
       },
       {
        "w": "percent.",
-       "from": 205,
-       "to": 223
+       "from": 215,
+       "to": 234
       },
       {
        "w": "Three",
-       "from": 223,
-       "to": 243
-      },
-      {
-       "w": "jobs,",
-       "from": 243,
+       "from": 234,
        "to": 255
       },
       {
-       "w": "one",
+       "w": "jobs,",
        "from": 255,
-       "to": 271
+       "to": 267
+      },
+      {
+       "w": "one",
+       "from": 267,
+       "to": 276
       },
       {
        "w": "needs",
-       "from": 271,
-       "to": 283
+       "from": 276,
+       "to": 296
       },
       {
        "w": "no",
-       "from": 283,
-       "to": 294
+       "from": 296,
+       "to": 302
       },
       {
        "w": "code;",
-       "from": 294,
-       "to": 306
+       "from": 302,
+       "to": 315
       },
       {
        "w": "we",
-       "from": 306,
-       "to": 311
+       "from": 315,
+       "to": 321
       },
       {
        "w": "tried",
-       "from": 311,
-       "to": 330
+       "from": 321,
+       "to": 341
       },
       {
        "w": "all",
-       "from": 330,
-       "to": 338
+       "from": 341,
+       "to": 350
       },
       {
        "w": "three.",
-       "from": 338,
-       "to": 352
+       "from": 350,
+       "to": 365
       }
      ],
      "cues": {
-      "1": 122,
-      "2": 242
+      "1": 124,
+      "2": 256
      }
     }
    ]
@@ -331,7 +331,7 @@
      "valA": "+1%",
      "blockB": "FRESHER AI/ML HIRING",
      "valB": "+19%",
-     "src1": "Naukri JobSpeak, Sep 2026 · growth vs last year",
+     "src1": "Naukri JobSpeak (job postings) · Sep 2026 vs Sep 2025",
      "resume": "RÉSUMÉ",
      "jobsChip": "3 AI JOBS · 1 NEEDS NO CODE · EACH TRIED HERE",
      "p1Head": "JOB 1 · PROMPT ENGINEER",
@@ -345,15 +345,17 @@
      ],
      "p1BarA": "no instructions · 10 customer questions",
      "p1BarB": "rules + the price list",
-     "p1Src": "our test (episode 51) · a free AI on our computer",
+     "p1Src": "our test (episode 51) · works in any chat app",
+     "p1Task": "THIS WEEK: rules for one shop · test 10 questions · no code",
      "p2Head": "JOB 2 · AI ENGINEER",
      "p2Sub": "connects the AI to real data · puts it live",
-     "p2Ask": "Where's my order 4417?",
+     "p2Ask": "Is the refund for order 4417 done?",
      "p2Tool": "get_order(4417)",
      "p2Rec": "record: refund not started",
      "p2BarA": "guessing · 10 order questions (3 by luck)",
      "p2BarB": "one lookup tool",
      "p2Src": "our test (episode 54)",
+     "p2Task": "THIS WEEK: run episode 54's code (in its post) · Python",
      "p3Head": "JOB 3 · ML ENGINEER",
      "p3Sub": "builds and trains the model itself",
      "term": [
@@ -364,6 +366,7 @@
      ],
      "mlBig": "135/149",
      "mlBigSub": "scams caught in its own test: 9 in 10",
+     "p3Task": "THIS WEEK: add 20 Indian scam texts to our filter (pinned)",
      "twHead": "3 SCAM TEXTS WE WROTE",
      "twSub": "Indian style · made up by us",
      "sms": [
@@ -392,22 +395,19 @@
      "road": [
       [
        "PROMPT ENGINEER · no code",
-       "rules for one shop, test 10 questions",
-       "your score: before → after"
+       "rules for one shop · test 10 questions"
       ],
       [
        "AI ENGINEER · Python",
-       "run episode 54's code (pinned)",
-       "3/10 → 10/10, on your own data"
+       "run episode 54's code (in its post)"
       ],
       [
        "ML ENGINEER · Python + maths",
-       "add 20 Indian scam texts to our filter",
-       "KYC: missed → caught?"
+       "20 Indian scam texts → our filter (pinned)"
       ]
      ],
-     "roadFoot": "ON YOUR RÉSUMÉ: your before → after score",
-     "loopChip": "MORE HIRING ≠ EASIER HIRING"
+     "roadFoot": "ON YOUR RÉSUMÉ: your 10 questions + before → after",
+     "loopChip": "MORE HIRING, NOT EASIER HIRING"
     },
     "yt": {
      "chapter": "Job 1: prompt engineer",
@@ -418,7 +418,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 368,
+   "from": 389,
    "frames": 409,
    "lines": [
     {
@@ -615,7 +615,7 @@
      "valA": "+1%",
      "blockB": "FRESHER AI/ML HIRING",
      "valB": "+19%",
-     "src1": "Naukri JobSpeak, Sep 2026 · growth vs last year",
+     "src1": "Naukri JobSpeak (job postings) · Sep 2026 vs Sep 2025",
      "resume": "RÉSUMÉ",
      "jobsChip": "3 AI JOBS · 1 NEEDS NO CODE · EACH TRIED HERE",
      "p1Head": "JOB 1 · PROMPT ENGINEER",
@@ -629,15 +629,17 @@
      ],
      "p1BarA": "no instructions · 10 customer questions",
      "p1BarB": "rules + the price list",
-     "p1Src": "our test (episode 51) · a free AI on our computer",
+     "p1Src": "our test (episode 51) · works in any chat app",
+     "p1Task": "THIS WEEK: rules for one shop · test 10 questions · no code",
      "p2Head": "JOB 2 · AI ENGINEER",
      "p2Sub": "connects the AI to real data · puts it live",
-     "p2Ask": "Where's my order 4417?",
+     "p2Ask": "Is the refund for order 4417 done?",
      "p2Tool": "get_order(4417)",
      "p2Rec": "record: refund not started",
      "p2BarA": "guessing · 10 order questions (3 by luck)",
      "p2BarB": "one lookup tool",
      "p2Src": "our test (episode 54)",
+     "p2Task": "THIS WEEK: run episode 54's code (in its post) · Python",
      "p3Head": "JOB 3 · ML ENGINEER",
      "p3Sub": "builds and trains the model itself",
      "term": [
@@ -648,6 +650,7 @@
      ],
      "mlBig": "135/149",
      "mlBigSub": "scams caught in its own test: 9 in 10",
+     "p3Task": "THIS WEEK: add 20 Indian scam texts to our filter (pinned)",
      "twHead": "3 SCAM TEXTS WE WROTE",
      "twSub": "Indian style · made up by us",
      "sms": [
@@ -676,22 +679,19 @@
      "road": [
       [
        "PROMPT ENGINEER · no code",
-       "rules for one shop, test 10 questions",
-       "your score: before → after"
+       "rules for one shop · test 10 questions"
       ],
       [
        "AI ENGINEER · Python",
-       "run episode 54's code (pinned)",
-       "3/10 → 10/10, on your own data"
+       "run episode 54's code (in its post)"
       ],
       [
        "ML ENGINEER · Python + maths",
-       "add 20 Indian scam texts to our filter",
-       "KYC: missed → caught?"
+       "20 Indian scam texts → our filter (pinned)"
       ]
      ],
-     "roadFoot": "ON YOUR RÉSUMÉ: your before → after score",
-     "loopChip": "MORE HIRING ≠ EASIER HIRING"
+     "roadFoot": "ON YOUR RÉSUMÉ: your 10 questions + before → after",
+     "loopChip": "MORE HIRING, NOT EASIER HIRING"
     },
     "yt": {
      "chapter": "Job 2: AI engineer",
@@ -702,7 +702,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 777,
+   "from": 798,
    "frames": 389,
    "lines": [
     {
@@ -918,7 +918,7 @@
      "valA": "+1%",
      "blockB": "FRESHER AI/ML HIRING",
      "valB": "+19%",
-     "src1": "Naukri JobSpeak, Sep 2026 · growth vs last year",
+     "src1": "Naukri JobSpeak (job postings) · Sep 2026 vs Sep 2025",
      "resume": "RÉSUMÉ",
      "jobsChip": "3 AI JOBS · 1 NEEDS NO CODE · EACH TRIED HERE",
      "p1Head": "JOB 1 · PROMPT ENGINEER",
@@ -932,15 +932,17 @@
      ],
      "p1BarA": "no instructions · 10 customer questions",
      "p1BarB": "rules + the price list",
-     "p1Src": "our test (episode 51) · a free AI on our computer",
+     "p1Src": "our test (episode 51) · works in any chat app",
+     "p1Task": "THIS WEEK: rules for one shop · test 10 questions · no code",
      "p2Head": "JOB 2 · AI ENGINEER",
      "p2Sub": "connects the AI to real data · puts it live",
-     "p2Ask": "Where's my order 4417?",
+     "p2Ask": "Is the refund for order 4417 done?",
      "p2Tool": "get_order(4417)",
      "p2Rec": "record: refund not started",
      "p2BarA": "guessing · 10 order questions (3 by luck)",
      "p2BarB": "one lookup tool",
      "p2Src": "our test (episode 54)",
+     "p2Task": "THIS WEEK: run episode 54's code (in its post) · Python",
      "p3Head": "JOB 3 · ML ENGINEER",
      "p3Sub": "builds and trains the model itself",
      "term": [
@@ -951,6 +953,7 @@
      ],
      "mlBig": "135/149",
      "mlBigSub": "scams caught in its own test: 9 in 10",
+     "p3Task": "THIS WEEK: add 20 Indian scam texts to our filter (pinned)",
      "twHead": "3 SCAM TEXTS WE WROTE",
      "twSub": "Indian style · made up by us",
      "sms": [
@@ -979,22 +982,19 @@
      "road": [
       [
        "PROMPT ENGINEER · no code",
-       "rules for one shop, test 10 questions",
-       "your score: before → after"
+       "rules for one shop · test 10 questions"
       ],
       [
        "AI ENGINEER · Python",
-       "run episode 54's code (pinned)",
-       "3/10 → 10/10, on your own data"
+       "run episode 54's code (in its post)"
       ],
       [
        "ML ENGINEER · Python + maths",
-       "add 20 Indian scam texts to our filter",
-       "KYC: missed → caught?"
+       "20 Indian scam texts → our filter (pinned)"
       ]
      ],
-     "roadFoot": "ON YOUR RÉSUMÉ: your before → after score",
-     "loopChip": "MORE HIRING ≠ EASIER HIRING"
+     "roadFoot": "ON YOUR RÉSUMÉ: your 10 questions + before → after",
+     "loopChip": "MORE HIRING, NOT EASIER HIRING"
     },
     "yt": {
      "chapter": "Job 3: ML engineer",
@@ -1005,7 +1005,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1166,
+   "from": 1186,
    "frames": 757,
    "lines": [
     {
@@ -1175,173 +1175,173 @@
      "sub": null,
      "audio": "reel/ep58te/line_05.wav",
      "from": 373,
-     "frames": 354,
+     "frames": 366,
      "words": [
       {
        "w": "Then",
-       "from": 374,
-       "to": 382
+       "from": 373,
+       "to": 381
       },
       {
        "w": "three",
-       "from": 382,
-       "to": 398
+       "from": 381,
+       "to": 397
       },
       {
        "w": "Indian",
-       "from": 398,
-       "to": 410
+       "from": 397,
+       "to": 408
       },
       {
        "w": "scam",
-       "from": 410,
-       "to": 418
+       "from": 408,
+       "to": 421
       },
       {
        "w": "messages",
-       "from": 418,
-       "to": 432
+       "from": 421,
+       "to": 435
       },
       {
        "w": "we",
-       "from": 432,
-       "to": 437
+       "from": 435,
+       "to": 439
       },
       {
        "w": "wrote.",
-       "from": 437,
-       "to": 449
+       "from": 439,
+       "to": 450
       },
       {
        "w": "It",
-       "from": 449,
-       "to": 453
+       "from": 450,
+       "to": 454
       },
       {
        "w": "caught",
-       "from": 453,
-       "to": 473
+       "from": 454,
+       "to": 472
       },
       {
        "w": "the",
-       "from": 473,
-       "to": 479
+       "from": 472,
+       "to": 478
       },
       {
        "w": "lottery",
-       "from": 479,
-       "to": 492
+       "from": 478,
+       "to": 490
       },
       {
        "w": "message;",
-       "from": 492,
-       "to": 507
+       "from": 490,
+       "to": 509
       },
       {
        "w": "it",
-       "from": 507,
-       "to": 511
+       "from": 509,
+       "to": 514
       },
       {
        "w": "let",
-       "from": 511,
-       "to": 526
+       "from": 514,
+       "to": 520
       },
       {
        "w": "the",
-       "from": 526,
-       "to": 537
+       "from": 541,
+       "to": 547
       },
       {
        "w": "KYC",
-       "from": 537,
-       "to": 543
+       "from": 547,
+       "to": 554
       },
       {
        "w": "and",
-       "from": 543,
-       "to": 558
+       "from": 554,
+       "to": 568
       },
       {
        "w": "parcel",
-       "from": 558,
-       "to": 569
+       "from": 568,
+       "to": 580
       },
       {
        "w": "messages",
-       "from": 569,
-       "to": 588
+       "from": 580,
+       "to": 595
       },
       {
        "w": "through.",
-       "from": 588,
-       "to": 602
+       "from": 595,
+       "to": 616
       },
       {
        "w": "It",
-       "from": 602,
-       "to": 615
+       "from": 616,
+       "to": 621
       },
       {
        "w": "learned",
-       "from": 615,
-       "to": 627
+       "from": 621,
+       "to": 635
       },
       {
        "w": "from",
-       "from": 627,
-       "to": 643
-      },
-      {
-       "w": "old",
-       "from": 643,
+       "from": 635,
        "to": 650
       },
       {
-       "w": "UK",
+       "w": "old",
        "from": 650,
-       "to": 655
+       "to": 657
+      },
+      {
+       "w": "UK",
+       "from": 657,
+       "to": 662
       },
       {
        "w": "messages:",
-       "from": 655,
-       "to": 671
+       "from": 662,
+       "to": 682
       },
       {
        "w": "the",
-       "from": 671,
-       "to": 677
+       "from": 682,
+       "to": 689
       },
       {
        "w": "real",
-       "from": 677,
-       "to": 693
+       "from": 689,
+       "to": 705
       },
       {
        "w": "work",
-       "from": 693,
-       "to": 701
+       "from": 705,
+       "to": 713
       },
       {
        "w": "is",
-       "from": 701,
-       "to": 706
+       "from": 713,
+       "to": 718
       },
       {
        "w": "the",
-       "from": 706,
-       "to": 712
+       "from": 718,
+       "to": 725
       },
       {
        "w": "data.",
-       "from": 712,
-       "to": 722
+       "from": 725,
+       "to": 735
       }
      ],
      "cues": {
-      "1": 460,
-      "2": 513,
-      "3": 602
+      "1": 471,
+      "2": 541,
+      "3": 620
      }
     }
    ]
@@ -1363,7 +1363,7 @@
      "valA": "+1%",
      "blockB": "FRESHER AI/ML HIRING",
      "valB": "+19%",
-     "src1": "Naukri JobSpeak, Sep 2026 · growth vs last year",
+     "src1": "Naukri JobSpeak (job postings) · Sep 2026 vs Sep 2025",
      "resume": "RÉSUMÉ",
      "jobsChip": "3 AI JOBS · 1 NEEDS NO CODE · EACH TRIED HERE",
      "p1Head": "JOB 1 · PROMPT ENGINEER",
@@ -1377,15 +1377,17 @@
      ],
      "p1BarA": "no instructions · 10 customer questions",
      "p1BarB": "rules + the price list",
-     "p1Src": "our test (episode 51) · a free AI on our computer",
+     "p1Src": "our test (episode 51) · works in any chat app",
+     "p1Task": "THIS WEEK: rules for one shop · test 10 questions · no code",
      "p2Head": "JOB 2 · AI ENGINEER",
      "p2Sub": "connects the AI to real data · puts it live",
-     "p2Ask": "Where's my order 4417?",
+     "p2Ask": "Is the refund for order 4417 done?",
      "p2Tool": "get_order(4417)",
      "p2Rec": "record: refund not started",
      "p2BarA": "guessing · 10 order questions (3 by luck)",
      "p2BarB": "one lookup tool",
      "p2Src": "our test (episode 54)",
+     "p2Task": "THIS WEEK: run episode 54's code (in its post) · Python",
      "p3Head": "JOB 3 · ML ENGINEER",
      "p3Sub": "builds and trains the model itself",
      "term": [
@@ -1396,6 +1398,7 @@
      ],
      "mlBig": "135/149",
      "mlBigSub": "scams caught in its own test: 9 in 10",
+     "p3Task": "THIS WEEK: add 20 Indian scam texts to our filter (pinned)",
      "twHead": "3 SCAM TEXTS WE WROTE",
      "twSub": "Indian style · made up by us",
      "sms": [
@@ -1424,22 +1427,19 @@
      "road": [
       [
        "PROMPT ENGINEER · no code",
-       "rules for one shop, test 10 questions",
-       "your score: before → after"
+       "rules for one shop · test 10 questions"
       ],
       [
        "AI ENGINEER · Python",
-       "run episode 54's code (pinned)",
-       "3/10 → 10/10, on your own data"
+       "run episode 54's code (in its post)"
       ],
       [
        "ML ENGINEER · Python + maths",
-       "add 20 Indian scam texts to our filter",
-       "KYC: missed → caught?"
+       "20 Indian scam texts → our filter (pinned)"
       ]
      ],
-     "roadFoot": "ON YOUR RÉSUMÉ: your before → after score",
-     "loopChip": "MORE HIRING ≠ EASIER HIRING"
+     "roadFoot": "ON YOUR RÉSUMÉ: your 10 questions + before → after",
+     "loopChip": "MORE HIRING, NOT EASIER HIRING"
     },
     "yt": {
      "chapter": "This week",
@@ -1450,8 +1450,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1923,
-   "frames": 470,
+   "from": 1943,
+   "frames": 573,
    "lines": [
     {
      "who": "storyteller",
@@ -1460,188 +1460,183 @@
      "sub": null,
      "audio": "reel/ep58te/line_06.wav",
      "from": 0,
-     "frames": 431,
+     "frames": 535,
      "words": [
       {
        "w": "This",
-       "from": 7,
-       "to": 14
+       "from": 1,
+       "to": 11
       },
       {
        "w": "week:",
-       "from": 14,
+       "from": 11,
        "to": 31
       },
       {
-       "w": "for",
-       "from": 31,
-       "to": 42
-      },
-      {
        "w": "prompt",
-       "from": 42,
-       "to": 52
+       "from": 31,
+       "to": 44
       },
       {
        "w": "engineer,",
-       "from": 52,
-       "to": 78
+       "from": 44,
+       "to": 77
       },
       {
-       "w": "one",
-       "from": 78,
+       "w": "write",
+       "from": 77,
        "to": 88
       },
       {
-       "w": "shop's",
+       "w": "one",
        "from": 88,
-       "to": 111
+       "to": 96
+      },
+      {
+       "w": "shop's",
+       "from": 96,
+       "to": 117
       },
       {
        "w": "rules",
-       "from": 111,
-       "to": 119
+       "from": 117,
+       "to": 129
       },
       {
        "w": "and",
-       "from": 119,
-       "to": 125
+       "from": 129,
+       "to": 141
       },
       {
-       "w": "a",
-       "from": 125,
-       "to": 142
+       "w": "test",
+       "from": 141,
+       "to": 162
       },
       {
-       "w": "ten-question",
-       "from": 142,
-       "to": 161
+       "w": "with",
+       "from": 162,
+       "to": 171
       },
       {
-       "w": "test.",
-       "from": 161,
-       "to": 169
+       "w": "ten",
+       "from": 171,
+       "to": 179
       },
       {
-       "w": "For",
-       "from": 169,
-       "to": 183
+       "w": "questions.",
+       "from": 179,
+       "to": 205
       },
       {
-       "w": "the",
-       "from": 183,
-       "to": 189
+       "w": "AI",
+       "from": 205,
+       "to": 211
       },
       {
-       "w": "second",
-       "from": 189,
-       "to": 202
+       "w": "engineer,",
+       "from": 211,
+       "to": 243
       },
       {
-       "w": "job,",
-       "from": 202,
-       "to": 215
+       "w": "run",
+       "from": 243,
+       "to": 254
       },
       {
        "w": "episode",
-       "from": 215,
-       "to": 227
+       "from": 254,
+       "to": 274
       },
       {
        "w": "54's",
-       "from": 227,
-       "to": 234
+       "from": 274,
+       "to": 290
       },
       {
        "w": "code.",
-       "from": 243,
-       "to": 252
-      },
-      {
-       "w": "For",
-       "from": 252,
-       "to": 258
+       "from": 290,
+       "to": 302
       },
       {
        "w": "ML,",
-       "from": 258,
-       "to": 265
+       "from": 302,
+       "to": 310
+      },
+      {
+       "w": "add",
+       "from": 327,
+       "to": 334
       },
       {
        "w": "twenty",
-       "from": 265,
-       "to": 283
+       "from": 334,
+       "to": 346
       },
       {
        "w": "Indian",
-       "from": 283,
-       "to": 293
+       "from": 346,
+       "to": 366
       },
       {
        "w": "scams",
-       "from": 293,
-       "to": 307
-      },
-      {
-       "w": "added",
-       "from": 307,
-       "to": 316
+       "from": 366,
+       "to": 377
       },
       {
        "w": "to",
-       "from": 316,
-       "to": 320
+       "from": 377,
+       "to": 382
       },
       {
        "w": "our",
-       "from": 320,
-       "to": 326
+       "from": 382,
+       "to": 389
       },
       {
        "w": "filter.",
-       "from": 326,
-       "to": 338
+       "from": 389,
+       "to": 403
       },
       {
        "w": "Put",
-       "from": 338,
-       "to": 353
+       "from": 403,
+       "to": 410
       },
       {
        "w": "your",
-       "from": 353,
-       "to": 360
-      },
-      {
-       "w": "before-and-after",
-       "from": 360,
-       "to": 393
-      },
-      {
-       "w": "score",
-       "from": 393,
-       "to": 406
-      },
-      {
-       "w": "on",
-       "from": 406,
-       "to": 411
-      },
-      {
-       "w": "your",
-       "from": 411,
+       "from": 410,
        "to": 418
       },
       {
-       "w": "résumé.",
+       "w": "before-and-after",
        "from": 418,
-       "to": 430
+       "to": 472
+      },
+      {
+       "w": "score",
+       "from": 472,
+       "to": 496
+      },
+      {
+       "w": "on",
+       "from": 496,
+       "to": 509
+      },
+      {
+       "w": "your",
+       "from": 509,
+       "to": 517
+      },
+      {
+       "w": "résumé.",
+       "from": 517,
+       "to": 531
       }
      ],
      "cues": {
-      "1": 154,
-      "2": 243,
-      "3": 353
+      "1": 164,
+      "2": 327,
+      "3": 426
      }
     }
    ]
@@ -1663,7 +1658,7 @@
      "valA": "+1%",
      "blockB": "FRESHER AI/ML HIRING",
      "valB": "+19%",
-     "src1": "Naukri JobSpeak, Sep 2026 · growth vs last year",
+     "src1": "Naukri JobSpeak (job postings) · Sep 2026 vs Sep 2025",
      "resume": "RÉSUMÉ",
      "jobsChip": "3 AI JOBS · 1 NEEDS NO CODE · EACH TRIED HERE",
      "p1Head": "JOB 1 · PROMPT ENGINEER",
@@ -1677,15 +1672,17 @@
      ],
      "p1BarA": "no instructions · 10 customer questions",
      "p1BarB": "rules + the price list",
-     "p1Src": "our test (episode 51) · a free AI on our computer",
+     "p1Src": "our test (episode 51) · works in any chat app",
+     "p1Task": "THIS WEEK: rules for one shop · test 10 questions · no code",
      "p2Head": "JOB 2 · AI ENGINEER",
      "p2Sub": "connects the AI to real data · puts it live",
-     "p2Ask": "Where's my order 4417?",
+     "p2Ask": "Is the refund for order 4417 done?",
      "p2Tool": "get_order(4417)",
      "p2Rec": "record: refund not started",
      "p2BarA": "guessing · 10 order questions (3 by luck)",
      "p2BarB": "one lookup tool",
      "p2Src": "our test (episode 54)",
+     "p2Task": "THIS WEEK: run episode 54's code (in its post) · Python",
      "p3Head": "JOB 3 · ML ENGINEER",
      "p3Sub": "builds and trains the model itself",
      "term": [
@@ -1696,6 +1693,7 @@
      ],
      "mlBig": "135/149",
      "mlBigSub": "scams caught in its own test: 9 in 10",
+     "p3Task": "THIS WEEK: add 20 Indian scam texts to our filter (pinned)",
      "twHead": "3 SCAM TEXTS WE WROTE",
      "twSub": "Indian style · made up by us",
      "sms": [
@@ -1724,22 +1722,19 @@
      "road": [
       [
        "PROMPT ENGINEER · no code",
-       "rules for one shop, test 10 questions",
-       "your score: before → after"
+       "rules for one shop · test 10 questions"
       ],
       [
        "AI ENGINEER · Python",
-       "run episode 54's code (pinned)",
-       "3/10 → 10/10, on your own data"
+       "run episode 54's code (in its post)"
       ],
       [
        "ML ENGINEER · Python + maths",
-       "add 20 Indian scam texts to our filter",
-       "KYC: missed → caught?"
+       "20 Indian scam texts → our filter (pinned)"
       ]
      ],
-     "roadFoot": "ON YOUR RÉSUMÉ: your before → after score",
-     "loopChip": "MORE HIRING ≠ EASIER HIRING"
+     "roadFoot": "ON YOUR RÉSUMÉ: your 10 questions + before → after",
+     "loopChip": "MORE HIRING, NOT EASIER HIRING"
     },
     "yt": {
      "chapter": "Pick one",
@@ -1750,8 +1745,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 2393,
-   "frames": 214,
+   "from": 2516,
+   "frames": 213,
    "lines": [
     {
      "who": "storyteller",

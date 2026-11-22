@@ -69,3 +69,25 @@ Sandeep (24, B.Tech), Priya (28, HR), Lakshmi (52, Telugu parent) and Kiran (22,
 | 5 | twist | Then three scam texts we wrote, Indian style. [1] It caught the lottery one, [2] missed KYC and parcel. [3] It learned from old UK texts: the real work is the data. | తర్వాత, మేము రాసిన మూడు ఇండియన్ స్కామ్ మెసేజ్ లు. [1] లాటరీ మెసేజ్ ని పట్టుకుంది; [2] కే వై సీ, పార్సెల్ మెసేజ్ లు వదిలేసింది. [3] అది నేర్చుకుంది పాత యూకే మెసేజ్ ల నుంచి: అసలు పని డేటా తోనే. |
 | 6 | road | This week. Prompt engineer: rules for one shop, ten test questions. [1] AI engineer: run our episode fifty-four code. [2] ML engineer: add twenty Indian scam texts to our filter. [3] Put your before-and-after score on your résumé. | ఈ వారం: ప్రాంప్ట్ ఇంజనీర్ కి, ఒక షాప్ రూల్స్, పది ప్రశ్నల టెస్ట్. [1] రెండో ఉద్యోగానికి, ఎపిసోడ్ యాభై నాలుగు కోడ్. | [2] మెషిన్ లెర్నింగ్ కి, మా ఫిల్టర్ కి ఇరవై ఇండియన్ స్కామ్ లు. [3] ముందు, తర్వాత స్కోర్, రెజ్యూమ్ లో పెట్టండి. |
 | 7 | loop | Plus one, or plus nineteen? [1] More hiring, not easier hiring. Pick one job, and start. | ఒక్క శాతమా, పంతొమ్మిదా? [1] ఎక్కువ ఉద్యోగాలు, కానీ సులభం కాదు. ఒక ఉద్యోగం ఎంచుకుని, మొదలుపెట్టండి. |
+
+## Render review (human-viewer, v2 render), what changed for the final
+- **All four agreed:**
+  - The screen pointed "run episode 54's code (pinned)" at the wrong pinned code. It now says "(in its post)", and the
+    pinned code is the ML filter.
+  - THIS WEEK came late and was dense. Each job card now ends on its own task (job 1's no-code task at about 22 s), and
+    the weekly card is three big rows plus "ON YOUR RÉSUMÉ: your 10 questions + before → after".
+  - Frame 1 stood still for 11 s. It now has a slow push-in and a ring on "+19%" as it's said, with larger labels and
+    "Naukri JobSpeak (job postings) · Sep 2026 vs Sep 2025".
+  - The scam cards are the best part. They now get a 0.5 s beat and a music drop before "Missed KYC and parcel" in both
+    cuts.
+- **Also:**
+  - "Fresher hiring" (heard as "fresh air") became "Hiring for freshers".
+  - "Shop bot" (heard as "shop bought") became "shop chatbot".
+  - "ML" is said as "machine-learning engineer".
+  - "nine scams in ten" (heard as "and ten") became "nine out of ten scams".
+  - The order card asks about the refund it returns.
+  - Job 1 says it "works in any chat app".
+  - The closing chip is solid, off the character: "MORE HIRING, NOT EASIER HIRING".
+  - The music bed is higher in jobs 1-2.
+  - Telugu: "పంతొమ్మిది శాతం పెరిగాయి"; the weekly tasks have verbs ("టెస్ట్ చేసుకోండి", "రన్ చేసి చూడండి",
+    "కలపండి"); "ఆర్టిఫిషియల్ ఇంటెలిజెన్స్ ఇంజనీర్ కి" instead of "రెండో ఉద్యోగం".
