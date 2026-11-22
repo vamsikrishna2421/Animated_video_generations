@@ -30,13 +30,13 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
 MUST = {"en": {1: [("five", "5"), ("leave",), ("friday",), ("manager",), ("two", "2")],
-               "1b": [("five", "5"), ("personal",), ("reasons", "reason"), ("ramya", "ramiya", "ramia", "remya"), ("sister", "sister's"), ("engagement",), ("hold",)],
+               "1b": [("five", "5"), ("personal",), ("reasons", "reason"), ("ramya", "ramiya", "ramia", "remya"), ("sister", "sister's"), ("engagement",), ("put",), ("hold",)],
                2: [("vague",), ("ten", "10"), ("hope",), ("well",), ("reason",), ("four", "4"), ("dates", "date")],
                3: [("ramya", "ramya's", "ramiya", "ramia", "remya"), ("engagement",), ("vijayawada", "vijaywada", "vijayavada"), ("monday",), ("report",), ("sravya", "shravya", "sravia", "shravia"), ("support",), ("tickets", "ticket"), ("through",)],
                "3b": [("ten", "10"), ("invented",), ("month",), ("three", "3"), ("invoice",), ("signed", "sign"), ("name",)],
                4: [("three", "3"), ("reason",), ("comfortable",), ("dates", "date"), ("return",), ("covers", "cover")],
-               "4b": [("bracket",), ("date",), ("name",)],
-               5: [("ramya", "ramiya", "ramia", "remya"), ("facts", "fact"), ("monday",), ("sravya", "shravya", "sravia", "shravia"), ("kiran", "kieran"), ("approved",), ("first",)],
+               "4b": [("bracket",), ("date",), ("name",), ("send",)],
+               5: [("ramya", "ramiya", "ramia", "remya"), ("facts", "fact"), ("monday",), ("sravya", "shravya", "sravia", "shravia"), ("manager",), ("approved",), ("first",)],
                6: [("five", "5"), ("reasons", "reason"), ("one", "1"), ("email", "e-mail", "mail")]},
         "te": {"1b": [("रम्य", "रम्या", "रमय", "रम य")], 3: [("विजय", "विजै", "विजे", "विज")]}}   # the Telugu judge keeps only the first 110 letters of a transcript: no checks on late words (read the full transcripts)
 JUDGE_TEXT = {}

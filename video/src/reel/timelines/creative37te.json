@@ -1,0 +1,1979 @@
+{
+ "id": "creative37te",
+ "look": "classic",
+ "topic": "",
+ "banner": "",
+ "musicVol": [
+  0.18,
+  0.24
+ ],
+ "title": "5 Reasons, 1 Email (Creative 37) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "",
+ "fps": 30,
+ "musicDrops": [
+  [
+   320,
+   353
+  ],
+  [
+   959,
+   1004
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   411,
+   2.2
+  ],
+  [
+   411,
+   737,
+   1.5
+  ],
+  [
+   736,
+   1227,
+   1.4
+  ],
+  [
+   1227,
+   1554,
+   2.4
+  ],
+  [
+   1555,
+   1791,
+   3.0
+  ],
+  [
+   658,
+   737,
+   1.6,
+   1
+  ],
+  [
+   1227,
+   1554,
+   1.8,
+   1
+  ],
+  [
+   1555,
+   1791,
+   3.2,
+   1
+  ]
+ ],
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1791,
+ "music": "reel/creative37te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_leave37",
+   "data": {
+    "beats": [
+     {
+      "prop": "hook",
+      "n": 1
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bar": "SAME FRIDAY OFF · ONLY 2 GET LEAVE",
+     "leftLab": "5 PEOPLE ASKED AN AI",
+     "leftVal": "5 REASONS",
+     "leftSub": "engagement · exam · ...",
+     "rightLab": "THE AI WROTE",
+     "rightVal": "1 EMAIL",
+     "rightSub": "\"...due to personal reasons\"",
+     "inboxHead": "Leave requests · Friday",
+     "senders": [
+      "Ramya",
+      "Arjun",
+      "Meena",
+      "Sai",
+      "Divya"
+     ],
+     "vague": "...due to personal reasons.",
+     "realTag": "Ramya's real reason: her sister's engagement",
+     "realNot": "NOT IN HER EMAIL",
+     "hold": "ALL 5 ON HOLD",
+     "story": "a story · our test is real",
+     "testHead": "OUR TEST · 10 FRESH CHATS",
+     "model": "a small free AI on our computer (Qwen 7B)",
+     "askLab": "the vague ask, 10 fresh chats:",
+     "ask": "Write a leave email to my manager for 2 days, Thursday and Friday, for a personal reason.",
+     "minis": [
+      [
+       "Dear [Manager's Name],",
+       "I hope this email finds you well.",
+       "...due to personal reasons.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason is [briefly state the personal reason]",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for personal reasons.",
+       "Oct 12th & 13th"
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason for my absence is personal",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...due to personal matters.",
+       "Oct 13th & 14th"
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this email finds you well.",
+       "The reason is [briefly explain your reason]",
+       "Oct 12th & 13th"
+      ],
+      [
+       "Hi [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason is [briefly explain your personal reason]",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...due to personal reasons.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for some personal matters.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for personal reasons.",
+       "Oct 12th & 13th"
+      ]
+     ],
+     "cOpen": [
+      "10/10",
+      "open \"I hope this... finds you well\""
+     ],
+     "cReason": [
+      "0/10",
+      "a real reason: we gave none"
+     ],
+     "cDate": [
+      "4/10",
+      "made up dates (we gave none)"
+     ],
+     "factsHead": "THE SAME AI, WITH RAMYA'S FACTS",
+     "facts": [
+      [
+       "sister's engagement",
+       "10/10"
+      ],
+      [
+       "Vijayawada",
+       "10/10"
+      ],
+      [
+       "back Monday",
+       "9/10"
+      ],
+      [
+       "invoice report done",
+       "10/10"
+      ],
+      [
+       "Sravya covers her support tickets",
+       "10/10"
+      ]
+     ],
+     "monthN": "10/10",
+     "monthLab": "guessed a month",
+     "monthSub": "April, March, July, October, November: we gave no month",
+     "wrongN": "3/10",
+     "wrongLab": "gave Sravya the wrong job",
+     "wrongQuote": "\"I have completed the invoice report, which Sravya will handle.\"",
+     "wrongSub": "the report was done; Sravya covers the tickets",
+     "signName": "Qwen",
+     "signTag": "THE AI'S OWN NAME",
+     "ruleHead": "GIVE IT 3 THINGS",
+     "three": [
+      "the reason you're OK sharing",
+      "your dates + return day",
+      "who covers your work"
+     ],
+     "checkHead": "BEFORE YOU SEND, CHECK",
+     "checks": [
+      "every [bracket]",
+      "every date",
+      "every name"
+     ],
+     "payHead": "RAMYA'S EMAIL: HER FACTS, CHECKED",
+     "mine": "Sister's engagement · back Monday · Sravya covers",
+     "mail": [
+      [
+       "To",
+       "Kiran (manager)"
+      ],
+      [
+       "Leave",
+       "Thursday 26 and Friday 27 November"
+      ],
+      [
+       "Why",
+       "my sister's engagement, Vijayawada"
+      ],
+      [
+       "Back",
+       "Monday 30 November"
+      ],
+      [
+       "Cover",
+       "Sravya: my support tickets"
+      ]
+     ],
+     "approved": "APPROVED",
+     "payWhy": "back Monday · work covered"
+    },
+    "yt": {
+     "chapter": "5 reasons, 1 email",
+     "title": "5 reasons, 1 email",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 411,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative37te/line_01.wav",
+     "from": 9,
+     "frames": 391,
+     "words": [
+      {
+       "w": "Five",
+       "from": 10,
+       "to": 17
+      },
+      {
+       "w": "leave",
+       "from": 17,
+       "to": 26
+      },
+      {
+       "w": "emails",
+       "from": 26,
+       "to": 36
+      },
+      {
+       "w": "for",
+       "from": 36,
+       "to": 41
+      },
+      {
+       "w": "the",
+       "from": 41,
+       "to": 52
+      },
+      {
+       "w": "same",
+       "from": 52,
+       "to": 59
+      },
+      {
+       "w": "Friday.",
+       "from": 59,
+       "to": 74
+      },
+      {
+       "w": "Their",
+       "from": 74,
+       "to": 93
+      },
+      {
+       "w": "manager",
+       "from": 93,
+       "to": 111
+      },
+      {
+       "w": "Kiran",
+       "from": 111,
+       "to": 119
+      },
+      {
+       "w": "can",
+       "from": 119,
+       "to": 125
+      },
+      {
+       "w": "give",
+       "from": 125,
+       "to": 132
+      },
+      {
+       "w": "leave",
+       "from": 132,
+       "to": 140
+      },
+      {
+       "w": "to",
+       "from": 140,
+       "to": 144
+      },
+      {
+       "w": "only",
+       "from": 154,
+       "to": 160
+      },
+      {
+       "w": "two.",
+       "from": 160,
+       "to": 167
+      },
+      {
+       "w": "All",
+       "from": 167,
+       "to": 178
+      },
+      {
+       "w": "five",
+       "from": 178,
+       "to": 185
+      },
+      {
+       "w": "had",
+       "from": 185,
+       "to": 190
+      },
+      {
+       "w": "a",
+       "from": 190,
+       "to": 192
+      },
+      {
+       "w": "chatbot",
+       "from": 192,
+       "to": 202
+      },
+      {
+       "w": "write",
+       "from": 202,
+       "to": 215
+      },
+      {
+       "w": "them;",
+       "from": 215,
+       "to": 222
+      },
+      {
+       "w": "all",
+       "from": 222,
+       "to": 227
+      },
+      {
+       "w": "five",
+       "from": 227,
+       "to": 239
+      },
+      {
+       "w": "say",
+       "from": 239,
+       "to": 244
+      },
+      {
+       "w": "the",
+       "from": 244,
+       "to": 249
+      },
+      {
+       "w": "same",
+       "from": 249,
+       "to": 260
+      },
+      {
+       "w": "thing:",
+       "from": 260,
+       "to": 269
+      },
+      {
+       "w": "personal",
+       "from": 269,
+       "to": 280
+      },
+      {
+       "w": "reasons.",
+       "from": 280,
+       "to": 299
+      },
+      {
+       "w": "Ramya's",
+       "from": 299,
+       "to": 315
+      },
+      {
+       "w": "is",
+       "from": 315,
+       "to": 318
+      },
+      {
+       "w": "her",
+       "from": 318,
+       "to": 323
+      },
+      {
+       "w": "sister's",
+       "from": 323,
+       "to": 335
+      },
+      {
+       "w": "engagement.",
+       "from": 335,
+       "to": 357
+      },
+      {
+       "w": "All",
+       "from": 357,
+       "to": 367
+      },
+      {
+       "w": "five",
+       "from": 367,
+       "to": 378
+      },
+      {
+       "w": "leaves:",
+       "from": 378,
+       "to": 389
+      },
+      {
+       "w": "on",
+       "from": 389,
+       "to": 392
+      },
+      {
+       "w": "hold.",
+       "from": 392,
+       "to": 400
+      }
+     ],
+     "cues": {
+      "1": 154,
+      "2": 279,
+      "3": 344
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_leave37",
+   "data": {
+    "beats": [
+     {
+      "prop": "test",
+      "n": 2
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bar": "SAME FRIDAY OFF · ONLY 2 GET LEAVE",
+     "leftLab": "5 PEOPLE ASKED AN AI",
+     "leftVal": "5 REASONS",
+     "leftSub": "engagement · exam · ...",
+     "rightLab": "THE AI WROTE",
+     "rightVal": "1 EMAIL",
+     "rightSub": "\"...due to personal reasons\"",
+     "inboxHead": "Leave requests · Friday",
+     "senders": [
+      "Ramya",
+      "Arjun",
+      "Meena",
+      "Sai",
+      "Divya"
+     ],
+     "vague": "...due to personal reasons.",
+     "realTag": "Ramya's real reason: her sister's engagement",
+     "realNot": "NOT IN HER EMAIL",
+     "hold": "ALL 5 ON HOLD",
+     "story": "a story · our test is real",
+     "testHead": "OUR TEST · 10 FRESH CHATS",
+     "model": "a small free AI on our computer (Qwen 7B)",
+     "askLab": "the vague ask, 10 fresh chats:",
+     "ask": "Write a leave email to my manager for 2 days, Thursday and Friday, for a personal reason.",
+     "minis": [
+      [
+       "Dear [Manager's Name],",
+       "I hope this email finds you well.",
+       "...due to personal reasons.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason is [briefly state the personal reason]",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for personal reasons.",
+       "Oct 12th & 13th"
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason for my absence is personal",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...due to personal matters.",
+       "Oct 13th & 14th"
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this email finds you well.",
+       "The reason is [briefly explain your reason]",
+       "Oct 12th & 13th"
+      ],
+      [
+       "Hi [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason is [briefly explain your personal reason]",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...due to personal reasons.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for some personal matters.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for personal reasons.",
+       "Oct 12th & 13th"
+      ]
+     ],
+     "cOpen": [
+      "10/10",
+      "open \"I hope this... finds you well\""
+     ],
+     "cReason": [
+      "0/10",
+      "a real reason: we gave none"
+     ],
+     "cDate": [
+      "4/10",
+      "made up dates (we gave none)"
+     ],
+     "factsHead": "THE SAME AI, WITH RAMYA'S FACTS",
+     "facts": [
+      [
+       "sister's engagement",
+       "10/10"
+      ],
+      [
+       "Vijayawada",
+       "10/10"
+      ],
+      [
+       "back Monday",
+       "9/10"
+      ],
+      [
+       "invoice report done",
+       "10/10"
+      ],
+      [
+       "Sravya covers her support tickets",
+       "10/10"
+      ]
+     ],
+     "monthN": "10/10",
+     "monthLab": "guessed a month",
+     "monthSub": "April, March, July, October, November: we gave no month",
+     "wrongN": "3/10",
+     "wrongLab": "gave Sravya the wrong job",
+     "wrongQuote": "\"I have completed the invoice report, which Sravya will handle.\"",
+     "wrongSub": "the report was done; Sravya covers the tickets",
+     "signName": "Qwen",
+     "signTag": "THE AI'S OWN NAME",
+     "ruleHead": "GIVE IT 3 THINGS",
+     "three": [
+      "the reason you're OK sharing",
+      "your dates + return day",
+      "who covers your work"
+     ],
+     "checkHead": "BEFORE YOU SEND, CHECK",
+     "checks": [
+      "every [bracket]",
+      "every date",
+      "every name"
+     ],
+     "payHead": "RAMYA'S EMAIL: HER FACTS, CHECKED",
+     "mine": "Sister's engagement · back Monday · Sravya covers",
+     "mail": [
+      [
+       "To",
+       "Kiran (manager)"
+      ],
+      [
+       "Leave",
+       "Thursday 26 and Friday 27 November"
+      ],
+      [
+       "Why",
+       "my sister's engagement, Vijayawada"
+      ],
+      [
+       "Back",
+       "Monday 30 November"
+      ],
+      [
+       "Cover",
+       "Sravya: my support tickets"
+      ]
+     ],
+     "approved": "APPROVED",
+     "payWhy": "back Monday · work covered"
+    },
+    "yt": {
+     "chapter": "Our test: the vague ask",
+     "title": "Our test: the vague ask",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 411,
+   "frames": 326,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative37te/line_02.wav",
+     "from": 0,
+     "frames": 309,
+     "words": [
+      {
+       "w": "We",
+       "from": 1,
+       "to": 5
+      },
+      {
+       "w": "did",
+       "from": 5,
+       "to": 12
+      },
+      {
+       "w": "the",
+       "from": 12,
+       "to": 18
+      },
+      {
+       "w": "same:",
+       "from": 18,
+       "to": 33
+      },
+      {
+       "w": "asked",
+       "from": 33,
+       "to": 46
+      },
+      {
+       "w": "a",
+       "from": 46,
+       "to": 49
+      },
+      {
+       "w": "free",
+       "from": 49,
+       "to": 57
+      },
+      {
+       "w": "chatbot",
+       "from": 57,
+       "to": 70
+      },
+      {
+       "w": "ten",
+       "from": 70,
+       "to": 76
+      },
+      {
+       "w": "times.",
+       "from": 76,
+       "to": 87
+      },
+      {
+       "w": "All",
+       "from": 87,
+       "to": 99
+      },
+      {
+       "w": "ten",
+       "from": 99,
+       "to": 105
+      },
+      {
+       "w": "opened",
+       "from": 105,
+       "to": 116
+      },
+      {
+       "w": "the",
+       "from": 116,
+       "to": 122
+      },
+      {
+       "w": "same",
+       "from": 122,
+       "to": 135
+      },
+      {
+       "w": "way:",
+       "from": 135,
+       "to": 143
+      },
+      {
+       "w": "\"I",
+       "from": 143,
+       "to": 148
+      },
+      {
+       "w": "hope",
+       "from": 148,
+       "to": 162
+      },
+      {
+       "w": "this",
+       "from": 162,
+       "to": 169
+      },
+      {
+       "w": "finds",
+       "from": 169,
+       "to": 179
+      },
+      {
+       "w": "you",
+       "from": 179,
+       "to": 190
+      },
+      {
+       "w": "well.\"",
+       "from": 190,
+       "to": 201
+      },
+      {
+       "w": "Not",
+       "from": 201,
+       "to": 207
+      },
+      {
+       "w": "one",
+       "from": 207,
+       "to": 213
+      },
+      {
+       "w": "had",
+       "from": 213,
+       "to": 219
+      },
+      {
+       "w": "a",
+       "from": 219,
+       "to": 222
+      },
+      {
+       "w": "real",
+       "from": 222,
+       "to": 230
+      },
+      {
+       "w": "reason.",
+       "from": 230,
+       "to": 248
+      },
+      {
+       "w": "Four",
+       "from": 248,
+       "to": 256
+      },
+      {
+       "w": "wrote",
+       "from": 256,
+       "to": 270
+      },
+      {
+       "w": "dates",
+       "from": 270,
+       "to": 280
+      },
+      {
+       "w": "nobody",
+       "from": 280,
+       "to": 291
+      },
+      {
+       "w": "gave",
+       "from": 291,
+       "to": 299
+      },
+      {
+       "w": "it.",
+       "from": 299,
+       "to": 305
+      }
+     ],
+     "cues": {
+      "1": 100,
+      "2": 191,
+      "3": 247
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_leave37",
+   "data": {
+    "beats": [
+     {
+      "prop": "facts",
+      "n": 3
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bar": "SAME FRIDAY OFF · ONLY 2 GET LEAVE",
+     "leftLab": "5 PEOPLE ASKED AN AI",
+     "leftVal": "5 REASONS",
+     "leftSub": "engagement · exam · ...",
+     "rightLab": "THE AI WROTE",
+     "rightVal": "1 EMAIL",
+     "rightSub": "\"...due to personal reasons\"",
+     "inboxHead": "Leave requests · Friday",
+     "senders": [
+      "Ramya",
+      "Arjun",
+      "Meena",
+      "Sai",
+      "Divya"
+     ],
+     "vague": "...due to personal reasons.",
+     "realTag": "Ramya's real reason: her sister's engagement",
+     "realNot": "NOT IN HER EMAIL",
+     "hold": "ALL 5 ON HOLD",
+     "story": "a story · our test is real",
+     "testHead": "OUR TEST · 10 FRESH CHATS",
+     "model": "a small free AI on our computer (Qwen 7B)",
+     "askLab": "the vague ask, 10 fresh chats:",
+     "ask": "Write a leave email to my manager for 2 days, Thursday and Friday, for a personal reason.",
+     "minis": [
+      [
+       "Dear [Manager's Name],",
+       "I hope this email finds you well.",
+       "...due to personal reasons.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason is [briefly state the personal reason]",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for personal reasons.",
+       "Oct 12th & 13th"
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason for my absence is personal",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...due to personal matters.",
+       "Oct 13th & 14th"
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this email finds you well.",
+       "The reason is [briefly explain your reason]",
+       "Oct 12th & 13th"
+      ],
+      [
+       "Hi [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason is [briefly explain your personal reason]",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...due to personal reasons.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for some personal matters.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for personal reasons.",
+       "Oct 12th & 13th"
+      ]
+     ],
+     "cOpen": [
+      "10/10",
+      "open \"I hope this... finds you well\""
+     ],
+     "cReason": [
+      "0/10",
+      "a real reason: we gave none"
+     ],
+     "cDate": [
+      "4/10",
+      "made up dates (we gave none)"
+     ],
+     "factsHead": "THE SAME AI, WITH RAMYA'S FACTS",
+     "facts": [
+      [
+       "sister's engagement",
+       "10/10"
+      ],
+      [
+       "Vijayawada",
+       "10/10"
+      ],
+      [
+       "back Monday",
+       "9/10"
+      ],
+      [
+       "invoice report done",
+       "10/10"
+      ],
+      [
+       "Sravya covers her support tickets",
+       "10/10"
+      ]
+     ],
+     "monthN": "10/10",
+     "monthLab": "guessed a month",
+     "monthSub": "April, March, July, October, November: we gave no month",
+     "wrongN": "3/10",
+     "wrongLab": "gave Sravya the wrong job",
+     "wrongQuote": "\"I have completed the invoice report, which Sravya will handle.\"",
+     "wrongSub": "the report was done; Sravya covers the tickets",
+     "signName": "Qwen",
+     "signTag": "THE AI'S OWN NAME",
+     "ruleHead": "GIVE IT 3 THINGS",
+     "three": [
+      "the reason you're OK sharing",
+      "your dates + return day",
+      "who covers your work"
+     ],
+     "checkHead": "BEFORE YOU SEND, CHECK",
+     "checks": [
+      "every [bracket]",
+      "every date",
+      "every name"
+     ],
+     "payHead": "RAMYA'S EMAIL: HER FACTS, CHECKED",
+     "mine": "Sister's engagement · back Monday · Sravya covers",
+     "mail": [
+      [
+       "To",
+       "Kiran (manager)"
+      ],
+      [
+       "Leave",
+       "Thursday 26 and Friday 27 November"
+      ],
+      [
+       "Why",
+       "my sister's engagement, Vijayawada"
+      ],
+      [
+       "Back",
+       "Monday 30 November"
+      ],
+      [
+       "Cover",
+       "Sravya: my support tickets"
+      ]
+     ],
+     "approved": "APPROVED",
+     "payWhy": "back Monday · work covered"
+    },
+    "yt": {
+     "chapter": "With her facts",
+     "title": "With her facts",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 736,
+   "frames": 491,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative37te/line_03.wav",
+     "from": 0,
+     "frames": 473,
+     "words": [
+      {
+       "w": "With",
+       "from": 2,
+       "to": 8
+      },
+      {
+       "w": "Ramya's",
+       "from": 8,
+       "to": 18
+      },
+      {
+       "w": "details:",
+       "from": 18,
+       "to": 35
+      },
+      {
+       "w": "sister's",
+       "from": 35,
+       "to": 46
+      },
+      {
+       "w": "engagement,",
+       "from": 46,
+       "to": 68
+      },
+      {
+       "w": "Vijayawada,",
+       "from": 68,
+       "to": 91
+      },
+      {
+       "w": "back",
+       "from": 91,
+       "to": 97
+      },
+      {
+       "w": "on",
+       "from": 97,
+       "to": 101
+      },
+      {
+       "w": "Monday,",
+       "from": 101,
+       "to": 115
+      },
+      {
+       "w": "report",
+       "from": 115,
+       "to": 135
+      },
+      {
+       "w": "done,",
+       "from": 135,
+       "to": 142
+      },
+      {
+       "w": "Sravya",
+       "from": 142,
+       "to": 151
+      },
+      {
+       "w": "handles",
+       "from": 151,
+       "to": 166
+      },
+      {
+       "w": "the",
+       "from": 166,
+       "to": 171
+      },
+      {
+       "w": "support",
+       "from": 171,
+       "to": 181
+      },
+      {
+       "w": "tickets.",
+       "from": 181,
+       "to": 193
+      },
+      {
+       "w": "All",
+       "from": 193,
+       "to": 198
+      },
+      {
+       "w": "of",
+       "from": 198,
+       "to": 201
+      },
+      {
+       "w": "it",
+       "from": 201,
+       "to": 210
+      },
+      {
+       "w": "came",
+       "from": 210,
+       "to": 216
+      },
+      {
+       "w": "through.",
+       "from": 216,
+       "to": 227
+      },
+      {
+       "w": "But",
+       "from": 247,
+       "to": 254
+      },
+      {
+       "w": "all",
+       "from": 254,
+       "to": 265
+      },
+      {
+       "w": "ten",
+       "from": 265,
+       "to": 272
+      },
+      {
+       "w": "guessed",
+       "from": 272,
+       "to": 291
+      },
+      {
+       "w": "a",
+       "from": 291,
+       "to": 294
+      },
+      {
+       "w": "month;",
+       "from": 294,
+       "to": 306
+      },
+      {
+       "w": "three",
+       "from": 306,
+       "to": 316
+      },
+      {
+       "w": "gave",
+       "from": 316,
+       "to": 330
+      },
+      {
+       "w": "the",
+       "from": 330,
+       "to": 336
+      },
+      {
+       "w": "report",
+       "from": 336,
+       "to": 355
+      },
+      {
+       "w": "work",
+       "from": 355,
+       "to": 368
+      },
+      {
+       "w": "to",
+       "from": 368,
+       "to": 373
+      },
+      {
+       "w": "Sravya.",
+       "from": 373,
+       "to": 386
+      },
+      {
+       "w": "One",
+       "from": 386,
+       "to": 399
+      },
+      {
+       "w": "signed",
+       "from": 399,
+       "to": 416
+      },
+      {
+       "w": "with",
+       "from": 416,
+       "to": 424
+      },
+      {
+       "w": "the",
+       "from": 424,
+       "to": 431
+      },
+      {
+       "w": "chatbot's",
+       "from": 431,
+       "to": 456
+      },
+      {
+       "w": "own",
+       "from": 456,
+       "to": 462
+      },
+      {
+       "w": "name.",
+       "from": 462,
+       "to": 472
+      }
+     ],
+     "cues": {
+      "1": 22,
+      "2": 203,
+      "3": 247,
+      "4": 310,
+      "5": 390
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_leave37",
+   "data": {
+    "beats": [
+     {
+      "prop": "rule",
+      "n": 4
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bar": "SAME FRIDAY OFF · ONLY 2 GET LEAVE",
+     "leftLab": "5 PEOPLE ASKED AN AI",
+     "leftVal": "5 REASONS",
+     "leftSub": "engagement · exam · ...",
+     "rightLab": "THE AI WROTE",
+     "rightVal": "1 EMAIL",
+     "rightSub": "\"...due to personal reasons\"",
+     "inboxHead": "Leave requests · Friday",
+     "senders": [
+      "Ramya",
+      "Arjun",
+      "Meena",
+      "Sai",
+      "Divya"
+     ],
+     "vague": "...due to personal reasons.",
+     "realTag": "Ramya's real reason: her sister's engagement",
+     "realNot": "NOT IN HER EMAIL",
+     "hold": "ALL 5 ON HOLD",
+     "story": "a story · our test is real",
+     "testHead": "OUR TEST · 10 FRESH CHATS",
+     "model": "a small free AI on our computer (Qwen 7B)",
+     "askLab": "the vague ask, 10 fresh chats:",
+     "ask": "Write a leave email to my manager for 2 days, Thursday and Friday, for a personal reason.",
+     "minis": [
+      [
+       "Dear [Manager's Name],",
+       "I hope this email finds you well.",
+       "...due to personal reasons.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason is [briefly state the personal reason]",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for personal reasons.",
+       "Oct 12th & 13th"
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason for my absence is personal",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...due to personal matters.",
+       "Oct 13th & 14th"
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this email finds you well.",
+       "The reason is [briefly explain your reason]",
+       "Oct 12th & 13th"
+      ],
+      [
+       "Hi [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason is [briefly explain your personal reason]",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...due to personal reasons.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for some personal matters.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for personal reasons.",
+       "Oct 12th & 13th"
+      ]
+     ],
+     "cOpen": [
+      "10/10",
+      "open \"I hope this... finds you well\""
+     ],
+     "cReason": [
+      "0/10",
+      "a real reason: we gave none"
+     ],
+     "cDate": [
+      "4/10",
+      "made up dates (we gave none)"
+     ],
+     "factsHead": "THE SAME AI, WITH RAMYA'S FACTS",
+     "facts": [
+      [
+       "sister's engagement",
+       "10/10"
+      ],
+      [
+       "Vijayawada",
+       "10/10"
+      ],
+      [
+       "back Monday",
+       "9/10"
+      ],
+      [
+       "invoice report done",
+       "10/10"
+      ],
+      [
+       "Sravya covers her support tickets",
+       "10/10"
+      ]
+     ],
+     "monthN": "10/10",
+     "monthLab": "guessed a month",
+     "monthSub": "April, March, July, October, November: we gave no month",
+     "wrongN": "3/10",
+     "wrongLab": "gave Sravya the wrong job",
+     "wrongQuote": "\"I have completed the invoice report, which Sravya will handle.\"",
+     "wrongSub": "the report was done; Sravya covers the tickets",
+     "signName": "Qwen",
+     "signTag": "THE AI'S OWN NAME",
+     "ruleHead": "GIVE IT 3 THINGS",
+     "three": [
+      "the reason you're OK sharing",
+      "your dates + return day",
+      "who covers your work"
+     ],
+     "checkHead": "BEFORE YOU SEND, CHECK",
+     "checks": [
+      "every [bracket]",
+      "every date",
+      "every name"
+     ],
+     "payHead": "RAMYA'S EMAIL: HER FACTS, CHECKED",
+     "mine": "Sister's engagement · back Monday · Sravya covers",
+     "mail": [
+      [
+       "To",
+       "Kiran (manager)"
+      ],
+      [
+       "Leave",
+       "Thursday 26 and Friday 27 November"
+      ],
+      [
+       "Why",
+       "my sister's engagement, Vijayawada"
+      ],
+      [
+       "Back",
+       "Monday 30 November"
+      ],
+      [
+       "Cover",
+       "Sravya: my support tickets"
+      ]
+     ],
+     "approved": "APPROVED",
+     "payWhy": "back Monday · work covered"
+    },
+    "yt": {
+     "chapter": "Give it 3 things",
+     "title": "Give it 3 things",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1227,
+   "frames": 327,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative37te/line_04.wav",
+     "from": 0,
+     "frames": 306,
+     "words": [
+      {
+       "w": "So",
+       "from": 1,
+       "to": 5
+      },
+      {
+       "w": "tell",
+       "from": 5,
+       "to": 13
+      },
+      {
+       "w": "it",
+       "from": 13,
+       "to": 17
+      },
+      {
+       "w": "three",
+       "from": 17,
+       "to": 26
+      },
+      {
+       "w": "things:",
+       "from": 26,
+       "to": 38
+      },
+      {
+       "w": "a",
+       "from": 38,
+       "to": 41
+      },
+      {
+       "w": "reason",
+       "from": 41,
+       "to": 57
+      },
+      {
+       "w": "you're",
+       "from": 57,
+       "to": 68
+      },
+      {
+       "w": "comfortable",
+       "from": 68,
+       "to": 86
+      },
+      {
+       "w": "sharing,",
+       "from": 86,
+       "to": 99
+      },
+      {
+       "w": "your",
+       "from": 99,
+       "to": 113
+      },
+      {
+       "w": "dates",
+       "from": 113,
+       "to": 122
+      },
+      {
+       "w": "and",
+       "from": 122,
+       "to": 128
+      },
+      {
+       "w": "when",
+       "from": 128,
+       "to": 135
+      },
+      {
+       "w": "you're",
+       "from": 135,
+       "to": 146
+      },
+      {
+       "w": "back,",
+       "from": 146,
+       "to": 160
+      },
+      {
+       "w": "who",
+       "from": 160,
+       "to": 166
+      },
+      {
+       "w": "covers",
+       "from": 166,
+       "to": 177
+      },
+      {
+       "w": "your",
+       "from": 177,
+       "to": 184
+      },
+      {
+       "w": "work.",
+       "from": 184,
+       "to": 193
+      },
+      {
+       "w": "Before",
+       "from": 203,
+       "to": 212
+      },
+      {
+       "w": "you",
+       "from": 212,
+       "to": 218
+      },
+      {
+       "w": "send,",
+       "from": 218,
+       "to": 231
+      },
+      {
+       "w": "check",
+       "from": 231,
+       "to": 240
+      },
+      {
+       "w": "every",
+       "from": 240,
+       "to": 255
+      },
+      {
+       "w": "bracket,",
+       "from": 255,
+       "to": 267
+      },
+      {
+       "w": "every",
+       "from": 267,
+       "to": 281
+      },
+      {
+       "w": "date,",
+       "from": 281,
+       "to": 289
+      },
+      {
+       "w": "every",
+       "from": 289,
+       "to": 298
+      },
+      {
+       "w": "name.",
+       "from": 298,
+       "to": 306
+      }
+     ],
+     "cues": {
+      "1": 45,
+      "2": 98,
+      "3": 156,
+      "4": 203
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_leave37",
+   "data": {
+    "beats": [
+     {
+      "prop": "payoff",
+      "n": 5
+     },
+     {
+      "prop": "loop",
+      "n": 6
+     }
+    ],
+    "captionTop": 1440,
+    "t": {
+     "bar": "SAME FRIDAY OFF · ONLY 2 GET LEAVE",
+     "leftLab": "5 PEOPLE ASKED AN AI",
+     "leftVal": "5 REASONS",
+     "leftSub": "engagement · exam · ...",
+     "rightLab": "THE AI WROTE",
+     "rightVal": "1 EMAIL",
+     "rightSub": "\"...due to personal reasons\"",
+     "inboxHead": "Leave requests · Friday",
+     "senders": [
+      "Ramya",
+      "Arjun",
+      "Meena",
+      "Sai",
+      "Divya"
+     ],
+     "vague": "...due to personal reasons.",
+     "realTag": "Ramya's real reason: her sister's engagement",
+     "realNot": "NOT IN HER EMAIL",
+     "hold": "ALL 5 ON HOLD",
+     "story": "a story · our test is real",
+     "testHead": "OUR TEST · 10 FRESH CHATS",
+     "model": "a small free AI on our computer (Qwen 7B)",
+     "askLab": "the vague ask, 10 fresh chats:",
+     "ask": "Write a leave email to my manager for 2 days, Thursday and Friday, for a personal reason.",
+     "minis": [
+      [
+       "Dear [Manager's Name],",
+       "I hope this email finds you well.",
+       "...due to personal reasons.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason is [briefly state the personal reason]",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for personal reasons.",
+       "Oct 12th & 13th"
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason for my absence is personal",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...due to personal matters.",
+       "Oct 13th & 14th"
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this email finds you well.",
+       "The reason is [briefly explain your reason]",
+       "Oct 12th & 13th"
+      ],
+      [
+       "Hi [Manager's Name],",
+       "I hope this message finds you well.",
+       "The reason is [briefly explain your personal reason]",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...due to personal reasons.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for some personal matters.",
+       ""
+      ],
+      [
+       "Dear [Manager's Name],",
+       "I hope this message finds you well.",
+       "...for personal reasons.",
+       "Oct 12th & 13th"
+      ]
+     ],
+     "cOpen": [
+      "10/10",
+      "open \"I hope this... finds you well\""
+     ],
+     "cReason": [
+      "0/10",
+      "a real reason: we gave none"
+     ],
+     "cDate": [
+      "4/10",
+      "made up dates (we gave none)"
+     ],
+     "factsHead": "THE SAME AI, WITH RAMYA'S FACTS",
+     "facts": [
+      [
+       "sister's engagement",
+       "10/10"
+      ],
+      [
+       "Vijayawada",
+       "10/10"
+      ],
+      [
+       "back Monday",
+       "9/10"
+      ],
+      [
+       "invoice report done",
+       "10/10"
+      ],
+      [
+       "Sravya covers her support tickets",
+       "10/10"
+      ]
+     ],
+     "monthN": "10/10",
+     "monthLab": "guessed a month",
+     "monthSub": "April, March, July, October, November: we gave no month",
+     "wrongN": "3/10",
+     "wrongLab": "gave Sravya the wrong job",
+     "wrongQuote": "\"I have completed the invoice report, which Sravya will handle.\"",
+     "wrongSub": "the report was done; Sravya covers the tickets",
+     "signName": "Qwen",
+     "signTag": "THE AI'S OWN NAME",
+     "ruleHead": "GIVE IT 3 THINGS",
+     "three": [
+      "the reason you're OK sharing",
+      "your dates + return day",
+      "who covers your work"
+     ],
+     "checkHead": "BEFORE YOU SEND, CHECK",
+     "checks": [
+      "every [bracket]",
+      "every date",
+      "every name"
+     ],
+     "payHead": "RAMYA'S EMAIL: HER FACTS, CHECKED",
+     "mine": "Sister's engagement · back Monday · Sravya covers",
+     "mail": [
+      [
+       "To",
+       "Kiran (manager)"
+      ],
+      [
+       "Leave",
+       "Thursday 26 and Friday 27 November"
+      ],
+      [
+       "Why",
+       "my sister's engagement, Vijayawada"
+      ],
+      [
+       "Back",
+       "Monday 30 November"
+      ],
+      [
+       "Cover",
+       "Sravya: my support tickets"
+      ]
+     ],
+     "approved": "APPROVED",
+     "payWhy": "back Monday · work covered"
+    },
+    "yt": {
+     "chapter": "Approved",
+     "title": "Approved",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1555,
+   "frames": 236,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative37te/line_05.wav",
+     "from": 6,
+     "frames": 160,
+     "words": [
+      {
+       "w": "Ramya",
+       "from": 7,
+       "to": 16
+      },
+      {
+       "w": "put",
+       "from": 16,
+       "to": 21
+      },
+      {
+       "w": "in",
+       "from": 21,
+       "to": 26
+      },
+      {
+       "w": "her",
+       "from": 26,
+       "to": 31
+      },
+      {
+       "w": "details,",
+       "from": 31,
+       "to": 56
+      },
+      {
+       "w": "checked",
+       "from": 56,
+       "to": 67
+      },
+      {
+       "w": "it",
+       "from": 67,
+       "to": 78
+      },
+      {
+       "w": "and",
+       "from": 78,
+       "to": 83
+      },
+      {
+       "w": "sent",
+       "from": 83,
+       "to": 91
+      },
+      {
+       "w": "it.",
+       "from": 91,
+       "to": 96
+      },
+      {
+       "w": "Kiran",
+       "from": 96,
+       "to": 110
+      },
+      {
+       "w": "approved",
+       "from": 110,
+       "to": 123
+      },
+      {
+       "w": "Ramya's",
+       "from": 123,
+       "to": 134
+      },
+      {
+       "w": "before",
+       "from": 134,
+       "to": 144
+      },
+      {
+       "w": "anyone",
+       "from": 144,
+       "to": 154
+      },
+      {
+       "w": "else's.",
+       "from": 154,
+       "to": 166
+      }
+     ],
+     "cues": {
+      "1": 89
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative37te/line_06.wav",
+     "from": 172,
+     "frames": 56,
+     "words": [
+      {
+       "w": "Five",
+       "from": 172,
+       "to": 181
+      },
+      {
+       "w": "reasons,",
+       "from": 181,
+       "to": 202
+      },
+      {
+       "w": "one",
+       "from": 202,
+       "to": 210
+      },
+      {
+       "w": "email?",
+       "from": 210,
+       "to": 227
+      }
+     ],
+     "cues": {
+      "1": 195
+     }
+    }
+   ]
+  }
+ ]
+}

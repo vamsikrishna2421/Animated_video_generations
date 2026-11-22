@@ -66,7 +66,7 @@
     ],
     "captionTop": 1440,
     "t": {
-     "bar": "SAME FRIDAY · ONLY 2 CAN GO",
+     "bar": "SAME FRIDAY OFF · ONLY 2 GET LEAVE",
      "leftLab": "5 PEOPLE ASKED AN AI",
      "leftVal": "5 REASONS",
      "leftSub": "engagement · exam · ...",
@@ -82,7 +82,8 @@
       "Divya"
      ],
      "vague": "...due to personal reasons.",
-     "realTag": "Ramya's real reason: her sister's engagement · not in the email",
+     "realTag": "Ramya's real reason: her sister's engagement",
+     "realNot": "NOT IN HER EMAIL",
      "hold": "ALL 5 ON HOLD",
      "story": "a story · our test is real",
      "testHead": "OUR TEST · 10 FRESH CHATS",
@@ -157,7 +158,7 @@
      ],
      "cReason": [
       "0/10",
-      "give a real reason"
+      "a real reason: we gave none"
      ],
      "cDate": [
       "4/10",
@@ -188,11 +189,11 @@
      ],
      "monthN": "10/10",
      "monthLab": "guessed a month",
-     "monthSub": "April · March · July · October · November: we gave none",
+     "monthSub": "April, March, July, October, November: we gave no month",
      "wrongN": "3/10",
      "wrongLab": "gave Sravya the wrong job",
-     "wrongQuote": "\"the invoice report ... which Sravya will handle\"",
-     "wrongSub": "the report was already done; Sravya covers the tickets",
+     "wrongQuote": "\"I have completed the invoice report, which Sravya will handle.\"",
+     "wrongSub": "the report was done; Sravya covers the tickets",
      "signName": "Qwen",
      "signTag": "THE AI'S OWN NAME",
      "ruleHead": "GIVE IT 3 THINGS",
@@ -207,8 +208,30 @@
       "every date",
       "every name"
      ],
-     "payHead": "RAMYA'S EMAIL, HER FACTS, CHECKED",
+     "payHead": "RAMYA'S EMAIL: HER FACTS, CHECKED",
      "mine": "Sister's engagement · back Monday · Sravya covers",
+     "mail": [
+      [
+       "To",
+       "Kiran (manager)"
+      ],
+      [
+       "Leave",
+       "Thursday 26 and Friday 27 November"
+      ],
+      [
+       "Why",
+       "my sister's engagement, Vijayawada"
+      ],
+      [
+       "Back",
+       "Monday 30 November"
+      ],
+      [
+       "Cover",
+       "Sravya: my support tickets"
+      ]
+     ],
      "approved": "APPROVED",
      "payWhy": "back Monday · work covered"
     },
@@ -222,14 +245,14 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "Five leave emails for the same Friday. Their manager can approve two. <pause 0.35> [1] All five asked an AI, and all five say \"personal reasons.\" [2] Ramya's is her sister's engagement. [3] All five: on hold.",
-     "show": "Five leave emails for the same Friday. Their manager can approve two. All five asked an AI, and all five say \"personal reasons.\" Ramya's is her sister's engagement. All five: on hold.",
+     "text": "Five leave emails for the same Friday. Their manager can approve two. <pause 0.35> [1] All five asked an AI, and all five say \"personal reasons.\" [2] Ramya's is her sister's engagement. [3] All five are put on hold.",
+     "show": "Five leave emails for the same Friday. Their manager can approve two. All five asked an AI, and all five say \"personal reasons.\" Ramya's is her sister's engagement. All five are put on hold.",
      "maxgap": 0.3,
      "gap": 0.3,
      "tempo": 1.15,
      "tts": "Five leave emails for the same Friday. Their manager can approve two.",
      "file2": "01b_storyteller.wav",
-     "tts2": "All five asked an AI, and all five say \"personal reasons.\" Ramya's is her sister's engagement. All five: on hold.",
+     "tts2": "All five asked an AI, and all five say \"personal reasons.\" Ramya's is her sister's engagement. All five are put on hold.",
      "pause": 0.35
     }
    ]
@@ -254,7 +277,7 @@
     ],
     "captionTop": 1440,
     "t": {
-     "bar": "SAME FRIDAY · ONLY 2 CAN GO",
+     "bar": "SAME FRIDAY OFF · ONLY 2 GET LEAVE",
      "leftLab": "5 PEOPLE ASKED AN AI",
      "leftVal": "5 REASONS",
      "leftSub": "engagement · exam · ...",
@@ -270,7 +293,8 @@
       "Divya"
      ],
      "vague": "...due to personal reasons.",
-     "realTag": "Ramya's real reason: her sister's engagement · not in the email",
+     "realTag": "Ramya's real reason: her sister's engagement",
+     "realNot": "NOT IN HER EMAIL",
      "hold": "ALL 5 ON HOLD",
      "story": "a story · our test is real",
      "testHead": "OUR TEST · 10 FRESH CHATS",
@@ -345,7 +369,7 @@
      ],
      "cReason": [
       "0/10",
-      "give a real reason"
+      "a real reason: we gave none"
      ],
      "cDate": [
       "4/10",
@@ -376,11 +400,11 @@
      ],
      "monthN": "10/10",
      "monthLab": "guessed a month",
-     "monthSub": "April · March · July · October · November: we gave none",
+     "monthSub": "April, March, July, October, November: we gave no month",
      "wrongN": "3/10",
      "wrongLab": "gave Sravya the wrong job",
-     "wrongQuote": "\"the invoice report ... which Sravya will handle\"",
-     "wrongSub": "the report was already done; Sravya covers the tickets",
+     "wrongQuote": "\"I have completed the invoice report, which Sravya will handle.\"",
+     "wrongSub": "the report was done; Sravya covers the tickets",
      "signName": "Qwen",
      "signTag": "THE AI'S OWN NAME",
      "ruleHead": "GIVE IT 3 THINGS",
@@ -395,8 +419,30 @@
       "every date",
       "every name"
      ],
-     "payHead": "RAMYA'S EMAIL, HER FACTS, CHECKED",
+     "payHead": "RAMYA'S EMAIL: HER FACTS, CHECKED",
      "mine": "Sister's engagement · back Monday · Sravya covers",
+     "mail": [
+      [
+       "To",
+       "Kiran (manager)"
+      ],
+      [
+       "Leave",
+       "Thursday 26 and Friday 27 November"
+      ],
+      [
+       "Why",
+       "my sister's engagement, Vijayawada"
+      ],
+      [
+       "Back",
+       "Monday 30 November"
+      ],
+      [
+       "Cover",
+       "Sravya: my support tickets"
+      ]
+     ],
      "approved": "APPROVED",
      "payWhy": "back Monday · work covered"
     },
@@ -441,7 +487,7 @@
     ],
     "captionTop": 1440,
     "t": {
-     "bar": "SAME FRIDAY · ONLY 2 CAN GO",
+     "bar": "SAME FRIDAY OFF · ONLY 2 GET LEAVE",
      "leftLab": "5 PEOPLE ASKED AN AI",
      "leftVal": "5 REASONS",
      "leftSub": "engagement · exam · ...",
@@ -457,7 +503,8 @@
       "Divya"
      ],
      "vague": "...due to personal reasons.",
-     "realTag": "Ramya's real reason: her sister's engagement · not in the email",
+     "realTag": "Ramya's real reason: her sister's engagement",
+     "realNot": "NOT IN HER EMAIL",
      "hold": "ALL 5 ON HOLD",
      "story": "a story · our test is real",
      "testHead": "OUR TEST · 10 FRESH CHATS",
@@ -532,7 +579,7 @@
      ],
      "cReason": [
       "0/10",
-      "give a real reason"
+      "a real reason: we gave none"
      ],
      "cDate": [
       "4/10",
@@ -563,11 +610,11 @@
      ],
      "monthN": "10/10",
      "monthLab": "guessed a month",
-     "monthSub": "April · March · July · October · November: we gave none",
+     "monthSub": "April, March, July, October, November: we gave no month",
      "wrongN": "3/10",
      "wrongLab": "gave Sravya the wrong job",
-     "wrongQuote": "\"the invoice report ... which Sravya will handle\"",
-     "wrongSub": "the report was already done; Sravya covers the tickets",
+     "wrongQuote": "\"I have completed the invoice report, which Sravya will handle.\"",
+     "wrongSub": "the report was done; Sravya covers the tickets",
      "signName": "Qwen",
      "signTag": "THE AI'S OWN NAME",
      "ruleHead": "GIVE IT 3 THINGS",
@@ -582,8 +629,30 @@
       "every date",
       "every name"
      ],
-     "payHead": "RAMYA'S EMAIL, HER FACTS, CHECKED",
+     "payHead": "RAMYA'S EMAIL: HER FACTS, CHECKED",
      "mine": "Sister's engagement · back Monday · Sravya covers",
+     "mail": [
+      [
+       "To",
+       "Kiran (manager)"
+      ],
+      [
+       "Leave",
+       "Thursday 26 and Friday 27 November"
+      ],
+      [
+       "Why",
+       "my sister's engagement, Vijayawada"
+      ],
+      [
+       "Back",
+       "Monday 30 November"
+      ],
+      [
+       "Cover",
+       "Sravya: my support tickets"
+      ]
+     ],
      "approved": "APPROVED",
      "payWhy": "back Monday · work covered"
     },
@@ -597,7 +666,7 @@
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "With Ramya's facts: [1] sister's engagement in Vijayawada, back Monday, report done, Sravya covers her support tickets. [2] They came through. <pause 0.6> [3] But all ten invented a month, [4] three gave Sravya the invoice report, [5] and one signed it with the AI's own name.",
+     "text": "With Ramya's facts: [1] sister's engagement in Vijayawada, back Monday, report done, Sravya covers her support tickets. [2] They came through. <pause 0.85> [3] But all ten invented a month, [4] three gave Sravya the invoice report, [5] and one signed it with the AI's own name.",
      "show": "With Ramya's facts: sister's engagement in Vijayawada, back Monday, report done, Sravya covers her support tickets. They came through. But all ten invented a month, three gave Sravya the invoice report, and one signed it with the AI's own name.",
      "maxgap": 0.3,
      "gap": 0.3,
@@ -605,7 +674,7 @@
      "tts": "With Ramya's facts: sister's engagement in Vijayawada, back Monday, report done, Sravya covers her support tickets. They came through.",
      "file2": "03b_storyteller.wav",
      "tts2": "But all ten invented a month, three gave Sravya the invoice report, and one signed it with the AI's own name.",
-     "pause": 0.6
+     "pause": 0.85
     }
    ]
   },
@@ -625,7 +694,7 @@
     ],
     "captionTop": 1440,
     "t": {
-     "bar": "SAME FRIDAY · ONLY 2 CAN GO",
+     "bar": "SAME FRIDAY OFF · ONLY 2 GET LEAVE",
      "leftLab": "5 PEOPLE ASKED AN AI",
      "leftVal": "5 REASONS",
      "leftSub": "engagement · exam · ...",
@@ -641,7 +710,8 @@
       "Divya"
      ],
      "vague": "...due to personal reasons.",
-     "realTag": "Ramya's real reason: her sister's engagement · not in the email",
+     "realTag": "Ramya's real reason: her sister's engagement",
+     "realNot": "NOT IN HER EMAIL",
      "hold": "ALL 5 ON HOLD",
      "story": "a story · our test is real",
      "testHead": "OUR TEST · 10 FRESH CHATS",
@@ -716,7 +786,7 @@
      ],
      "cReason": [
       "0/10",
-      "give a real reason"
+      "a real reason: we gave none"
      ],
      "cDate": [
       "4/10",
@@ -747,11 +817,11 @@
      ],
      "monthN": "10/10",
      "monthLab": "guessed a month",
-     "monthSub": "April · March · July · October · November: we gave none",
+     "monthSub": "April, March, July, October, November: we gave no month",
      "wrongN": "3/10",
      "wrongLab": "gave Sravya the wrong job",
-     "wrongQuote": "\"the invoice report ... which Sravya will handle\"",
-     "wrongSub": "the report was already done; Sravya covers the tickets",
+     "wrongQuote": "\"I have completed the invoice report, which Sravya will handle.\"",
+     "wrongSub": "the report was done; Sravya covers the tickets",
      "signName": "Qwen",
      "signTag": "THE AI'S OWN NAME",
      "ruleHead": "GIVE IT 3 THINGS",
@@ -766,8 +836,30 @@
       "every date",
       "every name"
      ],
-     "payHead": "RAMYA'S EMAIL, HER FACTS, CHECKED",
+     "payHead": "RAMYA'S EMAIL: HER FACTS, CHECKED",
      "mine": "Sister's engagement · back Monday · Sravya covers",
+     "mail": [
+      [
+       "To",
+       "Kiran (manager)"
+      ],
+      [
+       "Leave",
+       "Thursday 26 and Friday 27 November"
+      ],
+      [
+       "Why",
+       "my sister's engagement, Vijayawada"
+      ],
+      [
+       "Back",
+       "Monday 30 November"
+      ],
+      [
+       "Cover",
+       "Sravya: my support tickets"
+      ]
+     ],
      "approved": "APPROVED",
      "payWhy": "back Monday · work covered"
     },
@@ -781,14 +873,14 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "So give it three things: [1] the reason you're comfortable sharing, [2] your dates and return day, [3] and who covers your work. <pause 0.35> [4] Then, before you send, check every bracket, every date, every name.",
-     "show": "So give it three things: the reason you're comfortable sharing, your dates and return day, and who covers your work. Then, before you send, check every bracket, every date, every name.",
+     "text": "So give it three things: [1] the reason you're comfortable sharing, [2] your dates and return day, [3] and who covers your work. <pause 0.35> [4] Before you send, check every bracket, date and name.",
+     "show": "So give it three things: the reason you're comfortable sharing, your dates and return day, and who covers your work. Before you send, check every bracket, date and name.",
      "maxgap": 0.3,
      "gap": 0.3,
      "tempo": 1.15,
      "tts": "So give it three things: the reason you're comfortable sharing, your dates and return day, and who covers your work.",
      "file2": "04b_storyteller.wav",
-     "tts2": "Then, before you send, check every bracket, every date, every name.",
+     "tts2": "Before you send, check every bracket, date and name.",
      "pause": 0.35
     }
    ]
@@ -815,7 +907,7 @@
     ],
     "captionTop": 1440,
     "t": {
-     "bar": "SAME FRIDAY · ONLY 2 CAN GO",
+     "bar": "SAME FRIDAY OFF · ONLY 2 GET LEAVE",
      "leftLab": "5 PEOPLE ASKED AN AI",
      "leftVal": "5 REASONS",
      "leftSub": "engagement · exam · ...",
@@ -831,7 +923,8 @@
       "Divya"
      ],
      "vague": "...due to personal reasons.",
-     "realTag": "Ramya's real reason: her sister's engagement · not in the email",
+     "realTag": "Ramya's real reason: her sister's engagement",
+     "realNot": "NOT IN HER EMAIL",
      "hold": "ALL 5 ON HOLD",
      "story": "a story · our test is real",
      "testHead": "OUR TEST · 10 FRESH CHATS",
@@ -906,7 +999,7 @@
      ],
      "cReason": [
       "0/10",
-      "give a real reason"
+      "a real reason: we gave none"
      ],
      "cDate": [
       "4/10",
@@ -937,11 +1030,11 @@
      ],
      "monthN": "10/10",
      "monthLab": "guessed a month",
-     "monthSub": "April · March · July · October · November: we gave none",
+     "monthSub": "April, March, July, October, November: we gave no month",
      "wrongN": "3/10",
      "wrongLab": "gave Sravya the wrong job",
-     "wrongQuote": "\"the invoice report ... which Sravya will handle\"",
-     "wrongSub": "the report was already done; Sravya covers the tickets",
+     "wrongQuote": "\"I have completed the invoice report, which Sravya will handle.\"",
+     "wrongSub": "the report was done; Sravya covers the tickets",
      "signName": "Qwen",
      "signTag": "THE AI'S OWN NAME",
      "ruleHead": "GIVE IT 3 THINGS",
@@ -956,8 +1049,30 @@
       "every date",
       "every name"
      ],
-     "payHead": "RAMYA'S EMAIL, HER FACTS, CHECKED",
+     "payHead": "RAMYA'S EMAIL: HER FACTS, CHECKED",
      "mine": "Sister's engagement · back Monday · Sravya covers",
+     "mail": [
+      [
+       "To",
+       "Kiran (manager)"
+      ],
+      [
+       "Leave",
+       "Thursday 26 and Friday 27 November"
+      ],
+      [
+       "Why",
+       "my sister's engagement, Vijayawada"
+      ],
+      [
+       "Back",
+       "Monday 30 November"
+      ],
+      [
+       "Cover",
+       "Sravya: my support tickets"
+      ]
+     ],
      "approved": "APPROVED",
      "payWhy": "back Monday · work covered"
     },
@@ -971,8 +1086,8 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "Ramya added her facts and checked it. [1] Back Monday, Sravya covers: Kiran approved hers first.",
-     "show": "Ramya added her facts and checked it. Back Monday, Sravya covers: Kiran approved hers first.",
+     "text": "Ramya added her facts and checked it. [1] Back Monday, Sravya covers: her manager approved hers first.",
+     "show": "Ramya added her facts and checked it. Back Monday, Sravya covers: her manager approved hers first.",
      "maxgap": 0.3,
      "gap": 0.25,
      "tempo": 1.15

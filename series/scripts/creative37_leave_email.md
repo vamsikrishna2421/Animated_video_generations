@@ -107,3 +107,20 @@ news; pops on the counters, one bonk (the invoice report), one ding (the AI's na
 - The first cut ran 64.3 s: "Her email doesn't say so" cut (the frame says "not in the email"), "Then we typed Ramya's
   facts" → "With Ramya's facts", "Her facts came through" → "They came through", tempo 1.12 → 1.15, shorter tails:
   59.9 s.
+
+## Render review (human-viewer, EN) and what changed
+- Both viewers: the hook's link (her real reason isn't in her email) was a strip too small to read → a big yellow
+  callout over the inbox, "Ramya's real reason: her sister's engagement · NOT IN HER EMAIL". "Kiran" at the end was
+  never introduced in English → "her manager approved hers first". The frame-1 bar now says LEAVE ("SAME FRIDAY OFF ·
+  ONLY 2 GET LEAVE").
+- Small text: the month list, the 3/10 explanation (now the email's own sentence in large type: "I have completed the
+  invoice report, which Sravya will handle."), the "Qwen" sign-off and the approved email (now a full email card: to,
+  leave, why, back, cover) are all larger. "SCREENSHOT THIS" moved off the title. "0/10 a real reason: we gave none"
+  (Priya: the vague ask gave it none, so this is the prompt's fault, and the card now says so).
+- Audio: "All five: on hold" was heard "unhauled"/"unholy" in the mix → "All five are put on hold." and the hit lands as
+  "hold" ends; the beat before "But all ten invented a month" is longer (0.85 s); "check every bracket, every date,
+  every name" → "check every bracket, date and name" (length). EN 59.2 s.
+- Telugu takes (read in full: the judge keeps only the first 110 letters): the hook's "లీవ్ హోల్డ్" came out "రోల్డ్" →
+  a try with "లీవ్ హోల్డ్" pinned, then re-voiced with the trimmed hook; "చెక్ చేసుకోండి" came out "check check" →
+  "చూసుకోండి". The first Telugu cut ran 69.6 s: "మెయిల్ చూస్తే కిరణ్ కి అది తెలియదు" cut (the callout says it), line 3
+  shortened, line 5 keeps only the approval, tempo 1.12 → 1.16: 59.8 s.

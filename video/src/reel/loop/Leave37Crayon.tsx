@@ -23,8 +23,9 @@ const HOLD = 18;
 const CLAP = "reel/creative09v1/clap.wav";
 const RED = "#dc2626", GREEN = "#16a34a", HL = "#fde047";
 const SANS = (s: number, w = 800) => `${w} ${s}px Arial, "Noto Sans Telugu", sans-serif`;
-// the hold hit lands as "hold" ends (render review: a buzz on the word made it "unhauled"); Telugu: ~0.9 s after cue 3
-const holdAt = (ln: Line, c3: number) => { const w = (ln.words ?? []).find((x) => /^hold$/i.test(x.w.replace(/[^A-Za-z]/g, ""))); return w ? w.to - 2 : c3 + 26; };
+// the hold hit lands as "hold" ends (render review: a buzz on the word made it "unhauled"); Telugu: "హోల్డ్ లో పడింది"
+// ends the line, so the hit waits for the line's last syllable (a hit 0.9 s after cue 3 made it "ఫోల్డు")
+const holdAt = (ln: Line, c3: number) => { const w = (ln.words ?? []).find((x) => /^hold$/i.test(x.w.replace(/[^A-Za-z]/g, ""))); return w ? w.to - 2 : Math.max(c3 + 26, ln.from + ln.frames - 4); };
 
 const bg = (c: Ctx, W: number, H: number) => { c.fillStyle = "#eff6ff"; c.fillRect(0, 0, W, H); c.fillStyle = "#dbeafe"; c.fillRect(0, 1180, W, H - 1180); };
 const block = (c: Ctx, x: number, y: number, w: number, h: number, label: string, val: string, sub: string, bgc: string, fg: string, k: number) => {
@@ -124,8 +125,13 @@ const StLeave: React.FC<SP> = ({ s }) => {
           person(c, "ramya" as BillWho, [215, 1150], 0.68, kHold > 0.5 ? "shock" : "worried", "phone", false, r);
           inbox(c, 400, 705, 640, T, null, kLit, 0);
           stamp(c, T.hold, 560, 1270, 62, RED, kHold);
-          if (kLit > 0 && !full) chip(c, T.realTag, W / 2, 1372, "#ca8a04", "#ffffff", kLit, fit(c, T.realTag, W - 140, 34, 900));
-          else if (P === "hook" && !loopOn && f >= cu(1, 0.35) - 4) chip(c, T.story, W / 2, 1372, "#1e293b", "#f8fafc", 1, 30);
+          if (kLit > 0 && !full && kHold < 1) {   // render review: the link "her real reason isn't in her email" must read on a phone
+            c.save(); c.globalAlpha = clamp(kLit * 3) * (1 - kHold); c.translate(0, (1 - easeOut(clamp(kLit * 1.5))) * 30);
+            c.fillStyle = "#fef9c3"; rrect(c, 420, 870, 600, 230, 22); c.fill(); c.strokeStyle = "#ca8a04"; c.lineWidth = 6; rrect(c, 420, 870, 600, 230, 22); c.stroke();
+            c.textAlign = "left"; c.font = SANS(40, 900); c.fillStyle = INK; wrap(c, T.realTag, 540).slice(0, 2).forEach((s2, q) => c.fillText(s2, 450, 930 + q * 50));
+            c.font = SANS(50, 900); c.fillStyle = RED; c.fillText(T.realNot, 450, 1070); c.restore();
+          }
+          if (P === "hook" && !loopOn && f >= cu(1, 0.35) - 4 && f < cu(2, 0.6) - 4) chip(c, T.story, W / 2, 1372, "#1e293b", "#f8fafc", 1, 38);
         } else if (P === "test") {
           c.textAlign = "center"; c.font = SANS(54, 900); c.fillStyle = "#1e3a8a"; c.fillText(T.testHead, W / 2, 330);
           c.font = SANS(fit(c, T.model, W - 100, 34, 800), 800); c.fillStyle = "#475569"; c.fillText(T.model, W / 2, 380);
@@ -167,25 +173,32 @@ const StLeave: React.FC<SP> = ({ s }) => {
             if (l3) { c.font = SANS(fit(c, l3, W - 180, 28, 700), 700); c.fillStyle = "#fecaca"; c.fillText(l3, 92, y + 156); }
             c.restore();
           };
-          card(720, 136, T.monthN, T.monthLab, T.monthSub, "", seg(f, c3 - 4, c3 + 4));
-          card(872, 180, T.wrongN, T.wrongLab, T.wrongQuote, T.wrongSub, seg(f, c4 - 4, c4 + 4));
+          card(706, 150, T.monthN, T.monthLab, T.monthSub, "", seg(f, c3 - 4, c3 + 4));
+          const kW = seg(f, c4 - 4, c4 + 4);
+          if (kW > 0) {   // render review: the 3/10 quote in large type explains itself
+            c.save(); c.globalAlpha = clamp(kW * 3); c.translate(0, (1 - easeOut(clamp(kW * 1.5))) * 30); c.fillStyle = "#7f1d1d"; rrect(c, 60, 870, W - 120, 250, 22); c.fill();
+            c.textAlign = "left"; c.font = SANS(58, 900); c.fillStyle = "#fff"; c.fillText(T.wrongN, 92, 940);
+            const bw = c.measureText(T.wrongN).width; c.font = SANS(fit(c, T.wrongLab, W - 220 - bw, 42, 900), 900); c.fillStyle = "#fecaca"; c.fillText(T.wrongLab, 120 + bw, 934);
+            c.font = SANS(38, 800); c.fillStyle = "#fef9c3"; wrap(c, T.wrongQuote, W - 190).slice(0, 2).forEach((s2, q) => c.fillText(s2, 92, 992 + q * 46));
+            c.font = SANS(fit(c, T.wrongSub, W - 180, 32, 800), 800); c.fillStyle = "#fecaca"; c.fillText(T.wrongSub, 92, 1094); c.restore();
+          }
           const kQ = seg(f, c5 - 4, c5 + 4);
           if (kQ > 0) {
             c.save(); c.globalAlpha = clamp(kQ * 3); c.translate(0, (1 - easeOut(clamp(kQ * 1.5))) * 40);
-            c.fillStyle = "#ffffff"; rrect(c, 240, 1080, 520, 250, 20); c.fill(); c.strokeStyle = "#1e293b"; c.lineWidth = 4; rrect(c, 240, 1080, 520, 250, 20); c.stroke();
-            c.textAlign = "left"; c.font = SANS(32, 700); c.fillStyle = "#334155"; c.fillText("Best regards,", 280, 1136);
-            c.font = SANS(50, 900); c.fillStyle = RED; c.fillText(T.signName, 280, 1206);
+            c.fillStyle = "#ffffff"; rrect(c, 60, 1135, 560, 250, 20); c.fill(); c.strokeStyle = "#1e293b"; c.lineWidth = 4; rrect(c, 60, 1135, 560, 250, 20); c.stroke();
+            c.textAlign = "left"; c.font = SANS(38, 700); c.fillStyle = "#334155"; c.fillText("Best regards,", 100, 1192);
+            c.font = SANS(68, 900); c.fillStyle = RED; c.fillText(T.signName, 100, 1272);
             const nw = c.measureText(T.signName).width;
-            c.strokeStyle = RED; c.lineWidth = 6; c.beginPath(); c.ellipse(280 + nw / 2, 1190, nw / 2 + 28, 42, 0, 0, 7); c.stroke();
-            c.font = SANS(32, 700); c.fillStyle = "#334155"; c.fillText("[Your Name]", 280, 1290); c.restore();
-            stamp(c, T.signTag, 830, 1130, 30, RED, kQ, 0.08);
+            c.strokeStyle = RED; c.lineWidth = 7; c.beginPath(); c.ellipse(100 + nw / 2, 1250, nw / 2 + 32, 52, 0, 0, 7); c.stroke();
+            c.font = SANS(36, 700); c.fillStyle = "#334155"; c.fillText("[Your Name]", 100, 1356); c.restore();
+            stamp(c, T.signTag, 830, 1250, 40, RED, kQ, 0.08);
           }
         } else if (P === "rule") {
           c.textAlign = "center"; c.font = SANS(56, 900); c.fillStyle = "#1e3a8a"; c.fillText(T.ruleHead, W / 2, 330);
           const k0 = seg(f, ln.from + 2, ln.from + 10);
           if (k0 > 0) {
             c.save(); c.globalAlpha = clamp(k0 * 3); c.fillStyle = "#ffffff"; rrect(c, 60, 370, W - 120, 470, 28); c.fill(); c.strokeStyle = "#1e293b"; c.lineWidth = 6; rrect(c, 60, 370, W - 120, 470, 28); c.stroke(); c.restore();
-            stamp(c, "SCREENSHOT THIS", 790, 378, 38, "#2563eb", k0, 0.05);
+            stamp(c, "SCREENSHOT THIS", 800, 836, 38, "#2563eb", k0, -0.05);
           }
           (T.three as string[]).forEach((t, q) => {
             const kq = seg(f, cu(q + 1, 0.2 * (q + 1)) - 4, cu(q + 1, 0.2 * (q + 1)) + 4); if (kq <= 0) return;
@@ -203,10 +216,16 @@ const StLeave: React.FC<SP> = ({ s }) => {
         } else if (P === "payoff") {
           const kOk = seg(f, cu(1, 0.5) - 2, cu(1, 0.5) + 6);
           c.textAlign = "center"; c.font = SANS(fit(c, T.payHead, W - 100, 50, 900), 900); c.fillStyle = "#1e3a8a"; c.fillText(T.payHead, W / 2, 330);
-          inbox(c, 60, 380, W - 120, T, T.mine, 1, kOk);
-          person(c, "ramya" as BillWho, [250, 1330], 0.6, kOk > 0.5 ? "happy" : "calm", "phone", false, r);
-          stamp(c, T.approved, 740, 1010, 64, GREEN, kOk, -0.08);
-          if (f >= ln.from + 6) chip(c, T.payWhy, 740, 1150, "#14532d", "#f0fdf4", seg(f, ln.from + 6, ln.from + 14), fit(c, T.payWhy, 520, 32, 900));
+          const k0 = seg(f, ln.from, ln.from + 8);
+          c.save(); c.globalAlpha = clamp(k0 * 3); c.fillStyle = "#ffffff"; rrect(c, 60, 380, W - 120, 560, 26); c.fill(); c.strokeStyle = kOk > 0 ? GREEN : "#1e293b"; c.lineWidth = 6; rrect(c, 60, 380, W - 120, 560, 26); c.stroke();
+          (T.mail as [string, string][]).forEach(([k2, v2], q) => {
+            const y = 470 + q * 100; c.textAlign = "left"; c.font = SANS(34, 900); c.fillStyle = "#64748b"; c.fillText(k2.toUpperCase(), 100, y);
+            c.font = SANS(fit(c, v2, W - 400, 46, 900), 900); c.fillStyle = INK; c.fillText(v2, 300, y);
+          });
+          c.restore();
+          person(c, "ramya" as BillWho, [250, 1350], 0.55, kOk > 0.5 ? "happy" : "calm", "phone", false, r);
+          stamp(c, T.approved, 720, 1030, 70, GREEN, kOk, -0.08);
+          if (f >= cu(1, 0.5)) chip(c, T.payWhy, 720, 1180, "#14532d", "#f0fdf4", seg(f, cu(1, 0.5) + 4, cu(1, 0.5) + 12), fit(c, T.payWhy, 560, 40, 900));
         }
         c.textAlign = "left";
       }} />
