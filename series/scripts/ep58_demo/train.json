@@ -1,0 +1,52 @@
+{
+ "messages": 5574,
+ "spam": 747,
+ "train": 4459,
+ "test": 1115,
+ "train_seconds": 1.86,
+ "test_right": 1100,
+ "accuracy": 0.9865,
+ "spam_in_test": 149,
+ "spam_caught": 135,
+ "spam_missed": 14,
+ "genuine_in_test": 966,
+ "genuine_flagged": 1,
+ "ours": [
+  {
+   "message": "Dear customer, your KYC is pending. Update today or your bank account will be blocked: bit.ly/xyz",
+   "truth": "spam",
+   "spam_probability": 0.246,
+   "called": "ham"
+  },
+  {
+   "message": "Your parcel is on hold at our warehouse. Pay Rs 25 now to release it: link",
+   "truth": "spam",
+   "spam_probability": 0.25,
+   "called": "ham"
+  },
+  {
+   "message": "Congratulations! You have won Rs 25,00,000 in the lucky draw. Call now to claim",
+   "truth": "spam",
+   "spam_probability": 0.973,
+   "called": "spam"
+  },
+  {
+   "message": "482910 is your OTP to log in. Do not share it with anyone.",
+   "truth": "ham",
+   "spam_probability": 0.053,
+   "called": "ham"
+  },
+  {
+   "message": "Your electricity bill of Rs 1,240 is due on 25 Nov. Pay on the app to avoid a late fee.",
+   "truth": "ham",
+   "spam_probability": 0.137,
+   "called": "ham"
+  },
+  {
+   "message": "Amma, I reached the hostel. Will call you after dinner.",
+   "truth": "ham",
+   "spam_probability": 0.025,
+   "called": "ham"
+  }
+ ]
+}
