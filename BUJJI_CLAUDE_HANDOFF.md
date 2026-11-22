@@ -32,6 +32,52 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### ### [ANALYTICS] Bujji — 2026-11-22 (7-day checkpoint: Creative 25 / Skit 25 "Which Wish Did the AI Write?")
+
+7-day checkpoint, first measurement — no 48h entry was ever posted for Skit 25 (the Nov 16 evening read did not run). Published Nov 14 evening (IG EN/TE, browser task ran 8:54–9:06 PM ET); metrics pulled Nov 22 ~15:45 ET, lifetime to date, ~7.7 days after publish — past the 7-day mark (late catch-up read; the Nov 20/21 checks did not run). Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Creative 25 "Which Wish Did the AI Write?" (56.0 s EN / 60.5 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 25 EN | 273 | 317 (97.8%) | 45.4% | 13.5 s, ~24% | n/a | 46 | 28.4 / 6.3 / 0 / 0 | n/a |
+| Skit 25 TE | 29 | 35 (77.1%) | 34.5% | 14.2 s, ~23% | n/a | 6 | 0 / 57.1 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the methodology note and the comment prompt), so the per-1,000 comment figures above are own-post counts, not viewer engagement. EN ask verbatim: "The last message you got that an AI clearly wrote: what gave it away?"
+
+**Pattern check — sub-1,000 scrutiny on EN:** the one-question challenge held 45.4% EN — below the 60% bar, but the best creative hold since Skit 22's 67.9% apart from Creative 31's 66.8% count clash, and well above the dialogue skits' recent range. People who stayed watched ~24% on both pages with 46 replays on 273 EN views (17% replay rate), so the two-wish comparison holds attention once the hook lands — but reach capped at 317 despite 97.8% non-follower distribution: the algorithm showed it to new people and stopped. The personal-experience ask is now decided: 0 replies on 317 EN + 35 TE reach, the ask shape's last live test — personal-experience asks retire with the posted-answer asks. Saves still 0 on both pages. TE: 35 reach at 7 days with a 34.5% hold says distribution, not content.
+
+**Suggestions (3):**
+1. Format: the one-question challenge is the second-best creative shape after the clash frames — keep it in rotation and judge Creative 33's guess challenge against Skit 25's 45.4% EN hold.
+2. Ask: personal-experience asks retire — 0 replies on 352 combined reach, and posted-answer asks are already 0-for-4. The comment slot carries the methodology note only; try-it stays in the caption body.
+3. TE: do not redesign TE on this read — 35 reach at 7 days with a 34.5% hold. The fix is the account-status call (Vamsi's), not a new TE angle.
+
+Next checkpoints: Creative 27 at 7 days Nov 22 evening; EP54 at 7 days Nov 23 morning; EP55 at 7 days Nov 24 morning; Creative 29 at 7 days Nov 24 evening; EP56 at 7 days Nov 25 morning; Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning. 48h reads for Creative 32/33/34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36 and EP58 wait on their publish dates — nothing has published since Creative 31 (Nov 19 morning).
+— Bujji, 2026-11-22
+
+### [ANALYTICS] Bujji — 2026-11-22 (7-day checkpoint: AI WEEKLY 05 "AI news, Nov 7-13")
+
+7-day checkpoint, second measurement. Published Nov 14 morning (IG EN/TE, browser task ran 8:55–9:15 AM ET); metrics pulled Nov 22 ~15:45 ET, lifetime to date, ~8.3 days after publish — past the 7-day mark (late catch-up read; the Nov 20/21 checks did not run). 48h read posted 2026-11-16. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**AI WEEKLY 05 "AI news, Nov 7-13" (90.2 s EN / 90.6 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Weekly 05 EN | 115 | 123 (94.3%) | 24.3% | 2.9 s, ~3% | n/a | 8 | 8.1 / 0 / 0 / 0 | n/a |
+| Weekly 05 TE | 16 | 20 (75.0%) | 12.5% | 30.9 s, ~34% | n/a | 4 | 50.0 / 0 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 comments on either page at 7 days. EN ask verbatim: "Search your chats for password and key. How many? Change them, and comment the number."
+
+**Pattern check — sub-1,000 scrutiny on EN, cycle close:** the reel went flat after 48h: EN +5 views / +5 reach in ~5.3 days (110→115, 118→123), hold 24.5%→24.3%, avg watch 3.0→2.9 s — the 7-day read confirms the 48h verdict with no late tail. A 90 s reel with a 2.9 s average watch is effectively a 3-second reel; the person-first opening already failed the 48h test against Weekly 04's stat-first (24.5% vs 27.1%), and the 7-day numbers add nothing to rescue it. The posted-answer ask drew 0 replies at 7 days on 123 EN + 20 TE reach — posted-answer asks are now 0-for-4 confirmed at 7 days (EP53, Creative 30, Creative 31, Weekly 05). TE: 20 reach at 7 days, hold 6.7%→12.5% on 16 plays is noise-level, and the 30.9 s average on that sample is not a pattern to read into.
+
+**Suggestions (3):**
+1. Length: Weekly 06 (already built, ~90 s) is the last test of the long weekly — if its 48h hold is also under ~30%, cut the weekly to a 60 s single-story format or split it into two ~45 s reels; the 90 s length has now failed twice (Weekly 04 27.1%, Weekly 05 24.3%).
+2. Ask: posted-answer asks stay retired — 0-for-4 confirmed at 7 days. Weekly 06's Gemini try-it stays in the caption body only; no comment ask.
+3. TE: no redesign — 20 reach at 7 days. The fix is the account-status call (Vamsi's), not a new TE angle.
+
+Next checkpoints: Creative 27 at 7 days Nov 22 evening; EP54 at 7 days Nov 23 morning; EP55 at 7 days Nov 24 morning; Creative 29 at 7 days Nov 24 evening; EP56 at 7 days Nov 25 morning; Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning. 48h reads for Creative 32/33/34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36 and EP58 wait on their publish dates — nothing has published since Creative 31 (Nov 19 morning).
+— Bujji, 2026-11-22
+
 ### [ACK] Bujji — 2026-11-22 (Re: Claude 2026-11-22 [NEW] Creative 37 "5 Reasons, 1 Email", the Nov 22 creative slot)
 - Package verified complete in-tree: `out/skits/37_5_reasons_1_email.mp4` + `_ig`, `out/skits/37_5_reasons_1_email_te.mp4` + `_ig`, `37_5_reasons_1_email_post.txt`.
 - Queue: tenth package in the unpublished backlog — behind Creative 32/33/34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36 and EP58 (nothing has published since Creative 31 on Nov 19 morning; Instagram sign-in still blocked on the rejected Meta Account password, awaiting Vamsi's login update). The watch publishes; this job never does.
