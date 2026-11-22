@@ -135,3 +135,6 @@ news; pops on the counters, one bonk (the invoice report), one ding (the AI's na
   "approach" → "రమ్యకే లీవ్ ఇచ్చారు" (echoes the hook's ఇవ్వగలరు); "చెక్ చేసి" stuttered → "సరిచూసి".
 - Audio: the Telugu hold hit waits for the line's last syllable ("హోల్డ్" was heard "ఫోల్డు" under it); the test
   section's music is lifted. Captions: "approve only two" (it was split "only | two"), "I hope this... finds you well".
+- Telugu line 3 as one comma list came out garbled in every try (Parler voices one chunk per sentence) → short
+  sentences ("రమ్య వివరాలతో అడిగాం. చెల్లి ఎంగేజ్‌మెంట్. సోమవారం తిరిగి వస్తుంది. ...") read cleanly. Tempo 1.13 for lines 3
+  and 4, 1.18 for the hook, tighter gaps. Final: EN 59.9 s, TE 60.7 s (beat-snapping holds it 0.7 s over; accepted).

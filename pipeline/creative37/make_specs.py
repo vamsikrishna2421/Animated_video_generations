@@ -17,7 +17,7 @@ LINES = {   # n: (prop, English, Telugu)
     2: ("test", "We typed the same vague ask into a free AI, ten times. [1] Ten of ten opened with \"I hope this... finds you well.\" [2] Not one had a real reason. [3] Four invented dates nobody gave it.",
         "మేము కూడా అలాగే, ఒక ఫ్రీ చాట్‌బాట్ ని పది సార్లు అడిగాం. [1] పదింటిలోనూ ఒకే మొదలు: ఐ హోప్ దిస్ ఫైండ్స్ యు వెల్. [2] ఒక్కదాంట్లో కూడా అసలు కారణం లేదు. [3] నాలుగు, ఎవరూ చెప్పని తేదీలు రాశాయి."),
     3: ("facts", "With Ramya's facts: [1] sister's engagement in Vijayawada, back Monday, report done, Sravya covers her support tickets. [2] Almost all came through. | [3] But all ten invented a month, [4] three gave Sravya the invoice report, [5] and one signed it with the AI's own name.",
-        "రమ్య వివరాలతో: [1] చెల్లి ఎంగేజ్‌మెంట్, సోమవారం తిరిగి వస్తుంది, రిపోర్ట్ అయిపోయింది, సపోర్ట్ టికెట్లు శ్రావ్య చూసుకుంటుంది. [2] దాదాపు అన్నీ వచ్చాయి. | [3] కానీ పదింటిలోనూ నెల ఊహించి రాశాయి; [4] మూడింట్లో, అయిపోయిన రిపోర్ట్ ని శ్రావ్యకి అప్పగించాయి. [5] ఒకటి, చాట్‌బాట్ పేరుతోనే సంతకం పెట్టింది."),
+        "రమ్య వివరాలతో అడిగాం. [1] చెల్లి ఎంగేజ్‌మెంట్. సోమవారం తిరిగి వస్తుంది. రిపోర్ట్ అయిపోయింది. సపోర్ట్ టికెట్లు శ్రావ్య చూసుకుంటుంది. [2] దాదాపు అన్నీ వచ్చాయి. | [3] కానీ పదింటిలోనూ నెల ఊహించి రాశాయి; [4] మూడింట్లో, అయిపోయిన రిపోర్ట్ ని శ్రావ్యకి అప్పగించాయి. [5] ఒకటి, చాట్‌బాట్ పేరుతోనే సంతకం పెట్టింది."),
     4: ("rule", "So give it three things: [1] the reason you're comfortable sharing, [2] your dates and return day, [3] and who covers your work. | [4] Before you send, check every bracket, date and name.",
         "మూడు విషయాలు చెప్పండి: [1] చెప్పడానికి ఇబ్బంది లేని కారణం, [2] ఎప్పటి నుంచి ఎప్పటి వరకు, [3] మీ పని ఎవరు చూసుకుంటారు. | [4] పంపే ముందు, ప్రతి బ్రాకెట్, ప్రతి తేదీ, ప్రతి పేరు చూసుకోండి."),   # TE take review: "చెక్ చేసుకోండి" came out "check check"
     5: ("payoff", "Ramya added her facts and checked it. [1] Back Monday, Sravya covers: her manager approved hers first.",
@@ -35,8 +35,8 @@ SHOW_TE = {   # the Telugu cut's English captions say what the Telugu voice says
     6: "Five reasons, one email?",
 }
 SPLIT_PAUSE = {1: 0.35, 3: 0.85, 4: 0.35}   # render review: the beat before the bad news was under 0.5 s   # 3: the silence before the bad news   # voice review: "made up dates" was heard "made updates", "guessed" as "guests": "invented"
-SPLIT_PAUSE_TE = {1: 0.3, 3: 0.5, 4: 0.3}
-TEMPO_TE = {3: 1.1, 4: 1.1}   # TE render review: the facts and the rule were rushed at 1.16
+SPLIT_PAUSE_TE = {1: 0.2, 3: 0.5, 4: 0.2}
+TEMPO_TE = {1: 1.18, 3: 1.13, 4: 1.13}   # TE render review: the facts and the rule were rushed at 1.16
 T = {
     "bar": "SAME FRIDAY OFF · ONLY 2 GET LEAVE", "leftLab": "5 PEOPLE ASKED AN AI", "leftVal": "5 REASONS", "leftSub": "engagement · exam · ...",
     "rightLab": "THE AI WROTE", "rightVal": "1 EMAIL", "rightSub": "\"...due to personal reasons\"",
@@ -79,8 +79,8 @@ SCENES = [("s_a", (1,), {"boost": 2.2, "drop_at": [[0, 3, 0.3]], "tail": 0.3}),
           ("s_d", (4,), {"boost": 2.4, "lift": 0.8, "rise": 1.8, "tail": 0.4}),
           ("s_e", (5, 6), {"outro": True, "pre": 0.2, "boost": 3.2, "lift": 0.8, "rise": 3.4, "tail": 0.0})]
 GAP = {1: 0.3, 2: 0.3, 3: 0.3, 4: 0.3, 5: 0.25, 6: 0.0}   # the first cut ran 64.3 s
-GAP_TE = {1: 0.2, 2: 0.2, 3: 0.2, 4: 0.2, 5: 0.2, 6: 0.0}
-FLAGS_TE = {"s_a": {"tail": 0.15}, "s_b": {"boost": 2.0}, "s_c": {"tail": 0.1, "boost": 1.8}, "s_d": {"tail": 0.15}, "s_e": {"boost": 3.0, "rise": 3.2}}
+GAP_TE = {1: 0.15, 2: 0.15, 3: 0.15, 4: 0.15, 5: 0.15, 6: 0.0}
+FLAGS_TE = {"s_a": {"tail": 0.05}, "s_b": {"boost": 2.0, "tail": 0.1}, "s_c": {"tail": 0.05, "boost": 1.8}, "s_d": {"tail": 0.05}, "s_e": {"boost": 3.0, "rise": 3.2, "pre": 0.1}}
 YT = {"s_a": "5 reasons, 1 email", "s_b": "Our test: the vague ask", "s_c": "With her facts", "s_d": "Give it 3 things", "s_e": "Approved"}
 NAMES = {"en": {"storyteller": ""}, "te": {"storyteller": ""}}
 MARK = re.compile(r"\[\d+\]\s*")
