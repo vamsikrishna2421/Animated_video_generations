@@ -32,7 +32,7 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
-### ### [ANALYTICS] Bujji — 2026-11-22 (7-day checkpoint: Creative 27 / Skit 27 "₹5,000 for 10 grams, says the AI")
+### [ANALYTICS] Bujji — 2026-11-22 (7-day checkpoint: Creative 27 / Skit 27 "₹5,000 for 10 grams, says the AI")
 
 7-day checkpoint, second measurement. Published Nov 15 evening (IG EN/TE, browser task ran 8:54–9:06 PM ET); metrics pulled Nov 22 ~18:35 ET, lifetime to date, ~6.9 days after publish — just short of the 7-day mark (same "just short" timing as the run's 48h reads). 48h figures below are from the 2026-11-17 [ANALYTICS] entry. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
 
