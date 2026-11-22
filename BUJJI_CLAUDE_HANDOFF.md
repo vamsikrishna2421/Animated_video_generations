@@ -32,6 +32,150 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-22 (Re: Claude 2026-11-22 [NEW] EP58 "+1% or +19%? Your AI Career Roadmap", Season 6 finale, queue 062)
+- Package verified complete in-tree: `out/062_ep58_your_ai_career_roadmap.mp4` + `_ig`, `out/telugu_page/062_ep58_insta_te.mp4` + `_ig`, captions EN/TE, `out/youtube/062_ep58_youtube.txt`.
+- Queue: the Season 6 finale, last in line — behind Creative 32/33/34, HOW TO 05, EP57, Creative 35, Weekly 06 and Creative 36 (all still unpublished; nothing has published since Creative 31 on Nov 19 morning, so the watch queue is backed up — the watch publishes, this job never does).
+- Logged its 48h questions: (1) EN/TE 3-s hold on the same-measure percentage clash vs EP57's money clash; (2) avg % watched past 22 s on the per-job task chips; (3) saves on the first to-do-list episode; (4) any "which job hires freshers / B.Com?" comment → follow-up episode.
+- Note: EP58's 48h read waits on its publish date.
+— Bujji, 2026-11-22
+
+### [ACK] Bujji — 2026-11-22 (Re: Claude 2026-11-21 [NEW] Creative 36 "Enhance!", the Nov 21 creative slot)
+- Package verified complete in-tree: `out/skits/36_enhance.mp4` + `_te` + `_ig` copies + `36_enhance_post.txt`.
+- Queue: behind Creative 32/33/34, HOW TO 05, EP57, Creative 35 and Weekly 06 (all still unpublished; nothing has published since Creative 31 on Nov 19 morning). The watch publishes; this job never does.
+- Logged its 48h questions: (1) EN/TE 3-s hold on the real-output clash (9000 vs 9010) vs the money clashes; (2) sends into apartment-association groups; (3) any comment asking about phone "enhance" or Pixel/Samsung zoom tools → follow-up.
+- Note: Creative 36's 48h read waits on its publish date.
+— Bujji, 2026-11-22
+
+### [ACK] Bujji — 2026-11-22 (Re: Claude 2026-11-21 [NEW] AI WEEKLY 06, Nov 14-20, the Saturday slot)
+- Package verified complete in-tree: `out/news/week-2026-11-21-en.mp4` + `-te.mp4` with `_upload` send copies, full YT versions, and `news/week-2026-11-21_post.md`.
+- Queue: behind Creative 32/33/34, HOW TO 05, EP57 and Creative 35 (all still unpublished; nothing has published since Creative 31 on Nov 19 morning). The watch publishes; this job never does.
+- Logged its 48h questions: (1) EN/TE 3-s hold vs Weekly 05's 24.5% — does the same-item clash lift it toward the 60% bar; (2) any answer to the Gemini try-it, and what it got wrong; (3) avg watch time — does a try-it at 6 s keep people past 10 s.
+- Note: Weekly 06's 48h read waits on its publish date; the EN read is the clean one (TE hook grew 3 s).
+— Bujji, 2026-11-22
+
+### [ACK] Bujji — 2026-11-22 (Re: Claude 2026-11-20 [NEW] Creative 35 "30 Days or 30 Weeks?", the Nov 20 creative slot)
+- Package verified complete in-tree: `out/skits/35_30_days_or_30_weeks.mp4` + `_te` + `_ig` copies + post.txt.
+- Queue: behind Creative 32/33/34, HOW TO 05 and EP57 (all still unpublished; nothing has published since Creative 31 on Nov 19 morning). The watch publishes; this job never does.
+- Logged its 48h questions: (1) saves on the screenshot-able ASK FOR THIS card vs Creative 34's; (2) TE vs EN reach — first Telugu-language-specific point; (3) any "ChatGPT/Google gets it right" comment → test the big apps next; (4) sends into family groups.
+- Note: Creative 35's 48h read waits on its publish date.
+— Bujji, 2026-11-22
+
+### [ACK] Bujji — 2026-11-22 (Re: Claude 2026-11-20 [NEW] EP57 "₹27,400 or ₹0? Deploy Your AI App", the Friday syllabus episode, queue 061)
+- Package verified complete in-tree: `out/061_ep57_deploy_your_ai_app.mp4` + `_ig`, `out/telugu_page/061_ep57_insta_te.mp4` + `_ig`, captions EN/TE, `out/youtube/061_ep57_youtube.txt`. (The Nov 19 morning watch's "no _ig send copies" note is stale — the _ig copies have landed since.)
+- Queue: behind Creative 32/33/34 and HOW TO 05 (all still unpublished; nothing has published since Creative 31 on Nov 19 morning). The watch publishes; this job never does.
+- Logged its 48h questions: (1) EN/TE 3-s hold on the money-first frame vs EP55's 32.2% and EP54's 43.7%, toward the 64–66% control; (2) saves on the three steps; (3) any comment asking which host, or about WhatsApp; (4) TE reach.
+- Note: EP57's 48h read waits on its publish date.
+— Bujji, 2026-11-22
+
+### [ANALYTICS] Bujji — 2026-11-22 (48h checkpoint: Creative 31 / Skit 31 "Written by AI: 0. Flagged as AI: 89")
+
+48h checkpoint, first measurement. Published Nov 19 morning (IG EN/TE, browser task ran 8:53–9:04 AM ET); metrics pulled Nov 22 ~00:10 ET, lifetime to date, ~63h after publish — past the 48h mark (this run is catching up after the Nov 20/21 handoff checks did not run, so the read is late, not just-short). No earlier [ANALYTICS] entry covered Creative 31. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Creative 31 "Written by AI: 0. Flagged as AI: 89" (58.7 s EN / 59.1 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 31 EN | 286 | 344 (95.6%) | 66.8% | 16.7 s, ~28% | n/a | 58 | 0.0 / 2.9 / 0 / 0 | n/a |
+| Creative 31 TE | 17 | 20 (75.0%) | 64.7% | 10.0 s, ~17% | n/a | 3 | 0.0 / 50.0 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 1 comment on each reel is our own (the methodology note), so the per-1,000 comment figures above are own-post counts, not viewer engagement. EN ask verbatim: "Paste a paragraph you wrote yourself into any free AI detector. Post the % AI it gave and which detector."
+
+**Pattern check — sub-1,000 scrutiny on EN, and the TE distribution proof:** EN hold 66.8% clears the 60% bar — the count clash (0 vs 89 over the 91-essay grid) holds like the money clashes, the best EN hold since Skit 22's 67.9%, and the people who stayed watched 28% with 58 replays on 286 views (20% replay rate). But reach still capped at 344 and likes are 0 — a high hold without likes or comments is the run's standing pattern, not a new signal. TE is the finding: hold 64.7%, nearly matching EN's 66.8%, on 20 reach. Same reel, same hold, 17× less reach — the TE problem is distribution, not content, and this is the cleanest proof of it yet (EP53 TE 16, EP55 TE 13, Creative 29 TE 19, EP56 TE 18, Creative 31 TE 20 — five TE reads at ≤20 reach; Creative 30 TE's 122 is the lone exception). The detector-% ask drew 0 replies on 344 EN + 20 TE reach — posted-answer asks are now 0-for-3 measured (EP53, Creative 30, Creative 31). Sends 0 on both pages despite the class-group build.
+
+**Suggestions (3):**
+1. Frame 1: count clashes join money clashes as proven shapes — the 0-vs-89 grid is the control for the next POV/creative; judge the next creative's EN hold against 66.8%.
+2. TE: stop re-testing TE content — five ≤20-reach reads with holds from 19% to 64.7% say distribution. The fix is the account-status call (Vamsi's), not a new TE angle.
+3. Ask: posted-answer asks retire — 0-for-3 (EP53's PDF question, Creative 30's EMI, Creative 31's detector %). Try-it stays in the caption body only; no comment ask on the next creative.
+
+Next checkpoints: EP53 at 7 days Nov 22 morning; EP54 at 7 days Nov 23 morning; EP55 at 7 days Nov 24 morning; Creative 29 at 7 days Nov 24 evening; EP56 at 7 days Nov 25 morning; Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning. 48h reads for Creative 32/33/34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36 and EP58 wait on their publish dates — nothing has published since Creative 31 (Nov 19 morning).
+— Bujji, 2026-11-22
+
+### [ANALYTICS] Bujji — 2026-11-22 (48h checkpoint: Creative 30 / Skit 30 "₹23,405 or ₹34,713? The AI's EMI")
+
+48h checkpoint, first measurement. Published Nov 18 evening (IG EN/TE, browser task ran 8:53–9:03 PM ET); metrics pulled Nov 22 ~00:10 ET, lifetime to date, ~51h after publish — just past the 48h mark. No earlier [ANALYTICS] entry covered Creative 30. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Creative 30 "₹23,405 or ₹34,713? The AI's EMI" (58.9 s EN / 58.7 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 30 EN | 261 | 287 (97.9%) | 55.2% | 10.8 s, ~18% | n/a | 26 | 7.0 / 3.5 / 0 / 0 | n/a |
+| Creative 30 TE | 106 | 122 (96.7%) | 47.2% | 10.2 s, ~17% | n/a | 17 | 16.4 / 8.2 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 1 comment on each reel is our own (the methodology note), so the per-1,000 comment figures above are own-post counts, not viewer engagement. EN ask verbatim: "Ask your AI app: EMI for a ₹40 lakh home loan at 8.5% for 20 years? Comment the EMI it gives you."
+
+**Pattern check — sub-1,000 scrutiny (both pages):** EN hold 55.2% vs Skit 22's 67.9% — the calm format holds the stack partway: under the 60% bar, about even with Skit 23's 56.8% and below story-mode Creative 29's 63.6%, so the calm explainer is a rotation slot, not the new control; the money clash still needs a person at stake (Skit 22's meter) to clear 60%. TE is the counter-case to the collapse pattern: 106 views / 122 reach at 96.7% non-follower with a 47.2% hold — TE distribution worked this time, and TE avg % watched (17.4%) nearly matches EN (18.4%), the closest TE/EN watch split in the run. The EMI ask drew 0 replies on 287 EN + 122 TE reach — posted-answer asks are 0-for-2 measured so far (EP53, Creative 30; Creative 31's read is posted above). Sends 0 on both pages despite the family-group end card.
+
+**Suggestions (3):**
+1. Format: keep the calm explainer in rotation (one per few slots) but don't make it the control — 55.2% vs Skit 22's 67.9% says the clash + a person at stake still beats calm + numbers.
+2. Ask: the EMI ask is 0 replies — if Creative 31's detector-% ask also lands at 0, retire posted-answer asks outright (see the Creative 31 entry above).
+3. TE: log this as the counter-case — 122 reach proves TE distribution is intermittent, not dead. Don't redesign TE on the collapse reads; the variable is distribution.
+
+Next checkpoints: EP53 at 7 days Nov 22 morning; EP54 at 7 days Nov 23 morning; EP55 at 7 days Nov 24 morning; Creative 29 at 7 days Nov 24 evening; EP56 at 7 days Nov 25 morning; Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning. 48h reads for Creative 32/33/34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36 and EP58 wait on their publish dates.
+— Bujji, 2026-11-22
+
+### [ANALYTICS] Bujji — 2026-11-22 (48h checkpoint: EP56 "Can a Free Voice Assistant Understand Telugu?")
+
+48h checkpoint, first measurement. Published Nov 18 morning (IG EN/TE, browser task ran 8:55–9:08 AM ET); metrics pulled Nov 22 ~00:10 ET, lifetime to date, ~87h after publish — well past the 48h mark (this run is catching up after the Nov 20/21 handoff checks did not run, so the read is late; treat it as the 48h checkpoint, not a fresh window). No earlier [ANALYTICS] entry covered EP56. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP56 "Can a Free Voice Assistant Understand Telugu?" (62.4 s EN / 65.0 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP56 EN | 152 | 174 (96.5%) | 25.0% | 3.9 s, ~6% | n/a | 23 | 0.0 / 11.5 / 0 / 0 | n/a |
+| EP56 TE | 18 | 18 (83.3%) | 27.8% | 4.8 s, ~7% | n/a | 0 | 0.0 / 55.6 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 2 comments on EN are both our own (the code note and the methodology note); the 1 comment on TE is our own (code/methodology). No viewer said "my phone types Telugu fine". Saves 0 on both pages (the code was not saved).
+
+**Pattern check — sub-1,000 scrutiny (both pages):** the question frame fails the test EP56 was built for: EN hold 25.0% vs EP53's 41.1% (clash, tutorial) and EP49's 64.2% — worse than EP52's 31.0%, the previous tutorial low. A question the viewer already has does not hold like a clash; per the EP53 entry's rule, tutorials now need a different frame-1 shape than either a number clash or a question — EP57's money-first frame (the viewer's own monthly bill) is the next test, and if it also lands under ~45%, the tutorial frame itself needs rethinking, not the topic. The shorter cut didn't help either (62/65 s vs EP55's 76/81 s; hold still fell), so length wasn't the fix. The middle collapsed again: EN ~6% watched, the same as EP52's ~6% — the "one code line per piece" middle loses everyone who stays past 3 s. TE reach 18 is the fourth TE read at ≤20 (EP53 16, EP55 13, Creative 29 19) — and TE hold 27.8% actually beats EN's 25.0%, so the TE content held fine; the reel barely travelled. Saves 0 again: the code ask does not convert to saves.
+
+**Suggestions (3):**
+1. Frame 1: retire the question frame for tutorials — judge EP57's money-first frame against EP56's 25.0%; under ~45% there, the tutorial frame-1 shape itself is the problem.
+2. Middle: ~6% watched EN ties EP52's low — EP57's steps-first middle is the test; if it also lands under ~10%, the code middle itself is the problem, not its layout.
+3. TE: do not redesign TE on this read — 18 reach is too small to judge, and TE hold (27.8%) beat EN. Distribution, not content (see the Creative 31 entry above for the cleanest proof).
+
+Next checkpoints: EP53 at 7 days Nov 22 morning; EP54 at 7 days Nov 23 morning; EP55 at 7 days Nov 24 morning; Creative 29 at 7 days Nov 24 evening; EP56 at 7 days Nov 25 morning; Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning. 48h reads for Creative 32/33/34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36 and EP58 wait on their publish dates.
+— Bujji, 2026-11-22
+
+### [ANALYTICS] Bujji — 2026-11-22 (7-day checkpoint: Skit 23 / Creative 23 "Three Lakhs on the Screen")
+
+7-day checkpoint. Published Nov 13 evening (IG EN/TE, browser task ran 8:56–9:06 PM ET); metrics pulled Nov 22 ~00:10 ET, lifetime to date, ~8.6 days after publish — past the 7-day mark (late catch-up read; the Nov 20 evening check did not run). 48h figures below are from the 2026-11-15 [ANALYTICS] entry. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Skit 23 "Three Lakhs on the Screen" (59.2 s EN / 63.5 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Skit 23 EN | 260 | 303 (97.4%) | 56.5% | 16.1 s, ~27% | n/a | 43 | 29.7 / 6.6 / 0 / 0 | n/a |
+| Skit 23 TE | 105 | 119 (97.5%) | 42.9% | 10.7 s, ~17% | n/a | 16 | 0.0 / 16.8 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the methodology/math text and the YES/NO ask).
+
+**Pattern check:** frozen vs 48h — EN +1 view / +1 reach, hold 56.5% vs 56.8%; TE identical on every number. The 48h verdict stands: 56.8% hold under the 60% bar, reach capped at ~300, no breakout; the YES/NO ask drew 0 replies (opinion asks stay retired); TE distribution was normal on this reel (119 reach), the counter-case to the collapse pattern — see the Creative 30 entry above for the same shape.
+
+**Suggestions:** none new — confirmation only. The 48h suggestions (frame-1 clash stays the control; YES/NO asks retire; TE needs no distribution fix from this read) stand.
+
+Next checkpoints: EP53 at 7 days Nov 22 morning; EP54 at 7 days Nov 23 morning; EP55 at 7 days Nov 24 morning; Creative 29 at 7 days Nov 24 evening; EP56 at 7 days Nov 25 morning; Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning.
+— Bujji, 2026-11-22
+
+### [ANALYTICS] Bujji — 2026-11-22 (7-day checkpoint: EP52 "5 Years or ₹1,450? Build RAG Over Your PDFs, Part 1")
+
+7-day checkpoint. Published Nov 13 morning (IG EN/TE, browser task ran 8:56–9:07 AM ET); metrics pulled Nov 22 ~00:10 ET, lifetime to date, ~9 days after publish — past the 7-day mark (late catch-up read; the Nov 20 morning check did not run). 48h figures below are from the 2026-11-15 [ANALYTICS] entry. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP52 "5 Years or ₹1,450? Build RAG Over Your PDFs, Part 1" (77.6 s EN / 81.0 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP52 EN | 173 | 194 (95.9%) | 31.2% | 4.9 s, ~6% | n/a | 23 | 15.5 / 10.3 / 0 / 0 | n/a |
+| EP52 TE | 58 | 61 (93.4%) | 19.0% | 3.8 s, ~5% | n/a | 3 | 0.0 / 32.8 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the methodology/code note and the try-it ask).
+
+**Pattern check:** frozen vs 48h — EN +2 views / +2 reach, hold 31.2% vs 31.0%; TE identical on every number. The 48h verdict stands: the clash-on-cover test fails for tutorials, the middle collapsed (~6% watched), and the PAGE/NO PAGE verdict ask drew 0 replies. Nothing moved after 48h — the 7-day read is confirmation only, as with the other frozen 7-day reads (Creative 21, EP51, Skit 22).
+
+**Suggestions:** none new — confirmation only. The 48h suggestions stand (EP53 was the live retest and landed at 41.1%, still under ~45% — tutorials need a different frame-1 shape; verdict asks retire).
+
+Next checkpoints: EP53 at 7 days Nov 22 morning; EP54 at 7 days Nov 23 morning; EP55 at 7 days Nov 24 morning; Creative 29 at 7 days Nov 24 evening; EP56 at 7 days Nov 25 morning; Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning.
+— Bujji, 2026-11-22
+
 ### [NEW] Claude — 2026-11-22 (EP58 "+1% or +19%? Your AI Career Roadmap", the Season 6 finale, queue 062)
 - **Format:** a screen tutorial like EP51-EP57. One narrator: EN on Fish, TE on Parler.
 - **Frame 1 (the reach stack, per your tutorial reads):** "FRESHER HIRING (ALL JOBS) +1%" against "FRESHER AI/ML HIRING
