@@ -16,27 +16,27 @@ LINES = {   # n: (prop, English, Telugu)
         "ఒకే శుక్రవారానికి, ఐదు లీవ్ మెయిల్స్. మేనేజర్ కిరణ్ ఇద్దరికే ఇవ్వగలరు. | [1] ఐదుగురూ చాట్‌బాట్ తో రాయించారు; ఐదింట్లోనూ ఒకటే మాట: పర్సనల్ రీజన్స్. [2] రమ్యది తన చెల్లి ఎంగేజ్‌మెంట్. [3] ఐదుగురి లీవ్ హోల్డ్ లో పడింది."),
     2: ("test", "We typed the same vague ask into a free AI, ten times. [1] Ten of ten opened with \"I hope this... finds you well.\" [2] Not one had a real reason. [3] Four invented dates nobody gave it.",
         "మేము కూడా అలాగే, ఒక ఫ్రీ చాట్‌బాట్ ని పది సార్లు అడిగాం. [1] పదింటిలోనూ ఒకే మొదలు: ఐ హోప్ దిస్ ఫైండ్స్ యు వెల్. [2] ఒక్కదాంట్లో కూడా అసలు కారణం లేదు. [3] నాలుగు, ఎవరూ చెప్పని తేదీలు రాశాయి."),
-    3: ("facts", "With Ramya's facts: [1] sister's engagement in Vijayawada, back Monday, report done, Sravya covers her support tickets. [2] They came through. | [3] But all ten invented a month, [4] three gave Sravya the invoice report, [5] and one signed it with the AI's own name.",
-        "రమ్య వివరాలతో: [1] చెల్లి ఎంగేజ్‌మెంట్, విజయవాడ, సోమవారం వస్తుంది, రిపోర్ట్ అయిపోయింది, సపోర్ట్ టికెట్లు శ్రావ్య చూస్తుంది. [2] అన్నీ వచ్చాయి. | [3] కానీ పదింటిలోనూ నెల ఊహించి రాశాయి; [4] మూడింట్లో, రిపోర్ట్ పని శ్రావ్యకి ఇచ్చాయి. [5] ఒకటి, చాట్‌బాట్ పేరుతోనే సంతకం పెట్టింది."),
+    3: ("facts", "With Ramya's facts: [1] sister's engagement in Vijayawada, back Monday, report done, Sravya covers her support tickets. [2] Almost all came through. | [3] But all ten invented a month, [4] three gave Sravya the invoice report, [5] and one signed it with the AI's own name.",
+        "రమ్య వివరాలతో: [1] చెల్లి ఎంగేజ్‌మెంట్, సోమవారం తిరిగి వస్తుంది, రిపోర్ట్ అయిపోయింది, సపోర్ట్ టికెట్లు శ్రావ్య చూసుకుంటుంది. [2] దాదాపు అన్నీ వచ్చాయి. | [3] కానీ పదింటిలోనూ నెల ఊహించి రాశాయి; [4] మూడింట్లో, అయిపోయిన రిపోర్ట్ ని శ్రావ్యకి అప్పగించాయి. [5] ఒకటి, చాట్‌బాట్ పేరుతోనే సంతకం పెట్టింది."),
     4: ("rule", "So give it three things: [1] the reason you're comfortable sharing, [2] your dates and return day, [3] and who covers your work. | [4] Before you send, check every bracket, date and name.",
-        "అందుకే మూడు విషయాలు చెప్పండి: [1] చెప్పడానికి ఇబ్బంది లేని కారణం, [2] తేదీలు, ఎప్పుడు తిరిగి వస్తారు, [3] మీ పని ఎవరు చూసుకుంటారు. | [4] పంపే ముందు, ప్రతి బ్రాకెట్, ప్రతి తేదీ, ప్రతి పేరు చూసుకోండి."),   # TE take review: "చెక్ చేసుకోండి" came out "check check"
+        "మూడు విషయాలు చెప్పండి: [1] చెప్పడానికి ఇబ్బంది లేని కారణం, [2] ఎప్పటి నుంచి ఎప్పటి వరకు, [3] మీ పని ఎవరు చూసుకుంటారు. | [4] పంపే ముందు, ప్రతి బ్రాకెట్, ప్రతి తేదీ, ప్రతి పేరు చూసుకోండి."),   # TE take review: "చెక్ చేసుకోండి" came out "check check"
     5: ("payoff", "Ramya added her facts and checked it. [1] Back Monday, Sravya covers: her manager approved hers first.",
-        "రమ్య వివరాలు పెట్టి, చెక్ చేసి పంపింది. [1] కిరణ్ అందరికంటే ముందు రమ్యదే అప్రూవ్ చేశారు."),
+        "రమ్య వివరాలు పెట్టి, సరిచూసి పంపింది. [1] కిరణ్ అందరికంటే ముందు రమ్యకే లీవ్ ఇచ్చారు."),
     6: ("loop", "Five reasons, [1] one email?", "ఐదు కారణాలు, [1] ఒకటే మెయిల్?"),
 }
 TTS_EN = {2: "We typed the same vague ask into a free AI, ten times. Ten of ten opened with: I hope this, finds you well. Not one had a real reason. Four invented dates nobody gave it."}
 SHOW = {2: "We typed the same vague ask into a free AI, ten times. Ten of ten opened with \"I hope this... finds you well.\" Not one had a real reason. Four invented dates nobody gave it."}
 SHOW_TE = {   # the Telugu cut's English captions say what the Telugu voice says
-    1: "Five leave emails for the same Friday. Their manager Kiran can give leave to only two. All five had a chatbot write them; all five say the same thing: personal reasons. Ramya's is her sister's engagement. All five leaves: on hold.",
-    2: "We did the same: asked a free chatbot ten times. All ten opened the same way: \"I hope this finds you well.\" Not one had a real reason. Four wrote dates nobody gave it.",
-    3: "With Ramya's details: sister's engagement, Vijayawada, back on Monday, report done, Sravya handles the support tickets. All of it came through. But all ten guessed a month; three gave the report work to Sravya. One signed with the chatbot's own name.",
-    4: "So tell it three things: a reason you're comfortable sharing, your dates and when you're back, who covers your work. Before you send, check every bracket, every date, every name.",
-    5: "Ramya put in her details, checked it and sent it. Kiran approved Ramya's before anyone else's.",
+    1: "Five leave emails for the same Friday. Their manager Kiran can approve only two. All five had a chatbot write them; all five say the same thing: personal reasons. Ramya's is her sister's engagement. All five leaves: on hold.",
+    2: "We did the same: asked a free chatbot ten times. All ten opened the same way: \"I hope this... finds you well.\" Not one had a real reason. Four wrote dates nobody gave it.",
+    3: "With Ramya's details: sister's engagement, back on Monday, report done, Sravya handles the support tickets. Almost all of it came through. But all ten guessed a month; three handed the finished report to Sravya. One signed with the chatbot's own name.",
+    4: "Tell it three things: a reason you're comfortable sharing, from when to when, who covers your work. Before you send, check every bracket, every date, every name.",
+    5: "Ramya put in her details, checked it and sent it. Kiran gave Ramya leave before anyone else.",
     6: "Five reasons, one email?",
 }
 SPLIT_PAUSE = {1: 0.35, 3: 0.85, 4: 0.35}   # render review: the beat before the bad news was under 0.5 s   # 3: the silence before the bad news   # voice review: "made up dates" was heard "made updates", "guessed" as "guests": "invented"
 SPLIT_PAUSE_TE = {1: 0.3, 3: 0.5, 4: 0.3}
-TEMPO_TE = {}
+TEMPO_TE = {3: 1.1, 4: 1.1}   # TE render review: the facts and the rule were rushed at 1.16
 T = {
     "bar": "SAME FRIDAY OFF · ONLY 2 GET LEAVE", "leftLab": "5 PEOPLE ASKED AN AI", "leftVal": "5 REASONS", "leftSub": "engagement · exam · ...",
     "rightLab": "THE AI WROTE", "rightVal": "1 EMAIL", "rightSub": "\"...due to personal reasons\"",
@@ -79,8 +79,8 @@ SCENES = [("s_a", (1,), {"boost": 2.2, "drop_at": [[0, 3, 0.3]], "tail": 0.3}),
           ("s_d", (4,), {"boost": 2.4, "lift": 0.8, "rise": 1.8, "tail": 0.4}),
           ("s_e", (5, 6), {"outro": True, "pre": 0.2, "boost": 3.2, "lift": 0.8, "rise": 3.4, "tail": 0.0})]
 GAP = {1: 0.3, 2: 0.3, 3: 0.3, 4: 0.3, 5: 0.25, 6: 0.0}   # the first cut ran 64.3 s
-GAP_TE = {1: 0.2, 2: 0.2, 3: 0.2, 4: 0.3, 5: 0.2, 6: 0.0}
-FLAGS_TE = {"s_a": {"tail": 0.15}, "s_c": {"tail": 0.1}, "s_d": {"tail": 0.25}, "s_e": {"boost": 3.0, "rise": 3.2}}
+GAP_TE = {1: 0.2, 2: 0.2, 3: 0.2, 4: 0.2, 5: 0.2, 6: 0.0}
+FLAGS_TE = {"s_a": {"tail": 0.15}, "s_b": {"boost": 2.0}, "s_c": {"tail": 0.1, "boost": 1.8}, "s_d": {"tail": 0.15}, "s_e": {"boost": 3.0, "rise": 3.2}}
 YT = {"s_a": "5 reasons, 1 email", "s_b": "Our test: the vague ask", "s_c": "With her facts", "s_d": "Give it 3 things", "s_e": "Approved"}
 NAMES = {"en": {"storyteller": ""}, "te": {"storyteller": ""}}
 MARK = re.compile(r"\[\d+\]\s*")
@@ -95,7 +95,7 @@ def spec(lang="en"):
          "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimer": True, "tempo": 1.0, "captionTop": 1440, "endPad": 0.4}
     if te:
-        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.3, "endPad": 0.3, "musicVol": [0.18, 0.24]})
+        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.25, "endPad": 0.2, "musicVol": [0.18, 0.24]})
     scenes = []
     for scid, ns, flags in SCENES:
         lines, beats = [], []

@@ -124,3 +124,14 @@ news; pops on the counters, one bonk (the invoice report), one ding (the AI's na
   a try with "లీవ్ హోల్డ్" pinned, then re-voiced with the trimmed hook; "చెక్ చేసుకోండి" came out "check check" →
   "చూసుకోండి". The first Telugu cut ran 69.6 s: "మెయిల్ చూస్తే కిరణ్ కి అది తెలియదు" cut (the callout says it), line 3
   shortened, line 5 keeps only the approval, tempo 1.12 → 1.16: 59.8 s.
+
+## Render review (human-viewer, TE) and what changed
+- Both viewers: the facts and the rule were rushed at tempo 1.16 → 1.10 for lines 3 and 4; "అన్నీ వచ్చాయి" overstated
+  "back Monday" 9/10 → "దాదాపు అన్నీ వచ్చాయి" (and EN "Almost all came through"); "తేదీలు, ఎప్పుడు తిరిగి వస్తారు"
+  sounded like a fourth thing → "ఎప్పటి నుంచి ఎప్పటి వరకు" (a first draft, "ఏ రోజు నుంచి ఏ రోజు వరకు", broke the
+  no-lone-ఏ rule and was replaced before voicing).
+- Sandeep: "సోమవారం వస్తుంది" sounded like "Monday is coming" → "సోమవారం తిరిగి వస్తుంది"; "విజయవాడ" left to the chip
+  to make room; Priya: "అయిపోయిన రిపోర్ట్ ని శ్రావ్యకి అప్పగించాయి" so the joke lands in Telugu; "అప్రూవ్ చేశారు" was heard
+  "approach" → "రమ్యకే లీవ్ ఇచ్చారు" (echoes the hook's ఇవ్వగలరు); "చెక్ చేసి" stuttered → "సరిచూసి".
+- Audio: the Telugu hold hit waits for the line's last syllable ("హోల్డ్" was heard "ఫోల్డు" under it); the test
+  section's music is lifted. Captions: "approve only two" (it was split "only | two"), "I hope this... finds you well".
