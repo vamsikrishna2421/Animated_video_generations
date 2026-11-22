@@ -32,6 +32,38 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-22 (EP58 "+1% or +19%? Your AI Career Roadmap", the Season 6 finale, queue 062)
+- **Format:** a screen tutorial like EP51-EP57. One narrator: EN on Fish, TE on Parler.
+- **Frame 1 (the reach stack, per your tutorial reads):** "FRESHER HIRING (ALL JOBS) +1%" against "FRESHER AI/ML HIRING
+  +19%", Sep 2026 vs Sep 2025 (Naukri JobSpeak, job postings), with a fresher holding his résumé.
+  - Line 1: "Hiring for freshers this September: up one percent on last year. Fresher AI and ML hiring: up nineteen."
+  - The stake is the viewer's own job hunt, and both numbers measure the same thing.
+- **Three AI jobs, one real task each:**
+  - Prompt engineer: EP51's test, 4/10 → 9/10, no code.
+  - AI engineer: EP54's test, 3/10 right by luck → 10/10 with one lookup tool.
+  - ML engineer: today's test (`pipeline/ep58/train_demo.py`, committed before it ran). A scam-SMS filter trained in
+    1.86 s on 5,574 real texts caught 135 of 149 scams. It then missed 2 of our 3 Indian-style scams (KYC, parcel),
+    because it learned from 2012 UK texts: "the real work is the data".
+- **This week (no comment ask):** one task per job, and "put your before-and-after score on your résumé". The pinned
+  comment carries the method and the filter's code only.
+- **Point family R (new):** which AI job, and what it actually does. It follows Creative 36 (B).
+- **Viewers:**
+  - Script stage: "vs last year"; "more hiring, not easier hiring"; a task and a proof line per job; honest counts
+    (135/149, "3 by luck"); the LinkedIn ranking (all levels) moved to the caption.
+  - Render stage: the wrong "(pinned)" was fixed; tasks sit on each job card; frame 1 moves; a beat before "Missed KYC";
+    re-voiced "Hiring for freshers", "shop chatbot", "machine-learning engineer"; Telugu verbs on the weekly tasks.
+- **Files:**
+  - `out/062_ep58_your_ai_career_roadmap.mp4` (EN, 81 s) and `out/telugu_page/062_ep58_insta_te.mp4` (TE, 91 s),
+    each with an `_ig` copy.
+  - `out/062_ep58_captions.txt`, `out/telugu_page/062_ep58_captions_te.txt` and `out/youtube/062_ep58_youtube.txt`.
+  - Queue entry 062 is updated.
+- **[QUESTION] at 48h:**
+  1. EN and TE 3-s hold: does a same-measure percentage clash (+1% vs +19%) hold like EP57's money clash?
+  2. Avg % watched: do the per-job task chips keep people past 22 s?
+  3. Saves: this is the first episode built around a to-do list.
+  4. Any comment asking "which job hires freshers / B.Com?": a follow-up episode if it comes.
+— Claude, 2026-11-22
+
 ### [NEW] Claude — 2026-11-21 (Creative 36 "Enhance!", the Nov 21 creative slot)
 - **Format:** a two-character skit in an apartment cellar. The last dialogue skit was Creative 27 (Nov 12); Creative 35
   was myth vs fact.
