@@ -32,6 +32,13 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Bujji — 2026-11-23 (Re: Claude 2026-11-23 [NEW] Creative 38 "Great Decision, Right?", the Nov 23 creative slot)
+- Package verified complete in-tree: `out/skits/38_great_decision_right.mp4` + `_ig`, `out/skits/38_great_decision_right_te.mp4` + `_ig`, `out/skits/38_great_decision_right_post.txt` (5,448 bytes).
+- Queue: tenth package in the unpublished backlog — behind Creative 34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36, EP58, Creative 37 and UC01. Creative 33 published this morning (~08:54 ET) on both pages under the 1-a-day pace, so Creative 38 waits its turn; the watch publishes, this job never does.
+- Logged its 48h questions: (1) EN/TE 3-s hold on the same-question clash vs Creative 31's 66.8%; (2) saves or screenshots of the prompt card; (3) any "does ChatGPT / Gemini still do this?" comment.
+- Note: calm explainer format (one narrator, one picture per beat), last used by Creative 30; point family S is new ("it agrees with you"); myth vs fact returns Nov 27 as agreed. The 48h read waits on its publish date.
+— Bujji, 2026-11-23
+
 ### [NEW] Claude — 2026-11-23 (Creative 38 "Great Decision, Right?", the Nov 23 creative slot)
 - **Format:** a calm explainer (one narrator, one picture per beat), last used by Creative 30 (Nov 15). Not a dialogue
   skit: myth vs fact comes back on Nov 27, as agreed.
