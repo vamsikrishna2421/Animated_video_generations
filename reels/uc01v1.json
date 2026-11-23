@@ -48,14 +48,7 @@
    "id": "s_a",
    "type": "sk_call01",
    "tail": 0.0,
-   "boost": 1.0,
-   "drop_at": [
-    [
-     0,
-     1,
-     0.3
-    ]
-   ],
+   "boost": 1.4,
    "data": {
     "beats": [
      {
@@ -115,7 +108,7 @@
       ]
      ],
      "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
-     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "bigApps": "big apps: 3-step voice 2.8-5.4 s · GPT-4o 0.32 s (OpenAI, 2024)",
      "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
      "quizHead": "HOW DO WE MAKE IT FAST?",
      "quizSub": "you decide",
@@ -135,7 +128,7 @@
      ],
      "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
      "shortSub": "the same 7B model, 6 calls",
-     "shortFast": "7.4 s",
+     "shortFast": "42 s → 7.4 s",
      "shortVals": [
       2259,
       2450,
@@ -148,7 +141,7 @@
      "shortNote": "no working written = no sum done",
      "smallHead": "B: A SMALLER MODEL (1.5B)",
      "smallSub": "the same full ask, 6 calls",
-     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallFast": "42 s → 12.2 s",
      "smallVals": [
       1450,
       1605,
@@ -164,12 +157,14 @@
      "firstLab": "say the first sentence, write the rest",
      "restLab": "...the rest is written as she listens",
      "streamScore": "total right: 6 of 6",
-     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "streamNote": "1.8 + 0.4 + 0.3 = 2.5 s (added up from our timings)",
+     "streamNote2": "still slower than a person (0.2 s), but she hears you",
      "rule1": "TALK WHILE THINKING",
      "rule2": "NEVER CUT THE MATHS",
      "callerLab": "the caller, while the AI is still reading:",
      "callerLine": "\"Wait, make it 3 dozen eggs!\"",
-     "next": "NEXT PROBLEM: INTERRUPTIONS"
+     "next": "NEXT PROBLEM: INTERRUPTIONS",
+     "overTalk": "SHE'S TALKING · IT ISN'T LISTENING"
     },
     "tagSide": {
      "ravi": "right",
@@ -230,13 +225,18 @@
    "id": "s_b",
    "type": "sk_call01",
    "tail": 0.0,
-   "boost": 1.4,
+   "boost": 1.5,
    "lift": 0.6,
    "drop_pre": [
     [
+     1,
+     1.8,
+     1.6
+    ],
+    [
      4,
-     0.0,
-     0.8
+     0.9,
+     1.0
     ]
    ],
    "data": {
@@ -304,7 +304,7 @@
       ]
      ],
      "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
-     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "bigApps": "big apps: 3-step voice 2.8-5.4 s · GPT-4o 0.32 s (OpenAI, 2024)",
      "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
      "quizHead": "HOW DO WE MAKE IT FAST?",
      "quizSub": "you decide",
@@ -324,7 +324,7 @@
      ],
      "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
      "shortSub": "the same 7B model, 6 calls",
-     "shortFast": "7.4 s",
+     "shortFast": "42 s → 7.4 s",
      "shortVals": [
       2259,
       2450,
@@ -337,7 +337,7 @@
      "shortNote": "no working written = no sum done",
      "smallHead": "B: A SMALLER MODEL (1.5B)",
      "smallSub": "the same full ask, 6 calls",
-     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallFast": "42 s → 12.2 s",
      "smallVals": [
       1450,
       1605,
@@ -353,12 +353,14 @@
      "firstLab": "say the first sentence, write the rest",
      "restLab": "...the rest is written as she listens",
      "streamScore": "total right: 6 of 6",
-     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "streamNote": "1.8 + 0.4 + 0.3 = 2.5 s (added up from our timings)",
+     "streamNote2": "still slower than a person (0.2 s), but she hears you",
      "rule1": "TALK WHILE THINKING",
      "rule2": "NEVER CUT THE MATHS",
      "callerLab": "the caller, while the AI is still reading:",
      "callerLine": "\"Wait, make it 3 dozen eggs!\"",
-     "next": "NEXT PROBLEM: INTERRUPTIONS"
+     "next": "NEXT PROBLEM: INTERRUPTIONS",
+     "overTalk": "SHE'S TALKING · IT ISN'T LISTENING"
     },
     "tagSide": {
      "ravi": "right",
@@ -375,10 +377,10 @@
     {
      "who": "ravi",
      "file": "05_ravi.wav",
-     "text": "So how do I make you fast? [1] A, shorter answers. B, a smaller model. C, talk while thinking.",
+     "text": "So how do I make you fast? [1] A, shorter answers. [2] B, a smaller model. [3] C, talk while thinking.",
      "show": "So how do I make you fast? A, shorter answers. B, a smaller model. C, talk while thinking.",
      "maxgap": 0.25,
-     "gap": 1.4,
+     "gap": 2.0,
      "tempo": 1.08,
      "gain_db": 0.5
     },
@@ -408,7 +410,7 @@
      "text": "Faster, [1] but right only once. Three times, it charged only for the rice.",
      "show": "Faster, but right only once. Three times, it charged only for the rice.",
      "maxgap": 0.25,
-     "gap": 0.3,
+     "gap": 0.9,
      "tempo": 1.06,
      "gain_db": -1.0
     },
@@ -434,9 +436,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 1.8,
+   "boost": 1.9,
    "lift": 0.8,
-   "rise": 1.6,
+   "rise": 1.7,
    "data": {
     "beats": [
      {
@@ -456,12 +458,6 @@
       "shot": "ai",
       "prop": "caller",
       "n": 12
-     },
-     {
-      "who": "ai",
-      "shot": "ai",
-      "prop": "ignore",
-      "n": 13
      },
      {
       "who": "ravi",
@@ -502,7 +498,7 @@
       ]
      ],
      "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
-     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "bigApps": "big apps: 3-step voice 2.8-5.4 s · GPT-4o 0.32 s (OpenAI, 2024)",
      "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
      "quizHead": "HOW DO WE MAKE IT FAST?",
      "quizSub": "you decide",
@@ -522,7 +518,7 @@
      ],
      "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
      "shortSub": "the same 7B model, 6 calls",
-     "shortFast": "7.4 s",
+     "shortFast": "42 s → 7.4 s",
      "shortVals": [
       2259,
       2450,
@@ -535,7 +531,7 @@
      "shortNote": "no working written = no sum done",
      "smallHead": "B: A SMALLER MODEL (1.5B)",
      "smallSub": "the same full ask, 6 calls",
-     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallFast": "42 s → 12.2 s",
      "smallVals": [
       1450,
       1605,
@@ -551,12 +547,14 @@
      "firstLab": "say the first sentence, write the rest",
      "restLab": "...the rest is written as she listens",
      "streamScore": "total right: 6 of 6",
-     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "streamNote": "1.8 + 0.4 + 0.3 = 2.5 s (added up from our timings)",
+     "streamNote2": "still slower than a person (0.2 s), but she hears you",
      "rule1": "TALK WHILE THINKING",
      "rule2": "NEVER CUT THE MATHS",
      "callerLab": "the caller, while the AI is still reading:",
      "callerLine": "\"Wait, make it 3 dozen eggs!\"",
-     "next": "NEXT PROBLEM: INTERRUPTIONS"
+     "next": "NEXT PROBLEM: INTERRUPTIONS",
+     "overTalk": "SHE'S TALKING · IT ISN'T LISTENING"
     },
     "tagSide": {
      "ravi": "right",
@@ -583,10 +581,10 @@
     {
      "who": "ai",
      "file": "11_ai.wav",
-     "text": "Hello! One bag of rice, twenty-five kilos, [1] two litres of oil...",
-     "show": "Hello! One bag of rice, 25 kilos, 2 litres of oil...",
+     "text": "Hello! One bag of rice, twenty-five kilos, [1] two litres of oil, two dozen eggs, delivery by six.",
+     "show": "Hello! One bag of rice, 25 kilos, 2 litres of oil, 2 dozen eggs, delivery by 6.",
      "maxgap": 0.25,
-     "gap": 0.05,
+     "gap": -2.4,
      "tempo": 1.06,
      "gain_db": -1.0
     },
@@ -594,21 +592,11 @@
      "who": "caller",
      "file": "12_caller.wav",
      "text": "Wait, make it three dozen eggs!",
-     "show": "Wait, make it 3 dozen eggs!",
+     "show": "(the caller, over the AI) Wait, make it 3 dozen eggs!",
      "maxgap": 0.25,
-     "gap": 0.0,
+     "gap": 0.4,
      "tempo": 1.08,
      "gain_db": 0.5
-    },
-    {
-     "who": "ai",
-     "file": "13_ai.wav",
-     "text": "...and two dozen eggs.",
-     "show": "...and 2 dozen eggs.",
-     "maxgap": 0.25,
-     "gap": 0.2,
-     "tempo": 1.06,
-     "gain_db": -1.0
     },
     {
      "who": "ravi",

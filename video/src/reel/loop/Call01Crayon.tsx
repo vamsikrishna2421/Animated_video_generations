@@ -88,8 +88,8 @@ const StCall: React.FC<SP> = ({ s }) => {
     if (insert && prevShot !== b.shot) sfx.push(<Sfx key={k("w")} at={at - 11} src="audio/sfx_whoosh.wav" vol={0.3} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={0} src={CLAP} vol={0.5} />, <Sfx key={k("h")} at={3} src="reel/sfx_hangup.wav" vol={0.5} />, <Sfx key={k("b")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.35} />);
     if (b.prop === "stages") { [[0, 0.05], [1, 0.4], [2, 0.7]].forEach(([n, q], j) => sfx.push(<Sfx key={k("p" + j)} at={n === 0 ? at + 4 : cue(i, n, q)} src="audio/sfx_pop.wav" vol={0.32} />)); sfx.push(<Sfx key={k("t")} at={cue(i, 2, 0.7) + 6} src="audio/sfx_tick.wav" vol={0.35} />, <Sfx key={k("d")} at={cue(i, 3, 0.85)} src="audio/gag_ding.wav" vol={0.35} />); }
-    if (b.prop === "short" || b.prop === "small") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.32} />, <Sfx key={k("z")} at={cue(i, 1, 0.3) + 18} src="reel/sfx_buzz.wav" vol={0.42} />);   // script review: one buzz, on the score
-    if (b.prop === "quiz") sfx.push(<Sfx key={k("q")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.3} />);
+    if (b.prop === "short" || b.prop === "small") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.32} />, <Sfx key={k("z")} at={cue(i, 1, 0.3) + 18} src="reel/sfx_buzz.wav" vol={0.3} />);   // script review: one buzz, on the score
+    if (b.prop === "quiz") { sfx.push(<Sfx key={k("q")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.3} />); [0, 15, 30, 45].forEach((d) => sfx.push(<Sfx key={k("t" + d)} at={end + 4 + d} src="audio/sfx_tick.wav" vol={0.4} />)); }   // render review: a real hold, a clock ticking
     if (b.prop === "answer") sfx.push(<Sfx key={k("d")} at={at + 2} src="audio/gag_ding.wav" vol={0.4} />, <Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />, <Sfx key={k("s")} at={cue(i, 2, 0.8)} src="audio/sfx_success.wav" vol={0.32} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.6} />);
     if (b.prop === "twist") sfx.push(<Sfx key={k("r")} at={Math.max(0, at - 14)} src="reel/sfx_ring1.wav" vol={0.35} />);
@@ -130,25 +130,25 @@ const StCall: React.FC<SP> = ({ s }) => {
             c.restore();
           }
           const kP = seg(f, cu(3, 0.85) - 2, cu(3, 0.85) + 6);
-          if (kP > 0) chip(c, T.bigApps, W / 2, 1230, "#e0e7ff", "#1e1b4b", kP, fit(c, T.bigApps, W - 160, 40, 800));
-          c.save(); c.globalAlpha = seg(f, ln.from, ln.from + 10); c.font = SANS(fit(c, T.people, W - 120, 32, 700), 700); c.fillStyle = "#86efac"; c.textAlign = "center"; c.fillText(T.people, W / 2, 1330); c.restore();
+          if (kP > 0) chip(c, T.bigApps, W / 2, 1230, "#e0e7ff", "#1e1b4b", kP, fit(c, T.bigApps, W - 120, 44, 800));
+          c.save(); c.globalAlpha = seg(f, ln.from, ln.from + 10); c.font = SANS(fit(c, T.people, W - 100, 40, 800), 800); c.fillStyle = "#86efac"; c.textAlign = "center"; c.fillText(T.people, W / 2, 1330); c.restore();
         } else if (b.shot === "short" || b.shot === "small") {
           const short = b.shot === "short";
           dark(c, W, H, short ? T.shortHead : T.smallHead, [short ? T.shortSub : T.smallSub]);
           const kF = seg(f, ln.from + 2, ln.from + 10);
-          if (kF > 0) { c.save(); c.globalAlpha = clamp(kF * 3); c.font = SANS(64, 900); c.fillStyle = "#86efac"; c.textAlign = "center"; c.fillText(short ? T.shortFast : T.smallFast, W / 2, 500); c.restore(); }
+          if (kF > 0) { c.save(); c.globalAlpha = clamp(kF * 3); c.font = SANS(76, 900); c.fillStyle = "#86efac"; c.textAlign = "center"; c.fillText(short ? T.shortFast : T.smallFast, W / 2, 505); c.restore(); }
           const kT = clamp((f - (cu(1, 0.3) - 4)) / 30);
           totals(c, W, 570, (short ? T.shortVals : T.smallVals) as number[], kT);
           chip(c, `RIGHT: ₹1,928 (1,450 + 310 + 168)`, W / 2, 920, "#fde68a", INK, kT, 38);
           const kV = seg(kT, 0.7, 1);
-          if (kV > 0) { c.save(); c.globalAlpha = clamp(kV * 3); c.font = SANS(120, 900); c.fillStyle = "#f87171"; c.textAlign = "center"; c.fillText(short ? T.shortScore : T.smallScore, W / 2, 1110); c.font = SANS(fit(c, short ? T.shortNote : T.smallNote, W - 140, 38, 800), 800); c.fillStyle = "#fecaca"; c.globalAlpha = short ? clamp(seg(f, cu(2, 0.6) - 4, cu(2, 0.6) + 6) * 3) : 1; c.fillText(short ? T.shortNote : T.smallNote, W / 2, 1190); c.restore(); }
+          if (kV > 0) { c.save(); c.globalAlpha = clamp(kV * 3); c.font = SANS(120, 900); c.fillStyle = "#f87171"; c.textAlign = "center"; c.fillText(short ? T.shortScore : T.smallScore, W / 2, 1110); c.font = SANS(fit(c, short ? T.shortNote : T.smallNote, W - 120, 50, 900), 900); c.fillStyle = "#fecaca"; c.globalAlpha = short ? clamp(seg(f, cu(2, 0.6) - 4, cu(2, 0.6) + 6) * 3) : 1; c.fillText(short ? T.shortNote : T.smallNote, W / 2, 1190); c.restore(); }
         } else if (b.shot === "quiz") {
           dark(c, W, H, T.quizHead, [b.prop === "quiz" ? T.quizSub : ""]);
           const opts = T.opts as [string, string][];
           const kAns = b.prop === "answer" ? seg(f, ln.from, ln.from + 8) : 0;
           const ansEnd = b.prop === "answer" ? ln.from + 30 : 1e9;   // the timeline replaces the options right after "C!"
           if (f < ansEnd) opts.forEach(([L, t], q) => {
-            const t0 = b.prop === "quiz" ? cu(1, 0.3) + q * 8 : -100; const k = b.prop === "quiz" ? seg(f, t0, t0 + 6) : 1; if (k <= 0) return;
+            const t0 = b.prop === "quiz" ? cu(q + 1, 0.3 + q * 0.2) - 2 : -100;   // each option as Ravi says it const k = b.prop === "quiz" ? seg(f, t0, t0 + 6) : 1; if (k <= 0) return;
             const right = q === 2, y = 470 + q * 200;
             c.save(); c.globalAlpha = clamp(k * 3) * (kAns > 0 && !right ? 1 - 0.6 * kAns : 1);
             c.fillStyle = kAns > 0 && right ? "#14532d" : "#1e293b"; rrect(c, 70, y, W - 140, 160, 24); c.fill();
@@ -177,7 +177,7 @@ const StCall: React.FC<SP> = ({ s }) => {
               c.restore();
             }
             if (k3 > 0) { c.save(); c.globalAlpha = clamp(k3 * 3); c.fillStyle = "#14532d"; rrect(c, 80, 980, W - 160, 170, 24); c.fill(); c.font = SANS(fit(c, T.streamScore, W - 220, 64, 900), 900); c.fillStyle = "#bbf7d0"; c.textAlign = "center"; c.fillText(T.streamScore, W / 2, 1088); c.restore(); }
-            if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.font = SANS(fit(c, T.streamNote, W - 120, 34, 700), 700); c.fillStyle = "#94a3b8"; c.textAlign = "center"; c.fillText(T.streamNote, W / 2, 1240); c.restore(); }
+            if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.streamNote, W - 100, 42, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.streamNote, W / 2, 1230); c.font = SANS(fit(c, T.streamNote2, W - 100, 38, 700), 700); c.fillStyle = "#94a3b8"; c.fillText(T.streamNote2, W / 2, 1290); c.restore(); }
           }
         } else {
           // ---------- the shop ----------
@@ -206,15 +206,16 @@ const StCall: React.FC<SP> = ({ s }) => {
             stamp(c, T.rule1, W / 2, 330, "#2563eb", k, 64, -0.05);
             stamp(c, T.rule2, W / 2, 470, GREEN, seg(f, ln.from + 10, ln.from + 18), 60, 0.04);
           }
-          if (b.prop === "caller" || b.prop === "ignore" || (b.prop === "loop" && !loopOn)) {   // the caller talks over the AI
+          if (b.prop === "caller" || (b.prop === "loop" && !loopOn)) {   // the caller talks over the AI (render review: she cuts in while it reads on)
             const k = b.prop === "caller" ? seg(f, ln.from - 2, ln.from + 6) : 1;
             if (k > 0) {
               c.save(); c.globalAlpha = clamp(k * 3); c.translate((1 - easeOut(clamp(k * 1.5))) * -60, 0);
               c.fillStyle = "#ffffff"; rrect(c, 60, 230, W - 120, 190, 26); c.fill(); c.strokeStyle = RED; c.lineWidth = 6; rrect(c, 60, 230, W - 120, 190, 26); c.stroke();
-              c.font = SANS(32, 800); c.fillStyle = "#64748b"; c.textAlign = "left"; c.fillText(T.callerLab, 100, 285);
+              c.font = SANS(36, 800); c.fillStyle = "#64748b"; c.textAlign = "left"; c.fillText(T.callerLab, 100, 288);
               c.font = SANS(fit(c, T.callerLine, W - 200, 56, 900), 900); c.fillStyle = INK; c.fillText(T.callerLine, 100, 370); c.restore();
             }
-            if (b.prop === "loop") chip(c, T.next, W / 2, 500, "#7f1d1d", "#fff", seg(f, ln.from + 2, ln.from + 10), 44);
+            if (b.prop === "caller") stamp(c, T.overTalk, W / 2, 1250, RED, seg(f, ln.from + 10, ln.from + 18), 46, -0.04);
+            if (b.prop === "loop") chip(c, T.next, W / 2, 520, "#7f1d1d", "#fff", seg(f, ln.from + 2, ln.from + 10), 52);
           }
         }
       }} />

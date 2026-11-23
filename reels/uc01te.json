@@ -50,14 +50,7 @@
    "id": "s_a",
    "type": "sk_call01",
    "tail": 0.0,
-   "boost": 1.0,
-   "drop_at": [
-    [
-     0,
-     1,
-     0.3
-    ]
-   ],
+   "boost": 1.4,
    "data": {
     "beats": [
      {
@@ -117,7 +110,7 @@
       ]
      ],
      "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
-     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "bigApps": "big apps: 3-step voice 2.8-5.4 s · GPT-4o 0.32 s (OpenAI, 2024)",
      "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
      "quizHead": "HOW DO WE MAKE IT FAST?",
      "quizSub": "you decide",
@@ -137,7 +130,7 @@
      ],
      "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
      "shortSub": "the same 7B model, 6 calls",
-     "shortFast": "7.4 s",
+     "shortFast": "42 s → 7.4 s",
      "shortVals": [
       2259,
       2450,
@@ -150,7 +143,7 @@
      "shortNote": "no working written = no sum done",
      "smallHead": "B: A SMALLER MODEL (1.5B)",
      "smallSub": "the same full ask, 6 calls",
-     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallFast": "42 s → 12.2 s",
      "smallVals": [
       1450,
       1605,
@@ -166,12 +159,14 @@
      "firstLab": "say the first sentence, write the rest",
      "restLab": "...the rest is written as she listens",
      "streamScore": "total right: 6 of 6",
-     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "streamNote": "1.8 + 0.4 + 0.3 = 2.5 s (added up from our timings)",
+     "streamNote2": "still slower than a person (0.2 s), but she hears you",
      "rule1": "TALK WHILE THINKING",
      "rule2": "NEVER CUT THE MATHS",
      "callerLab": "the caller, while the AI is still reading:",
      "callerLine": "\"Wait, make it 3 dozen eggs!\"",
-     "next": "NEXT PROBLEM: INTERRUPTIONS"
+     "next": "NEXT PROBLEM: INTERRUPTIONS",
+     "overTalk": "SHE'S TALKING · IT ISN'T LISTENING"
     },
     "tagSide": {
      "ravi": "right",
@@ -189,8 +184,8 @@
     {
      "who": "ravi",
      "file": "01_ravi.wav",
-     "text": "ఫోన్ పెట్టేసింది! దాదాపు రెండు వేల రూపాయల ఆర్డర్, [1] నలభై రెండు సెకన్లు ఒక్క మాట లేదు!",
-     "show": "She hung up! An order of almost ₹2,000 (₹1,928), and 42 seconds without a word!",
+     "text": "ఫోన్ పెట్టేసింది! దాదాపు రెండు వేల రూపాయల ఆర్డర్, [1] నలభై రెండు సెకన్లు మాటే లేదు!",
+     "show": "She hung up! An order of almost ₹2,000, and 42 seconds without a word!",
      "maxgap": 0.25,
      "gap": 0.2,
      "tempo": 1.07,
@@ -209,8 +204,8 @@
     {
      "who": "ravi",
      "file": "03_ravi.wav",
-     "text": "నలభై రెండు సెకన్లు ఆలోచిస్తావా?!",
-     "show": "42 seconds, you'll think?!",
+     "text": "నలభై రెండు సెకన్లు ఆలోచిస్తూ కూర్చున్నావా?!",
+     "show": "You sat thinking for 42 seconds?!",
      "maxgap": 0.25,
      "gap": 0.2,
      "tempo": 1.07,
@@ -219,7 +214,7 @@
     {
      "who": "ai",
      "file": "04_ai.wav",
-     "text": "ఆవిడ మాట వినడానికి రెండు సెకన్లు. [1] మొత్తం జవాబు రాయడానికి ముప్పై. [2] మాటగా మార్చడానికి పది. [3] పెద్ద యాప్స్ కూడా, ఈ మూడు స్టెప్పులకి మూడు నుంచి ఐదు సెకన్లు తీసుకున్నాయి.",
+     "text": "ఆవిడ మాట వినడానికి రెండు సెకన్లు. [1] మొత్తం జవాబు రాయడానికి ముప్పై. [2] మాటగా మార్చడానికి పది. [3] పెద్ద యాప్స్ కూడా, ఈ మూడు పనులకి మూడు నుంచి ఐదు సెకన్లు తీసుకున్నాయి.",
      "show": "2 seconds to hear her. 30 to write the whole reply. 10 to turn it into speech. Even big apps took 3 to 5 seconds for these 3 steps.",
      "maxgap": 0.25,
      "gap": 0.2,
@@ -232,13 +227,18 @@
    "id": "s_b",
    "type": "sk_call01",
    "tail": 0.0,
-   "boost": 1.4,
+   "boost": 1.5,
    "lift": 0.6,
    "drop_pre": [
     [
+     1,
+     1.8,
+     1.6
+    ],
+    [
      4,
-     0.0,
-     0.8
+     0.9,
+     1.0
     ]
    ],
    "data": {
@@ -306,7 +306,7 @@
       ]
      ],
      "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
-     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "bigApps": "big apps: 3-step voice 2.8-5.4 s · GPT-4o 0.32 s (OpenAI, 2024)",
      "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
      "quizHead": "HOW DO WE MAKE IT FAST?",
      "quizSub": "you decide",
@@ -326,7 +326,7 @@
      ],
      "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
      "shortSub": "the same 7B model, 6 calls",
-     "shortFast": "7.4 s",
+     "shortFast": "42 s → 7.4 s",
      "shortVals": [
       2259,
       2450,
@@ -339,7 +339,7 @@
      "shortNote": "no working written = no sum done",
      "smallHead": "B: A SMALLER MODEL (1.5B)",
      "smallSub": "the same full ask, 6 calls",
-     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallFast": "42 s → 12.2 s",
      "smallVals": [
       1450,
       1605,
@@ -355,12 +355,14 @@
      "firstLab": "say the first sentence, write the rest",
      "restLab": "...the rest is written as she listens",
      "streamScore": "total right: 6 of 6",
-     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "streamNote": "1.8 + 0.4 + 0.3 = 2.5 s (added up from our timings)",
+     "streamNote2": "still slower than a person (0.2 s), but she hears you",
      "rule1": "TALK WHILE THINKING",
      "rule2": "NEVER CUT THE MATHS",
      "callerLab": "the caller, while the AI is still reading:",
      "callerLine": "\"Wait, make it 3 dozen eggs!\"",
-     "next": "NEXT PROBLEM: INTERRUPTIONS"
+     "next": "NEXT PROBLEM: INTERRUPTIONS",
+     "overTalk": "SHE'S TALKING · IT ISN'T LISTENING"
     },
     "tagSide": {
      "ravi": "right",
@@ -378,10 +380,10 @@
     {
      "who": "ravi",
      "file": "05_ravi.wav",
-     "text": "మరి నిన్ను ఫాస్ట్ ఎలా చేయాలి? [1] షార్ట్ జవాబా? చిన్న మోడలా? లేక ఆలోచిస్తూనే మాట్లాడటమా?",
-     "show": "So how do I make you fast? A short answer? A small model? Or talking while thinking?",
+     "text": "మరి నిన్ను ఫాస్ట్ ఎలా చేయాలి? [1] షార్ట్ జవాబా? [2] చిన్న మోడల్ పెట్టాలా? [3] లేక ఆలోచిస్తూనే మాట్లాడటమా?",
+     "show": "So how do I make you fast? A short answer? Put in a small model? Or talk while thinking?",
      "maxgap": 0.25,
-     "gap": 1.0,
+     "gap": 1.6,
      "tempo": 1.07,
      "gain_db": 0.5
     },
@@ -411,20 +413,20 @@
      "text": "ఫాస్ట్ గానే ఉంది, [1] కానీ ఒక్కసారే కరెక్ట్ అయింది. మూడు సార్లు బియ్యానికి మాత్రమే బిల్లు వేసింది.",
      "show": "It is fast, but it was right only once. 3 times it billed only the rice.",
      "maxgap": 0.25,
-     "gap": 0.2,
+     "gap": 0.8,
      "tempo": 1.08,
      "gain_db": -1.0
     },
     {
      "who": "ai",
      "file": "09_ai.wav",
-     "text": "సీ! <pause 0.6> మిగతాది రాస్తూనే, ముందు ఒక వాక్యం చెప్పేస్తా. [1] రెండున్నర సెకన్లలో ఆవిడకి నా మాట వినిపిస్తుంది, [2] టోటల్ కూడా ప్రతిసారీ కరెక్ట్.",
-     "show": "C! <pause 0.8> While writing the rest, I say one sentence first. She hears me in 2.5 seconds, and the total is right every time.",
+     "text": "మూడోది! <pause 0.6> మిగతాది రాస్తూనే, ముందు ఒక వాక్యం చెప్పేస్తా. [1] రెండున్నర సెకన్లలో ఆవిడకి నా మాట వినిపిస్తుంది, [2] టోటల్ కూడా ప్రతిసారీ కరెక్ట్.",
+     "show": "The third one! <pause 0.8> While writing the rest, I say one sentence first. She hears me in 2.5 seconds, and the total is right every time.",
      "maxgap": 0.25,
      "gap": 0.3,
      "tempo": 1.08,
      "gain_db": -1.0,
-     "tts": "సీ!",
+     "tts": "మూడోది!",
      "file2": "09b_ai.wav",
      "tts2": "మిగతాది రాస్తూనే, ముందు ఒక వాక్యం చెప్పేస్తా. రెండున్నర సెకన్లలో ఆవిడకి నా మాట వినిపిస్తుంది, టోటల్ కూడా ప్రతిసారీ కరెక్ట్.",
      "pause": 0.6
@@ -459,12 +461,6 @@
       "shot": "ai",
       "prop": "caller",
       "n": 12
-     },
-     {
-      "who": "ai",
-      "shot": "ai",
-      "prop": "ignore",
-      "n": 13
      },
      {
       "who": "ravi",
@@ -505,7 +501,7 @@
       ]
      ],
      "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
-     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "bigApps": "big apps: 3-step voice 2.8-5.4 s · GPT-4o 0.32 s (OpenAI, 2024)",
      "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
      "quizHead": "HOW DO WE MAKE IT FAST?",
      "quizSub": "you decide",
@@ -525,7 +521,7 @@
      ],
      "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
      "shortSub": "the same 7B model, 6 calls",
-     "shortFast": "7.4 s",
+     "shortFast": "42 s → 7.4 s",
      "shortVals": [
       2259,
       2450,
@@ -538,7 +534,7 @@
      "shortNote": "no working written = no sum done",
      "smallHead": "B: A SMALLER MODEL (1.5B)",
      "smallSub": "the same full ask, 6 calls",
-     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallFast": "42 s → 12.2 s",
      "smallVals": [
       1450,
       1605,
@@ -554,12 +550,14 @@
      "firstLab": "say the first sentence, write the rest",
      "restLab": "...the rest is written as she listens",
      "streamScore": "total right: 6 of 6",
-     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "streamNote": "1.8 + 0.4 + 0.3 = 2.5 s (added up from our timings)",
+     "streamNote2": "still slower than a person (0.2 s), but she hears you",
      "rule1": "TALK WHILE THINKING",
      "rule2": "NEVER CUT THE MATHS",
      "callerLab": "the caller, while the AI is still reading:",
      "callerLine": "\"Wait, make it 3 dozen eggs!\"",
-     "next": "NEXT PROBLEM: INTERRUPTIONS"
+     "next": "NEXT PROBLEM: INTERRUPTIONS",
+     "overTalk": "SHE'S TALKING · IT ISN'T LISTENING"
     },
     "tagSide": {
      "ravi": "right",
@@ -587,10 +585,10 @@
     {
      "who": "ai",
      "file": "11_ai.wav",
-     "text": "హలో! బియ్యం బస్తా, ఇరవై ఐదు కిలోలు, ఒకటి. [1] రెండు లీటర్ల నూనె...",
-     "show": "Hello! A rice bag, 25 kilos, one. 2 litres of oil...",
+     "text": "హలో! బియ్యం బస్తా, ఇరవై ఐదు కిలోలు, ఒకటి. [1] రెండు లీటర్ల నూనె, రెండు డజన్ల గుడ్లు, ఆరింటికి డెలివరీ.",
+     "show": "Hello! A rice bag, 25 kilos, one. 2 litres of oil, 2 dozen eggs, delivery at 6.",
      "maxgap": 0.25,
-     "gap": 0.05,
+     "gap": -2.6,
      "tempo": 1.08,
      "gain_db": -1.0
     },
@@ -598,21 +596,11 @@
      "who": "caller",
      "file": "12_caller.wav",
      "text": "ఆగండి, గుడ్లు మూడు డజన్లు!",
-     "show": "Wait, eggs: 3 dozen!",
+     "show": "(the caller, over the AI) Wait, eggs: 3 dozen!",
      "maxgap": 0.25,
-     "gap": 0.0,
+     "gap": 0.4,
      "tempo": 1.07,
      "gain_db": 0.5
-    },
-    {
-     "who": "ai",
-     "file": "13_ai.wav",
-     "text": "...రెండు డజన్ల గుడ్లు.",
-     "show": "...2 dozen eggs.",
-     "maxgap": 0.25,
-     "gap": 0.2,
-     "tempo": 1.08,
-     "gain_db": -1.0
     },
     {
      "who": "ravi",

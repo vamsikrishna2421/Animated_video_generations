@@ -53,16 +53,16 @@ MUST = {"en": {1: [("hung",), ("two", "2"), ("thousand", "2000", "000"), ("order
                7: [("smaller",), ("model",)], 8: [("faster",), ("once",), ("three", "3"), ("charged",), ("rice",)],
                9: [("c", "see", "sea")], "9b": [("sentence",), ("write", "writing"), ("rest",), ("two", "2"), ("half", "2.5"), ("total",), ("right",)],
                10: [("talk",), ("thinking",), ("never",), ("maths", "math")],
-               11: [("hello",), ("rice",), ("twenty", "25"), ("kilos", "kilo"), ("oil",)],
+               11: [("hello",), ("rice",), ("twenty", "25"), ("kilos", "kilo"), ("oil",), ("dozen",), ("eggs", "egg"), ("delivery",), ("six", "6")],
                12: [("wait",), ("three", "3"), ("dozen",), ("eggs", "egg")], 13: [("two", "2"), ("dozen",), ("eggs", "egg")],
                14: [("listening",), ("hang",), ("again",)]},
-        "te": {1: [("नल", "42")], 4: [("मुप्प", "30")], 6: [("येड", "एड", "7")],
+        "te": {1: [("नल", "42")], 9: [("मूड", "मुड", "मूडो", "मोडो")], 4: [("मुप्प", "30")], 6: [("येड", "एड", "7")],
                8: [("करेक्ट", "करेक्त", "करक्ट", "करेक"), ("मात्र", "मातर"), ("बिल",)]}}   # 8: the first take garbled its end
 JUDGE_TEXT = {1: "She hung up! An almost 2,000 rupee order, after 42 seconds of silence!", 3: "42 seconds of thinking?!",
               4: "Hearing her: 2 seconds. Writing my whole reply: 30. Turning it into speech: 10. Even big apps took 3 to 5 seconds for these 3 steps.",
               6: "Shorter: 7 seconds, but the total was wrong every time. I do the sum by writing it out.",
               "9b": "I say one sentence while I write the rest. She hears me in 2.5 seconds, and the total is right every time.",
-              11: "Hello! One bag of rice, 25 kilos, 2 litres of oil...", 12: "Wait, make it 3 dozen eggs!", 13: "...and 2 dozen eggs."}
+              11: "Hello! One bag of rice, 25 kilos, 2 litres of oil, 2 dozen eggs, delivery by 6.", 12: "Wait, make it 3 dozen eggs!"}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

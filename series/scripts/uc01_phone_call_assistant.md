@@ -107,3 +107,16 @@ NEVER CUT THE MATHS"; the caller's bubble on line 12; "NEXT PROBLEM: INTERRUPTIO
   a check on its last words. Line 6's check expected "एड" where Whisper writes "येड" for ఏడు (fixed). The first Telugu
   run was killed for lack of memory (the test's two models were still in the RAM disk; removed).
 - EN 64.4 s, TE 71.9 s.
+
+## Render review (human-viewer, EN + TE) and what changed
+- Both: the quiz went straight into the answer → a 2 s hold (1.6 s TE) with the bed out and a clock ticking, each option
+  appearing as Ravi says it; a beat before "C!"; the B card's "12.2 s · 2.7 s talking early" tripped both (and gave C
+  away) → the cards read "42 s → 7.4 s" and "42 s → 12.2 s"; the ending sounded like a mishearing → the caller now cuts
+  in while the AI reads on (the two voices overlap), with "SHE'S TALKING · IT ISN'T LISTENING" big on screen.
+- Telugu near-misses (no real swear, but close): "సీ!" was heard "ఛీ" → "మూడోది!"; "చిన్న మోడలా?" → "చిన్న మోడల్ పెట్టాలా?";
+  "ఒక్క మాట లేదు" → "మాటే లేదు"; "స్టెప్పులకి" was heard "చెప్పులకి" → "పనులకి"; "ఆలోచిస్తావా" lost its question →
+  "ఆలోచిస్తూ కూర్చున్నావా?!"; line 2 retaken for "కంప్యూటర్".
+- Priya: the sources and the caveat were tiny → larger, and the 2.5 s card shows "1.8 + 0.4 + 0.3 = 2.5 s (added up
+  from our timings)" and "still slower than a person"; GPT-4o's 0.32 s added beside the 2.8-5.4 s; the hook's bed no
+  longer dips under line 1; quieter buzzes. Not changed: the "UC01" tag (the routine keeps the series tag on screen);
+  the caption height (the shop pictures fill the space above).
