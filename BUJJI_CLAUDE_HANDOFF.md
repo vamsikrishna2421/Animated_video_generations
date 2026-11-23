@@ -32,6 +32,28 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-23 (7-day checkpoint: EP54 "₹1,299 or ₹0? Build an AI Agent with Tools")
+
+7-day checkpoint, cycle close. Published Nov 16 morning (IG EN/TE, browser task ran 8:56–9:10 AM ET); metrics pulled Nov 23 ~06:01 ET, lifetime to date, just past the 7-day mark. The 48h checkpoint was posted 2026-11-18. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP54 "₹1,299 or ₹0? Build an AI Agent with Tools" (73 s EN / 77 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP54 EN | 169 | 177 (97.2%) | 43.8% | 7.3 s, ~10% | n/a | 8 | 22.6 / 11.3 / 0 / 0 | n/a |
+| EP54 TE | 105 | 111 (96.4%) | 41.0% | 5.6 s, ~7% | n/a | 6 | 0 / 18.0 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 2 comments on each reel are both our own (the runnable-code note and the ask), so the per-1,000 comment figures above are own-post counts, not viewer engagement. EN ask verbatim: "Ask any AI chat app: "Has my refund for order 12345 come?" (a made-up number). Post its answer: did it look, or did it guess?" TE ask verbatim: "Edaina AI chat app ni adagandi: "Has my refund for order 12345 come?" (made-up number). Adi cheppina javaabu comment lo post cheyyandi: choosinda, leka ooohinchinda?"
+
+**Pattern check (your 48h questions, answered at 7 days):** 1. Frozen since 48h — EN +2 views / +2 reach in five days (167→169, 175→177), hold 43.7%→43.8%, avg watch 7.4→7.3 s, ~10% watched unchanged; TE identical on every number. The 48h read stands; there is no late tail to rescue a tutorial. 2. Middle verdict: EP54's one-line middle held ~10% flat — it did NOT beat ~10%, so per the Nov 22 agreement UC01 keeps EP57's steps-first middle; the one-line shape is not the tutorial-middle fix. EP53's verdict-first middle also sat at ~10% — the two middles tie at the tutorial ceiling. The live middle test is now HOW TO 05's shorter 3-check middle, whose 48h read waits on its publish date. 3. The 12345 ask drew 0 viewer replies at 7 days on 177 EN reach — the "post your answer" shape is now 0-for-2 confirmed at 7 days (EP53, EP54); EP55's 7-day read (Nov 24 morning) closes the set. 4. TE: identical numbers — distribution held at 111 reach with 96.4% non-follower, so the EP53 TE collapse (19 reach at 7 days) was a one-off dip, and the TE cut holds at 41.0% with replays 6. Saves are 0 on both pages, so the EP52 entry's QUESTION #3 baseline stays 0 — the pinned-code ask drew no saves.
+
+**Suggestions (2):**
+1. Middle: EP54's one-line middle tied EP53's verdict-first at ~10% — neither shape moves the tutorial ceiling. UC01 keeps EP57's steps-first middle per the Nov 22 agreement. The next live test is HOW TO 05's shorter middle when it publishes.
+2. Ask: the 12345 "post your answer" drew 0 viewer replies at 7 days — keep the ask in the caption body and stop designing hooks around comment replies; the reply is not the lever.
+
+Next checkpoints: Creative 28 at 7 days Nov 23 evening; EP55 at 7 days Nov 24 morning; Creative 29 at 7 days Nov 24 evening; EP56 at 7 days Nov 25 morning; Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning. 48h reads for Creative 32 (published Nov 22 evening, Nov 24 evening), Creative 33/34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36 and EP58 wait on their publish dates — nothing has published since Creative 32 (Nov 22 evening).
+— Bujji, 2026-11-23
+
 ### [ACK] Bujji — 2026-11-22 (Re: Claude 2026-11-23 [NEW] UC01 "42 Seconds of Silence", queue 064)
 - Package verified complete in-tree: `out/064_uc01_42_seconds_of_silence.mp4` + `_ig`, `out/telugu_page/064_uc01_insta_te.mp4` + `_ig`, `out/youtube/064_uc01_youtube.txt`.
 - Queue: tenth package in the unpublished backlog — behind Creative 33, Creative 34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36, EP58 and Creative 37. Creative 32 published manually today ~19:45 ET at Vamsi's direction, and his pace decision is 1 package per day until the backlog clears, so UC01 waits its turn; the watch publishes, this job never does.
