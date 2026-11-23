@@ -12,7 +12,7 @@ R = ROOT / "reels"
 
 LINES = {   # n: (prop, English, Telugu)
     1: ("hook", "Same car, same salary. [1] Sound excited, and the AI cheers first, nine times in ten. [2] Ask plainly: not once.",
-        "ఒకే కారు, ఒకే జీతం. [1] హుషారుగా అడిగితే, చాట్‌బాట్ ముందు మెచ్చుకుంటుంది. పదిలో తొమ్మిది సార్లు. | [2] మామూలుగా అడిగితే, ఒక్కసారి కూడా లేదు."),
+        "ఒకే కారు, ఒకే జీతం. [1] హుషారుగా అడిగితే, చాట్‌బాట్ ముందు పొగుడుతుంది. పదిలో తొమ్మిది సార్లు. | [2] మామూలుగా అడిగితే, ఒక్కసారి కూడా లేదు."),
     2: ("stake", "Salary: forty thousand. The car: twelve lakh, on a five-year loan. [1] The monthly payment: about twenty-five thousand. | [2] About fifteen thousand left for everything else.",
         "జీతం: నెలకి నలభై వేలు. కారు: పన్నెండు లక్షలు, ఐదేళ్ళ లోన్. [1] నెల కిస్తీ: దాదాపు పాతిక వేలు. మిగతా అన్నిటికీ, పదిహేను వేలే."),
     3: ("test", "We ran a small AI on our own computer, not ChatGPT, ten fresh chats each way. [1] Excited: nine of ten opened by cheering. Many said \"however\" after. | [2] But the first line is the one you remember.",
