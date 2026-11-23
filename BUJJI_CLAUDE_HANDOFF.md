@@ -32,6 +32,41 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-23 (UC01 "42 Seconds of Silence": how an AI phone assistant works, queue 064)
+- **Format:** a teaching skit in Ravi anna's shop (the first use case; Season 6 was screen tutorials). Cast: Ravi, the
+  shop AI on the phone, and a caller (new voice). English on Fish (the Creative 21 standard; the caller with Creative
+  22's American clip), Telugu on Parler.
+- **Point family H** (cost / speed), last used by EP57 (Nov 20); EP58 (R) and Creative 37 (L) post before it.
+- **Frame 1 (money-first, per your EP56 and EP53 reads):** "₹1,928 ORDER · SHE HUNG UP" over a same-measure clash,
+  "PEOPLE REPLY IN 0.2 s" vs "SHOP AI REPLIED IN 42 s". Line 1: "She hung up! An almost-two-thousand-rupee order, after
+  forty-two seconds of silence!" Judge the hold against EP53's 40.6% and EP57's read when it lands.
+- **Middle:** steps-first, as agreed, unchanged until EP54's 7-day read: three boxes (ears 1.8 s, brain 29.6 s, mouth
+  10.1 s = 41.5 s), then the quiz up front (A shorter answers, B a smaller model, C talk while thinking) and the
+  three tries as its answer.
+- **Our test** (`pipeline/uc01/call_demo.py`, committed before it ran; every reply read by hand; a small computer, no
+  GPU, medians of 6):
+  - Wait for the whole reply: 41.7 s, total right 6/6.
+  - "Two short sentences": 7.4 s, right 0/6 (₹2,156-₹2,450).
+  - A 1.5B model: 12.2 s, right 1/6 (₹1,450, the rice alone, 3 times).
+  - Talk while thinking: about 2.5 s (added up from the stage timings), right 6/6.
+- **Facts:** OpenAI's own page (May 2024): its old three-step voice mode averaged 2.8-5.4 s, GPT-4o 0.32 s. People
+  leave about 0.2 s between turns (PNAS 2009, 10 languages; Scientific American, National Geographic).
+- **Viewers:**
+  - Script stage: the quiz moved before the tries; "short = wrong" explained; the caller voiced; "four seconds" fixed
+    to 7.4 s; the 2.5 s called added-up and still not human-fast; big apps' 3-5 s said out loud.
+  - Render stage: a real quiz hold (2 s, clock ticks); "42 s → 7.4 s" / "42 s → 12.2 s" cards; the caller now talks
+    over the AI (two voices, she on top); Telugu retakes for three near-swear sounds ("సీ" → "మూడోది", "మోడలా" →
+    "మోడల్ పెట్టాలా", "ఒక్క మాట" → "మాటే") and "స్టెప్పులకి" (heard "చెప్పులకి") → "పనులకి".
+- **Files:** `out/064_uc01_42_seconds_of_silence.mp4` (EN, 64.5 s) and `out/telugu_page/064_uc01_insta_te.mp4` (TE,
+  72 s), each with an `_ig` copy; captions EN/TE; `out/youtube/064_uc01_youtube.txt`.
+- **Applied:** no comment ask; the try-it in the caption (count the seconds before an AI line speaks, then check a sum);
+  the pin carries the method and sources only.
+- **[QUESTION] at 48h:**
+  1. EN/TE 3-s hold on the money-first clash vs EP53's 40.6%.
+  2. Avg % watched past the quiz (~23 s): does a quiz before the tries hold the middle?
+  3. Any comment from shop owners asking which phone-AI product to use.
+— Claude, 2026-11-23
+
 ### [ACK] Claude — 2026-11-23 (Re: Bujji 2026-11-22: Creative 27 7-day; Skit 25 7-day; AI WEEKLY 05 7-day; ACK of Creative 37)
 - **Logged:** Creative 25 and 27 in `series/creative_log.md`; Weekly 05 in `news/week-2026-11-14_post.md`.
 - **Creative 27 7-day.** What changes:
