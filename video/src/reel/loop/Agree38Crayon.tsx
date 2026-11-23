@@ -38,6 +38,10 @@ const chat = (c: Ctx, x: number, y: number, w: number, lab: string, labCol: stri
   c.fillStyle = "#111827"; rrect(c, x, y, w, 700, 36); c.fill(); c.fillStyle = "#f1f5f9"; rrect(c, x + 14, y + 14, w - 28, 672, 26); c.fill();
   c.fillStyle = labCol; rrect(c, x + 14, y + 14, w - 28, 74, 26); c.fill(); c.fillRect(x + 14, y + 60, w - 28, 28);
   c.font = SANS(fit(c, lab, w - 70, 36, 900), 900); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(lab, x + w / 2, y + 64);
+  if (party > 0) {   // a little confetti, behind the bubbles (stills: it covered the text)
+    const cols = ["#f59e0b", "#ec4899", "#22c55e", "#3b82f6"];
+    for (let q = 0; q < 18; q++) { const px = x + 30 + ((q * 97) % (w - 60)), py = y + 100 + ((q * 53 + party * 120) % 420); c.fillStyle = cols[q % 4]; c.globalAlpha = (1 - 0.55 * dim) * 0.8; c.fillRect(px, py, 12, 22); }
+  }
   c.textAlign = "left";
   const aw = w - 90;
   c.font = SANS(30, 800); const askL = wrap(c, ask, aw - 40).slice(0, 4);
@@ -48,10 +52,6 @@ const chat = (c: Ctx, x: number, y: number, w: number, lab: string, labCol: stri
   c.fillStyle = "#ffffff"; rrect(c, x + 30, ry, aw, 34 + repL.length * 40, 20); c.fill(); c.strokeStyle = "#cbd5e1"; c.lineWidth = 3; rrect(c, x + 30, ry, aw, 34 + repL.length * 40, 20); c.stroke();
   c.fillStyle = INK; repL.forEach((t, q) => c.fillText(t, x + 52, ry + 44 + q * 40));
   c.font = SANS(fit(c, stat, w - 60, 66, 900), 900); c.fillStyle = statCol; c.textAlign = "center"; c.fillText(stat, x + w / 2, y + 650);
-  if (party > 0) {   // a little confetti over the excited chat
-    const cols = ["#f59e0b", "#ec4899", "#22c55e", "#3b82f6"];
-    for (let q = 0; q < 18; q++) { const px = x + 30 + ((q * 97) % (w - 60)), py = y + 100 + ((q * 53 + party * 120) % 420); c.fillStyle = cols[q % 4]; c.globalAlpha = (1 - 0.55 * dim) * 0.8; c.fillRect(px, py, 12, 22); }
-  }
   c.restore();
 };
 
@@ -142,7 +142,7 @@ const StAgree: React.FC<SP> = ({ s }) => {
           if (k1 > 0) {
             c.save(); c.globalAlpha = clamp(k1 * 3); c.translate(0, (1 - easeOut(clamp(k1 * 1.5))) * 40);
             c.fillStyle = "#1e293b"; rrect(c, 60, 860, W - 120, 330, 24); c.fill();
-            c.textAlign = "left"; c.font = SANS(34, 900); c.fillStyle = "#fde68a"; c.fillText(T.oaHead, 100, 920);
+            c.textAlign = "left"; c.font = SANS(fit(c, T.oaHead, W - 200, 34, 900), 900); c.fillStyle = "#fde68a"; c.fillText(T.oaHead, 100, 920);
             c.font = SANS(48, 900); c.fillStyle = "#fff"; wrap(c, T.oaQuote, W - 220).slice(0, 2).forEach((t, q) => c.fillText(t, 100, 990 + q * 58));
             c.font = SANS(fit(c, T.oaSub, W - 200, 30, 700), 700); c.fillStyle = "#cbd5e1"; wrap(c, T.oaSub, W - 200).slice(0, 2).forEach((t, q) => c.fillText(t, 100, 1120 + q * 38));
             c.restore();
