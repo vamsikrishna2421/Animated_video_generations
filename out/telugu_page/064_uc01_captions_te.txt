@@ -1,0 +1,33 @@
+UPLOAD: 064 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/064_uc01_insta_te.mp4  (teaching skit, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/064_uc01_insta_te_ig.mp4). It loops: "మళ్ళీ ఫోన్ పెట్టేస్తుంది!" taruvaata frame 1: 0.2 s vs 42 s.
+
+=== CAPTION ===
+₹1,928 phone order. Shop AI 42 seconds okka maata maatlaadaledu. Aavida phone pettesindi.
+
+AI From Scratch use case 1: AI phone call assistant ela pani chestundi
+- Prati turn lo moodu steps, okadaani tarvaata okati: chevulu (aavida maata → text), brain (AI javaabu raastundi), noru (javaabu → maata).
+- Maa test, GPU leni chinna computer lo (okate ₹1,928 order, okkodaaniki 6 calls): chevulu 1.8 s, brain 29.6 s (motham javaabu mundu raastundi), noru 10.1 s. 41.5 s nissabdham. Manushulu turns madhya dhaadaapu 0.2 s matrame teesukuntaaru.
+- "Short ga cheppu": 7 seconds, kaani total 6 ki 6 saarlu tappu (₹2,156 nunchi ₹2,450). Lekka raayakapothe, lekka cheyyaledu.
+- Chinna model: fast, kaani 6 lo okkasaare correct. Moodu saarlu biyyaniki maatrame bill vesindi.
+- Aalochistoone maatlaadadam: migataadi raastoone mundu oka vaakyam cheppadam. Dhaadaapu 2.5 s lo maata vinipistundi (maa timings nunchi lekka kattinadi), total 6 ki 6 correct. Manishi antha fast kaadu, kaani aavidaki vinipistundi.
+- Fast chips meeda pedda apps: OpenAI cheppina prakaaram, daani paata moodu-steps voice mode ki sagatu 2.8-5.4 s; GPT-4o dhaadaapu 0.32 s (vaalla figures, 2024).
+
+Try chesukondi: edaina AI phone line ki gaani voice assistant ki gaani call chesi, adi maatlaade mundu enni seconds ayyaayo lekka pettandi. Taruvaata moodu dharalu kalapamani adigi, total check chesukondi.
+
+Meeru build chestunte:
+1. Stream chesukondi: migataadi raastoone mundu oka vaakyam cheppaali
+2. Time kosam lekka kat cheyyakandi; dabbu vishayam lo calculator / tool tho total check chesukondi
+3. Next problem: interruptions. Manchi phone AI, caller maatlaadite aagipotundi.
+
+Next: UC02, ChatGPT web lo ela vetukutundi.
+Follow @ai_maastaaru_telugu.
+
+=== COMMENT PROMPT ===
+(none)
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #VoiceAI #AIFromScratch #LearnAI
+
+=== PINNED_COMMENT ===
+Ela test chesam (Nov 23, 2026): okka phone order (Kokoro computer voice, 9 s), 4-core computer, GPU ledu: faster-whisper small → Qwen2.5-7B-Instruct (4-bit, streamed) → Kokoro TTS; stopwatch tho time, warm-up taruvaata 6 runs median. Motham javaabu kosam aagithe: 1.8 + 29.6 + 10.1 = 41.5 s, total ₹1,928 6/6 correct. "Rendu chinna vaakyaalu": 7.4 s, 0/6 correct. Qwen2.5-1.5B: 12.2 s (mundu maatlaadite 2.7 s), 1/6 correct. Mundu maatlaadite: mundu vaakyam 0.4 s lo raasi 0.3 s lo maata ga maarchindi, kaabatti dhaadaapu 2.5 s (stage timings kalipi, live call kaadu). Code: pipeline/uc01/call_demo.py.
+Sources: OpenAI "Hello GPT-4o" (May 2024); Stivers et al., PNAS 2009 (Scientific American, National Geographic). Ravi anna, caller, shop memu raasinavi.

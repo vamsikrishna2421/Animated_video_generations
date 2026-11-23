@@ -1,0 +1,626 @@
+{
+ "id": "uc01v1",
+ "title": "42 Seconds of Silence (UC01: how an AI phone-call assistant works)",
+ "label": "UC01",
+ "banner": "How an AI phone assistant works",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "names": {
+  "caller": "Caller"
+ },
+ "musicVol": [
+  0.2,
+  0.42
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.2,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   250,
+   -12,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_call01",
+   "tail": 0.0,
+   "boost": 1.0,
+   "drop_at": [
+    [
+     0,
+     1,
+     0.3
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "why",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "what",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "stages",
+      "prop": "stages",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "leftLab": "PEOPLE REPLY IN",
+     "leftVal": "0.2 s",
+     "rightLab": "SHOP AI REPLIED IN",
+     "rightVal": "42 s",
+     "stake": "₹1,928 ORDER · SHE HUNG UP",
+     "ended": "CALL ENDED",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stagesHead": "ONE PHONE TURN, STEP BY STEP",
+     "stagesSub": "our test · a small computer, no GPU · medians of 6 calls",
+     "stages": [
+      [
+       "EARS",
+       "her voice → text",
+       1.8,
+       "#38bdf8"
+      ],
+      [
+       "BRAIN",
+       "writes the whole reply",
+       29.6,
+       "#f87171"
+      ],
+      [
+       "MOUTH",
+       "the reply → speech",
+       10.1,
+       "#c084fc"
+      ]
+     ],
+     "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
+     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
+     "quizHead": "HOW DO WE MAKE IT FAST?",
+     "quizSub": "you decide",
+     "opts": [
+      [
+       "A",
+       "shorter answers"
+      ],
+      [
+       "B",
+       "a smaller model"
+      ],
+      [
+       "C",
+       "talk while thinking"
+      ]
+     ],
+     "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
+     "shortSub": "the same 7B model, 6 calls",
+     "shortFast": "7.4 s",
+     "shortVals": [
+      2259,
+      2450,
+      2156,
+      2159,
+      2259,
+      2359
+     ],
+     "shortScore": "0 of 6 right",
+     "shortNote": "no working written = no sum done",
+     "smallHead": "B: A SMALLER MODEL (1.5B)",
+     "smallSub": "the same full ask, 6 calls",
+     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallVals": [
+      1450,
+      1605,
+      1760,
+      1450,
+      1928,
+      1450
+     ],
+     "smallScore": "1 of 6 right",
+     "smallNote": "₹1,450 = the rice alone",
+     "streamHead": "C: TALK WHILE THINKING",
+     "waitLab": "wait for the whole reply",
+     "firstLab": "say the first sentence, write the rest",
+     "restLab": "...the rest is written as she listens",
+     "streamScore": "total right: 6 of 6",
+     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "rule1": "TALK WHILE THINKING",
+     "rule2": "NEVER CUT THE MATHS",
+     "callerLab": "the caller, while the AI is still reading:",
+     "callerLine": "\"Wait, make it 3 dozen eggs!\"",
+     "next": "NEXT PROBLEM: INTERRUPTIONS"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right",
+     "caller": "left"
+    },
+    "yt": {
+     "chapter": "42 s of silence",
+     "title": "42 s of silence",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "She hung up! An almost-two-thousand-rupee order, [1] after forty-two seconds of silence!",
+     "show": "She hung up! A ₹1,928 order, after 42 seconds of silence!",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5,
+     "tts": "She hung up! An almost two-thousand rupee order, after forty-two seconds of silence!"
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "I was answering! [1] On this small computer, I hear, then think, then speak, one after the other.",
+     "show": "I was answering! On this small computer, I hear, then think, then speak, one after the other.",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "Forty-two seconds of thinking?!",
+     "show": "Forty-two seconds of thinking?!",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "Hearing her: two seconds. [1] Writing my whole reply: thirty. [2] Turning it into speech: ten. [3] Even big apps took three to five seconds for these three steps.",
+     "show": "Hearing her: 2 seconds. Writing my whole reply: 30. Turning it into speech: 10. Even big apps took 3 to 5 seconds for these 3 steps.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_call01",
+   "tail": 0.0,
+   "boost": 1.4,
+   "lift": 0.6,
+   "drop_pre": [
+    [
+     4,
+     0.0,
+     0.8
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "quiz",
+      "prop": "quiz",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "short",
+      "prop": "short",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "smaller",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "small",
+      "prop": "small",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "quiz",
+      "prop": "answer",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "leftLab": "PEOPLE REPLY IN",
+     "leftVal": "0.2 s",
+     "rightLab": "SHOP AI REPLIED IN",
+     "rightVal": "42 s",
+     "stake": "₹1,928 ORDER · SHE HUNG UP",
+     "ended": "CALL ENDED",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stagesHead": "ONE PHONE TURN, STEP BY STEP",
+     "stagesSub": "our test · a small computer, no GPU · medians of 6 calls",
+     "stages": [
+      [
+       "EARS",
+       "her voice → text",
+       1.8,
+       "#38bdf8"
+      ],
+      [
+       "BRAIN",
+       "writes the whole reply",
+       29.6,
+       "#f87171"
+      ],
+      [
+       "MOUTH",
+       "the reply → speech",
+       10.1,
+       "#c084fc"
+      ]
+     ],
+     "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
+     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
+     "quizHead": "HOW DO WE MAKE IT FAST?",
+     "quizSub": "you decide",
+     "opts": [
+      [
+       "A",
+       "shorter answers"
+      ],
+      [
+       "B",
+       "a smaller model"
+      ],
+      [
+       "C",
+       "talk while thinking"
+      ]
+     ],
+     "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
+     "shortSub": "the same 7B model, 6 calls",
+     "shortFast": "7.4 s",
+     "shortVals": [
+      2259,
+      2450,
+      2156,
+      2159,
+      2259,
+      2359
+     ],
+     "shortScore": "0 of 6 right",
+     "shortNote": "no working written = no sum done",
+     "smallHead": "B: A SMALLER MODEL (1.5B)",
+     "smallSub": "the same full ask, 6 calls",
+     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallVals": [
+      1450,
+      1605,
+      1760,
+      1450,
+      1928,
+      1450
+     ],
+     "smallScore": "1 of 6 right",
+     "smallNote": "₹1,450 = the rice alone",
+     "streamHead": "C: TALK WHILE THINKING",
+     "waitLab": "wait for the whole reply",
+     "firstLab": "say the first sentence, write the rest",
+     "restLab": "...the rest is written as she listens",
+     "streamScore": "total right: 6 of 6",
+     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "rule1": "TALK WHILE THINKING",
+     "rule2": "NEVER CUT THE MATHS",
+     "callerLab": "the caller, while the AI is still reading:",
+     "callerLine": "\"Wait, make it 3 dozen eggs!\"",
+     "next": "NEXT PROBLEM: INTERRUPTIONS"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right",
+     "caller": "left"
+    },
+    "yt": {
+     "chapter": "Fast and right?",
+     "title": "Fast and right?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "So how do I make you fast? [1] A, shorter answers. B, a smaller model. C, talk while thinking.",
+     "show": "So how do I make you fast? A, shorter answers. B, a smaller model. C, talk while thinking.",
+     "maxgap": 0.25,
+     "gap": 1.4,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "Shorter: seven seconds, [1] but the total was wrong every time. [2] I do the sum by writing it out.",
+     "show": "Shorter: 7 seconds, but the total was wrong every time. I do the sum by writing it out.",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "Then a smaller model!",
+     "show": "Then a smaller model!",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "Faster, [1] but right only once. Three times, it charged only for the rice.",
+     "show": "Faster, but right only once. Three times, it charged only for the rice.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ai",
+     "file": "09_ai.wav",
+     "text": "C! <pause 0.8> I say one sentence while I write the rest. [1] She hears me in two and a half seconds, [2] and the total is right every time.",
+     "show": "C! <pause 0.8> I say one sentence while I write the rest. She hears me in 2.5 seconds, and the total is right every time.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": -1.0,
+     "tts": "C!",
+     "file2": "09b_ai.wav",
+     "tts2": "I say one sentence while I write the rest. She hears me in two and a half seconds, and the total is right every time.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_call01",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.8,
+   "lift": 0.8,
+   "rise": 1.6,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "twist",
+      "n": 11
+     },
+     {
+      "who": "caller",
+      "shot": "ai",
+      "prop": "caller",
+      "n": 12
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "ignore",
+      "n": 13
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "loop",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "leftLab": "PEOPLE REPLY IN",
+     "leftVal": "0.2 s",
+     "rightLab": "SHOP AI REPLIED IN",
+     "rightVal": "42 s",
+     "stake": "₹1,928 ORDER · SHE HUNG UP",
+     "ended": "CALL ENDED",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stagesHead": "ONE PHONE TURN, STEP BY STEP",
+     "stagesSub": "our test · a small computer, no GPU · medians of 6 calls",
+     "stages": [
+      [
+       "EARS",
+       "her voice → text",
+       1.8,
+       "#38bdf8"
+      ],
+      [
+       "BRAIN",
+       "writes the whole reply",
+       29.6,
+       "#f87171"
+      ],
+      [
+       "MOUTH",
+       "the reply → speech",
+       10.1,
+       "#c084fc"
+      ]
+     ],
+     "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
+     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
+     "quizHead": "HOW DO WE MAKE IT FAST?",
+     "quizSub": "you decide",
+     "opts": [
+      [
+       "A",
+       "shorter answers"
+      ],
+      [
+       "B",
+       "a smaller model"
+      ],
+      [
+       "C",
+       "talk while thinking"
+      ]
+     ],
+     "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
+     "shortSub": "the same 7B model, 6 calls",
+     "shortFast": "7.4 s",
+     "shortVals": [
+      2259,
+      2450,
+      2156,
+      2159,
+      2259,
+      2359
+     ],
+     "shortScore": "0 of 6 right",
+     "shortNote": "no working written = no sum done",
+     "smallHead": "B: A SMALLER MODEL (1.5B)",
+     "smallSub": "the same full ask, 6 calls",
+     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallVals": [
+      1450,
+      1605,
+      1760,
+      1450,
+      1928,
+      1450
+     ],
+     "smallScore": "1 of 6 right",
+     "smallNote": "₹1,450 = the rice alone",
+     "streamHead": "C: TALK WHILE THINKING",
+     "waitLab": "wait for the whole reply",
+     "firstLab": "say the first sentence, write the rest",
+     "restLab": "...the rest is written as she listens",
+     "streamScore": "total right: 6 of 6",
+     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "rule1": "TALK WHILE THINKING",
+     "rule2": "NEVER CUT THE MATHS",
+     "callerLab": "the caller, while the AI is still reading:",
+     "callerLine": "\"Wait, make it 3 dozen eggs!\"",
+     "next": "NEXT PROBLEM: INTERRUPTIONS"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right",
+     "caller": "left"
+    },
+    "yt": {
+     "chapter": "Talk while thinking",
+     "title": "Talk while thinking",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "10_ravi.wav",
+     "text": "Talk while thinking, but never cut the maths!",
+     "show": "Talk while thinking, but never cut the maths!",
+     "maxgap": 0.25,
+     "gap": 0.4,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "11_ai.wav",
+     "text": "Hello! One bag of rice, twenty-five kilos, [1] two litres of oil...",
+     "show": "Hello! One bag of rice, 25 kilos, 2 litres of oil...",
+     "maxgap": 0.25,
+     "gap": 0.05,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    },
+    {
+     "who": "caller",
+     "file": "12_caller.wav",
+     "text": "Wait, make it three dozen eggs!",
+     "show": "Wait, make it 3 dozen eggs!",
+     "maxgap": 0.25,
+     "gap": 0.0,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "13_ai.wav",
+     "text": "...and two dozen eggs.",
+     "show": "...and 2 dozen eggs.",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "14_ravi.wav",
+     "text": "You're not listening! [1] She'll hang up again!",
+     "show": "You're not listening! She'll hang up again!",
+     "maxgap": 0.25,
+     "gap": 0.0,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    }
+   ]
+  }
+ ]
+}

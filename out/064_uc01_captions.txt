@@ -1,30 +1,39 @@
 UPLOAD: 064
-VIDEO: 064_uc01_how_an_ai_phone_call_assistant_works.mp4
+VIDEO: 064_uc01_42_seconds_of_silence.mp4  (teaching skit, about 64 s, AI voices in the Creative 21 standard; replaces the older lesson-format file in slot 064; send copy: 064_uc01_42_seconds_of_silence_ig.mp4). It loops: "She'll hang up again!" and it is frame 1 again: 0.2 s vs 42 s.
 
 === CAPTION ===
-You call a clinic and an AI voice books your appointment. How does that actually work?
+A ₹1,928 phone order. The shop's AI took 42 seconds to say a word. She hung up.
 
-Real World AI, Use Case 01: the AI phone call assistant
-- The loop: listen, think, speak, repeat
-- Stage 1: speech to text
-- Stage 2: an LLM with tools decides the reply
-- Stage 3: text to speech
-- The hard parts: speed, interruptions, turn taking, human hand-off
+Use case 1 of AI From Scratch: how an AI phone-call assistant works
+- Every turn has three steps, one after the other: ears (her voice → text), brain (an AI writes the reply), mouth (the reply → speech).
+- Our test, on a small computer with no GPU (one ₹1,928 order, 6 calls each): ears 1.8 s, brain 29.6 s (it writes the whole reply first), mouth 10.1 s. 41.5 s of silence. People leave about 0.2 s between turns.
+- "Just answer shorter": 7 seconds, and the total was wrong in 6 of 6 (₹2,156 to ₹2,450). Without writing the sum out, it didn't do the sum.
+- A smaller model: faster, right in 1 of 6. Three times it charged only for the rice.
+- Talk while thinking: say the first sentence while the rest is written. First sound at about 2.5 s (worked out from our timings), total right 6 of 6. Still slower than a person, but she hears you.
+- Big apps on fast chips: OpenAI says its old three-step voice mode took 2.8-5.4 s on average; its GPT-4o answers in about 0.32 s (its own figures, 2024).
 
-Quiz at the end. Got it right? Comment below.
+Try it: call any AI phone line or voice assistant and count the seconds before it speaks. Then ask it to add three prices, and check the total.
 
-Which app should I break down next? Comment it below.
-Next: How ChatGPT searches the web.
-Follow @ai_maastaaru for more real world AI breakdowns.
+What to do if you build one:
+1. Stream it: speak the first sentence while the rest is still being written
+2. Never cut the working to save time; for money, check the total with a calculator or a tool
+3. Next problem: interruptions. A good phone AI stops talking when the caller talks.
+
+Next: UC02, how ChatGPT searches the web.
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+(none: from Bujji's reads, the try-it lives in the caption)
 
 === HASHTAGS ===
-#AIMaastaaru #VoiceAI #LearnAI #AIAgents #AIForBeginners
+#AIFromScratch #VoiceAI #AIPhoneAssistant #LearnAI #SmallBusiness
 
 === PINNED_COMMENT ===
-Quiz answer: Speech to text, then the LLM, then text to speech. Drop the app you want me to break down next!
+How we tested (Nov 23, 2026): one phone order spoken by a Kokoro computer voice (9 s), then the three steps on a 4-core computer, no GPU: faster-whisper small (int8) → Qwen2.5-7B-Instruct (4-bit, llama.cpp, streamed) → Kokoro text-to-speech; timed with a stopwatch, medians of 6 runs after a warm-up. Wait for the whole reply: 1.8 + 29.6 + 10.1 = 41.5 s (median of totals 41.7 s), total ₹1,928 right 6/6. "Reply in at most two short sentences": 7.4 s, right 0/6. Qwen2.5-1.5B, the same full ask: 12.2 s (2.7 s talking early), right 1/6. Talking early: first sentence written in 0.4 s and spoken in 0.3 s, so about 2.5 s to the first sound (added up from the stage timings, not a live call). Every reply read by hand. Code and results: pipeline/uc01/call_demo.py, series/scripts/uc01_demo.
+Sources: OpenAI, "Hello GPT-4o" (May 2024): voice mode 2.8 s (GPT-3.5) and 5.4 s (GPT-4) on average with three separate models; GPT-4o 232 ms at best, 320 ms on average. Stivers et al., PNAS 2009 (10 languages): people avoid overlap and keep gaps short; about 200 ms on average (Scientific American, National Geographic). Ravi anna, the caller and the shop are made up.
 
 === COVER ===
-'AI Phone Assistant' title card
+Frame 1: a red chip "₹1,928 ORDER · SHE HUNG UP" over two blocks, "PEOPLE REPLY IN 0.2 s" (green) and "SHOP AI REPLIED IN 42 s" (red); Ravi in shock holding the phone; the shop AI's phone on the counter; "CALL ENDED".
 
 === ALT_TEXT ===
-Animated breakdown of how an AI phone call assistant works: speech to text, an LLM with tools, and text to speech in a loop.
+Crayon-animated skit in Ravi anna's kirana shop. Two blocks: people reply in 0.2 seconds; the shop AI replied in 42 seconds; a red chip: ₹1,928 order, she hung up. Ravi: she hung up! An almost-two-thousand-rupee order, after forty-two seconds of silence! The shop AI: I was answering; on this small computer, I hear, then think, then speak, one after the other. Ravi: forty-two seconds of thinking?! A card, one phone turn step by step: ears, her voice to text, 1.8 seconds; brain, writes the whole reply, 29.6 seconds; mouth, the reply to speech, 10.1 seconds; a bar fills: 41.5 seconds of silence; big apps, these three steps: 2.8 to 5.4 seconds (OpenAI's figures); people: about 0.2 seconds between turns. Ravi asks: how do I make you fast? A, shorter answers; B, a smaller model; C, talk while thinking. A: told to reply in two short sentences, 7.4 seconds, six totals from ₹2,156 to ₹2,450 struck out against the right ₹1,928: 0 of 6 right. The AI: I do the sum by writing it out. B: a smaller model, totals ₹1,450 three times, ₹1,605, ₹1,760 and ₹1,928 once: 1 of 6 right; ₹1,450 is the rice alone. C: a timeline, waiting for the whole reply 41.7 seconds against saying the first sentence, 2.5 seconds, "Hello!" while the rest is written; total right 6 of 6; worked out from our timings, still not human-fast. Ravi: talk while thinking, but never cut the maths! Stamps: talk while thinking; never cut the maths. A new call: the AI reads the order; the caller cuts in: wait, make it three dozen eggs! The AI goes on: and two dozen eggs. Ravi: you're not listening! She'll hang up again! Next problem: interruptions. Frame 1 comes back.

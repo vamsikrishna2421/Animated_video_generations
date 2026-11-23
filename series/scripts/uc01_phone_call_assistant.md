@@ -61,3 +61,40 @@ Sound: a boom, clap and a hang-up beep on frame 1; a clock tick under the silenc
 each wrong total; a drop before the quiz answer, a ding on C; a lift into the rule; the caller's line as a phone bubble
 pop; a riser and the slam back to frame 1.
 Caption try-it (no comment ask): "Call any shop's AI line or voice assistant and count the seconds before it speaks."
+
+## Script review (human-viewer, v1) and what changed
+- Both viewers: the quiz came after A and B had already failed → the quiz now comes right after the three boxes, and the
+  tries answer it; "short = wrong" needed a why → "I do the sum by writing it out"; the ending only works if we hear the
+  caller → the caller is voiced, and the AI reads on over her.
+- Priya (facts): "four seconds" was neither 7.4 s nor 4.7 s → "seven seconds" (wait for the whole short reply, the same
+  measure as 42); the bar now shows the sum of the three medians, 41.5 s; the 2.5 s is "worked out from our timings" and
+  "still not human-fast"; the CPU caveat and the big apps' 3-5 s (OpenAI's three-step voice mode) are said, and GPT-4o's
+  0.32 s is not lumped in; the 1.5B model got the full ask (as A), not the short one.
+- Sandeep: "nineteen twenty-eight" sounded like a year → "an almost-two-thousand-rupee order" (₹1,928 on screen);
+  "wrong every time / right once / right every time"; option C "TALK WHILE THINKING"; the chip says MATHS; "one bag of
+  rice, twenty-five kilos"; one buzz, not six; the UC01 chip off frame 1. Telugu: "ఒక్క మాట లేదు", "ఆలోచిస్తావా",
+  రెప్పపాటు (0.2 s on screen), "షార్ట్ గా", "చిన్న మోడల్ పెట్టు", "కరెక్ట్ అయింది", "సీ!", "బియ్యం బస్తా, ఇరవై ఐదు కిలోలు, ఒకటి".
+
+## Script v2
+| # | who | shot | EN | TE |
+|---|---|---|---|---|
+| 1 | ravi | hook | She hung up! An almost-two-thousand-rupee order, [1] after forty-two seconds of silence! | ఫోన్ పెట్టేసింది! దాదాపు రెండు వేల రూపాయల ఆర్డర్, [1] నలభై రెండు సెకన్లు ఒక్క మాట లేదు! |
+| 2 | ai | ai | I was answering! [1] On this small computer, I hear, then think, then speak, one after the other. | నేను జవాబు చెప్తూనే ఉన్నా! [1] ఈ చిన్న కంప్యూటర్ లో, ముందు వింటా, తర్వాత ఆలోచిస్తా, తర్వాత మాట్లాడతా. |
+| 3 | ravi | ravi | Forty-two seconds of thinking?! | నలభై రెండు సెకన్లు ఆలోచిస్తావా?! |
+| 4 | ai | stages | Hearing her: two seconds. [1] Writing my whole reply: thirty. [2] Turning it into speech: ten. [3] Even big apps took three to five seconds for these three steps. | ఆవిడ మాట వినడానికి రెండు సెకన్లు. [1] మొత్తం జవాబు రాయడానికి ముప్పై. [2] మాటగా మార్చడానికి పది. [3] పెద్ద యాప్స్ కూడా, ఈ మూడు స్టెప్పులకి మూడు నుంచి ఐదు సెకన్లు తీసుకున్నాయి. |
+| 5 | ravi | quiz | So how do I make you fast? [1] A, shorter answers. B, a smaller model. C, talk while thinking. | మరి నిన్ను ఫాస్ట్ ఎలా చేయాలి? [1] షార్ట్ జవాబా? చిన్న మోడలా? లేక ఆలోచిస్తూనే మాట్లాడటమా? |
+| 6 | ai | short | Shorter: seven seconds, [1] but the total was wrong every time. [2] I do the sum by writing it out. | షార్ట్ జవాబు: ఏడు సెకన్లు, [1] కానీ టోటల్ ప్రతిసారీ తప్పు. [2] నేను లెక్క రాస్తూనే చేస్తా. |
+| 7 | ravi | ravi | Then a smaller model! | అయితే చిన్న మోడల్ పెట్టు! |
+| 8 | ai | small | Faster, [1] but right only once. Three times, it billed only the rice. | ఫాస్ట్ గానే ఉంది, [1] కానీ ఒక్కసారే కరెక్ట్ అయింది. మూడు సార్లు బియ్యానికి మాత్రమే బిల్లు వేసింది. |
+| 9 | ai | answer | C! \| I say one sentence while I write the rest. [1] She hears me in two and a half seconds, [2] and the total is right every time. | సీ! \| మిగతాది రాస్తూనే, ముందు ఒక వాక్యం చెప్పేస్తా. [1] రెండున్నర సెకన్లలో ఆవిడకి నా మాట వినిపిస్తుంది, [2] టోటల్ కూడా ప్రతిసారీ కరెక్ట్. |
+| 10 | ravi | rule | Talk while thinking, but never cut the maths! | ఆలోచిస్తూనే మాట్లాడు, లెక్క మాత్రం కట్ చేయకు! |
+| 11 | ai | twist | Hello! One bag of rice, twenty-five kilos, [1] two litres of oil... | హలో! బియ్యం బస్తా, ఇరవై ఐదు కిలోలు, ఒకటి. [1] రెండు లీటర్ల నూనె... |
+| 12 | caller | twist | Wait, make it three dozen eggs! | ఆగండి, గుడ్లు మూడు డజన్లు! |
+| 13 | ai | twist | ...and two dozen eggs. | ...రెండు డజన్ల గుడ్లు. |
+| 14 | ravi | loop | You're not listening! [1] She'll hang up again! | నువ్వు వినట్లేదు! [1] మళ్ళీ ఫోన్ పెట్టేస్తుంది! |
+
+On screen v2: frame 1 bar "₹1,928 ORDER · SHE HUNG UP", blocks "PEOPLE REPLY IN 0.2 s" | "SHOP AI REPLIED IN 42 s", no UC01
+chip; the boxes 1.8 + 29.6 + 10.1 = 41.5 s on "our small computer, no GPU"; the quiz options "SHORTER ANSWERS / A SMALLER
+MODEL / TALK WHILE THINKING"; "0 of 6 right" with one buzz and "it does the sum by writing it out"; "1 of 6 right";
+the timeline "2.5 s (worked out from our timings) · still not human-fast (0.2 s)"; the rule "TALK WHILE THINKING ·
+NEVER CUT THE MATHS"; the caller's bubble on line 12; "NEXT PROBLEM: INTERRUPTIONS" on line 14.
