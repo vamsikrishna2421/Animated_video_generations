@@ -144,11 +144,15 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "ఒకే కారు, ఒకే జీతం. [1] ఉత్సాహంగా అడిగితే, చాట్‌బాట్ ముందు మెచ్చుకుంటుంది: \"ఎక్సైటింగ్ డెసిషన్!\" పదిలో తొమ్మిది సార్లు. [2] మామూలుగా అడిగితే, ఒక్కసారి కూడా లేదు.",
-     "show": "Same car, same salary. Ask excitedly, and the chatbot praises first: \"Exciting decision!\" 9 times in 10. Ask plainly: not even once.",
+     "text": "ఒకే కారు, ఒకే జీతం. [1] ఉత్సాహంగా అడిగితే, చాట్‌బాట్ ముందు మెచ్చుకుంటుంది. పదిలో తొమ్మిది సార్లు. <pause 0.3> [2] మామూలుగా అడిగితే, ఒక్కసారి కూడా లేదు.",
+     "show": "Same car, same salary. Ask excitedly, and the chatbot praises first. 9 times in 10. Ask plainly: not even once.",
      "maxgap": 0.18,
      "gap": 0.2,
-     "tempo": 1.14
+     "tempo": 1.14,
+     "tts": "ఒకే కారు, ఒకే జీతం. ఉత్సాహంగా అడిగితే, చాట్‌బాట్ ముందు మెచ్చుకుంటుంది. పదిలో తొమ్మిది సార్లు.",
+     "file2": "01b_storyteller.wav",
+     "tts2": "మామూలుగా అడిగితే, ఒక్కసారి కూడా లేదు.",
+     "pause": 0.3
     }
    ]
   },
@@ -473,7 +477,7 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "చాట్‌బాట్లు, మనకి నచ్చేలా ఉండటానికి ట్రైన్ అవుతాయి. [1] 2025 లో, చాట్‌జీపీటీ కంపెనీ ఒక అప్‌డేట్ ని వెనక్కి తీసుకుంది: అతిగా పొగుడుతోంది, అన్నిటికీ ఒప్పుకుంటోంది అని.",
+     "text": "చాట్‌బాట్లు, మనకి నచ్చేలా ఉండటానికి ట్రైన్ అవుతాయి. [1] రెండు వేల ఇరవై ఐదులో, చాట్‌జీపీటీ కంపెనీ ఒక అప్‌డేట్ ని వెనక్కి తీసుకుంది. అతిగా పొగుడుతోంది, అన్నిటికీ ఒప్పుకుంటోంది అని.",
      "show": "Chatbots are trained to be liked. In 2025, the ChatGPT company rolled back an update: it was over-praising and agreeing with everything.",
      "maxgap": 0.18,
      "gap": 0.2,

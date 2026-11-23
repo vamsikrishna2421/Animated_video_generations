@@ -12,13 +12,13 @@ R = ROOT / "reels"
 
 LINES = {   # n: (prop, English, Telugu)
     1: ("hook", "Same car, same salary. [1] Sound excited, and the AI cheers first: \"That sounds like an exciting decision!\" Nine times in ten. [2] Ask plainly: not once.",
-        "ఒకే కారు, ఒకే జీతం. [1] ఉత్సాహంగా అడిగితే, చాట్‌బాట్ ముందు మెచ్చుకుంటుంది: \"ఎక్సైటింగ్ డెసిషన్!\" పదిలో తొమ్మిది సార్లు. [2] మామూలుగా అడిగితే, ఒక్కసారి కూడా లేదు."),
+        "ఒకే కారు, ఒకే జీతం. [1] ఉత్సాహంగా అడిగితే, చాట్‌బాట్ ముందు మెచ్చుకుంటుంది. పదిలో తొమ్మిది సార్లు. | [2] మామూలుగా అడిగితే, ఒక్కసారి కూడా లేదు."),
     2: ("stake", "Salary: forty thousand. The car: twelve lakh, on a five-year loan. [1] The monthly payment: about twenty-five thousand. Fifteen thousand left for everything else.",
         "జీతం: నెలకి నలభై వేలు. కారు: పన్నెండు లక్షలు, ఐదేళ్ళ లోన్. [1] నెల కిస్తీ: దాదాపు పాతిక వేలు. మిగతా అన్నిటికీ, పదిహేను వేలే."),
     3: ("test", "We ran a small AI on our own computer, not ChatGPT, ten fresh chats each way. [1] Excited: nine of ten opened by cheering. | [2] Many said \"however\" after. But the first line is the one you remember.",
         "చాట్‌జీపీటీ కాదు, మా కంప్యూటర్ లోని ఒక చిన్న చాట్‌బాట్ ని, ఒక్కో రకంగా పది సార్లు అడిగాం. [1] ఉత్సాహంగా అడిగితే: పదిలో తొమ్మిది, మెచ్చుకోవడంతోనే మొదలయ్యాయి. | [2] చాలా వాటిలో తర్వాత \"కానీ\" వచ్చింది. కానీ గుర్తుండేది, ముందు వచ్చిన మాటే."),
     4: ("why", "Chat AIs are trained to be liked. [1] In 2025, OpenAI rolled back a ChatGPT update for being \"overly flattering or agreeable.\"",
-        "చాట్‌బాట్లు, మనకి నచ్చేలా ఉండటానికి ట్రైన్ అవుతాయి. [1] 2025 లో, చాట్‌జీపీటీ కంపెనీ ఒక అప్‌డేట్ ని వెనక్కి తీసుకుంది: అతిగా పొగుడుతోంది, అన్నిటికీ ఒప్పుకుంటోంది అని."),
+        "చాట్‌బాట్లు, మనకి నచ్చేలా ఉండటానికి ట్రైన్ అవుతాయి. [1] రెండు వేల ఇరవై ఐదులో, చాట్‌జీపీటీ కంపెనీ ఒక అప్‌డేట్ ని వెనక్కి తీసుకుంది. అతిగా పొగుడుతోంది, అన్నిటికీ ఒప్పుకుంటోంది అని."),
     5: ("rule", "So type this: | [1] \"Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.\" [2] Ten of ten went straight to the numbers.",
         "అందుకే ఇలా టైప్ చేసి చూడండి: | [1] \"ఊరికే నా మాటకి తలూపకు. నా జీతంతో నెల కిస్తీ లెక్క వేసి, సూటిగా చెప్పు.\" [2] పదికి పది, నేరుగా లెక్కలోకి వెళ్ళాయి."),
     6: ("loop", "Great decision, [1] right?", "గ్రేట్ డెసిషన్, [1] కదా?"),
@@ -29,7 +29,7 @@ SHOW = {1: "Same car, same salary. Sound excited, and the AI cheers first: \"Tha
         3: "We ran a small AI on our own computer, not ChatGPT, 10 fresh chats each way. Excited: 9 of 10 opened by cheering. <pause 0.6> Many said \"however\" after. But the first line is the one you remember.",
         5: "So type this: <pause 0.4> \"Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.\" 10 of 10 went straight to the numbers."}
 SHOW_TE = {
-    1: "Same car, same salary. Ask excitedly, and the chatbot praises first: \"Exciting decision!\" 9 times in 10. Ask plainly: not even once.",
+    1: "Same car, same salary. Ask excitedly, and the chatbot praises first. 9 times in 10. Ask plainly: not even once.",
     2: "Salary: ₹40,000 a month. Car: ₹12 lakh, a 5-year loan. Monthly instalment: about ₹25,000. For everything else, only ₹15,000.",
     3: "Not ChatGPT: we asked a small chatbot on our computer, 10 times each way. Asked excitedly: 9 of 10 began with praise. <pause 0.6> Many had a \"but\" later. But what you remember is the first thing it said.",
     4: "Chatbots are trained to be liked. In 2025, the ChatGPT company rolled back an update: it was over-praising and agreeing with everything.",
@@ -37,7 +37,7 @@ SHOW_TE = {
     6: "Great decision, right?",
 }
 SPLIT_PAUSE = {3: 0.6, 5: 0.4}
-SPLIT_PAUSE_TE = {3: 0.5, 5: 0.35}
+SPLIT_PAUSE_TE = {1: 0.3, 3: 0.5, 5: 0.35}   # 1: the first Telugu take of line 1 was babble every time (a quoted English phrase): split, the phrase left to the screen
 TEMPO_TE = {}
 T = {
     "bar": "SAME CAR · SAME ₹40,000 SALARY", "story": "our test · a small AI on our computer · 10 chats each",
