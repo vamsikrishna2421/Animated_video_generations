@@ -1,0 +1,1542 @@
+{
+ "id": "uc01te",
+ "look": "classic",
+ "topic": "",
+ "banner": "How an AI phone assistant works",
+ "musicVol": [
+  0.2,
+  0.42
+ ],
+ "title": "42 Seconds of Silence (UC01: how an AI phone-call assistant works) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "UC01",
+ "fps": 30,
+ "musicDrops": [
+  [
+   98,
+   131
+  ],
+  [
+   1392,
+   1416
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   798,
+   1.0
+  ],
+  [
+   798,
+   1698,
+   1.4
+  ],
+  [
+   1698,
+   2154,
+   1.6
+  ],
+  [
+   1698,
+   2154,
+   1.45,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 2154,
+ "music": "reel/uc01te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_call01",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "why",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "what",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "stages",
+      "prop": "stages",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "leftLab": "PEOPLE REPLY IN",
+     "leftVal": "0.2 s",
+     "rightLab": "SHOP AI REPLIED IN",
+     "rightVal": "42 s",
+     "stake": "₹1,928 ORDER · SHE HUNG UP",
+     "ended": "CALL ENDED",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stagesHead": "ONE PHONE TURN, STEP BY STEP",
+     "stagesSub": "our test · a small computer, no GPU · medians of 6 calls",
+     "stages": [
+      [
+       "EARS",
+       "her voice → text",
+       1.8,
+       "#38bdf8"
+      ],
+      [
+       "BRAIN",
+       "writes the whole reply",
+       29.6,
+       "#f87171"
+      ],
+      [
+       "MOUTH",
+       "the reply → speech",
+       10.1,
+       "#c084fc"
+      ]
+     ],
+     "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
+     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
+     "quizHead": "HOW DO WE MAKE IT FAST?",
+     "quizSub": "you decide",
+     "opts": [
+      [
+       "A",
+       "shorter answers"
+      ],
+      [
+       "B",
+       "a smaller model"
+      ],
+      [
+       "C",
+       "talk while thinking"
+      ]
+     ],
+     "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
+     "shortSub": "the same 7B model, 6 calls",
+     "shortFast": "7.4 s",
+     "shortVals": [
+      2259,
+      2450,
+      2156,
+      2159,
+      2259,
+      2359
+     ],
+     "shortScore": "0 of 6 right",
+     "shortNote": "no working written = no sum done",
+     "smallHead": "B: A SMALLER MODEL (1.5B)",
+     "smallSub": "the same full ask, 6 calls",
+     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallVals": [
+      1450,
+      1605,
+      1760,
+      1450,
+      1928,
+      1450
+     ],
+     "smallScore": "1 of 6 right",
+     "smallNote": "₹1,450 = the rice alone",
+     "streamHead": "C: TALK WHILE THINKING",
+     "waitLab": "wait for the whole reply",
+     "firstLab": "say the first sentence, write the rest",
+     "restLab": "...the rest is written as she listens",
+     "streamScore": "total right: 6 of 6",
+     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "rule1": "TALK WHILE THINKING",
+     "rule2": "NEVER CUT THE MATHS",
+     "callerLab": "the caller, while the AI is still reading:",
+     "callerLine": "\"Wait, make it 3 dozen eggs!\"",
+     "next": "NEXT PROBLEM: INTERRUPTIONS"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right",
+     "caller": "left"
+    },
+    "yt": {
+     "chapter": "42 s of silence",
+     "title": "42 s of silence",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 798,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/uc01te/line_01.wav",
+     "from": 15,
+     "frames": 170,
+     "words": [
+      {
+       "w": "She",
+       "from": 17,
+       "to": 24
+      },
+      {
+       "w": "hung",
+       "from": 24,
+       "to": 33
+      },
+      {
+       "w": "up!",
+       "from": 33,
+       "to": 40
+      },
+      {
+       "w": "An",
+       "from": 40,
+       "to": 55
+      },
+      {
+       "w": "order",
+       "from": 55,
+       "to": 65
+      },
+      {
+       "w": "of",
+       "from": 65,
+       "to": 70
+      },
+      {
+       "w": "almost",
+       "from": 70,
+       "to": 82
+      },
+      {
+       "w": "₹2,000",
+       "from": 82,
+       "to": 94
+      },
+      {
+       "w": "(₹1,928),",
+       "from": 94,
+       "to": 124
+      },
+      {
+       "w": "and",
+       "from": 124,
+       "to": 131
+      },
+      {
+       "w": "42",
+       "from": 131,
+       "to": 136
+      },
+      {
+       "w": "seconds",
+       "from": 136,
+       "to": 150
+      },
+      {
+       "w": "without",
+       "from": 150,
+       "to": 164
+      },
+      {
+       "w": "a",
+       "from": 164,
+       "to": 167
+      },
+      {
+       "w": "word!",
+       "from": 167,
+       "to": 177
+      }
+     ],
+     "cues": {
+      "1": 122
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/uc01te/line_02.wav",
+     "from": 191,
+     "frames": 205,
+     "words": [
+      {
+       "w": "I",
+       "from": 191,
+       "to": 195
+      },
+      {
+       "w": "was",
+       "from": 195,
+       "to": 209
+      },
+      {
+       "w": "answering!",
+       "from": 209,
+       "to": 231
+      },
+      {
+       "w": "On",
+       "from": 231,
+       "to": 237
+      },
+      {
+       "w": "this",
+       "from": 237,
+       "to": 255
+      },
+      {
+       "w": "small",
+       "from": 255,
+       "to": 267
+      },
+      {
+       "w": "computer,",
+       "from": 267,
+       "to": 294
+      },
+      {
+       "w": "I",
+       "from": 294,
+       "to": 298
+      },
+      {
+       "w": "listen",
+       "from": 298,
+       "to": 321
+      },
+      {
+       "w": "first,",
+       "from": 321,
+       "to": 335
+      },
+      {
+       "w": "then",
+       "from": 335,
+       "to": 345
+      },
+      {
+       "w": "think,",
+       "from": 345,
+       "to": 371
+      },
+      {
+       "w": "then",
+       "from": 371,
+       "to": 381
+      },
+      {
+       "w": "speak.",
+       "from": 381,
+       "to": 395
+      }
+     ],
+     "cues": {
+      "1": 242
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/uc01te/line_03.wav",
+     "from": 403,
+     "frames": 60,
+     "words": [
+      {
+       "w": "42",
+       "from": 403,
+       "to": 409
+      },
+      {
+       "w": "seconds,",
+       "from": 409,
+       "to": 428
+      },
+      {
+       "w": "you'll",
+       "from": 428,
+       "to": 442
+      },
+      {
+       "w": "think?!",
+       "from": 442,
+       "to": 458
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/uc01te/line_04.wav",
+     "from": 468,
+     "frames": 310,
+     "words": [
+      {
+       "w": "2",
+       "from": 469,
+       "to": 473
+      },
+      {
+       "w": "seconds",
+       "from": 473,
+       "to": 488
+      },
+      {
+       "w": "to",
+       "from": 488,
+       "to": 494
+      },
+      {
+       "w": "hear",
+       "from": 494,
+       "to": 504
+      },
+      {
+       "w": "her.",
+       "from": 504,
+       "to": 513
+      },
+      {
+       "w": "30",
+       "from": 513,
+       "to": 519
+      },
+      {
+       "w": "to",
+       "from": 519,
+       "to": 525
+      },
+      {
+       "w": "write",
+       "from": 525,
+       "to": 548
+      },
+      {
+       "w": "the",
+       "from": 548,
+       "to": 556
+      },
+      {
+       "w": "whole",
+       "from": 556,
+       "to": 567
+      },
+      {
+       "w": "reply.",
+       "from": 567,
+       "to": 581
+      },
+      {
+       "w": "10",
+       "from": 581,
+       "to": 594
+      },
+      {
+       "w": "to",
+       "from": 594,
+       "to": 600
+      },
+      {
+       "w": "turn",
+       "from": 600,
+       "to": 609
+      },
+      {
+       "w": "it",
+       "from": 609,
+       "to": 615
+      },
+      {
+       "w": "into",
+       "from": 615,
+       "to": 625
+      },
+      {
+       "w": "speech.",
+       "from": 625,
+       "to": 647
+      },
+      {
+       "w": "Even",
+       "from": 647,
+       "to": 664
+      },
+      {
+       "w": "big",
+       "from": 664,
+       "to": 679
+      },
+      {
+       "w": "apps",
+       "from": 679,
+       "to": 689
+      },
+      {
+       "w": "took",
+       "from": 689,
+       "to": 703
+      },
+      {
+       "w": "3",
+       "from": 703,
+       "to": 706
+      },
+      {
+       "w": "to",
+       "from": 706,
+       "to": 718
+      },
+      {
+       "w": "5",
+       "from": 718,
+       "to": 722
+      },
+      {
+       "w": "seconds",
+       "from": 722,
+       "to": 738
+      },
+      {
+       "w": "for",
+       "from": 738,
+       "to": 745
+      },
+      {
+       "w": "these",
+       "from": 745,
+       "to": 757
+      },
+      {
+       "w": "3",
+       "from": 757,
+       "to": 761
+      },
+      {
+       "w": "steps.",
+       "from": 761,
+       "to": 774
+      }
+     ],
+     "cues": {
+      "1": 522,
+      "2": 582,
+      "3": 625
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_call01",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "quiz",
+      "prop": "quiz",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "short",
+      "prop": "short",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "smaller",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "small",
+      "prop": "small",
+      "n": 8
+     },
+     {
+      "who": "ai",
+      "shot": "quiz",
+      "prop": "answer",
+      "n": 9
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "leftLab": "PEOPLE REPLY IN",
+     "leftVal": "0.2 s",
+     "rightLab": "SHOP AI REPLIED IN",
+     "rightVal": "42 s",
+     "stake": "₹1,928 ORDER · SHE HUNG UP",
+     "ended": "CALL ENDED",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stagesHead": "ONE PHONE TURN, STEP BY STEP",
+     "stagesSub": "our test · a small computer, no GPU · medians of 6 calls",
+     "stages": [
+      [
+       "EARS",
+       "her voice → text",
+       1.8,
+       "#38bdf8"
+      ],
+      [
+       "BRAIN",
+       "writes the whole reply",
+       29.6,
+       "#f87171"
+      ],
+      [
+       "MOUTH",
+       "the reply → speech",
+       10.1,
+       "#c084fc"
+      ]
+     ],
+     "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
+     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
+     "quizHead": "HOW DO WE MAKE IT FAST?",
+     "quizSub": "you decide",
+     "opts": [
+      [
+       "A",
+       "shorter answers"
+      ],
+      [
+       "B",
+       "a smaller model"
+      ],
+      [
+       "C",
+       "talk while thinking"
+      ]
+     ],
+     "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
+     "shortSub": "the same 7B model, 6 calls",
+     "shortFast": "7.4 s",
+     "shortVals": [
+      2259,
+      2450,
+      2156,
+      2159,
+      2259,
+      2359
+     ],
+     "shortScore": "0 of 6 right",
+     "shortNote": "no working written = no sum done",
+     "smallHead": "B: A SMALLER MODEL (1.5B)",
+     "smallSub": "the same full ask, 6 calls",
+     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallVals": [
+      1450,
+      1605,
+      1760,
+      1450,
+      1928,
+      1450
+     ],
+     "smallScore": "1 of 6 right",
+     "smallNote": "₹1,450 = the rice alone",
+     "streamHead": "C: TALK WHILE THINKING",
+     "waitLab": "wait for the whole reply",
+     "firstLab": "say the first sentence, write the rest",
+     "restLab": "...the rest is written as she listens",
+     "streamScore": "total right: 6 of 6",
+     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "rule1": "TALK WHILE THINKING",
+     "rule2": "NEVER CUT THE MATHS",
+     "callerLab": "the caller, while the AI is still reading:",
+     "callerLine": "\"Wait, make it 3 dozen eggs!\"",
+     "next": "NEXT PROBLEM: INTERRUPTIONS"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right",
+     "caller": "left"
+    },
+    "yt": {
+     "chapter": "Fast and right?",
+     "title": "Fast and right?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 798,
+   "frames": 900,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/uc01te/line_05.wav",
+     "from": 0,
+     "frames": 176,
+     "words": [
+      {
+       "w": "So",
+       "from": 1,
+       "to": 5
+      },
+      {
+       "w": "how",
+       "from": 5,
+       "to": 12
+      },
+      {
+       "w": "do",
+       "from": 12,
+       "to": 22
+      },
+      {
+       "w": "I",
+       "from": 22,
+       "to": 25
+      },
+      {
+       "w": "make",
+       "from": 25,
+       "to": 33
+      },
+      {
+       "w": "you",
+       "from": 33,
+       "to": 40
+      },
+      {
+       "w": "fast?",
+       "from": 40,
+       "to": 59
+      },
+      {
+       "w": "A",
+       "from": 59,
+       "to": 63
+      },
+      {
+       "w": "short",
+       "from": 63,
+       "to": 72
+      },
+      {
+       "w": "answer?",
+       "from": 72,
+       "to": 95
+      },
+      {
+       "w": "A",
+       "from": 95,
+       "to": 99
+      },
+      {
+       "w": "small",
+       "from": 99,
+       "to": 117
+      },
+      {
+       "w": "model?",
+       "from": 117,
+       "to": 128
+      },
+      {
+       "w": "Or",
+       "from": 128,
+       "to": 133
+      },
+      {
+       "w": "talking",
+       "from": 133,
+       "to": 150
+      },
+      {
+       "w": "while",
+       "from": 150,
+       "to": 159
+      },
+      {
+       "w": "thinking?",
+       "from": 159,
+       "to": 176
+      }
+     ],
+     "cues": {
+      "1": 64
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/uc01te/line_06.wav",
+     "from": 206,
+     "frames": 166,
+     "words": [
+      {
+       "w": "Short",
+       "from": 209,
+       "to": 217
+      },
+      {
+       "w": "answer:",
+       "from": 217,
+       "to": 229
+      },
+      {
+       "w": "7",
+       "from": 229,
+       "to": 240
+      },
+      {
+       "w": "seconds,",
+       "from": 240,
+       "to": 252
+      },
+      {
+       "w": "but",
+       "from": 252,
+       "to": 258
+      },
+      {
+       "w": "the",
+       "from": 258,
+       "to": 271
+      },
+      {
+       "w": "total",
+       "from": 271,
+       "to": 286
+      },
+      {
+       "w": "was",
+       "from": 286,
+       "to": 292
+      },
+      {
+       "w": "wrong",
+       "from": 292,
+       "to": 300
+      },
+      {
+       "w": "every",
+       "from": 300,
+       "to": 309
+      },
+      {
+       "w": "time.",
+       "from": 309,
+       "to": 317
+      },
+      {
+       "w": "I",
+       "from": 317,
+       "to": 327
+      },
+      {
+       "w": "do",
+       "from": 327,
+       "to": 331
+      },
+      {
+       "w": "the",
+       "from": 331,
+       "to": 337
+      },
+      {
+       "w": "sum",
+       "from": 337,
+       "to": 343
+      },
+      {
+       "w": "while",
+       "from": 343,
+       "to": 351
+      },
+      {
+       "w": "writing",
+       "from": 351,
+       "to": 363
+      },
+      {
+       "w": "it.",
+       "from": 363,
+       "to": 372
+      }
+     ],
+     "cues": {
+      "1": 259,
+      "2": 317
+     }
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/uc01te/line_07.wav",
+     "from": 378,
+     "frames": 54,
+     "words": [
+      {
+       "w": "Then",
+       "from": 386,
+       "to": 393
+      },
+      {
+       "w": "put",
+       "from": 393,
+       "to": 405
+      },
+      {
+       "w": "in",
+       "from": 405,
+       "to": 409
+      },
+      {
+       "w": "a",
+       "from": 409,
+       "to": 412
+      },
+      {
+       "w": "small",
+       "from": 412,
+       "to": 421
+      },
+      {
+       "w": "model!",
+       "from": 421,
+       "to": 432
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/uc01te/line_08.wav",
+     "from": 438,
+     "frames": 174,
+     "words": [
+      {
+       "w": "It",
+       "from": 440,
+       "to": 446
+      },
+      {
+       "w": "is",
+       "from": 446,
+       "to": 452
+      },
+      {
+       "w": "fast,",
+       "from": 452,
+       "to": 465
+      },
+      {
+       "w": "but",
+       "from": 465,
+       "to": 481
+      },
+      {
+       "w": "it",
+       "from": 481,
+       "to": 494
+      },
+      {
+       "w": "was",
+       "from": 494,
+       "to": 503
+      },
+      {
+       "w": "right",
+       "from": 503,
+       "to": 515
+      },
+      {
+       "w": "only",
+       "from": 515,
+       "to": 525
+      },
+      {
+       "w": "once.",
+       "from": 525,
+       "to": 545
+      },
+      {
+       "w": "3",
+       "from": 545,
+       "to": 549
+      },
+      {
+       "w": "times",
+       "from": 549,
+       "to": 561
+      },
+      {
+       "w": "it",
+       "from": 561,
+       "to": 567
+      },
+      {
+       "w": "billed",
+       "from": 567,
+       "to": 581
+      },
+      {
+       "w": "only",
+       "from": 581,
+       "to": 592
+      },
+      {
+       "w": "the",
+       "from": 592,
+       "to": 600
+      },
+      {
+       "w": "rice.",
+       "from": 600,
+       "to": 612
+      }
+     ],
+     "cues": {
+      "1": 477
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/uc01te/line_09.wav",
+     "from": 618,
+     "frames": 268,
+     "words": [
+      {
+       "w": "C!",
+       "from": 621,
+       "to": 630
+      },
+      {
+       "w": "While",
+       "from": 649,
+       "to": 659
+      },
+      {
+       "w": "writing",
+       "from": 659,
+       "to": 676
+      },
+      {
+       "w": "the",
+       "from": 676,
+       "to": 691
+      },
+      {
+       "w": "rest,",
+       "from": 691,
+       "to": 709
+      },
+      {
+       "w": "I",
+       "from": 709,
+       "to": 712
+      },
+      {
+       "w": "say",
+       "from": 712,
+       "to": 719
+      },
+      {
+       "w": "one",
+       "from": 719,
+       "to": 725
+      },
+      {
+       "w": "sentence",
+       "from": 725,
+       "to": 749
+      },
+      {
+       "w": "first.",
+       "from": 749,
+       "to": 760
+      },
+      {
+       "w": "She",
+       "from": 760,
+       "to": 767
+      },
+      {
+       "w": "hears",
+       "from": 767,
+       "to": 785
+      },
+      {
+       "w": "me",
+       "from": 785,
+       "to": 790
+      },
+      {
+       "w": "in",
+       "from": 790,
+       "to": 795
+      },
+      {
+       "w": "2.5",
+       "from": 795,
+       "to": 802
+      },
+      {
+       "w": "seconds,",
+       "from": 802,
+       "to": 817
+      },
+      {
+       "w": "and",
+       "from": 817,
+       "to": 823
+      },
+      {
+       "w": "the",
+       "from": 823,
+       "to": 837
+      },
+      {
+       "w": "total",
+       "from": 837,
+       "to": 848
+      },
+      {
+       "w": "is",
+       "from": 848,
+       "to": 853
+      },
+      {
+       "w": "right",
+       "from": 853,
+       "to": 863
+      },
+      {
+       "w": "every",
+       "from": 863,
+       "to": 873
+      },
+      {
+       "w": "time.",
+       "from": 873,
+       "to": 886
+      }
+     ],
+     "cues": {
+      "1": 747,
+      "2": 837
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_call01",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "rule",
+      "n": 10
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "twist",
+      "n": 11
+     },
+     {
+      "who": "caller",
+      "shot": "ai",
+      "prop": "caller",
+      "n": 12
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "ignore",
+      "n": 13
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "loop",
+      "n": 14
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "leftLab": "PEOPLE REPLY IN",
+     "leftVal": "0.2 s",
+     "rightLab": "SHOP AI REPLIED IN",
+     "rightVal": "42 s",
+     "stake": "₹1,928 ORDER · SHE HUNG UP",
+     "ended": "CALL ENDED",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stagesHead": "ONE PHONE TURN, STEP BY STEP",
+     "stagesSub": "our test · a small computer, no GPU · medians of 6 calls",
+     "stages": [
+      [
+       "EARS",
+       "her voice → text",
+       1.8,
+       "#38bdf8"
+      ],
+      [
+       "BRAIN",
+       "writes the whole reply",
+       29.6,
+       "#f87171"
+      ],
+      [
+       "MOUTH",
+       "the reply → speech",
+       10.1,
+       "#c084fc"
+      ]
+     ],
+     "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
+     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
+     "quizHead": "HOW DO WE MAKE IT FAST?",
+     "quizSub": "you decide",
+     "opts": [
+      [
+       "A",
+       "shorter answers"
+      ],
+      [
+       "B",
+       "a smaller model"
+      ],
+      [
+       "C",
+       "talk while thinking"
+      ]
+     ],
+     "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
+     "shortSub": "the same 7B model, 6 calls",
+     "shortFast": "7.4 s",
+     "shortVals": [
+      2259,
+      2450,
+      2156,
+      2159,
+      2259,
+      2359
+     ],
+     "shortScore": "0 of 6 right",
+     "shortNote": "no working written = no sum done",
+     "smallHead": "B: A SMALLER MODEL (1.5B)",
+     "smallSub": "the same full ask, 6 calls",
+     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallVals": [
+      1450,
+      1605,
+      1760,
+      1450,
+      1928,
+      1450
+     ],
+     "smallScore": "1 of 6 right",
+     "smallNote": "₹1,450 = the rice alone",
+     "streamHead": "C: TALK WHILE THINKING",
+     "waitLab": "wait for the whole reply",
+     "firstLab": "say the first sentence, write the rest",
+     "restLab": "...the rest is written as she listens",
+     "streamScore": "total right: 6 of 6",
+     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "rule1": "TALK WHILE THINKING",
+     "rule2": "NEVER CUT THE MATHS",
+     "callerLab": "the caller, while the AI is still reading:",
+     "callerLine": "\"Wait, make it 3 dozen eggs!\"",
+     "next": "NEXT PROBLEM: INTERRUPTIONS"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right",
+     "caller": "left"
+    },
+    "yt": {
+     "chapter": "Talk while thinking",
+     "title": "Talk while thinking",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1698,
+   "frames": 456,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/uc01te/line_10.wav",
+     "from": 9,
+     "frames": 83,
+     "words": [
+      {
+       "w": "Talk",
+       "from": 9,
+       "to": 16
+      },
+      {
+       "w": "while",
+       "from": 16,
+       "to": 25
+      },
+      {
+       "w": "thinking,",
+       "from": 25,
+       "to": 39
+      },
+      {
+       "w": "but",
+       "from": 39,
+       "to": 45
+      },
+      {
+       "w": "don't",
+       "from": 45,
+       "to": 58
+      },
+      {
+       "w": "cut",
+       "from": 58,
+       "to": 64
+      },
+      {
+       "w": "the",
+       "from": 64,
+       "to": 73
+      },
+      {
+       "w": "maths!",
+       "from": 73,
+       "to": 88
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/uc01te/line_11.wav",
+     "from": 104,
+     "frames": 141,
+     "words": [
+      {
+       "w": "Hello!",
+       "from": 106,
+       "to": 128
+      },
+      {
+       "w": "A",
+       "from": 128,
+       "to": 132
+      },
+      {
+       "w": "rice",
+       "from": 132,
+       "to": 145
+      },
+      {
+       "w": "bag,",
+       "from": 145,
+       "to": 162
+      },
+      {
+       "w": "25",
+       "from": 162,
+       "to": 168
+      },
+      {
+       "w": "kilos,",
+       "from": 168,
+       "to": 182
+      },
+      {
+       "w": "one.",
+       "from": 182,
+       "to": 192
+      },
+      {
+       "w": "2",
+       "from": 192,
+       "to": 205
+      },
+      {
+       "w": "litres",
+       "from": 205,
+       "to": 219
+      },
+      {
+       "w": "of",
+       "from": 219,
+       "to": 225
+      },
+      {
+       "w": "oil...",
+       "from": 225,
+       "to": 244
+      }
+     ],
+     "cues": {
+      "1": 203
+     }
+    },
+    {
+     "who": "caller",
+     "name": "Caller",
+     "color": "#F87171",
+     "sub": null,
+     "audio": "reel/uc01te/line_12.wav",
+     "from": 246,
+     "frames": 52,
+     "words": [
+      {
+       "w": "Wait,",
+       "from": 247,
+       "to": 267
+      },
+      {
+       "w": "eggs:",
+       "from": 267,
+       "to": 279
+      },
+      {
+       "w": "3",
+       "from": 279,
+       "to": 283
+      },
+      {
+       "w": "dozen!",
+       "from": 283,
+       "to": 298
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/uc01te/line_13.wav",
+     "from": 298,
+     "frames": 36,
+     "words": [
+      {
+       "w": "...2",
+       "from": 299,
+       "to": 309
+      },
+      {
+       "w": "dozen",
+       "from": 309,
+       "to": 322
+      },
+      {
+       "w": "eggs.",
+       "from": 322,
+       "to": 334
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/uc01te/line_14.wav",
+     "from": 340,
+     "frames": 80,
+     "words": [
+      {
+       "w": "You're",
+       "from": 341,
+       "to": 351
+      },
+      {
+       "w": "not",
+       "from": 351,
+       "to": 357
+      },
+      {
+       "w": "listening!",
+       "from": 357,
+       "to": 387
+      },
+      {
+       "w": "She'll",
+       "from": 387,
+       "to": 397
+      },
+      {
+       "w": "hang",
+       "from": 397,
+       "to": 405
+      },
+      {
+       "w": "up",
+       "from": 405,
+       "to": 409
+      },
+      {
+       "w": "again!",
+       "from": 409,
+       "to": 420
+      }
+     ],
+     "cues": {
+      "1": 381
+     }
+    }
+   ]
+  }
+ ]
+}

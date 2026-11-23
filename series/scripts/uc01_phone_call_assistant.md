@@ -98,3 +98,12 @@ chip; the boxes 1.8 + 29.6 + 10.1 = 41.5 s on "our small computer, no GPU"; the 
 MODEL / TALK WHILE THINKING"; "0 of 6 right" with one buzz and "it does the sum by writing it out"; "1 of 6 right";
 the timeline "2.5 s (worked out from our timings) · still not human-fast (0.2 s)"; the rule "TALK WHILE THINKING ·
 NEVER CUT THE MATHS"; the caller's bubble on line 12; "NEXT PROBLEM: INTERRUPTIONS" on line 14.
+
+## Voices
+- EN (Fish): "it billed only the rice" was heard "it build only the rice" → "it charged only for the rice". The judge
+  marked "C." (too short) and "two and a half" (more words than "2.5") as bad; their transcripts are exact, so the
+  best-scored takes stay.
+- TE (Parler): every take read in full (the judge keeps 110 letters). Line 8's first take garbled its end → re-voiced with
+  a check on its last words. Line 6's check expected "एड" where Whisper writes "येड" for ఏడు (fixed). The first Telugu
+  run was killed for lack of memory (the test's two models were still in the RAM disk; removed).
+- EN 64.4 s, TE 71.9 s.

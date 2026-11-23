@@ -56,7 +56,8 @@ MUST = {"en": {1: [("hung",), ("two", "2"), ("thousand", "2000", "000"), ("order
                11: [("hello",), ("rice",), ("twenty", "25"), ("kilos", "kilo"), ("oil",)],
                12: [("wait",), ("three", "3"), ("dozen",), ("eggs", "egg")], 13: [("two", "2"), ("dozen",), ("eggs", "egg")],
                14: [("listening",), ("hang",), ("again",)]},
-        "te": {1: [("नल", "42")], 4: [("मुप्प", "30")], 6: [("एड", "7")]}}
+        "te": {1: [("नल", "42")], 4: [("मुप्प", "30")], 6: [("येड", "एड", "7")],
+               8: [("करेक्ट", "करेक्त", "करक्ट", "करेक"), ("मात्र", "मातर"), ("बिल",)]}}   # 8: the first take garbled its end
 JUDGE_TEXT = {1: "She hung up! An almost 2,000 rupee order, after 42 seconds of silence!", 3: "42 seconds of thinking?!",
               4: "Hearing her: 2 seconds. Writing my whole reply: 30. Turning it into speech: 10. Even big apps took 3 to 5 seconds for these 3 steps.",
               6: "Shorter: 7 seconds, but the total was wrong every time. I do the sum by writing it out.",

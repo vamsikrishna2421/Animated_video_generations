@@ -161,11 +161,11 @@ const StCall: React.FC<SP> = ({ s }) => {
             c.fillStyle = "#0f172a"; c.fillRect(0, 280, W, H - 280);
             c.font = SANS(fit(c, T.streamHead, W - 80, 52), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(T.streamHead, W / 2, 330);
             const k1 = seg(f, ansEnd, ansEnd + 10), k2 = seg(f, cu(1, 0.4), cu(1, 0.4) + 10), k3 = seg(f, cu(2, 0.8) - 4, cu(2, 0.8) + 6);
-            const bw = W - 160, sc = bw / 41.7;
+            const bw = W - 160, sc = bw / 41.5;
             c.save(); c.globalAlpha = clamp(k1 * 3);
             c.textAlign = "left"; c.font = SANS(40, 800); c.fillStyle = "#fca5a5"; c.fillText(T.waitLab, 80, 470);
             c.fillStyle = "#7f1d1d"; rrect(c, 80, 495, bw * easeOut(k1), 70, 12); c.fill();
-            c.font = SANS(54, 900); c.fillStyle = "#fff"; c.textAlign = "right"; c.fillText("41.7 s", 80 + bw - 20, 550);
+            c.font = SANS(54, 900); c.fillStyle = "#fff"; c.textAlign = "right"; c.fillText("41.5 s", 80 + bw - 20, 550);
             c.restore();
             if (k2 > 0) {
               c.save(); c.globalAlpha = clamp(k2 * 3);
