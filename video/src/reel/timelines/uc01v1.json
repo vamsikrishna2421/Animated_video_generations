@@ -13,41 +13,41 @@
  "fps": 30,
  "musicDrops": [
   [
-   80,
-   113
+   835,
+   883
   ],
   [
-   1234,
-   1258
+   1237,
+   1267
   ]
  ],
  "musicBoosts": [
   [
    0,
    675,
-   1.0
-  ],
-  [
-   675,
-   1493,
    1.4
   ],
   [
-   1493,
-   1928,
-   1.8
+   675,
+   1534,
+   1.5
   ],
   [
-   1493,
-   1928,
-   1.6,
+   1534,
+   1932,
+   1.9
+  ],
+  [
+   1534,
+   1932,
+   1.7,
    1
   ]
  ],
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1928,
+ "totalFrames": 1932,
  "music": "reel/uc01v1/score.wav",
  "scenes": [
   {
@@ -112,7 +112,7 @@
       ]
      ],
      "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
-     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "bigApps": "big apps: 3-step voice 2.8-5.4 s · GPT-4o 0.32 s (OpenAI, 2024)",
      "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
      "quizHead": "HOW DO WE MAKE IT FAST?",
      "quizSub": "you decide",
@@ -132,7 +132,7 @@
      ],
      "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
      "shortSub": "the same 7B model, 6 calls",
-     "shortFast": "7.4 s",
+     "shortFast": "42 s → 7.4 s",
      "shortVals": [
       2259,
       2450,
@@ -145,7 +145,7 @@
      "shortNote": "no working written = no sum done",
      "smallHead": "B: A SMALLER MODEL (1.5B)",
      "smallSub": "the same full ask, 6 calls",
-     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallFast": "42 s → 12.2 s",
      "smallVals": [
       1450,
       1605,
@@ -161,12 +161,14 @@
      "firstLab": "say the first sentence, write the rest",
      "restLab": "...the rest is written as she listens",
      "streamScore": "total right: 6 of 6",
-     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "streamNote": "1.8 + 0.4 + 0.3 = 2.5 s (added up from our timings)",
+     "streamNote2": "still slower than a person (0.2 s), but she hears you",
      "rule1": "TALK WHILE THINKING",
      "rule2": "NEVER CUT THE MATHS",
      "callerLab": "the caller, while the AI is still reading:",
      "callerLine": "\"Wait, make it 3 dozen eggs!\"",
-     "next": "NEXT PROBLEM: INTERRUPTIONS"
+     "next": "NEXT PROBLEM: INTERRUPTIONS",
+     "overTalk": "SHE'S TALKING · IT ISN'T LISTENING"
     },
     "tagSide": {
      "ravi": "right",
@@ -601,7 +603,7 @@
       ]
      ],
      "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
-     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "bigApps": "big apps: 3-step voice 2.8-5.4 s · GPT-4o 0.32 s (OpenAI, 2024)",
      "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
      "quizHead": "HOW DO WE MAKE IT FAST?",
      "quizSub": "you decide",
@@ -621,7 +623,7 @@
      ],
      "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
      "shortSub": "the same 7B model, 6 calls",
-     "shortFast": "7.4 s",
+     "shortFast": "42 s → 7.4 s",
      "shortVals": [
       2259,
       2450,
@@ -634,7 +636,7 @@
      "shortNote": "no working written = no sum done",
      "smallHead": "B: A SMALLER MODEL (1.5B)",
      "smallSub": "the same full ask, 6 calls",
-     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallFast": "42 s → 12.2 s",
      "smallVals": [
       1450,
       1605,
@@ -650,12 +652,14 @@
      "firstLab": "say the first sentence, write the rest",
      "restLab": "...the rest is written as she listens",
      "streamScore": "total right: 6 of 6",
-     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "streamNote": "1.8 + 0.4 + 0.3 = 2.5 s (added up from our timings)",
+     "streamNote2": "still slower than a person (0.2 s), but she hears you",
      "rule1": "TALK WHILE THINKING",
      "rule2": "NEVER CUT THE MATHS",
      "callerLab": "the caller, while the AI is still reading:",
      "callerLine": "\"Wait, make it 3 dozen eggs!\"",
-     "next": "NEXT PROBLEM: INTERRUPTIONS"
+     "next": "NEXT PROBLEM: INTERRUPTIONS",
+     "overTalk": "SHE'S TALKING · IT ISN'T LISTENING"
     },
     "tagSide": {
      "ravi": "right",
@@ -672,7 +676,7 @@
     "hardCuts": true
    },
    "from": 675,
-   "frames": 818,
+   "frames": 859,
    "lines": [
     {
      "who": "ravi",
@@ -775,7 +779,9 @@
       }
      ],
      "cues": {
-      "1": 56
+      "1": 56,
+      "2": 105,
+      "3": 143
      }
     },
     {
@@ -784,103 +790,103 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/uc01v1/line_06.wav",
-     "from": 244,
+     "from": 262,
      "frames": 153,
      "words": [
       {
        "w": "Shorter:",
-       "from": 245,
-       "to": 257
+       "from": 263,
+       "to": 275
       },
       {
        "w": "7",
-       "from": 257,
-       "to": 269
+       "from": 275,
+       "to": 287
       },
       {
        "w": "seconds,",
-       "from": 269,
-       "to": 280
+       "from": 287,
+       "to": 298
       },
       {
        "w": "but",
-       "from": 280,
-       "to": 286
+       "from": 298,
+       "to": 304
       },
       {
        "w": "the",
-       "from": 286,
-       "to": 301
+       "from": 304,
+       "to": 319
       },
       {
        "w": "total",
-       "from": 301,
-       "to": 309
+       "from": 319,
+       "to": 327
       },
       {
        "w": "was",
-       "from": 309,
-       "to": 314
+       "from": 327,
+       "to": 332
       },
       {
        "w": "wrong",
-       "from": 314,
-       "to": 322
+       "from": 332,
+       "to": 340
       },
       {
        "w": "every",
-       "from": 322,
-       "to": 330
+       "from": 340,
+       "to": 348
       },
       {
        "w": "time.",
-       "from": 330,
-       "to": 338
-      },
-      {
-       "w": "I",
-       "from": 338,
-       "to": 352
-      },
-      {
-       "w": "do",
-       "from": 352,
+       "from": 348,
        "to": 356
       },
       {
-       "w": "the",
+       "w": "I",
        "from": 356,
-       "to": 361
-      },
-      {
-       "w": "sum",
-       "from": 361,
-       "to": 366
-      },
-      {
-       "w": "by",
-       "from": 366,
        "to": 370
       },
       {
-       "w": "writing",
+       "w": "do",
        "from": 370,
-       "to": 381
+       "to": 374
+      },
+      {
+       "w": "the",
+       "from": 374,
+       "to": 379
+      },
+      {
+       "w": "sum",
+       "from": 379,
+       "to": 384
+      },
+      {
+       "w": "by",
+       "from": 384,
+       "to": 388
+      },
+      {
+       "w": "writing",
+       "from": 388,
+       "to": 399
       },
       {
        "w": "it",
-       "from": 381,
-       "to": 385
+       "from": 399,
+       "to": 403
       },
       {
        "w": "out.",
-       "from": 385,
-       "to": 391
+       "from": 403,
+       "to": 409
       }
      ],
      "cues": {
-      "1": 284,
-      "2": 340
+      "1": 302,
+      "2": 358
      }
     },
     {
@@ -889,28 +895,28 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/uc01v1/line_07.wav",
-     "from": 405,
+     "from": 423,
      "frames": 36,
      "words": [
       {
        "w": "Then",
-       "from": 406,
-       "to": 413
+       "from": 424,
+       "to": 431
       },
       {
        "w": "a",
-       "from": 413,
-       "to": 416
+       "from": 431,
+       "to": 434
       },
       {
        "w": "smaller",
-       "from": 416,
-       "to": 427
+       "from": 434,
+       "to": 445
       },
       {
        "w": "model!",
-       "from": 427,
-       "to": 437
+       "from": 445,
+       "to": 455
       }
      ],
      "cues": {}
@@ -921,77 +927,77 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/uc01v1/line_08.wav",
-     "from": 447,
+     "from": 465,
      "frames": 127,
      "words": [
       {
        "w": "Faster,",
-       "from": 450,
-       "to": 460
+       "from": 468,
+       "to": 478
       },
       {
        "w": "but",
-       "from": 460,
-       "to": 473
+       "from": 478,
+       "to": 491
       },
       {
        "w": "right",
-       "from": 473,
-       "to": 481
+       "from": 491,
+       "to": 499
       },
       {
        "w": "only",
-       "from": 481,
-       "to": 487
+       "from": 499,
+       "to": 505
       },
       {
        "w": "once.",
-       "from": 487,
-       "to": 495
+       "from": 505,
+       "to": 513
       },
       {
        "w": "Three",
-       "from": 495,
-       "to": 517
+       "from": 513,
+       "to": 535
       },
       {
        "w": "times,",
-       "from": 517,
-       "to": 526
+       "from": 535,
+       "to": 544
       },
       {
        "w": "it",
-       "from": 526,
-       "to": 530
+       "from": 544,
+       "to": 548
       },
       {
        "w": "charged",
-       "from": 530,
-       "to": 540
+       "from": 548,
+       "to": 558
       },
       {
        "w": "only",
-       "from": 540,
-       "to": 547
+       "from": 558,
+       "to": 565
       },
       {
        "w": "for",
-       "from": 547,
-       "to": 552
+       "from": 565,
+       "to": 570
       },
       {
        "w": "the",
-       "from": 552,
-       "to": 557
+       "from": 570,
+       "to": 575
       },
       {
        "w": "rice.",
-       "from": 557,
-       "to": 565
+       "from": 575,
+       "to": 583
       }
      ],
      "cues": {
-      "1": 460
+      "1": 478
      }
     },
     {
@@ -1000,38 +1006,13 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/uc01v1/line_09.wav",
-     "from": 583,
+     "from": 619,
      "frames": 219,
      "words": [
       {
        "w": "C!",
-       "from": 584,
-       "to": 598
-      },
-      {
-       "w": "I",
-       "from": 623,
-       "to": 626
-      },
-      {
-       "w": "say",
-       "from": 626,
-       "to": 632
-      },
-      {
-       "w": "one",
-       "from": 632,
-       "to": 637
-      },
-      {
-       "w": "sentence",
-       "from": 637,
-       "to": 651
-      },
-      {
-       "w": "while",
-       "from": 651,
-       "to": 659
+       "from": 620,
+       "to": 634
       },
       {
        "w": "I",
@@ -1039,89 +1020,114 @@
        "to": 662
       },
       {
-       "w": "write",
+       "w": "say",
        "from": 662,
-       "to": 671
+       "to": 668
+      },
+      {
+       "w": "one",
+       "from": 668,
+       "to": 673
+      },
+      {
+       "w": "sentence",
+       "from": 673,
+       "to": 687
+      },
+      {
+       "w": "while",
+       "from": 687,
+       "to": 695
+      },
+      {
+       "w": "I",
+       "from": 695,
+       "to": 698
+      },
+      {
+       "w": "write",
+       "from": 698,
+       "to": 707
       },
       {
        "w": "the",
-       "from": 671,
-       "to": 677
-      },
-      {
-       "w": "rest.",
-       "from": 677,
-       "to": 699
-      },
-      {
-       "w": "She",
-       "from": 699,
-       "to": 705
-      },
-      {
-       "w": "hears",
-       "from": 705,
+       "from": 707,
        "to": 713
       },
       {
-       "w": "me",
+       "w": "rest.",
        "from": 713,
-       "to": 718
+       "to": 735
       },
       {
-       "w": "in",
-       "from": 718,
-       "to": 722
-      },
-      {
-       "w": "2.5",
-       "from": 722,
-       "to": 728
-      },
-      {
-       "w": "seconds,",
-       "from": 728,
+       "w": "She",
+       "from": 735,
        "to": 741
       },
       {
-       "w": "and",
+       "w": "hears",
        "from": 741,
-       "to": 757
+       "to": 749
       },
       {
-       "w": "the",
-       "from": 757,
-       "to": 763
+       "w": "me",
+       "from": 749,
+       "to": 754
       },
       {
-       "w": "total",
-       "from": 763,
-       "to": 771
+       "w": "in",
+       "from": 754,
+       "to": 758
       },
       {
-       "w": "is",
-       "from": 771,
-       "to": 776
+       "w": "2.5",
+       "from": 758,
+       "to": 764
       },
       {
-       "w": "right",
-       "from": 776,
-       "to": 784
+       "w": "seconds,",
+       "from": 764,
+       "to": 777
       },
       {
-       "w": "every",
-       "from": 784,
+       "w": "and",
+       "from": 777,
        "to": 793
       },
       {
-       "w": "time.",
+       "w": "the",
        "from": 793,
-       "to": 802
+       "to": 799
+      },
+      {
+       "w": "total",
+       "from": 799,
+       "to": 807
+      },
+      {
+       "w": "is",
+       "from": 807,
+       "to": 812
+      },
+      {
+       "w": "right",
+       "from": 812,
+       "to": 820
+      },
+      {
+       "w": "every",
+       "from": 820,
+       "to": 829
+      },
+      {
+       "w": "time.",
+       "from": 829,
+       "to": 838
       }
      ],
      "cues": {
-      "1": 685,
-      "2": 756
+      "1": 721,
+      "2": 792
      }
     }
    ]
@@ -1148,12 +1154,6 @@
       "shot": "ai",
       "prop": "caller",
       "n": 12
-     },
-     {
-      "who": "ai",
-      "shot": "ai",
-      "prop": "ignore",
-      "n": 13
      },
      {
       "who": "ravi",
@@ -1194,7 +1194,7 @@
       ]
      ],
      "silence": "1.8 + 29.6 + 10.1 = 41.5 s of silence",
-     "bigApps": "big apps, these 3 steps: 2.8-5.4 s (OpenAI's figures, 2024)",
+     "bigApps": "big apps: 3-step voice 2.8-5.4 s · GPT-4o 0.32 s (OpenAI, 2024)",
      "people": "people: about 0.2 s between turns (a 10-language study, PNAS 2009)",
      "quizHead": "HOW DO WE MAKE IT FAST?",
      "quizSub": "you decide",
@@ -1214,7 +1214,7 @@
      ],
      "shortHead": "A: \"REPLY IN TWO SHORT SENTENCES\"",
      "shortSub": "the same 7B model, 6 calls",
-     "shortFast": "7.4 s",
+     "shortFast": "42 s → 7.4 s",
      "shortVals": [
       2259,
       2450,
@@ -1227,7 +1227,7 @@
      "shortNote": "no working written = no sum done",
      "smallHead": "B: A SMALLER MODEL (1.5B)",
      "smallSub": "the same full ask, 6 calls",
-     "smallFast": "12.2 s · 2.7 s talking early",
+     "smallFast": "42 s → 12.2 s",
      "smallVals": [
       1450,
       1605,
@@ -1243,12 +1243,14 @@
      "firstLab": "say the first sentence, write the rest",
      "restLab": "...the rest is written as she listens",
      "streamScore": "total right: 6 of 6",
-     "streamNote": "2.5 s: worked out from our timings · still not human-fast (0.2 s)",
+     "streamNote": "1.8 + 0.4 + 0.3 = 2.5 s (added up from our timings)",
+     "streamNote2": "still slower than a person (0.2 s), but she hears you",
      "rule1": "TALK WHILE THINKING",
      "rule2": "NEVER CUT THE MATHS",
      "callerLab": "the caller, while the AI is still reading:",
      "callerLine": "\"Wait, make it 3 dozen eggs!\"",
-     "next": "NEXT PROBLEM: INTERRUPTIONS"
+     "next": "NEXT PROBLEM: INTERRUPTIONS",
+     "overTalk": "SHE'S TALKING · IT ISN'T LISTENING"
     },
     "tagSide": {
      "ravi": "right",
@@ -1264,8 +1266,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1493,
-   "frames": 435,
+   "from": 1534,
+   "frames": 398,
    "lines": [
     {
      "who": "ravi",
@@ -1326,66 +1328,96 @@
      "sub": null,
      "audio": "reel/uc01v1/line_11.wav",
      "from": 96,
-     "frames": 127,
+     "frames": 192,
      "words": [
       {
        "w": "Hello!",
-       "from": 96,
+       "from": 97,
        "to": 117
       },
       {
        "w": "One",
        "from": 117,
-       "to": 125
+       "to": 124
       },
       {
        "w": "bag",
-       "from": 125,
+       "from": 124,
        "to": 132
       },
       {
        "w": "of",
        "from": 132,
-       "to": 138
+       "to": 137
       },
       {
        "w": "rice,",
-       "from": 138,
-       "to": 159
+       "from": 137,
+       "to": 157
       },
       {
        "w": "25",
-       "from": 159,
-       "to": 165
+       "from": 157,
+       "to": 162
       },
       {
        "w": "kilos,",
-       "from": 165,
-       "to": 178
+       "from": 162,
+       "to": 175
       },
       {
        "w": "2",
-       "from": 178,
-       "to": 191
+       "from": 175,
+       "to": 186
       },
       {
        "w": "litres",
-       "from": 191,
-       "to": 204
+       "from": 186,
+       "to": 198
       },
       {
        "w": "of",
-       "from": 204,
-       "to": 210
+       "from": 198,
+       "to": 204
       },
       {
-       "w": "oil...",
-       "from": 210,
+       "w": "oil,",
+       "from": 204,
+       "to": 213
+      },
+      {
+       "w": "2",
+       "from": 213,
        "to": 223
+      },
+      {
+       "w": "dozen",
+       "from": 223,
+       "to": 234
+      },
+      {
+       "w": "eggs,",
+       "from": 234,
+       "to": 254
+      },
+      {
+       "w": "delivery",
+       "from": 254,
+       "to": 270
+      },
+      {
+       "w": "by",
+       "from": 270,
+       "to": 276
+      },
+      {
+       "w": "6.",
+       "from": 276,
+       "to": 281
       }
      ],
      "cues": {
-      "1": 190
+      "1": 186
      }
     },
     {
@@ -1394,70 +1426,63 @@
      "color": "#F87171",
      "sub": null,
      "audio": "reel/uc01v1/line_12.wav",
-     "from": 224,
+     "from": 216,
      "frames": 66,
      "words": [
       {
+       "w": "(the",
+       "from": 216,
+       "to": 221
+      },
+      {
+       "w": "caller,",
+       "from": 221,
+       "to": 236
+      },
+      {
+       "w": "over",
+       "from": 236,
+       "to": 241
+      },
+      {
+       "w": "the",
+       "from": 241,
+       "to": 248
+      },
+      {
+       "w": "AI)",
+       "from": 248,
+       "to": 252
+      },
+      {
        "w": "Wait,",
-       "from": 225,
-       "to": 243
+       "from": 252,
+       "to": 257
       },
       {
        "w": "make",
-       "from": 243,
-       "to": 256
-      },
-      {
-       "w": "it",
-       "from": 256,
+       "from": 257,
        "to": 261
       },
       {
-       "w": "3",
+       "w": "it",
        "from": 261,
        "to": 264
       },
       {
-       "w": "dozen",
+       "w": "3",
        "from": 264,
-       "to": 274
+       "to": 265
+      },
+      {
+       "w": "dozen",
+       "from": 265,
+       "to": 271
       },
       {
        "w": "eggs!",
-       "from": 274,
-       "to": 284
-      }
-     ],
-     "cues": {}
-    },
-    {
-     "who": "ai",
-     "name": "Shop AI",
-     "color": "#67E8F9",
-     "sub": null,
-     "audio": "reel/uc01v1/line_13.wav",
-     "from": 290,
-     "frames": 35,
-     "words": [
-      {
-       "w": "...and",
-       "from": 291,
-       "to": 300
-      },
-      {
-       "w": "2",
-       "from": 300,
-       "to": 302
-      },
-      {
-       "w": "dozen",
-       "from": 302,
-       "to": 310
-      },
-      {
-       "w": "eggs.",
-       "from": 310,
-       "to": 318
+       "from": 271,
+       "to": 276
       }
      ],
      "cues": {}
@@ -1467,48 +1492,48 @@
      "name": "Ravi anna",
      "color": "#FBBF24",
      "sub": null,
-     "audio": "reel/uc01v1/line_14.wav",
-     "from": 331,
+     "audio": "reel/uc01v1/line_13.wav",
+     "from": 294,
      "frames": 68,
      "words": [
       {
        "w": "You're",
-       "from": 332,
-       "to": 339
+       "from": 295,
+       "to": 302
       },
       {
        "w": "not",
-       "from": 339,
-       "to": 344
+       "from": 302,
+       "to": 307
       },
       {
        "w": "listening!",
-       "from": 344,
-       "to": 356
+       "from": 307,
+       "to": 319
       },
       {
        "w": "She'll",
-       "from": 356,
-       "to": 374
+       "from": 319,
+       "to": 337
       },
       {
        "w": "hang",
-       "from": 374,
-       "to": 380
+       "from": 337,
+       "to": 343
       },
       {
        "w": "up",
-       "from": 380,
-       "to": 383
+       "from": 343,
+       "to": 346
       },
       {
        "w": "again!",
-       "from": 383,
-       "to": 390
+       "from": 346,
+       "to": 354
       }
      ],
      "cues": {
-      "1": 356
+      "1": 319
      }
     }
    ]

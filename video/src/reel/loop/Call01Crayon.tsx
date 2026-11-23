@@ -148,7 +148,7 @@ const StCall: React.FC<SP> = ({ s }) => {
           const kAns = b.prop === "answer" ? seg(f, ln.from, ln.from + 8) : 0;
           const ansEnd = b.prop === "answer" ? ln.from + 30 : 1e9;   // the timeline replaces the options right after "C!"
           if (f < ansEnd) opts.forEach(([L, t], q) => {
-            const t0 = b.prop === "quiz" ? cu(q + 1, 0.3 + q * 0.2) - 2 : -100;   // each option as Ravi says it const k = b.prop === "quiz" ? seg(f, t0, t0 + 6) : 1; if (k <= 0) return;
+            const t0 = b.prop === "quiz" ? cu(q + 1, 0.3 + q * 0.2) - 2 : -100; const k = b.prop === "quiz" ? seg(f, t0, t0 + 6) : 1; if (k <= 0) return;   // each option as Ravi says it
             const right = q === 2, y = 470 + q * 200;
             c.save(); c.globalAlpha = clamp(k * 3) * (kAns > 0 && !right ? 1 - 0.6 * kAns : 1);
             c.fillStyle = kAns > 0 && right ? "#14532d" : "#1e293b"; rrect(c, 70, y, W - 140, 160, 24); c.fill();

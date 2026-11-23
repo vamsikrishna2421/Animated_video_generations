@@ -113,7 +113,7 @@ def spec(lang="en"):
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": raw,
                   "show": (SHOW_TE.get(n) if te else None) or SHOW.get(n, MARK.sub("", en).replace(" | ", " ").strip()), "maxgap": 0.25,
                   "gap": (GAP_TE if te else {}).get(n, GAP.get(n, 0.2)), "tempo": TEMPO_TE[who] if te else TEMPO_EN[who]}
-            ln["gain_db"] = -1.0 if who == "ai" else 0.5
+            ln["gain_db"] = {11: -6.0, 12: 4.0}.get(n, -1.0 if who == "ai" else 0.5)   # render check: the caller was masked by the AI reading on; she sits on top, it reads on underneath
             if not te and n in TTS_EN:
                 ln["tts"] = MARK.sub("", TTS_EN[n]).strip()
             if " | " in ln["text"]:
