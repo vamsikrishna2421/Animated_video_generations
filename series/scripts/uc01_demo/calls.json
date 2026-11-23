@@ -1,0 +1,440 @@
+{
+ "caller": "Hello, is this Ravi anna's shop? I want one twenty-five kilo bag of sona masoori rice, two litres of sunflower oil, and two dozen eggs. Please deliver by six.",
+ "system": "You are the phone assistant of Ravi's kirana shop in Hyderabad. Price list: Sona masoori rice, 25 kg bag: Rs 1450. Sunflower oil: Rs 155 a litre. Eggs: Rs 84 a dozen. Delivery is free. Answer the caller: confirm the items, give the total in rupees, and confirm the delivery time.",
+ "short": " Reply in at most two short sentences.",
+ "right_total": 1928,
+ "ears": [
+  {
+   "run": 0,
+   "secs": 3.316,
+   "heard": "Hello is this Raviana shop? I want one 25 kilo bag of Sona Masori Rice, two liters of sunflower oil and two dozen eggs. Please deliver by six."
+  },
+  {
+   "run": 1,
+   "secs": 1.788,
+   "heard": "Hello is this Raviana shop? I want one 25 kilo bag of Sona Masori Rice, two liters of sunflower oil and two dozen eggs. Please deliver by six."
+  },
+  {
+   "run": 2,
+   "secs": 1.812,
+   "heard": "Hello is this Raviana shop? I want one 25 kilo bag of Sona Masori Rice, two liters of sunflower oil and two dozen eggs. Please deliver by six."
+  },
+  {
+   "run": 3,
+   "secs": 1.787,
+   "heard": "Hello is this Raviana shop? I want one 25 kilo bag of Sona Masori Rice, two liters of sunflower oil and two dozen eggs. Please deliver by six."
+  },
+  {
+   "run": 4,
+   "secs": 1.746,
+   "heard": "Hello is this Raviana shop? I want one 25 kilo bag of Sona Masori Rice, two liters of sunflower oil and two dozen eggs. Please deliver by six."
+  },
+  {
+   "run": 5,
+   "secs": 1.827,
+   "heard": "Hello is this Raviana shop? I want one 25 kilo bag of Sona Masori Rice, two liters of sunflower oil and two dozen eggs. Please deliver by six."
+  },
+  {
+   "run": 6,
+   "secs": 1.712,
+   "heard": "Hello is this Raviana shop? I want one 25 kilo bag of Sona Masori Rice, two liters of sunflower oil and two dozen eggs. Please deliver by six."
+  }
+ ],
+ "brain": {
+  "A": [
+   {
+    "seed": 0,
+    "first_token": 4.077,
+    "first_sentence": 4.269,
+    "all": 34.864,
+    "words": 93,
+    "reply": "Hello! Yes, this is Ravi's Kirana Shop. Thank you for your order. Let's confirm the items and the total cost:\n\n- 1 bag of Sona Masoori rice (25 kg) - Rs 1450\n- 2 liters of Sunflower oil - Rs 155 x 2 = Rs 310\n- 2 dozen Eggs - Rs 84 x 2 = Rs 168\n\nThe total cost for your order is Rs 1450 + Rs 310 + Rs 168 = Rs 1928.\n\nDelivery will be done by 6 PM, as requested. Is there anything else you need?\n\nThank you!",
+    "sentence1": "Hello!",
+    "total_right": true,
+    "rupee_numbers": [
+     155,
+     168,
+     310,
+     1450,
+     1928
+    ],
+    "mouth_all": 10.526,
+    "mouth_first": 0.384
+   },
+   {
+    "seed": 1,
+    "first_token": 0.213,
+    "first_sentence": 0.428,
+    "all": 29.157,
+    "words": 85,
+    "reply": "Hello! Thank you for your order at Raviana Kirana Shop. Here are the details of your order:\n\n- 25 kg bag of Sona Masoori Rice: Rs 1450\n- 2 liters of Sunflower Oil: Rs 155 * 2 = Rs 310\n- 2 dozen Eggs: Rs 84 * 2 = Rs 168\n\nThe total cost for your order is Rs 1450 + Rs 310 + Rs 168 = Rs 1928.\n\nYour delivery will be made by 6 PM today. Is this okay with you?\n\nThank you!",
+    "sentence1": "Hello!",
+    "total_right": true,
+    "rupee_numbers": [
+     155,
+     168,
+     310,
+     1450,
+     1928
+    ],
+    "mouth_all": 9.869,
+    "mouth_first": 0.322
+   },
+   {
+    "seed": 2,
+    "first_token": 0.201,
+    "first_sentence": 0.4,
+    "all": 25.283,
+    "words": 79,
+    "reply": "Hello! Yes, this is Raviana Kirana Shop. Thank you for your order. Here are the details:\n\n- 1 bag of Sona Masoori rice (25 kg) for Rs 1450\n- 2 liters of sunflower oil for Rs 310 (2 x Rs 155)\n- 2 dozen eggs for Rs 168 (2 x Rs 84)\n\nThe total for your order is Rs 1928.\n\nDelivery will be done by 6 PM as per your request. Is there anything else you need?\n\nThank you!",
+    "sentence1": "Hello!",
+    "total_right": true,
+    "rupee_numbers": [
+     155,
+     168,
+     310,
+     1450,
+     1928
+    ],
+    "mouth_all": 7.721,
+    "mouth_first": 0.354
+   },
+   {
+    "seed": 3,
+    "first_token": 0.209,
+    "first_sentence": 0.416,
+    "all": 31.942,
+    "words": 94,
+    "reply": "Hello! Thank you for your order at Ravi's Kirana Shop. Let's confirm the items you've requested:\n\n- 1 bag of Sona Masoori Rice (25 kg) for Rs 1450\n- 2 liters of Sunflower Oil for Rs 155 x 2 = Rs 310\n- 2 dozen Eggs for Rs 84 x 2 = Rs 168\n\nThe total amount for your order is Rs 1450 + Rs 310 + Rs 168 = Rs 1928.\n\nWe will deliver your order by 6 PM, as requested. Is this okay with you?\n\nThank you, and have a great day!",
+    "sentence1": "Hello!",
+    "total_right": true,
+    "rupee_numbers": [
+     155,
+     168,
+     310,
+     1450,
+     1928
+    ],
+    "mouth_all": 10.255,
+    "mouth_first": 0.315
+   },
+   {
+    "seed": 4,
+    "first_token": 0.241,
+    "first_sentence": 0.449,
+    "all": 29.29,
+    "words": 84,
+    "reply": "Hello! This is Ravi's Kirana shop. Thank you for your order. Here are the details:\n\n- One 25 kg bag of Sona Masoori Rice: Rs 1450\n- Two liters of Sunflower Oil: Rs 155 x 2 = Rs 310\n- Two dozen Eggs: Rs 84 x 2 = Rs 168\n\nThe total amount for your order is Rs 1450 + Rs 310 + Rs 168 = Rs 1928.\n\nYour delivery will be made by 6 PM, as requested. Is there anything else you need?",
+    "sentence1": "Hello!",
+    "total_right": true,
+    "rupee_numbers": [
+     155,
+     168,
+     310,
+     1450,
+     1928
+    ],
+    "mouth_all": 9.881,
+    "mouth_first": 0.318
+   },
+   {
+    "seed": 5,
+    "first_token": 0.208,
+    "first_sentence": 0.404,
+    "all": 30.687,
+    "words": 97,
+    "reply": "Hello! Thank you for your order at Raviana Kirana Shop. Here are the details:\n\n- One 25 kg bag of Sona Masoori Rice: Rs 1450\n- Two liters of Sunflower Oil: Rs 155 x 2 = Rs 310\n- Two dozen Eggs: Rs 84 x 2 = Rs 168\n\nThe total amount for your order is Rs 1450 + Rs 310 + Rs 168 = Rs 1928.\n\nYour delivery will be at your doorstep by 6 PM, and the delivery is free of charge.\n\nIs this order correct with you, and is there anything else you need?",
+    "sentence1": "Hello!",
+    "total_right": true,
+    "rupee_numbers": [
+     155,
+     168,
+     310,
+     1450,
+     1928
+    ],
+    "mouth_all": 10.403,
+    "mouth_first": 0.339
+   },
+   {
+    "seed": 6,
+    "first_token": 0.195,
+    "first_sentence": 0.383,
+    "all": 29.812,
+    "words": 91,
+    "reply": "Hello! Thank you for your order at Ravi's Kirana Shop. Let's confirm your items:\n\n- One 25 kg bag of Sona Masuri Rice: Rs 1450\n- Two liters of Sunflower Oil: Rs 155 x 2 = Rs 310\n- Two dozen Eggs: Rs 84 x 2 = Rs 168\n\nThe total for your order is Rs 1450 + Rs 310 + Rs 168 = Rs 1928.\n\nYour delivery time is confirmed for 6 PM. Is there anything else you need or any specific instructions you would like to add?\n\nThank you!",
+    "sentence1": "Hello!",
+    "total_right": true,
+    "rupee_numbers": [
+     155,
+     168,
+     310,
+     1450,
+     1928
+    ],
+    "mouth_all": 10.833,
+    "mouth_first": 0.316
+   }
+  ],
+  "C": [
+   {
+    "seed": 0,
+    "first_token": 1.907,
+    "first_sentence": 3.741,
+    "all": 5.81,
+    "words": 12,
+    "reply": "Your total is Rs 2359. Delivery will be done by 6 PM.",
+    "sentence1": "Your total is Rs 2359.",
+    "total_right": false,
+    "rupee_numbers": [
+     2359
+    ],
+    "mouth_all": 1.531,
+    "mouth_first": 0.923
+   },
+   {
+    "seed": 1,
+    "first_token": 0.221,
+    "first_sentence": 1.873,
+    "all": 3.873,
+    "words": 11,
+    "reply": "Total is Rs 2259. Delivery will be made by 6 PM.",
+    "sentence1": "Total is Rs 2259.",
+    "total_right": false,
+    "rupee_numbers": [
+     2259
+    ],
+    "mouth_all": 1.409,
+    "mouth_first": 0.907
+   },
+   {
+    "seed": 2,
+    "first_token": 0.194,
+    "first_sentence": 2.027,
+    "all": 4.087,
+    "words": 12,
+    "reply": "Your total is Rs 2450. Delivery will be made by 6 PM.",
+    "sentence1": "Your total is Rs 2450.",
+    "total_right": false,
+    "rupee_numbers": [
+     2450
+    ],
+    "mouth_all": 1.444,
+    "mouth_first": 0.841
+   },
+   {
+    "seed": 3,
+    "first_token": 0.228,
+    "first_sentence": 2.122,
+    "all": 4.196,
+    "words": 13,
+    "reply": "Your total is Rs 2156. Delivery will be made by six as requested.",
+    "sentence1": "Your total is Rs 2156.",
+    "total_right": false,
+    "rupee_numbers": [
+     2156
+    ],
+    "mouth_all": 1.584,
+    "mouth_first": 0.852
+   },
+   {
+    "seed": 4,
+    "first_token": 0.202,
+    "first_sentence": 2.011,
+    "all": 4.029,
+    "words": 12,
+    "reply": "Your total is Rs 2159. Delivery will be made by 6 PM.",
+    "sentence1": "Your total is Rs 2159.",
+    "total_right": false,
+    "rupee_numbers": [
+     2159
+    ],
+    "mouth_all": 1.466,
+    "mouth_first": 0.871
+   },
+   {
+    "seed": 5,
+    "first_token": 0.196,
+    "first_sentence": 2.009,
+    "all": 3.961,
+    "words": 12,
+    "reply": "Your total is Rs 2259. Delivery will be made by 6 PM.",
+    "sentence1": "Your total is Rs 2259.",
+    "total_right": false,
+    "rupee_numbers": [
+     2259
+    ],
+    "mouth_all": 1.622,
+    "mouth_first": 1.056
+   },
+   {
+    "seed": 6,
+    "first_token": 0.199,
+    "first_sentence": 2.019,
+    "all": 4.087,
+    "words": 13,
+    "reply": "Your total is Rs 2359. Delivery will be made by six as requested.",
+    "sentence1": "Your total is Rs 2359.",
+    "total_right": false,
+    "rupee_numbers": [
+     2359
+    ],
+    "mouth_all": 1.692,
+    "mouth_first": 1.011
+   }
+  ],
+  "D": [
+   {
+    "seed": 0,
+    "first_token": 0.878,
+    "first_sentence": 1.299,
+    "all": 5.665,
+    "words": 63,
+    "reply": "Hello, thank you for contacting Raviana Shop. You have requested two 25 kilo bags of Sona Masoori Rice, two liters of sunflower oil, and two dozen eggs. The total cost will be Rs 1450 for the rice, Rs 310 for the sunflower oil, and Rs 168 for the eggs, which sums up to Rs 1728 in total. Delivery is free. Is this correct?",
+    "sentence1": "Hello, thank you for contacting Raviana Shop.",
+    "total_right": false,
+    "rupee_numbers": [
+     168,
+     310,
+     1450,
+     1728
+    ],
+    "mouth_all": 6.394,
+    "mouth_first": 0.81
+   },
+   {
+    "seed": 1,
+    "first_token": 0.052,
+    "first_sentence": 0.394,
+    "all": 4.831,
+    "words": 63,
+    "reply": "Yes, this is Raviana shop. For your order, we will need 25 kilogram bags of Sona Masoori Rice, 2 liters of sunflower oil, and 2 dozen eggs. The total cost for your order is Rs. 1450, Rs. 155 for 2 liters of sunflower oil, and Rs. 84 for 2 dozen eggs. The delivery time is by 6. Thank you for choosing Raviana shop.",
+    "sentence1": "Yes, this is Raviana shop.",
+    "total_right": false,
+    "rupee_numbers": [
+     155,
+     1450
+    ],
+    "mouth_all": 6.013,
+    "mouth_first": 0.531
+   },
+   {
+    "seed": 2,
+    "first_token": 0.049,
+    "first_sentence": 0.545,
+    "all": 4.024,
+    "words": 52,
+    "reply": "Hello, I'm Ravi from Raviana Shop. I can confirm your order for 25 kg of Sona Masoori Rice, 2 liters of Sunflower Oil and 2 dozen Eggs. The total cost is Rs 1450 for the rice and Rs 155 for the Sunflower Oil, totaling Rs 1605. Delivery will be made by six.",
+    "sentence1": "Hello, I'm Ravi from Raviana Shop.",
+    "total_right": false,
+    "rupee_numbers": [
+     155,
+     1450,
+     1605
+    ],
+    "mouth_all": 5.747,
+    "mouth_first": 0.638
+   },
+   {
+    "seed": 3,
+    "first_token": 0.048,
+    "first_sentence": 0.399,
+    "all": 5.472,
+    "words": 75,
+    "reply": "Hello, this is Raviana Shop. I can confirm your order. You've ordered:\n\n- 25 kg bag of Sona Masoori Rice\n- 2 liters of sunflower oil\n- 2 dozen eggs\n\nThe total cost for your items is Rs 1450 for the rice and Rs 310 for the sunflower oil, which makes a grand total of Rs 1760.\n\nFor delivery, as you requested, it will be done by 6 AM.\n\nThank you for choosing Raviana Shop.",
+    "sentence1": "Hello, this is Raviana Shop.",
+    "total_right": false,
+    "rupee_numbers": [
+     310,
+     1450,
+     1760
+    ],
+    "mouth_all": 7.104,
+    "mouth_first": 0.66
+   },
+   {
+    "seed": 4,
+    "first_token": 0.052,
+    "first_sentence": 0.103,
+    "all": 4.222,
+    "words": 59,
+    "reply": "Hello! This is Raviana Shop. The items you requested are Sona Masoori Rice (25 kg bag), Sunflower oil (2 liters), and Eggs (2 dozen). The total cost for these items is Rs 1450. Delivery is free, so you won't have to pay extra for that. The delivery time is 6 PM, as you mentioned. Thank you for your understanding.",
+    "sentence1": "Hello!",
+    "total_right": false,
+    "rupee_numbers": [
+     1450
+    ],
+    "mouth_all": 5.758,
+    "mouth_first": 0.316
+   },
+   {
+    "seed": 5,
+    "first_token": 0.048,
+    "first_sentence": 0.371,
+    "all": 7.639,
+    "words": 98,
+    "reply": "Hello, this is Raviana Shop. Let me confirm the items you want to purchase.\n\nYou want one 25 kg bag of Sona Masoori Rice, two liters of sunflower oil, and two dozen eggs.\n\nThe total cost for the items will be:\n- Sona Masoori Rice: 1 * Rs 1450 = Rs 1450\n- Sunflower oil: 2 * Rs 155 = Rs 310\n- Eggs: 2 * Rs 84 = Rs 168\n\nSo the total cost is Rs 1450 + Rs 310 + Rs 168 = Rs 1928.\n\nThe delivery time you specified is six, so delivery will be",
+    "sentence1": "Hello, this is Raviana Shop.",
+    "total_right": true,
+    "rupee_numbers": [
+     155,
+     168,
+     310,
+     1450,
+     1928
+    ],
+    "mouth_all": 11.647,
+    "mouth_first": 0.572
+   },
+   {
+    "seed": 6,
+    "first_token": 0.053,
+    "first_sentence": 0.104,
+    "all": 3.366,
+    "words": 42,
+    "reply": "Hello! Yes, it's Raviana. You have ordered 25 kg of Sona Masoori Rice, 2 liters of Sunflower Oil, and 2 dozen eggs. The total cost is Rs 1450. Delivery is free. Could you please confirm your preferred delivery time by 6 PM?",
+    "sentence1": "Hello!",
+    "total_right": false,
+    "rupee_numbers": [
+     1450
+    ],
+    "mouth_all": 4.702,
+    "mouth_first": 0.338
+   }
+  ]
+ },
+ "mouth": {},
+ "summary": {
+  "ears": 1.79,
+  "A": {
+   "brain_first_sentence": 0.41,
+   "brain_all": 29.55,
+   "mouth_first": 0.32,
+   "mouth_all": 10.07,
+   "silence_wait_all": 41.7,
+   "silence_first_sentence": 2.54,
+   "total_right": 6,
+   "runs": 6
+  },
+  "C": {
+   "brain_first_sentence": 2.02,
+   "brain_all": 4.06,
+   "mouth_first": 0.89,
+   "mouth_all": 1.52,
+   "silence_wait_all": 7.35,
+   "silence_first_sentence": 4.72,
+   "total_right": 0,
+   "runs": 6
+  },
+  "D": {
+   "brain_first_sentence": 0.38,
+   "brain_all": 4.53,
+   "mouth_first": 0.55,
+   "mouth_all": 5.89,
+   "silence_wait_all": 12.2,
+   "silence_first_sentence": 2.72,
+   "total_right": 1,
+   "runs": 6
+  }
+ }
+}
