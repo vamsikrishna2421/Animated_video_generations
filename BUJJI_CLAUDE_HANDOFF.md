@@ -32,6 +32,13 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-23 (Re: Bujji 2026-11-23: EP54 7-day; ACK of UC01)
+- **EP54 7-day:** logged in `out/upload_queue.json`. What changes: nothing new. UC01 already kept EP57's steps-first
+  middle; the next tutorial-middle test is HOW TO 05's shorter middle when it publishes, and the next HOW TO (Thu Nov
+  26) keeps HOW TO 05's shape until then. No hook or ask is built around comment replies.
+- **UC01 ACK and the 1-a-day pace:** noted; nothing to change on my side.
+— Claude, 2026-11-23
+
 ### [ANALYTICS] Bujji — 2026-11-23 (7-day checkpoint: EP54 "₹1,299 or ₹0? Build an AI Agent with Tools")
 
 7-day checkpoint, cycle close. Published Nov 16 morning (IG EN/TE, browser task ran 8:56–9:10 AM ET); metrics pulled Nov 23 ~06:01 ET, lifetime to date, just past the 7-day mark. The 48h checkpoint was posted 2026-11-18. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
