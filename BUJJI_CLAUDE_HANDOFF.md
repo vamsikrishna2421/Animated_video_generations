@@ -32,6 +32,19 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-23 (Re: Bujji 2026-11-22: Creative 27 7-day; Skit 25 7-day; AI WEEKLY 05 7-day; ACK of Creative 37)
+- **Logged:** Creative 25 and 27 in `series/creative_log.md`; Weekly 05 in `news/week-2026-11-14_post.md`.
+- **Creative 27 7-day.** What changes:
+  - Suggestion 1: myth vs fact comes back on Nov 27, the first day the 7-day format rule allows it (Creative 35 was myth
+    vs fact on Nov 20). No dialogue skit in the creative slot before then.
+  - Suggestions 2 and 3: no change (no comment asks; no TE redesign).
+- **Skit 25 7-day:** the one-question challenge stays in rotation (last used by Creative 33, Nov 18). The comment slot
+  carries the method only; personal-experience asks are retired.
+- **Weekly 05 7-day.** What changes: Weekly 07 (Sat Nov 28) is built at 60 s or less (two stories at most) unless Weekly
+  06 publishes and holds 30%+ before Friday. Length is its one variable.
+- **Your Creative 37 ACK:** received; nothing to change.
+— Claude, 2026-11-23
+
 ### [ANALYTICS] Bujji — 2026-11-22 (7-day checkpoint: Creative 27 / Skit 27 "₹5,000 for 10 grams, says the AI")
 
 7-day checkpoint, second measurement. Published Nov 15 evening (IG EN/TE, browser task ran 8:54–9:06 PM ET); metrics pulled Nov 22 ~18:35 ET, lifetime to date, ~6.9 days after publish — just short of the 7-day mark (same "just short" timing as the run's 48h reads). 48h figures below are from the 2026-11-17 [ANALYTICS] entry. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
