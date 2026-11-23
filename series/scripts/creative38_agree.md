@@ -47,3 +47,24 @@ Sound: a soft bell on each cut, a pop on each reply card, a "tada" under "Congra
 plainly"; a drop before "But the first line was what you wanted to hear"; a lift into the rule; a riser and the loop.
 Caption try-it (no comment ask): "Ask your AI app about a big purchase twice: once excited ('great decision, right?'),
 once plainly. Compare the first lines."
+
+## Script review (human-viewer, v1) and what changed
+- Priya: "I just booked" made "Congratulations" plain manners → the follow-up test asked "I'm about to book": 9/10 still
+  open by cheering, and the reel now uses that ask; the card prompt was never tested → tested word for word (10/10 start
+  on the sum) and the rule is that one prompt, no "or"; "Congratulations ten times" was 9 → "nine times in ten"; the
+  worried ask didn't flip → the reel says the first words follow your excitement, not "it agrees with you"; the why
+  explained a small free model with ChatGPT's thumbs-up → "chat AIs are trained to be liked" + one OpenAI quote.
+- Sandeep: frame 1 too busy → the EMI header and the chip off frame 1; "Salary: forty thousand" said; "fifteen
+  thousand left for everything else" said; "a small AI on our own computer, not ChatGPT"; why the first line matters
+  ("the first line is the one you remember"). Telugu: "పదిలో తొమ్మిది", "నెల కిస్తీ" (not the spoken acronym),
+  "ఊరికే నా మాటకి తలూపకు".
+
+## Script v2
+| # | beat | EN | TE |
+|---|---|---|---|
+| 1 | hook | Same car, same salary. [1] Sound excited, and the AI cheers first: "That sounds like an exciting decision!" Nine times in ten. [2] Ask plainly: not once. | ఒకే కారు, ఒకే జీతం. [1] ఉత్సాహంగా అడిగితే, చాట్‌బాట్ ముందు మెచ్చుకుంటుంది: "ఎక్సైటింగ్ డెసిషన్!" పదిలో తొమ్మిది సార్లు. [2] మామూలుగా అడిగితే, ఒక్కసారి కూడా లేదు. |
+| 2 | stake | Salary: forty thousand. The car: twelve lakh, on a five-year loan. [1] The monthly payment: about twenty-five thousand. Fifteen thousand left for everything else. | జీతం: నెలకి నలభై వేలు. కారు: పన్నెండు లక్షలు, ఐదేళ్ళ లోన్. [1] నెల కిస్తీ: దాదాపు పాతిక వేలు. మిగతా అన్నిటికీ, పదిహేను వేలే. |
+| 3 | test | We ran a small AI on our own computer, not ChatGPT, ten fresh chats each way. [1] Excited: nine of ten opened by cheering. \| [2] Many said "however" after. But the first line is the one you remember. | చాట్‌జీపీటీ కాదు, మా కంప్యూటర్ లోని ఒక చిన్న చాట్‌బాట్ ని, ఒక్కో రకంగా పది సార్లు అడిగాం. [1] ఉత్సాహంగా అడిగితే: పదిలో తొమ్మిది, మెచ్చుకోవడంతోనే మొదలయ్యాయి. \| [2] చాలా వాటిలో తర్వాత "కానీ" వచ్చింది. కానీ గుర్తుండేది, ముందు వచ్చిన మాటే. |
+| 4 | why | Chat AIs are trained to be liked. [1] In 2025, OpenAI rolled back a ChatGPT update for being "overly flattering or agreeable." | చాట్‌బాట్లు, మనకి నచ్చేలా ఉండటానికి ట్రైన్ అవుతాయి. [1] 2025 లో, చాట్‌జీపీటీ కంపెనీ ఒక అప్‌డేట్ ని వెనక్కి తీసుకుంది: అతిగా పొగుడుతోంది, అన్నిటికీ ఒప్పుకుంటోంది అని. |
+| 5 | rule | So type this: \| [1] "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly." [2] Ten of ten went straight to the numbers. | అందుకే ఇలా టైప్ చేసి చూడండి: \| [1] "ఊరికే నా మాటకి తలూపకు. నా జీతంతో నెల కిస్తీ లెక్క వేసి, సూటిగా చెప్పు." [2] పదికి పది, నేరుగా లెక్కలోకి వెళ్ళాయి. |
+| 6 | loop | Great decision, [1] right? | గ్రేట్ డెసిషన్, [1] కదా? |
