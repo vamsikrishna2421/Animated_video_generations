@@ -10,7 +10,7 @@
  "music": "lofi",
  "musicVol": [
   0.16,
-  0.28
+  0.4
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
@@ -108,7 +108,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -124,11 +125,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -141,8 +142,8 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "Same car, same salary. [1] Sound excited, and the AI cheers first: \"That sounds like an exciting decision!\" Nine times in ten. [2] Ask plainly: not once.",
-     "show": "Same car, same salary. Sound excited, and the AI cheers first: \"That sounds like an exciting decision!\" 9 times in 10. Ask plainly: not once.",
+     "text": "Same car, same salary. [1] Sound excited, and the AI cheers first, nine times in ten. [2] Ask plainly: not once.",
+     "show": "Same car, same salary. Sound excited, and the AI cheers first, 9 times in 10. Ask plainly: not once.",
      "maxgap": 0.3,
      "gap": 0.35,
      "tempo": 1.12
@@ -213,7 +214,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -229,11 +231,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -246,11 +248,15 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "Salary: forty thousand. The car: twelve lakh, on a five-year loan. [1] The monthly payment: about twenty-five thousand. Fifteen thousand left for everything else.",
-     "show": "Salary: ₹40,000. The car: ₹12 lakh, on a 5-year loan. The monthly payment: about ₹25,000. ₹15,000 left for everything else.",
+     "text": "Salary: forty thousand. The car: twelve lakh, on a five-year loan. [1] The monthly payment: about twenty-five thousand. <pause 0.5> [2] About fifteen thousand left for everything else.",
+     "show": "Salary: ₹40,000. The car: ₹12 lakh, on a 5-year loan. The monthly payment: about ₹25,000. <pause 0.5> About ₹15,000 left for everything else.",
      "maxgap": 0.3,
      "gap": 0.35,
-     "tempo": 1.12
+     "tempo": 1.12,
+     "tts": "Salary: forty thousand. The car: twelve lakh, on a five-year loan. The monthly payment: about twenty-five thousand.",
+     "file2": "02b_storyteller.wav",
+     "tts2": "About fifteen thousand left for everything else.",
+     "pause": 0.5
     }
    ]
   },
@@ -325,7 +331,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -341,11 +348,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -358,15 +365,15 @@
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "We ran a small AI on our own computer, not ChatGPT, ten fresh chats each way. [1] Excited: nine of ten opened by cheering. <pause 0.6> [2] Many said \"however\" after. But the first line is the one you remember.",
-     "show": "We ran a small AI on our own computer, not ChatGPT, 10 fresh chats each way. Excited: 9 of 10 opened by cheering. <pause 0.6> Many said \"however\" after. But the first line is the one you remember.",
+     "text": "We ran a small AI on our own computer, not ChatGPT, ten fresh chats each way. [1] Excited: nine of ten opened by cheering. Many said \"however\" after. <pause 0.7> [2] But the first line is the one you remember.",
+     "show": "We ran a small AI on our own computer, not ChatGPT, 10 fresh chats each way. Excited: 9 of 10 opened by cheering. Many said \"however\" after. <pause 0.6> But the first line is the one you remember.",
      "maxgap": 0.3,
      "gap": 0.35,
      "tempo": 1.12,
-     "tts": "We ran a small AI on our own computer, not ChatGPT, ten fresh chats each way. Excited: nine of ten opened by cheering.",
+     "tts": "We ran a small AI on our own computer, not ChatGPT, ten fresh chats each way. Excited: nine of ten opened by cheering. Many said \"however\" after.",
      "file2": "03b_storyteller.wav",
-     "tts2": "Many said \"however\" after. But the first line is the one you remember.",
-     "pause": 0.6
+     "tts2": "But the first line is the one you remember.",
+     "pause": 0.7
     }
    ]
   },
@@ -434,7 +441,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -450,11 +458,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -479,9 +487,9 @@
    "id": "s_e",
    "type": "sk_agree38",
    "tail": 0.5,
-   "boost": 2.4,
-   "lift": 0.8,
-   "rise": 1.8,
+   "boost": 2.8,
+   "lift": 1.0,
+   "rise": 2.8,
    "data": {
     "beats": [
      {
@@ -540,7 +548,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -556,11 +565,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -573,14 +582,14 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "So type this: <pause 0.4> [1] \"Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.\" [2] Ten of ten went straight to the numbers.",
-     "show": "So type this: <pause 0.4> \"Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.\" 10 of 10 went straight to the numbers.",
+     "text": "So type this: <pause 0.4> [1] \"Don't just agree with me. Work out the monthly payment at nine percent against my salary, and tell me plainly.\" [2] Ten of ten went straight to the numbers.",
+     "show": "So type this: <pause 0.4> \"Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.\" 10 of 10 went straight to the numbers.",
      "maxgap": 0.3,
      "gap": 0.35,
      "tempo": 1.12,
      "tts": "So type this:",
      "file2": "05b_storyteller.wav",
-     "tts2": "\"Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.\" Ten of ten went straight to the numbers.",
+     "tts2": "\"Don't just agree with me. Work out the monthly payment at nine percent against my salary, and tell me plainly.\" Ten of ten went straight to the numbers.",
      "pause": 0.4
     }
    ]
@@ -652,7 +661,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -668,11 +678,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {

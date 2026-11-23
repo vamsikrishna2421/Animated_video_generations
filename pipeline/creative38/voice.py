@@ -29,12 +29,12 @@ VOICE_TE = {"storyteller": "Lalitha speaks in a calm, clear and warm voice, like
                            "The recording is very clear, close-up, studio quality, with no background noise."}
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = set()
-MUST = {"en": {1: [("car",), ("salary",), ("excited",), ("cheers", "cheer"), ("exciting",), ("decision",), ("nine", "9"), ("ten", "10"), ("plainly",), ("once",)],
-               2: [("salary",), ("forty", "40"), ("twelve", "12"), ("lakh",), ("five", "5"), ("payment",), ("twenty", "25"), ("fifteen", "15")],
-               3: [("small",), ("computer",), ("chatgpt", "gpt"), ("ten", "10"), ("excited",), ("nine", "9"), ("cheering",)],
-               "3b": [("however",), ("first",), ("line",), ("remember",)],
+MUST = {"en": {1: [("car",), ("salary",), ("excited",), ("cheers", "cheer"), ("nine", "9"), ("ten", "10"), ("plainly",), ("once",)],
+               2: [("salary",), ("lakh",), ("five", "5"), ("payment",)], "2b": [("fifteen", "15"), ("left",), ("everything",)],
+               3: [("small",), ("computer",), ("chatgpt", "gpt"), ("ten", "10"), ("excited",), ("nine", "9"), ("cheering",), ("however",)],
+               "3b": [("first",), ("line",), ("remember",)],
                4: [("trained",), ("liked",), ("2025", "twenty"), ("openai", "open"), ("chatgpt", "gpt"), ("flattering",), ("agreeable",)],
-               5: [("type",)], "5b": [("agree",), ("payment",), ("salary",), ("plainly",), ("ten", "10"), ("numbers",)],
+               5: [("type",)], "5b": [("agree",), ("payment",), ("nine", "9"), ("salary",), ("plainly",), ("ten", "10"), ("numbers",)],
                6: [("great",), ("decision",), ("right",)]},
         "te": {1: [("तोम्म", "तोमि", "9")], 2: [("पात", "पाती")]}}
 JUDGE_TEXT = {}

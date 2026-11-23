@@ -10,7 +10,7 @@
  "music": "lofi",
  "musicVol": [
   0.18,
-  0.24
+  0.36
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
@@ -110,7 +110,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -126,11 +127,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -144,12 +145,12 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "ఒకే కారు, ఒకే జీతం. [1] ఉత్సాహంగా అడిగితే, చాట్‌బాట్ ముందు మెచ్చుకుంటుంది. పదిలో తొమ్మిది సార్లు. <pause 0.3> [2] మామూలుగా అడిగితే, ఒక్కసారి కూడా లేదు.",
+     "text": "ఒకే కారు, ఒకే జీతం. [1] హుషారుగా అడిగితే, చాట్‌బాట్ ముందు మెచ్చుకుంటుంది. పదిలో తొమ్మిది సార్లు. <pause 0.3> [2] మామూలుగా అడిగితే, ఒక్కసారి కూడా లేదు.",
      "show": "Same car, same salary. Ask excitedly, and the chatbot praises first. 9 times in 10. Ask plainly: not even once.",
      "maxgap": 0.18,
      "gap": 0.2,
      "tempo": 1.14,
-     "tts": "ఒకే కారు, ఒకే జీతం. ఉత్సాహంగా అడిగితే, చాట్‌బాట్ ముందు మెచ్చుకుంటుంది. పదిలో తొమ్మిది సార్లు.",
+     "tts": "ఒకే కారు, ఒకే జీతం. హుషారుగా అడిగితే, చాట్‌బాట్ ముందు మెచ్చుకుంటుంది. పదిలో తొమ్మిది సార్లు.",
      "file2": "01b_storyteller.wav",
      "tts2": "మామూలుగా అడిగితే, ఒక్కసారి కూడా లేదు.",
      "pause": 0.3
@@ -220,7 +221,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -236,11 +238,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -333,7 +335,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -349,11 +352,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -367,15 +370,15 @@
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "చాట్‌జీపీటీ కాదు, మా కంప్యూటర్ లోని ఒక చిన్న చాట్‌బాట్ ని, ఒక్కో రకంగా పది సార్లు అడిగాం. [1] ఉత్సాహంగా అడిగితే: పదిలో తొమ్మిది, మెచ్చుకోవడంతోనే మొదలయ్యాయి. <pause 0.5> [2] చాలా వాటిలో తర్వాత \"కానీ\" వచ్చింది. కానీ గుర్తుండేది, ముందు వచ్చిన మాటే.",
-     "show": "Not ChatGPT: we asked a small chatbot on our computer, 10 times each way. Asked excitedly: 9 of 10 began with praise. <pause 0.6> Many had a \"but\" later. But what you remember is the first thing it said.",
+     "text": "చాట్‌జీపీటీ కాదు, మా కంప్యూటర్ లోని ఒక చిన్న చాట్‌బాట్ ని, ఒక్కో రకంగా పది సార్లు అడిగాం. [1] హుషారుగా అడిగితే: పదిలో తొమ్మిది, మెచ్చుకోవడంతోనే మొదలయ్యాయి. చాలా వాటిలో తర్వాత \"కానీ\" వచ్చింది. <pause 0.6> [2] అయినా గుర్తుండేది, ముందు వచ్చిన మాటే.",
+     "show": "Not ChatGPT: we asked a small chatbot on our computer, 10 times each way. Asked excitedly: 9 of 10 began with praise. Many had a \"but\" later. <pause 0.6> Still, what you remember is the first thing it said.",
      "maxgap": 0.18,
      "gap": 0.2,
      "tempo": 1.14,
-     "tts": "చాట్‌జీపీటీ కాదు, మా కంప్యూటర్ లోని ఒక చిన్న చాట్‌బాట్ ని, ఒక్కో రకంగా పది సార్లు అడిగాం. ఉత్సాహంగా అడిగితే: పదిలో తొమ్మిది, మెచ్చుకోవడంతోనే మొదలయ్యాయి.",
+     "tts": "చాట్‌జీపీటీ కాదు, మా కంప్యూటర్ లోని ఒక చిన్న చాట్‌బాట్ ని, ఒక్కో రకంగా పది సార్లు అడిగాం. హుషారుగా అడిగితే: పదిలో తొమ్మిది, మెచ్చుకోవడంతోనే మొదలయ్యాయి. చాలా వాటిలో తర్వాత \"కానీ\" వచ్చింది.",
      "file2": "03b_storyteller.wav",
-     "tts2": "చాలా వాటిలో తర్వాత \"కానీ\" వచ్చింది. కానీ గుర్తుండేది, ముందు వచ్చిన మాటే.",
-     "pause": 0.5
+     "tts2": "అయినా గుర్తుండేది, ముందు వచ్చిన మాటే.",
+     "pause": 0.6
     }
    ]
   },
@@ -443,7 +446,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -459,11 +463,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -489,9 +493,9 @@
    "id": "s_e",
    "type": "sk_agree38",
    "tail": 0.3,
-   "boost": 2.4,
-   "lift": 0.8,
-   "rise": 1.8,
+   "boost": 2.8,
+   "lift": 1.0,
+   "rise": 2.8,
    "data": {
     "beats": [
      {
@@ -550,7 +554,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -566,11 +571,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -584,14 +589,14 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "అందుకే ఇలా టైప్ చేసి చూడండి: <pause 0.35> [1] \"ఊరికే నా మాటకి తలూపకు. నా జీతంతో నెల కిస్తీ లెక్క వేసి, సూటిగా చెప్పు.\" [2] పదికి పది, నేరుగా లెక్కలోకి వెళ్ళాయి.",
-     "show": "So try typing this: <pause 0.4> \"Don't just nod along with me. Work out the monthly instalment against my salary and tell me straight.\" 10 of 10 went straight to the maths.",
+     "text": "అందుకే ఇలా టైప్ చేసి చూడండి: <pause 0.35> [1] \"ఊరికే నా మాటకి తల ఊపకు. నా జీతంతో నెల కిస్తీ లెక్క వేసి, సూటిగా చెప్పు.\" [2] పదికి పది, నేరుగా లెక్కలోకి వెళ్ళాయి.",
+     "show": "So try typing this: <pause 0.4> \"Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.\" 10 of 10 went straight to the maths.",
      "maxgap": 0.18,
      "gap": 0.25,
      "tempo": 1.14,
      "tts": "అందుకే ఇలా టైప్ చేసి చూడండి:",
      "file2": "05b_storyteller.wav",
-     "tts2": "\"ఊరికే నా మాటకి తలూపకు. నా జీతంతో నెల కిస్తీ లెక్క వేసి, సూటిగా చెప్పు.\" పదికి పది, నేరుగా లెక్కలోకి వెళ్ళాయి.",
+     "tts2": "\"ఊరికే నా మాటకి తల ఊపకు. నా జీతంతో నెల కిస్తీ లెక్క వేసి, సూటిగా చెప్పు.\" పదికి పది, నేరుగా లెక్కలోకి వెళ్ళాయి.",
      "pause": 0.35
     }
    ]
@@ -663,7 +668,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -679,11 +685,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {

@@ -35,7 +35,7 @@ const stamp = (c: Ctx, t: string, x: number, y: number, s: number, col: string, 
 // one phone chat: a label, the person's bubble, the AI's bubble, a stat under it
 const chat = (c: Ctx, x: number, y: number, w: number, lab: string, labCol: string, ask: string, reply: string, stat: string, statCol: string, dim: number, party: number) => {
   c.save(); c.globalAlpha = 1 - 0.55 * dim;
-  c.fillStyle = "#111827"; rrect(c, x, y, w, 700, 36); c.fill(); c.fillStyle = "#f1f5f9"; rrect(c, x + 14, y + 14, w - 28, 672, 26); c.fill();
+  c.fillStyle = "#111827"; rrect(c, x, y, w, 760, 36); c.fill(); c.fillStyle = "#f1f5f9"; rrect(c, x + 14, y + 14, w - 28, 732, 26); c.fill();
   c.fillStyle = labCol; rrect(c, x + 14, y + 14, w - 28, 74, 26); c.fill(); c.fillRect(x + 14, y + 60, w - 28, 28);
   c.font = SANS(fit(c, lab, w - 70, 36, 900), 900); c.fillStyle = "#fff"; c.textAlign = "center"; c.fillText(lab, x + w / 2, y + 64);
   if (party > 0) {   // a little confetti, behind the bubbles (stills: it covered the text)
@@ -44,14 +44,14 @@ const chat = (c: Ctx, x: number, y: number, w: number, lab: string, labCol: stri
   }
   c.textAlign = "left";
   const aw = w - 90;
-  c.font = SANS(30, 800); const askL = wrap(c, ask, aw - 40).slice(0, 4);
-  c.fillStyle = "#dcf8c6"; rrect(c, x + 70, y + 110, aw, 30 + askL.length * 38, 20); c.fill();
-  c.fillStyle = INK; askL.forEach((t, q) => c.fillText(t, x + 92, y + 150 + q * 38));
-  const ry = y + 160 + askL.length * 38;
-  c.font = SANS(32, 900); const repL = wrap(c, reply, aw - 40).slice(0, 4);
-  c.fillStyle = "#ffffff"; rrect(c, x + 30, ry, aw, 34 + repL.length * 40, 20); c.fill(); c.strokeStyle = "#cbd5e1"; c.lineWidth = 3; rrect(c, x + 30, ry, aw, 34 + repL.length * 40, 20); c.stroke();
-  c.fillStyle = INK; repL.forEach((t, q) => c.fillText(t, x + 52, ry + 44 + q * 40));
-  c.font = SANS(fit(c, stat, w - 60, 66, 900), 900); c.fillStyle = statCol; c.textAlign = "center"; c.fillText(stat, x + w / 2, y + 650);
+  c.font = SANS(34, 800); const askL = wrap(c, ask, aw - 40).slice(0, 5);
+  c.fillStyle = "#dcf8c6"; rrect(c, x + 70, y + 110, aw, 30 + askL.length * 42, 20); c.fill();
+  c.fillStyle = INK; askL.forEach((t, q) => c.fillText(t, x + 92, y + 152 + q * 42));
+  const ry = y + 160 + askL.length * 42;
+  c.font = SANS(38, 900); const repL = wrap(c, reply, aw - 40).slice(0, 4);
+  c.fillStyle = "#ffffff"; rrect(c, x + 30, ry, aw, 34 + repL.length * 46, 20); c.fill(); c.strokeStyle = "#cbd5e1"; c.lineWidth = 3; rrect(c, x + 30, ry, aw, 34 + repL.length * 46, 20); c.stroke();
+  c.fillStyle = INK; repL.forEach((t, q) => c.fillText(t, x + 52, ry + 48 + q * 46));
+  c.font = SANS(fit(c, stat, w - 50, 76, 900), 900); c.fillStyle = statCol; c.textAlign = "center"; c.fillText(stat, x + w / 2, y + 715);
   c.restore();
 };
 
@@ -67,7 +67,7 @@ const StAgree: React.FC<SP> = ({ s }) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     if (i > 0) sfx.push(<Sfx key={k("bell")} at={Math.max(0, at - 6)} src="audio/gag_ding.wav" vol={0.22} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.75 : 0.5} />, <Sfx key={k("c")} at={2} src={CLAP} vol={te ? 0.6 : 0.4} />, <Sfx key={k("t")} at={cue(i, 1, 0.4)} src="audio/sfx_success.wav" vol={0.35} />, <Sfx key={k("x")} at={cue(i, 2, 0.75)} src="reel/sfx_buzz.wav" vol={0.35} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.9 : 0.9} />, <Sfx key={k("c")} at={2} src={CLAP} vol={te ? 0.6 : 0.4} />, <Sfx key={k("t")} at={cue(i, 1, 0.4)} src="audio/sfx_success.wav" vol={0.35} />, <Sfx key={k("x")} at={cue(i, 2, 0.75)} src="reel/sfx_buzz.wav" vol={0.35} />);
     if (b.prop === "stake") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("z")} at={cue(i, 1, 0.5)} src="reel/sfx_boom.wav" vol={0.5} />);
     if (b.prop === "test") { for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("c" + q)} at={cue(i, 1, 0.3) + q * 3} src="audio/sfx_pop.wav" vol={0.18} />); sfx.push(<Sfx key={k("g")} at={cue(i, 2, 0.6)} src="reel/sfx_glitch.wav" vol={0.3} />); }
     if (b.prop === "why") sfx.push(<Sfx key={k("u")} at={at + 4} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("o")} at={cue(i, 1, 0.5)} src="audio/gag_bonk.wav" vol={0.35} />);
@@ -92,7 +92,7 @@ const StAgree: React.FC<SP> = ({ s }) => {
           c.font = SANS(fit(c, T.bar, W - 140, 44, 900), 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(T.bar, W / 2, 326); c.restore();
           chat(c, 40, 390, 490, T.leftLab, GOLD, T.leftAsk, T.leftReply, T.leftStat, "#b45309", kPlain * 0.6, full ? 1 : clamp((f - ln.from) / 60));
           chat(c, 550, 390, 490, T.rightLab, "#334155", T.rightAsk, T.rightReply, T.rightStat, "#334155", 0, 0);
-          if (P === "hook" && !loopOn) chip(c, T.story, W / 2, 1150, "#1e293b", "#f8fafc", 1, 32);
+          if (P === "hook" && !loopOn && f >= cu(2, 0.75)) chip(c, T.story, W / 2, 1210, "#1e293b", "#f8fafc", seg(f, cu(2, 0.75), cu(2, 0.75) + 8), 34);   // render review: off frame 1
         } else if (P === "stake") {
           c.textAlign = "center"; c.font = SANS(56, 900); c.fillStyle = INK; c.fillText(T.salaryHead, W / 2, 350);
           c.font = SANS(fit(c, T.loanSub, W - 100, 38, 800), 800); c.fillStyle = "#475569"; c.fillText(T.loanSub, W / 2, 410);
@@ -118,17 +118,20 @@ const StAgree: React.FC<SP> = ({ s }) => {
           c.textAlign = "center"; c.font = SANS(52, 900); c.fillStyle = INK; c.fillText(T.testHead, W / 2, 330);
           c.font = SANS(fit(c, T.testSub, W - 100, 34, 800), 800); c.fillStyle = "#475569"; c.fillText(T.testSub, W / 2, 380);
           const kHow = seg(f, cu(2, 0.6) - 4, cu(2, 0.6) + 8);
-          (T.cards as [string, string][]).forEach(([open, rest], q) => {
-            const kq = seg(f, cu(1, 0.3) + q * 3, cu(1, 0.3) + q * 3 + 6); if (kq <= 0) return;
-            const x = 40 + (q % 2) * 510, y = 430 + Math.floor(q / 2) * 150, w = 490;
-            c.save(); c.globalAlpha = clamp(kq * 3);
-            c.fillStyle = "#ffffff"; rrect(c, x, y, w, 132, 18); c.fill(); c.strokeStyle = "#cbd5e1"; c.lineWidth = 3; rrect(c, x, y, w, 132, 18); c.stroke();
-            c.textAlign = "left"; c.font = SANS(fit(c, open, w - 40, 30, 900), 900); const ow = c.measureText(open).width;
-            c.fillStyle = "#fde047"; rrect(c, x + 14, y + 22, ow + 12, 46, 10); c.fill(); c.fillStyle = INK; c.fillText(open, x + 20, y + 56);
-            if (rest) { c.globalAlpha = clamp(kq * 3) * (0.35 + 0.65 * kHow); c.font = SANS(fit(c, rest, w - 40, 28, 700), 700); c.fillStyle = "#475569"; c.fillText(rest, x + 20, y + 108); }
+          (T.cards as [string, string, boolean?][]).forEach(([open, rest, cheer], q) => {
+            const kq = seg(f, cu(1, 0.3) + q * 3, cu(1, 0.3) + q * 3 + 6), k0 = seg(f, ln.from, ln.from + 8);   // render review: no empty page
+            if (k0 <= 0) return;
+            const lit = cheer !== false, x = 40 + (q % 2) * 510, y = 420 + Math.floor(q / 2) * 165, w = 490;
+            c.save(); c.globalAlpha = clamp(k0 * 3) * (0.45 + 0.55 * kq);
+            c.fillStyle = "#ffffff"; rrect(c, x, y, w, 150, 18); c.fill(); c.strokeStyle = lit ? "#cbd5e1" : "#94a3b8"; c.lineWidth = 3; rrect(c, x, y, w, 150, 18); c.stroke();
+            c.textAlign = "left"; c.font = SANS(fit(c, open, w - 40, 34, 900), 900); const ow = c.measureText(open).width;
+            if (lit && kq > 0) { c.fillStyle = `rgba(253,224,71,${clamp(kq * 3)})`; rrect(c, x + 14, y + 24, ow + 12, 50, 10); c.fill(); }
+            c.fillStyle = lit ? INK : "#64748b"; c.fillText(open, x + 20, y + 61);
+            if (!lit && kq > 0) { c.font = SANS(28, 900); c.fillStyle = "#64748b"; c.fillText("no cheer", x + 20, y + 120); }
+            if (rest) { c.globalAlpha = clamp(k0 * 3) * (0.35 + 0.65 * kHow); c.font = SANS(fit(c, rest, w - 40, 30, 700), 700); c.fillStyle = "#475569"; c.fillText(rest, x + 20, y + 120); }
             c.restore();
           });
-          if (kHow > 0) chip(c, T.firstLine, W / 2, 1230, "#1e293b", "#fde68a", kHow, fit(c, T.firstLine, W - 140, 40, 900));
+          if (kHow > 0) chip(c, T.firstLine, W / 2, 1300, "#1e293b", "#fde68a", kHow, fit(c, T.firstLine, W - 140, 44, 900));
         } else if (P === "why") {
           c.textAlign = "center"; c.font = SANS(52, 900); c.fillStyle = INK; c.fillText(T.whyHead, W / 2, 330);
           const k0 = seg(f, ln.from + 2, ln.from + 12), k1 = seg(f, cu(1, 0.5) - 4, cu(1, 0.5) + 6);
@@ -160,7 +163,7 @@ const StAgree: React.FC<SP> = ({ s }) => {
           if (k1 > 0) {
             c.save(); c.globalAlpha = clamp(k1 * 3); c.translate(0, (1 - easeOut(clamp(k1 * 1.5))) * 40);
             c.fillStyle = "#ffffff"; rrect(c, 60, 570, W - 120, 380, 28); c.fill(); c.strokeStyle = "#1e293b"; c.lineWidth = 6; rrect(c, 60, 570, W - 120, 380, 28); c.stroke();
-            c.textAlign = "left"; c.font = SANS(30, 800); c.fillStyle = "#64748b"; c.fillText(T.goodLab, 100, 630);
+            c.textAlign = "left"; c.font = SANS(40, 900); c.fillStyle = "#2563eb"; c.fillText(T.goodLab, 100, 636);
             c.font = SANS(54, 900); c.fillStyle = INK; wrap(c, T.good, W - 200).slice(0, 4).forEach((t, q) => c.fillText(t, 100, 710 + q * 66));
             c.restore();
             stamp(c, "SCREENSHOT THIS", 800, 950, 36, "#2563eb", k1, -0.05);
