@@ -5,7 +5,7 @@
  "banner": "",
  "musicVol": [
   0.16,
-  0.28
+  0.4
  ],
  "title": "Great Decision, Right? (Creative 38)",
  "handle": "@ai_maastaaru",
@@ -13,57 +13,57 @@
  "fps": 30,
  "musicDrops": [
   [
-   902,
-   944
+   903,
+   945
   ]
  ],
  "musicBoosts": [
   [
    0,
-   327,
+   266,
    2.2
   ],
   [
-   327,
-   654,
+   266,
+   614,
    1.4
   ],
   [
-   655,
-   1085,
+   614,
+   1003,
    1.2
   ],
   [
-   1084,
-   1353,
+   1002,
+   1271,
    1.4
   ],
   [
-   1353,
-   1636,
-   2.4
+   1271,
+   1575,
+   2.8
   ],
   [
-   1636,
-   1702,
+   1575,
+   1641,
    3.2
   ],
   [
-   1353,
-   1636,
-   1.8,
+   1271,
+   1575,
+   2.8,
    1
   ],
   [
-   1636,
-   1702,
+   1575,
+   1641,
    3.4,
    1
   ]
  ],
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1702,
+ "totalFrames": 1641,
  "music": "reel/creative38v1/score.wav",
  "scenes": [
   {
@@ -127,7 +127,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -143,11 +144,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -160,7 +161,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 327,
+   "frames": 266,
    "lines": [
     {
      "who": "storyteller",
@@ -169,137 +170,107 @@
      "sub": null,
      "audio": "reel/creative38v1/line_01.wav",
      "from": 9,
-     "frames": 301,
+     "frames": 239,
      "words": [
       {
        "w": "Same",
-       "from": 11,
-       "to": 18
+       "from": 13,
+       "to": 23
       },
       {
        "w": "car,",
-       "from": 18,
-       "to": 25
-      },
-      {
-       "w": "same",
-       "from": 25,
+       "from": 23,
        "to": 42
       },
       {
-       "w": "salary.",
+       "w": "same",
        "from": 42,
-       "to": 53
+       "to": 49
+      },
+      {
+       "w": "salary.",
+       "from": 49,
+       "to": 76
       },
       {
        "w": "Sound",
-       "from": 53,
-       "to": 61
+       "from": 76,
+       "to": 90
       },
       {
        "w": "excited,",
-       "from": 61,
-       "to": 87
+       "from": 90,
+       "to": 110
       },
       {
        "w": "and",
-       "from": 87,
-       "to": 92
+       "from": 110,
+       "to": 116
       },
       {
        "w": "the",
-       "from": 92,
-       "to": 107
+       "from": 116,
+       "to": 122
       },
       {
        "w": "AI",
-       "from": 107,
-       "to": 111
+       "from": 122,
+       "to": 126
       },
       {
        "w": "cheers",
-       "from": 111,
-       "to": 125
+       "from": 126,
+       "to": 140
       },
       {
-       "w": "first:",
-       "from": 125,
-       "to": 155
-      },
-      {
-       "w": "\"That",
-       "from": 155,
-       "to": 164
-      },
-      {
-       "w": "sounds",
-       "from": 164,
-       "to": 173
-      },
-      {
-       "w": "like",
-       "from": 173,
-       "to": 185
-      },
-      {
-       "w": "an",
-       "from": 185,
-       "to": 189
-      },
-      {
-       "w": "exciting",
-       "from": 189,
-       "to": 202
-      },
-      {
-       "w": "decision!\"",
-       "from": 202,
-       "to": 226
+       "w": "first,",
+       "from": 140,
+       "to": 163
       },
       {
        "w": "9",
-       "from": 226,
-       "to": 229
+       "from": 163,
+       "to": 166
       },
       {
        "w": "times",
-       "from": 229,
-       "to": 237
+       "from": 166,
+       "to": 174
       },
       {
        "w": "in",
-       "from": 237,
-       "to": 242
+       "from": 174,
+       "to": 179
       },
       {
        "w": "10.",
-       "from": 242,
-       "to": 247
+       "from": 179,
+       "to": 184
       },
       {
        "w": "Ask",
-       "from": 247,
-       "to": 261
+       "from": 184,
+       "to": 198
       },
       {
        "w": "plainly:",
-       "from": 261,
-       "to": 287
+       "from": 198,
+       "to": 225
       },
       {
        "w": "not",
-       "from": 287,
-       "to": 293
+       "from": 225,
+       "to": 230
       },
       {
        "w": "once.",
-       "from": 293,
-       "to": 302
+       "from": 230,
+       "to": 239
       }
      ],
      "cues": {
-      "1": 52,
-      "2": 256
+      "1": 75,
+      "2": 185
      }
     }
    ]
@@ -365,7 +336,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -381,11 +353,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -397,8 +369,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 327,
-   "frames": 327,
+   "from": 266,
+   "frames": 348,
    "lines": [
     {
      "who": "storyteller",
@@ -407,111 +379,122 @@
      "sub": null,
      "audio": "reel/creative38v1/line_02.wav",
      "from": 0,
-     "frames": 300,
+     "frames": 324,
      "words": [
       {
        "w": "Salary:",
-       "from": 1,
-       "to": 15
+       "from": 4,
+       "to": 26
       },
       {
        "w": "₹40,000.",
-       "from": 15,
-       "to": 41
+       "from": 26,
+       "to": 42
       },
       {
        "w": "The",
-       "from": 41,
-       "to": 48
+       "from": 42,
+       "to": 61
       },
       {
        "w": "car:",
-       "from": 48,
-       "to": 69
+       "from": 61,
+       "to": 70
       },
       {
        "w": "₹12",
-       "from": 69,
-       "to": 84
+       "from": 70,
+       "to": 86
       },
       {
        "w": "lakh,",
-       "from": 84,
-       "to": 94
+       "from": 86,
+       "to": 97
       },
       {
        "w": "on",
-       "from": 94,
-       "to": 100
+       "from": 97,
+       "to": 113
       },
       {
        "w": "a",
-       "from": 100,
-       "to": 114
+       "from": 113,
+       "to": 120
       },
       {
        "w": "5-year",
-       "from": 114,
-       "to": 126
+       "from": 120,
+       "to": 133
       },
       {
        "w": "loan.",
-       "from": 126,
-       "to": 136
-      },
-      {
-       "w": "The",
-       "from": 136,
+       "from": 133,
        "to": 143
       },
       {
-       "w": "monthly",
+       "w": "The",
        "from": 143,
-       "to": 166
+       "to": 159
       },
       {
-       "w": "payment:",
-       "from": 166,
-       "to": 190
+       "w": "monthly",
+       "from": 159,
+       "to": 173
+      },
+      {
+       "w": "payment",
+       "from": 173,
+       "to": 187
+      },
+      {
+       "w": "is",
+       "from": 187,
+       "to": 197
       },
       {
        "w": "about",
-       "from": 190,
-       "to": 201
+       "from": 197,
+       "to": 208
       },
       {
        "w": "₹25,000.",
-       "from": 201,
-       "to": 216
+       "from": 208,
+       "to": 224
+      },
+      {
+       "w": "About",
+       "from": 243,
+       "to": 257
       },
       {
        "w": "₹15,000",
-       "from": 216,
-       "to": 240
+       "from": 257,
+       "to": 269
       },
       {
        "w": "left",
-       "from": 240,
-       "to": 252
+       "from": 269,
+       "to": 277
       },
       {
        "w": "for",
-       "from": 252,
-       "to": 259
-      },
-      {
-       "w": "everything",
-       "from": 259,
+       "from": 277,
        "to": 283
       },
       {
-       "w": "else.",
+       "w": "everything",
        "from": 283,
-       "to": 293
+       "to": 306
+      },
+      {
+       "w": "else.",
+       "from": 306,
+       "to": 319
       }
      ],
      "cues": {
-      "1": 133
+      "1": 140,
+      "2": 243
      }
     }
    ]
@@ -577,7 +560,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -593,11 +577,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -609,8 +593,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 655,
-   "frames": 430,
+   "from": 614,
+   "frames": 389,
    "lines": [
     {
      "who": "storyteller",
@@ -619,192 +603,192 @@
      "sub": null,
      "audio": "reel/creative38v1/line_03.wav",
      "from": 0,
-     "frames": 397,
+     "frames": 370,
      "words": [
       {
        "w": "We",
        "from": 0,
-       "to": 6
+       "to": 5
       },
       {
        "w": "ran",
-       "from": 6,
-       "to": 13
+       "from": 5,
+       "to": 11
       },
       {
        "w": "a",
-       "from": 13,
-       "to": 16
+       "from": 11,
+       "to": 14
       },
       {
        "w": "small",
-       "from": 16,
-       "to": 27
+       "from": 14,
+       "to": 23
       },
       {
        "w": "AI",
+       "from": 23,
+       "to": 27
+      },
+      {
+       "w": "on",
        "from": 27,
        "to": 32
       },
       {
-       "w": "on",
-       "from": 32,
-       "to": 37
-      },
-      {
        "w": "our",
-       "from": 37,
-       "to": 45
+       "from": 32,
+       "to": 38
       },
       {
        "w": "own",
-       "from": 45,
-       "to": 52
+       "from": 38,
+       "to": 44
       },
       {
        "w": "computer,",
-       "from": 52,
-       "to": 77
+       "from": 44,
+       "to": 59
       },
       {
        "w": "not",
-       "from": 77,
-       "to": 90
+       "from": 59,
+       "to": 65
       },
       {
        "w": "ChatGPT,",
-       "from": 90,
-       "to": 106
+       "from": 65,
+       "to": 96
       },
       {
        "w": "10",
-       "from": 106,
-       "to": 112
+       "from": 96,
+       "to": 101
       },
       {
        "w": "fresh",
-       "from": 112,
-       "to": 130
+       "from": 101,
+       "to": 119
       },
       {
        "w": "chats",
-       "from": 130,
-       "to": 144
+       "from": 119,
+       "to": 128
       },
       {
        "w": "each",
-       "from": 144,
-       "to": 153
+       "from": 128,
+       "to": 141
       },
       {
        "w": "way.",
-       "from": 153,
-       "to": 166
+       "from": 141,
+       "to": 169
       },
       {
        "w": "Excited:",
-       "from": 166,
-       "to": 203
+       "from": 169,
+       "to": 183
       },
       {
        "w": "9",
-       "from": 203,
-       "to": 207
+       "from": 183,
+       "to": 192
       },
       {
        "w": "of",
-       "from": 207,
-       "to": 212
+       "from": 192,
+       "to": 197
       },
       {
        "w": "10",
-       "from": 212,
-       "to": 217
+       "from": 197,
+       "to": 201
       },
       {
        "w": "opened",
-       "from": 217,
-       "to": 230
+       "from": 201,
+       "to": 212
       },
       {
        "w": "by",
-       "from": 230,
-       "to": 235
+       "from": 212,
+       "to": 216
       },
       {
        "w": "cheering.",
-       "from": 235,
-       "to": 253
+       "from": 216,
+       "to": 235
       },
       {
        "w": "Many",
-       "from": 271,
-       "to": 278
+       "from": 235,
+       "to": 251
       },
       {
        "w": "said",
-       "from": 278,
-       "to": 286
+       "from": 251,
+       "to": 259
       },
       {
        "w": "\"however\"",
-       "from": 286,
-       "to": 313
+       "from": 259,
+       "to": 274
       },
       {
        "w": "after.",
-       "from": 313,
-       "to": 323
+       "from": 274,
+       "to": 292
       },
       {
        "w": "But",
-       "from": 323,
-       "to": 337
+       "from": 313,
+       "to": 319
       },
       {
        "w": "the",
-       "from": 337,
-       "to": 343
+       "from": 319,
+       "to": 324
       },
       {
        "w": "first",
-       "from": 343,
-       "to": 352
+       "from": 324,
+       "to": 331
       },
       {
        "w": "line",
-       "from": 352,
-       "to": 360
+       "from": 331,
+       "to": 338
       },
       {
        "w": "is",
-       "from": 360,
-       "to": 364
+       "from": 338,
+       "to": 342
       },
       {
        "w": "the",
-       "from": 364,
-       "to": 370
+       "from": 342,
+       "to": 347
       },
       {
        "w": "one",
-       "from": 370,
-       "to": 376
+       "from": 347,
+       "to": 352
       },
       {
        "w": "you",
-       "from": 376,
-       "to": 382
+       "from": 352,
+       "to": 357
       },
       {
        "w": "remember.",
-       "from": 382,
-       "to": 397
+       "from": 357,
+       "to": 370
       }
      ],
      "cues": {
-      "1": 162,
-      "2": 271
+      "1": 154,
+      "2": 313
      }
     }
    ]
@@ -870,7 +854,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -886,11 +871,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -902,7 +887,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1084,
+   "from": 1002,
    "frames": 269,
    "lines": [
     {
@@ -1087,7 +1072,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -1103,11 +1089,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -1119,8 +1105,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1353,
-   "frames": 283,
+   "from": 1271,
+   "frames": 304,
    "lines": [
     {
      "who": "storyteller",
@@ -1129,7 +1115,7 @@
      "sub": null,
      "audio": "reel/creative38v1/line_05.wav",
      "from": 0,
-     "frames": 248,
+     "frames": 273,
      "words": [
       {
        "w": "So",
@@ -1149,132 +1135,142 @@
       {
        "w": "\"Don't",
        "from": 39,
-       "to": 48
+       "to": 49
       },
       {
        "w": "just",
-       "from": 48,
-       "to": 54
+       "from": 49,
+       "to": 56
       },
       {
        "w": "agree",
-       "from": 54,
-       "to": 62
+       "from": 56,
+       "to": 64
       },
       {
        "w": "with",
-       "from": 62,
-       "to": 69
+       "from": 64,
+       "to": 71
       },
       {
        "w": "me.",
-       "from": 69,
-       "to": 74
+       "from": 71,
+       "to": 86
       },
       {
        "w": "Work",
-       "from": 74,
-       "to": 89
+       "from": 86,
+       "to": 93
       },
       {
        "w": "out",
-       "from": 89,
-       "to": 94
+       "from": 93,
+       "to": 98
       },
       {
        "w": "the",
-       "from": 94,
-       "to": 99
+       "from": 98,
+       "to": 104
       },
       {
        "w": "monthly",
-       "from": 99,
-       "to": 109
+       "from": 104,
+       "to": 115
       },
       {
        "w": "payment",
-       "from": 109,
-       "to": 119
+       "from": 115,
+       "to": 126
       },
       {
-       "w": "against",
-       "from": 119,
+       "w": "at",
+       "from": 126,
        "to": 130
       },
       {
-       "w": "my",
+       "w": "9%",
        "from": 130,
-       "to": 133
+       "to": 134
+      },
+      {
+       "w": "against",
+       "from": 134,
+       "to": 145
+      },
+      {
+       "w": "my",
+       "from": 145,
+       "to": 149
       },
       {
        "w": "salary,",
-       "from": 133,
-       "to": 144
+       "from": 149,
+       "to": 161
       },
       {
        "w": "and",
-       "from": 144,
-       "to": 156
-      },
-      {
-       "w": "tell",
-       "from": 156,
-       "to": 162
-      },
-      {
-       "w": "me",
-       "from": 162,
+       "from": 161,
        "to": 166
       },
       {
-       "w": "plainly.\"",
+       "w": "tell",
        "from": 166,
-       "to": 179
+       "to": 173
       },
       {
-       "w": "10",
-       "from": 179,
-       "to": 192
+       "w": "me",
+       "from": 173,
+       "to": 185
       },
       {
-       "w": "of",
-       "from": 192,
-       "to": 195
-      },
-      {
-       "w": "10",
-       "from": 195,
+       "w": "plainly.\"",
+       "from": 185,
        "to": 199
       },
       {
-       "w": "went",
+       "w": "10",
        "from": 199,
-       "to": 206
+       "to": 203
       },
       {
-       "w": "straight",
-       "from": 206,
-       "to": 223
+       "w": "of",
+       "from": 203,
+       "to": 207
       },
       {
-       "w": "to",
-       "from": 223,
+       "w": "10",
+       "from": 207,
+       "to": 211
+      },
+      {
+       "w": "went",
+       "from": 211,
        "to": 227
       },
       {
-       "w": "the",
+       "w": "straight",
        "from": 227,
-       "to": 232
+       "to": 239
+      },
+      {
+       "w": "to",
+       "from": 239,
+       "to": 251
+      },
+      {
+       "w": "the",
+       "from": 251,
+       "to": 256
       },
       {
        "w": "numbers.",
-       "from": 232,
-       "to": 244
+       "from": 256,
+       "to": 269
       }
      ],
      "cues": {
       "1": 39,
-      "2": 177
+      "2": 201
      }
     }
    ]
@@ -1340,7 +1336,8 @@
       ],
       [
        "That sounds like a significant investment...",
-       ""
+       "",
+       false
       ],
       [
        "That sounds like an exciting decision!",
@@ -1356,11 +1353,11 @@
      "whyLine": "chat AIs are trained to be liked",
      "oaHead": "OPENAI, APRIL 2025: A CHATGPT UPDATE ROLLED BACK",
      "oaQuote": "\"overly flattering or agreeable\"",
-     "oaSub": "OpenAI's own post · TechCrunch, VentureBeat",
+     "oaSub": "OpenAI's own post · it says it fixed that update · we did not test today's big apps",
      "ruleHead": "TYPE THIS INSTEAD",
      "bad": "\"Great decision, right?\"",
-     "goodLab": "after your question:",
-     "good": "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly.",
+     "goodLab": "add this after your question:",
+     "good": "Don't just agree with me. Work out the monthly payment at 9% against my salary, and tell me plainly.",
      "goodStat": "10 of 10 went straight to the numbers"
     },
     "yt": {
@@ -1372,7 +1369,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1636,
+   "from": 1575,
    "frames": 66,
    "lines": [
     {

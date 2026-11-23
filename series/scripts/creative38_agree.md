@@ -68,3 +68,17 @@ once plainly. Compare the first lines."
 | 4 | why | Chat AIs are trained to be liked. [1] In 2025, OpenAI rolled back a ChatGPT update for being "overly flattering or agreeable." | చాట్‌బాట్లు, మనకి నచ్చేలా ఉండటానికి ట్రైన్ అవుతాయి. [1] 2025 లో, చాట్‌జీపీటీ కంపెనీ ఒక అప్‌డేట్ ని వెనక్కి తీసుకుంది: అతిగా పొగుడుతోంది, అన్నిటికీ ఒప్పుకుంటోంది అని. |
 | 5 | rule | So type this: \| [1] "Don't just agree with me. Work out the monthly payment against my salary, and tell me plainly." [2] Ten of ten went straight to the numbers. | అందుకే ఇలా టైప్ చేసి చూడండి: \| [1] "ఊరికే నా మాటకి తలూపకు. నా జీతంతో నెల కిస్తీ లెక్క వేసి, సూటిగా చెప్పు." [2] పదికి పది, నేరుగా లెక్కలోకి వెళ్ళాయి. |
 | 6 | loop | Great decision, [1] right? | గ్రేట్ డెసిషన్, [1] కదా? |
+
+## Render review (human-viewer, EN + TE) and what changed
+- Both: the test page sat empty for ~7 s → all ten reply cards show from the cut, dimmed, and light up on "nine of
+  ten"; the card must be the tested wording with a matching caption → "at 9%" back in the card, the voice and both
+  captions; text ~20% larger.
+- Priya (facts): "That sounds like an exciting decision!" itself was 4/10 → "the AI cheers first, nine times in ten"
+  (the quote stays on screen as an example); ₹15,000 said vs ₹15,090 shown → "about fifteen thousand"; the non-cheering
+  card was lit like the rest → grey, "no cheer"; "does my app do it today?" → the OpenAI card says it fixed that update
+  and we did not test today's big apps; the frame-1 chip moved after "ask plainly".
+- Sound: the beat moved to just before "But the first line is the one you remember"; a pause before the money left;
+  the bed louder in the gaps (EN and TE); a bigger lift into the rule; a louder hit at 0.
+- Telugu: "ఉత్సాహంగా" split as "ఉచ్చ…" → "హుషారుగా"; the double కానీ → "అయినా గుర్తుండేది"; "తల ఊపకు"; Parler
+  stumbled on "మెచ్చుకుంటుంది" in line 1 in every try → "ముందు పొగుడుతుంది".
+- Final: EN 54.8 s, TE 54.6 s.
