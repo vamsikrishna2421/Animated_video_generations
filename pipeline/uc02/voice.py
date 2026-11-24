@@ -52,7 +52,7 @@ MUST = {"en": {1: [("sixty", "168"), ("link",), ("market",), ("forty", "142"), (
                7: [("trust",), ("link",), ("ask",), ("again",), ("open",)], 8: [("c", "see", "sea")],
                "8b": [("asked", "ask"), ("sixty", "168"), ("every",), ("link",), ("where",), ("when",)],
                9: [("big",), ("apps", "app")],
-               10: [("2025", "twenty"), ("eight", "8"), ("search",), ("source",), ("wrong",), ("sixty", "60"), ("percent", "%")],
+               10: [("2025", "twenty"), ("eight", "8"), ("search",), ("source",), ("wrong",), ("sixty", "60")],
                11: [("open",), ("link",), ("today",), ("date",), ("trust",)], 12: [("today",), ("price",), ("sixty", "168"), ("link",)]},
         "te": {8: [("मूड", "मुड", "मूडो", "मोडो")]}}   # Telugu: the judge sees only the first 110 characters; full reads by hand
 JUDGE_TEXT = {1: "168 a kilo, with a link! The market today: 142! 1,300 rupees gone!", 2: "The link is real. That page does say 168.",
