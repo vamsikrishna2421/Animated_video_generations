@@ -44,8 +44,21 @@ VOICE_TE = {
 }
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = {"ai", "caller"}   # both through the phone sound
-MUST = {"en": {}, "te": {}}   # filled with the script
-JUDGE_TEXT = {}
+MUST = {"en": {1: [("sixty", "168"), ("link",), ("market",), ("forty", "142"), ("thirteen", "1300", "1,300"), ("gone",)],
+               2: [("link",), ("real",), ("page",), ("sixty", "168")], 3: [("wrong",)],
+               4: [("searched",), ("top",), ("today",), ("read",), ("date",), ("answered",), ("link",)],
+               "4b": [("app",), ("never",), ("told",), ("date",)], 5: [("phone",), ("know",), ("date",)],
+               6: [("phone",), ("app",), ("without",), ("sixty", "168"), ("ten", "10"), ("given",), ("forty", "142")],
+               7: [("trust",), ("link",), ("ask",), ("again",), ("open",)], 8: [("c", "see", "sea")],
+               "8b": [("asked", "ask"), ("sixty", "168"), ("every",), ("link",), ("where",), ("when",)],
+               9: [("big",), ("apps", "app")],
+               10: [("2025", "twenty"), ("eight", "8"), ("search",), ("source",), ("wrong",), ("sixty", "60"), ("percent", "%")],
+               11: [("open",), ("link",), ("today",), ("date",), ("trust",)], 12: [("today",), ("price",), ("sixty", "168"), ("link",)]},
+        "te": {8: [("मूड", "मुड", "मूडो", "मोडो")]}}   # Telugu: the judge sees only the first 110 characters; full reads by hand
+JUDGE_TEXT = {1: "168 a kilo, with a link! The market today: 142! 1,300 rupees gone!", 2: "The link is real. That page does say 168.",
+              6: "The phone does. I only know what the app tells me. Without the date: 168, 10 times in 10. Given the date: today's page, 142, 10 in 10.",
+              "8b": "Asked again, I said 168, every time. A link shows where I read it, not when.",
+              10: "In a 2025 test, 8 AI search tools got the source wrong in over 60% of answers.", 12: "Today's price: 168, with a link!"}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

@@ -1,28 +1,39 @@
 UPLOAD: 065
-VIDEO: 065_uc02_how_chatgpt_searches_the_web.mp4
+VIDEO: 065_uc02_168_with_a_link.mp4  (teaching skit, AI voices in the Creative 21 standard; replaces the older lesson-format file in slot 065; send copy: 065_uc02_168_with_a_link_ig.mp4). It loops: "Today's price: ₹168, with a link!" and it is frame 1 again: ₹168 vs ₹142.
 
 === CAPTION ===
-ChatGPT was trained months ago. So how does it know what happened this morning?
+The AI said ₹168 a kilo, with a link. The market said ₹142. 50 kg: ₹1,300 gone. The link was real.
 
-Real World AI, Use Case 02: how AI searches the web
-- The knowledge cutoff problem
-- The flow: question, search tool, top results, read pages, answer with sources
-- It's two ideas combined: tool use (EP 09) + RAG (EP 07)
-- Smart habits: check sources, look at dates, ask for more than one source
+Use case 2 of AI From Scratch: how an AI answers with web search
+- Three steps: it searches, reads the top pages, and answers with a link to where it read it.
+- A link shows WHERE it read, not WHEN. An old page titled "...price in Hyderabad today", with no date on it, still says "today".
+- Our test (a made-up mini web of 6 pages, a small free AI on our computer, 10 fresh chats each): not given today's date, it answered ₹168 from the old page 10 times out of 10. Given the date, it found today's page, ₹142, 10 out of 10.
+- Asking again didn't help: 10 fresh chats, the same ₹168 every time.
+- The big apps slip too, in a different way: in a March 2025 test by the Columbia Journalism Review's Tow Center, 8 AI search tools got the source of news quotes wrong in more than 60% of 1,600 tries (best 37% wrong, worst 94%).
 
-Quiz at the end. Got it right? Comment below.
+Try it: ask your AI app for today's price of something you buy. Open its link: is there a date next to the number?
 
-Next: How AI meeting notes work.
-Follow @ai_maastaaru for more real world AI breakdowns.
+The rule:
+1. Open the link
+2. "Today" is not a date: find a real date next to the number
+3. No date, no trust
+Building an AI app? Put today's date in its instructions.
+
+Next: UC03, how AI meeting notes work.
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+(none: from Bujji's reads, the try-it lives in the caption)
 
 === HASHTAGS ===
-#AIMaastaaru #ChatGPT #LearnAI #AISearch #AIForBeginners
+#AIFromScratch #AISearch #FactCheck #LearnAI #SmallBusiness
 
 === PINNED_COMMENT ===
-Quiz answer: Tool use and RAG. It calls a search tool, then adds what it finds to the prompt. Do you check the sources AI gives you?
+How we tested (Nov 24, 2026): a made-up mini web of 6 pages (every page, link and price made up by us), a keyword search tool (BM25) that returns the top 3, and Qwen2.5-7B-Instruct (4-bit, llama.cpp) on our computer; one fresh chat per run, temperature 0.7, seeds 1-10, every reply read by hand. The question: "What is today's wholesale price of toor dal in Hyderabad?" Top result: an old page titled "Toor dal wholesale price in Hyderabad today", ₹168. Today's page (dated 24 Nov 2026): ₹142. With the old page dated Nov 2025 and the date given: 10/10 ₹142. With the old page's date removed: given today's date 10/10 ₹142 (9 with the link); not given the date 10/10 ₹168, citing the old page, which really does say ₹168. No search at all: 10/10 "I don't have real-time access". Code and results: pipeline/uc02/search_demo.py, search_demo2.py, series/scripts/uc02_demo.
+Source: Columbia Journalism Review / Tow Center, "AI Search Has A Citation Problem" (March 2025): 8 AI search tools, 1,600 queries to identify a news article's source; incorrect in more than 60% (also reported by Nieman Lab and Fortune). Ravi anna and the shop are made up.
 
 === COVER ===
-'AI Web Search' title card
+Frame 1: two blocks, "SHOP AI, WITH A LINK ₹168/kg" (red) and "BEGUM BAZAR TODAY ₹142/kg" (green); a red chip "50 kg · ₹1,300 extra"; Ravi slamming the counter; the shop AI's phone.
 
 === ALT_TEXT ===
-Animated breakdown of how AI chatbots search the web and answer with sources.
+Crayon-animated skit in Ravi anna's kirana shop. Two blocks: the shop AI, with a link, ₹168 a kilo; Begum Bazar today, ₹142; a red chip: 50 kg, ₹1,300 extra. Ravi: one sixty-eight a kilo, with a link! The market today: one forty-two! Thirteen hundred rupees gone! The shop AI: the link is real; that page does say one sixty-eight. A web page card: "Toor dal wholesale price in Hyderabad today", ₹168 per kg at Begum Bazar, no date on the page; a green tick: the page really says ₹168. Ravi: then how is it wrong? A card, how it answered, step by step: 1 search, top result "...price in Hyderabad today"; 2 read, the page with no date; 3 answer with the link; a red chip: today's date? the app never told it. Ravi: doesn't every phone know the date? The AI: the phone does; I only know what the app tells me. A test card, 10 fresh chats each: not given today's date, ₹168, 10 of 10, cited the old page; given today's date, ₹142, 10 of 10, found today's page; a note: building an AI app? put today's date in its instructions. Ravi: so what do I do? A, trust the link; B, ask again; C, open the link. The AI: C! Asked again, I said one sixty-eight every time; a link shows where I read it, not when. Ravi: and the big apps? A card: Columbia Journalism Review, March 2025, 8 AI search tools, 1,600 tests naming a news article's source: 60%+ got the source wrong; best tool 37% wrong, worst 94%. Ravi: open the link; "today" is not a date; no date, no trust! Three stamps. The AI: today's price: one sixty-eight, with a link! Frame 1 comes back.

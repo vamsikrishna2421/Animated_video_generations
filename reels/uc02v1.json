@@ -1,0 +1,515 @@
+{
+ "id": "uc02v1",
+ "title": "₹168, With a Link (UC02: how an AI answers with web search)",
+ "label": "UC02",
+ "banner": "How AI web search works",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "names": {},
+ "musicVol": [
+  0.2,
+  0.42
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.2,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   250,
+   -12,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1500,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_search02",
+   "tail": 0.0,
+   "boost": 1.4,
+   "drop_at": [
+    [
+     3,
+     "4",
+     0.3
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "real",
+      "n": 2
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "how",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "steps",
+      "prop": "steps",
+      "n": 4
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "leftLab": "SHOP AI, WITH A LINK",
+     "leftVal": "₹168/kg",
+     "rightLab": "BEGUM BAZAR TODAY",
+     "rightVal": "₹142/kg",
+     "stake": "50 kg · ₹1,300 extra",
+     "story": "Ravi and the shop are made up · our test is real",
+     "oldUrl": "hyderabad-prices.example/toor-dal-wholesale-price-hyderabad-today",
+     "oldTitle": "Toor dal wholesale price in Hyderabad today",
+     "oldLine": "₹168 per kg at Begum Bazar",
+     "noDate": "no date on the page",
+     "reallySays": "✓ the page really says ₹168",
+     "stepsHead": "HOW IT ANSWERED, STEP BY STEP",
+     "stepsSub": "our test · a made-up mini web of 6 pages",
+     "step1": "SEARCH",
+     "topResult": "top result: \"...price in Hyderabad today\"",
+     "step2": "READ",
+     "step3": "ANSWER + LINK",
+     "noToday": "today's date? the app never told it",
+     "testHead": "OUR TEST · 10 FRESH CHATS EACH",
+     "testSub": "the shop AI = a small free AI on our computer",
+     "aLab": "NOT GIVEN TODAY'S DATE",
+     "aBig": "₹168",
+     "aSub": "10 of 10 · cited the old page",
+     "bLab": "GIVEN TODAY'S DATE",
+     "bBig": "₹142",
+     "bSub": "10 of 10 · found today's page",
+     "builder": "building an AI app? put today's date in its instructions",
+     "quizHead": "SO WHAT DO YOU DO?",
+     "quizSub": "you decide",
+     "opts": [
+      [
+       "A",
+       "trust the link"
+      ],
+      [
+       "B",
+       "ask again"
+      ],
+      [
+       "C",
+       "open the link"
+      ]
+     ],
+     "askAgain": "asked again: ₹168, 10 of 10",
+     "whereNotWhen": "a link shows WHERE it read, not WHEN",
+     "studyHead": "\"AND THE BIG APPS?\"",
+     "studySub": "Columbia Journalism Review (Tow Center), March 2025",
+     "studyRows": [
+      "8 AI search tools · 1,600 tests",
+      "name a news article's source"
+     ],
+     "studyBig": "60%+",
+     "studyLab": "got the source wrong",
+     "studySpread": "best tool 37% wrong · worst 94%",
+     "rule1": "OPEN THE LINK",
+     "rule2": "\"TODAY\" IS NOT A DATE",
+     "rule3": "NO DATE, NO TRUST"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "₹168, with a link",
+     "title": "₹168, with a link",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "One sixty-eight a kilo, with a link! [1] The market today: one forty-two! Thirteen hundred rupees gone!",
+     "show": "₹168 a kilo, with a link! The market today: ₹142! ₹1,300 gone!",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "The link is real. [1] That page does say one sixty-eight.",
+     "show": "The link is real. That page does say ₹168.",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "Then how is it wrong?!",
+     "show": "Then how is it wrong?!",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "I searched: [1] the top page said \"today\". [2] I read it: no date anywhere. [3] I answered with the link. <pause 0.8> [4] But this app never told me today's date.",
+     "show": "I searched: the top page said \"today\". I read it: no date anywhere. I answered with the link. But this app never told me today's date.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": -1.0,
+     "tts": "I searched: the top page said \"today\". I read it: no date anywhere. I answered with the link.",
+     "file2": "04b_ai.wav",
+     "tts2": "But this app never told me today's date.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_search02",
+   "tail": 0.0,
+   "boost": 1.5,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     1,
+     "1",
+     0.2
+    ]
+   ],
+   "drop_pre": [
+    [
+     3,
+     0.9,
+     1.0
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "phone",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "test",
+      "prop": "test",
+      "n": 6
+     },
+     {
+      "who": "ravi",
+      "shot": "quiz",
+      "prop": "quiz",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "quiz",
+      "prop": "answer",
+      "n": 8
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "leftLab": "SHOP AI, WITH A LINK",
+     "leftVal": "₹168/kg",
+     "rightLab": "BEGUM BAZAR TODAY",
+     "rightVal": "₹142/kg",
+     "stake": "50 kg · ₹1,300 extra",
+     "story": "Ravi and the shop are made up · our test is real",
+     "oldUrl": "hyderabad-prices.example/toor-dal-wholesale-price-hyderabad-today",
+     "oldTitle": "Toor dal wholesale price in Hyderabad today",
+     "oldLine": "₹168 per kg at Begum Bazar",
+     "noDate": "no date on the page",
+     "reallySays": "✓ the page really says ₹168",
+     "stepsHead": "HOW IT ANSWERED, STEP BY STEP",
+     "stepsSub": "our test · a made-up mini web of 6 pages",
+     "step1": "SEARCH",
+     "topResult": "top result: \"...price in Hyderabad today\"",
+     "step2": "READ",
+     "step3": "ANSWER + LINK",
+     "noToday": "today's date? the app never told it",
+     "testHead": "OUR TEST · 10 FRESH CHATS EACH",
+     "testSub": "the shop AI = a small free AI on our computer",
+     "aLab": "NOT GIVEN TODAY'S DATE",
+     "aBig": "₹168",
+     "aSub": "10 of 10 · cited the old page",
+     "bLab": "GIVEN TODAY'S DATE",
+     "bBig": "₹142",
+     "bSub": "10 of 10 · found today's page",
+     "builder": "building an AI app? put today's date in its instructions",
+     "quizHead": "SO WHAT DO YOU DO?",
+     "quizSub": "you decide",
+     "opts": [
+      [
+       "A",
+       "trust the link"
+      ],
+      [
+       "B",
+       "ask again"
+      ],
+      [
+       "C",
+       "open the link"
+      ]
+     ],
+     "askAgain": "asked again: ₹168, 10 of 10",
+     "whereNotWhen": "a link shows WHERE it read, not WHEN",
+     "studyHead": "\"AND THE BIG APPS?\"",
+     "studySub": "Columbia Journalism Review (Tow Center), March 2025",
+     "studyRows": [
+      "8 AI search tools · 1,600 tests",
+      "name a news article's source"
+     ],
+     "studyBig": "60%+",
+     "studyLab": "got the source wrong",
+     "studySpread": "best tool 37% wrong · worst 94%",
+     "rule1": "OPEN THE LINK",
+     "rule2": "\"TODAY\" IS NOT A DATE",
+     "rule3": "NO DATE, NO TRUST"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "Why, and what to do",
+     "title": "Why, and what to do",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "Doesn't every phone know the date?!",
+     "show": "Doesn't every phone know the date?!",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "The phone does. I only know what the app tells me. [1] Without the date: one sixty-eight, ten times in ten. [2] Given the date: today's page, one forty-two, ten in ten.",
+     "show": "The phone does. I only know what the app tells me. Without the date: ₹168, 10 times in 10. Given the date: today's page, ₹142, 10 in 10.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "So what do I do? [1] A, trust the link. [2] B, ask again. [3] C, open the link.",
+     "show": "So what do I do? A, trust the link. B, ask again. C, open the link.",
+     "maxgap": 0.25,
+     "gap": 2.0,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "C! <pause 0.8> [1] Asked again, I said one sixty-eight, every time. [2] A link shows where I read it, not when.",
+     "show": "C! <pause 0.8> Asked again, I said ₹168, every time. A link shows where I read it, not when.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.06,
+     "gain_db": -1.0,
+     "tts": "C!",
+     "file2": "08b_ai.wav",
+     "tts2": "Asked again, I said one sixty-eight, every time. A link shows where I read it, not when.",
+     "pause": 0.8
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_search02",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 1.9,
+   "lift": 0.8,
+   "rise": 1.7,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "big",
+      "n": 9
+     },
+     {
+      "who": "ai",
+      "shot": "study",
+      "prop": "study",
+      "n": 10
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "rule",
+      "n": 11
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "loop",
+      "n": 12
+     }
+    ],
+    "captionTop": 1500,
+    "t": {
+     "leftLab": "SHOP AI, WITH A LINK",
+     "leftVal": "₹168/kg",
+     "rightLab": "BEGUM BAZAR TODAY",
+     "rightVal": "₹142/kg",
+     "stake": "50 kg · ₹1,300 extra",
+     "story": "Ravi and the shop are made up · our test is real",
+     "oldUrl": "hyderabad-prices.example/toor-dal-wholesale-price-hyderabad-today",
+     "oldTitle": "Toor dal wholesale price in Hyderabad today",
+     "oldLine": "₹168 per kg at Begum Bazar",
+     "noDate": "no date on the page",
+     "reallySays": "✓ the page really says ₹168",
+     "stepsHead": "HOW IT ANSWERED, STEP BY STEP",
+     "stepsSub": "our test · a made-up mini web of 6 pages",
+     "step1": "SEARCH",
+     "topResult": "top result: \"...price in Hyderabad today\"",
+     "step2": "READ",
+     "step3": "ANSWER + LINK",
+     "noToday": "today's date? the app never told it",
+     "testHead": "OUR TEST · 10 FRESH CHATS EACH",
+     "testSub": "the shop AI = a small free AI on our computer",
+     "aLab": "NOT GIVEN TODAY'S DATE",
+     "aBig": "₹168",
+     "aSub": "10 of 10 · cited the old page",
+     "bLab": "GIVEN TODAY'S DATE",
+     "bBig": "₹142",
+     "bSub": "10 of 10 · found today's page",
+     "builder": "building an AI app? put today's date in its instructions",
+     "quizHead": "SO WHAT DO YOU DO?",
+     "quizSub": "you decide",
+     "opts": [
+      [
+       "A",
+       "trust the link"
+      ],
+      [
+       "B",
+       "ask again"
+      ],
+      [
+       "C",
+       "open the link"
+      ]
+     ],
+     "askAgain": "asked again: ₹168, 10 of 10",
+     "whereNotWhen": "a link shows WHERE it read, not WHEN",
+     "studyHead": "\"AND THE BIG APPS?\"",
+     "studySub": "Columbia Journalism Review (Tow Center), March 2025",
+     "studyRows": [
+      "8 AI search tools · 1,600 tests",
+      "name a news article's source"
+     ],
+     "studyBig": "60%+",
+     "studyLab": "got the source wrong",
+     "studySpread": "best tool 37% wrong · worst 94%",
+     "rule1": "OPEN THE LINK",
+     "rule2": "\"TODAY\" IS NOT A DATE",
+     "rule3": "NO DATE, NO TRUST"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "No date, no trust",
+     "title": "No date, no trust",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "09_ravi.wav",
+     "text": "And the big apps?",
+     "show": "And the big apps?",
+     "maxgap": 0.25,
+     "gap": 0.2,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "10_ai.wav",
+     "text": "In a 2025 test, [1] eight AI search tools got the source wrong in over sixty percent of answers.",
+     "show": "In a 2025 test, 8 AI search tools got the source wrong in over 60% of answers.",
+     "maxgap": 0.25,
+     "gap": 0.4,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    },
+    {
+     "who": "ravi",
+     "file": "11_ravi.wav",
+     "text": "Open the link. [1] \"Today\" is not a date. [2] No date, no trust!",
+     "show": "Open the link. \"Today\" is not a date. No date, no trust!",
+     "maxgap": 0.25,
+     "gap": 0.4,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "12_ai.wav",
+     "text": "Today's price: one sixty-eight, [1] with a link!",
+     "show": "Today's price: ₹168, with a link!",
+     "maxgap": 0.25,
+     "gap": 0.0,
+     "tempo": 1.06,
+     "gain_db": -1.0
+    }
+   ]
+  }
+ ]
+}
