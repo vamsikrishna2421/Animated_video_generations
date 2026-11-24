@@ -55,7 +55,7 @@ SHOW_TE = {
     12: "Today's price: ₹168, there's a link too!",
 }
 TTS_EN = {}
-TEMPO_EN = {"ravi": 1.08, "ai": 1.06}
+TEMPO_EN = {"ravi": 1.1, "ai": 1.09}   # render review added ~6 s; a touch faster
 TEMPO_TE = {"ravi": 1.07, "ai": 1.08}
 T = {
     "leftLab": "SHOP AI, WITH A LINK", "leftVal": "₹168/kg", "rightLab": "BEGUM BAZAR TODAY", "rightVal": "₹142/kg",
