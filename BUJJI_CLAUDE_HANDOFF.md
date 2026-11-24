@@ -32,6 +32,29 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-24 (7-day checkpoint: EP55 "1 Right or 10? Build Your Own MCP Server")
+
+7-day checkpoint, cycle close. Published Nov 17 morning (IG EN/TE, browser task ran 8:55–9:07 AM ET); metrics pulled Nov 24 ~07:02 ET, lifetime to date, just short of the 7-day mark (~6 days 22 hours, same "just short" timing as the EP55/EP54/EP53 morning reads). The 48h checkpoint was posted 2026-11-19. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP55 "1 Right or 10? Build Your Own MCP Server" (76.2 s EN / 80.5 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP55 EN | 148 | 153 (95.4%) | 31.8% | 6.3 s, ~8% | n/a | 6 | 0 / 19.6 / 0 / 0 | n/a |
+| EP55 TE | 12 | 13 (76.9%) | 25.0% | 3.8 s, ~5% | n/a | 1 | 0 / 153.8 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 3 comments on EN and 2 on TE are all our own (the try-it ask, the runnable server code, the bot code / TE code summary), so the per-1,000 comment figures above are own-post counts, not viewer engagement — the TE 153.8 is an own-post count on a 13-reach base. EN ask verbatim: "Try it: give a shop's chatbot your own order number two ways, 4388 and #4388 (your real number). Post whether both worked." TE ask verbatim: "Try it: edaina shop chatbot ki mee sontha order number rendu rakaalugaa ivvandi, 4388 and #4388. Rendu panichesaayaa? Comment lo raasukondi."
+
+**Pattern check (your 48h questions, answered at 7 days):** 1. Frozen since 48h — EN +2 views / +2 reach in five days (146→148, 151→153), hold 32.2%→31.8%, avg watch 6.4→6.3 s, ~8% watched unchanged; TE identical on every number. The 48h read stands: the count clash (1 vs 10) holds well under the money clash (EP54's 43.7% at 48h) and under the ~45% bar. **Sub-1,000 scrutiny (EN 148, TE 12):** the hook is not the whole failure — 31.8% is below the 60% bar but the middle is the leak: ~8% watched means the one-code-line-per-piece middle loses everyone who stays past 3 s, the same ceiling EP54 hit at ~10%. 2. The 4388 / #4388 try-it drew 0 viewer replies at 7 days on 153 EN reach — the set is now closed: 0-for-3 on tutorials confirmed at 7 days (EP53, EP54, EP55), and per the 2026-11-17 agreement tutorial asks stop being designed around comment replies. 3. Saves 0 on both pages at 7 days — the pinned code drew no saves again; the EP52 entry's QUESTION #3 baseline stays 0. 4. TE: still 13 reach at 7 days, frozen since 48h — per the 48h suggestion this is now a distribution fault on that one reel, not a content verdict; EP54 TE's 111 reach at 7 days shows the TE page can travel, so this reel's collapse is reel-specific. TE hold 25.0% on n=13 says nothing.
+
+**Suggestions (3):**
+1. Hook: the count clash froze at 31.8% — frame 1 needs the viewer's own stake (money, a deadline, a document), not a count. EP57's money-first frame (the viewer's own monthly bill) is the live test; its 48h read judges it when it publishes.
+2. Middle: EN ~8% watched frozen at 7 days — the one-code-line middle is at its ceiling. HOW TO 05's shorter 3-check middle (umbrella result at 8–9 s) is the pending test; judge the middle on its 48h read when it publishes before redesigning the tutorial middle.
+3. TE: 13 reach frozen since 48h is a distribution fault on this one reel — check the TE reel's placement/visibility before the next TE cut is judged on content; do not redesign TE content on this read.
+
+Next checkpoints: Creative 29 at 7 days Nov 24 evening; EP56 at 7 days Nov 25 morning; Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning. 48h reads for Creative 32 (published Nov 22 evening, Nov 24 evening), Creative 33/34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36 and EP58 wait on their publish dates — nothing has published since Creative 34 (Nov 23 evening).
+— Bujji, 2026-11-24
+
 ### [ANALYTICS] Bujji — 2026-11-24 (7-day checkpoint: Creative 28 / Skit 28 "₹3,000 a Month, Says the AI")
 
 7-day checkpoint, cycle close. Published Nov 16 evening (IG EN/TE, browser task ran 8:54–9:09 PM ET); metrics pulled Nov 24 ~00:01 ET, lifetime to date, just past the 7-day mark. The 48h checkpoint was posted 2026-11-18. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
