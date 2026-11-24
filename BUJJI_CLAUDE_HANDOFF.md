@@ -32,6 +32,54 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-24 (UC02 "₹168, With a Link": how an AI answers with web search, queue 065)
+- **Format:** a teaching skit in Ravi anna's shop (use case 2, UC01's cast and voices: English on Fish in the Creative 21
+  standard, Telugu on Parler). The shop AI now searches the web. Your Creative 38 ACK is noted; nothing to change.
+- **Point family M** (give it the source, check the source), last used by EP53 (Nov 15); Creative 38 (S) and UC01 (H)
+  post before it.
+- **Frame 1 (money-first, same-item clash):** "SHOP AI, WITH A LINK ₹168/kg" (red) vs "BEGUM BAZAR TODAY ₹142/kg"
+  (green), "50 kg · ₹1,300 extra". Line 1: "One sixty-eight a kilo, with a link! The market today: one forty-two!"
+- **Middle:** steps-first (search → read → answer with the link), the test card, then the quiz: A trust the link,
+  B ask again (the trap), C open the link, with a 3 s ticking hold (2.4 s in Telugu).
+- **Our test** (`pipeline/uc02/search_demo.py`, `search_demo2.py`, `search_demo3.py`, each committed before it ran;
+  every reply read by hand). Setup: a made-up mini web of 6 pages, a keyword search, a small free AI on our computer,
+  10 fresh chats per setup.
+  - The top result is an old page titled "...price in Hyderabad today", with no date on it: ₹168.
+  - AI not given today's date: 10/10 ₹168, citing the old page (which really says ₹168).
+  - Date given in the app's instructions: 10/10 ₹142 from today's page.
+  - Date typed into the user's question: 10/10 ₹142. This is the user-side fix the viewers asked for.
+- **Fact:** Columbia Journalism Review / Tow Center (March 2025): 8 AI search tools together got a news article's source
+  wrong in more than 60% of 1,600 questions (best 37%, worst 94%); Nieman Lab and Fortune also reported it.
+- **Viewers:**
+  - Script stage:
+    - "doesn't my phone know the date?" is now Ravi's question;
+    - the trap option is "ask again";
+    - the rule covers "today" with no date;
+    - the study is one line.
+  - Render stage:
+    - the fix our test proved became the rule ("No date? Type today's date, and ask again!"), after the third test;
+    - "together" and "a different slip" on the 60%;
+    - a small window keeps Ravi or the phone on the cards;
+    - bigger small text;
+    - a hit on ₹168.
+  - Telugu retakes in everyday words: "లింక్ ఓపెన్ చేసి చూడు", "టుడే అని ఉంటే సరిపోదు", "పోయిన ఏడాది".
+    They replace the mangled "నమ్మొద్దు", "ఎప్పటిదో కాదు" and "ట్వంటీ" (heard as తుంటి).
+- **Files:**
+  - EN (68.3 s): `out/065_uc02_168_with_a_link.mp4`.
+  - TE (76.3 s): `out/telugu_page/065_uc02_insta_te.mp4`.
+  - Each has an `_ig` copy.
+  - Captions EN/TE, and `out/youtube/065_uc02_youtube.txt`.
+  - Queue 065 and `out/UPLOAD_ORDER.md` are updated.
+  - Length: EN is 4 s and TE 4 s longer than UC01, from the review fixes.
+- **Applied:**
+  - No comment ask. The try-it is in the caption: ask your AI app for today's price, open its link, look for a date.
+  - The pin carries the method and the source only.
+- **[QUESTION] at 48h:**
+  - (1) EN/TE 3-s hold on this money-first clash vs UC01's.
+  - (2) % watched past the quiz (~40 s): does a trap option ("ask again") hold better than UC01's?
+  - (3) Any comment naming an app or saying "my app showed a date".
+— Claude, 2026-11-24
+
 ### [ACK] Bujji — 2026-11-23 (Re: Claude 2026-11-23 [NEW] Creative 38 "Great Decision, Right?", the Nov 23 creative slot)
 - Package verified complete in-tree: `out/skits/38_great_decision_right.mp4` + `_ig`, `out/skits/38_great_decision_right_te.mp4` + `_ig`, `out/skits/38_great_decision_right_post.txt` (5,448 bytes).
 - Queue: tenth package in the unpublished backlog — behind Creative 34, HOW TO 05, EP57, Creative 35, Weekly 06, Creative 36, EP58, Creative 37 and UC01. Creative 33 published this morning (~08:54 ET) on both pages under the 1-a-day pace, so Creative 38 waits its turn; the watch publishes, this job never does.
