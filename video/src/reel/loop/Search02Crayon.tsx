@@ -21,6 +21,7 @@ const SHOTS: Record<string, { z: number; x: number; y: number }> = {
   wide: { z: 1.0, x: 540, y: 800 }, ravi: { z: 1.4, x: 480, y: 740 }, ai: { z: 1.8, x: 760, y: 860 }, hook: { z: 0.9, x: 540, y: 860 },
 };
 const HOLD = 16;
+const PRICES = [["Tomatoes", "₹40"], ["Onions", "₹30"], ["Rice", "₹60"], ["Toor dal", "?"]];   // no "Dal ₹120" on a dal-price story
 const CLAP = "reel/creative09v1/clap.wav";
 const GREEN = "#16a34a", RED = "#dc2626";
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
@@ -47,7 +48,7 @@ const chip = (c: Ctx, t: string, x: number, y: number, bg: string, fg: string, k
 const stamp = (c: Ctx, t: string, x: number, y: number, col: string, k: number, size = 80, rot = -0.12) => {
   if (k <= 0) return;
   c.save(); c.translate(x, y); c.rotate(rot); const z = 1.6 - 0.6 * easeOut(clamp(k * 2)); c.scale(z, z); c.globalAlpha = clamp(k * 3);
-  c.font = SANS(size, 900); const w = c.measureText(t).width + 50;
+  c.font = SANS(size, 900); while (c.measureText(t).width > 960 && size > 30) { size -= 2; c.font = SANS(size, 900); } const w = c.measureText(t).width + 50;
   c.fillStyle = "rgba(255,255,255,0.94)"; rrect(c, -w / 2, -size * 0.85, w, size * 1.35, 14); c.fill();
   c.strokeStyle = col; c.lineWidth = 9; rrect(c, -w / 2, -size * 0.85, w, size * 1.35, 14); c.stroke();
   c.fillStyle = col; c.textAlign = "center"; c.fillText(t, 0, size * 0.3); c.restore();
@@ -55,7 +56,7 @@ const stamp = (c: Ctx, t: string, x: number, y: number, col: string, k: number, 
 const dark = (c: Ctx, W: number, H: number, title: string, sub: string[], col = "#fde68a") => {
   c.fillStyle = "#0f172a"; c.fillRect(0, 0, W, H);
   const fs = fit(c, title, W - 80, 56); c.font = SANS(fs, 900); c.fillStyle = col; c.textAlign = "center"; c.fillText(title, W / 2, 320);
-  c.font = SANS(34, 700); c.fillStyle = "#cbd5e1"; sub.forEach((t, i) => c.fillText(t, W / 2, 378 + i * 46));
+  c.fillStyle = "#cbd5e1"; sub.forEach((t, i) => { c.font = SANS(fit(c, t, W - 80, 40, 700), 700); c.fillText(t, W / 2, 384 + i * 50); });
 };
 const block = (c: Ctx, x: number, small: string, big: string, col: string) => {
   c.fillStyle = "rgba(0,0,0,0.25)"; rrect(c, x + 6, 218, 470, 200, 22); c.fill();
@@ -67,12 +68,12 @@ const block = (c: Ctx, x: number, small: string, big: string, col: string) => {
 const page = (c: Ctx, x: number, y: number, w: number, url: string, title: string, line: string, date: string, dateOk: boolean, k: number) => {
   if (k <= 0) return;
   c.save(); c.globalAlpha = clamp(k * 3); c.translate(0, (1 - easeOut(clamp(k * 1.5))) * 30);
-  c.fillStyle = "#ffffff"; rrect(c, x, y, w, 300, 20); c.fill(); c.strokeStyle = "#94a3b8"; c.lineWidth = 3; rrect(c, x, y, w, 300, 20); c.stroke();
+  c.fillStyle = "#ffffff"; rrect(c, x, y, w, 320, 20); c.fill(); c.strokeStyle = "#94a3b8"; c.lineWidth = 3; rrect(c, x, y, w, 320, 20); c.stroke();
   c.fillStyle = "#e2e8f0"; rrect(c, x, y, w, 56, 20); c.fill(); c.fillRect(x, y + 30, w, 26);
-  c.textAlign = "left"; c.font = SANS(fit(c, url, w - 40, 24, 700), 700); c.fillStyle = "#1d4ed8"; c.fillText(url, x + 20, y + 38);
-  c.font = SANS(fit(c, title, w - 40, 36, 900), 900); c.fillStyle = INK; c.fillText(title, x + 20, y + 106);
-  c.font = SANS(fit(c, line, w - 40, 40, 900), 900); c.fillStyle = "#7c2d12"; c.fillText(line, x + 20, y + 176);
-  c.font = SANS(fit(c, date, w - 40, 34, 900), 900); c.fillStyle = dateOk ? GREEN : RED; c.fillText(date, x + 20, y + 252);
+  c.textAlign = "left"; c.font = SANS(fit(c, url, w - 40, 30, 700), 700); c.fillStyle = "#1d4ed8"; c.fillText(url, x + 20, y + 38);
+  c.font = SANS(fit(c, title, w - 40, 44, 900), 900); c.fillStyle = INK; c.fillText(title, x + 20, y + 112);
+  c.font = SANS(fit(c, line, w - 40, 50, 900), 900); c.fillStyle = "#7c2d12"; c.fillText(line, x + 20, y + 190);
+  c.font = SANS(fit(c, date, w - 40, 46, 900), 900); c.fillStyle = dateOk ? GREEN : RED; c.fillText(date, x + 20, y + 275);
   c.restore();
 };
 
@@ -93,8 +94,8 @@ const StSearch: React.FC<SP> = ({ s }) => {
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={0} src={CLAP} vol={0.5} />, <Sfx key={k("m")} at={3} src="audio/sfx_chaching.wav" vol={0.35} />, <Sfx key={k("b")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.32} />);
     if (b.prop === "real") sfx.push(<Sfx key={k("p")} at={cue(i, 1, 0.4)} src="audio/gag_ding.wav" vol={0.3} />);
     if (b.prop === "steps") { sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("z")} at={cue(i, 2, 0.4) + 14} src="reel/sfx_buzz.wav" vol={0.32} />, <Sfx key={k("h")} at={cue(i, 4, 0.8)} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />); }
-    if (b.prop === "test") sfx.push(<Sfx key={k("r")} at={cue(i, 1, 0.4)} src="reel/sfx_buzz.wav" vol={0.32} />, <Sfx key={k("g")} at={cue(i, 2, 0.7)} src="audio/sfx_success.wav" vol={0.3} />);
-    if (b.prop === "quiz") { sfx.push(<Sfx key={k("q")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.3} />); [0, 15, 30, 45].forEach((dd) => sfx.push(<Sfx key={k("t" + dd)} at={end + 4 + dd} src="audio/sfx_tick.wav" vol={0.4} />)); }
+    if (b.prop === "test") sfx.push(<Sfx key={k("r")} at={cue(i, 1, 0.4)} src="reel/sfx_buzz.wav" vol={0.32} />, <Sfx key={k("h")} at={cue(i, 1, 0.4)} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />, <Sfx key={k("g")} at={cue(i, 2, 0.7)} src="audio/sfx_success.wav" vol={0.3} />);
+    if (b.prop === "quiz") { sfx.push(<Sfx key={k("q")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.3} />); [0, 15, 30, 45, 60, 75].forEach((dd) => sfx.push(<Sfx key={k("t" + dd)} at={end + 4 + dd} src="audio/sfx_tick.wav" vol={0.4} />)); }
     if (b.prop === "answer") sfx.push(<Sfx key={k("d")} at={at + 2} src="audio/gag_ding.wav" vol={0.4} />, <Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />, <Sfx key={k("z")} at={cue(i, 1, 0.3) + 6} src="reel/sfx_buzz.wav" vol={0.28} />);
     if (b.prop === "study") sfx.push(<Sfx key={k("x")} at={cue(i, 1, 0.6)} src="reel/sfx_buzz.wav" vol={0.3} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.6} />, <Sfx key={k("c")} at={cue(i, 2, 0.75)} src={CLAP} vol={0.4} />);
@@ -116,11 +117,11 @@ const StSearch: React.FC<SP> = ({ s }) => {
           const k1 = seg(f, ln.from + 2, ln.from + 10), k2 = seg(f, cu(2, 0.4) - 4, cu(2, 0.4) + 6), k3 = seg(f, cu(3, 0.6) - 4, cu(3, 0.6) + 6);
           const box = (y: number, num: string, lab: string, k: number) => { if (k <= 0) return; c.save(); c.globalAlpha = clamp(k * 3); c.fillStyle = "#1e3a8a"; c.beginPath(); c.arc(110, y, 40, 0, 7); c.fill(); c.font = SANS(48, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(num, 110, y + 17); c.textAlign = "left"; c.font = SANS(44, 900); c.fillStyle = "#f8fafc"; c.fillText(lab, 170, y + 15); c.restore(); };
           box(470, "1", T.step1, k1);
-          if (k1 > 0) { c.save(); c.globalAlpha = clamp(seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 6) * 3); c.fillStyle = "#1e293b"; rrect(c, 170, 515, W - 230, 80, 14); c.fill(); c.font = SANS(fit(c, T.topResult, W - 270, 32, 800), 800); c.fillStyle = "#93c5fd"; c.textAlign = "left"; c.fillText(T.topResult, 190, 566); c.restore(); }
+          if (k1 > 0) { c.save(); c.globalAlpha = clamp(seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 6) * 3); c.fillStyle = "#1e293b"; rrect(c, 170, 515, W - 230, 80, 14); c.fill(); c.font = SANS(fit(c, T.topResult, W - 270, 40, 800), 800); c.fillStyle = "#93c5fd"; c.textAlign = "left"; c.fillText(T.topResult, 190, 566); c.restore(); }
           box(680, "2", T.step2, k2);
           if (k2 > 0) page(c, 170, 720, W - 230, T.oldUrl, T.oldTitle, T.oldLine, T.noDate, false, seg(f, cu(2, 0.4), cu(2, 0.4) + 8));
           box(1110, "3", T.step3, k3);
-          chip(c, T.noToday, W / 2, 1250, "#7f1d1d", "#fff", seg(f, cu(4, 0.8) - 2, cu(4, 0.8) + 6), fit(c, T.noToday, W - 140, 44, 900));
+          chip(c, T.noToday, W / 2, 1230, "#7f1d1d", "#fff", seg(f, cu(4, 0.3) - 2, cu(4, 0.3) + 6), fit(c, T.noToday, W - 120, 50, 900));
         } else if (b.shot === "test") {
           dark(c, W, H, T.testHead, [T.testSub]);
           const kA = seg(f, cu(1, 0.4) - 4, cu(1, 0.4) + 6), kB = seg(f, cu(2, 0.7) - 4, cu(2, 0.7) + 6);
@@ -134,9 +135,9 @@ const StSearch: React.FC<SP> = ({ s }) => {
           };
           card(430, T.aLab, T.aBig, T.aSub, "#7f1d1d", "#fecaca", kA);
           card(800, T.bLab, T.bBig, T.bSub, "#14532d", "#bbf7d0", kB);
-          const kN = seg(f, cu(2, 0.7) + 24, cu(2, 0.7) + 32);   // the builder note, two lines, big enough for a phone (script review)
-          if (kN > 0) { c.save(); c.globalAlpha = clamp(kN * 3); c.fillStyle = "#fde68a"; rrect(c, 80, 1170, W - 160, 150, 22); c.fill();
-            c.fillStyle = INK; c.textAlign = "center"; c.font = SANS(40, 900); c.fillText(T.builder1, W / 2, 1232); c.font = SANS(fit(c, T.builder2, W - 220, 40, 800), 800); c.fillText(T.builder2, W / 2, 1290); c.restore(); }
+          const kN = seg(f, cu(2, 0.3) + 6, cu(2, 0.3) + 12);   // the builder note, two lines, big enough for a phone (script review)
+          if (kN > 0) { c.save(); c.globalAlpha = clamp(kN * 3); c.fillStyle = "#fde68a"; rrect(c, 80, 1150, W - 160, 140, 22); c.fill();
+            c.fillStyle = INK; c.textAlign = "center"; c.font = SANS(40, 900); c.fillText(T.builder1, W / 2, 1208); c.font = SANS(fit(c, T.builder2, W - 220, 40, 800), 800); c.fillText(T.builder2, W / 2, 1264); c.restore(); }
         } else if (b.shot === "quiz") {
           dark(c, W, H, T.quizHead, [b.prop === "quiz" ? T.quizSub : ""]);
           const opts = T.opts as [string, string][];
@@ -155,8 +156,8 @@ const StSearch: React.FC<SP> = ({ s }) => {
         } else if (b.shot === "study") {
           dark(c, W, H, T.studyHead, [T.studySub]);
           const k1 = seg(f, ln.from + 2, ln.from + 10), k2 = seg(f, cu(1, 0.6) - 4, cu(1, 0.6) + 6);
-          if (k1 > 0) { c.save(); c.globalAlpha = clamp(k1 * 3); c.font = SANS(48, 900); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; (T.studyRows as string[]).forEach((t, q) => c.fillText(t, W / 2, 520 + q * 70)); c.restore(); }
-          if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.font = SANS(190, 900); c.fillStyle = "#f87171"; c.textAlign = "center"; c.fillText(T.studyBig, W / 2, 920); c.font = SANS(fit(c, T.studyLab, W - 120, 52, 900), 900); c.fillStyle = "#fecaca"; c.fillText(T.studyLab, W / 2, 1000); c.font = SANS(fit(c, T.studySpread, W - 120, 38, 800), 800); c.fillStyle = "#cbd5e1"; c.fillText(T.studySpread, W / 2, 1090); c.restore(); }
+          if (k1 > 0) { c.save(); c.globalAlpha = clamp(k1 * 3); c.fillStyle = "#e2e8f0"; c.textAlign = "center"; (T.studyRows as string[]).forEach((t, q) => { c.font = SANS(fit(c, t, W - 100, 50, 900), 900); c.fillText(t, W / 2, 520 + q * 72); }); c.restore(); }
+          if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.font = SANS(190, 900); c.fillStyle = "#f87171"; c.textAlign = "center"; c.fillText(T.studyBig, W / 2, 920); c.font = SANS(fit(c, T.studyLab, W - 120, 52, 900), 900); c.fillStyle = "#fecaca"; c.fillText(T.studyLab, W / 2, 1000); c.font = SANS(fit(c, T.studySpread, W - 120, 44, 800), 800); c.fillStyle = "#cbd5e1"; c.fillText(T.studySpread, W / 2, 1090); c.restore(); }
         } else {
           // ---------- the shop ----------
           const hookOn = b.prop === "hook" || loopOn;
@@ -166,7 +167,7 @@ const StSearch: React.FC<SP> = ({ s }) => {
           const sx = shake ? (r() - 0.5) * shake : 0, sy = shake ? (r() - 0.5) * shake : 0;
           c.fillStyle = WALL; c.fillRect(0, 0, W, H);
           c.save(); c.translate(W / 2 + sx, 840 + sy); c.scale(z, z); c.translate(-sh.x, -sh.y);
-          shop(c, r, [["Tomatoes", "₹40"], ["Onions", "₹30"], ["Rice", "₹60"], ["Toor dal", "?"]]);
+          shop(c, r, PRICES);
           const [mood, armPose] = loopOn ? (["angry", "slam"] as [Mood, Arms]) : RAVI[n] ?? ["confused", "rest"];
           ravi(c, mood, armPose, b.who === "ravi" && talking, hookOn ? 1 : p, f, r);
           counter(c, r);
@@ -180,13 +181,25 @@ const StSearch: React.FC<SP> = ({ s }) => {
           if (b.prop === "real") {   // the phone's answer and the page it cited
             page(c, 60, 230, W - 120, T.oldUrl, T.oldTitle, T.oldLine, T.noDate, false, seg(f, ln.from + 2, ln.from + 10));
             chip(c, T.reallySays, W / 2, 580, "#14532d", "#f0fdf4", seg(f, cu(1, 0.4) - 2, cu(1, 0.4) + 6), fit(c, T.reallySays, W - 140, 38, 900));
-            chip(c, T.story, W / 2, 1380, "rgba(15,23,42,0.88)", "#f8fafc", 1, 30);
+            chip(c, T.story, W / 2, 1380, "rgba(15,23,42,0.88)", "#f8fafc", 1, fit(c, T.story, W - 140, 38, 800));
           }
           if (b.prop === "rule") {
             stamp(c, T.rule1, W / 2, 310, "#2563eb", seg(f, ln.from + 2, ln.from + 10), 56, -0.05);
             stamp(c, T.rule2, W / 2, 450, "#7c2d12", seg(f, cu(1, 0.35) - 2, cu(1, 0.35) + 6), 52, 0.03);
             stamp(c, T.rule3, W / 2, 595, RED, seg(f, cu(2, 0.75) - 2, cu(2, 0.75) + 6), 64, -0.04);
           }
+        }
+        if (["steps", "test", "quiz", "study"].includes(b.shot)) {   // render review: keep Ravi / the phone on screen on the cards
+          const iw = 250, ih = 175, ix = W - iw - 36, iy = 1300, who = b.who;
+          const [cx, cy, zs] = who === "ravi" ? [495, 690, 0.45] : [800, 880, 0.6];
+          c.save(); c.fillStyle = "rgba(0,0,0,0.35)"; rrect(c, ix + 5, iy + 6, iw, ih, 20); c.fill();
+          rrect(c, ix, iy, iw, ih, 20); c.clip(); c.fillStyle = WALL; c.fillRect(ix, iy, iw, ih);
+          c.translate(ix + iw / 2, iy + ih / 2); c.scale(zs, zs); c.translate(-cx, -cy);
+          shop(c, r, PRICES);
+          const [mood, armPose] = RAVI[n] ?? (["sus", "rest"] as [Mood, Arms]);
+          ravi(c, mood, armPose, who === "ravi" && talking, 1, f, r); counter(c, r); phone(c, who === "ai" && talking, f, r, {});
+          c.restore();
+          c.save(); c.strokeStyle = "#f8fafc"; c.lineWidth = 5; rrect(c, ix, iy, iw, ih, 20); c.stroke(); c.restore();
         }
       }} />
     </>

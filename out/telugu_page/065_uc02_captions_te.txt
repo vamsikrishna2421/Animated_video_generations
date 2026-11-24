@@ -7,16 +7,16 @@ AI ₹168 kilo ani cheppindi, link kooda ichindi. Market lo ₹142. 50 kg: ₹1,
 AI From Scratch use case 2: AI web search tho ela javaabu chestundi
 - Moodu steps: vetukutundi, paina vachina pages chaduvutundi, ekkada chadivindo aa link tho javaabu istundi.
 - Link EKKADA chadivindo chupistundi, EPPATIDO kaadu. "...price in Hyderabad today" ane title unna paata page, date lekapothe, ippatiki "today" ane antundi.
-- Maa test (memu tayaru chesina 6 pages chinna web, maa computer lo oka chinna free AI, okkokati 10 kotha chats): eeroju date cheppakapothe, paata page nunchi ₹168, 10 ki 10. Date cheppithe, eeroju page, ₹142, 10 ki 10.
-- Malli adigina labham ledu: 10 kotha chats, prati saari ade ₹168.
-- Pedda apps kooda tappu chestaayi, vere vidhamga: March 2025 lo Columbia Journalism Review (Tow Center) test lo, 8 AI search tools news source ni 1,600 lo 60% kanna ekkuva saarlu tappuga cheppaayi (best 37% tappu, worst 94%).
+- Maa test (memu tayaru chesina 6 pages chinna web, maa computer lo oka chinna free AI, okkokati 10 kotha chats): eeroju date cheppakapothe, paata page nunchi ₹168, 10 ki 10. App instructions lo date isthe: eeroju page, ₹142, 10 ki 10. User prashna lo date type chesthe: adi kooda 10 ki 10.
+- Date lekunda malli adigina labham ledu: 10 kotha chats, prati saari ade ₹168.
+- Pedda apps kooda tappu chestaayi, vere vidhamga: March 2025 lo Columbia Journalism Review (Tow Center) test lo, 8 AI search tools kalipi, 1,600 prashnallo 60% kanna ekkuva saarlu news source ni tappuga cheppaayi (best tool 37% tappu, worst 94%).
 
 Try chesi choodandi: mee AI app ni meeru konne edaina vasthuvu eeroju dhara adagandi. Daani link open cheyyandi: number pakkana date undaa?
 
 Rule:
 1. Link open chesi choodu
 2. "Today" ante date kaadu: number pakkana nijamaina date undaa choodu
-3. Date lekapothe, nammoddu
+3. Date lekapothe, eeroju date type chesi malli adagandi
 AI app build chestunte: eeroju date ni daani instructions lo pettandi.
 
 Next: UC03, AI meeting notes ela pani chestaayi.
@@ -29,5 +29,5 @@ Follow @ai_maastaaru_telugu.
 #AIinTelugu #TeluguAI #AISearch #AIFromScratch #LearnAI
 
 === PINNED_COMMENT ===
-Ela test chesam (Nov 24, 2026): memu tayaru chesina 6 pages web (pages, links, dharalu anni manave), top 3 ichhe keyword search (BM25), maa computer lo Qwen2.5-7B-Instruct (4-bit, llama.cpp); prati run ki kotha chat, temperature 0.7, seeds 1-10, prati javaabu chadivaam. Prashna: "What is today's wholesale price of toor dal in Hyderabad?" Top result: "Toor dal wholesale price in Hyderabad today" ane paata page, ₹168. Eeroju page (24 Nov 2026): ₹142. Paata page date teesesi: date cheppithe 10/10 ₹142; cheppakapothe 10/10 ₹168, paata page link tho. Search lekapothe: 10/10 "real-time access ledu". Code: pipeline/uc02/search_demo.py, search_demo2.py.
+Ela test chesam (Nov 24, 2026): memu tayaru chesina 6 pages web (pages, links, dharalu anni manave), top 3 ichhe keyword search (BM25), maa computer lo Qwen2.5-7B-Instruct (4-bit, llama.cpp); prati run ki kotha chat, temperature 0.7, seeds 1-10, prati javaabu chadivaam. Prashna: "What is today's wholesale price of toor dal in Hyderabad?" Top result: "Toor dal wholesale price in Hyderabad today" ane paata page, ₹168. Eeroju page (24 Nov 2026): ₹142. Paata page date teesesi: system prompt lo date isthe 10/10 ₹142; user prashna lo date type chesthe 10/10 ₹142; date lekapothe 10/10 ₹168, paata page link tho. Search lekapothe: 10/10 "real-time access ledu". Code: pipeline/uc02/search_demo.py, search_demo2.py, search_demo3.py.
 Source: Columbia Journalism Review / Tow Center, "AI Search Has A Citation Problem" (March 2025); Nieman Lab, Fortune. Ravi anna, shop memu raasinavi.

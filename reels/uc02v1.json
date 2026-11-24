@@ -108,7 +108,7 @@
      "aSub": "10 of 10 · cited the old page",
      "bLab": "GIVEN TODAY'S DATE",
      "bBig": "₹142",
-     "bSub": "10 of 10 · found today's page",
+     "bSub": "by the app: 10 of 10 · typed in the question: 10 of 10",
      "builder1": "BUILDING AN AI APP?",
      "builder2": "put today's date in its instructions",
      "quizHead": "SO WHAT DO YOU DO?",
@@ -127,20 +127,20 @@
        "open the link"
       ]
      ],
-     "askAgain": "asked again: ₹168, 10 of 10",
+     "askAgain": "asked again in 10 new chats: ₹168 every time",
      "whereNotWhen": "a link shows WHERE it read, not WHEN",
      "studyHead": "\"AND THE BIG APPS?\"",
      "studySub": "Columbia Journalism Review (Tow Center), March 2025",
      "studyRows": [
-      "8 AI search tools · 1,600 tests",
-      "name a news article's source"
+      "a different slip: the source itself",
+      "8 AI search tools · 1,600 questions"
      ],
      "studyBig": "60%+",
-     "studyLab": "got the source wrong",
+     "studyLab": "wrong source, all 8 together",
      "studySpread": "best tool 37% wrong · worst 94%",
      "rule1": "OPEN THE LINK",
      "rule2": "\"TODAY\" IS NOT A DATE",
-     "rule3": "NO DATE, NO TRUST"
+     "rule3": "NO DATE? TYPE TODAY'S DATE, ASK AGAIN"
     },
     "tagSide": {
      "ravi": "right",
@@ -203,7 +203,7 @@
    "id": "s_b",
    "type": "sk_search02",
    "tail": 0.0,
-   "boost": 1.5,
+   "boost": 1.8,
    "lift": 0.6,
    "drop_at": [
     [
@@ -273,7 +273,7 @@
      "aSub": "10 of 10 · cited the old page",
      "bLab": "GIVEN TODAY'S DATE",
      "bBig": "₹142",
-     "bSub": "10 of 10 · found today's page",
+     "bSub": "by the app: 10 of 10 · typed in the question: 10 of 10",
      "builder1": "BUILDING AN AI APP?",
      "builder2": "put today's date in its instructions",
      "quizHead": "SO WHAT DO YOU DO?",
@@ -292,20 +292,20 @@
        "open the link"
       ]
      ],
-     "askAgain": "asked again: ₹168, 10 of 10",
+     "askAgain": "asked again in 10 new chats: ₹168 every time",
      "whereNotWhen": "a link shows WHERE it read, not WHEN",
      "studyHead": "\"AND THE BIG APPS?\"",
      "studySub": "Columbia Journalism Review (Tow Center), March 2025",
      "studyRows": [
-      "8 AI search tools · 1,600 tests",
-      "name a news article's source"
+      "a different slip: the source itself",
+      "8 AI search tools · 1,600 questions"
      ],
      "studyBig": "60%+",
-     "studyLab": "got the source wrong",
+     "studyLab": "wrong source, all 8 together",
      "studySpread": "best tool 37% wrong · worst 94%",
      "rule1": "OPEN THE LINK",
      "rule2": "\"TODAY\" IS NOT A DATE",
-     "rule3": "NO DATE, NO TRUST"
+     "rule3": "NO DATE? TYPE TODAY'S DATE, ASK AGAIN"
     },
     "tagSide": {
      "ravi": "right",
@@ -331,8 +331,8 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "The phone does. I only know what the app tells me. [1] Without the date: one sixty-eight, ten times in ten. [2] Given the date: today's page, one forty-two, ten in ten.",
-     "show": "The phone does. I only know what the app tells me. Without the date: ₹168, 10 times in 10. Given the date: today's page, ₹142, 10 in 10.",
+     "text": "The phone does. I only know what the app tells me. [1] Without the date: one sixty-eight, ten out of ten. [2] Given the date, by the app or in your question: today's page, one forty-two, ten out of ten.",
+     "show": "The phone does. I only know what the app tells me. Without the date: ₹168, 10 out of 10. Given the date, by the app or in your question: today's page, ₹142, 10 out of 10.",
      "maxgap": 0.25,
      "gap": 0.3,
      "tempo": 1.06,
@@ -344,22 +344,22 @@
      "text": "So what do I do? [1] A, trust the link. [2] B, ask again. [3] C, open the link.",
      "show": "So what do I do? A, trust the link. B, ask again. C, open the link.",
      "maxgap": 0.25,
-     "gap": 2.0,
+     "gap": 3.0,
      "tempo": 1.08,
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "C! <pause 0.8> [1] Asked again, I said one sixty-eight, every time. [2] A link shows where I read it, not when.",
-     "show": "C! <pause 0.8> Asked again, I said ₹168, every time. A link shows where I read it, not when.",
+     "text": "C! <pause 0.8> [1] Asked again in new chats: one sixty-eight, every time. [2] A link shows where I read it, not when.",
+     "show": "C! <pause 0.8> Asked again in new chats: ₹168, every time. A link shows where I read it, not when.",
      "maxgap": 0.25,
      "gap": 0.3,
      "tempo": 1.06,
      "gain_db": -1.0,
      "tts": "C!",
      "file2": "08b_ai.wav",
-     "tts2": "Asked again, I said one sixty-eight, every time. A link shows where I read it, not when.",
+     "tts2": "Asked again in new chats: one sixty-eight, every time. A link shows where I read it, not when.",
      "pause": 0.8
     }
    ]
@@ -427,7 +427,7 @@
      "aSub": "10 of 10 · cited the old page",
      "bLab": "GIVEN TODAY'S DATE",
      "bBig": "₹142",
-     "bSub": "10 of 10 · found today's page",
+     "bSub": "by the app: 10 of 10 · typed in the question: 10 of 10",
      "builder1": "BUILDING AN AI APP?",
      "builder2": "put today's date in its instructions",
      "quizHead": "SO WHAT DO YOU DO?",
@@ -446,20 +446,20 @@
        "open the link"
       ]
      ],
-     "askAgain": "asked again: ₹168, 10 of 10",
+     "askAgain": "asked again in 10 new chats: ₹168 every time",
      "whereNotWhen": "a link shows WHERE it read, not WHEN",
      "studyHead": "\"AND THE BIG APPS?\"",
      "studySub": "Columbia Journalism Review (Tow Center), March 2025",
      "studyRows": [
-      "8 AI search tools · 1,600 tests",
-      "name a news article's source"
+      "a different slip: the source itself",
+      "8 AI search tools · 1,600 questions"
      ],
      "studyBig": "60%+",
-     "studyLab": "got the source wrong",
+     "studyLab": "wrong source, all 8 together",
      "studySpread": "best tool 37% wrong · worst 94%",
      "rule1": "OPEN THE LINK",
      "rule2": "\"TODAY\" IS NOT A DATE",
-     "rule3": "NO DATE, NO TRUST"
+     "rule3": "NO DATE? TYPE TODAY'S DATE, ASK AGAIN"
     },
     "tagSide": {
      "ravi": "right",
@@ -485,8 +485,8 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "In a 2025 test, [1] eight AI search tools got the source wrong in over sixty percent of answers.",
-     "show": "In a 2025 test, 8 AI search tools got the source wrong in over 60% of answers.",
+     "text": "A different slip: in a 2025 test, [1] eight AI search tools, together, got the source wrong in over sixty percent of answers.",
+     "show": "A different slip: in a 2025 test, 8 AI search tools, together, got the source wrong in over 60% of answers.",
      "maxgap": 0.25,
      "gap": 0.4,
      "tempo": 1.06,
@@ -495,8 +495,8 @@
     {
      "who": "ravi",
      "file": "11_ravi.wav",
-     "text": "Open the link. [1] \"Today\" is not a date. [2] No date, no trust!",
-     "show": "Open the link. \"Today\" is not a date. No date, no trust!",
+     "text": "Open the link. [1] \"Today\" is not a date. [2] No date? Type today's date, and ask again!",
+     "show": "Open the link. \"Today\" is not a date. No date? Type today's date, and ask again!",
      "maxgap": 0.25,
      "gap": 0.4,
      "tempo": 1.08,

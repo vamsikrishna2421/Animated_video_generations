@@ -110,7 +110,7 @@
      "aSub": "10 of 10 · cited the old page",
      "bLab": "GIVEN TODAY'S DATE",
      "bBig": "₹142",
-     "bSub": "10 of 10 · found today's page",
+     "bSub": "by the app: 10 of 10 · typed in the question: 10 of 10",
      "builder1": "BUILDING AN AI APP?",
      "builder2": "put today's date in its instructions",
      "quizHead": "SO WHAT DO YOU DO?",
@@ -129,20 +129,20 @@
        "open the link"
       ]
      ],
-     "askAgain": "asked again: ₹168, 10 of 10",
+     "askAgain": "asked again in 10 new chats: ₹168 every time",
      "whereNotWhen": "a link shows WHERE it read, not WHEN",
      "studyHead": "\"AND THE BIG APPS?\"",
      "studySub": "Columbia Journalism Review (Tow Center), March 2025",
      "studyRows": [
-      "8 AI search tools · 1,600 tests",
-      "name a news article's source"
+      "a different slip: the source itself",
+      "8 AI search tools · 1,600 questions"
      ],
      "studyBig": "60%+",
-     "studyLab": "got the source wrong",
+     "studyLab": "wrong source, all 8 together",
      "studySpread": "best tool 37% wrong · worst 94%",
      "rule1": "OPEN THE LINK",
      "rule2": "\"TODAY\" IS NOT A DATE",
-     "rule3": "NO DATE, NO TRUST"
+     "rule3": "NO DATE? TYPE TODAY'S DATE, ASK AGAIN"
     },
     "tagSide": {
      "ravi": "right",
@@ -206,7 +206,7 @@
    "id": "s_b",
    "type": "sk_search02",
    "tail": 0.0,
-   "boost": 1.5,
+   "boost": 1.8,
    "lift": 0.6,
    "drop_at": [
     [
@@ -276,7 +276,7 @@
      "aSub": "10 of 10 · cited the old page",
      "bLab": "GIVEN TODAY'S DATE",
      "bBig": "₹142",
-     "bSub": "10 of 10 · found today's page",
+     "bSub": "by the app: 10 of 10 · typed in the question: 10 of 10",
      "builder1": "BUILDING AN AI APP?",
      "builder2": "put today's date in its instructions",
      "quizHead": "SO WHAT DO YOU DO?",
@@ -295,20 +295,20 @@
        "open the link"
       ]
      ],
-     "askAgain": "asked again: ₹168, 10 of 10",
+     "askAgain": "asked again in 10 new chats: ₹168 every time",
      "whereNotWhen": "a link shows WHERE it read, not WHEN",
      "studyHead": "\"AND THE BIG APPS?\"",
      "studySub": "Columbia Journalism Review (Tow Center), March 2025",
      "studyRows": [
-      "8 AI search tools · 1,600 tests",
-      "name a news article's source"
+      "a different slip: the source itself",
+      "8 AI search tools · 1,600 questions"
      ],
      "studyBig": "60%+",
-     "studyLab": "got the source wrong",
+     "studyLab": "wrong source, all 8 together",
      "studySpread": "best tool 37% wrong · worst 94%",
      "rule1": "OPEN THE LINK",
      "rule2": "\"TODAY\" IS NOT A DATE",
-     "rule3": "NO DATE, NO TRUST"
+     "rule3": "NO DATE? TYPE TODAY'S DATE, ASK AGAIN"
     },
     "tagSide": {
      "ravi": "right",
@@ -352,22 +352,22 @@
      "text": "మరి నేనేం చేయాలి? [1] ఒకటి, లింక్ ని నమ్మడం. [2] రెండు, మళ్ళీ అడగడం. [3] మూడు, లింక్ తెరిచి చూడటం.",
      "show": "So what should I do? One, trust the link. Two, ask again. Three, open the link and look.",
      "maxgap": 0.25,
-     "gap": 1.6,
+     "gap": 2.6,
      "tempo": 1.07,
      "gain_db": 0.5
     },
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "మూడోది! <pause 0.6> [1] మళ్ళీ అడిగితే, ప్రతిసారీ నూట అరవై ఎనిమిదే చెప్పాను. [2] లింక్, నేను ఎక్కడ చదివానో చూపిస్తుంది. ఎప్పటిదో కాదు.",
-     "show": "The third one! <pause 0.6> Asked again, I said ₹168 every time. A link shows where I read it. Not when.",
+     "text": "మూడోది! <pause 0.6> [1] కొత్త చాట్ లో మళ్ళీ అడిగినా, ప్రతిసారీ నూట అరవై ఎనిమిదే. [2] లింక్ తో, ఎక్కడ చదివానో తెలుస్తుంది. ఆ పేజీ పాతదో కొత్తదో తెలియదు.",
+     "show": "The third one! <pause 0.6> Asked again in a new chat, still ₹168 every time. A link tells you where I read it. Not whether the page is old or new.",
      "maxgap": 0.25,
      "gap": 0.3,
      "tempo": 1.08,
      "gain_db": -1.0,
      "tts": "మూడోది!",
      "file2": "08b_ai.wav",
-     "tts2": "మళ్ళీ అడిగితే, ప్రతిసారీ నూట అరవై ఎనిమిదే చెప్పాను. లింక్, నేను ఎక్కడ చదివానో చూపిస్తుంది. ఎప్పటిదో కాదు.",
+     "tts2": "కొత్త చాట్ లో మళ్ళీ అడిగినా, ప్రతిసారీ నూట అరవై ఎనిమిదే. లింక్ తో, ఎక్కడ చదివానో తెలుస్తుంది. ఆ పేజీ పాతదో కొత్తదో తెలియదు.",
      "pause": 0.6
     }
    ]
@@ -435,7 +435,7 @@
      "aSub": "10 of 10 · cited the old page",
      "bLab": "GIVEN TODAY'S DATE",
      "bBig": "₹142",
-     "bSub": "10 of 10 · found today's page",
+     "bSub": "by the app: 10 of 10 · typed in the question: 10 of 10",
      "builder1": "BUILDING AN AI APP?",
      "builder2": "put today's date in its instructions",
      "quizHead": "SO WHAT DO YOU DO?",
@@ -454,20 +454,20 @@
        "open the link"
       ]
      ],
-     "askAgain": "asked again: ₹168, 10 of 10",
+     "askAgain": "asked again in 10 new chats: ₹168 every time",
      "whereNotWhen": "a link shows WHERE it read, not WHEN",
      "studyHead": "\"AND THE BIG APPS?\"",
      "studySub": "Columbia Journalism Review (Tow Center), March 2025",
      "studyRows": [
-      "8 AI search tools · 1,600 tests",
-      "name a news article's source"
+      "a different slip: the source itself",
+      "8 AI search tools · 1,600 questions"
      ],
      "studyBig": "60%+",
-     "studyLab": "got the source wrong",
+     "studyLab": "wrong source, all 8 together",
      "studySpread": "best tool 37% wrong · worst 94%",
      "rule1": "OPEN THE LINK",
      "rule2": "\"TODAY\" IS NOT A DATE",
-     "rule3": "NO DATE, NO TRUST"
+     "rule3": "NO DATE? TYPE TODAY'S DATE, ASK AGAIN"
     },
     "tagSide": {
      "ravi": "right",
@@ -494,8 +494,8 @@
     {
      "who": "ai",
      "file": "10_ai.wav",
-     "text": "ట్వంటీ ట్వంటీ ఫైవ్ లో ఒక టెస్ట్ లో, [1] ఎనిమిది సెర్చ్ చాట్‌బాట్లు, అరవై శాతానికి పైగా తప్పు సోర్స్ చూపించాయి.",
-     "show": "In a 2025 test, 8 search chatbots showed the wrong source in over 60% of answers.",
+     "text": "ఇది వేరే తప్పు. పోయిన ఏడాది ఒక టెస్ట్ జరిగింది. [1] ఎనిమిది సెర్చ్ యాప్స్ కలిపి, వందలో అరవై సార్లకి పైగా తప్పు సోర్స్ చూపించాయి.",
+     "show": "This is a different mistake. A test last year: 8 search apps, together, showed the wrong source more than 60 times in 100.",
      "maxgap": 0.25,
      "gap": 0.4,
      "tempo": 1.08,
@@ -504,8 +504,8 @@
     {
      "who": "ravi",
      "file": "11_ravi.wav",
-     "text": "లింక్ తెరిచి చూడు. [1] ఈరోజు అంటే తేదీ కాదు. [2] తేదీ లేకపోతే, నమ్మొద్దు!",
-     "show": "Open the link and look. \"Today\" is not a date. No date? Don't trust it!",
+     "text": "లింక్ ఓపెన్ చేసి చూడు. [1] టుడే అని ఉంటే సరిపోదు. డేట్ ఉండాలి. [2] డేట్ లేకపోతే, ఈరోజు డేట్ టైప్ చేసి అడుగు!",
+     "show": "Open the link and look. \"Today\" is not enough, there must be a date. No date? Type today's date and ask!",
      "maxgap": 0.25,
      "gap": 0.4,
      "tempo": 1.07,

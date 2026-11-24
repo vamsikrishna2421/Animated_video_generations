@@ -88,3 +88,30 @@ date next to the number?" Builder note: give your AI today's date in its instruc
 | 10 | ai | study | In a 2025 test, [1] eight AI search tools got the source wrong in over sixty percent of answers. | ట్వంటీ ట్వంటీ ఫైవ్ లో ఒక టెస్ట్ లో, [1] ఎనిమిది సెర్చ్ చాట్‌బాట్లు, అరవై శాతానికి పైగా తప్పు సోర్స్ చూపించాయి. |
 | 11 | ravi | rule | Open the link. [1] "Today" is not a date. [2] No date, no trust! | లింక్ తెరిచి చూడు. [1] ఈరోజు అంటే తేదీ కాదు. [2] తేదీ లేకపోతే, నమ్మొద్దు! |
 | 12 | ai | loop | Today's price: one sixty-eight, [1] with a link! | ఈరోజు ధర: నూట అరవై ఎనిమిది, [1] లింక్ కూడా ఉంది! |
+
+## Render review (human-viewer, EN + TE) and what changed
+- Both (EN): the fix our own test proved ("give it the date") never became advice → a third test
+  (`pipeline/uc02/search_demo3.py`, committed before it ran): no date in the AI's instructions, the user types today's
+  date into the question: 10/10 ₹142 from today's page. Line 6 now says "Given the date, by the app or in your
+  question"; the rule ends "No date? Type today's date, and ask again!" (the quiz's trap, B, turned into the fix); the
+  builder note comes in on card B, full for 3 s+.
+- Priya: "eight tools got the source wrong in over 60%" sounded like every tool → "together", and "a different slip";
+  the card says "wrong source, all 8 together" with best 37% / worst 94%; "tests/tries/queries" → "questions";
+  "asked again" was the same 10 fresh chats → "asked again in new chats".
+- Sandeep: the middle was dark slides with Ravi gone → a small window keeps Ravi or the phone on every card; the quiz
+  hold 2 s → 3 s with a clock; the "never told the date" chip comes in with the words; "ten times in ten" → "ten out of
+  ten". Both: small text (URL, "no date on the page", "made up", card subtitles) made bigger.
+- Sound: a hit on the ₹168 card; the middle bed lifted (it was the quietest quarter).
+- Telugu: "నమ్మొద్దు" came out as "నమ్మదు", "ఎప్పటిదో కాదు" was mangled, "అడిగితే" swallowed, "ట్వంటీ" heard as
+  తుంటి, "చాట్‌బాట్లు" mangled → line 8b "కొత్త చాట్ లో మళ్ళీ అడిగినా... ఆ పేజీ పాతదో కొత్తదో తెలియదు"; the study
+  "పోయిన ఏడాది ఒక టెస్ట్ జరిగింది... ఎనిమిది సెర్చ్ యాప్స్ కలిపి, వందలో అరవై సార్లకి పైగా"; the rule in everyday
+  words "లింక్ ఓపెన్ చేసి చూడు. టుడే అని ఉంటే సరిపోదు. డేట్ ఉండాలి. డేట్ లేకపోతే, ఈరోజు డేట్ టైప్ చేసి అడుగు!";
+  the quiz hold 1.6 s → 2.6 s.
+
+## Script v3 (changed lines only)
+| # | EN | TE |
+|---|---|---|
+| 6 | The phone does. I only know what the app tells me. [1] Without the date: one sixty-eight, ten out of ten. [2] Given the date, by the app or in your question: today's page, one forty-two, ten out of ten. | (as v2, two takes) |
+| 8 | C! \| [1] Asked again in new chats: one sixty-eight, every time. [2] A link shows where I read it, not when. | మూడోది! \| [1] కొత్త చాట్ లో మళ్ళీ అడిగినా, ప్రతిసారీ నూట అరవై ఎనిమిదే. [2] లింక్ తో, ఎక్కడ చదివానో తెలుస్తుంది. ఆ పేజీ పాతదో కొత్తదో తెలియదు. |
+| 10 | A different slip: in a 2025 test, [1] eight AI search tools, together, got the source wrong in over sixty percent of answers. | ఇది వేరే తప్పు. పోయిన ఏడాది ఒక టెస్ట్ జరిగింది. [1] ఎనిమిది సెర్చ్ యాప్స్ కలిపి, వందలో అరవై సార్లకి పైగా తప్పు సోర్స్ చూపించాయి. |
+| 11 | Open the link. [1] "Today" is not a date. [2] No date? Type today's date, and ask again! | లింక్ ఓపెన్ చేసి చూడు. [1] టుడే అని ఉంటే సరిపోదు. డేట్ ఉండాలి. [2] డేట్ లేకపోతే, ఈరోజు డేట్ టైప్ చేసి అడుగు! |
