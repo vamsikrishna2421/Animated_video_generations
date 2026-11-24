@@ -35,7 +35,7 @@ const SHOTS: Record<string, { z: number; x: number; y: number }> = {
 };
 
 // ---------- the shop ----------
-export const shop = (c: Ctx, r: () => number) => {
+export const shop = (c: Ctx, r: () => number, prices?: string[][]) => {   // prices: the board's lines (UC02: no "Dal ₹120" on a dal-price story)
   c.fillStyle = WALL; c.fillRect(-400, 100, 1880, 1400);
   hatch(c, [-200, 100, 1280, COUNTER], ["#e6c27f", "#f7e2b6"], r, { gap: 14, w: 3, alpha: 0.35 });
   // shelves with jars and sacks (right)
@@ -53,7 +53,7 @@ export const shop = (c: Ctx, r: () => number) => {
   c.fillStyle = "#1f3a2e"; rrect(c, 36, 336, 338, 358, 8); c.fill();
   c.font = caveat(38); c.fillStyle = "#f8fafc"; c.textAlign = "center"; c.fillText("TODAY'S PRICES", 205, 390);
   c.font = caveat(44); c.textAlign = "left";
-  [["Tomatoes", "₹40"], ["Onions", "₹30"], ["Rice", "₹60"], ["Dal", "₹120"]].forEach(([a, b], i) => {
+  (prices ?? [["Tomatoes", "₹40"], ["Onions", "₹30"], ["Rice", "₹60"], ["Dal", "₹120"]]).forEach(([a, b], i) => {
     c.fillStyle = "#f8fafc"; c.fillText(a, 58, 458 + i * 62);
     c.fillStyle = "#fde68a"; c.fillText(b, 232, 458 + i * 62);
   });

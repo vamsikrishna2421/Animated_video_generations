@@ -134,7 +134,9 @@ const StSearch: React.FC<SP> = ({ s }) => {
           };
           card(430, T.aLab, T.aBig, T.aSub, "#7f1d1d", "#fecaca", kA);
           card(800, T.bLab, T.bBig, T.bSub, "#14532d", "#bbf7d0", kB);
-          chip(c, T.builder, W / 2, 1230, "#fde68a", INK, seg(f, cu(2, 0.7) + 24, cu(2, 0.7) + 32), fit(c, T.builder, W - 120, 34, 800));
+          const kN = seg(f, cu(2, 0.7) + 24, cu(2, 0.7) + 32);   // the builder note, two lines, big enough for a phone (script review)
+          if (kN > 0) { c.save(); c.globalAlpha = clamp(kN * 3); c.fillStyle = "#fde68a"; rrect(c, 80, 1170, W - 160, 150, 22); c.fill();
+            c.fillStyle = INK; c.textAlign = "center"; c.font = SANS(40, 900); c.fillText(T.builder1, W / 2, 1232); c.font = SANS(fit(c, T.builder2, W - 220, 40, 800), 800); c.fillText(T.builder2, W / 2, 1290); c.restore(); }
         } else if (b.shot === "quiz") {
           dark(c, W, H, T.quizHead, [b.prop === "quiz" ? T.quizSub : ""]);
           const opts = T.opts as [string, string][];
@@ -164,7 +166,7 @@ const StSearch: React.FC<SP> = ({ s }) => {
           const sx = shake ? (r() - 0.5) * shake : 0, sy = shake ? (r() - 0.5) * shake : 0;
           c.fillStyle = WALL; c.fillRect(0, 0, W, H);
           c.save(); c.translate(W / 2 + sx, 840 + sy); c.scale(z, z); c.translate(-sh.x, -sh.y);
-          shop(c, r);
+          shop(c, r, [["Tomatoes", "₹40"], ["Onions", "₹30"], ["Rice", "₹60"], ["Toor dal", "?"]]);
           const [mood, armPose] = loopOn ? (["angry", "slam"] as [Mood, Arms]) : RAVI[n] ?? ["confused", "rest"];
           ravi(c, mood, armPose, b.who === "ravi" && talking, hookOn ? 1 : p, f, r);
           counter(c, r);
@@ -181,9 +183,9 @@ const StSearch: React.FC<SP> = ({ s }) => {
             chip(c, T.story, W / 2, 1380, "rgba(15,23,42,0.88)", "#f8fafc", 1, 30);
           }
           if (b.prop === "rule") {
-            stamp(c, T.rule1, W / 2, 260, "#2563eb", seg(f, ln.from + 2, ln.from + 10), 56, -0.05);
-            stamp(c, T.rule2, W / 2, 400, "#7c2d12", seg(f, cu(1, 0.35) - 2, cu(1, 0.35) + 6), 52, 0.03);
-            stamp(c, T.rule3, W / 2, 540, RED, seg(f, cu(2, 0.75) - 2, cu(2, 0.75) + 6), 64, -0.04);
+            stamp(c, T.rule1, W / 2, 310, "#2563eb", seg(f, ln.from + 2, ln.from + 10), 56, -0.05);
+            stamp(c, T.rule2, W / 2, 450, "#7c2d12", seg(f, cu(1, 0.35) - 2, cu(1, 0.35) + 6), 52, 0.03);
+            stamp(c, T.rule3, W / 2, 595, RED, seg(f, cu(2, 0.75) - 2, cu(2, 0.75) + 6), 64, -0.04);
           }
         }
       }} />
