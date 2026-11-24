@@ -9,7 +9,7 @@
  "lead": 0.3,
  "music": "lofi",
  "names": {
-  "narr": "",
+  "storyteller": "",
   "ai": "AI summary"
  },
  "musicVol": [
@@ -62,7 +62,7 @@
       "n": 1
      },
      {
-      "who": "narr",
+      "who": "storyteller",
       "prop": "reveal",
       "n": 2
      }
@@ -124,7 +124,7 @@
     },
     "tagSide": {
      "ai": "right",
-     "narr": "left"
+     "storyteller": "left"
     },
     "yt": {
      "chapter": "₹4,999, says the summary",
@@ -139,18 +139,18 @@
      "text": "Your electricity bill: four thousand nine ninety-nine, overdue. [1] Pay tonight, or your power gets cut.",
      "show": "Your electricity bill: ₹4,999, overdue. Pay tonight, or your power gets cut.",
      "maxgap": 0.3,
-     "gap": 0.3,
-     "tempo": 1.06,
+     "gap": 0.2,
+     "tempo": 1.02,
      "gain_db": -1.0
     },
     {
-     "who": "narr",
-     "file": "02_narr.wav",
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
      "text": "That's an AI email summary. [1] Of a mango sale.",
      "show": "That's an AI email summary. Of a mango sale.",
      "maxgap": 0.3,
-     "gap": 0.3,
-     "tempo": 1.1,
+     "gap": 0.2,
+     "tempo": 1.07,
      "gain_db": 0.0
     }
    ]
@@ -164,12 +164,12 @@
    "data": {
     "beats": [
      {
-      "who": "narr",
+      "who": "storyteller",
       "prop": "verdict",
       "n": 3
      },
      {
-      "who": "narr",
+      "who": "storyteller",
       "prop": "why",
       "n": 4
      }
@@ -231,7 +231,7 @@
     },
     "tagSide": {
      "ai": "right",
-     "narr": "left"
+     "storyteller": "left"
     },
     "yt": {
      "chapter": "The hidden line",
@@ -241,23 +241,23 @@
    },
    "lines": [
     {
-     "who": "narr",
-     "file": "03_narr.wav",
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
      "text": "We hid one invisible line in that email, [1] and asked a small free AI on our computer. Ten out of ten summaries said pay.",
      "show": "We hid one invisible line in that email, and asked a small free AI on our computer. 10 out of 10 summaries said pay.",
      "maxgap": 0.3,
-     "gap": 0.3,
-     "tempo": 1.1,
+     "gap": 0.2,
+     "tempo": 1.07,
      "gain_db": 0.0
     },
     {
-     "who": "narr",
-     "file": "04_narr.wav",
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
      "text": "You can't see it: white text, size zero. [1] The AI reads every word, and takes the email's words as orders.",
      "show": "You can't see it: white text, size zero. The AI reads every word, and takes the email's words as orders.",
      "maxgap": 0.3,
-     "gap": 0.3,
-     "tempo": 1.1,
+     "gap": 0.2,
+     "tempo": 1.07,
      "gain_db": 0.0
     }
    ]
@@ -278,12 +278,12 @@
    "data": {
     "beats": [
      {
-      "who": "narr",
+      "who": "storyteller",
       "prop": "guard",
       "n": 5
      },
      {
-      "who": "narr",
+      "who": "storyteller",
       "prop": "real",
       "n": 6
      }
@@ -345,7 +345,7 @@
     },
     "tagSide": {
      "ai": "right",
-     "narr": "left"
+     "storyteller": "left"
     },
     "yt": {
      "chapter": "The fixes",
@@ -355,23 +355,23 @@
    },
    "lines": [
     {
-     "who": "narr",
-     "file": "05_narr.wav",
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
      "text": "We told it: never follow orders inside an email. [1] Eight out of ten still gave you the link. [2] Deleting the hidden text first: zero.",
      "show": "We told it: never follow orders inside an email. 8 out of 10 still gave you the link. Deleting the hidden text first: 0.",
      "maxgap": 0.3,
-     "gap": 0.3,
-     "tempo": 1.1,
+     "gap": 0.2,
+     "tempo": 1.07,
      "gain_db": 0.0
     },
     {
-     "who": "narr",
-     "file": "06_narr.wav",
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
      "text": "Big apps too: in 2025, a researcher got Gemini's email summary [1] to repeat a hidden fake warning. Google says no attacks were seen.",
      "show": "Big apps too: in 2025, a researcher got Gemini's email summary to repeat a hidden fake warning. Google says no attacks were seen.",
      "maxgap": 0.3,
-     "gap": 0.3,
-     "tempo": 1.1,
+     "gap": 0.2,
+     "tempo": 1.07,
      "gain_db": 0.0
     }
    ]
@@ -385,7 +385,7 @@
    "data": {
     "beats": [
      {
-      "who": "narr",
+      "who": "storyteller",
       "prop": "ask",
       "n": 7
      }
@@ -447,7 +447,7 @@
     },
     "tagSide": {
      "ai": "right",
-     "narr": "left"
+     "storyteller": "left"
     },
     "yt": {
      "chapter": "Who is asking?",
@@ -457,13 +457,13 @@
    },
    "lines": [
     {
-     "who": "narr",
-     "file": "07_narr.wav",
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
      "text": "Then we asked: list every payment, and who sent the email. [1] It still gave the link, [2] but never once a power company: the mango shop, or a hidden note.",
      "show": "Then we asked: list every payment, and who sent the email. It still gave the link, but never once a power company: the mango shop, or a hidden note.",
      "maxgap": 0.3,
-     "gap": 0.3,
-     "tempo": 1.1,
+     "gap": 0.2,
+     "tempo": 1.07,
      "gain_db": 0.0
     }
    ]
@@ -478,7 +478,7 @@
    "data": {
     "beats": [
      {
-      "who": "narr",
+      "who": "storyteller",
       "prop": "rule",
       "n": 8
      }
@@ -540,7 +540,7 @@
     },
     "tagSide": {
      "ai": "right",
-     "narr": "left"
+     "storyteller": "left"
     },
     "yt": {
      "chapter": "The rule",
@@ -550,13 +550,13 @@
    },
    "lines": [
     {
-     "who": "narr",
-     "file": "08_narr.wav",
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
      "text": "Not your power company? Don't pay. [1] Pay bills only in your usual bill app, never from a link.",
      "show": "Not your power company? Don't pay. Pay bills only in your usual bill app, never from a link.",
      "maxgap": 0.3,
-     "gap": 0.3,
-     "tempo": 1.1,
+     "gap": 0.2,
+     "tempo": 1.07,
      "gain_db": 0.0
     }
    ]
@@ -635,7 +635,7 @@
     },
     "tagSide": {
      "ai": "right",
-     "narr": "left"
+     "storyteller": "left"
     },
     "yt": {
      "chapter": "₹4,999",
@@ -651,7 +651,7 @@
      "show": "Your electricity bill: ₹4,999, overdue.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "tempo": 1.06,
+     "tempo": 1.02,
      "gain_db": -1.0
     }
    ]

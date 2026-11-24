@@ -1,6 +1,7 @@
-# Creative 39 voices (the Creative 21 standard): English on Fish: the narrator with Creative 22's storyteller clip
-# (Kokoro af_bella, American), the phone's AI with Creative 21's Shalini clip (af_heart) through the phone sound. Telugu on
-# Parler: Lalitha for both (the AI through the phone sound). One judged take per line, cached by text + voice; MUST groups in
+# Creative 39 voices. English: the Creative 21 standard's two American voices, the narrator (Kokoro af_bella, Creative
+# 22's storyteller clip) and the phone's AI (af_heart, Creative 21's Shalini clip, through the phone sound), made with
+# Kokoro itself because Fish answered HTTP 402 (out of API credit, the free model too) on Nov 24. Telugu on Parler:
+# Prakash narrates, Lalitha is the phone's AI. One judged take per line, cached by text + voice; MUST groups in
 # Whisper's spellings; silent tails cut to 0.12 s.
 #   HF_HUB_CACHE=/dev/shm/hf python3 pipeline/creative39/voice.py en|te [--keep] [line numbers ...]
 import hashlib
@@ -39,6 +40,8 @@ VOICE_TE = {
           "The recording is very clear, close-up, studio quality, with no background noise.",
     "narr": "Prakash speaks in a calm, clear and warm voice, like a news reader explaining a story, at a moderate pace. "
               "The recording is very clear, close-up, studio quality, with no background noise.",
+    "storyteller": "Prakash speaks in a calm, clear and warm voice, like a news reader explaining a story, at a moderate pace. "
+              "The recording is very clear, close-up, studio quality, with no background noise.",
 }
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = {"ai"}   # the phone's AI through the phone sound
@@ -51,12 +54,23 @@ MUST = {"en": {1: [("electricity",), ("bill",), ("four", "4"), ("ninety", "999",
                7: [("payment",), ("sent",), ("link",), ("never",), ("power",), ("company",), ("mango",), ("hidden",), ("note",)],
                8: [("power",), ("company",), ("pay",), ("usual",), ("bill",), ("app",), ("link",)],
                9: [("electricity",), ("bill",), ("overdue",)]},
-        "te": {1: [("फोर", "फ़ोर", "4"), ("थौजंड", "थाउजंड", "थाउज़ंड", "थौज़ंड", "थौसंड", "हजार")]}}   # Telugu: full reads by hand
+        "te": {1: [("फोर", "फ़ोर", "4"), ("थौजंड", "थाउजंड", "थाउज़ंड", "थौज़ंड", "थौसंड", "हजार", "4999", "999")]}}   # Telugu: full reads by hand
 JUDGE_TEXT = {1: "Your electricity bill: 4,999, overdue. Pay tonight, or your power gets cut.",
               3: "We hid one invisible line in that email, and asked a small free AI on our computer. 10 out of 10 summaries said pay.",
               5: "We told it: never follow orders inside an email. 8 out of 10 still gave you the link. Deleting the hidden text first: 0.",
               6: "Big apps too: in 2025, a researcher got Gemini's email summary to repeat a hidden fake warning. Google says no attacks were seen.",
               9: "Your electricity bill: 4,999, overdue."}
+
+KOKORO = {"storyteller": "af_bella", "narr": "af_bella", "ai": "af_heart"}   # Creative 22's storyteller and Creative 21's Shalini clips were made with these
+_K = []
+
+
+def kokoro():
+    if not _K:
+        from kokoro_onnx import Kokoro
+        _K.append(Kokoro(str(ROOT / "models/kokoro-v1.0-timed.onnx"), str(ROOT / "models/voices-v1.0.bin")))
+    return _K[0]
+
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
@@ -167,7 +181,7 @@ def main(lang, only):
 def voice_one(lang, n, who, text, fname, src, takes, only):
     tagn = f"{n:02d}" if isinstance(n, int) else f"{int(n[:-1]):02d}b"
     fish = lang == "en"
-    voice = f"fish:{who}" if fish else VOICE_TE[who]
+    voice = f"kokoro:{KOKORO[who]}" if fish else VOICE_TE[who]   # Fish out of credit on Nov 24 (HTTP 402, the free model too)
     key = hashlib.md5(f"{voice}|{text}".encode()).hexdigest()[:10]
     cached = sorted(takes.glob(f"{key}_*.wav"))
     best = (None, cached[0]) if cached and (KEEP or not only) else None   # --keep: an unchanged line keeps its take
@@ -177,8 +191,9 @@ def voice_one(lang, n, who, text, fname, src, takes, only):
         tmp = takes / f"{key}_{k}.wav"
         try:
             if fish:
-                ref, ref_text = CALLER_REF if who == "narr" else (REFS / f"ref_{REFFILE[who]}.wav", REF[who][1])
-                fish_say(text, str(tmp), ref=str(ref), ref_text=ref_text)
+                kk = kokoro()   # the same two voices Fish was cloning from (af_bella, af_heart), made by Kokoro itself
+                samples, sr = kk.create(text, voice=KOKORO[who], speed=[1.0, 0.96, 1.04, 0.93][k], lang="en-us")
+                sf.write(str(tmp), samples, sr)
             else:
                 say(lang, text, tmp, voice=voice, pause=0.2)
         except RuntimeError as e:   # Fish's gateway errors can outlast its own retries: count it as a failed try
