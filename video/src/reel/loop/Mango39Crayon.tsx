@@ -109,7 +109,8 @@ const StMango: React.FC<SP> = ({ s }) => {
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     if (i > 0 && beats[i - 1].prop !== b.prop) sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.25} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("z")} at={3} src="reel/sfx_buzz.wav" vol={0.35} />, <Sfx key={k("g")} at={cue(i, 1, 0.5)} src="reel/sfx_glitch.wav" vol={0.3} />);
-    if (b.prop === "verdict") { sfx.push(<Sfx key={k("m")} at={at + 2} src="audio/sfx_whoosh.wav" vol={0.2} />); for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("t" + q)} at={at + 18 + q * 3} src="audio/sfx_pop.wav" vol={0.16} />); sfx.push(<Sfx key={k("h")} at={at + 48} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />); }
+    if (b.prop === "reveal") { const v0 = cue(i, 1, 0.2) + 8; for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("t" + q)} at={v0 + q * 3} src="audio/sfx_pop.wav" vol={0.16} />); sfx.push(<Sfx key={k("h")} at={v0 + 30} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />); }
+    if (b.prop === "verdict") sfx.push(<Sfx key={k("m")} at={at + 2} src="audio/sfx_whoosh.wav" vol={0.2} />);
     if (b.prop === "guard") { for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("t" + q)} at={cue(i, 1, 0.4) + q * 3} src="audio/sfx_pop.wav" vol={0.16} />); sfx.push(<Sfx key={k("x")} at={cue(i, 1, 0.4) + 32} src="reel/sfx_buzz.wav" vol={0.32} />, <Sfx key={k("ok")} at={cue(i, 2, 0.3)} src="audio/sfx_success.wav" vol={0.3} />); }
     if (b.prop === "real") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "ask") { [0, 5, 10, 15, 20, 25, 30, 35].forEach((d2) => sfx.push(<Sfx key={k("k" + d2)} at={at + 2 + d2} src="audio/sfx_tick.wav" vol={0.2} />)); sfx.push(<Sfx key={k("x")} at={cue(i, 1, 0.3)} src="reel/sfx_buzz.wav" vol={0.28} />, <Sfx key={k("s")} at={cue(i, 2, 0.2) + 24} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />); }
@@ -138,13 +139,16 @@ const StMango: React.FC<SP> = ({ s }) => {
           const kE = seg(f, cu(1, 0.2) - 4, cu(1, 0.2) + 8);
           if (kE < 1) summary(c, T, 1 - kE);
           email(c, T, kE, 0);
-          chip(c, T.story, W / 2, 330, "#1e293b", "#f8fafc", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), fit(c, T.story, W - 140, 38, 800));
+          chip(c, T.story, W / 2, 400, "#1e293b", "#f8fafc", seg(f, cu(1, 0.1), cu(1, 0.1) + 8), fit(c, T.story, W - 140, 34, 800));
+          const kV = seg(f, cu(1, 0.2) + 8, cu(1, 0.2) + 36);   // the verdict on screen by ~8 s (Bujji, Creative 28's 7-day read)
+          if (kV > 0) { c.textAlign = "center"; c.font = SANS(fit(c, T.verdict, W - 80, 60, 900), 900); c.fillStyle = "#fecaca"; c.fillText(T.verdict, W / 2, 262); tiles(c, Array(10).fill(RED), (W - 908) / 2, 286, kV); }
         } else if (P === "verdict") {
           phoneBody(c); email(c, T, 1, seg(f, ln.from + 2, ln.from + 22));   // the highlighter finds the line at once
-          const kT = seg(f, ln.from + 18, ln.from + 46);   // the verdict on screen before 10 s (Bujji, Creative 28's 7-day read)
-          c.textAlign = "center"; c.font = SANS(fit(c, T.verdict, W - 80, 66, 900), 900); c.fillStyle = kT > 0 ? "#fecaca" : "rgba(0,0,0,0)"; c.fillText(T.verdict, W / 2, 200);
-          tiles(c, Array(10).fill(RED), (W - 908) / 2, 240, kT);
-          chip(c, T.smallAI, W / 2, 380, "#1e293b", "#f8fafc", seg(f, cu(1, 0.2) - 2, cu(1, 0.2) + 6), fit(c, T.smallAI, W - 120, 36, 800));
+          const kT = 1;   // the tiles came in on the line before
+          c.textAlign = "center"; c.font = SANS(fit(c, T.verdict, W - 80, 60, 900), 900); c.fillStyle = kT > 0 ? "#fecaca" : "rgba(0,0,0,0)"; c.fillText(T.verdict, W / 2, 262);   // stills: clear of the header
+          tiles(c, Array(10).fill(RED), (W - 908) / 2, 286, kT);
+          const kS = seg(f, cu(1, 0.2) - 2, cu(1, 0.2) + 6);
+          if (kS > 0) { c.save(); c.globalAlpha = clamp(kS * 3); c.font = SANS(fit(c, T.smallAI, W - 100, 34, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.smallAI, W / 2, 400); c.restore(); }
         } else if (P === "why") {
           const k1 = seg(f, ln.from + 2, ln.from + 10), k2 = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 8);
           c.textAlign = "center"; c.font = SANS(44, 900); c.fillStyle = "#e2e8f0"; c.fillText(T.seeLab, 280, 330); c.fillText(T.readLab, 800, 330);

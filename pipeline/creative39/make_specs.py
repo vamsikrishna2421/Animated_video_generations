@@ -24,7 +24,7 @@ LINES = {
     6: ("storyteller", "real", "Big apps too: in 2025, a researcher got Gemini's email summary [1] to repeat a hidden fake warning. Google says no attacks were seen.",
         "పెద్ద యాప్స్ కూడా: పోయిన ఏడాది ఒక రీసెర్చర్, జెమిని ఈమెయిల్ సమ్మరీతో [1] దాచిన ఫేక్ వార్నింగ్ ని చెప్పించాడు. దాడులు ఏమీ కనిపించలేదని గూగుల్ అంది."),
     7: ("storyteller", "ask", "Then we asked: list every payment, and who sent the email. [1] It still gave the link, [2] but never once a power company: the mango shop, or a hidden note.",
-        "తర్వాత అడిగాం: ఇందులో ఉన్న పేమెంట్స్ అన్నీ చెప్పు, ఎవరు పంపారో కూడా. [1] అయినా లింక్ ఇచ్చింది. [2] కానీ ఒక్కసారి కూడా కరెంట్ కంపెనీ పేరు రాలేదు: మామిడి షాప్, లేదా దాచిన నోట్."),
+        "తర్వాత అడిగాం: ఇందులో ఉన్న పేమెంట్స్ అన్నీ చెప్పు, ఎవరు పంపారో కూడా. [1] అయినా లింక్ ఇచ్చింది. | [2] కానీ కరెంట్ కంపెనీ పేరు, ఒక్కసారి కూడా రాలేదు. మామిడి షాప్, లేదా దాచిన నోట్."),
     8: ("storyteller", "rule", "Not your power company? Don't pay. [1] Pay bills only in your usual bill app, never from a link.",
         "కరెంట్ కంపెనీ కాదా? కట్టొద్దు. [1] బిల్లు, మీరు ఎప్పుడూ వాడే బిల్ యాప్ లోనే కట్టండి. లింక్ నుంచి కాదు."),
     9: ("ai", "loop", "Your electricity bill: four thousand nine ninety-nine, [1] overdue.", "మీ కరెంట్ బిల్లు, ఫోర్ థౌజండ్ నైన్ నైంటీ నైన్, [1] బాకీ ఉంది."),
@@ -41,7 +41,7 @@ SHOW_TE = {
     4: "You can't see it: white colour, size zero. The chatbot reads every word. It takes the email's words as orders.",
     5: "We told it not to obey orders inside the email. Still 8 of 10 gave the link. Remove the hidden line first: zero.",
     6: "Big apps too: last year a researcher got Gemini's email summary to say a hidden fake warning. Google said no attacks were seen.",
-    7: "Then we asked: list all the payments in it, and who sent it. It still gave the link. But not once did a power company's name come up: the mango shop, or a hidden note.",
+    7: "Then we asked: list all the payments in it, and who sent it. It still gave the link. <pause 0.4> But a power company's name never came up, not once. The mango shop, or a hidden note.",   # Parler mumbled the one-take line
     8: "Not your power company? Don't pay. Pay bills only in the bill app you always use. Not from a link.",
     9: "Your electricity bill, ₹4,999, is due.",
 }
