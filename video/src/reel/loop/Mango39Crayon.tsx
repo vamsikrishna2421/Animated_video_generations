@@ -169,7 +169,7 @@ const StMango: React.FC<SP> = ({ s }) => {
           }
           tiles(c, [RED, RED, RED, RED, RED, RED, RED, RED, AMBER, GREEN], (W - 908) / 2, 760, kT);
           if (kT > 0.9) { c.textAlign = "center"; c.font = SANS(fit(c, T.guardStat, W - 100, 58, 900), 900); c.fillStyle = "#fecaca"; c.fillText(T.guardStat, W / 2, 960);
-            c.font = SANS(fit(c, T.guardNote, W - 80, 40, 800), 800); c.fillStyle = "#cbd5e1"; c.fillText(T.guardNote, W / 2, 1020); }
+            c.font = SANS(fit(c, T.guardNote, W - 80, 46, 800), 800); c.fillStyle = "#cbd5e1"; c.fillText(T.guardNote, W / 2, 1020); }
           chip(c, T.stripStat, W / 2, 1180, "#14532d", "#f0fdf4", seg(f, cu(2, 0.1) - 2, cu(2, 0.1) + 6), fit(c, T.stripStat, W - 100, 50, 900));
         } else if (P === "real") {
           const k0 = seg(f, ln.from + 2, ln.from + 12), k1 = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 8);
@@ -179,12 +179,18 @@ const StMango: React.FC<SP> = ({ s }) => {
             c.fillStyle = "#f8fafc"; rrect(c, 60, 400, W - 120, 700, 28); c.fill();
             c.fillStyle = "#0f172a"; rrect(c, 60, 400, W - 120, 100, 28); c.fill(); c.fillRect(60, 460, W - 120, 40);
             c.textAlign = "left"; c.font = SANS(36, 900); c.fillStyle = "#f8fafc"; c.fillText(T.realDate, 100, 466);
-            c.font = SANS(50, 900); c.fillStyle = INK; wrap(c, T.realTitle, W - 220).slice(0, 4).forEach((t, q) => c.fillText(t, 100, 590 + q * 62));
+            c.font = SANS(50, 900); c.fillStyle = INK; wrap(c, T.realTitle, W - 220).slice(0, 3).forEach((t, q) => c.fillText(t, 100, 570 + q * 60));
             c.restore();
           }
-          if (k1 > 0) {
-            c.save(); c.globalAlpha = clamp(k1 * 3); c.textAlign = "left"; c.font = SANS(46, 800); c.fillStyle = "#334155";
-            wrap(c, T.realGoogle, W - 220).slice(0, 3).forEach((t, q) => c.fillText(t, 100, 880 + q * 56));
+          if (k1 > 0) {   // render review: the card sat still for 10 s; the warning drops in on the cue
+            c.save(); c.globalAlpha = clamp(k1 * 3); c.translate(0, (1 - easeOut(clamp(k1 * 1.5))) * 30);
+            c.fillStyle = "#fee2e2"; rrect(c, 90, 720, W - 180, 130, 18); c.fill(); c.strokeStyle = RED; c.lineWidth = 5; rrect(c, 90, 720, W - 180, 130, 18); c.stroke();
+            c.textAlign = "left"; c.font = SANS(40, 900); c.fillStyle = "#7f1d1d"; wrap(c, T.realWarn, W - 240).slice(0, 2).forEach((t, q) => c.fillText(t, 120, 774 + q * 48)); c.restore();
+          }
+          const kG = seg(f, cu(1, 0.7) - 4, cu(1, 0.7) + 6);
+          if (kG > 0) {
+            c.save(); c.globalAlpha = clamp(kG * 3); c.textAlign = "left"; c.font = SANS(46, 800); c.fillStyle = "#334155";
+            wrap(c, T.realGoogle, W - 220).slice(0, 2).forEach((t, q) => c.fillText(t, 100, 935 + q * 56));
             c.font = SANS(fit(c, T.realSrc, W - 200, 36, 700), 700); c.fillStyle = "#64748b"; c.fillText(T.realSrc, 100, 1070); c.restore();
           }
         } else if (P === "ask") {
@@ -204,7 +210,7 @@ const StMango: React.FC<SP> = ({ s }) => {
           c.restore();
           if (k2 >= 1) stamp(c, T.notPower, W / 2, PY + 930, 56, RED, seg(f, cu(2, 0.2) + 22, cu(2, 0.2) + 30));
         } else if (P === "rule") {
-          const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 8);
+          const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, ln.from + 10, ln.from + 20);   // render review: both halves on the card
           stamp(c, T.rule1, W / 2, 520, 96, RED, k0, -0.05);   // render review: the rule was too small
           if (k1 > 0) {
             c.save(); c.globalAlpha = clamp(k1 * 3); c.translate(0, (1 - easeOut(clamp(k1 * 1.5))) * 40);

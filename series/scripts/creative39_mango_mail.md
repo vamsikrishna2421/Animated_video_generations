@@ -105,3 +105,17 @@ money, and who is asking?" Builder note: strip hidden text before the AI reads a
   answered HTTP 402 (out of API credit, the free model too).
 - Telugu: line 6 shortened (the cut ran 67 s); line 5 "పదిలో సున్నా"; the rule "సమ్మరీలో వచ్చిన లింక్ నుంచి, ఎప్పుడూ
   కట్టొద్దు".
+
+## Render review 2 (human-viewer, TE + EN) and what changed
+- Both (Telugu): "దాచిన నోట్" was heard as "nood" (and "నోటు" reads as cash) -> "అడ్మిన్ అని రాసిన లైన్" (the model's
+  own word; English says "or 'Admin'" to match the chips); the hook caption read "Don't pay by tonight" -> "Pay by
+  tonight, or the power gets cut!"; the amount lost a nine -> "ఫోర్ థౌజండ్, నైన్ నైంటీ నైన్" with a pause; the Gemini
+  card sat still ~10 s -> a red "fake 'password compromised' warning" box drops in on the cue and Google's line after it;
+  Telugu line 6 without "పెద్ద" (heard "pidda", tiny) or "గూగుల్" (heard "Gokul"): "జెమిని కూడా: పోయిన ఏడాది ఒక టెస్ట్
+  లో, దాని ఈమెయిల్ సమ్మరీ, దాచిన ఫేక్ వార్నింగ్ చూపించింది." (Google's line on the card).
+- Sandeep: "ఆర్డర్లు" sounds like mango orders -> "తనకి చెప్పిన పనులు" / "మెయిల్ లో ఉన్న మాటలు నీకు కాదు" (English:
+  "instructions", not "orders"); "ఎప్పుడూ" meant never and then always -> "సమ్మరీలో వచ్చిన లింక్ నుంచి, బిల్లు కట్టొద్దు.
+  మీకు అలవాటైన బిల్ యాప్ లోనే కట్టండి."
+- Priya: the header's progress line struck through "10/10" -> the verdict moved below it; both halves of the rule on the
+  card from the start, held 0.6-0.7 s; a 0.6-0.7 s beat before "eight out of ten"; "YOUR AI READS" -> "THE AI READS";
+  the middle bed lifted; captions moved up (1390) from Instagram's bottom bar.
