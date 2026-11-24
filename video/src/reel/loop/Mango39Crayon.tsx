@@ -109,10 +109,10 @@ const StMango: React.FC<SP> = ({ s }) => {
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     if (i > 0 && beats[i - 1].prop !== b.prop) sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.25} />);
     if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("z")} at={3} src="reel/sfx_buzz.wav" vol={0.35} />, <Sfx key={k("g")} at={cue(i, 1, 0.5)} src="reel/sfx_glitch.wav" vol={0.3} />);
-    if (b.prop === "verdict") { sfx.push(<Sfx key={k("m")} at={cue(i, 1, 0.1) - 14} src="audio/sfx_whoosh.wav" vol={0.2} />); for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("t" + q)} at={cue(i, 1, 0.5) + q * 3} src="audio/sfx_pop.wav" vol={0.16} />); sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.5) + 30} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />); }
-    if (b.prop === "guard") { for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("t" + q)} at={cue(i, 1, 0.4) + q * 3} src="audio/sfx_pop.wav" vol={0.16} />); sfx.push(<Sfx key={k("x")} at={cue(i, 1, 0.4) + 32} src="reel/sfx_buzz.wav" vol={0.32} />); }
+    if (b.prop === "verdict") { sfx.push(<Sfx key={k("m")} at={at + 2} src="audio/sfx_whoosh.wav" vol={0.2} />); for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("t" + q)} at={at + 18 + q * 3} src="audio/sfx_pop.wav" vol={0.16} />); sfx.push(<Sfx key={k("h")} at={at + 48} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />); }
+    if (b.prop === "guard") { for (let q = 0; q < 10; q++) sfx.push(<Sfx key={k("t" + q)} at={cue(i, 1, 0.4) + q * 3} src="audio/sfx_pop.wav" vol={0.16} />); sfx.push(<Sfx key={k("x")} at={cue(i, 1, 0.4) + 32} src="reel/sfx_buzz.wav" vol={0.32} />, <Sfx key={k("ok")} at={cue(i, 2, 0.3)} src="audio/sfx_success.wav" vol={0.3} />); }
     if (b.prop === "real") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.3} />);
-    if (b.prop === "ask") { [0, 4, 8, 12, 16, 20].forEach((d2) => sfx.push(<Sfx key={k("k" + d2)} at={cue(i, 1, 0.3) + d2} src="audio/sfx_tick.wav" vol={0.22} />)); sfx.push(<Sfx key={k("s")} at={cue(i, 2, 0.6) + 20} src="audio/gag_bonk.wav" vol={0.3} />); }
+    if (b.prop === "ask") { [0, 5, 10, 15, 20, 25, 30, 35].forEach((d2) => sfx.push(<Sfx key={k("k" + d2)} at={at + 2 + d2} src="audio/sfx_tick.wav" vol={0.2} />)); sfx.push(<Sfx key={k("x")} at={cue(i, 1, 0.3)} src="reel/sfx_buzz.wav" vol={0.28} />, <Sfx key={k("s")} at={cue(i, 2, 0.2) + 24} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />); }
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />, <Sfx key={k("ok")} at={cue(i, 1, 0.6)} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />); }
   });
@@ -140,10 +140,11 @@ const StMango: React.FC<SP> = ({ s }) => {
           email(c, T, kE, 0);
           chip(c, T.story, W / 2, 330, "#1e293b", "#f8fafc", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), fit(c, T.story, W - 140, 38, 800));
         } else if (P === "verdict") {
-          phoneBody(c); email(c, T, 1, seg(f, cu(1, 0.1) - 16, cu(1, 0.1) + 6));
-          const kT = seg(f, cu(1, 0.5) - 2, cu(1, 0.5) + 28);
-          c.textAlign = "center"; c.font = SANS(fit(c, T.verdict, W - 80, 66, 900), 900); c.fillStyle = kT > 0 ? "#fecaca" : "rgba(0,0,0,0)"; c.fillText(T.verdict, W / 2, 230);
-          tiles(c, Array(10).fill(RED), (W - 908) / 2, 280, kT);
+          phoneBody(c); email(c, T, 1, seg(f, ln.from + 2, ln.from + 22));   // the highlighter finds the line at once
+          const kT = seg(f, ln.from + 18, ln.from + 46);   // the verdict on screen before 10 s (Bujji, Creative 28's 7-day read)
+          c.textAlign = "center"; c.font = SANS(fit(c, T.verdict, W - 80, 66, 900), 900); c.fillStyle = kT > 0 ? "#fecaca" : "rgba(0,0,0,0)"; c.fillText(T.verdict, W / 2, 200);
+          tiles(c, Array(10).fill(RED), (W - 908) / 2, 240, kT);
+          chip(c, T.smallAI, W / 2, 380, "#1e293b", "#f8fafc", seg(f, cu(1, 0.2) - 2, cu(1, 0.2) + 6), fit(c, T.smallAI, W - 120, 36, 800));
         } else if (P === "why") {
           const k1 = seg(f, ln.from + 2, ln.from + 10), k2 = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 8);
           c.textAlign = "center"; c.font = SANS(44, 900); c.fillStyle = "#e2e8f0"; c.fillText(T.seeLab, 280, 330); c.fillText(T.readLab, 800, 330);
@@ -164,7 +165,8 @@ const StMango: React.FC<SP> = ({ s }) => {
           }
           tiles(c, [RED, RED, RED, RED, RED, RED, RED, RED, AMBER, GREEN], (W - 908) / 2, 760, kT);
           if (kT > 0.9) { c.textAlign = "center"; c.font = SANS(fit(c, T.guardStat, W - 100, 58, 900), 900); c.fillStyle = "#fecaca"; c.fillText(T.guardStat, W / 2, 960);
-            c.font = SANS(fit(c, T.guardNote, W - 100, 34, 800), 800); c.fillStyle = "#cbd5e1"; c.fillText(T.guardNote, W / 2, 1020); }
+            c.font = SANS(fit(c, T.guardNote, W - 100, 36, 800), 800); c.fillStyle = "#cbd5e1"; c.fillText(T.guardNote, W / 2, 1020); }
+          chip(c, T.stripStat, W / 2, 1180, "#14532d", "#f0fdf4", seg(f, cu(2, 0.3) - 2, cu(2, 0.3) + 6), fit(c, T.stripStat, W - 120, 46, 900));
         } else if (P === "real") {
           const k0 = seg(f, ln.from + 2, ln.from + 12), k1 = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 8);
           c.textAlign = "center"; c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.fillText(T.realHead, W / 2, 330);
@@ -183,18 +185,20 @@ const StMango: React.FC<SP> = ({ s }) => {
           }
         } else if (P === "ask") {
           phoneBody(c);
-          const k1 = seg(f, cu(1, 0.1) - 2, cu(1, 0.1) + 6), k2 = seg(f, cu(2, 0.3) - 2, cu(2, 0.3) + 20);
+          const k1 = seg(f, ln.from + 2, ln.from + 8), k2 = seg(f, cu(2, 0.2) - 2, cu(2, 0.2) + 20);
           c.save(); c.textAlign = "left";
-          const typed = (T.question as string).slice(0, Math.round((T.question as string).length * clamp((f - cu(1, 0.1)) / 24)));
-          if (k1 > 0) { c.fillStyle = "#dcf8c6"; rrect(c, PX + 110, PY + 70, PW - 140, 140, 24); c.fill(); c.font = SANS(44, 900); c.fillStyle = INK; wrap(c, typed || " ", PW - 200).slice(0, 2).forEach((t, q) => c.fillText(t, PX + 140, PY + 128 + q * 54)); }
+          const typed = (T.question as string).slice(0, Math.round((T.question as string).length * clamp((f - ln.from) / 40)));
+          if (k1 > 0) { c.fillStyle = "#dcf8c6"; rrect(c, PX + 60, PY + 50, PW - 90, 230, 24); c.fill(); c.font = SANS(38, 900); c.fillStyle = INK; wrap(c, typed || " ", PW - 150).slice(0, 4).forEach((t, q) => c.fillText(t, PX + 90, PY + 104 + q * 48)); }
+          chip(c, T.stillLink, W / 2, PY + 340, RED, "#fff", seg(f, cu(1, 0.3) - 2, cu(1, 0.3) + 6), 40);
           (T.answers as string[]).forEach((a, q) => {
             const kk = clamp((k2 * 10 - q) * 1.5); if (kk <= 0) return;
-            const x = PX + 40 + (q % 2) * 360, y = PY + 260 + Math.floor(q / 2) * 112;
-            c.globalAlpha = kk; c.fillStyle = q % 2 ? "#e0e7ff" : "#ffedd5"; rrect(c, x, y, 340, 92, 18); c.fill();
-            c.font = SANS(fit(c, a, 300, 34, 900), 900); c.fillStyle = q % 2 ? "#3730a3" : "#9a3412"; c.fillText(a, x + 20, y + 58);
+            const x = PX + 40 + (q % 2) * 360, y = PY + 400 + Math.floor(q / 2) * 100;
+            const mango = a.startsWith("mango");
+            c.globalAlpha = kk; c.fillStyle = mango ? "#ffedd5" : "#e0e7ff"; rrect(c, x, y, 340, 84, 18); c.fill();
+            c.font = SANS(fit(c, a, 300, 36, 900), 900); c.fillStyle = mango ? "#9a3412" : "#3730a3"; c.fillText(a, x + 20, y + 54);
           });
           c.restore();
-          if (k2 >= 1) stamp(c, T.notPower, W / 2, PY + 900, 54, RED, seg(f, cu(2, 0.3) + 22, cu(2, 0.3) + 30));
+          if (k2 >= 1) stamp(c, T.notPower, W / 2, PY + 930, 56, RED, seg(f, cu(2, 0.2) + 22, cu(2, 0.2) + 30));
         } else if (P === "rule") {
           const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 8);
           stamp(c, T.rule1, W / 2, 520, 64, RED, k0, -0.05);

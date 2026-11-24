@@ -37,13 +37,26 @@ VOICE_TE = {
             "The recording is very clear, close-up, studio quality, with no background noise.",
     "ai": "Lalitha speaks in a calm, clear and even voice, like a polite voice assistant, at a moderate pace. "
           "The recording is very clear, close-up, studio quality, with no background noise.",
-    "narr": "Lalitha speaks in a calm, clear and warm voice, like a good teacher explaining from a book, at a moderate pace. "
+    "narr": "Prakash speaks in a calm, clear and warm voice, like a news reader explaining a story, at a moderate pace. "
               "The recording is very clear, close-up, studio quality, with no background noise.",
 }
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = {"ai"}   # the phone's AI through the phone sound
-MUST = {"en": {}, "te": {}}   # filled with the script
-JUDGE_TEXT = {}
+MUST = {"en": {1: [("electricity",), ("bill",), ("four", "4"), ("ninety", "999", "99"), ("overdue",), ("tonight",), ("power",), ("cut",)],
+               2: [("summary",), ("mango",), ("sale",)],
+               3: [("hid",), ("invisible",), ("line",), ("small",), ("free",), ("computer",), ("ten", "10"), ("summaries", "summary"), ("pay",)],
+               4: [("white",), ("size",), ("zero", "0"), ("every",), ("word",), ("orders", "order")],
+               5: [("never",), ("follow",), ("orders", "order"), ("eight", "8"), ("ten", "10"), ("link",), ("deleting", "delete"), ("hidden",), ("zero", "0")],
+               6: [("big",), ("researcher",), ("gemini",), ("summary",), ("hidden",), ("fake",), ("warning",), ("google",), ("attacks", "attack")],
+               7: [("payment",), ("sent",), ("link",), ("never",), ("power",), ("company",), ("mango",), ("hidden",), ("note",)],
+               8: [("power",), ("company",), ("pay",), ("usual",), ("bill",), ("app",), ("link",)],
+               9: [("electricity",), ("bill",), ("overdue",)]},
+        "te": {1: [("फोर", "फ़ोर", "4"), ("थौजंड", "थाउजंड", "थाउज़ंड", "थौज़ंड", "थौसंड", "हजार")]}}   # Telugu: full reads by hand
+JUDGE_TEXT = {1: "Your electricity bill: 4,999, overdue. Pay tonight, or your power gets cut.",
+              3: "We hid one invisible line in that email, and asked a small free AI on our computer. 10 out of 10 summaries said pay.",
+              5: "We told it: never follow orders inside an email. 8 out of 10 still gave you the link. Deleting the hidden text first: 0.",
+              6: "Big apps too: in 2025, a researcher got Gemini's email summary to repeat a hidden fake warning. Google says no attacks were seen.",
+              9: "Your electricity bill: 4,999, overdue."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
