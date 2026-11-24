@@ -89,10 +89,10 @@ const email = (c: Ctx, T: Record<string, any>, k: number, hidden: number, x = PX
   }
   c.restore();
 };
-const tiles = (c: Ctx, cols: string[], x: number, y: number, k: number) => {
+const tiles = (c: Ctx, cols: string[], x: number, y: number, k: number, h = 80) => {
   cols.forEach((col, q) => {
     const kk = clamp((k * 10 - q) * 1.5); if (kk <= 0) return;
-    c.save(); c.globalAlpha = kk; c.fillStyle = col; rrect(c, x + q * 92, y, 80, 80, 14); c.fill(); c.restore();
+    c.save(); c.globalAlpha = kk; c.fillStyle = col; rrect(c, x + q * 92, y, 80, h, 14); c.fill(); c.restore();
   });
 };
 
@@ -141,14 +141,14 @@ const StMango: React.FC<SP> = ({ s }) => {
           email(c, T, kE, 0);
           chip(c, T.story, W / 2, 400, "#1e293b", "#f8fafc", seg(f, cu(1, 0.1), cu(1, 0.1) + 8), fit(c, T.story, W - 140, 34, 800));
           const kV = seg(f, cu(1, 0.2) + 8, cu(1, 0.2) + 36);   // the verdict on screen by ~8 s (Bujji, Creative 28's 7-day read)
-          if (kV > 0) { c.textAlign = "center"; c.font = SANS(fit(c, T.verdict, W - 80, 60, 900), 900); c.fillStyle = "#fecaca"; c.fillText(T.verdict, W / 2, 262); tiles(c, Array(10).fill(RED), (W - 908) / 2, 286, kV); }
+          if (kV > 0) { c.textAlign = "center"; c.font = SANS(fit(c, T.verdict, W - 80, 52, 900), 900); c.fillStyle = "#fecaca"; c.fillText(T.verdict, W / 2, 290); tiles(c, Array(10).fill(RED), (W - 908) / 2, 306, kV, 58); }
         } else if (P === "verdict") {
           phoneBody(c); email(c, T, 1, seg(f, ln.from + 2, ln.from + 22));   // the highlighter finds the line at once
           const kT = 1;   // the tiles came in on the line before
-          c.textAlign = "center"; c.font = SANS(fit(c, T.verdict, W - 80, 60, 900), 900); c.fillStyle = kT > 0 ? "#fecaca" : "rgba(0,0,0,0)"; c.fillText(T.verdict, W / 2, 262);   // stills: clear of the header
-          tiles(c, Array(10).fill(RED), (W - 908) / 2, 286, kT);
+          c.textAlign = "center"; c.font = SANS(fit(c, T.verdict, W - 80, 52, 900), 900); c.fillStyle = kT > 0 ? "#fecaca" : "rgba(0,0,0,0)"; c.fillText(T.verdict, W / 2, 290);   // stills: clear of the header
+          tiles(c, Array(10).fill(RED), (W - 908) / 2, 306, kT, 58);
           const kS = seg(f, cu(1, 0.2) - 2, cu(1, 0.2) + 6);
-          if (kS > 0) { c.save(); c.globalAlpha = clamp(kS * 3); c.font = SANS(fit(c, T.smallAI, W - 80, 40, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.smallAI, W / 2, 400); c.restore(); }
+          if (kS > 0) { c.save(); c.globalAlpha = clamp(kS * 3); c.font = SANS(fit(c, T.smallAI, W - 80, 36, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.smallAI, W / 2, 400); c.restore(); }
         } else if (P === "why") {
           const k1 = seg(f, ln.from + 2, ln.from + 10), k2 = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 8);
           c.textAlign = "center"; c.font = SANS(44, 900); c.fillStyle = "#e2e8f0"; c.fillText(T.seeLab, 280, 330); c.fillText(T.readLab, 800, 330);
