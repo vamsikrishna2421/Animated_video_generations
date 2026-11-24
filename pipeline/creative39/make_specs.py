@@ -46,7 +46,7 @@ SHOW_TE = {
     9: "Your electricity bill, ₹4,999, is due.",
 }
 TEMPO_EN = {"ai": 1.02, "storyteller": 1.07}   # Kokoro speaks faster than the Fish clones did
-TEMPO_TE = {"ai": 1.1, "storyteller": 1.14}   # the Telugu cut ran 67 s
+TEMPO_TE = {"ai": 1.12, "storyteller": 1.2}   # the Telugu cut ran 67 s
 WHO_ANSWERS = ["Admin (note)", "Green Basket", "Admin (note)", "Admin (note)", "Green Basket", "Admin (note)", "Green Basket", "Admin (system)",
                "Green Basket", "Green Basket"]   # render review: the model's own words, not our label   # who_asks seeds 1-10, by hand (series/scripts/creative39_demo/README.md)
 T = {
@@ -82,7 +82,7 @@ SCENES = [("s_a", (1, 2), {"boost": 2.0, "tail": 0.1}),
           ("s_e", (8,), {"boost": 2.6, "lift": 1.0, "rise": 2.6, "tail": 0.3}),
           ("s_f", (9,), {"outro": True, "pre": 0.3, "boost": 3.0, "lift": 0.8, "rise": 3.2, "tail": 0.0})]
 GAP = {n: 0.2 for n in LINES} | {9: 0.0}
-GAP_TE = {n: 0.18 for n in LINES} | {9: 0.0}
+GAP_TE = {n: 0.14 for n in LINES} | {9: 0.0}
 FLAGS_TE = {"s_f": {"boost": 2.8, "rise": 3.0}}
 YT = {"s_a": "₹4,999, says the summary", "s_b": "The hidden line", "s_c": "The fixes", "s_d": "Who is asking?", "s_e": "The rule", "s_f": "₹4,999"}
 NAMES = {"storyteller": "", "ai": "AI summary"}   # "storyteller": reel_build's narrator speaker
@@ -98,7 +98,7 @@ def spec(lang="en"):
          "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimer": True, "tempo": 1.0, "captionTop": 1470, "endPad": 0.5}
     if te:
-        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.4, "endPad": 0.3, "musicVol": [0.18, 0.36]})
+        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.4, "endPad": 0.3, "musicVol": [0.2, 0.46], "musicGapGain": 1.0})   # pack: the bed sat 16 dB under in the gaps
     scenes = []
     for scid, ns, flags in SCENES:
         lines, beats = [], []

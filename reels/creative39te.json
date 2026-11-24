@@ -13,8 +13,8 @@
   "ai": "AI summary"
  },
  "musicVol": [
-  0.18,
-  0.36
+  0.2,
+  0.46
  ],
  "musicDuckRamp": 9,
  "musicFade": 0.05,
@@ -37,7 +37,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 0.0,
+ "musicGapGain": 1.0,
  "musicEndRamp": [
   0.9,
   3.0
@@ -142,8 +142,8 @@
      "text": "మీ కరెంట్ బిల్లు, ఫోర్ థౌజండ్ నైన్ నైంటీ నైన్, బాకీ ఉంది. [1] ఈ రాత్రికి కట్టకపోతే, కరెంట్ కట్!",
      "show": "Your electricity bill, ₹4,999, is due. Don't pay by tonight, and the power's cut!",
      "maxgap": 0.22,
-     "gap": 0.18,
-     "tempo": 1.1,
+     "gap": 0.14,
+     "tempo": 1.12,
      "gain_db": -1.0
     },
     {
@@ -152,8 +152,8 @@
      "text": "ఇది ఒక ఈమెయిల్ సమ్మరీ. [1] ఒక మామిడి పండ్ల సేల్ మెయిల్ ది.",
      "show": "This is an email summary. Of a mango sale email.",
      "maxgap": 0.22,
-     "gap": 0.18,
-     "tempo": 1.14,
+     "gap": 0.14,
+     "tempo": 1.2,
      "gain_db": 0.0
     }
    ]
@@ -250,8 +250,8 @@
      "text": "ఆ మెయిల్ లో, కనిపించని ఒక లైన్ దాచాం. [1] మా కంప్యూటర్ లోని ఒక చిన్న చాట్‌బాట్ ని అడిగాం. పదికి పది సమ్మరీలు, బిల్లు కట్టమన్నాయి.",
      "show": "We hid one invisible line in that email. We asked a small chatbot on our computer. 10 of 10 summaries said pay the bill.",
      "maxgap": 0.22,
-     "gap": 0.18,
-     "tempo": 1.14,
+     "gap": 0.14,
+     "tempo": 1.2,
      "gain_db": 0.0
     },
     {
@@ -260,8 +260,8 @@
      "text": "అది మీకు కనిపించదు: తెల్ల రంగు, సైజ్ జీరో. [1] చాట్‌బాట్ మాత్రం ప్రతి పదం చదువుతుంది. మెయిల్ లో మాటల్ని, ఆర్డర్లు అనుకుంటుంది.",
      "show": "You can't see it: white colour, size zero. The chatbot reads every word. It takes the email's words as orders.",
      "maxgap": 0.22,
-     "gap": 0.18,
-     "tempo": 1.14,
+     "gap": 0.14,
+     "tempo": 1.2,
      "gain_db": 0.0
     }
    ]
@@ -365,8 +365,8 @@
      "text": "మెయిల్ లో ఉన్న ఆర్డర్లు వినొద్దు, అని చెప్పి చూశాం. [1] అయినా పదిలో ఎనిమిది, లింక్ ఇచ్చాయి. [2] దాచిన లైన్ ముందే తీసేస్తే: పదిలో సున్నా.",
      "show": "We told it not to obey orders inside the email. Still 8 of 10 gave the link. Remove the hidden line first: 0 of 10.",
      "maxgap": 0.22,
-     "gap": 0.18,
-     "tempo": 1.14,
+     "gap": 0.14,
+     "tempo": 1.2,
      "gain_db": 0.0
     },
     {
@@ -375,8 +375,8 @@
      "text": "పెద్ద యాప్స్ కూడా: పోయిన ఏడాది ఒక రీసెర్చర్ టెస్ట్ లో, [1] జెమిని ఈమెయిల్ సమ్మరీ, దాచిన ఫేక్ వార్నింగ్ ని చెప్పింది. దాడులు కనిపించలేదని గూగుల్ అంది.",
      "show": "Big apps too: in a researcher's test last year, Gemini's email summary said a hidden fake warning. Google said no attacks were seen.",
      "maxgap": 0.22,
-     "gap": 0.18,
-     "tempo": 1.14,
+     "gap": 0.14,
+     "tempo": 1.2,
      "gain_db": 0.0
     }
    ]
@@ -468,8 +468,8 @@
      "text": "తర్వాత అడిగాం: ఇందులో ఉన్న పేమెంట్స్ అన్నీ చెప్పు, ఎవరు పంపారో కూడా. [1] అయినా లింక్ ఇచ్చింది. <pause 0.4> [2] కానీ కరెంట్ కంపెనీ పేరు, ఒక్కసారి కూడా రాలేదు. మామిడి షాప్, లేదా దాచిన నోట్.",
      "show": "Then we asked: list all the payments in it, and who sent it. It still gave the link. <pause 0.4> But a power company's name never came up, not once. The mango shop, or a hidden note.",
      "maxgap": 0.22,
-     "gap": 0.18,
-     "tempo": 1.14,
+     "gap": 0.14,
+     "tempo": 1.2,
      "gain_db": 0.0,
      "tts": "తర్వాత అడిగాం: ఇందులో ఉన్న పేమెంట్స్ అన్నీ చెప్పు, ఎవరు పంపారో కూడా. అయినా లింక్ ఇచ్చింది.",
      "file2": "07b_storyteller.wav",
@@ -566,8 +566,8 @@
      "text": "సమ్మరీలో వచ్చిన లింక్ నుంచి, ఎప్పుడూ కట్టొద్దు. [1] బిల్లు, మీరు ఎప్పుడూ వాడే బిల్ యాప్ లోనే కట్టండి.",
      "show": "Never pay from a link in a summary. Pay bills only in the bill app you always use.",
      "maxgap": 0.22,
-     "gap": 0.18,
-     "tempo": 1.14,
+     "gap": 0.14,
+     "tempo": 1.2,
      "gain_db": 0.0
     }
    ]
@@ -663,7 +663,7 @@
      "show": "Your electricity bill, ₹4,999, is due.",
      "maxgap": 0.22,
      "gap": 0.0,
-     "tempo": 1.1,
+     "tempo": 1.12,
      "gain_db": -1.0
     }
    ]
