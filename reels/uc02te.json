@@ -333,12 +333,16 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "ఫోన్ కి తెలుసు. యాప్ చెప్పిందే నాకు తెలుస్తుంది. [1] తేదీ చెప్పకుండా పది సార్లు: పదికి పది, నూట అరవై ఎనిమిది. [2] తేదీ చెప్పి పది సార్లు: పదికి పది, ఈరోజు పేజీ, నూట నలభై రెండు.",
-     "show": "The phone knows. I only know what the app tells me. 10 times without the date: 10 of 10, ₹168. 10 times with the date: 10 of 10, today's page, ₹142.",
+     "text": "ఫోన్ కి తెలుసు. యాప్ చెప్తేనే నాకు తెలుస్తుంది. <pause 0.6> [1] తేదీ చెప్పకపోతే, పది సార్లూ నూట అరవై ఎనిమిది. [2] తేదీ చెప్తే, పది సార్లూ ఈరోజు పేజీ, నూట నలభై రెండు.",
+     "show": "The phone knows. I only know it if the app tells me. <pause 0.6> Without the date: all 10 times ₹168. With the date: all 10 times today's page, ₹142.",
      "maxgap": 0.25,
      "gap": 0.3,
      "tempo": 1.08,
-     "gain_db": -1.0
+     "gain_db": -1.0,
+     "tts": "ఫోన్ కి తెలుసు. యాప్ చెప్తేనే నాకు తెలుస్తుంది.",
+     "file2": "06b_ai.wav",
+     "tts2": "తేదీ చెప్పకపోతే, పది సార్లూ నూట అరవై ఎనిమిది. తేదీ చెప్తే, పది సార్లూ ఈరోజు పేజీ, నూట నలభై రెండు.",
+     "pause": 0.6
     },
     {
      "who": "ravi",

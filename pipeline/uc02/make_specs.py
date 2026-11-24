@@ -22,7 +22,7 @@ LINES = {
         "నేను వెతికాను: [1] పైన వచ్చిన పేజీలో ఈరోజు అని ఉంది. [2] చదివాను: ఎక్కడా తేదీ లేదు. [3] లింక్ తో జవాబు ఇచ్చాను. | [4] కానీ ఈ యాప్, ఈరోజు తేదీ నాకు చెప్పలేదు."),
     5: ("ravi", "ravi", "phone", "Doesn't every phone know the date?!", "ప్రతి ఫోన్ కి తేదీ తెలుసు కదా?!"),
     6: ("ai", "test", "test", "The phone does. I only know what the app tells me. [1] Without the date: one sixty-eight, ten times in ten. [2] Given the date: today's page, one forty-two, ten in ten.",
-        "ఫోన్ కి తెలుసు. యాప్ చెప్పిందే నాకు తెలుస్తుంది. [1] తేదీ చెప్పకుండా పది సార్లు: పదికి పది, నూట అరవై ఎనిమిది. [2] తేదీ చెప్పి పది సార్లు: పదికి పది, ఈరోజు పేజీ, నూట నలభై రెండు."),
+        "ఫోన్ కి తెలుసు. యాప్ చెప్తేనే నాకు తెలుస్తుంది. | [1] తేదీ చెప్పకపోతే, పది సార్లూ నూట అరవై ఎనిమిది. [2] తేదీ చెప్తే, పది సార్లూ ఈరోజు పేజీ, నూట నలభై రెండు."),
     7: ("ravi", "quiz", "quiz", "So what do I do? [1] A, trust the link. [2] B, ask again. [3] C, open the link.",
         "మరి నేనేం చేయాలి? [1] ఒకటి, లింక్ ని నమ్మడం. [2] రెండు, మళ్ళీ అడగడం. [3] మూడు, లింక్ తెరిచి చూడటం."),
     8: ("ai", "quiz", "answer", "C! | [1] Asked again, I said one sixty-eight, every time. [2] A link shows where I read it, not when.",
@@ -46,7 +46,7 @@ SHOW_TE = {
     3: "Then how did it go wrong?!",
     4: "I searched: the page on top said \"today\". I read it: no date anywhere. I answered with the link. <pause 0.6> But this app never told me today's date.",
     5: "Every phone knows the date, right?!",
-    6: "The phone knows. I only know what the app tells me. 10 times without the date: 10 of 10, ₹168. 10 times with the date: 10 of 10, today's page, ₹142.",
+    6: "The phone knows. I only know it if the app tells me. <pause 0.6> Without the date: all 10 times ₹168. With the date: all 10 times today's page, ₹142.",   # Parler garbled the one-take line
     7: "So what should I do? One, trust the link. Two, ask again. Three, open the link and look.",
     8: "The third one! <pause 0.6> Asked again, I said ₹168 every time. A link shows where I read it. Not when.",
     9: "What about the big apps?",
