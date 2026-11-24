@@ -54,7 +54,7 @@ MUST = {"en": {1: [("electricity",), ("bill",), ("four", "4"), ("ninety", "999",
                7: [("payment",), ("sent",), ("link",), ("never",), ("power",), ("company",), ("mango",), ("hidden",), ("note",)],
                8: [("never",), ("pay",), ("link",), ("summary",), ("usual",), ("bill",), ("app",)],
                9: [("electricity",), ("bill",), ("rupees", "rupee"), ("overdue",)]},
-        "te": {1: [("फोर", "फ़ोर", "4"), ("थौजंड", "थाउजंड", "थाउज़ंड", "थौज़ंड", "थौसंड", "हजार", "4999", "999")]}}   # Telugu: full reads by hand
+        "te": {6: [("जेमिनी", "जेमिनि", "जैमिनी", "जेमनी", "जमिनी", "जेमिन")], 1: [("फोर", "फ़ोर", "4"), ("थौजंड", "थाउजंड", "थाउज़ंड", "थौज़ंड", "थौसंड", "हजार", "4999", "999")]}}   # Telugu: full reads by hand
 JUDGE_TEXT = {1: "Your electricity bill: 4,999 rupees, overdue. Pay tonight, or your power gets cut.",
               3: "We hid one invisible line in that email, and asked a small free AI on our computer. 10 out of 10 summaries said pay.",
               "5b": "8 out of 10 still gave you the link. Deleting the hidden text first: 0 out of 10.",
