@@ -13,37 +13,37 @@
  "fps": 30,
  "musicDrops": [
   [
-   577,
-   610
+   565,
+   598
   ],
   [
-   852,
-   882
+   828,
+   858
   ],
   [
-   1289,
-   1319
+   1274,
+   1304
   ]
  ],
  "musicBoosts": [
   [
    0,
-   695,
+   676,
    1.4
   ],
   [
-   695,
-   1615,
-   1.5
+   676,
+   1636,
+   1.8
   ],
   [
-   1616,
-   2191,
+   1636,
+   2287,
    1.6
   ],
   [
-   1616,
-   2191,
+   1636,
+   2287,
    1.45,
    1
   ]
@@ -51,7 +51,7 @@
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 2191,
+ "totalFrames": 2287,
  "music": "reel/uc02te/score.wav",
  "scenes": [
   {
@@ -111,7 +111,7 @@
      "aSub": "10 of 10 · cited the old page",
      "bLab": "GIVEN TODAY'S DATE",
      "bBig": "₹142",
-     "bSub": "10 of 10 · found today's page",
+     "bSub": "by the app: 10 of 10 · typed in the question: 10 of 10",
      "builder1": "BUILDING AN AI APP?",
      "builder2": "put today's date in its instructions",
      "quizHead": "SO WHAT DO YOU DO?",
@@ -130,20 +130,20 @@
        "open the link"
       ]
      ],
-     "askAgain": "asked again: ₹168, 10 of 10",
+     "askAgain": "asked again in 10 new chats: ₹168 every time",
      "whereNotWhen": "a link shows WHERE it read, not WHEN",
      "studyHead": "\"AND THE BIG APPS?\"",
      "studySub": "Columbia Journalism Review (Tow Center), March 2025",
      "studyRows": [
-      "8 AI search tools · 1,600 tests",
-      "name a news article's source"
+      "a different slip: the source itself",
+      "8 AI search tools · 1,600 questions"
      ],
      "studyBig": "60%+",
-     "studyLab": "got the source wrong",
+     "studyLab": "wrong source, all 8 together",
      "studySpread": "best tool 37% wrong · worst 94%",
      "rule1": "OPEN THE LINK",
      "rule2": "\"TODAY\" IS NOT A DATE",
-     "rule3": "NO DATE, NO TRUST"
+     "rule3": "NO DATE? TYPE TODAY'S DATE, ASK AGAIN"
     },
     "tagSide": {
      "ravi": "right",
@@ -159,7 +159,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 695,
+   "frames": 676,
    "lines": [
     {
      "who": "ravi",
@@ -168,7 +168,7 @@
      "sub": null,
      "audio": "reel/uc02te/line_01.wav",
      "from": 15,
-     "frames": 201,
+     "frames": 196,
      "words": [
       {
        "w": "It",
@@ -178,86 +178,86 @@
       {
        "w": "said",
        "from": 23,
-       "to": 33
+       "to": 32
       },
       {
        "w": "₹168",
-       "from": 33,
-       "to": 48
+       "from": 32,
+       "to": 47
       },
       {
        "w": "a",
-       "from": 48,
-       "to": 52
+       "from": 47,
+       "to": 51
       },
       {
        "w": "kilo,",
-       "from": 52,
-       "to": 64
+       "from": 51,
+       "to": 62
       },
       {
        "w": "and",
-       "from": 64,
-       "to": 72
+       "from": 62,
+       "to": 70
       },
       {
        "w": "even",
-       "from": 72,
-       "to": 82
+       "from": 70,
+       "to": 80
       },
       {
        "w": "gave",
-       "from": 82,
-       "to": 97
+       "from": 80,
+       "to": 94
       },
       {
        "w": "a",
-       "from": 97,
-       "to": 111
+       "from": 94,
+       "to": 108
       },
       {
        "w": "link!",
-       "from": 111,
-       "to": 123
+       "from": 108,
+       "to": 119
       },
       {
        "w": "In",
-       "from": 123,
-       "to": 129
+       "from": 119,
+       "to": 125
       },
       {
        "w": "the",
-       "from": 129,
-       "to": 137
+       "from": 125,
+       "to": 133
       },
       {
        "w": "market",
-       "from": 137,
-       "to": 151
+       "from": 133,
+       "to": 147
       },
       {
        "w": "today,",
-       "from": 151,
-       "to": 165
+       "from": 147,
+       "to": 160
       },
       {
        "w": "₹142!",
-       "from": 165,
-       "to": 185
+       "from": 160,
+       "to": 181
       },
       {
        "w": "₹1,300",
-       "from": 185,
-       "to": 199
+       "from": 181,
+       "to": 194
       },
       {
        "w": "gone!",
-       "from": 199,
-       "to": 212
+       "from": 194,
+       "to": 206
       }
      ],
      "cues": {
-      "1": 114
+      "1": 111
      }
     },
     {
@@ -266,57 +266,57 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/uc02te/line_02.wav",
-     "from": 222,
-     "frames": 100,
+     "from": 217,
+     "frames": 99,
      "words": [
       {
        "w": "The",
-       "from": 223,
-       "to": 231
+       "from": 218,
+       "to": 225
       },
       {
        "w": "link",
-       "from": 231,
-       "to": 241
+       "from": 225,
+       "to": 235
       },
       {
        "w": "is",
-       "from": 241,
-       "to": 254
+       "from": 235,
+       "to": 248
       },
       {
        "w": "real.",
-       "from": 254,
-       "to": 266
+       "from": 248,
+       "to": 260
       },
       {
        "w": "That",
-       "from": 266,
-       "to": 283
+       "from": 260,
+       "to": 277
       },
       {
        "w": "page",
-       "from": 283,
-       "to": 293
+       "from": 277,
+       "to": 286
       },
       {
        "w": "does",
-       "from": 293,
-       "to": 303
+       "from": 286,
+       "to": 296
       },
       {
        "w": "say",
-       "from": 303,
-       "to": 311
+       "from": 296,
+       "to": 304
       },
       {
        "w": "₹168.",
-       "from": 311,
-       "to": 323
+       "from": 304,
+       "to": 315
       }
      ],
      "cues": {
-      "1": 255
+      "1": 249
      }
     },
     {
@@ -325,38 +325,38 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/uc02te/line_03.wav",
-     "from": 329,
-     "frames": 32,
+     "from": 322,
+     "frames": 31,
      "words": [
       {
        "w": "Then",
-       "from": 330,
-       "to": 335
+       "from": 323,
+       "to": 327
       },
       {
        "w": "how",
-       "from": 335,
-       "to": 340
+       "from": 327,
+       "to": 331
       },
       {
        "w": "did",
-       "from": 340,
-       "to": 344
+       "from": 331,
+       "to": 335
       },
       {
        "w": "it",
-       "from": 344,
-       "to": 348
+       "from": 335,
+       "to": 338
       },
       {
        "w": "go",
-       "from": 348,
-       "to": 351
+       "from": 338,
+       "to": 341
       },
       {
        "w": "wrong?!",
-       "from": 351,
-       "to": 360
+       "from": 341,
+       "to": 349
       }
      ],
      "cues": {}
@@ -367,150 +367,150 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/uc02te/line_04.wav",
-     "from": 366,
-     "frames": 315,
+     "from": 358,
+     "frames": 309,
      "words": [
       {
        "w": "I",
-       "from": 367,
-       "to": 370
+       "from": 359,
+       "to": 362
       },
       {
        "w": "searched:",
-       "from": 370,
-       "to": 387
+       "from": 362,
+       "to": 379
       },
       {
        "w": "the",
-       "from": 387,
-       "to": 402
+       "from": 379,
+       "to": 393
       },
       {
        "w": "page",
-       "from": 402,
-       "to": 411
+       "from": 393,
+       "to": 402
       },
       {
        "w": "on",
-       "from": 411,
-       "to": 416
+       "from": 402,
+       "to": 407
       },
       {
        "w": "top",
-       "from": 416,
-       "to": 423
+       "from": 407,
+       "to": 414
       },
       {
        "w": "said",
-       "from": 423,
-       "to": 432
+       "from": 414,
+       "to": 422
       },
       {
        "w": "\"today\".",
-       "from": 432,
-       "to": 453
+       "from": 422,
+       "to": 443
       },
       {
        "w": "I",
-       "from": 453,
-       "to": 456
+       "from": 443,
+       "to": 446
       },
       {
        "w": "read",
-       "from": 456,
-       "to": 465
+       "from": 446,
+       "to": 454
       },
       {
        "w": "it:",
-       "from": 465,
-       "to": 481
+       "from": 454,
+       "to": 470
       },
       {
        "w": "no",
-       "from": 481,
-       "to": 486
+       "from": 470,
+       "to": 475
       },
       {
        "w": "date",
-       "from": 486,
-       "to": 502
+       "from": 475,
+       "to": 491
       },
       {
        "w": "anywhere.",
-       "from": 502,
-       "to": 519
+       "from": 491,
+       "to": 508
       },
       {
        "w": "I",
-       "from": 519,
-       "to": 522
+       "from": 508,
+       "to": 511
       },
       {
        "w": "answered",
-       "from": 522,
-       "to": 551
+       "from": 511,
+       "to": 534
       },
       {
        "w": "with",
-       "from": 551,
-       "to": 560
+       "from": 534,
+       "to": 548
       },
       {
        "w": "the",
-       "from": 560,
-       "to": 567
+       "from": 548,
+       "to": 555
       },
       {
        "w": "link.",
-       "from": 567,
-       "to": 581
+       "from": 555,
+       "to": 569
       },
       {
        "w": "But",
-       "from": 601,
-       "to": 607
+       "from": 589,
+       "to": 595
       },
       {
        "w": "this",
-       "from": 607,
-       "to": 622
+       "from": 595,
+       "to": 609
       },
       {
        "w": "app",
-       "from": 622,
-       "to": 635
+       "from": 609,
+       "to": 622
       },
       {
        "w": "never",
-       "from": 635,
-       "to": 645
+       "from": 622,
+       "to": 632
       },
       {
        "w": "told",
-       "from": 645,
-       "to": 653
+       "from": 632,
+       "to": 640
       },
       {
        "w": "me",
-       "from": 653,
-       "to": 658
+       "from": 640,
+       "to": 645
       },
       {
        "w": "today's",
-       "from": 658,
-       "to": 671
+       "from": 645,
+       "to": 658
       },
       {
        "w": "date.",
-       "from": 671,
-       "to": 681
+       "from": 658,
+       "to": 667
       }
      ],
      "cues": {
-      "1": 400,
-      "2": 462,
-      "3": 531,
-      "4": 601
+      "1": 391,
+      "2": 452,
+      "3": 520,
+      "4": 589
      }
     }
    ]
@@ -572,7 +572,7 @@
      "aSub": "10 of 10 · cited the old page",
      "bLab": "GIVEN TODAY'S DATE",
      "bBig": "₹142",
-     "bSub": "10 of 10 · found today's page",
+     "bSub": "by the app: 10 of 10 · typed in the question: 10 of 10",
      "builder1": "BUILDING AN AI APP?",
      "builder2": "put today's date in its instructions",
      "quizHead": "SO WHAT DO YOU DO?",
@@ -591,20 +591,20 @@
        "open the link"
       ]
      ],
-     "askAgain": "asked again: ₹168, 10 of 10",
+     "askAgain": "asked again in 10 new chats: ₹168 every time",
      "whereNotWhen": "a link shows WHERE it read, not WHEN",
      "studyHead": "\"AND THE BIG APPS?\"",
      "studySub": "Columbia Journalism Review (Tow Center), March 2025",
      "studyRows": [
-      "8 AI search tools · 1,600 tests",
-      "name a news article's source"
+      "a different slip: the source itself",
+      "8 AI search tools · 1,600 questions"
      ],
      "studyBig": "60%+",
-     "studyLab": "got the source wrong",
+     "studyLab": "wrong source, all 8 together",
      "studySpread": "best tool 37% wrong · worst 94%",
      "rule1": "OPEN THE LINK",
      "rule2": "\"TODAY\" IS NOT A DATE",
-     "rule3": "NO DATE, NO TRUST"
+     "rule3": "NO DATE? TYPE TODAY'S DATE, ASK AGAIN"
     },
     "tagSide": {
      "ravi": "right",
@@ -619,8 +619,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 695,
-   "frames": 920,
+   "from": 676,
+   "frames": 960,
    "lines": [
     {
      "who": "ravi",
@@ -629,7 +629,7 @@
      "sub": null,
      "audio": "reel/uc02te/line_05.wav",
      "from": 0,
-     "frames": 57,
+     "frames": 55,
      "words": [
       {
        "w": "Every",
@@ -644,22 +644,22 @@
       {
        "w": "knows",
        "from": 17,
-       "to": 33
+       "to": 32
       },
       {
        "w": "the",
-       "from": 33,
-       "to": 38
+       "from": 32,
+       "to": 37
       },
       {
        "w": "date,",
-       "from": 38,
-       "to": 46
+       "from": 37,
+       "to": 45
       },
       {
        "w": "right?!",
-       "from": 46,
-       "to": 56
+       "from": 45,
+       "to": 55
       }
      ],
      "cues": {}
@@ -670,153 +670,153 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/uc02te/line_06.wav",
-     "from": 63,
-     "frames": 345,
+     "from": 61,
+     "frames": 338,
      "words": [
       {
        "w": "The",
-       "from": 65,
-       "to": 70
+       "from": 64,
+       "to": 69
       },
       {
        "w": "phone",
-       "from": 70,
-       "to": 78
+       "from": 69,
+       "to": 76
       },
       {
        "w": "knows.",
-       "from": 78,
-       "to": 87
+       "from": 76,
+       "to": 85
       },
       {
        "w": "I",
-       "from": 87,
-       "to": 89
+       "from": 85,
+       "to": 87
       },
       {
        "w": "only",
-       "from": 89,
-       "to": 106
+       "from": 87,
+       "to": 103
       },
       {
        "w": "know",
-       "from": 106,
-       "to": 117
+       "from": 103,
+       "to": 114
       },
       {
        "w": "it",
-       "from": 117,
-       "to": 125
+       "from": 114,
+       "to": 121
       },
       {
        "w": "if",
-       "from": 125,
-       "to": 135
+       "from": 121,
+       "to": 132
       },
       {
        "w": "the",
-       "from": 135,
-       "to": 140
+       "from": 132,
+       "to": 137
       },
       {
        "w": "app",
-       "from": 140,
-       "to": 145
+       "from": 137,
+       "to": 141
       },
       {
        "w": "tells",
-       "from": 145,
-       "to": 153
+       "from": 141,
+       "to": 149
       },
       {
        "w": "me.",
-       "from": 153,
-       "to": 158
+       "from": 149,
+       "to": 154
       },
       {
        "w": "Without",
-       "from": 181,
-       "to": 198
+       "from": 176,
+       "to": 193
       },
       {
        "w": "the",
-       "from": 198,
-       "to": 206
+       "from": 193,
+       "to": 201
       },
       {
        "w": "date:",
-       "from": 206,
-       "to": 226
+       "from": 201,
+       "to": 221
       },
       {
        "w": "all",
-       "from": 226,
-       "to": 234
+       "from": 221,
+       "to": 229
       },
       {
        "w": "10",
-       "from": 234,
-       "to": 240
+       "from": 229,
+       "to": 235
       },
       {
        "w": "times",
-       "from": 240,
-       "to": 260
+       "from": 235,
+       "to": 254
       },
       {
        "w": "₹168.",
-       "from": 260,
-       "to": 272
+       "from": 254,
+       "to": 266
       },
       {
        "w": "With",
-       "from": 272,
-       "to": 291
+       "from": 266,
+       "to": 284
       },
       {
        "w": "the",
-       "from": 291,
-       "to": 299
+       "from": 284,
+       "to": 292
       },
       {
        "w": "date:",
-       "from": 299,
-       "to": 323
+       "from": 292,
+       "to": 316
       },
       {
        "w": "all",
-       "from": 323,
-       "to": 331
+       "from": 316,
+       "to": 324
       },
       {
        "w": "10",
-       "from": 331,
-       "to": 346
+       "from": 324,
+       "to": 338
       },
       {
        "w": "times",
-       "from": 346,
-       "to": 358
+       "from": 338,
+       "to": 351
       },
       {
        "w": "today's",
-       "from": 358,
-       "to": 382
+       "from": 351,
+       "to": 375
       },
       {
        "w": "page,",
-       "from": 382,
-       "to": 395
+       "from": 375,
+       "to": 387
       },
       {
        "w": "₹142.",
-       "from": 395,
-       "to": 407
+       "from": 387,
+       "to": 399
       }
      ],
      "cues": {
-      "1": 181,
-      "2": 278
+      "1": 176,
+      "2": 272
      }
     },
     {
@@ -825,104 +825,104 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/uc02te/line_07.wav",
-     "from": 417,
-     "frames": 187,
+     "from": 408,
+     "frames": 175,
      "words": [
       {
        "w": "So",
-       "from": 417,
-       "to": 422
+       "from": 409,
+       "to": 414
       },
       {
        "w": "what",
-       "from": 422,
-       "to": 430
+       "from": 414,
+       "to": 421
       },
       {
        "w": "should",
-       "from": 430,
-       "to": 441
+       "from": 421,
+       "to": 432
       },
       {
        "w": "I",
-       "from": 441,
-       "to": 444
+       "from": 432,
+       "to": 435
       },
       {
        "w": "do?",
-       "from": 444,
-       "to": 459
+       "from": 435,
+       "to": 449
       },
       {
        "w": "One,",
-       "from": 459,
-       "to": 474
+       "from": 449,
+       "to": 465
       },
       {
        "w": "trust",
-       "from": 474,
-       "to": 483
+       "from": 465,
+       "to": 474
       },
       {
        "w": "the",
-       "from": 483,
-       "to": 490
+       "from": 474,
+       "to": 479
       },
       {
        "w": "link.",
-       "from": 490,
-       "to": 499
+       "from": 479,
+       "to": 488
       },
       {
        "w": "Two,",
-       "from": 499,
-       "to": 514
+       "from": 488,
+       "to": 504
       },
       {
        "w": "ask",
-       "from": 514,
-       "to": 520
+       "from": 504,
+       "to": 510
       },
       {
        "w": "again.",
+       "from": 510,
+       "to": 520
+      },
+      {
+       "w": "Three,",
        "from": 520,
        "to": 531
       },
       {
-       "w": "Three,",
-       "from": 531,
-       "to": 542
-      },
-      {
        "w": "open",
-       "from": 542,
-       "to": 565
+       "from": 531,
+       "to": 547
       },
       {
        "w": "the",
-       "from": 565,
-       "to": 571
+       "from": 547,
+       "to": 553
       },
       {
        "w": "link",
-       "from": 571,
-       "to": 583
+       "from": 553,
+       "to": 564
       },
       {
        "w": "and",
-       "from": 583,
-       "to": 590
+       "from": 564,
+       "to": 570
       },
       {
        "w": "look.",
-       "from": 590,
-       "to": 599
+       "from": 570,
+       "to": 579
       }
      ],
      "cues": {
-      "1": 455,
-      "2": 499,
-      "3": 538
+      "1": 437,
+      "2": 488,
+      "3": 527
      }
     },
     {
@@ -931,108 +931,158 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/uc02te/line_08.wav",
-     "from": 651,
-     "frames": 246,
+     "from": 655,
+     "frames": 287,
      "words": [
       {
        "w": "The",
-       "from": 653,
-       "to": 658
+       "from": 657,
+       "to": 662
       },
       {
        "w": "third",
-       "from": 658,
-       "to": 664
+       "from": 662,
+       "to": 668
       },
       {
        "w": "one!",
-       "from": 664,
-       "to": 670
+       "from": 668,
+       "to": 674
       },
       {
        "w": "Asked",
-       "from": 690,
-       "to": 702
+       "from": 693,
+       "to": 706
       },
       {
-       "w": "again,",
-       "from": 702,
-       "to": 725
+       "w": "again",
+       "from": 706,
+       "to": 722
       },
       {
-       "w": "I",
-       "from": 725,
-       "to": 730
+       "w": "in",
+       "from": 722,
+       "to": 726
       },
       {
-       "w": "said",
-       "from": 730,
-       "to": 740
+       "w": "a",
+       "from": 726,
+       "to": 729
+      },
+      {
+       "w": "new",
+       "from": 729,
+       "to": 735
+      },
+      {
+       "w": "chat,",
+       "from": 735,
+       "to": 751
+      },
+      {
+       "w": "still",
+       "from": 751,
+       "to": 760
       },
       {
        "w": "₹168",
-       "from": 740,
-       "to": 759
+       "from": 760,
+       "to": 768
       },
       {
        "w": "every",
-       "from": 759,
-       "to": 772
-      },
-      {
-       "w": "time.",
-       "from": 772,
+       "from": 768,
        "to": 785
       },
       {
-       "w": "A",
+       "w": "time.",
        "from": 785,
-       "to": 789
+       "to": 794
+      },
+      {
+       "w": "A",
+       "from": 794,
+       "to": 797
       },
       {
        "w": "link",
-       "from": 789,
-       "to": 807
+       "from": 797,
+       "to": 812
       },
       {
-       "w": "shows",
-       "from": 807,
-       "to": 827
+       "w": "tells",
+       "from": 812,
+       "to": 832
+      },
+      {
+       "w": "you",
+       "from": 832,
+       "to": 838
       },
       {
        "w": "where",
-       "from": 827,
-       "to": 840
+       "from": 838,
+       "to": 847
       },
       {
        "w": "I",
-       "from": 840,
-       "to": 844
+       "from": 847,
+       "to": 850
       },
       {
        "w": "read",
-       "from": 844,
-       "to": 859
+       "from": 850,
+       "to": 857
       },
       {
        "w": "it.",
-       "from": 859,
-       "to": 875
+       "from": 857,
+       "to": 867
       },
       {
        "w": "Not",
-       "from": 875,
-       "to": 884
+       "from": 867,
+       "to": 883
       },
       {
-       "w": "when.",
-       "from": 884,
-       "to": 897
+       "w": "whether",
+       "from": 883,
+       "to": 902
+      },
+      {
+       "w": "the",
+       "from": 902,
+       "to": 908
+      },
+      {
+       "w": "page",
+       "from": 908,
+       "to": 916
+      },
+      {
+       "w": "is",
+       "from": 916,
+       "to": 920
+      },
+      {
+       "w": "old",
+       "from": 920,
+       "to": 926
+      },
+      {
+       "w": "or",
+       "from": 926,
+       "to": 931
+      },
+      {
+       "w": "new.",
+       "from": 931,
+       "to": 938
       }
      ],
      "cues": {
-      "1": 690,
-      "2": 786
+      "1": 693,
+      "2": 802
      }
     }
    ]
@@ -1094,7 +1144,7 @@
      "aSub": "10 of 10 · cited the old page",
      "bLab": "GIVEN TODAY'S DATE",
      "bBig": "₹142",
-     "bSub": "10 of 10 · found today's page",
+     "bSub": "by the app: 10 of 10 · typed in the question: 10 of 10",
      "builder1": "BUILDING AN AI APP?",
      "builder2": "put today's date in its instructions",
      "quizHead": "SO WHAT DO YOU DO?",
@@ -1113,20 +1163,20 @@
        "open the link"
       ]
      ],
-     "askAgain": "asked again: ₹168, 10 of 10",
+     "askAgain": "asked again in 10 new chats: ₹168 every time",
      "whereNotWhen": "a link shows WHERE it read, not WHEN",
      "studyHead": "\"AND THE BIG APPS?\"",
      "studySub": "Columbia Journalism Review (Tow Center), March 2025",
      "studyRows": [
-      "8 AI search tools · 1,600 tests",
-      "name a news article's source"
+      "a different slip: the source itself",
+      "8 AI search tools · 1,600 questions"
      ],
      "studyBig": "60%+",
-     "studyLab": "got the source wrong",
+     "studyLab": "wrong source, all 8 together",
      "studySpread": "best tool 37% wrong · worst 94%",
      "rule1": "OPEN THE LINK",
      "rule2": "\"TODAY\" IS NOT A DATE",
-     "rule3": "NO DATE, NO TRUST"
+     "rule3": "NO DATE? TYPE TODAY'S DATE, ASK AGAIN"
     },
     "tagSide": {
      "ravi": "right",
@@ -1141,8 +1191,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1616,
-   "frames": 575,
+   "from": 1636,
+   "frames": 651,
    "lines": [
     {
      "who": "ravi",
@@ -1151,7 +1201,7 @@
      "sub": null,
      "audio": "reel/uc02te/line_09.wav",
      "from": 9,
-     "frames": 37,
+     "frames": 36,
      "words": [
       {
        "w": "What",
@@ -1166,17 +1216,17 @@
       {
        "w": "the",
        "from": 23,
-       "to": 32
+       "to": 31
       },
       {
        "w": "big",
-       "from": 32,
-       "to": 35
+       "from": 31,
+       "to": 34
       },
       {
        "w": "apps?",
-       "from": 35,
-       "to": 40
+       "from": 34,
+       "to": 39
       }
      ],
      "cues": {}
@@ -1187,92 +1237,127 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/uc02te/line_10.wav",
-     "from": 52,
-     "frames": 212,
+     "from": 51,
+     "frames": 240,
      "words": [
       {
-       "w": "In",
-       "from": 54,
+       "w": "This",
+       "from": 52,
        "to": 59
       },
       {
-       "w": "a",
+       "w": "is",
        "from": 59,
-       "to": 63
+       "to": 64
       },
       {
-       "w": "2025",
-       "from": 63,
-       "to": 72
+       "w": "a",
+       "from": 64,
+       "to": 66
       },
       {
-       "w": "test,",
-       "from": 72,
-       "to": 83
+       "w": "different",
+       "from": 66,
+       "to": 89
+      },
+      {
+       "w": "mistake.",
+       "from": 89,
+       "to": 102
+      },
+      {
+       "w": "A",
+       "from": 102,
+       "to": 105
+      },
+      {
+       "w": "test",
+       "from": 105,
+       "to": 119
+      },
+      {
+       "w": "last",
+       "from": 119,
+       "to": 130
+      },
+      {
+       "w": "year:",
+       "from": 130,
+       "to": 138
       },
       {
        "w": "8",
-       "from": 83,
-       "to": 87
+       "from": 138,
+       "to": 141
       },
       {
        "w": "search",
-       "from": 87,
-       "to": 109
+       "from": 141,
+       "to": 159
       },
       {
-       "w": "chatbots",
-       "from": 109,
-       "to": 137
+       "w": "apps,",
+       "from": 159,
+       "to": 181
+      },
+      {
+       "w": "together,",
+       "from": 181,
+       "to": 208
       },
       {
        "w": "showed",
-       "from": 137,
-       "to": 162
+       "from": 208,
+       "to": 219
       },
       {
        "w": "the",
-       "from": 162,
-       "to": 169
+       "from": 219,
+       "to": 224
       },
       {
        "w": "wrong",
-       "from": 169,
-       "to": 187
+       "from": 224,
+       "to": 233
       },
       {
        "w": "source",
-       "from": 187,
-       "to": 200
+       "from": 233,
+       "to": 244
+      },
+      {
+       "w": "more",
+       "from": 244,
+       "to": 251
+      },
+      {
+       "w": "than",
+       "from": 251,
+       "to": 258
+      },
+      {
+       "w": "60",
+       "from": 258,
+       "to": 263
+      },
+      {
+       "w": "times",
+       "from": 263,
+       "to": 275
       },
       {
        "w": "in",
-       "from": 200,
-       "to": 206
+       "from": 275,
+       "to": 279
       },
       {
-       "w": "over",
-       "from": 206,
-       "to": 215
-      },
-      {
-       "w": "60%",
-       "from": 215,
-       "to": 230
-      },
-      {
-       "w": "of",
-       "from": 230,
-       "to": 236
-      },
-      {
-       "w": "answers.",
-       "from": 236,
-       "to": 261
+       "w": "100.",
+       "from": 279,
+       "to": 287
       }
      ],
      "cues": {
-      "1": 117
+      "1": 139
      }
     },
     {
@@ -1281,88 +1366,118 @@
      "color": "#FBBF24",
      "sub": null,
      "audio": "reel/uc02te/line_11.wav",
-     "from": 277,
-     "frames": 156,
+     "from": 302,
+     "frames": 207,
      "words": [
       {
        "w": "Open",
-       "from": 277,
-       "to": 290
+       "from": 304,
+       "to": 315
       },
       {
        "w": "the",
-       "from": 290,
-       "to": 296
+       "from": 315,
+       "to": 321
       },
       {
        "w": "link",
-       "from": 296,
-       "to": 304
+       "from": 321,
+       "to": 328
       },
       {
        "w": "and",
-       "from": 304,
-       "to": 326
+       "from": 328,
+       "to": 333
       },
       {
        "w": "look.",
-       "from": 326,
-       "to": 335
+       "from": 333,
+       "to": 350
       },
       {
        "w": "\"Today\"",
-       "from": 335,
-       "to": 352
+       "from": 350,
+       "to": 361
       },
       {
        "w": "is",
-       "from": 352,
-       "to": 356
-      },
-      {
-       "w": "not",
-       "from": 356,
-       "to": 362
-      },
-      {
-       "w": "a",
-       "from": 362,
+       "from": 361,
        "to": 365
       },
       {
-       "w": "date.",
+       "w": "not",
        "from": 365,
-       "to": 391
+       "to": 371
+      },
+      {
+       "w": "enough,",
+       "from": 371,
+       "to": 382
+      },
+      {
+       "w": "there",
+       "from": 382,
+       "to": 407
+      },
+      {
+       "w": "must",
+       "from": 407,
+       "to": 426
+      },
+      {
+       "w": "be",
+       "from": 426,
+       "to": 433
+      },
+      {
+       "w": "a",
+       "from": 433,
+       "to": 436
+      },
+      {
+       "w": "date.",
+       "from": 436,
+       "to": 444
       },
       {
        "w": "No",
-       "from": 391,
-       "to": 396
+       "from": 444,
+       "to": 449
       },
       {
        "w": "date?",
-       "from": 396,
-       "to": 405
+       "from": 449,
+       "to": 457
       },
       {
-       "w": "Don't",
-       "from": 405,
-       "to": 414
+       "w": "Type",
+       "from": 457,
+       "to": 464
       },
       {
-       "w": "trust",
-       "from": 414,
-       "to": 423
+       "w": "today's",
+       "from": 464,
+       "to": 490
       },
       {
-       "w": "it!",
-       "from": 423,
-       "to": 429
+       "w": "date",
+       "from": 490,
+       "to": 497
+      },
+      {
+       "w": "and",
+       "from": 497,
+       "to": 503
+      },
+      {
+       "w": "ask!",
+       "from": 503,
+       "to": 509
       }
      ],
      "cues": {
-      "1": 330,
-      "2": 388
+      "1": 350,
+      "2": 434
      }
     },
     {
@@ -1371,47 +1486,47 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/uc02te/line_12.wav",
-     "from": 445,
-     "frames": 94,
+     "from": 522,
+     "frames": 93,
      "words": [
       {
        "w": "Today's",
-       "from": 445,
-       "to": 460
+       "from": 522,
+       "to": 537
       },
       {
        "w": "price:",
-       "from": 460,
-       "to": 480
+       "from": 537,
+       "to": 557
       },
       {
        "w": "₹168,",
-       "from": 480,
-       "to": 492
+       "from": 557,
+       "to": 568
       },
       {
        "w": "there's",
-       "from": 492,
-       "to": 513
+       "from": 568,
+       "to": 588
       },
       {
        "w": "a",
-       "from": 513,
-       "to": 516
+       "from": 588,
+       "to": 592
       },
       {
        "w": "link",
-       "from": 516,
-       "to": 530
+       "from": 592,
+       "to": 605
       },
       {
        "w": "too!",
-       "from": 530,
-       "to": 539
+       "from": 605,
+       "to": 614
       }
      ],
      "cues": {
-      "1": 500
+      "1": 576
      }
     }
    ]

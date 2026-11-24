@@ -56,7 +56,7 @@ SHOW_TE = {
 }
 TTS_EN = {}
 TEMPO_EN = {"ravi": 1.1, "ai": 1.09}   # render review added ~6 s; a touch faster
-TEMPO_TE = {"ravi": 1.07, "ai": 1.08}
+TEMPO_TE = {"ravi": 1.1, "ai": 1.1}   # the Telugu cut ran 78 s after the render review
 T = {
     "leftLab": "SHOP AI, WITH A LINK", "leftVal": "₹168/kg", "rightLab": "BEGUM BAZAR TODAY", "rightVal": "₹142/kg",
     "stake": "50 kg · ₹1,300 extra", "story": "Ravi and the shop are made up · our test is real",
@@ -87,7 +87,7 @@ SCENES = [("s_a", (1, 2, 3, 4), {"boost": 1.4, "drop_at": [[3, "4", 0.3]], "tail
           ("s_b", (5, 6, 7, 8), {"boost": 1.8, "lift": 0.6, "drop_at": [[1, "1", 0.2]], "drop_pre": [[3, 0.9, 1.0]], "tail": 0.0}),   # before ₹168 10/10; before "C!"
           ("s_c", (9, 10, 11, 12), {"outro": True, "pre": 0.3, "boost": 1.9, "lift": 0.8, "rise": 1.7, "tail": 0.0})]
 GAP = {1: 0.2, 2: 0.2, 3: 0.2, 4: 0.3, 5: 0.2, 6: 0.3, 7: 3.0, 8: 0.3, 9: 0.2, 10: 0.4, 11: 0.4, 12: 0.0}   # 7: the quiz holds
-GAP_TE = {7: 2.6}   # render review: the quiz hold was too short to guess
+GAP_TE = {7: 2.4}   # render review: the quiz hold was too short to guess
 FLAGS_TE = {"s_c": {"boost": 1.6, "rise": 1.45}}
 YT = {"s_a": "₹168, with a link", "s_b": "Why, and what to do", "s_c": "No date, no trust"}
 NAMES = {}

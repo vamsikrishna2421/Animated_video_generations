@@ -180,7 +180,7 @@ const StSearch: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "real") {   // the phone's answer and the page it cited
             page(c, 60, 230, W - 120, T.oldUrl, T.oldTitle, T.oldLine, T.noDate, false, seg(f, ln.from + 2, ln.from + 10));
-            chip(c, T.reallySays, W / 2, 580, "#14532d", "#f0fdf4", seg(f, cu(1, 0.4) - 2, cu(1, 0.4) + 6), fit(c, T.reallySays, W - 140, 38, 900));
+            chip(c, T.reallySays, W / 2, 615, "#14532d", "#f0fdf4", seg(f, cu(1, 0.4) - 2, cu(1, 0.4) + 6), fit(c, T.reallySays, W - 140, 38, 900));
             chip(c, T.story, W / 2, 1380, "rgba(15,23,42,0.88)", "#f8fafc", 1, fit(c, T.story, W - 140, 38, 800));
           }
           if (b.prop === "rule") {
