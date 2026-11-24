@@ -53,7 +53,12 @@ ASKS = {
               "price from that page, then give the price and the link."),
 }
 RIGHT = 142
-HAND = {}   # filled after the run, by reading every reply in full
+HAND = {   # by hand, after reading all 30 replies (Nov 24); the follow-up is search_demo2.py
+    "none": "10/10 'I don't have real-time access to current market prices', then general advice; no price, no link.",
+    "search": "10/10 Rs 142, 'at Begum Bazar', 'updated 24 November'; 9 cite the today page's link, 1 names the page without it.",
+    "check": "10/10 Rs 142 with the line quoted; 10 cite today's page.",
+    "follow-up": "old page undated: told the date 10/10 Rs 142 (9 with the link); not told the date 10/10 Rs 168 citing the old page.",
+}
 
 
 def tokens(t):
