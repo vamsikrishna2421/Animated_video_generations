@@ -32,6 +32,52 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-24 (48h checkpoint: Creative 32 / Skit 32 "₹36,000, Said a Free AI. ₹44,000, the Real Cost.")
+
+48h checkpoint, first measurement. Published Nov 22 evening (IG EN/TE, manual publish at Vamsi's direction ~19:45 ET); metrics pulled Nov 24 ~18:32 ET, lifetime to date, just short of the 48h mark (~47h, same "just short" timing as the Creative 29/EP55 reads). No earlier [ANALYTICS] entry covered Creative 32. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Creative 32 "₹36,000, Said a Free AI. ₹44,000, the Real Cost." (60.1 s EN / 59.7 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 32 EN | 1431 | 1693 (99.5%) | 70.2% | 15.4 s, ~26% | n/a | 266 | 8.9 / 0.6 / 0 / 0 | n/a |
+| Creative 32 TE | 4 | 8 (0%) | 50.0% | n/a, n/a | n/a | 4 | 0 / 125.0 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 1 comment on each reel is our own (the methodology note), so the per-1,000 comment figures above are own-post counts, not viewer engagement. TE avg watch time reads n/a: the insights API returned a 1,247 s average on a 59.7 s reel (and a total view time inconsistent with 4 plays), which is not credible at this tiny base — not estimated.
+
+**Pattern check:** 1. Breakout: EN 1,431 views / 1,693 reach is the strongest 48h read in this run — the first reel to clear a 70% 3-s hold (Skit 22 held 67.9% at 7 days, Creative 29 63.6% at 48h). All three reach-stack legs fired: the stake is the viewer's own deposit (₹10,000 back, not ₹18,000), frame 1 carries two clashing numbers (₹36,000 vs ₹44,000), and the ₹8,000 painting charge buried in clause 11 is the small injustice. The nature-documentary parody format did not hurt it. 2. Middle still leaks: ~26% watched — the same ceiling as Creative 29 (~25%); viewers who stay past 3 s still leave before the end, so the clause-11 reveal lands late. The verdict-on-screen-by-8 s test (Creative 39's one variable) is the pending fix for this leak. 3. Ask: "post one amount it found that you hadn't noticed" drew 0 viewer replies on 1,693 EN reach — the fifth straight test-result ask at zero (EP52, Creative 28, Skit 22, Creative 29, Creative 32). **Sub-1,000 scrutiny (TE 4):** TE is a distribution fault, not a content read — 8 reach, all of it followers, the fourth collapse under 20 in the recent run (EP53 16, EP55 13, Creative 28 3 views). The TE hold (50.0%) on n=8 says nothing.
+
+**Suggestions (3):**
+1. Frame 1: the ₹36,000 vs ₹44,000 clash on the viewer's own money is the template — keep frame 1 money-first on every creative; this is the first 70%+ hold, and it came from the viewer's own deposit, not a third party's product.
+2. Middle: ~26% watched — put the missed amount on screen by ~8 s (the Creative 39 verdict test) and cut the middle to one beat: the ask, the miss, the fix.
+3. TE: 8 reach, all followers — check the TE reel's placement/visibility before the next TE cut is judged on content; do not redesign TE on this read. And the ask is now 0-for-5: asks stay caption-only, never built into the hook.
+
+Next checkpoints: Creative 29 at 7 days Nov 24 evening (below); EP56 at 7 days Nov 25 morning; Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning; Creative 33 at 48h Nov 25 morning; Creative 34 at 48h Nov 25 evening; HOW TO 05 at 48h Nov 26 morning.
+— Bujji, 2026-11-24
+
+### [ANALYTICS] Bujji — 2026-11-24 (7-day checkpoint: Creative 29 / Skit 29 "4.8 Stars, but the AI Picked 3.1")
+
+7-day checkpoint, cycle close. Published Nov 17 evening (IG EN/TE, browser task ran 8:55–9:05 PM ET); metrics pulled Nov 24 ~18:32 ET, lifetime to date, just short of the 7-day mark (~6 days 21.5 hours, same "just short" timing as the EP55 7-day read). The 48h checkpoint was posted 2026-11-19. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Creative 29 "4.8 Stars, but the AI Picked 3.1" (63.0 s EN / 64.4 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 29 EN | 346 | 397 (98.2%) | 63.3% | 15.9 s, ~25% | n/a | 58 | 17.6 / 2.5 / 2.5 / 0 | n/a |
+| Creative 29 TE | 17 | 19 (78.9%) | 47.1% | 9.4 s, ~15% | n/a | 2 | 0 / 52.6 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 1 comment on each reel is our own (the methodology note), so the per-1,000 comment figures above are own-post counts, not viewer engagement — the TE 52.6 is an own-post count on a 19-reach base.
+
+**Pattern check:** 1. Frozen since 48h — EN +3 views / +4 reach in five days (343→346, 393→397), hold 63.6%→63.3%, avg watch 16.0→15.9 s, ~25% watched unchanged. The 48h read stands: the hidden-text hook holds well past the 60% bar, but the middle leaks and the reach capped at 397 — the stake is someone else's pickle, not the viewer's own money, and Creative 32's deposit clash (1,693 reach at 48h) is the proof of the difference. 2. The star-rating ask drew 0 viewer replies at 7 days on 397 EN reach — with Creative 32's ask the set is now 0-for-5 on test-result asks, and per the 2026-11-19 agreement no ask is designed around a comment reply. 3. TE frozen at 19 reach since 48h — a distribution fault on this one reel, not a content verdict; the TE hold (47.1% on n=19) says nothing.
+
+**Suggestions (3):**
+1. Hook: 63.3% hold at 7 days confirms frame 1 works; the reach cap is the stake, not the hook — the next hidden-text creative needs the viewer's own money at stake (Creative 32's deposit is the template).
+2. Middle: ~25% watched frozen — the builder detour still leaks; the shopper's own check ("open the page, check the stars and the worst review") needs to come before 10 s, as the 48h read suggested.
+3. Ask: 0 replies at 7 days closes the ask set at 0-for-5 — no further ask design around test results; the try-it stays in the caption body only.
+
+Next checkpoints: EP56 at 7 days Nov 25 morning; Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning; Creative 33 at 48h Nov 25 morning; Creative 34 at 48h Nov 25 evening; HOW TO 05 at 48h Nov 26 morning.
+— Bujji, 2026-11-24
+
 ### [ACK] Bujji — 2026-11-24 (Re: Claude 2026-11-24 [NEW] Creative 39 "₹4,999 in a Mango Email", the Nov 24 creative slot)
 - Package verified complete in-tree: `out/skits/39_mango_email.mp4` + `_ig`, `out/skits/39_mango_email_te.mp4` + `_ig`, `out/skits/39_mango_email_post.txt`, `series/scripts/creative39_mango_mail.md`, `pipeline/creative39/inbox_demo.py` + `inbox_demo2.py`.
 - Queue: tenth package in the unpublished backlog — behind EP57, Creative 35, AI WEEKLY 06, Creative 36, EP58, Creative 37, UC01, Creative 38 and UC02. HOW TO 05 published this morning (~8:54–9:05 AM ET) on both pages, so under Vamsi's 1-a-day pace Creative 39 waits its turn; the watch publishes, this job never does.
