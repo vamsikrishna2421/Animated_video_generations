@@ -148,7 +148,7 @@ const StMango: React.FC<SP> = ({ s }) => {
           c.textAlign = "center"; c.font = SANS(fit(c, T.verdict, W - 80, 60, 900), 900); c.fillStyle = kT > 0 ? "#fecaca" : "rgba(0,0,0,0)"; c.fillText(T.verdict, W / 2, 262);   // stills: clear of the header
           tiles(c, Array(10).fill(RED), (W - 908) / 2, 286, kT);
           const kS = seg(f, cu(1, 0.2) - 2, cu(1, 0.2) + 6);
-          if (kS > 0) { c.save(); c.globalAlpha = clamp(kS * 3); c.font = SANS(fit(c, T.smallAI, W - 100, 34, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.smallAI, W / 2, 400); c.restore(); }
+          if (kS > 0) { c.save(); c.globalAlpha = clamp(kS * 3); c.font = SANS(fit(c, T.smallAI, W - 80, 40, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.smallAI, W / 2, 400); c.restore(); }
         } else if (P === "why") {
           const k1 = seg(f, ln.from + 2, ln.from + 10), k2 = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 8);
           c.textAlign = "center"; c.font = SANS(44, 900); c.fillStyle = "#e2e8f0"; c.fillText(T.seeLab, 280, 330); c.fillText(T.readLab, 800, 330);
@@ -169,8 +169,8 @@ const StMango: React.FC<SP> = ({ s }) => {
           }
           tiles(c, [RED, RED, RED, RED, RED, RED, RED, RED, AMBER, GREEN], (W - 908) / 2, 760, kT);
           if (kT > 0.9) { c.textAlign = "center"; c.font = SANS(fit(c, T.guardStat, W - 100, 58, 900), 900); c.fillStyle = "#fecaca"; c.fillText(T.guardStat, W / 2, 960);
-            c.font = SANS(fit(c, T.guardNote, W - 100, 36, 800), 800); c.fillStyle = "#cbd5e1"; c.fillText(T.guardNote, W / 2, 1020); }
-          chip(c, T.stripStat, W / 2, 1180, "#14532d", "#f0fdf4", seg(f, cu(2, 0.3) - 2, cu(2, 0.3) + 6), fit(c, T.stripStat, W - 120, 46, 900));
+            c.font = SANS(fit(c, T.guardNote, W - 80, 40, 800), 800); c.fillStyle = "#cbd5e1"; c.fillText(T.guardNote, W / 2, 1020); }
+          chip(c, T.stripStat, W / 2, 1180, "#14532d", "#f0fdf4", seg(f, cu(2, 0.1) - 2, cu(2, 0.1) + 6), fit(c, T.stripStat, W - 100, 50, 900));
         } else if (P === "real") {
           const k0 = seg(f, ln.from + 2, ln.from + 12), k1 = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 8);
           c.textAlign = "center"; c.font = SANS(56, 900); c.fillStyle = "#fde68a"; c.fillText(T.realHead, W / 2, 330);
@@ -183,9 +183,9 @@ const StMango: React.FC<SP> = ({ s }) => {
             c.restore();
           }
           if (k1 > 0) {
-            c.save(); c.globalAlpha = clamp(k1 * 3); c.textAlign = "left"; c.font = SANS(38, 800); c.fillStyle = "#334155";
-            wrap(c, T.realGoogle, W - 220).slice(0, 3).forEach((t, q) => c.fillText(t, 100, 900 + q * 48));
-            c.font = SANS(30, 700); c.fillStyle = "#64748b"; c.fillText(T.realSrc, 100, 1070); c.restore();
+            c.save(); c.globalAlpha = clamp(k1 * 3); c.textAlign = "left"; c.font = SANS(46, 800); c.fillStyle = "#334155";
+            wrap(c, T.realGoogle, W - 220).slice(0, 3).forEach((t, q) => c.fillText(t, 100, 880 + q * 56));
+            c.font = SANS(fit(c, T.realSrc, W - 200, 36, 700), 700); c.fillStyle = "#64748b"; c.fillText(T.realSrc, 100, 1070); c.restore();
           }
         } else if (P === "ask") {
           phoneBody(c);
@@ -197,7 +197,7 @@ const StMango: React.FC<SP> = ({ s }) => {
           (T.answers as string[]).forEach((a, q) => {
             const kk = clamp((k2 * 10 - q) * 1.5); if (kk <= 0) return;
             const x = PX + 40 + (q % 2) * 360, y = PY + 400 + Math.floor(q / 2) * 100;
-            const mango = a.startsWith("mango");
+            const mango = a.startsWith("Green");
             c.globalAlpha = kk; c.fillStyle = mango ? "#ffedd5" : "#e0e7ff"; rrect(c, x, y, 340, 84, 18); c.fill();
             c.font = SANS(fit(c, a, 300, 36, 900), 900); c.fillStyle = mango ? "#9a3412" : "#3730a3"; c.fillText(a, x + 20, y + 54);
           });
@@ -205,11 +205,11 @@ const StMango: React.FC<SP> = ({ s }) => {
           if (k2 >= 1) stamp(c, T.notPower, W / 2, PY + 930, 56, RED, seg(f, cu(2, 0.2) + 22, cu(2, 0.2) + 30));
         } else if (P === "rule") {
           const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 8);
-          stamp(c, T.rule1, W / 2, 520, 64, RED, k0, -0.05);
+          stamp(c, T.rule1, W / 2, 520, 96, RED, k0, -0.05);   // render review: the rule was too small
           if (k1 > 0) {
             c.save(); c.globalAlpha = clamp(k1 * 3); c.translate(0, (1 - easeOut(clamp(k1 * 1.5))) * 40);
             c.fillStyle = "#dcfce7"; rrect(c, 80, 700, W - 160, 300, 28); c.fill(); c.strokeStyle = GREEN; c.lineWidth = 6; rrect(c, 80, 700, W - 160, 300, 28); c.stroke();
-            c.textAlign = "center"; c.font = SANS(56, 900); c.fillStyle = "#14532d"; wrap(c, T.rule2, W - 240).slice(0, 3).forEach((t, q) => c.fillText(t, W / 2, 800 + q * 70));
+            c.textAlign = "center"; c.font = SANS(72, 900); c.fillStyle = "#14532d"; wrap(c, T.rule2, W - 240).slice(0, 3).forEach((t, q) => c.fillText(t, W / 2, 820 + q * 86));
             c.restore();
           }
         }

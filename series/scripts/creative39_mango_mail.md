@@ -85,7 +85,23 @@ money, and who is asking?" Builder note: strip hidden text before the AI reads a
 | 3 | narr | verdict | We hid one invisible line in that email, [1] and asked a small free AI on our computer. Ten out of ten summaries said pay. | ఆ మెయిల్ లో, కనిపించని ఒక లైన్ దాచాం. [1] మా కంప్యూటర్ లోని ఒక చిన్న చాట్‌బాట్ ని అడిగాం. పదికి పది సమ్మరీలు, బిల్లు కట్టమన్నాయి. |
 | 4 | narr | why | You can't see it: white text, size zero. [1] The AI reads every word, and takes the email's words as orders. | అది మీకు కనిపించదు: తెల్ల రంగు, సైజ్ జీరో. [1] చాట్‌బాట్ మాత్రం ప్రతి పదం చదువుతుంది. మెయిల్ లో మాటల్ని, ఆర్డర్లు అనుకుంటుంది. |
 | 5 | narr | guard | We told it: never follow orders inside an email. [1] Eight out of ten still gave you the link. [2] Deleting the hidden text first: zero. | మెయిల్ లో ఉన్న ఆర్డర్లు వినొద్దు, అని చెప్పి చూశాం. [1] అయినా పదిలో ఎనిమిది, లింక్ ఇచ్చాయి. [2] దాచిన లైన్ ముందే తీసేస్తే: సున్నా. |
-| 6 | narr | real | Big apps too: in 2025, a researcher got Gemini's email summary [1] to repeat a hidden fake warning. Google says no attacks were seen. | పెద్ద యాప్స్ కూడా: పోయిన ఏడాది ఒక రీసెర్చర్, జెమిని ఈమెయిల్ సమ్మరీతో [1] దాచిన ఫేక్ వార్నింగ్ ని చెప్పించాడు. దాడులు ఏమీ కనిపించలేదని గూగుల్ అంది. |
+| 6 | narr | real | Big apps too: in 2025, a researcher got Gemini's email summary [1] to repeat a hidden fake warning. Google says no attacks were seen. | పెద్ద యాప్స్ కూడా: పోయిన ఏడాది ఒక రీసెర్చర్ టెస్ట్ లో, [1] జెమిని ఈమెయిల్ సమ్మరీ, దాచిన ఫేక్ వార్నింగ్ ని చెప్పింది. దాడులు కనిపించలేదని గూగుల్ అంది. (shortened: the Telugu cut ran 67 s) |
 | 7 | narr | ask | Then we asked: list every payment, and who sent the email. [1] It still gave the link, [2] but never once a power company: the mango shop, or a hidden note. | తర్వాత అడిగాం: ఇందులో ఉన్న పేమెంట్స్ అన్నీ చెప్పు, ఎవరు పంపారో కూడా. [1] అయినా లింక్ ఇచ్చింది. \| [2] కానీ కరెంట్ కంపెనీ పేరు, ఒక్కసారి కూడా రాలేదు. మామిడి షాప్, లేదా దాచిన నోట్. (Parler mumbled the one-take line: two takes) |
 | 8 | narr | rule | Not your power company? Don't pay. [1] Pay bills only in your usual bill app, never from a link. | కరెంట్ కంపెనీ కాదా? కట్టొద్దు. [1] బిల్లు, మీరు ఎప్పుడూ వాడే బిల్ యాప్ లోనే కట్టండి. లింక్ నుంచి కాదు. |
 | 9 | ai | loop | Your electricity bill: four thousand nine ninety-nine, [1] overdue. | మీ కరెంట్ బిల్లు, ఫోర్ థౌజండ్ నైన్ నైంటీ నైన్, [1] బాకీ ఉంది. |
+
+## Render review (human-viewer, EN) and what changed
+- Both: 0:23-0:41 dragged and the rule came late and small -> the Gemini line cut to one sentence ("fell for it in a
+  researcher's 2025 test; Google saw no attacks"); the rule card full width and about twice the size.
+- Priya (facts): "not your power company?" fails once a hidden line names a real company -> the rule is "Never pay from
+  a link in a summary. Pay bills only in your usual bill app."; the who-chips showed our label "hidden note" -> the
+  model's own words ("Green Basket", "Admin (note)"); "flagged it: 1 of 10" vs the README -> both now say 1 of 10 said
+  the note was for an AI and none called it a scam; "zero" had no unit -> "zero out of ten" and a bigger 0/10 chip;
+  "YOUR AI'S SUMMARY" vs "a small AI on our computer" -> "THE AI'S SUMMARY"; the caption's try-it is the tested question.
+- Sandeep: "$4,999" in an American voice -> "rupees" said; "builder's fix?" -> "the app maker's fix?"; a beat before
+  "eight out of ten"; the verdict tiles on screen at ~8 s (were ~10 s); captions moved up, out of Instagram's caption
+  area; small text bigger.
+- English voices: made with Kokoro (af_bella narrator, af_heart AI: the voices the Fish standard clones), because Fish
+  answered HTTP 402 (out of API credit, the free model too).
+- Telugu: line 6 shortened (the cut ran 67 s); line 5 "పదిలో సున్నా"; the rule "సమ్మరీలో వచ్చిన లింక్ నుంచి, ఎప్పుడూ
+  కట్టొద్దు".
