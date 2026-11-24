@@ -22,7 +22,7 @@ s.PAGES["P2"] = (url, title, text.replace(" Last updated 12 November 2025.", "")
 SYSTEM = "You are the phone assistant of Ravi's kirana shop in Hyderabad."   # no date, as in "undated_nodate"
 PREFIX = f"Today is {s.TODAY}. "
 INSTR = s.ASKS["search"]
-HAND = None   # filled in by hand after reading all 10 replies
+HAND = "10/10 Rs 142 from today's page (Nov 24, read by hand): 8 cite its link, 2 name it by its title without the link; none cite the old page."
 
 
 def main():
