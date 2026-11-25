@@ -70,7 +70,7 @@ Already posted: `out/posted/`.
 | 063 | q06 | Quiz #6: Episodes 50–58 | ready |
 | 064 | uc01 | 42 Seconds of Silence (UC01: how an AI phone assistant works; skit, AI voices) | ready |
 | 065 | uc02 | ₹168, With a Link (UC02: how AI web search gets fooled; skit, AI voices) | ready |
-| 066 | uc03 | How AI Meeting Notes Work | ready |
+| 066 | uc03 | ₹14.50 a Bag (UC03: how AI meeting notes work; skit, AI voices) | ready |
 | 067 | uc04 | How Netflix and YouTube Recommend Videos | ready |
 | 068 | uc05 | How Magic Eraser Works | ready |
 | 069 | uc06 | How a Bank Support Bot Works | ready |

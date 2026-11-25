@@ -1,0 +1,28 @@
+UPLOAD: 066 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/066_uc03_insta_te.mp4  (teaching skit, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/066_uc03_insta_te_ig.mp4). It loops: "ఒక్కోటి పధ్నాలుగు రూపాయల యాభై పైసలు" taruvaata frame 1: ₹1,450 vs ₹14.50.
+
+=== CAPTION ===
+Call lo: bastha ₹1,450. AI notes lo: ₹14.50. 40 basthalu ₹580 anta.
+
+AI From Scratch use case 3: AI meeting notes ela tayaravutaayi
+- Moodu steps: chevulu (speech-to-text, call ni text ga raastaayi), evaru emannaaro (lines ki perlu), taruvaata AI notes, evaru em cheyyalo raastundi.
+- Prathi step tappu mundhuku pampistundi. Maa test lo (memu raasina oka supplier call, maa computer lo oka chinna free AI, okkokati 10 saarlu): "fourteen fifty rupees a bag" ni chevulu "14.50 rupees" ani raasaayi; 10 lo 7 notes ₹14.50 ani, 10 lo 5 order total ₹580 ani raasaayi (nijam: ₹58,000).
+- Perlu lekapothe, Ravi pani (3 khaali basthalu ready pettadam) 10 lo 6 notes Suresh ki ichhaayi. Perlu unte 10 ki 10 correct. Perlu manishini saricheyyagalavu, dabbuni kaadu.
+- Poorthigaa cheppithe ("one thousand four hundred and fifty rupees"), chevulu 1,450 ani raasaayi; okka notes lo kooda dhara tappu raaledu.
+
+Try chesi choodandi: mee call ni app summary chestundi ante, dharalu poorthigaa cheppandi; notes forward chese mundu prathi number, prathi peru check chesukondi.
+
+Pedda apps: Google Meet "Take notes for me" summary "incomplete, inaccurate" kaavachu ani Google help page cheptondi; daani 8 languages lo Telugu, Hindi levu. Zoom meeting summary list lo Telugu, Hindi unnaayi. Memu ee apps test cheyyaledu.
+
+Next: UC04, Netflix, YouTube videos ela recommend chestaayi.
+Follow @ai_maastaaru_telugu.
+
+=== COMMENT PROMPT ===
+(none)
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #MeetingNotes #AIFromScratch #LearnAI
+
+=== PINNED_COMMENT ===
+Ela test chesam (Nov 25, 2026): memu raasina 8-turn supplier call (40 basthalu "fourteen fifty", ₹14,000 advance), rendu Kokoro computer voices; speech-to-text faster-whisper small, notes Qwen2.5-7B-Instruct (4-bit), rendu maa computer lo; prathi run ki kotha chat, temperature 0.7, seeds 1-10; anni javaabulu chethito chadivaam. "fourteen fifty rupees" → "14 .50 rupees" (notes: 14.50 rupees 7/10, 580 rupees 5/10); poorthigaa → "1,450 rupees" (notes: ₹1,450 7/10, tappu 0/10); perlu lekapothe sacks Suresh 6/10, perlu unte Ravi 10/10. Code: pipeline/uc03/notes_demo.py, notes_demo2.py, notes_demo3.py.
+Sources: Google Meet Help ("Take notes for me"); Zoom Support ("Supported languages for Zoom AI features"). Ravi anna, Suresh, shop memu raasinavi.

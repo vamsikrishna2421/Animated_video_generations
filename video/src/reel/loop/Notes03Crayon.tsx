@@ -95,7 +95,7 @@ const StNotes: React.FC<SP> = ({ s }) => {
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={0} src={CLAP} vol={0.5} />, <Sfx key={k("m")} at={3} src="audio/sfx_chaching.wav" vol={0.35} />, <Sfx key={k("b")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.32} />);
     if (b.prop === "steps") { [[1, 0.2], [2, 0.2], [3, 0.2]].forEach(([n, q], j) => sfx.push(<Sfx key={k("p" + j)} at={cue(i, n, q)} src="audio/sfx_pop.wav" vol={0.3} />)); sfx.push(<Sfx key={k("h")} at={cue(i, 4, 0.3)} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />, <Sfx key={k("z")} at={cue(i, 4, 0.3) + 6} src="reel/sfx_buzz.wav" vol={0.3} />); }
     if (b.prop === "names") sfx.push(<Sfx key={k("x")} at={ln0(i) + 6} src="reel/sfx_buzz.wav" vol={0.3} />, <Sfx key={k("g")} at={cue(i, 1, 0.4)} src="audio/sfx_success.wav" vol={0.3} />);
-    if (b.prop === "apps") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("q")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.3} />);
+    if (b.prop === "full") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("q")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.6} />, <Sfx key={k("c")} at={cue(i, 1, 0.5)} src={CLAP} vol={0.4} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 20)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("s")} at={slam} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />); }
   });
@@ -137,8 +137,9 @@ const StNotes: React.FC<SP> = ({ s }) => {
           notes(c, 550, 440, 490, 560, T.withNames, T.withNamesLines, 2, GREEN, seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 6));
           chip(c, T.noNamesStat, 285, 1090, "#7f1d1d", "#fff", seg(f, ln.from + 10, ln.from + 18), 40);
           chip(c, T.withNamesStat, 795, 1090, "#14532d", "#fff", seg(f, cu(1, 0.3) + 6, cu(1, 0.3) + 14), 40);
-        } else if (b.shot === "apps") {
-          dark(c, W, H, T.appsHead, [T.appsSub]);
+          chip(c, "names fix who, not money", W / 2, 1220, "#1e293b", "#fde68a", seg(f, cu(1, 0.75) - 2, cu(1, 0.75) + 6), 42);
+        } else if (b.shot === "full") {
+          dark(c, W, H, T.fullHead, [T.fullSub]);
           const card = (y: number, head: string, rows: string[], k: number) => {
             if (k <= 0) return; c.save(); c.globalAlpha = clamp(k * 3); c.translate(0, (1 - easeOut(clamp(k * 1.5))) * 30);
             c.fillStyle = "#f8fafc"; rrect(c, 60, y, W - 120, 330, 24); c.fill();
@@ -146,8 +147,8 @@ const StNotes: React.FC<SP> = ({ s }) => {
             rows.forEach((t, q) => { c.font = SANS(fit(c, t, W - 200, 38, 800), 800); c.fillStyle = INK; c.fillText(t, 100, y + 134 + q * 62); });
             c.restore();
           };
-          card(440, T.meetHead, T.meetRows, seg(f, ln.from + 2, ln.from + 10));
-          card(810, T.zoomHead, T.zoomRows, seg(f, cu(1, 0.4) - 4, cu(1, 0.4) + 6));
+          card(440, T.full1Head, T.full1Rows, seg(f, ln.from + 2, ln.from + 10));
+          card(810, T.full2Head, T.full2Rows, seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 6));
         } else {
           // ---------- the shop ----------
           const hookOn = b.prop === "hook" || loopOn;
@@ -175,7 +176,7 @@ const StNotes: React.FC<SP> = ({ s }) => {
           }
           if (b.prop === "hook" && !loopOn) chip(c, T.story, W / 2, 1380, "rgba(15,23,42,0.88)", "#f8fafc", seg(f, cu(1, 0.9), cu(1, 0.9) + 8), fit(c, T.story, W - 140, 36, 800));
         }
-        if (["steps", "names", "apps"].includes(b.shot)) {   // UC02's render review: keep Ravi / the phone on screen on the cards
+        if (["steps", "names", "full"].includes(b.shot)) {   // UC02's render review: keep Ravi / the phone on screen on the cards
           const iw = 250, ih = 175, ix = W - iw - 36, iy = 1360, who = b.who;
           const [cx, cy, zs] = who === "ravi" ? [495, 690, 0.45] : [800, 880, 0.6];
           c.save(); c.fillStyle = "rgba(0,0,0,0.35)"; rrect(c, ix + 5, iy + 6, iw, ih, 20); c.fill();

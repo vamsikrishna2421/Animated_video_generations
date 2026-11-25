@@ -1,0 +1,538 @@
+{
+ "id": "uc03v1",
+ "title": "₹14.50 a Bag (UC03: how AI meeting notes work)",
+ "label": "UC03",
+ "banner": "How AI meeting notes work",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.35,
+ "music": "lofi",
+ "names": {},
+ "musicVol": [
+  0.2,
+  0.42
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.0,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   250,
+   -12,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.6,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1420,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_notes03",
+   "tail": 0.0,
+   "boost": 1.6,
+   "drop_at": [
+    [
+     1,
+     "4",
+     0.3
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "steps",
+      "prop": "steps",
+      "n": 2
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "THE CALL",
+     "leftVal": "₹1,450 A BAG",
+     "rightLab": "THE AI NOTES",
+     "rightVal": "₹14.50 A BAG",
+     "stake": "40 BAGS: ₹58,000 → ₹580",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stepsHead": "HOW AI NOTES ARE MADE",
+     "stepsSub": "our test · a small free AI on our computer · 10 runs",
+     "steps": [
+      [
+       "EARS",
+       "the call → text",
+       "14 .50 rupees a bag, I can deliver..."
+      ],
+      [
+       "WHO SAID WHAT",
+       "names on the lines (added by us)",
+       "Ravi: ...   Suresh: ..."
+      ],
+      [
+       "NOTES",
+       "the summary + who does what",
+       "14.50 rupees per bag · total 580 rupees"
+      ]
+     ],
+     "circleX0": 285,
+     "circleX2": 285,
+     "copied": "7/10 notes: ₹14.50 a bag · 5/10: total ₹580",
+     "namesHead": "WHO KEEPS THE EMPTY SACKS READY?",
+     "namesSub": "the real answer: Ravi · 10 runs each",
+     "noNames": "NO NAMES ON WHO SAID WHAT",
+     "noNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Suresh: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "withNames": "WITH NAMES",
+     "withNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Ravi: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "noNamesStat": "6/10 said Suresh",
+     "withNamesStat": "10/10 said Ravi",
+     "fullHead": "SAY IT IN FULL",
+     "fullSub": "the same call, the amount said in full",
+     "full1Head": "THE CALL SAID",
+     "full1Rows": [
+      "\"one thousand four hundred",
+      "and fifty rupees a bag\""
+     ],
+     "full2Head": "THE EARS WROTE: 1,450 rupees a bag",
+     "full2Rows": [
+      "notes with the right price: 7/10",
+      "notes with a wrong price: 0/10"
+     ],
+     "rule1": "SAY EVERY AMOUNT IN FULL",
+     "rule2": "CHECK THE NOTES BEFORE YOU FORWARD",
+     "builder": "app makers: a \"rupees\" hint took the $ away, but 8/10 notes still wrote 14.50"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "₹14.50 a bag",
+     "title": "₹14.50 a bag",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "Fourteen fifty rupees a bag, I said! [1] The AI notes say fourteen rupees fifty! Forty bags for five hundred and eighty?!",
+     "show": "₹1,450 a bag, I said! The AI notes say ₹14.50! 40 bags for ₹580?!",
+     "maxgap": 0.25,
+     "gap": 0.22,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "Notes take three steps: [1] ears turn the call into text, [2] names show who said what, [3] then I write the notes. <pause 0.6> [4] We ran it ten times: the ears wrote fourteen point five oh, and seven of ten notes copied it.",
+     "show": "Notes take 3 steps: ears turn the call into text, names show who said what, then I write the notes. <pause 0.6> We ran it 10 times: the ears wrote 14.50, and 7 of 10 notes copied it.",
+     "maxgap": 0.25,
+     "gap": 0.22,
+     "tempo": 1.08,
+     "gain_db": -1.0,
+     "tts": "Notes take three steps: ears turn the call into text, names show who said what, then I write the notes.",
+     "file2": "02b_ai.wav",
+     "tts2": "We ran it ten times: the ears wrote fourteen point five oh, and seven of ten notes copied it.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_notes03",
+   "tail": 0.0,
+   "boost": 1.7,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     1,
+     "1",
+     0.2
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "sacks",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "names",
+      "prop": "names",
+      "n": 4
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "THE CALL",
+     "leftVal": "₹1,450 A BAG",
+     "rightLab": "THE AI NOTES",
+     "rightVal": "₹14.50 A BAG",
+     "stake": "40 BAGS: ₹58,000 → ₹580",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stepsHead": "HOW AI NOTES ARE MADE",
+     "stepsSub": "our test · a small free AI on our computer · 10 runs",
+     "steps": [
+      [
+       "EARS",
+       "the call → text",
+       "14 .50 rupees a bag, I can deliver..."
+      ],
+      [
+       "WHO SAID WHAT",
+       "names on the lines (added by us)",
+       "Ravi: ...   Suresh: ..."
+      ],
+      [
+       "NOTES",
+       "the summary + who does what",
+       "14.50 rupees per bag · total 580 rupees"
+      ]
+     ],
+     "circleX0": 285,
+     "circleX2": 285,
+     "copied": "7/10 notes: ₹14.50 a bag · 5/10: total ₹580",
+     "namesHead": "WHO KEEPS THE EMPTY SACKS READY?",
+     "namesSub": "the real answer: Ravi · 10 runs each",
+     "noNames": "NO NAMES ON WHO SAID WHAT",
+     "noNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Suresh: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "withNames": "WITH NAMES",
+     "withNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Ravi: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "noNamesStat": "6/10 said Suresh",
+     "withNamesStat": "10/10 said Ravi",
+     "fullHead": "SAY IT IN FULL",
+     "fullSub": "the same call, the amount said in full",
+     "full1Head": "THE CALL SAID",
+     "full1Rows": [
+      "\"one thousand four hundred",
+      "and fifty rupees a bag\""
+     ],
+     "full2Head": "THE EARS WROTE: 1,450 rupees a bag",
+     "full2Rows": [
+      "notes with the right price: 7/10",
+      "notes with a wrong price: 0/10"
+     ],
+     "rule1": "SAY EVERY AMOUNT IN FULL",
+     "rule2": "CHECK THE NOTES BEFORE YOU FORWARD",
+     "builder": "app makers: a \"rupees\" hint took the $ away, but 8/10 notes still wrote 14.50"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "Who does what",
+     "title": "Who does what",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "And the empty sacks?",
+     "show": "And the empty sacks?",
+     "maxgap": 0.25,
+     "gap": 0.22,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "With no names, six of ten notes gave your job to Suresh. [1] With names, ten of ten got it right. Names fix who, not money.",
+     "show": "With no names, 6 of 10 notes gave your job to Suresh. With names, 10 of 10 got it right. Names fix who, not money.",
+     "maxgap": 0.25,
+     "gap": 0.22,
+     "tempo": 1.08,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_notes03",
+   "tail": 0.0,
+   "boost": 1.8,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "how",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "full",
+      "prop": "full",
+      "n": 6
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "THE CALL",
+     "leftVal": "₹1,450 A BAG",
+     "rightLab": "THE AI NOTES",
+     "rightVal": "₹14.50 A BAG",
+     "stake": "40 BAGS: ₹58,000 → ₹580",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stepsHead": "HOW AI NOTES ARE MADE",
+     "stepsSub": "our test · a small free AI on our computer · 10 runs",
+     "steps": [
+      [
+       "EARS",
+       "the call → text",
+       "14 .50 rupees a bag, I can deliver..."
+      ],
+      [
+       "WHO SAID WHAT",
+       "names on the lines (added by us)",
+       "Ravi: ...   Suresh: ..."
+      ],
+      [
+       "NOTES",
+       "the summary + who does what",
+       "14.50 rupees per bag · total 580 rupees"
+      ]
+     ],
+     "circleX0": 285,
+     "circleX2": 285,
+     "copied": "7/10 notes: ₹14.50 a bag · 5/10: total ₹580",
+     "namesHead": "WHO KEEPS THE EMPTY SACKS READY?",
+     "namesSub": "the real answer: Ravi · 10 runs each",
+     "noNames": "NO NAMES ON WHO SAID WHAT",
+     "noNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Suresh: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "withNames": "WITH NAMES",
+     "withNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Ravi: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "noNamesStat": "6/10 said Suresh",
+     "withNamesStat": "10/10 said Ravi",
+     "fullHead": "SAY IT IN FULL",
+     "fullSub": "the same call, the amount said in full",
+     "full1Head": "THE CALL SAID",
+     "full1Rows": [
+      "\"one thousand four hundred",
+      "and fifty rupees a bag\""
+     ],
+     "full2Head": "THE EARS WROTE: 1,450 rupees a bag",
+     "full2Rows": [
+      "notes with the right price: 7/10",
+      "notes with a wrong price: 0/10"
+     ],
+     "rule1": "SAY EVERY AMOUNT IN FULL",
+     "rule2": "CHECK THE NOTES BEFORE YOU FORWARD",
+     "builder": "app makers: a \"rupees\" hint took the $ away, but 8/10 notes still wrote 14.50"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "Say it in full",
+     "title": "Say it in full",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "So how do I say prices?",
+     "show": "So how do I say prices?",
+     "maxgap": 0.25,
+     "gap": 0.22,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "In full: one thousand four hundred and fifty rupees. [1] Then the ears wrote it right, and not one note got the price wrong.",
+     "show": "In full: \"one thousand four hundred and fifty rupees\". Then the ears wrote it right, and not one note got the price wrong.",
+     "maxgap": 0.25,
+     "gap": 0.22,
+     "tempo": 1.08,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_notes03",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 2.2,
+   "lift": 0.8,
+   "rise": 2.0,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "rule",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "loop",
+      "n": 8
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "THE CALL",
+     "leftVal": "₹1,450 A BAG",
+     "rightLab": "THE AI NOTES",
+     "rightVal": "₹14.50 A BAG",
+     "stake": "40 BAGS: ₹58,000 → ₹580",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stepsHead": "HOW AI NOTES ARE MADE",
+     "stepsSub": "our test · a small free AI on our computer · 10 runs",
+     "steps": [
+      [
+       "EARS",
+       "the call → text",
+       "14 .50 rupees a bag, I can deliver..."
+      ],
+      [
+       "WHO SAID WHAT",
+       "names on the lines (added by us)",
+       "Ravi: ...   Suresh: ..."
+      ],
+      [
+       "NOTES",
+       "the summary + who does what",
+       "14.50 rupees per bag · total 580 rupees"
+      ]
+     ],
+     "circleX0": 285,
+     "circleX2": 285,
+     "copied": "7/10 notes: ₹14.50 a bag · 5/10: total ₹580",
+     "namesHead": "WHO KEEPS THE EMPTY SACKS READY?",
+     "namesSub": "the real answer: Ravi · 10 runs each",
+     "noNames": "NO NAMES ON WHO SAID WHAT",
+     "noNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Suresh: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "withNames": "WITH NAMES",
+     "withNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Ravi: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "noNamesStat": "6/10 said Suresh",
+     "withNamesStat": "10/10 said Ravi",
+     "fullHead": "SAY IT IN FULL",
+     "fullSub": "the same call, the amount said in full",
+     "full1Head": "THE CALL SAID",
+     "full1Rows": [
+      "\"one thousand four hundred",
+      "and fifty rupees a bag\""
+     ],
+     "full2Head": "THE EARS WROTE: 1,450 rupees a bag",
+     "full2Rows": [
+      "notes with the right price: 7/10",
+      "notes with a wrong price: 0/10"
+     ],
+     "rule1": "SAY EVERY AMOUNT IN FULL",
+     "rule2": "CHECK THE NOTES BEFORE YOU FORWARD",
+     "builder": "app makers: a \"rupees\" hint took the $ away, but 8/10 notes still wrote 14.50"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "Check before you forward",
+     "title": "Check before you forward",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "Say every amount in full, [1] and check the notes before you forward them!",
+     "show": "Say every amount in full, and check the notes before you forward them!",
+     "maxgap": 0.25,
+     "gap": 0.5,
+     "tempo": 1.08,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "Order written: forty bags, [1] fourteen rupees fifty each.",
+     "show": "Order written: 40 bags, ₹14.50 each.",
+     "maxgap": 0.25,
+     "gap": 0.0,
+     "tempo": 1.08,
+     "gain_db": -1.0
+    }
+   ]
+  }
+ ]
+}

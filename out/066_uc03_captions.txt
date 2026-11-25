@@ -1,29 +1,37 @@
 UPLOAD: 066
-VIDEO: 066_uc03_how_ai_meeting_notes_work.mp4
+VIDEO: 066_uc03_14_rupees_a_bag.mp4  (teaching skit, AI voices in the Creative 21 standard; replaces the older lesson-format file in slot 066; send copy: 066_uc03_14_rupees_a_bag_ig.mp4). It loops: "Order written: 40 bags, ₹14.50 each" and it is frame 1 again: ₹1,450 vs ₹14.50.
 
 === CAPTION ===
-A one hour meeting, and seconds later you have a summary with action items. How?
+On the call: ₹1,450 a bag. In the AI notes: ₹14.50 a bag. 40 bags for ₹580.
 
-Real World AI, Use Case 03: AI meeting notes
-- The flow: record, transcript, who said what, LLM, notes
-- Speaker diarization: working out who spoke when
-- The prompt behind useful notes (role, context, task, format)
-- Where you'll find it: Zoom, Meet, Teams, note taker apps
-- The tough parts: crosstalk, names, long meetings, privacy
+Use case 3 of AI From Scratch: how AI meeting notes work
+- Three steps: ears (speech-to-text turn the call into text), who said what (names on the lines), then an AI writes the notes and the action items.
+- Each step passes its mistakes on. In our test (a made-up supplier call, a small free AI on our computer, 10 runs each), the ears heard "fourteen fifty rupees a bag" as "14.50 rupees": 7 of 10 notes wrote ₹14.50 a bag, 5 of 10 totalled the order at ₹580 (the real order: ₹58,000).
+- Without the dollar or rupee word, the ears wrote "$14.50", and 7 of 10 notes copied the dollars.
+- With no names on who said what, 6 of 10 notes gave Ravi's job (keep 3 empty sacks ready) to the supplier. With names, 10 of 10 got it right. Names fix who, not money.
+- Said in full ("one thousand four hundred and fifty rupees"), the ears wrote 1,450, and not one note got the price wrong.
 
-Quiz at the end. Got it right? Comment below.
+Try it: on your next call that an app will summarise, say the amounts in full, and read every number and every name in the notes before you forward them.
 
-Next: How Netflix and YouTube recommend videos.
-Follow @ai_maastaaru for more real world AI breakdowns.
+The big apps say it too: Google's help page says Meet's "Take notes for me" summary "can be incomplete, inaccurate, or not generated", and lists 8 languages (Telugu and Hindi aren't among them). Zoom's meeting summary lists Telugu and Hindi. We didn't test either app.
+
+Building one? A "prices are in rupees" hint to speech-to-text took the dollar sign away, but 8 of 10 notes still wrote 14.50: check amounts against the call.
+
+Next: UC04, how Netflix and YouTube recommend videos.
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+(none: from Bujji's reads, the try-it lives in the caption)
 
 === HASHTAGS ===
-#AIMaastaaru #AIProductivity #LearnAI #GenerativeAI #AIForBeginners
+#AIFromScratch #MeetingNotes #SpeechToText #LearnAI #SmallBusiness
 
 === PINNED_COMMENT ===
-Quiz answer: Speaker diarization. It works out who spoke when. Do you use AI notes in your meetings?
+How we tested (Nov 25, 2026): a made-up 8-turn supplier call (40 bags of rice at "fourteen fifty", ₹14,000 advance, Suresh pays ₹500 transport, Ravi keeps 3 empty sacks ready), two Kokoro computer voices; faster-whisper small (int8) for speech-to-text and Qwen2.5-7B-Instruct (4-bit, llama.cpp) for the notes, both on our computer; one fresh chat per run, temperature 0.7, seeds 1-10; every reply read by hand. Ears: "fourteen fifty a bag" → "$14 .50"; "fourteen fifty rupees" → "14 .50 rupees"; said in full → "1,450 rupees"; with the hint "Prices are in Indian rupees" → words, no $ (notes: 14.50 in 8/10). Notes: $14.50 a bag 7/10 and "$580" 7/10 (no rupee word); 14.50 rupees 7/10 and "580 rupees" 5/10 (rupees said); said in full: ₹1,450 in 7/10, wrong 0/10. Who keeps the sacks: no names on the lines, Suresh 6/10; names (added by us from the true turns), Ravi 10/10. Code: pipeline/uc03/notes_demo.py, notes_demo2.py, notes_demo3.py; results: series/scripts/uc03_demo.
+Sources: Google Meet Help, "Take notes for me in Google Meet"; Zoom Support, "Supported languages for Zoom AI features". Ravi anna, Suresh and the shop are made up.
 
 === COVER ===
-'AI Meeting Notes' title card
+Frame 1: two blocks over the shop, "THE CALL ₹1,450 A BAG" (green) and "THE AI NOTES ₹14.50 A BAG" (red); a red chip "40 BAGS: ₹58,000 → ₹580"; Ravi slamming the counter; the shop AI's phone.
 
 === ALT_TEXT ===
-Animated breakdown of how AI meeting note tools turn a call into a summary and action items.
+Crayon-animated skit in Ravi anna's kirana shop. Two blocks: the call, ₹1,450 a bag; the AI notes, ₹14.50 a bag; a red chip: 40 bags, ₹58,000 became ₹580. Ravi: fourteen fifty rupees a bag, I said! The AI notes say fourteen rupees fifty! Forty bags for five hundred and eighty? A card, how AI notes are made: 1 ears, the call to text, "14 .50 rupees a bag" circled; 2 who said what, names on the lines; 3 notes, "14.50 rupees per bag, total 580 rupees" circled; 7 of 10 notes ₹14.50 a bag, 5 of 10 total ₹580. The AI: we ran it ten times; the ears wrote fourteen point five oh, and seven of ten notes copied it. Ravi: and the empty sacks? Two note cards: no names on who said what, "Suresh: keep 3 sacks ready", 6 of 10 said Suresh; with names, "Ravi: keep 3 sacks ready", 10 of 10 said Ravi; names fix who, not money. Ravi: so how do I say prices? A card: the call said "one thousand four hundred and fifty rupees a bag"; the ears wrote 1,450 rupees a bag; notes with the right price 7 of 10, with a wrong price 0 of 10. Ravi: say every amount in full, and check the notes before you forward them! Stamps. The AI: order written, forty bags, fourteen rupees fifty each. Frame 1 comes back.

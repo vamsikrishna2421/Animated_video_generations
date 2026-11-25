@@ -44,8 +44,18 @@ VOICE_TE = {
 }
 NARRATOR = (ROOT / "video/public/reel/ep29v1/src/01_hook.wav", "")   # unused
 APP = {"ai", "caller"}   # both through the phone sound
-MUST = {"en": {}, "te": {}}   # filled with the script
-JUDGE_TEXT = {}
+MUST = {"en": {1: [("fourteen", "14", "1450", "1,450"), ("fifty", "50", "1450", "1,450"), ("rupees", "rupee"), ("notes",), ("forty", "40"), ("bags", "bag"), ("eighty", "580")],
+               2: [("three", "3"), ("steps",), ("ears",), ("text",), ("names",), ("notes",)],
+               "2b": [("ten", "10"), ("ears",), ("fourteen", "14"), ("point", "5", "14.5"), ("seven", "7"), ("copied",)],
+               3: [("empty",), ("sacks", "sack")], 4: [("names",), ("six", "6"), ("suresh",), ("ten", "10"), ("right",), ("money",)],
+               5: [("prices", "price")], 6: [("thousand", "1450", "1,450"), ("fifty", "1450", "1,450"), ("rupees", "rupee"), ("ears",), ("wrong",)],
+               7: [("amount",), ("full",), ("check",), ("notes",), ("forward",)], 8: [("order",), ("forty", "40"), ("fourteen", "14"), ("fifty", "50")]},
+        "te": {}}   # Telugu: full reads by hand
+JUDGE_TEXT = {1: "1,450 rupees a bag, I said! The AI notes say 14 rupees 50! 40 bags for 580?!",
+              "2b": "We ran it 10 times: the ears wrote 14.50, and 7 of 10 notes copied it.",
+              4: "With no names, 6 of 10 notes gave your job to Suresh. With names, 10 of 10 got it right. Names fix who, not money.",
+              6: "In full: 1,450 rupees. Then the ears wrote it right, and not one note got the price wrong.",
+              8: "Order written: 40 bags, 14 rupees 50 each."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
