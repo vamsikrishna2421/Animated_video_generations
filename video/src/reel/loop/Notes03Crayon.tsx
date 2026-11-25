@@ -73,7 +73,7 @@ const notes = (c: Ctx, x: number, y: number, w: number, h: number, title: string
   lines.forEach((t, q) => {
     const yy = y + 110 + q * 58;
     if (q === mark) { c.fillStyle = markCol; rrect(c, x + 12, yy - 40, w - 24, 54, 10); c.fill(); }
-    c.font = SANS(fit(c, t, w - 50, 36, 800), 800); c.fillStyle = q === mark ? "#fff" : INK; c.fillText(t, x + 24, yy);
+    c.font = SANS(fit(c, t, w - 50, 40, 800), 800); c.fillStyle = q === mark ? "#fff" : INK; c.fillText(t, x + 24, yy);
   });
   c.restore();
 };
@@ -95,7 +95,7 @@ const StNotes: React.FC<SP> = ({ s }) => {
     if (b.prop === "hook") sfx.push(<Sfx key={k("a")} at={0} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("c")} at={0} src={CLAP} vol={0.5} />, <Sfx key={k("m")} at={3} src="audio/sfx_chaching.wav" vol={0.35} />, <Sfx key={k("b")} at={cue(i, 1, 0.5)} src="reel/sfx_buzz.wav" vol={0.32} />);
     if (b.prop === "steps") { [[1, 0.2], [2, 0.2], [3, 0.2]].forEach(([n, q], j) => sfx.push(<Sfx key={k("p" + j)} at={cue(i, n, q)} src="audio/sfx_pop.wav" vol={0.3} />)); sfx.push(<Sfx key={k("h")} at={cue(i, 4, 0.3)} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />, <Sfx key={k("z")} at={cue(i, 4, 0.3) + 6} src="reel/sfx_buzz.wav" vol={0.3} />); }
     if (b.prop === "names") sfx.push(<Sfx key={k("x")} at={ln0(i) + 6} src="reel/sfx_buzz.wav" vol={0.3} />, <Sfx key={k("g")} at={cue(i, 1, 0.4)} src="audio/sfx_success.wav" vol={0.3} />);
-    if (b.prop === "full") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("q")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.3} />);
+    if (b.prop === "full") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("q")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("h")} at={cue(i, 1, 0.7)} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />, <Sfx key={k("ok")} at={cue(i, 1, 0.7)} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("a")} at={at + 2} src={CLAP} vol={0.4} />, <Sfx key={k("h")} at={at} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.6} />, <Sfx key={k("c")} at={cue(i, 1, 0.5)} src={CLAP} vol={0.4} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, at - 20)} src="reel/sfx_riser.wav" vol={0.4} />, <Sfx key={k("s")} at={slam} src="reel/sfx_boom.wav" vol={0.9} />, <Sfx key={k("c")} at={slam} src={CLAP} vol={0.5} />); }
   });
@@ -124,7 +124,7 @@ const StNotes: React.FC<SP> = ({ s }) => {
             c.textAlign = "left"; c.font = SANS(46, 900); c.fillStyle = "#f8fafc"; c.fillText(lab, 170, y + 36);
             c.font = SANS(fit(c, sub, W - 240, 32, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(sub, 170, y + 80);
             c.fillStyle = "#f8fafc"; rrect(c, 170, y + 100, W - 230, 120, 16); c.fill();
-            c.font = SANS(fit(c, body, W - 280, 38, 800), 800); c.fillStyle = INK; c.fillText(body, 192, y + 175);
+            c.font = SANS(fit(c, body, W - 280, 42, 800), 800); c.fillStyle = INK; c.fillText(body, 192, y + 175);
             if (q !== 1 && kMiss > 0) {   // the dollars, circled, on the ears and on the notes
               c.strokeStyle = RED; c.lineWidth = 7; c.beginPath(); c.ellipse(q === 0 ? T.circleX0 : T.circleX2, y + 162, 120, 46, 0, 0, Math.PI * 2 * clamp(kMiss * 1.2)); c.stroke();
             }
@@ -135,20 +135,21 @@ const StNotes: React.FC<SP> = ({ s }) => {
           dark(c, W, H, T.namesHead, [T.namesSub]);
           notes(c, 40, 440, 490, 560, T.noNames, T.noNamesLines, 2, RED, seg(f, ln.from + 2, ln.from + 10));
           notes(c, 550, 440, 490, 560, T.withNames, T.withNamesLines, 2, GREEN, seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 6));
-          chip(c, T.noNamesStat, 285, 1090, "#7f1d1d", "#fff", seg(f, ln.from + 10, ln.from + 18), 40);
-          chip(c, T.withNamesStat, 795, 1090, "#14532d", "#fff", seg(f, cu(1, 0.3) + 6, cu(1, 0.3) + 14), 40);
-          chip(c, "names fix who, not money", W / 2, 1220, "#1e293b", "#fde68a", seg(f, cu(1, 0.75) - 2, cu(1, 0.75) + 6), 42);
+          chip(c, T.noNamesStat, 285, 1090, "#7f1d1d", "#fff", seg(f, ln.from + 10, ln.from + 18), 46);
+          chip(c, T.withNamesStat, 795, 1090, "#14532d", "#fff", seg(f, cu(1, 0.3) + 6, cu(1, 0.3) + 14), 46);
+          chip(c, "names fix who, not money", W / 2, 1220, "#fde68a", INK, seg(f, cu(1, 0.75) - 2, cu(1, 0.75) + 6), 50);
         } else if (b.shot === "full") {
           dark(c, W, H, T.fullHead, [T.fullSub]);
           const card = (y: number, head: string, rows: string[], k: number) => {
             if (k <= 0) return; c.save(); c.globalAlpha = clamp(k * 3); c.translate(0, (1 - easeOut(clamp(k * 1.5))) * 30);
             c.fillStyle = "#f8fafc"; rrect(c, 60, y, W - 120, 330, 24); c.fill();
             c.textAlign = "left"; c.font = SANS(fit(c, head, W - 200, 42, 900), 900); c.fillStyle = "#1e3a8a"; c.fillText(head, 100, y + 64);
-            rows.forEach((t, q) => { c.font = SANS(fit(c, t, W - 200, 38, 800), 800); c.fillStyle = INK; c.fillText(t, 100, y + 134 + q * 62); });
+            rows.forEach((t, q) => { c.font = SANS(fit(c, t, W - 200, 46, 800), 800); c.fillStyle = INK; c.fillText(t, 100, y + 140 + q * 70); });
             c.restore();
           };
           card(440, T.full1Head, T.full1Rows, seg(f, ln.from + 2, ln.from + 10));
           card(810, T.full2Head, T.full2Rows, seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 6));
+          if (seg(f, cu(1, 0.7) - 2, cu(1, 0.7) + 6) > 0) stamp(c, T.zeroWrong, W / 2, 1250, GREEN, seg(f, cu(1, 0.7) - 2, cu(1, 0.7) + 6), 110, -0.06);
         } else {
           // ---------- the shop ----------
           const hookOn = b.prop === "hook" || loopOn;
@@ -170,10 +171,11 @@ const StNotes: React.FC<SP> = ({ s }) => {
             chip(c, T.stake, W / 2, 486, RED, "#fff", b.prop === "hook" && !loopOn ? seg(f, cu(1, 0.5) - 2, cu(1, 0.5) + 6) : 1, 44);
           }
           if (b.prop === "rule") {
-            stamp(c, T.rule1, W / 2, 330, "#2563eb", seg(f, ln.from + 2, ln.from + 10), 72, -0.05);
-            stamp(c, T.rule2, W / 2, 490, RED, seg(f, cu(1, 0.35) - 2, cu(1, 0.35) + 6), 56, 0.03);
+            stamp(c, T.rule1, W / 2, 340, "#2563eb", seg(f, ln.from + 2, ln.from + 10), 80, -0.03);
+            stamp(c, T.rule2, W / 2, 510, RED, seg(f, cu(1, 0.35) - 2, cu(1, 0.35) + 6), 66, 0.02);
           }
-          if (b.prop === "hook" && !loopOn) chip(c, T.story, W / 2, 1380, "rgba(15,23,42,0.88)", "#f8fafc", seg(f, cu(1, 0.9), cu(1, 0.9) + 8), fit(c, T.story, W - 140, 36, 800));
+          if (b.prop === "loop" && !loopOn) chip(c, "NEXT CALL...", W / 2, 300, "#1e293b", "#fde68a", seg(f, ln.from, ln.from + 8), 56);
+          if (b.prop === "hook" && !loopOn) chip(c, T.story, W / 2, 1360, "rgba(15,23,42,0.88)", "#f8fafc", seg(f, cu(1, 0.9), cu(1, 0.9) + 8), fit(c, T.story, W - 120, 42, 800));
         }
         if (["steps", "names", "full"].includes(b.shot)) {   // UC02's render review: keep Ravi / the phone on screen on the cards
           const iw = 250, ih = 175, ix = W - iw - 36, iy = 1360, who = b.who;

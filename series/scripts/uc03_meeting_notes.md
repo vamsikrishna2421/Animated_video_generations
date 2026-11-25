@@ -78,3 +78,18 @@ forward them."
 | 6 | ai | full | In full: one thousand four hundred and fifty rupees. [1] Then the ears wrote it right, and not one note got the price wrong. | పూర్తిగా: వన్ థౌజండ్ ఫోర్ హండ్రెడ్ అండ్ ఫిఫ్టీ రూపీస్. [1] అప్పుడు చెవులు సరిగ్గా రాశాయి. ఒక్క నోట్స్ లో కూడా ధర తప్పు రాలేదు. |
 | 7 | ravi | rule | Say every amount in full, [1] and check the notes before you forward them! | ప్రతి ధర పూర్తిగా చెప్పండి, [1] నోట్స్ పంపే ముందు చెక్ చేసుకోండి! |
 | 8 | ai | loop | Order written: forty bags, [1] fourteen rupees fifty each. | ఆర్డర్ రాసుకున్నా: నలభై బస్తాలు, [1] ఒక్కోటి పధ్నాలుగు రూపాయల యాభై పైసలు. |
+
+## Render review (human-viewer, EN + TE) and what changed
+- Telugu (Sandeep): "నేను నోట్స్ రాస్తా" was heard as "nenuds raasta" (nudes), and "నోట్స్" as "nurse" → the Telugu
+  voice says "సమ్మరీ" throughout; the end of "డబ్బుని కాదు" was heard near a Hindi swear, and "పేర్లు మనిషిని
+  సరిచేస్తాయి" sounded like "names straighten the man out" → "పేర్లు, ఎవరో సరిచేశాయి. ధర మాత్రం అలాగే తప్పు.";
+  "ఫోర్టీన్ ఫిఫ్టీ" came out "14-15" → "పధ్నాలుగు యాభై"; the English amount said in Telugu was mush → "వెయ్యి నాలుగు
+  వందల యాభై రూపాయలు".
+- Both: tiny text in the middle → bigger card text and chips; "0 wrong" hid the 3 notes with no price → the card says
+  "right 7/10 · wrong 0/10 · no price 3/10", the voice "seven notes right, none wrong", after a beat, with a big 0 WRONG
+  stamp; Suresh and the sacks came from nowhere → "And who keeps Suresh's empty sacks ready?" and "Ravi ↔ Suresh
+  (supplier)" on the steps card; the loop looked like the fix failed → "Next call, noted:" with a NEXT CALL chip.
+- Priya: "we ran it ten times: the ears wrote..." implied the ears ran ten times → "The ears wrote fourteen point five
+  oh, and in ten runs, seven notes copied it"; the names card showed money the test got wrong → no amounts on it; "names
+  added by us: the best case" on it. Sound: less music in the gaps (it pumped ~6 dB over the voice), no dead-silence
+  drop at 0:14, a beat before the payoff, more lift in the middle.

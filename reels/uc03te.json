@@ -30,7 +30,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 1.0,
+ "musicGapGain": 0.6,
  "musicEndRamp": [
   0.9,
   3.0
@@ -49,13 +49,6 @@
    "type": "sk_notes03",
    "tail": 0.0,
    "boost": 1.6,
-   "drop_at": [
-    [
-     1,
-     "4",
-     0.3
-    ]
-   ],
    "data": {
     "beats": [
      {
@@ -80,7 +73,7 @@
      "stake": "40 BAGS: ₹58,000 → ₹580",
      "story": "Ravi and the shop are made up · our test is real",
      "stepsHead": "HOW AI NOTES ARE MADE",
-     "stepsSub": "our test · a small free AI on our computer · 10 runs",
+     "stepsSub": "our test: Ravi ↔ Suresh (supplier) · a small free AI on our computer",
      "steps": [
       [
        "EARS",
@@ -102,18 +95,18 @@
      "circleX2": 285,
      "copied": "7/10 notes: ₹14.50 a bag · 5/10: total ₹580",
      "namesHead": "WHO KEEPS THE EMPTY SACKS READY?",
-     "namesSub": "the real answer: Ravi · 10 runs each",
+     "namesSub": "the right answer: Ravi · names added by us: the best case",
      "noNames": "NO NAMES ON WHO SAID WHAT",
      "noNamesLines": [
       "Suresh: deliver 40 bags",
-      "Ravi: send ₹14,000",
+      "Ravi: send the advance",
       "Suresh: keep 3 sacks ready",
       "Ravi: pay the balance"
      ],
      "withNames": "WITH NAMES",
      "withNamesLines": [
       "Suresh: deliver 40 bags",
-      "Ravi: send ₹14,000",
+      "Ravi: send the advance",
       "Ravi: keep 3 sacks ready",
       "Ravi: pay the balance"
      ],
@@ -128,9 +121,10 @@
      ],
      "full2Head": "THE EARS WROTE: 1,450 rupees a bag",
      "full2Rows": [
-      "notes with the right price: 7/10",
-      "notes with a wrong price: 0/10"
+      "right price: 7/10 · wrong: 0/10",
+      "no price given: 3/10"
      ],
+     "zeroWrong": "0 WRONG",
      "rule1": "SAY EVERY AMOUNT IN FULL",
      "rule2": "CHECK THE NOTES BEFORE YOU FORWARD",
      "builder": "app makers: a \"rupees\" hint took the $ away, but 8/10 notes still wrote 14.50"
@@ -150,8 +144,8 @@
     {
      "who": "ravi",
      "file": "01_ravi.wav",
-     "text": "బస్తా ఫోర్టీన్ ఫిఫ్టీ రూపాయలు, అని చెప్పా! [1] నోట్స్ లో, పధ్నాలుగు రూపాయల యాభై పైసలు! నలభై బస్తాలు, ఐదు వందల ఎనభై రూపాయలా?!",
-     "show": "I said ₹1,450 a bag! In the notes: ₹14 and 50 paise! 40 bags, ₹580?!",
+     "text": "బస్తా పధ్నాలుగు యాభై రూపాయలు, అని చెప్పా! [1] సమ్మరీలో, పధ్నాలుగు రూపాయల యాభై పైసలు! నలభై బస్తాలు, ఐదు వందల ఎనభై రూపాయలా?!",
+     "show": "I said fourteen fifty a bag! In the summary: ₹14 and 50 paise! 40 bags, ₹580?!",
      "maxgap": 0.25,
      "gap": 0.16,
      "tempo": 1.1,
@@ -160,15 +154,15 @@
     {
      "who": "ai",
      "file": "02_ai.wav",
-     "text": "నోట్స్ కి మూడు పనులు: [1] చెవులు, కాల్ ని టెక్స్ట్ గా రాస్తాయి. [2] తర్వాత, ఎవరు ఏమన్నారో పేర్లు పెడతాం. [3] చివరగా, నేను నోట్స్ రాస్తా. <pause 0.6> [4] పది సార్లు చేసి చూశాం. చెవులు, ఫోర్టీన్ పాయింట్ ఫైవ్ జీరో అని రాశాయి. పదిలో ఏడు నోట్స్, అదే రాశాయి.",
-     "show": "Notes have 3 jobs: the ears write the call as text. Then we add names for who said what. Last, I write the notes. <pause 0.6> We ran it 10 times. The ears wrote 14.50. 7 of 10 notes wrote the same.",
+     "text": "సమ్మరీకి మూడు పనులు: [1] చెవులు, కాల్ ని టెక్స్ట్ గా రాస్తాయి. [2] తర్వాత, ఎవరు ఏమన్నారో పేర్లు పెడతాం. [3] చివరగా, నేను సమ్మరీ రాస్తా. <pause 0.6> [4] చెవులు, ఫోర్టీన్ పాయింట్ ఫైవ్ జీరో అని రాశాయి. పది సార్లు చేస్తే, ఏడు సమ్మరీలు అదే రాశాయి.",
+     "show": "A summary has 3 jobs: the ears write the call as text. Then we add names for who said what. Last, I write the summary. <pause 0.6> The ears wrote 14.50. In 10 runs, 7 summaries wrote the same.",
      "maxgap": 0.25,
      "gap": 0.16,
      "tempo": 1.12,
      "gain_db": -1.0,
-     "tts": "నోట్స్ కి మూడు పనులు: చెవులు, కాల్ ని టెక్స్ట్ గా రాస్తాయి. తర్వాత, ఎవరు ఏమన్నారో పేర్లు పెడతాం. చివరగా, నేను నోట్స్ రాస్తా.",
+     "tts": "సమ్మరీకి మూడు పనులు: చెవులు, కాల్ ని టెక్స్ట్ గా రాస్తాయి. తర్వాత, ఎవరు ఏమన్నారో పేర్లు పెడతాం. చివరగా, నేను సమ్మరీ రాస్తా.",
      "file2": "02b_ai.wav",
-     "tts2": "పది సార్లు చేసి చూశాం. చెవులు, ఫోర్టీన్ పాయింట్ ఫైవ్ జీరో అని రాశాయి. పదిలో ఏడు నోట్స్, అదే రాశాయి.",
+     "tts2": "చెవులు, ఫోర్టీన్ పాయింట్ ఫైవ్ జీరో అని రాశాయి. పది సార్లు చేస్తే, ఏడు సమ్మరీలు అదే రాశాయి.",
      "pause": 0.6
     }
    ]
@@ -177,15 +171,8 @@
    "id": "s_b",
    "type": "sk_notes03",
    "tail": 0.0,
-   "boost": 1.7,
-   "lift": 0.6,
-   "drop_at": [
-    [
-     1,
-     "1",
-     0.2
-    ]
-   ],
+   "boost": 2.0,
+   "lift": 0.7,
    "data": {
     "beats": [
      {
@@ -210,7 +197,7 @@
      "stake": "40 BAGS: ₹58,000 → ₹580",
      "story": "Ravi and the shop are made up · our test is real",
      "stepsHead": "HOW AI NOTES ARE MADE",
-     "stepsSub": "our test · a small free AI on our computer · 10 runs",
+     "stepsSub": "our test: Ravi ↔ Suresh (supplier) · a small free AI on our computer",
      "steps": [
       [
        "EARS",
@@ -232,18 +219,18 @@
      "circleX2": 285,
      "copied": "7/10 notes: ₹14.50 a bag · 5/10: total ₹580",
      "namesHead": "WHO KEEPS THE EMPTY SACKS READY?",
-     "namesSub": "the real answer: Ravi · 10 runs each",
+     "namesSub": "the right answer: Ravi · names added by us: the best case",
      "noNames": "NO NAMES ON WHO SAID WHAT",
      "noNamesLines": [
       "Suresh: deliver 40 bags",
-      "Ravi: send ₹14,000",
+      "Ravi: send the advance",
       "Suresh: keep 3 sacks ready",
       "Ravi: pay the balance"
      ],
      "withNames": "WITH NAMES",
      "withNamesLines": [
       "Suresh: deliver 40 bags",
-      "Ravi: send ₹14,000",
+      "Ravi: send the advance",
       "Ravi: keep 3 sacks ready",
       "Ravi: pay the balance"
      ],
@@ -258,9 +245,10 @@
      ],
      "full2Head": "THE EARS WROTE: 1,450 rupees a bag",
      "full2Rows": [
-      "notes with the right price: 7/10",
-      "notes with a wrong price: 0/10"
+      "right price: 7/10 · wrong: 0/10",
+      "no price given: 3/10"
      ],
+     "zeroWrong": "0 WRONG",
      "rule1": "SAY EVERY AMOUNT IN FULL",
      "rule2": "CHECK THE NOTES BEFORE YOU FORWARD",
      "builder": "app makers: a \"rupees\" hint took the $ away, but 8/10 notes still wrote 14.50"
@@ -280,8 +268,8 @@
     {
      "who": "ravi",
      "file": "03_ravi.wav",
-     "text": "మరి ఖాళీ బస్తాలు ఎవరు రెడీ పెట్టాలి?",
-     "show": "So who keeps the empty sacks ready?",
+     "text": "మరి సురేష్ ఖాళీ బస్తాలు, ఎవరు రెడీ పెట్టాలి?",
+     "show": "So who keeps Suresh's empty sacks ready?",
      "maxgap": 0.25,
      "gap": 0.16,
      "tempo": 1.1,
@@ -290,8 +278,8 @@
     {
      "who": "ai",
      "file": "04_ai.wav",
-     "text": "పేర్లు లేకపోతే, పదిలో ఆరు నోట్స్, సురేష్ అని రాశాయి. [1] పేర్లు పెడితే, పదికి పది మీరే. పేర్లు, మనిషిని సరిచేస్తాయి. డబ్బుని కాదు.",
-     "show": "With no names, 6 of 10 notes wrote Suresh. With names, 10 of 10: you. Names fix the person, not the money.",
+     "text": "పేర్లు లేకపోతే, పదిలో ఆరు సమ్మరీలు, సురేష్ అని రాశాయి. [1] పేర్లు పెడితే, పదికి పది మీరే. పేర్లు, ఎవరో సరిచేశాయి. ధర మాత్రం అలాగే తప్పు.",
+     "show": "With no names, 6 of 10 summaries wrote Suresh. With names, 10 of 10: you. The names fixed who. The price stayed wrong.",
      "maxgap": 0.25,
      "gap": 0.16,
      "tempo": 1.12,
@@ -303,8 +291,15 @@
    "id": "s_c",
    "type": "sk_notes03",
    "tail": 0.0,
-   "boost": 1.8,
-   "lift": 0.6,
+   "boost": 2.0,
+   "lift": 0.7,
+   "drop_at": [
+    [
+     1,
+     "1",
+     0.0
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -329,7 +324,7 @@
      "stake": "40 BAGS: ₹58,000 → ₹580",
      "story": "Ravi and the shop are made up · our test is real",
      "stepsHead": "HOW AI NOTES ARE MADE",
-     "stepsSub": "our test · a small free AI on our computer · 10 runs",
+     "stepsSub": "our test: Ravi ↔ Suresh (supplier) · a small free AI on our computer",
      "steps": [
       [
        "EARS",
@@ -351,18 +346,18 @@
      "circleX2": 285,
      "copied": "7/10 notes: ₹14.50 a bag · 5/10: total ₹580",
      "namesHead": "WHO KEEPS THE EMPTY SACKS READY?",
-     "namesSub": "the real answer: Ravi · 10 runs each",
+     "namesSub": "the right answer: Ravi · names added by us: the best case",
      "noNames": "NO NAMES ON WHO SAID WHAT",
      "noNamesLines": [
       "Suresh: deliver 40 bags",
-      "Ravi: send ₹14,000",
+      "Ravi: send the advance",
       "Suresh: keep 3 sacks ready",
       "Ravi: pay the balance"
      ],
      "withNames": "WITH NAMES",
      "withNamesLines": [
       "Suresh: deliver 40 bags",
-      "Ravi: send ₹14,000",
+      "Ravi: send the advance",
       "Ravi: keep 3 sacks ready",
       "Ravi: pay the balance"
      ],
@@ -377,9 +372,10 @@
      ],
      "full2Head": "THE EARS WROTE: 1,450 rupees a bag",
      "full2Rows": [
-      "notes with the right price: 7/10",
-      "notes with a wrong price: 0/10"
+      "right price: 7/10 · wrong: 0/10",
+      "no price given: 3/10"
      ],
+     "zeroWrong": "0 WRONG",
      "rule1": "SAY EVERY AMOUNT IN FULL",
      "rule2": "CHECK THE NOTES BEFORE YOU FORWARD",
      "builder": "app makers: a \"rupees\" hint took the $ away, but 8/10 notes still wrote 14.50"
@@ -409,12 +405,16 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "పూర్తిగా: వన్ థౌజండ్ ఫోర్ హండ్రెడ్ అండ్ ఫిఫ్టీ రూపీస్. [1] అప్పుడు చెవులు సరిగ్గా రాశాయి. ఒక్క నోట్స్ లో కూడా ధర తప్పు రాలేదు.",
-     "show": "In full: \"one thousand four hundred and fifty rupees\". Then the ears wrote it right. Not one note got the price wrong.",
+     "text": "పూర్తిగా: వెయ్యి నాలుగు వందల యాభై రూపాయలు. <pause 0.6> [1] అప్పుడు చెవులు సరిగ్గా రాశాయి. ఏడు సమ్మరీలు సరిగ్గా, ఒక్కటీ తప్పు లేదు.",
+     "show": "In full: \"one thousand four hundred and fifty rupees\". <pause 0.6> Then the ears wrote it right. 7 summaries right, none wrong.",
      "maxgap": 0.25,
      "gap": 0.16,
      "tempo": 1.12,
-     "gain_db": -1.0
+     "gain_db": -1.0,
+     "tts": "పూర్తిగా: వెయ్యి నాలుగు వందల యాభై రూపాయలు.",
+     "file2": "06b_ai.wav",
+     "tts2": "అప్పుడు చెవులు సరిగ్గా రాశాయి. ఏడు సమ్మరీలు సరిగ్గా, ఒక్కటీ తప్పు లేదు.",
+     "pause": 0.6
     }
    ]
   },
@@ -451,7 +451,7 @@
      "stake": "40 BAGS: ₹58,000 → ₹580",
      "story": "Ravi and the shop are made up · our test is real",
      "stepsHead": "HOW AI NOTES ARE MADE",
-     "stepsSub": "our test · a small free AI on our computer · 10 runs",
+     "stepsSub": "our test: Ravi ↔ Suresh (supplier) · a small free AI on our computer",
      "steps": [
       [
        "EARS",
@@ -473,18 +473,18 @@
      "circleX2": 285,
      "copied": "7/10 notes: ₹14.50 a bag · 5/10: total ₹580",
      "namesHead": "WHO KEEPS THE EMPTY SACKS READY?",
-     "namesSub": "the real answer: Ravi · 10 runs each",
+     "namesSub": "the right answer: Ravi · names added by us: the best case",
      "noNames": "NO NAMES ON WHO SAID WHAT",
      "noNamesLines": [
       "Suresh: deliver 40 bags",
-      "Ravi: send ₹14,000",
+      "Ravi: send the advance",
       "Suresh: keep 3 sacks ready",
       "Ravi: pay the balance"
      ],
      "withNames": "WITH NAMES",
      "withNamesLines": [
       "Suresh: deliver 40 bags",
-      "Ravi: send ₹14,000",
+      "Ravi: send the advance",
       "Ravi: keep 3 sacks ready",
       "Ravi: pay the balance"
      ],
@@ -499,9 +499,10 @@
      ],
      "full2Head": "THE EARS WROTE: 1,450 rupees a bag",
      "full2Rows": [
-      "notes with the right price: 7/10",
-      "notes with a wrong price: 0/10"
+      "right price: 7/10 · wrong: 0/10",
+      "no price given: 3/10"
      ],
+     "zeroWrong": "0 WRONG",
      "rule1": "SAY EVERY AMOUNT IN FULL",
      "rule2": "CHECK THE NOTES BEFORE YOU FORWARD",
      "builder": "app makers: a \"rupees\" hint took the $ away, but 8/10 notes still wrote 14.50"
@@ -521,8 +522,8 @@
     {
      "who": "ravi",
      "file": "07_ravi.wav",
-     "text": "ప్రతి ధర పూర్తిగా చెప్పండి, [1] నోట్స్ పంపే ముందు చెక్ చేసుకోండి!",
-     "show": "Say every price in full, and check the notes before you send them!",
+     "text": "ప్రతి ధర పూర్తిగా చెప్పండి, [1] సమ్మరీ పంపే ముందు చెక్ చేసుకోండి!",
+     "show": "Say every price in full, and check the summary before you send it!",
      "maxgap": 0.25,
      "gap": 0.4,
      "tempo": 1.1,
@@ -531,8 +532,8 @@
     {
      "who": "ai",
      "file": "08_ai.wav",
-     "text": "ఆర్డర్ రాసుకున్నా: నలభై బస్తాలు, [1] ఒక్కోటి పధ్నాలుగు రూపాయల యాభై పైసలు.",
-     "show": "Order written: 40 bags, ₹14.50 each.",
+     "text": "తర్వాతి కాల్: నలభై బస్తాలు, [1] ఒక్కోటి పధ్నాలుగు రూపాయల యాభై పైసలు.",
+     "show": "Next call: 40 bags, ₹14.50 each.",
      "maxgap": 0.25,
      "gap": 0.0,
      "tempo": 1.12,
