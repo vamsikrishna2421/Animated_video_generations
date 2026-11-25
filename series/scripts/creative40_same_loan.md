@@ -124,3 +124,5 @@ different ways before it sees real people.
   caption adds: with a loan app, ask which bank or NBFC is lending and ask them. Builder line bigger: "Builders: score
   the facts, not the wording".
 - Readability: the three letters show their opening words; small footers and the fix sub-lines bigger.
+- Telugu (length): the first Telugu cut ran 62.4 s -> line 4 without "ఫ్రీ" and "అన్నీ"; line 8 without "రెండేళ్ళ క్రితం" and
+  "కనిపించింది", the dialect named as "అమెరికాలోని ఒక యాసలో".

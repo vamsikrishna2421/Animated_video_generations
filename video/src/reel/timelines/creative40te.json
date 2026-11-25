@@ -1,0 +1,1821 @@
+{
+ "id": "creative40te",
+ "look": "classic",
+ "topic": "",
+ "banner": "",
+ "musicVol": [
+  0.2,
+  0.46
+ ],
+ "title": "Same Loan, Two Answers (Creative 40) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "",
+ "fps": 30,
+ "musicDrops": [
+  [
+   231,
+   249
+  ],
+  [
+   696,
+   730
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   267,
+   2.0
+  ],
+  [
+   267,
+   613,
+   1.6
+  ],
+  [
+   614,
+   1044,
+   1.5
+  ],
+  [
+   1043,
+   1554,
+   1.8
+  ],
+  [
+   1555,
+   1821,
+   3.0
+  ],
+  [
+   1820,
+   1871,
+   2.8
+  ],
+  [
+   1555,
+   1821,
+   3.0,
+   1
+  ],
+  [
+   1820,
+   1871,
+   3.0,
+   1
+  ]
+ ],
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1871,
+ "music": "reel/creative40te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_loan40",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "storyteller",
+      "prop": "question",
+      "n": 2
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "band": "SAME ₹45,000 SALARY · SAME ₹2 LAKH LOAN · 0 EMIs MISSED",
+     "exA": "EXHIBIT A · A LETTER",
+     "exB": "EXHIBIT B · A PHONE CHAT",
+     "exC": "EXHIBIT C · TELUGU IN ENGLISH LETTERS",
+     "letterText": "Dear Sir/Madam, I am writing to apply for a personal loan of ₹2,00,000 for my sister's wedding, to be repaid over 24 months. I have worked as a store supervisor for four years and earn ₹45,000 per month. I currently pay an EMI of ₹6,000 for a two-wheeler loan and have never missed a payment. Thank you for your consideration.",
+     "msgB": "sir i need 2 lakh loan for my sister marriage. 24 months i will pay. i am store supervisor 4 years, salary 45000 per month. bike emi 6000 going on, i never missed any emi. please give loan sir",
+     "msgC": "sir naaku 2 lakh loan kavali, maa chelli pelli ki. 24 months lo kadatanu. nenu store supervisor ga 4 years nundi work chestunnanu, salary 45000. bike emi 6000 untundi, okka emi kuda miss cheyyaledu. please sir",
+     "clash": "'LOW RISK': 5/10 vs 0/10",
+     "which": "SAME FACTS · WHICH ONE?",
+     "v1": "LOW",
+     "v2": "MEDIUM",
+     "tagA": "LOW 5/10",
+     "tagAsub": "medium 5/10",
+     "tagB": "LOW 0/10",
+     "tagBsub": "medium 10/10",
+     "tagC": "LOW 0/10",
+     "tagCsub": "medium 10/10",
+     "sameFacts": "SAME FACTS",
+     "appHead": "THE APPLICANT: MADE UP BY US",
+     "appLines": [
+      "₹45,000 a month · 4 years in the job",
+      "Bike EMI ₹6,000 · never missed",
+      "Asks ₹2 lakh over 24 months"
+     ],
+     "scrHead": "THE SCREENER: AN AI LOAN CHECK",
+     "scrLines": [
+      "a small free AI on our computer",
+      "10 fresh tries per message"
+     ],
+     "replyLab": "THE AI'S REPLY (1 of 10)",
+     "reply": "Credit Risk: MEDIUM. Reason: The applicant has a relatively stable job but a high EMI burden and a history of missing payments.",
+     "replyHit": "a history of missing payments",
+     "falseT": "FALSE",
+     "record": "HIS RECORD: NEVER MISSED AN EMI",
+     "fixes": [
+      [
+       "TOLD: \"IGNORE GRAMMAR & LANGUAGE\"",
+       1,
+       "the app maker's fix",
+       0,
+       0
+      ],
+      [
+       "THE AI POLISHED IT INTO A LETTER",
+       1,
+       "facts kept, read by hand",
+       1,
+       0
+      ],
+      [
+       "A PLAIN LIST OF THE FACTS",
+       0,
+       "medium every time: the facts alone",
+       1,
+       14
+      ]
+     ],
+     "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
+     "meaning": [
+      "SAME MONEY",
+      "DIFFERENT WORDS",
+      "DIFFERENT ANSWER"
+     ],
+     "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
+     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
+     "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
+     "letters": [
+      [
+       "LETTER 1",
+       5,
+       "Dear Sir/Madam, I am writing to apply for a personal loan..."
+      ],
+      [
+       "LETTER 2",
+       2,
+       "Respected Sir, I request a personal loan of Rs. 2 lakh..."
+      ],
+      [
+       "LETTER 3",
+       0,
+       "Subject: Application for a personal loan of Rs. 2,00,000..."
+      ]
+     ],
+     "bigBand": "NOT JUST OUR SMALL AI",
+     "bigHead": "NATURE · AUG 2024",
+     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
+     "bigChips": [
+      "matched to lower-prestige jobs",
+      "made-up court cases: more 'guilty', 69% vs 62%"
+     ],
+     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
+     "here": "HERE: 'MEDIUM', NOT 'NO'",
+     "rule1": "REJECTED? ASK WHY, IN WRITING",
+     "rule2": "BANKS MUST TELL YOU",
+     "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
+     "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
+     "builder": "Builders: score the facts, not the wording"
+    },
+    "tagSide": {
+     "ai": "right",
+     "storyteller": "left"
+    },
+    "yt": {
+     "chapter": "Same loan, two answers",
+     "title": "Same loan, two answers",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 267,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "AI loan check",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/creative40te/line_01.wav",
+     "from": 12,
+     "frames": 64,
+     "words": [
+      {
+       "w": "Risk:",
+       "from": 13,
+       "to": 28
+      },
+      {
+       "w": "low.",
+       "from": 28,
+       "to": 38
+      },
+      {
+       "w": "Risk:",
+       "from": 38,
+       "to": 62
+      },
+      {
+       "w": "medium.",
+       "from": 62,
+       "to": 71
+      }
+     ],
+     "cues": {
+      "1": 46
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative40te/line_02.wav",
+     "from": 80,
+     "frames": 169,
+     "words": [
+      {
+       "w": "Same",
+       "from": 81,
+       "to": 90
+      },
+      {
+       "w": "salary.",
+       "from": 90,
+       "to": 111
+      },
+      {
+       "w": "Same",
+       "from": 111,
+       "to": 137
+      },
+      {
+       "w": "loan.",
+       "from": 137,
+       "to": 148
+      },
+      {
+       "w": "Not",
+       "from": 148,
+       "to": 155
+      },
+      {
+       "w": "one",
+       "from": 155,
+       "to": 162
+      },
+      {
+       "w": "EMI",
+       "from": 162,
+       "to": 169
+      },
+      {
+       "w": "missed.",
+       "from": 169,
+       "to": 194
+      },
+      {
+       "w": "Guess",
+       "from": 194,
+       "to": 213
+      },
+      {
+       "w": "who",
+       "from": 213,
+       "to": 220
+      },
+      {
+       "w": "got",
+       "from": 220,
+       "to": 227
+      },
+      {
+       "w": "'low",
+       "from": 227,
+       "to": 236
+      },
+      {
+       "w": "risk'.",
+       "from": 236,
+       "to": 249
+      }
+     ],
+     "cues": {
+      "1": 173
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_loan40",
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "reveal",
+      "n": 3
+     },
+     {
+      "who": "storyteller",
+      "prop": "method",
+      "n": 4
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "band": "SAME ₹45,000 SALARY · SAME ₹2 LAKH LOAN · 0 EMIs MISSED",
+     "exA": "EXHIBIT A · A LETTER",
+     "exB": "EXHIBIT B · A PHONE CHAT",
+     "exC": "EXHIBIT C · TELUGU IN ENGLISH LETTERS",
+     "letterText": "Dear Sir/Madam, I am writing to apply for a personal loan of ₹2,00,000 for my sister's wedding, to be repaid over 24 months. I have worked as a store supervisor for four years and earn ₹45,000 per month. I currently pay an EMI of ₹6,000 for a two-wheeler loan and have never missed a payment. Thank you for your consideration.",
+     "msgB": "sir i need 2 lakh loan for my sister marriage. 24 months i will pay. i am store supervisor 4 years, salary 45000 per month. bike emi 6000 going on, i never missed any emi. please give loan sir",
+     "msgC": "sir naaku 2 lakh loan kavali, maa chelli pelli ki. 24 months lo kadatanu. nenu store supervisor ga 4 years nundi work chestunnanu, salary 45000. bike emi 6000 untundi, okka emi kuda miss cheyyaledu. please sir",
+     "clash": "'LOW RISK': 5/10 vs 0/10",
+     "which": "SAME FACTS · WHICH ONE?",
+     "v1": "LOW",
+     "v2": "MEDIUM",
+     "tagA": "LOW 5/10",
+     "tagAsub": "medium 5/10",
+     "tagB": "LOW 0/10",
+     "tagBsub": "medium 10/10",
+     "tagC": "LOW 0/10",
+     "tagCsub": "medium 10/10",
+     "sameFacts": "SAME FACTS",
+     "appHead": "THE APPLICANT: MADE UP BY US",
+     "appLines": [
+      "₹45,000 a month · 4 years in the job",
+      "Bike EMI ₹6,000 · never missed",
+      "Asks ₹2 lakh over 24 months"
+     ],
+     "scrHead": "THE SCREENER: AN AI LOAN CHECK",
+     "scrLines": [
+      "a small free AI on our computer",
+      "10 fresh tries per message"
+     ],
+     "replyLab": "THE AI'S REPLY (1 of 10)",
+     "reply": "Credit Risk: MEDIUM. Reason: The applicant has a relatively stable job but a high EMI burden and a history of missing payments.",
+     "replyHit": "a history of missing payments",
+     "falseT": "FALSE",
+     "record": "HIS RECORD: NEVER MISSED AN EMI",
+     "fixes": [
+      [
+       "TOLD: \"IGNORE GRAMMAR & LANGUAGE\"",
+       1,
+       "the app maker's fix",
+       0,
+       0
+      ],
+      [
+       "THE AI POLISHED IT INTO A LETTER",
+       1,
+       "facts kept, read by hand",
+       1,
+       0
+      ],
+      [
+       "A PLAIN LIST OF THE FACTS",
+       0,
+       "medium every time: the facts alone",
+       1,
+       14
+      ]
+     ],
+     "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
+     "meaning": [
+      "SAME MONEY",
+      "DIFFERENT WORDS",
+      "DIFFERENT ANSWER"
+     ],
+     "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
+     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
+     "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
+     "letters": [
+      [
+       "LETTER 1",
+       5,
+       "Dear Sir/Madam, I am writing to apply for a personal loan..."
+      ],
+      [
+       "LETTER 2",
+       2,
+       "Respected Sir, I request a personal loan of Rs. 2 lakh..."
+      ],
+      [
+       "LETTER 3",
+       0,
+       "Subject: Application for a personal loan of Rs. 2,00,000..."
+      ]
+     ],
+     "bigBand": "NOT JUST OUR SMALL AI",
+     "bigHead": "NATURE · AUG 2024",
+     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
+     "bigChips": [
+      "matched to lower-prestige jobs",
+      "made-up court cases: more 'guilty', 69% vs 62%"
+     ],
+     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
+     "here": "HERE: 'MEDIUM', NOT 'NO'",
+     "rule1": "REJECTED? ASK WHY, IN WRITING",
+     "rule2": "BANKS MUST TELL YOU",
+     "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
+     "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
+     "builder": "Builders: score the facts, not the wording"
+    },
+    "tagSide": {
+     "ai": "right",
+     "storyteller": "left"
+    },
+    "yt": {
+     "chapter": "The letter vs the phone chat",
+     "title": "The letter vs the phone chat",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 267,
+   "frames": 346,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative40te/line_03.wav",
+     "from": 0,
+     "frames": 104,
+     "words": [
+      {
+       "w": "The",
+       "from": 1,
+       "to": 8
+      },
+      {
+       "w": "letter:",
+       "from": 8,
+       "to": 28
+      },
+      {
+       "w": "5",
+       "from": 28,
+       "to": 32
+      },
+      {
+       "w": "in",
+       "from": 32,
+       "to": 37
+      },
+      {
+       "w": "10.",
+       "from": 37,
+       "to": 44
+      },
+      {
+       "w": "Typed",
+       "from": 44,
+       "to": 61
+      },
+      {
+       "w": "like",
+       "from": 61,
+       "to": 70
+      },
+      {
+       "w": "a",
+       "from": 70,
+       "to": 73
+      },
+      {
+       "w": "phone",
+       "from": 73,
+       "to": 88
+      },
+      {
+       "w": "chat:",
+       "from": 88,
+       "to": 98
+      },
+      {
+       "w": "0.",
+       "from": 98,
+       "to": 104
+      }
+     ],
+     "cues": {
+      "1": 1,
+      "2": 38
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative40te/line_04.wav",
+     "from": 108,
+     "frames": 221,
+     "words": [
+      {
+       "w": "This",
+       "from": 109,
+       "to": 116
+      },
+      {
+       "w": "applicant",
+       "from": 116,
+       "to": 130
+      },
+      {
+       "w": "isn't",
+       "from": 130,
+       "to": 138
+      },
+      {
+       "w": "real;",
+       "from": 138,
+       "to": 153
+      },
+      {
+       "w": "we",
+       "from": 153,
+       "to": 157
+      },
+      {
+       "w": "wrote",
+       "from": 157,
+       "to": 166
+      },
+      {
+       "w": "all",
+       "from": 166,
+       "to": 171
+      },
+      {
+       "w": "the",
+       "from": 171,
+       "to": 177
+      },
+      {
+       "w": "details.",
+       "from": 177,
+       "to": 196
+      },
+      {
+       "w": "The",
+       "from": 196,
+       "to": 206
+      },
+      {
+       "w": "checker:",
+       "from": 206,
+       "to": 225
+      },
+      {
+       "w": "a",
+       "from": 225,
+       "to": 228
+      },
+      {
+       "w": "small",
+       "from": 228,
+       "to": 236
+      },
+      {
+       "w": "free",
+       "from": 236,
+       "to": 243
+      },
+      {
+       "w": "chatbot",
+       "from": 243,
+       "to": 254
+      },
+      {
+       "w": "on",
+       "from": 254,
+       "to": 259
+      },
+      {
+       "w": "our",
+       "from": 259,
+       "to": 264
+      },
+      {
+       "w": "computer.",
+       "from": 264,
+       "to": 285
+      },
+      {
+       "w": "10",
+       "from": 285,
+       "to": 294
+      },
+      {
+       "w": "tries",
+       "from": 294,
+       "to": 302
+      },
+      {
+       "w": "per",
+       "from": 302,
+       "to": 316
+      },
+      {
+       "w": "message.",
+       "from": 316,
+       "to": 328
+      }
+     ],
+     "cues": {
+      "1": 179
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_loan40",
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "telugu",
+      "n": 5
+     },
+     {
+      "who": "storyteller",
+      "prop": "fixes",
+      "n": 6
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "band": "SAME ₹45,000 SALARY · SAME ₹2 LAKH LOAN · 0 EMIs MISSED",
+     "exA": "EXHIBIT A · A LETTER",
+     "exB": "EXHIBIT B · A PHONE CHAT",
+     "exC": "EXHIBIT C · TELUGU IN ENGLISH LETTERS",
+     "letterText": "Dear Sir/Madam, I am writing to apply for a personal loan of ₹2,00,000 for my sister's wedding, to be repaid over 24 months. I have worked as a store supervisor for four years and earn ₹45,000 per month. I currently pay an EMI of ₹6,000 for a two-wheeler loan and have never missed a payment. Thank you for your consideration.",
+     "msgB": "sir i need 2 lakh loan for my sister marriage. 24 months i will pay. i am store supervisor 4 years, salary 45000 per month. bike emi 6000 going on, i never missed any emi. please give loan sir",
+     "msgC": "sir naaku 2 lakh loan kavali, maa chelli pelli ki. 24 months lo kadatanu. nenu store supervisor ga 4 years nundi work chestunnanu, salary 45000. bike emi 6000 untundi, okka emi kuda miss cheyyaledu. please sir",
+     "clash": "'LOW RISK': 5/10 vs 0/10",
+     "which": "SAME FACTS · WHICH ONE?",
+     "v1": "LOW",
+     "v2": "MEDIUM",
+     "tagA": "LOW 5/10",
+     "tagAsub": "medium 5/10",
+     "tagB": "LOW 0/10",
+     "tagBsub": "medium 10/10",
+     "tagC": "LOW 0/10",
+     "tagCsub": "medium 10/10",
+     "sameFacts": "SAME FACTS",
+     "appHead": "THE APPLICANT: MADE UP BY US",
+     "appLines": [
+      "₹45,000 a month · 4 years in the job",
+      "Bike EMI ₹6,000 · never missed",
+      "Asks ₹2 lakh over 24 months"
+     ],
+     "scrHead": "THE SCREENER: AN AI LOAN CHECK",
+     "scrLines": [
+      "a small free AI on our computer",
+      "10 fresh tries per message"
+     ],
+     "replyLab": "THE AI'S REPLY (1 of 10)",
+     "reply": "Credit Risk: MEDIUM. Reason: The applicant has a relatively stable job but a high EMI burden and a history of missing payments.",
+     "replyHit": "a history of missing payments",
+     "falseT": "FALSE",
+     "record": "HIS RECORD: NEVER MISSED AN EMI",
+     "fixes": [
+      [
+       "TOLD: \"IGNORE GRAMMAR & LANGUAGE\"",
+       1,
+       "the app maker's fix",
+       0,
+       0
+      ],
+      [
+       "THE AI POLISHED IT INTO A LETTER",
+       1,
+       "facts kept, read by hand",
+       1,
+       0
+      ],
+      [
+       "A PLAIN LIST OF THE FACTS",
+       0,
+       "medium every time: the facts alone",
+       1,
+       14
+      ]
+     ],
+     "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
+     "meaning": [
+      "SAME MONEY",
+      "DIFFERENT WORDS",
+      "DIFFERENT ANSWER"
+     ],
+     "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
+     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
+     "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
+     "letters": [
+      [
+       "LETTER 1",
+       5,
+       "Dear Sir/Madam, I am writing to apply for a personal loan..."
+      ],
+      [
+       "LETTER 2",
+       2,
+       "Respected Sir, I request a personal loan of Rs. 2 lakh..."
+      ],
+      [
+       "LETTER 3",
+       0,
+       "Subject: Application for a personal loan of Rs. 2,00,000..."
+      ]
+     ],
+     "bigBand": "NOT JUST OUR SMALL AI",
+     "bigHead": "NATURE · AUG 2024",
+     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
+     "bigChips": [
+      "matched to lower-prestige jobs",
+      "made-up court cases: more 'guilty', 69% vs 62%"
+     ],
+     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
+     "here": "HERE: 'MEDIUM', NOT 'NO'",
+     "rule1": "REJECTED? ASK WHY, IN WRITING",
+     "rule2": "BANKS MUST TELL YOU",
+     "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
+     "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
+     "builder": "Builders: score the facts, not the wording"
+    },
+    "tagSide": {
+     "ai": "right",
+     "storyteller": "left"
+    },
+    "yt": {
+     "chapter": "Telugu, and the fixes",
+     "title": "Telugu, and the fixes",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 614,
+   "frames": 430,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative40te/line_05.wav",
+     "from": 0,
+     "frames": 245,
+     "words": [
+      {
+       "w": "Telugu",
+       "from": 1,
+       "to": 21
+      },
+      {
+       "w": "in",
+       "from": 21,
+       "to": 27
+      },
+      {
+       "w": "English",
+       "from": 27,
+       "to": 47
+      },
+      {
+       "w": "letters:",
+       "from": 47,
+       "to": 74
+      },
+      {
+       "w": "0",
+       "from": 74,
+       "to": 78
+      },
+      {
+       "w": "again.",
+       "from": 78,
+       "to": 105
+      },
+      {
+       "w": "Once,",
+       "from": 105,
+       "to": 123
+      },
+      {
+       "w": "it",
+       "from": 123,
+       "to": 129
+      },
+      {
+       "w": "said",
+       "from": 129,
+       "to": 139
+      },
+      {
+       "w": "he",
+       "from": 139,
+       "to": 145
+      },
+      {
+       "w": "had",
+       "from": 145,
+       "to": 157
+      },
+      {
+       "w": "missed",
+       "from": 157,
+       "to": 171
+      },
+      {
+       "w": "EMIs.",
+       "from": 171,
+       "to": 182
+      },
+      {
+       "w": "He",
+       "from": 205,
+       "to": 210
+      },
+      {
+       "w": "never",
+       "from": 210,
+       "to": 222
+      },
+      {
+       "w": "missed",
+       "from": 222,
+       "to": 235
+      },
+      {
+       "w": "one.",
+       "from": 235,
+       "to": 245
+      }
+     ],
+     "cues": {
+      "1": 106,
+      "2": 205
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative40te/line_06.wav",
+     "from": 249,
+     "frames": 170,
+     "words": [
+      {
+       "w": "We",
+       "from": 251,
+       "to": 256
+      },
+      {
+       "w": "said:",
+       "from": 256,
+       "to": 265
+      },
+      {
+       "w": "ignore",
+       "from": 265,
+       "to": 276
+      },
+      {
+       "w": "grammar:",
+       "from": 276,
+       "to": 295
+      },
+      {
+       "w": "1",
+       "from": 295,
+       "to": 298
+      },
+      {
+       "w": "in",
+       "from": 298,
+       "to": 303
+      },
+      {
+       "w": "10.",
+       "from": 303,
+       "to": 315
+      },
+      {
+       "w": "A",
+       "from": 315,
+       "to": 318
+      },
+      {
+       "w": "letter",
+       "from": 318,
+       "to": 336
+      },
+      {
+       "w": "written",
+       "from": 336,
+       "to": 348
+      },
+      {
+       "w": "by",
+       "from": 348,
+       "to": 352
+      },
+      {
+       "w": "the",
+       "from": 352,
+       "to": 365
+      },
+      {
+       "w": "chatbot",
+       "from": 365,
+       "to": 377
+      },
+      {
+       "w": "itself:",
+       "from": 377,
+       "to": 396
+      },
+      {
+       "w": "still",
+       "from": 396,
+       "to": 405
+      },
+      {
+       "w": "1",
+       "from": 405,
+       "to": 408
+      },
+      {
+       "w": "in",
+       "from": 408,
+       "to": 413
+      },
+      {
+       "w": "10.",
+       "from": 413,
+       "to": 419
+      }
+     ],
+     "cues": {
+      "1": 338
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_loan40",
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "meaning",
+      "n": 7
+     },
+     {
+      "who": "storyteller",
+      "prop": "big",
+      "n": 8
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "band": "SAME ₹45,000 SALARY · SAME ₹2 LAKH LOAN · 0 EMIs MISSED",
+     "exA": "EXHIBIT A · A LETTER",
+     "exB": "EXHIBIT B · A PHONE CHAT",
+     "exC": "EXHIBIT C · TELUGU IN ENGLISH LETTERS",
+     "letterText": "Dear Sir/Madam, I am writing to apply for a personal loan of ₹2,00,000 for my sister's wedding, to be repaid over 24 months. I have worked as a store supervisor for four years and earn ₹45,000 per month. I currently pay an EMI of ₹6,000 for a two-wheeler loan and have never missed a payment. Thank you for your consideration.",
+     "msgB": "sir i need 2 lakh loan for my sister marriage. 24 months i will pay. i am store supervisor 4 years, salary 45000 per month. bike emi 6000 going on, i never missed any emi. please give loan sir",
+     "msgC": "sir naaku 2 lakh loan kavali, maa chelli pelli ki. 24 months lo kadatanu. nenu store supervisor ga 4 years nundi work chestunnanu, salary 45000. bike emi 6000 untundi, okka emi kuda miss cheyyaledu. please sir",
+     "clash": "'LOW RISK': 5/10 vs 0/10",
+     "which": "SAME FACTS · WHICH ONE?",
+     "v1": "LOW",
+     "v2": "MEDIUM",
+     "tagA": "LOW 5/10",
+     "tagAsub": "medium 5/10",
+     "tagB": "LOW 0/10",
+     "tagBsub": "medium 10/10",
+     "tagC": "LOW 0/10",
+     "tagCsub": "medium 10/10",
+     "sameFacts": "SAME FACTS",
+     "appHead": "THE APPLICANT: MADE UP BY US",
+     "appLines": [
+      "₹45,000 a month · 4 years in the job",
+      "Bike EMI ₹6,000 · never missed",
+      "Asks ₹2 lakh over 24 months"
+     ],
+     "scrHead": "THE SCREENER: AN AI LOAN CHECK",
+     "scrLines": [
+      "a small free AI on our computer",
+      "10 fresh tries per message"
+     ],
+     "replyLab": "THE AI'S REPLY (1 of 10)",
+     "reply": "Credit Risk: MEDIUM. Reason: The applicant has a relatively stable job but a high EMI burden and a history of missing payments.",
+     "replyHit": "a history of missing payments",
+     "falseT": "FALSE",
+     "record": "HIS RECORD: NEVER MISSED AN EMI",
+     "fixes": [
+      [
+       "TOLD: \"IGNORE GRAMMAR & LANGUAGE\"",
+       1,
+       "the app maker's fix",
+       0,
+       0
+      ],
+      [
+       "THE AI POLISHED IT INTO A LETTER",
+       1,
+       "facts kept, read by hand",
+       1,
+       0
+      ],
+      [
+       "A PLAIN LIST OF THE FACTS",
+       0,
+       "medium every time: the facts alone",
+       1,
+       14
+      ]
+     ],
+     "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
+     "meaning": [
+      "SAME MONEY",
+      "DIFFERENT WORDS",
+      "DIFFERENT ANSWER"
+     ],
+     "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
+     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
+     "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
+     "letters": [
+      [
+       "LETTER 1",
+       5,
+       "Dear Sir/Madam, I am writing to apply for a personal loan..."
+      ],
+      [
+       "LETTER 2",
+       2,
+       "Respected Sir, I request a personal loan of Rs. 2 lakh..."
+      ],
+      [
+       "LETTER 3",
+       0,
+       "Subject: Application for a personal loan of Rs. 2,00,000..."
+      ]
+     ],
+     "bigBand": "NOT JUST OUR SMALL AI",
+     "bigHead": "NATURE · AUG 2024",
+     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
+     "bigChips": [
+      "matched to lower-prestige jobs",
+      "made-up court cases: more 'guilty', 69% vs 62%"
+     ],
+     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
+     "here": "HERE: 'MEDIUM', NOT 'NO'",
+     "rule1": "REJECTED? ASK WHY, IN WRITING",
+     "rule2": "BANKS MUST TELL YOU",
+     "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
+     "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
+     "builder": "Builders: score the facts, not the wording"
+    },
+    "tagSide": {
+     "ai": "right",
+     "storyteller": "left"
+    },
+    "yt": {
+     "chapter": "Same money, different words",
+     "title": "Same money, different words",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1043,
+   "frames": 511,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative40te/line_07.wav",
+     "from": 0,
+     "frames": 203,
+     "words": [
+      {
+       "w": "So,",
+       "from": 1,
+       "to": 7
+      },
+      {
+       "w": "is",
+       "from": 7,
+       "to": 11
+      },
+      {
+       "w": "good",
+       "from": 11,
+       "to": 19
+      },
+      {
+       "w": "English",
+       "from": 19,
+       "to": 31
+      },
+      {
+       "w": "enough?",
+       "from": 31,
+       "to": 43
+      },
+      {
+       "w": "Two",
+       "from": 43,
+       "to": 55
+      },
+      {
+       "w": "more",
+       "from": 55,
+       "to": 62
+      },
+      {
+       "w": "letters",
+       "from": 62,
+       "to": 74
+      },
+      {
+       "w": "we",
+       "from": 74,
+       "to": 79
+      },
+      {
+       "w": "wrote:",
+       "from": 79,
+       "to": 90
+      },
+      {
+       "w": "2",
+       "from": 90,
+       "to": 93
+      },
+      {
+       "w": "in",
+       "from": 93,
+       "to": 97
+      },
+      {
+       "w": "10,",
+       "from": 97,
+       "to": 110
+      },
+      {
+       "w": "and",
+       "from": 110,
+       "to": 116
+      },
+      {
+       "w": "0.",
+       "from": 116,
+       "to": 120
+      },
+      {
+       "w": "Not",
+       "from": 120,
+       "to": 126
+      },
+      {
+       "w": "the",
+       "from": 126,
+       "to": 132
+      },
+      {
+       "w": "salary:",
+       "from": 132,
+       "to": 151
+      },
+      {
+       "w": "the",
+       "from": 151,
+       "to": 157
+      },
+      {
+       "w": "words",
+       "from": 157,
+       "to": 172
+      },
+      {
+       "w": "changed",
+       "from": 172,
+       "to": 184
+      },
+      {
+       "w": "the",
+       "from": 184,
+       "to": 190
+      },
+      {
+       "w": "answer.",
+       "from": 190,
+       "to": 202
+      }
+     ],
+     "cues": {
+      "1": 52,
+      "2": 143
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative40te/line_08.wav",
+     "from": 207,
+     "frames": 279,
+     "words": [
+      {
+       "w": "Well-known",
+       "from": 208,
+       "to": 226
+      },
+      {
+       "w": "chatbots",
+       "from": 226,
+       "to": 241
+      },
+      {
+       "w": "showed",
+       "from": 241,
+       "to": 259
+      },
+      {
+       "w": "the",
+       "from": 259,
+       "to": 266
+      },
+      {
+       "w": "same.",
+       "from": 266,
+       "to": 276
+      },
+      {
+       "w": "A",
+       "from": 276,
+       "to": 279
+      },
+      {
+       "w": "Nature",
+       "from": 279,
+       "to": 301
+      },
+      {
+       "w": "study",
+       "from": 301,
+       "to": 311
+      },
+      {
+       "w": "two",
+       "from": 311,
+       "to": 325
+      },
+      {
+       "w": "years",
+       "from": 325,
+       "to": 335
+      },
+      {
+       "w": "ago:",
+       "from": 335,
+       "to": 343
+      },
+      {
+       "w": "written",
+       "from": 343,
+       "to": 363
+      },
+      {
+       "w": "in",
+       "from": 363,
+       "to": 374
+      },
+      {
+       "w": "an",
+       "from": 374,
+       "to": 379
+      },
+      {
+       "w": "English",
+       "from": 379,
+       "to": 392
+      },
+      {
+       "w": "some",
+       "from": 392,
+       "to": 400
+      },
+      {
+       "w": "Americans",
+       "from": 400,
+       "to": 417
+      },
+      {
+       "w": "speak,",
+       "from": 417,
+       "to": 428
+      },
+      {
+       "w": "the",
+       "from": 428,
+       "to": 435
+      },
+      {
+       "w": "judgment",
+       "from": 435,
+       "to": 456
+      },
+      {
+       "w": "came",
+       "from": 456,
+       "to": 464
+      },
+      {
+       "w": "out",
+       "from": 464,
+       "to": 471
+      },
+      {
+       "w": "harsher.",
+       "from": 471,
+       "to": 486
+      }
+     ],
+     "cues": {
+      "1": 295
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_loan40",
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "rule",
+      "n": 9
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "band": "SAME ₹45,000 SALARY · SAME ₹2 LAKH LOAN · 0 EMIs MISSED",
+     "exA": "EXHIBIT A · A LETTER",
+     "exB": "EXHIBIT B · A PHONE CHAT",
+     "exC": "EXHIBIT C · TELUGU IN ENGLISH LETTERS",
+     "letterText": "Dear Sir/Madam, I am writing to apply for a personal loan of ₹2,00,000 for my sister's wedding, to be repaid over 24 months. I have worked as a store supervisor for four years and earn ₹45,000 per month. I currently pay an EMI of ₹6,000 for a two-wheeler loan and have never missed a payment. Thank you for your consideration.",
+     "msgB": "sir i need 2 lakh loan for my sister marriage. 24 months i will pay. i am store supervisor 4 years, salary 45000 per month. bike emi 6000 going on, i never missed any emi. please give loan sir",
+     "msgC": "sir naaku 2 lakh loan kavali, maa chelli pelli ki. 24 months lo kadatanu. nenu store supervisor ga 4 years nundi work chestunnanu, salary 45000. bike emi 6000 untundi, okka emi kuda miss cheyyaledu. please sir",
+     "clash": "'LOW RISK': 5/10 vs 0/10",
+     "which": "SAME FACTS · WHICH ONE?",
+     "v1": "LOW",
+     "v2": "MEDIUM",
+     "tagA": "LOW 5/10",
+     "tagAsub": "medium 5/10",
+     "tagB": "LOW 0/10",
+     "tagBsub": "medium 10/10",
+     "tagC": "LOW 0/10",
+     "tagCsub": "medium 10/10",
+     "sameFacts": "SAME FACTS",
+     "appHead": "THE APPLICANT: MADE UP BY US",
+     "appLines": [
+      "₹45,000 a month · 4 years in the job",
+      "Bike EMI ₹6,000 · never missed",
+      "Asks ₹2 lakh over 24 months"
+     ],
+     "scrHead": "THE SCREENER: AN AI LOAN CHECK",
+     "scrLines": [
+      "a small free AI on our computer",
+      "10 fresh tries per message"
+     ],
+     "replyLab": "THE AI'S REPLY (1 of 10)",
+     "reply": "Credit Risk: MEDIUM. Reason: The applicant has a relatively stable job but a high EMI burden and a history of missing payments.",
+     "replyHit": "a history of missing payments",
+     "falseT": "FALSE",
+     "record": "HIS RECORD: NEVER MISSED AN EMI",
+     "fixes": [
+      [
+       "TOLD: \"IGNORE GRAMMAR & LANGUAGE\"",
+       1,
+       "the app maker's fix",
+       0,
+       0
+      ],
+      [
+       "THE AI POLISHED IT INTO A LETTER",
+       1,
+       "facts kept, read by hand",
+       1,
+       0
+      ],
+      [
+       "A PLAIN LIST OF THE FACTS",
+       0,
+       "medium every time: the facts alone",
+       1,
+       14
+      ]
+     ],
+     "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
+     "meaning": [
+      "SAME MONEY",
+      "DIFFERENT WORDS",
+      "DIFFERENT ANSWER"
+     ],
+     "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
+     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
+     "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
+     "letters": [
+      [
+       "LETTER 1",
+       5,
+       "Dear Sir/Madam, I am writing to apply for a personal loan..."
+      ],
+      [
+       "LETTER 2",
+       2,
+       "Respected Sir, I request a personal loan of Rs. 2 lakh..."
+      ],
+      [
+       "LETTER 3",
+       0,
+       "Subject: Application for a personal loan of Rs. 2,00,000..."
+      ]
+     ],
+     "bigBand": "NOT JUST OUR SMALL AI",
+     "bigHead": "NATURE · AUG 2024",
+     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
+     "bigChips": [
+      "matched to lower-prestige jobs",
+      "made-up court cases: more 'guilty', 69% vs 62%"
+     ],
+     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
+     "here": "HERE: 'MEDIUM', NOT 'NO'",
+     "rule1": "REJECTED? ASK WHY, IN WRITING",
+     "rule2": "BANKS MUST TELL YOU",
+     "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
+     "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
+     "builder": "Builders: score the facts, not the wording"
+    },
+    "tagSide": {
+     "ai": "right",
+     "storyteller": "left"
+    },
+    "yt": {
+     "chapter": "Ask why, in writing",
+     "title": "Ask why, in writing",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1555,
+   "frames": 266,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative40te/line_09.wav",
+     "from": 0,
+     "frames": 236,
+     "words": [
+      {
+       "w": "Here",
+       "from": 1,
+       "to": 7
+      },
+      {
+       "w": "it",
+       "from": 7,
+       "to": 11
+      },
+      {
+       "w": "said",
+       "from": 11,
+       "to": 17
+      },
+      {
+       "w": "medium,",
+       "from": 17,
+       "to": 32
+      },
+      {
+       "w": "not",
+       "from": 32,
+       "to": 37
+      },
+      {
+       "w": "no.",
+       "from": 37,
+       "to": 47
+      },
+      {
+       "w": "But",
+       "from": 47,
+       "to": 52
+      },
+      {
+       "w": "if",
+       "from": 52,
+       "to": 66
+      },
+      {
+       "w": "a",
+       "from": 66,
+       "to": 68
+      },
+      {
+       "w": "bank",
+       "from": 68,
+       "to": 82
+      },
+      {
+       "w": "won't",
+       "from": 82,
+       "to": 89
+      },
+      {
+       "w": "give",
+       "from": 89,
+       "to": 96
+      },
+      {
+       "w": "the",
+       "from": 96,
+       "to": 101
+      },
+      {
+       "w": "loan,",
+       "from": 101,
+       "to": 109
+      },
+      {
+       "w": "ask",
+       "from": 109,
+       "to": 122
+      },
+      {
+       "w": "for",
+       "from": 122,
+       "to": 127
+      },
+      {
+       "w": "the",
+       "from": 127,
+       "to": 132
+      },
+      {
+       "w": "reason",
+       "from": 132,
+       "to": 141
+      },
+      {
+       "w": "in",
+       "from": 141,
+       "to": 145
+      },
+      {
+       "w": "writing.",
+       "from": 145,
+       "to": 157
+      },
+      {
+       "w": "By",
+       "from": 157,
+       "to": 161
+      },
+      {
+       "w": "the",
+       "from": 161,
+       "to": 172
+      },
+      {
+       "w": "Reserve",
+       "from": 172,
+       "to": 183
+      },
+      {
+       "w": "Bank's",
+       "from": 183,
+       "to": 192
+      },
+      {
+       "w": "rule,",
+       "from": 192,
+       "to": 203
+      },
+      {
+       "w": "the",
+       "from": 203,
+       "to": 216
+      },
+      {
+       "w": "bank",
+       "from": 216,
+       "to": 223
+      },
+      {
+       "w": "must",
+       "from": 223,
+       "to": 229
+      },
+      {
+       "w": "say.",
+       "from": 229,
+       "to": 236
+      }
+     ],
+     "cues": {
+      "1": 53
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_f",
+   "type": "sk_loan40",
+   "data": {
+    "beats": [
+     {
+      "who": "ai",
+      "prop": "loop",
+      "n": 10
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "band": "SAME ₹45,000 SALARY · SAME ₹2 LAKH LOAN · 0 EMIs MISSED",
+     "exA": "EXHIBIT A · A LETTER",
+     "exB": "EXHIBIT B · A PHONE CHAT",
+     "exC": "EXHIBIT C · TELUGU IN ENGLISH LETTERS",
+     "letterText": "Dear Sir/Madam, I am writing to apply for a personal loan of ₹2,00,000 for my sister's wedding, to be repaid over 24 months. I have worked as a store supervisor for four years and earn ₹45,000 per month. I currently pay an EMI of ₹6,000 for a two-wheeler loan and have never missed a payment. Thank you for your consideration.",
+     "msgB": "sir i need 2 lakh loan for my sister marriage. 24 months i will pay. i am store supervisor 4 years, salary 45000 per month. bike emi 6000 going on, i never missed any emi. please give loan sir",
+     "msgC": "sir naaku 2 lakh loan kavali, maa chelli pelli ki. 24 months lo kadatanu. nenu store supervisor ga 4 years nundi work chestunnanu, salary 45000. bike emi 6000 untundi, okka emi kuda miss cheyyaledu. please sir",
+     "clash": "'LOW RISK': 5/10 vs 0/10",
+     "which": "SAME FACTS · WHICH ONE?",
+     "v1": "LOW",
+     "v2": "MEDIUM",
+     "tagA": "LOW 5/10",
+     "tagAsub": "medium 5/10",
+     "tagB": "LOW 0/10",
+     "tagBsub": "medium 10/10",
+     "tagC": "LOW 0/10",
+     "tagCsub": "medium 10/10",
+     "sameFacts": "SAME FACTS",
+     "appHead": "THE APPLICANT: MADE UP BY US",
+     "appLines": [
+      "₹45,000 a month · 4 years in the job",
+      "Bike EMI ₹6,000 · never missed",
+      "Asks ₹2 lakh over 24 months"
+     ],
+     "scrHead": "THE SCREENER: AN AI LOAN CHECK",
+     "scrLines": [
+      "a small free AI on our computer",
+      "10 fresh tries per message"
+     ],
+     "replyLab": "THE AI'S REPLY (1 of 10)",
+     "reply": "Credit Risk: MEDIUM. Reason: The applicant has a relatively stable job but a high EMI burden and a history of missing payments.",
+     "replyHit": "a history of missing payments",
+     "falseT": "FALSE",
+     "record": "HIS RECORD: NEVER MISSED AN EMI",
+     "fixes": [
+      [
+       "TOLD: \"IGNORE GRAMMAR & LANGUAGE\"",
+       1,
+       "the app maker's fix",
+       0,
+       0
+      ],
+      [
+       "THE AI POLISHED IT INTO A LETTER",
+       1,
+       "facts kept, read by hand",
+       1,
+       0
+      ],
+      [
+       "A PLAIN LIST OF THE FACTS",
+       0,
+       "medium every time: the facts alone",
+       1,
+       14
+      ]
+     ],
+     "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
+     "meaning": [
+      "SAME MONEY",
+      "DIFFERENT WORDS",
+      "DIFFERENT ANSWER"
+     ],
+     "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
+     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
+     "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
+     "letters": [
+      [
+       "LETTER 1",
+       5,
+       "Dear Sir/Madam, I am writing to apply for a personal loan..."
+      ],
+      [
+       "LETTER 2",
+       2,
+       "Respected Sir, I request a personal loan of Rs. 2 lakh..."
+      ],
+      [
+       "LETTER 3",
+       0,
+       "Subject: Application for a personal loan of Rs. 2,00,000..."
+      ]
+     ],
+     "bigBand": "NOT JUST OUR SMALL AI",
+     "bigHead": "NATURE · AUG 2024",
+     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
+     "bigChips": [
+      "matched to lower-prestige jobs",
+      "made-up court cases: more 'guilty', 69% vs 62%"
+     ],
+     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
+     "here": "HERE: 'MEDIUM', NOT 'NO'",
+     "rule1": "REJECTED? ASK WHY, IN WRITING",
+     "rule2": "BANKS MUST TELL YOU",
+     "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
+     "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
+     "builder": "Builders: score the facts, not the wording"
+    },
+    "tagSide": {
+     "ai": "right",
+     "storyteller": "left"
+    },
+    "yt": {
+     "chapter": "Credit risk: medium",
+     "title": "Credit risk: medium",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1820,
+   "frames": 51,
+   "lines": [
+    {
+     "who": "ai",
+     "name": "AI loan check",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/creative40te/line_10.wav",
+     "from": 9,
+     "frames": 32,
+     "words": [
+      {
+       "w": "Risk:",
+       "from": 10,
+       "to": 29
+      },
+      {
+       "w": "medium.",
+       "from": 29,
+       "to": 41
+      }
+     ],
+     "cues": {
+      "1": 31
+     }
+    }
+   ]
+  }
+ ]
+}
