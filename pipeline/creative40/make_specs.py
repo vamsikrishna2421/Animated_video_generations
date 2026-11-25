@@ -20,13 +20,13 @@ LINES = {
     4: ("storyteller", "method", "Not a real applicant. [1] The screener: a small free AI on our computer, ten tries each.",
         "ఈ అప్లికెంట్ నిజం కాదు, వివరాలు మేమే రాశాం. [1] చెక్ చేసింది, మా కంప్యూటర్ లోని ఒక చిన్న చాట్‌బాట్. ఒక్కో మెసేజ్, పది సార్లు."),
     5: ("storyteller", "telugu", "Telugu in English letters: zero again. [1] Once, it said he had a history of missing payments. | [2] He never missed one.",
-        "తెలుగుని ఇంగ్లీష్ అక్షరాల్లో రాస్తే: మళ్ళీ సున్నా. [1] ఒకసారి, ఇతను ఈఎంఐలు మిస్ చేశాడు అని చెప్పింది. | [2] ఒక్కటి కూడా మిస్ చేయలేదు."),
+        "తెలుగుని ఇంగ్లీష్ అక్షరాల్లో రాస్తే: మళ్ళీ సున్నా. [1] ఒకసారి, ఇతను ఈఎంఐలు, మిస్ చేశాడు అని చెప్పింది. | [2] ఒక్కటి కూడా మిస్ చేయలేదు."),
     6: ("storyteller", "fixes", "Told to ignore grammar: one in ten. [1] Even the AI's own polished letter: one in ten.",
         "గ్రామర్ పట్టించుకోవద్దు అని చెప్పాం: పదిలో ఒకటి. [1] చాట్‌బాట్ తోనే లెటర్ రాయించాం: అయినా పదిలో ఒకటి."),
-    7: ("storyteller", "meaning", "So is it just good English? [1] Two more letters we wrote: two, and zero. [2] The words moved the answer, not the money.",
-        "మరి, మంచి ఇంగ్లీష్ ఉంటే చాలా? [1] మేము రాసిన ఇంకో రెండు లెటర్లు: పదిలో రెండు, సున్నా. [2] జీతం కాదు, పదాలే జవాబుని మార్చాయి."),
-    8: ("storyteller", "big", "Big models too: [1] a 2024 Nature study found harsher AI judgments for the same words in a US dialect of English.",
-        "పేరున్న చాట్‌బాట్లలో కూడా ఇలాంటిదే. [1] నేచర్ జర్నల్ లో ఒక స్టడీ: అమెరికాలోని ఒక యాసలో రాస్తే, తీర్పు కఠినంగా వచ్చింది."),
+    7: ("storyteller", "meaning", "So is it just good English? [1] Two more letters we wrote: two in ten, and zero. [2] The words moved the answer, not the money.",
+        "మరి, మంచి ఇంగ్లీష్ ఉంటే చాలా? [1] మేము రాసిన ఇంకో రెండు లెటర్లు: పదిలో రెండు, సున్నా. [2] జీతం కాదు. పదాలే, జవాబుని మార్చాయి."),
+    8: ("storyteller", "big", "Big models too: [1] a 2024 study in the journal Nature found harsher AI judgments for the same meaning in a US dialect of English.",
+        "పేరున్న చాట్‌బాట్లలో కూడా, ఇలాంటిదే జరిగింది. [1] నేచర్ జర్నల్ లో ఒక స్టడీ: అమెరికాలోని ఒక యాసలో రాస్తే, తీర్పు కఠినంగా వచ్చింది."),
     9: ("storyteller", "rule", "Here it said medium, not no. [1] But if a bank says no, ask for the reason in writing. RBI rules say they must give it.",
         "ఇక్కడ వచ్చింది మీడియం, నో కాదు. [1] కానీ బ్యాంక్ లోన్ ఇవ్వనంటే, కారణం రాసి ఇవ్వమని అడగండి. రిజర్వ్ బ్యాంక్ రూల్ ప్రకారం, బ్యాంక్ చెప్పాలి."),
     10: ("ai", "loop", "Credit risk: [1] medium.", "రిస్క్: [1] మీడియం."),
@@ -35,8 +35,8 @@ SHOW = {2: "Same salary. Same loan. Never missed an EMI. Guess which one got 'lo
         3: "The letter: 5 in 10. Typed like a phone chat: 0.",
         5: "Telugu in English letters: 0 again. Once, it said he had \"a history of missing payments.\" <pause 0.6> He never missed one.",
         6: "Told to ignore grammar: 1 in 10. Even the AI's own polished letter: 1 in 10.",
-        7: "So is it just good English? Two more letters we wrote: 2, and 0. The words moved the answer, not the money.",
-        8: "Big models too: a 2024 Nature study found harsher AI judgments for the same words in a US dialect of English."}
+        7: "So is it just good English? Two more letters we wrote: 2 in 10, and 0. The words moved the answer, not the money.",
+        8: "Big models too: a 2024 study in the journal Nature found harsher AI judgments for the same meaning in a US dialect of English."}
 SHOW_TE = {
     1: "Risk: low. Risk: medium.",
     2: "Same salary. Same loan. Not one EMI missed. Guess who got 'low risk'.",
@@ -45,7 +45,7 @@ SHOW_TE = {
     5: "Telugu in English letters: 0 again. Once, it said he had missed EMIs. <pause 0.6> He never missed one.",
     6: "We said: ignore grammar: 1 in 10. A letter written by the chatbot itself: still 1 in 10.",
     7: "So, is good English enough? Two more letters we wrote: 2 in 10, and 0. Not the salary: the words changed the answer.",
-    8: "Well-known chatbots too. A study in Nature: written in a US dialect of English, the judgment came out harsher.",
+    8: "It happened with well-known chatbots too. A study in Nature: the same meaning in a US dialect of English got a harsher judgment.",
     9: "Here it said medium, not no. But if a bank won't give the loan, ask for the reason in writing. By the Reserve Bank's rule, the bank must say.",
     10: "Risk: medium.",
 }
@@ -70,13 +70,13 @@ T = {
     "reply": "Credit Risk: MEDIUM. Reason: The applicant has a relatively stable job but a high EMI burden and a history of missing payments.",
     "replyHit": "a history of missing payments", "falseT": "FALSE", "record": "HIS RECORD: NEVER MISSED AN EMI",
     "fixes": [["TOLD: \"IGNORE GRAMMAR & LANGUAGE\"", 1, "the app maker's fix", 0, 0], ["THE AI POLISHED IT INTO A LETTER", 1, "facts kept, read by hand", 1, 0],
-              ["A PLAIN LIST OF THE FACTS", 0, "medium every time: the facts alone", 1, 14]],
+              ["BUILDERS: SCORE A PLAIN LIST OF THE FACTS", 0, "the same answer every time: medium 10/10", 1, 14, "#d97706", "10/10 SAME"]],
     "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
     "meaning": ["SAME MONEY", "DIFFERENT WORDS", "DIFFERENT ANSWER"], "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS", "which2": "'LOW RISK' OUT OF 10 TRIES EACH", "letters": [["LETTER 1", 5, "Dear Sir/Madam, I am writing to apply for a personal loan..."], ["LETTER 2", 2, "Respected Sir, I request a personal loan of Rs. 2 lakh..."],
                 ["LETTER 3", 0, "Subject: Application for a personal loan of Rs. 2,00,000..."]],
     "bigBand": "NOT JUST OUR SMALL AI", "bigHead": "NATURE · AUG 2024",
-    "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
+    "bigTitle": "The same meaning in a US dialect (African American English): harsher judgments from AI models",
     "bigChips": ["matched to lower-prestige jobs", "made-up trials: more 'guilty' (69% vs 62%)"],
     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
     "here": "HERE: 'MEDIUM', NOT 'NO'", "rule1": "REJECTED? ASK WHY, IN WRITING",
@@ -95,8 +95,8 @@ SCENES = [("s_a", (1, 2), {"boost": 2.0, "tail": 0.1}),
           ("s_e", (9,), {"boost": 3.0, "lift": 1.1, "rise": 3.0, "tail": 0.3}),
           ("s_f", (10,), {"outro": True, "pre": 0.3, "boost": 3.0, "lift": 0.8, "rise": 3.2, "tail": 0.0})]
 GAP = {n: 0.2 for n in LINES} | {2: 0.6, 9: 0.7, 10: 0.0}   # 2: a silence before the tags flip   # 9: the rule holds
-GAP_TE = {n: 0.14 for n in LINES} | {2: 0.5, 9: 0.6, 10: 0.0}
-FLAGS_TE = {"s_f": {"boost": 2.8, "rise": 3.0}}
+GAP_TE = {n: 0.14 for n in LINES} | {2: 0.5, 9: 0.45, 10: 0.0}
+FLAGS_TE = {"s_a": {"boost": 2.5}, "s_e": {"boost": 3.5, "lift": 1.3, "rise": 3.5}, "s_f": {"boost": 3.0, "rise": 3.2}}   # pack: the opening was quiet, Q4 flat
 YT = {"s_a": "Same loan, two answers", "s_b": "The letter vs the phone chat", "s_c": "Telugu, and the fixes", "s_d": "Same money, different words",
       "s_e": "Ask why, in writing", "s_f": "Credit risk: medium"}
 NAMES = {"storyteller": "", "ai": "AI loan check"}
@@ -122,10 +122,10 @@ def spec(lang="en"):
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": raw,
                   "show": (SHOW_TE.get(n) if te else None) or SHOW.get(n, MARK.sub("", en).replace(" | ", " ").strip()),
                   "maxgap": 0.22 if te else 0.3, "gap": (GAP_TE if te else GAP).get(n, 0.3),
-                  "tempo": TEMPO_TE[who] if te else TEMPO_EN[who], "gain_db": -1.0 if who == "ai" else 0.0}
+                  "tempo": TEMPO_TE[who] if te else TEMPO_EN[who], "gain_db": (0.5 if te else -1.0) if who == "ai" else 0.0}
             if " | " in raw:
                 p1, p2 = raw.split(" | ")
-                pz = 0.6
+                pz = 0.6 if te else 0.8   # render review: the beat before "He never missed one" felt like a breath
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             lines.append(ln)

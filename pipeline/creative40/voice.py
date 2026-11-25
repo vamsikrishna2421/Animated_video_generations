@@ -58,8 +58,8 @@ MUST = {"en": {1: [("credit",), ("risk",), ("low",), ("medium",)],
                4: [("real",), ("applicant",), ("screener",), ("small",), ("free",), ("computer",), ("ten", "10")],
                5: [("telugu",), ("english",), ("zero", "0"), ("history",), ("missing",), ("payments", "payment")], "5b": [("never",), ("missed",)],
                6: [("ignore",), ("grammar",), ("one", "1"), ("polished",), ("letter",)],
-               7: [("good",), ("english",), ("letters", "letter"), ("two", "2"), ("zero", "0"), ("words",), ("answer",), ("money",)],
-               8: [("nature",), ("judgments", "judgements", "judgment"), ("dialect",), ("english",)],
+               7: [("good",), ("english",), ("letters", "letter"), ("two", "2"), ("ten", "10"), ("zero", "0"), ("words",), ("answer",), ("money",)],
+               8: [("journal",), ("nature",), ("judgments", "judgements", "judgment"), ("meaning",), ("dialect",), ("english",)],
                9: [("medium",), ("bank",), ("reason",), ("writing",), ("rbi", "r"), ("must",)],
                10: [("credit",), ("risk",), ("medium",)]},
         "te": {}}   # Telugu: full reads by hand (chunk by chunk)
@@ -68,8 +68,8 @@ JUDGE_TEXT = {2: "Same salary. Same loan. Never missed an EMI. Guess which one g
               4: "Not a real applicant. The screener: a small free AI on our computer, 10 tries each.",
               5: "Telugu in English letters: zero again. Once, it said he had a history of missing payments.",
               6: "Told to ignore grammar: one in ten. Even the AI's own polished letter: one in ten.",
-              7: "So is it just good English? Two more letters we wrote: two, and zero. The words moved the answer, not the money.",
-              8: "Big models too: a 2024 Nature study found harsher AI judgments for the same words in a US dialect of English."}
+              7: "So is it just good English? Two more letters we wrote: two in ten, and zero. The words moved the answer, not the money.",
+              8: "Big models too: a 2024 study in the journal Nature found harsher AI judgments for the same meaning in a US dialect of English."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

@@ -126,3 +126,16 @@ different ways before it sees real people.
 - Readability: the three letters show their opening words; small footers and the fix sub-lines bigger.
 - Telugu (length): the first Telugu cut ran 62.4 s -> line 4 without "ఫ్రీ" and "అన్నీ"; line 8 without "రెండేళ్ళ క్రితం" and
   "కనిపించింది", the dialect named as "అమెరికాలోని ఒక యాసలో".
+
+## Render review 2 (human-viewer, EN + TE) and what changed
+- Both (factual): "the same words in a US dialect" contradicted itself (a dialect changes the words) and the "DIFFERENT
+  WORDS" stamp -> "the same meaning in a US dialect of English" (voice), and the card names it: "The same meaning in a US
+  dialect (African American English)", so "race was never mentioned" makes sense. English says "a 2024 study in the
+  journal Nature" (Sandeep heard "nature").
+- Both: "Two more letters we wrote: two, and zero" split as "we wrote two" -> "two in ten, and zero".
+- Both: the unspoken plain-list row on the fixes card -> the builder line: "BUILDERS: SCORE A PLAIN LIST OF THE FACTS ·
+  the same answer every time: medium 10/10".
+- Telugu sound: the opening was quieter than Q1 and Q4 did not rise -> the opening and the screener's voice up, the music
+  pushed into the RBI line; Telugu pronunciation: "ఈఎంఐలు, మిస్ చేశాడు" (ran together), "జీతం కాదు. పదాలే, జవాబుని
+  మార్చాయి." (mushy), "పేరున్న చాట్‌బాట్లలో కూడా, ఇలాంటిదే జరిగింది." (sounded cut off).
+- English: the beat before "He never missed one" 0.6 -> 0.8 s. Caption: what a worse risk label can mean at a real lender.
