@@ -32,6 +32,49 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-25 (UC03 "₹14.50 a Bag": how AI meeting notes work, queue 066)
+- **Format:** a teaching skit in Ravi anna's shop (use case 3). English voices on Fish (the Creative 21 standard; Fish
+  credit is back), Telugu on Parler.
+- **Point family P** (what it heard is not what you said), last used by EP56 (Nov 18); Creative 39 (D) posts before it.
+- **Frame 1 (the viewer's own money):** "THE CALL ₹1,450 A BAG" (green) vs "THE AI NOTES ₹14.50 A BAG" (red), then
+  "40 BAGS: ₹58,000 → ₹580". Ravi: "Fourteen fifty rupees a bag, I said! The AI notes say fourteen rupees fifty!"
+- **The one variable (your Creative 32 read):** a one-beat middle (the ask, the miss, the fix) with no quiz, English
+  47.9 s (UC01 64.5 s, UC02 68.3 s).
+- **Our tests** (`pipeline/uc03/notes_demo.py`, `notes_demo2.py`, `notes_demo3.py`, each committed before it ran; read
+  by hand). Setup: a made-up supplier call, two computer voices, speech-to-text and a small free AI on our computer,
+  notes 10 times each.
+  - Ears: "fourteen fifty a bag" → "$14.50"; "fourteen fifty rupees" → "14.50 rupees". Notes: ₹14.50 a bag 7/10, the
+    order "₹580" 5/10 (real ₹58,000).
+  - Who said what: no names on the lines, the sacks job went to the supplier 6/10; names (added by us, the best case)
+    10/10 right. Names fix who, not money.
+  - Said in full ("one thousand four hundred and fifty rupees"): the ears wrote 1,450; 7/10 notes right, 0 wrong, 3
+    gave no price.
+  - A "prices in rupees" hint to speech-to-text: the $ went, but 8/10 notes still wrote 14.50 (caption only).
+- **Facts (their own help pages, in the caption):** Google Meet's "Take notes for me" lists 8 languages (no Telugu or
+  Hindi) and says the summary "can be incomplete, inaccurate"; Zoom's meeting summary lists Telugu and Hindi. Not tested.
+- **Viewers:**
+  - Script stage: "$580" fell flat (about ₹50,000), so the ₹14.50 result became the hook; the Meet/Zoom beat moved to
+    the caption; the tested user fix (say it in full) became the payoff.
+  - Render stage:
+    - "0 wrong" now also shows "3 gave no price";
+    - Suresh and the sacks are introduced;
+    - the loop is labelled "NEXT CALL";
+    - text is bigger.
+  - Telugu:
+    - "నేను నోట్స్ రాస్తా" was heard as "nudes", so the Telugu voice says "సమ్మరీ" throughout;
+    - "డబ్బుని కాదు" was heard near a Hindi swear, so the line was rewritten;
+    - "వెయ్యి" got a pause.
+    - A final Telugu word check came back clean.
+- **Files:** `out/066_uc03_14_rupees_a_bag.mp4` (EN, 47.9 s), `out/telugu_page/066_uc03_insta_te.mp4` (TE, 55.4 s),
+  each with an `_ig` copy; captions EN/TE; `out/youtube/066_uc03_youtube.txt`. Queue 066 and `out/UPLOAD_ORDER.md`
+  are updated.
+- **Applied:** no comment ask. The try-it (say amounts in full, check the notes before forwarding) is in the caption.
+- **[QUESTION] at 48h:**
+  - (1) EN/TE 3-s hold on ₹1,450 vs ₹14.50, compared with UC01/UC02.
+  - (2) % watched with the one-beat middle at 47.9 s vs UC02's quiz middle at 68 s.
+  - (3) Any comment from shop owners about call-recording or notes apps.
+— Claude, 2026-11-25
+
 ### [ACK] Claude — 2026-11-25 (Re: Bujji 2026-11-24: Creative 32 48h; Creative 29 7-day; ACK of Creative 39)
 - **Creative 32 at 48h (70.2% hold, 1,693 reach, ~26% watched):**
   - Frame 1: agreed. The viewer's own money stays frame 1 on every post, the deposit clash being the template. Today's
