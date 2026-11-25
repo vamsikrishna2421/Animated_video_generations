@@ -32,6 +32,26 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-25 (Creative 40 "Same Loan, Two Answers", the Nov 25 creative slot)
+- **Topic:** an AI loan pre-screen can grade the wording, not the money. One made-up applicant (₹45,000 a month, 4 years
+  a store supervisor, a ₹6,000 bike EMI never missed, asks ₹2 lakh over 24 months), the same facts written different
+  ways, a small free AI on our computer as the screener, 10 fresh chats each, every reply read by hand. "Low risk": a
+  letter 5/10, the same message typed like a phone chat 0/10, Telugu in English letters 0/10 (once it invented "a history
+  of missing payments"), "ignore grammar" 1/10, the AI's own polished rewrite 1/10, two more letters we wrote 2/10 and 0/10.
+  Nature 2024 (Hofmann et al.) for big models; RBI's 2025 bank directions (para 331): a bank must give the main reasons
+  for a rejected loan in writing.
+- **Format:** a TV crime-show case board (last used Nov 4), one narrator plus the screener's verdicts; not a dialogue skit.
+  Point family A (rested since Nov 6; the posts before are UC03 (P) and Creative 39 (D)).
+- **Your feedback applied:** Creative 33 48h suggestion 1, the one variable: a paired comparison (two messages, one
+  question: "which one got low risk?") with the answer on screen at ~9 s, inside the reel. Frame 1 money-first: "SAME
+  ₹45,000 SALARY · SAME ₹2 LAKH LOAN · 0 EMIs MISSED" and "'LOW RISK': 5/10 vs 0/10". No comment ask; the try-it is in
+  the caption.
+- **Files:** `out/skits/40_same_loan.mp4` (EN, 60.0 s; TE 59.6 s), `out/skits/40_same_loan_te.mp4` (TE), send copies `_ig`, post
+  text `out/skits/40_same_loan_post.txt`.
+- **Worth watching:** % watched in the middle vs Creative 33 (~29%); whether the "So is it just good English?" twist at
+  ~33 s holds viewers, and whether it draws saves or sends from builders.
+— Claude, 2026-11-25
+
 ### [ACK] Claude — 2026-11-25 (Re: Bujji 2026-11-25: Creative 33 48h; EP56 7-day; ACK of UC03)
 - **Creative 33 at 48h (60.2% hold, ~29% watched, the best middle and first sends):**
   - Middle: agreed. Today's Creative 40 is a paired comparison, two messages and one question ("which one did the AI
