@@ -201,7 +201,7 @@ const StLoan: React.FC<SP> = ({ s }) => {
           band(c, T.band);
           const rows = T.fixes as [string, number, string, number, number, string?, string?][];
           rows.forEach(([t, n, sub, cq, off, tileCol, right], q) => {
-            const t0 = (cq === 0 ? ln.from + 2 : cu(cq, 0.3)) + off;
+            const t0 = (cq === 0 ? ln.from - 8 : cu(cq, 0.3)) + off;   // render review 3: the first card is up at the cut (the board went blank)
             const k = seg(f, t0 - 2, t0 + 8);
             if (k <= 0) return;
             const y = 330 + q * 250;
