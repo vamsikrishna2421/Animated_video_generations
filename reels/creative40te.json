@@ -109,17 +109,23 @@
       [
        "TOLD: \"IGNORE GRAMMAR & LANGUAGE\"",
        1,
-       "the app maker's fix"
-      ],
-      [
-       "THE SAME FACTS AS A PLAIN LIST",
+       "the app maker's fix",
        0,
-       "Salary: 45000 / Job: 4 years / EMI: never missed..."
+       0
       ],
       [
        "THE AI POLISHED IT INTO A LETTER",
        1,
-       "facts kept, read by hand"
+       "facts kept, read by hand",
+       1,
+       0
+      ],
+      [
+       "A PLAIN LIST OF THE FACTS",
+       0,
+       "medium every time: the facts alone",
+       1,
+       14
       ]
      ],
      "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
@@ -128,37 +134,40 @@
       "DIFFERENT WORDS",
       "DIFFERENT ANSWER"
      ],
-     "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
+     "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
      "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
      "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
      "letters": [
       [
        "LETTER 1",
-       5
+       5,
+       "Dear Sir/Madam, I am writing to apply for a personal loan..."
       ],
       [
        "LETTER 2",
-       2
+       2,
+       "Respected Sir, I request a personal loan of Rs. 2 lakh..."
       ],
       [
        "LETTER 3",
-       0
+       0,
+       "Subject: Application for a personal loan of Rs. 2,00,000..."
       ]
      ],
      "bigBand": "NOT JUST OUR SMALL AI",
      "bigHead": "NATURE · AUG 2024",
-     "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
+     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
      "bigChips": [
-      "more 'guilty' verdicts: 69% vs 62%",
-      "matched to lower-paid jobs"
+      "matched to lower-prestige jobs",
+      "made-up court cases: more 'guilty', 69% vs 62%"
      ],
-     "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
+     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
      "here": "HERE: 'MEDIUM', NOT 'NO'",
      "rule1": "REJECTED? ASK WHY, IN WRITING",
      "rule2": "BANKS MUST TELL YOU",
      "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
      "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-     "builder": "Builders: test the same facts, worded differently"
+     "builder": "Builders: score the facts, not the wording"
     },
     "tagSide": {
      "ai": "right",
@@ -188,7 +197,7 @@
      "text": "అదే జీతం. అదే లోన్. ఒక్క ఈఎంఐ కూడా మిస్ కాలేదు. [1] తక్కువ రిస్క్ ఎవరికి వచ్చిందో, ఊహించండి.",
      "show": "Same salary. Same loan. Not one EMI missed. Guess who got 'low risk'.",
      "maxgap": 0.22,
-     "gap": 0.14,
+     "gap": 0.5,
      "tempo": 1.18,
      "gain_db": 0.0
     }
@@ -198,13 +207,13 @@
    "id": "s_b",
    "type": "sk_loan40",
    "tail": 0.1,
-   "boost": 1.8,
+   "boost": 1.6,
    "lift": 0.6,
    "drop_pre": [
     [
      0,
-     0.35,
-     0.35
+     0.6,
+     0.6
     ]
    ],
    "data": {
@@ -260,17 +269,23 @@
       [
        "TOLD: \"IGNORE GRAMMAR & LANGUAGE\"",
        1,
-       "the app maker's fix"
-      ],
-      [
-       "THE SAME FACTS AS A PLAIN LIST",
+       "the app maker's fix",
        0,
-       "Salary: 45000 / Job: 4 years / EMI: never missed..."
+       0
       ],
       [
        "THE AI POLISHED IT INTO A LETTER",
        1,
-       "facts kept, read by hand"
+       "facts kept, read by hand",
+       1,
+       0
+      ],
+      [
+       "A PLAIN LIST OF THE FACTS",
+       0,
+       "medium every time: the facts alone",
+       1,
+       14
       ]
      ],
      "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
@@ -279,37 +294,40 @@
       "DIFFERENT WORDS",
       "DIFFERENT ANSWER"
      ],
-     "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
+     "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
      "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
      "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
      "letters": [
       [
        "LETTER 1",
-       5
+       5,
+       "Dear Sir/Madam, I am writing to apply for a personal loan..."
       ],
       [
        "LETTER 2",
-       2
+       2,
+       "Respected Sir, I request a personal loan of Rs. 2 lakh..."
       ],
       [
        "LETTER 3",
-       0
+       0,
+       "Subject: Application for a personal loan of Rs. 2,00,000..."
       ]
      ],
      "bigBand": "NOT JUST OUR SMALL AI",
      "bigHead": "NATURE · AUG 2024",
-     "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
+     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
      "bigChips": [
-      "more 'guilty' verdicts: 69% vs 62%",
-      "matched to lower-paid jobs"
+      "matched to lower-prestige jobs",
+      "made-up court cases: more 'guilty', 69% vs 62%"
      ],
-     "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
+     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
      "here": "HERE: 'MEDIUM', NOT 'NO'",
      "rule1": "REJECTED? ASK WHY, IN WRITING",
      "rule2": "BANKS MUST TELL YOU",
      "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
      "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-     "builder": "Builders: test the same facts, worded differently"
+     "builder": "Builders: score the facts, not the wording"
     },
     "tagSide": {
      "ai": "right",
@@ -349,7 +367,7 @@
    "id": "s_c",
    "type": "sk_loan40",
    "tail": 0.1,
-   "boost": 1.9,
+   "boost": 1.5,
    "lift": 0.6,
    "drop_at": [
     [
@@ -411,17 +429,23 @@
       [
        "TOLD: \"IGNORE GRAMMAR & LANGUAGE\"",
        1,
-       "the app maker's fix"
-      ],
-      [
-       "THE SAME FACTS AS A PLAIN LIST",
+       "the app maker's fix",
        0,
-       "Salary: 45000 / Job: 4 years / EMI: never missed..."
+       0
       ],
       [
        "THE AI POLISHED IT INTO A LETTER",
        1,
-       "facts kept, read by hand"
+       "facts kept, read by hand",
+       1,
+       0
+      ],
+      [
+       "A PLAIN LIST OF THE FACTS",
+       0,
+       "medium every time: the facts alone",
+       1,
+       14
       ]
      ],
      "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
@@ -430,37 +454,40 @@
       "DIFFERENT WORDS",
       "DIFFERENT ANSWER"
      ],
-     "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
+     "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
      "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
      "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
      "letters": [
       [
        "LETTER 1",
-       5
+       5,
+       "Dear Sir/Madam, I am writing to apply for a personal loan..."
       ],
       [
        "LETTER 2",
-       2
+       2,
+       "Respected Sir, I request a personal loan of Rs. 2 lakh..."
       ],
       [
        "LETTER 3",
-       0
+       0,
+       "Subject: Application for a personal loan of Rs. 2,00,000..."
       ]
      ],
      "bigBand": "NOT JUST OUR SMALL AI",
      "bigHead": "NATURE · AUG 2024",
-     "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
+     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
      "bigChips": [
-      "more 'guilty' verdicts: 69% vs 62%",
-      "matched to lower-paid jobs"
+      "matched to lower-prestige jobs",
+      "made-up court cases: more 'guilty', 69% vs 62%"
      ],
-     "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
+     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
      "here": "HERE: 'MEDIUM', NOT 'NO'",
      "rule1": "REJECTED? ASK WHY, IN WRITING",
      "rule2": "BANKS MUST TELL YOU",
      "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
      "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-     "builder": "Builders: test the same facts, worded differently"
+     "builder": "Builders: score the facts, not the wording"
     },
     "tagSide": {
      "ai": "right",
@@ -477,18 +504,22 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "తెలుగుని ఇంగ్లీష్ అక్షరాల్లో రాస్తే: మళ్ళీ సున్నా. [1] ఒకసారి, ఇతను ఈఎంఐలు మిస్ చేశాడు అని చెప్పింది. [2] ఒక్కటి కూడా మిస్ చేయలేదు.",
-     "show": "Telugu in English letters: 0 again. Once, it said he had missed EMIs. He never missed one.",
+     "text": "తెలుగుని ఇంగ్లీష్ అక్షరాల్లో రాస్తే: మళ్ళీ సున్నా. [1] ఒకసారి, ఇతను ఈఎంఐలు మిస్ చేశాడు అని చెప్పింది. <pause 0.6> [2] ఒక్కటి కూడా మిస్ చేయలేదు.",
+     "show": "Telugu in English letters: 0 again. Once, it said he had missed EMIs. <pause 0.6> He never missed one.",
      "maxgap": 0.22,
      "gap": 0.14,
      "tempo": 1.18,
-     "gain_db": 0.0
+     "gain_db": 0.0,
+     "tts": "తెలుగుని ఇంగ్లీష్ అక్షరాల్లో రాస్తే: మళ్ళీ సున్నా. ఒకసారి, ఇతను ఈఎంఐలు మిస్ చేశాడు అని చెప్పింది.",
+     "file2": "05b_storyteller.wav",
+     "tts2": "ఒక్కటి కూడా మిస్ చేయలేదు.",
+     "pause": 0.6
     },
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "గ్రామర్ పట్టించుకోవద్దు అని చెప్పాం: పదిలో ఒకటి. [1] వివరాలు లిస్ట్ గా రాస్తే: సున్నా. [2] చాట్‌బాట్ తోనే లెటర్ రాయించాం: పదిలో ఒకటి.",
-     "show": "We said: ignore grammar: 1 in 10. The details as a list: 0. A letter written by the chatbot itself: 1 in 10.",
+     "text": "గ్రామర్ పట్టించుకోవద్దు అని చెప్పాం: పదిలో ఒకటి. [1] చాట్‌బాట్ తోనే లెటర్ రాయించాం: అయినా పదిలో ఒకటి.",
+     "show": "We said: ignore grammar: 1 in 10. A letter written by the chatbot itself: still 1 in 10.",
      "maxgap": 0.22,
      "gap": 0.14,
      "tempo": 1.18,
@@ -500,8 +531,8 @@
    "id": "s_d",
    "type": "sk_loan40",
    "tail": 0.15,
-   "boost": 1.7,
-   "lift": 0.7,
+   "boost": 1.8,
+   "lift": 0.8,
    "data": {
     "beats": [
      {
@@ -555,17 +586,23 @@
       [
        "TOLD: \"IGNORE GRAMMAR & LANGUAGE\"",
        1,
-       "the app maker's fix"
-      ],
-      [
-       "THE SAME FACTS AS A PLAIN LIST",
+       "the app maker's fix",
        0,
-       "Salary: 45000 / Job: 4 years / EMI: never missed..."
+       0
       ],
       [
        "THE AI POLISHED IT INTO A LETTER",
        1,
-       "facts kept, read by hand"
+       "facts kept, read by hand",
+       1,
+       0
+      ],
+      [
+       "A PLAIN LIST OF THE FACTS",
+       0,
+       "medium every time: the facts alone",
+       1,
+       14
       ]
      ],
      "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
@@ -574,37 +611,40 @@
       "DIFFERENT WORDS",
       "DIFFERENT ANSWER"
      ],
-     "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
+     "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
      "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
      "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
      "letters": [
       [
        "LETTER 1",
-       5
+       5,
+       "Dear Sir/Madam, I am writing to apply for a personal loan..."
       ],
       [
        "LETTER 2",
-       2
+       2,
+       "Respected Sir, I request a personal loan of Rs. 2 lakh..."
       ],
       [
        "LETTER 3",
-       0
+       0,
+       "Subject: Application for a personal loan of Rs. 2,00,000..."
       ]
      ],
      "bigBand": "NOT JUST OUR SMALL AI",
      "bigHead": "NATURE · AUG 2024",
-     "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
+     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
      "bigChips": [
-      "more 'guilty' verdicts: 69% vs 62%",
-      "matched to lower-paid jobs"
+      "matched to lower-prestige jobs",
+      "made-up court cases: more 'guilty', 69% vs 62%"
      ],
-     "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
+     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
      "here": "HERE: 'MEDIUM', NOT 'NO'",
      "rule1": "REJECTED? ASK WHY, IN WRITING",
      "rule2": "BANKS MUST TELL YOU",
      "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
      "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-     "builder": "Builders: test the same facts, worded differently"
+     "builder": "Builders: score the facts, not the wording"
     },
     "tagSide": {
      "ai": "right",
@@ -621,8 +661,8 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "మేము రాసిన ఇంకో రెండు లెటర్లు: పదిలో రెండు, సున్నా. [1] అంటే, విషయం మంచి ఇంగ్లీష్ కాదు. పదాలు మారితే, జవాబు మారింది. అది మీ చేతిలో లేదు.",
-     "show": "Two more letters we wrote: 2 in 10, and 0. So the point isn't good English. When the words changed, the answer changed. That's not in your hands.",
+     "text": "మరి, మంచి ఇంగ్లీష్ ఉంటే చాలా? [1] మేము రాసిన ఇంకో రెండు లెటర్లు: పదిలో రెండు, సున్నా. [2] జీతం కాదు, పదాలే జవాబుని మార్చాయి.",
+     "show": "So, is good English enough? Two more letters we wrote: 2 in 10, and 0. Not the salary: the words changed the answer.",
      "maxgap": 0.22,
      "gap": 0.14,
      "tempo": 1.18,
@@ -644,9 +684,9 @@
    "id": "s_e",
    "type": "sk_loan40",
    "tail": 0.3,
-   "boost": 2.6,
-   "lift": 1.0,
-   "rise": 2.6,
+   "boost": 3.0,
+   "lift": 1.1,
+   "rise": 3.0,
    "data": {
     "beats": [
      {
@@ -695,17 +735,23 @@
       [
        "TOLD: \"IGNORE GRAMMAR & LANGUAGE\"",
        1,
-       "the app maker's fix"
-      ],
-      [
-       "THE SAME FACTS AS A PLAIN LIST",
+       "the app maker's fix",
        0,
-       "Salary: 45000 / Job: 4 years / EMI: never missed..."
+       0
       ],
       [
        "THE AI POLISHED IT INTO A LETTER",
        1,
-       "facts kept, read by hand"
+       "facts kept, read by hand",
+       1,
+       0
+      ],
+      [
+       "A PLAIN LIST OF THE FACTS",
+       0,
+       "medium every time: the facts alone",
+       1,
+       14
       ]
      ],
      "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
@@ -714,37 +760,40 @@
       "DIFFERENT WORDS",
       "DIFFERENT ANSWER"
      ],
-     "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
+     "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
      "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
      "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
      "letters": [
       [
        "LETTER 1",
-       5
+       5,
+       "Dear Sir/Madam, I am writing to apply for a personal loan..."
       ],
       [
        "LETTER 2",
-       2
+       2,
+       "Respected Sir, I request a personal loan of Rs. 2 lakh..."
       ],
       [
        "LETTER 3",
-       0
+       0,
+       "Subject: Application for a personal loan of Rs. 2,00,000..."
       ]
      ],
      "bigBand": "NOT JUST OUR SMALL AI",
      "bigHead": "NATURE · AUG 2024",
-     "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
+     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
      "bigChips": [
-      "more 'guilty' verdicts: 69% vs 62%",
-      "matched to lower-paid jobs"
+      "matched to lower-prestige jobs",
+      "made-up court cases: more 'guilty', 69% vs 62%"
      ],
-     "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
+     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
      "here": "HERE: 'MEDIUM', NOT 'NO'",
      "rule1": "REJECTED? ASK WHY, IN WRITING",
      "rule2": "BANKS MUST TELL YOU",
      "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
      "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-     "builder": "Builders: test the same facts, worded differently"
+     "builder": "Builders: score the facts, not the wording"
     },
     "tagSide": {
      "ai": "right",
@@ -827,17 +876,23 @@
       [
        "TOLD: \"IGNORE GRAMMAR & LANGUAGE\"",
        1,
-       "the app maker's fix"
-      ],
-      [
-       "THE SAME FACTS AS A PLAIN LIST",
+       "the app maker's fix",
        0,
-       "Salary: 45000 / Job: 4 years / EMI: never missed..."
+       0
       ],
       [
        "THE AI POLISHED IT INTO A LETTER",
        1,
-       "facts kept, read by hand"
+       "facts kept, read by hand",
+       1,
+       0
+      ],
+      [
+       "A PLAIN LIST OF THE FACTS",
+       0,
+       "medium every time: the facts alone",
+       1,
+       14
       ]
      ],
      "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
@@ -846,37 +901,40 @@
       "DIFFERENT WORDS",
       "DIFFERENT ANSWER"
      ],
-     "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
+     "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
      "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
      "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
      "letters": [
       [
        "LETTER 1",
-       5
+       5,
+       "Dear Sir/Madam, I am writing to apply for a personal loan..."
       ],
       [
        "LETTER 2",
-       2
+       2,
+       "Respected Sir, I request a personal loan of Rs. 2 lakh..."
       ],
       [
        "LETTER 3",
-       0
+       0,
+       "Subject: Application for a personal loan of Rs. 2,00,000..."
       ]
      ],
      "bigBand": "NOT JUST OUR SMALL AI",
      "bigHead": "NATURE · AUG 2024",
-     "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
+     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
      "bigChips": [
-      "more 'guilty' verdicts: 69% vs 62%",
-      "matched to lower-paid jobs"
+      "matched to lower-prestige jobs",
+      "made-up court cases: more 'guilty', 69% vs 62%"
      ],
-     "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
+     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
      "here": "HERE: 'MEDIUM', NOT 'NO'",
      "rule1": "REJECTED? ASK WHY, IN WRITING",
      "rule2": "BANKS MUST TELL YOU",
      "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
      "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-     "builder": "Builders: test the same facts, worded differently"
+     "builder": "Builders: score the facts, not the wording"
     },
     "tagSide": {
      "ai": "right",

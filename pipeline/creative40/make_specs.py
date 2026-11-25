@@ -19,13 +19,13 @@ LINES = {
         "[1] లెటర్ కి: పదిలో ఐదు. [2] ఫోన్ లో చాట్ లా టైప్ చేస్తే: సున్నా."),
     4: ("storyteller", "method", "Not a real applicant. [1] The screener: a small free AI on our computer, ten tries each.",
         "ఈ అప్లికెంట్ నిజం కాదు, వివరాలన్నీ మేమే రాశాం. [1] చెక్ చేసింది, మా కంప్యూటర్ లోని ఒక చిన్న ఫ్రీ చాట్‌బాట్. ఒక్కో మెసేజ్, పది సార్లు."),
-    5: ("storyteller", "telugu", "Telugu in English letters: zero again. [1] Once, it said he had a history of missing payments. [2] He never missed one.",
-        "తెలుగుని ఇంగ్లీష్ అక్షరాల్లో రాస్తే: మళ్ళీ సున్నా. [1] ఒకసారి, ఇతను ఈఎంఐలు మిస్ చేశాడు అని చెప్పింది. [2] ఒక్కటి కూడా మిస్ చేయలేదు."),
-    6: ("storyteller", "fixes", "Told to ignore grammar: one in ten. [1] A plain list of the facts: zero. [2] The AI's own polished letter: one in ten.",
-        "గ్రామర్ పట్టించుకోవద్దు అని చెప్పాం: పదిలో ఒకటి. [1] వివరాలు లిస్ట్ గా రాస్తే: సున్నా. [2] చాట్‌బాట్ తోనే లెటర్ రాయించాం: పదిలో ఒకటి."),
-    7: ("storyteller", "meaning", "Two more letters we wrote: two, and zero. [1] So it's not good English. The words moved the answer, and you can't fix that.",
-        "మేము రాసిన ఇంకో రెండు లెటర్లు: పదిలో రెండు, సున్నా. [1] అంటే, విషయం మంచి ఇంగ్లీష్ కాదు. పదాలు మారితే, జవాబు మారింది. అది మీ చేతిలో లేదు."),
-    8: ("storyteller", "big", "Big models too: [1] a 2024 Nature study found harsher AI judgments for the same words in a different style of English.",
+    5: ("storyteller", "telugu", "Telugu in English letters: zero again. [1] Once, it said he had a history of missing payments. | [2] He never missed one.",
+        "తెలుగుని ఇంగ్లీష్ అక్షరాల్లో రాస్తే: మళ్ళీ సున్నా. [1] ఒకసారి, ఇతను ఈఎంఐలు మిస్ చేశాడు అని చెప్పింది. | [2] ఒక్కటి కూడా మిస్ చేయలేదు."),
+    6: ("storyteller", "fixes", "Told to ignore grammar: one in ten. [1] Even the AI's own polished letter: one in ten.",
+        "గ్రామర్ పట్టించుకోవద్దు అని చెప్పాం: పదిలో ఒకటి. [1] చాట్‌బాట్ తోనే లెటర్ రాయించాం: అయినా పదిలో ఒకటి."),
+    7: ("storyteller", "meaning", "So is it just good English? [1] Two more letters we wrote: two, and zero. [2] The words moved the answer, not the money.",
+        "మరి, మంచి ఇంగ్లీష్ ఉంటే చాలా? [1] మేము రాసిన ఇంకో రెండు లెటర్లు: పదిలో రెండు, సున్నా. [2] జీతం కాదు, పదాలే జవాబుని మార్చాయి."),
+    8: ("storyteller", "big", "Big models too: [1] a 2024 Nature study found harsher AI judgments for the same words in a US dialect of English.",
         "పేరున్న చాట్‌బాట్లలో కూడా ఇలాంటిదే కనిపించింది. [1] రెండేళ్ళ క్రితం నేచర్ జర్నల్ లో ఒక స్టడీ: అమెరికాలో కొందరు మాట్లాడే ఇంగ్లీష్ లో రాస్తే, తీర్పు కఠినంగా వచ్చింది."),
     9: ("storyteller", "rule", "Here it said medium, not no. [1] But if a bank says no, ask for the reason in writing. RBI rules say they must give it.",
         "ఇక్కడ వచ్చింది మీడియం, నో కాదు. [1] కానీ బ్యాంక్ లోన్ ఇవ్వనంటే, కారణం రాసి ఇవ్వమని అడగండి. రిజర్వ్ బ్యాంక్ రూల్ ప్రకారం, బ్యాంక్ చెప్పాలి."),
@@ -33,18 +33,18 @@ LINES = {
 }
 SHOW = {2: "Same salary. Same loan. Never missed an EMI. Guess which one got 'low'.",
         3: "The letter: 5 in 10. Typed like a phone chat: 0.",
-        5: "Telugu in English letters: 0 again. Once, it said he had \"a history of missing payments.\" He never missed one.",
-        6: "Told to ignore grammar: 1 in 10. A plain list of the facts: 0. The AI's own polished letter: 1 in 10.",
-        7: "Two more letters we wrote: 2, and 0. So it's not good English. The words moved the answer, and you can't fix that.",
-        8: "Big models too: a 2024 Nature study found harsher AI judgments for the same words in a different style of English."}
+        5: "Telugu in English letters: 0 again. Once, it said he had \"a history of missing payments.\" <pause 0.6> He never missed one.",
+        6: "Told to ignore grammar: 1 in 10. Even the AI's own polished letter: 1 in 10.",
+        7: "So is it just good English? Two more letters we wrote: 2, and 0. The words moved the answer, not the money.",
+        8: "Big models too: a 2024 Nature study found harsher AI judgments for the same words in a US dialect of English."}
 SHOW_TE = {
     1: "Risk: low. Risk: medium.",
     2: "Same salary. Same loan. Not one EMI missed. Guess who got 'low risk'.",
     3: "The letter: 5 in 10. Typed like a phone chat: 0.",
     4: "This applicant isn't real; we wrote all the details. The checker: a small free chatbot on our computer. 10 tries per message.",
-    5: "Telugu in English letters: 0 again. Once, it said he had missed EMIs. He never missed one.",
-    6: "We said: ignore grammar: 1 in 10. The details as a list: 0. A letter written by the chatbot itself: 1 in 10.",
-    7: "Two more letters we wrote: 2 in 10, and 0. So the point isn't good English. When the words changed, the answer changed. That's not in your hands.",
+    5: "Telugu in English letters: 0 again. Once, it said he had missed EMIs. <pause 0.6> He never missed one.",
+    6: "We said: ignore grammar: 1 in 10. A letter written by the chatbot itself: still 1 in 10.",
+    7: "So, is good English enough? Two more letters we wrote: 2 in 10, and 0. Not the salary: the words changed the answer.",
     8: "Well-known chatbots showed the same. A Nature study two years ago: written in an English some Americans speak, the judgment came out harsher.",
     9: "Here it said medium, not no. But if a bank won't give the loan, ask for the reason in writing. By the Reserve Bank's rule, the bank must say.",
     10: "Risk: medium.",
@@ -69,32 +69,33 @@ T = {
     "replyLab": "THE AI'S REPLY (1 of 10)",
     "reply": "Credit Risk: MEDIUM. Reason: The applicant has a relatively stable job but a high EMI burden and a history of missing payments.",
     "replyHit": "a history of missing payments", "falseT": "FALSE", "record": "HIS RECORD: NEVER MISSED AN EMI",
-    "fixes": [["TOLD: \"IGNORE GRAMMAR & LANGUAGE\"", 1, "the app maker's fix"], ["THE SAME FACTS AS A PLAIN LIST", 0, "Salary: 45000 / Job: 4 years / EMI: never missed..."],
-              ["THE AI POLISHED IT INTO A LETTER", 1, "facts kept, read by hand"]],
+    "fixes": [["TOLD: \"IGNORE GRAMMAR & LANGUAGE\"", 1, "the app maker's fix", 0, 0], ["THE AI POLISHED IT INTO A LETTER", 1, "facts kept, read by hand", 1, 0],
+              ["A PLAIN LIST OF THE FACTS", 0, "medium every time: the facts alone", 1, 14]],
     "fixFoot": "'LOW RISK' out of 10 tries each · our test, read by hand",
-    "meaning": ["SAME MONEY", "DIFFERENT WORDS", "DIFFERENT ANSWER"], "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
-    "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS", "which2": "'LOW RISK' OUT OF 10 TRIES EACH", "letters": [["LETTER 1", 5], ["LETTER 2", 2], ["LETTER 3", 0]],
+    "meaning": ["SAME MONEY", "DIFFERENT WORDS", "DIFFERENT ANSWER"], "meaningSub": "THE WORDS MOVED IT, NOT THE MONEY",
+    "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS", "which2": "'LOW RISK' OUT OF 10 TRIES EACH", "letters": [["LETTER 1", 5, "Dear Sir/Madam, I am writing to apply for a personal loan..."], ["LETTER 2", 2, "Respected Sir, I request a personal loan of Rs. 2 lakh..."],
+                ["LETTER 3", 0, "Subject: Application for a personal loan of Rs. 2,00,000..."]],
     "bigBand": "NOT JUST OUR SMALL AI", "bigHead": "NATURE · AUG 2024",
-    "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
-    "bigChips": ["more 'guilty' verdicts: 69% vs 62%", "matched to lower-paid jobs"],
-    "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
+    "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
+    "bigChips": ["matched to lower-prestige jobs", "made-up court cases: more 'guilty', 69% vs 62%"],
+    "bigSrc": "Hofmann et al. · race was never mentioned to the models",
     "here": "HERE: 'MEDIUM', NOT 'NO'", "rule1": "REJECTED? ASK WHY, IN WRITING",
     "rule2": "BANKS MUST TELL YOU", "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
     "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-    "builder": "Builders: test the same facts, worded differently",
+    "builder": "Builders: score the facts, not the wording",
 }
 # Sound (CLAUDE.md arc): a boom and two stamps on the screener's verdicts in second 1; the tag flips with a snap and a
 # hit, a buzz and the SAME FACTS stamp; pops on the cards; the biggest hit on FALSE (a drop before "a history of missing
 # payments"); a boom under the meaning; a chime on the Nature card; a lift into the ruling with a stamp; a riser and the
 # stamp back to frame 1.
 SCENES = [("s_a", (1, 2), {"boost": 2.0, "tail": 0.1}),
-          ("s_b", (3, 4), {"boost": 1.8, "lift": 0.6, "drop_pre": [[0, 0.35, 0.35]], "tail": 0.1}),
-          ("s_c", (5, 6), {"boost": 1.9, "lift": 0.6, "drop_at": [[0, "1", 0.35]], "tail": 0.1}),   # a drop before "a history of missing payments"
-          ("s_d", (7, 8), {"boost": 1.7, "lift": 0.7, "tail": 0.15}),
-          ("s_e", (9,), {"boost": 2.6, "lift": 1.0, "rise": 2.6, "tail": 0.3}),
+          ("s_b", (3, 4), {"boost": 1.6, "lift": 0.6, "drop_pre": [[0, 0.6, 0.6]], "tail": 0.1}),
+          ("s_c", (5, 6), {"boost": 1.5, "lift": 0.6, "drop_at": [[0, "1", 0.35]], "tail": 0.1}),   # a drop before "a history of missing payments"
+          ("s_d", (7, 8), {"boost": 1.8, "lift": 0.8, "tail": 0.15}),
+          ("s_e", (9,), {"boost": 3.0, "lift": 1.1, "rise": 3.0, "tail": 0.3}),
           ("s_f", (10,), {"outro": True, "pre": 0.3, "boost": 3.0, "lift": 0.8, "rise": 3.2, "tail": 0.0})]
-GAP = {n: 0.2 for n in LINES} | {9: 0.7, 10: 0.0}   # 9: the rule holds
-GAP_TE = {n: 0.14 for n in LINES} | {9: 0.6, 10: 0.0}
+GAP = {n: 0.2 for n in LINES} | {2: 0.6, 9: 0.7, 10: 0.0}   # 2: a silence before the tags flip   # 9: the rule holds
+GAP_TE = {n: 0.14 for n in LINES} | {2: 0.5, 9: 0.6, 10: 0.0}
 FLAGS_TE = {"s_f": {"boost": 2.8, "rise": 3.0}}
 YT = {"s_a": "Same loan, two answers", "s_b": "The letter vs the phone chat", "s_c": "Telugu, and the fixes", "s_d": "Same money, different words",
       "s_e": "Ask why, in writing", "s_f": "Credit risk: medium"}

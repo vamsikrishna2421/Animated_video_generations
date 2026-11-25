@@ -128,15 +128,15 @@ const StLoan: React.FC<SP> = ({ s }) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     if (i > 0 && beats[i - 1].prop !== b.prop && b.prop !== "loop") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.22} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("s1")} at={2} src={STAMP} vol={0.7} />, <Sfx key={k("s2")} at={cue(i, 1, 0.5)} src={STAMP} vol={0.7} />);
-    if (b.prop === "reveal") sfx.push(<Sfx key={k("f")} at={cue(i, 1, 0.1)} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("h")} at={cue(i, 1, 0.1)} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />, <Sfx key={k("x")} at={cue(i, 2, 0.2)} src="reel/sfx_buzz.wav" vol={0.28} />, <Sfx key={k("st")} at={cue(i, 2, 0.2) + 16} src={STAMP} vol={0.6} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("s1")} at={2} src={STAMP} vol={0.7} />, <Sfx key={k("s1c")} at={2} src="audio/sfx_snap.wav" vol={0.3} />, <Sfx key={k("s2")} at={cue(i, 1, 0.5)} src={STAMP} vol={0.7} />, <Sfx key={k("s2c")} at={cue(i, 1, 0.5)} src="audio/sfx_snap.wav" vol={0.3} />);
+    if (b.prop === "reveal") sfx.push(<Sfx key={k("f")} at={cue(i, 1, 0.1)} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("h")} at={cue(i, 1, 0.1)} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />, <Sfx key={k("x")} at={cue(i, 2, 0.2)} src="reel/sfx_buzz.wav" vol={0.28} />, <Sfx key={k("st")} at={cue(i, 2, 0.2) + 16} src={STAMP} vol={0.6} />, <Sfx key={k("stc")} at={cue(i, 2, 0.2) + 16} src="audio/sfx_snap.wav" vol={0.3} />);
     if (b.prop === "method") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.25} />);
-    if (b.prop === "telugu") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.25} />, <Sfx key={k("x")} at={cue(i, 1, 0.3)} src="reel/sfx_glitch.wav" vol={0.25} />, <Sfx key={k("h")} at={cue(i, 2, 0.2)} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.65} />, <Sfx key={k("st")} at={cue(i, 2, 0.2)} src={STAMP} vol={0.85} />);
-    if (b.prop === "fixes") [0, 1, 2, 3].forEach((q) => { const t = q === 0 ? at + 4 : cue(i, q, 0.3); if (q > 0 && !(l.cues && l.cues[String(q)] !== undefined)) return; sfx.push(<Sfx key={k("p" + q)} at={t} src="audio/sfx_pop.wav" vol={0.25} />, <Sfx key={k("z" + q)} at={t + 10} src="reel/sfx_buzz.wav" vol={0.18} />); });
-    if (b.prop === "meaning") { [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("s" + q)} at={at + 10 + q * 10} src={STAMP} vol={0.4} />)); sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.1)} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />); }
+    if (b.prop === "telugu") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.25} />, <Sfx key={k("x")} at={cue(i, 1, 0.3)} src="reel/sfx_glitch.wav" vol={0.25} />, <Sfx key={k("h")} at={cue(i, 2, 0.2)} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.65} />, <Sfx key={k("st")} at={cue(i, 2, 0.2)} src={STAMP} vol={0.85} />, <Sfx key={k("stc")} at={cue(i, 2, 0.2)} src="audio/sfx_snap.wav" vol={0.3} />);
+    if (b.prop === "fixes") (T.fixes as [string, number, string, number, number][]).forEach(([, , , cq, off], q) => { const t = (cq === 0 ? at + 2 : cue(i, cq, 0.3)) + off; sfx.push(<Sfx key={k("p" + q)} at={t} src="audio/sfx_pop.wav" vol={0.25} />, <Sfx key={k("z" + q)} at={t + 10} src="reel/sfx_buzz.wav" vol={0.16} />); });
+    if (b.prop === "meaning") { [0, 1].forEach((q) => sfx.push(<Sfx key={k("s" + q)} at={cue(i, 1, 0.2) + q * 14 + 4} src={STAMP} vol={0.4} />, <Sfx key={k("sc" + q)} at={cue(i, 1, 0.2) + q * 14 + 4} src="audio/sfx_snap.wav" vol={0.25} />)); [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("m" + q)} at={cue(i, 2, 0.1) + q * 8 + 3} src={STAMP} vol={0.45} />, <Sfx key={k("mc" + q)} at={cue(i, 2, 0.1) + q * 8 + 3} src="audio/sfx_snap.wav" vol={0.25} />)); sfx.push(<Sfx key={k("h")} at={cue(i, 2, 0.1)} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />); }
     if (b.prop === "big") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("c")} at={cue(i, 1, 0.3)} src="audio/sfx_chime.wav" vol={0.22} />);
-    if (b.prop === "rule") sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.1)} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />, <Sfx key={k("st")} at={cue(i, 1, 0.1)} src={STAMP} vol={0.6} />, <Sfx key={k("ok")} at={cue(i, 1, 0.7)} src="audio/sfx_success.wav" vol={0.3} />);
-    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("st")} at={slam} src={STAMP} vol={0.7} />); }
+    if (b.prop === "rule") sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.1)} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />, <Sfx key={k("st")} at={cue(i, 1, 0.1)} src={STAMP} vol={0.6} />, <Sfx key={k("stc")} at={cue(i, 1, 0.1)} src="audio/sfx_snap.wav" vol={0.3} />, <Sfx key={k("ok")} at={cue(i, 1, 0.7)} src="audio/sfx_success.wav" vol={0.3} />);
+    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("st")} at={slam} src={STAMP} vol={0.7} />, <Sfx key={k("stc")} at={slam} src="audio/sfx_snap.wav" vol={0.3} />); }
   });
   return (
     <>
@@ -195,40 +195,42 @@ const StLoan: React.FC<SP> = ({ s }) => {
             });
             c.restore();
           }
-          stamp(c, T.falseT, 830, 770, 88, RED, k2, -0.12, 360);
+          stamp(c, T.falseT, 800, 760, 130, RED, k2, -0.12, 440);
           chip(c, T.record, 540, 1262, "#14532d", "#f0fdf4", k2, fit(c, T.record, 900, 48, 900));
         } else if (P === "fixes") {
           band(c, T.band);
-          const rows = T.fixes as [string, number, string][];
-          rows.forEach(([t, n, sub], q) => {
-            const k = q === 0 ? seg(f, ln.from + 2, ln.from + 10) : seg(f, cu(q, 0.3) - 2, cu(q, 0.3) + 8);
+          const rows = T.fixes as [string, number, string, number, number][];
+          rows.forEach(([t, n, sub, cq, off], q) => {
+            const t0 = (cq === 0 ? ln.from + 2 : cu(cq, 0.3)) + off;
+            const k = seg(f, t0 - 2, t0 + 8);
             if (k <= 0) return;
             const y = 330 + q * 250;
             card(c, 70, y, 940, 220, "#fffdf5", k, q % 2 ? 0.01 : -0.01);
             c.textAlign = "left"; c.font = SANS(fit(c, t, 860, 44, 900), 900); c.fillStyle = INK; c.fillText(t, 36, 74);
-            c.font = SANS(28, 700); c.fillStyle = "#64748b"; c.fillText(sub, 36, 116);
+            c.font = SANS(34, 700); c.fillStyle = "#475569"; c.fillText(sub, 36, 120);
             c.restore();
-            tiles(c, Array(10).fill(0).map((_, z) => (z < n ? GREEN : RED)), 110, y + 140, seg(f, (q === 0 ? ln.from + 2 : cu(q, 0.3)) + 6, (q === 0 ? ln.from + 2 : cu(q, 0.3)) + 26), 52, 60, 8);
+            tiles(c, Array(10).fill(0).map((_, z) => (z < n ? GREEN : RED)), 110, y + 140, seg(f, t0 + 6, t0 + 26), 52, 60, 8);
             c.save(); c.globalAlpha = clamp(k * 3); c.textAlign = "right"; c.font = SANS(70, 900); c.fillStyle = n > 0 ? AMBER : RED; c.fillText(`${n}/10`, 990, y + 196); c.restore();
           });
           c.textAlign = "center"; c.font = SANS(fit(c, T.fixFoot, 940, 34, 800), 800); c.fillStyle = "#1c1917"; c.fillText(T.fixFoot, 540, 1330);
         } else if (P === "meaning") {
           band(c, T.lettersHead);
-          const t1 = cu(1, 0.1);
+          const t1 = cu(2, 0.1), tf = cu(1, 0.2);   // the question, then the two letters' counts [1], then the stamps [2]
           if (f < t1) {   // the three formal letters we wrote, each with its count (the script review: was it that one letter?)
-            (T.letters as [string, number][]).forEach(([name, n], q) => {
+            (T.letters as [string, number, string][]).forEach(([name, n], q) => {
               const k = seg(f, ln.from + 2 + q * 10, ln.from + 10 + q * 10); if (k <= 0) return;
               card(c, 70 + q * 320, 360, 300, 420, "#fffdf5", k, (q - 1) * 0.03);
               c.textAlign = "center"; c.font = SANS(34, 900); c.fillStyle = "#92400e"; c.fillText(name, 150, 70);
-              c.strokeStyle = "#cbd5e1"; c.lineWidth = 3; for (let z = 0; z < 6; z++) { c.beginPath(); c.moveTo(30, 120 + z * 40); c.lineTo(270, 120 + z * 40); c.stroke(); }
+              c.font = SERIF(30); c.fillStyle = "#1f2937"; c.textAlign = "left";
+              wrap(c, (T.letters as [string, number, string][])[q][2], 250).slice(0, 7).forEach((tt, z) => c.fillText(tt, 26, 126 + z * 40));
               c.restore();
-              verdictTag(c, 220 + q * 320, 900, 280, `LOW ${n}/10`, "same facts", n >= 5 ? GREEN : n > 0 ? AMBER : RED, seg(f, ln.from + 8 + q * 10, ln.from + 18 + q * 10));
+              verdictTag(c, 220 + q * 320, 900, 280, `LOW ${n}/10`, "same facts", n >= 5 ? GREEN : n > 0 ? AMBER : RED, q === 0 ? 1 : seg(f, tf + (q - 1) * 14, tf + (q - 1) * 14 + 10));
             });
             c.textAlign = "center"; c.font = SANS(fit(c, T.which2, 940, 44, 900), 900); c.fillStyle = "#1c1917"; c.fillText(T.which2, 540, 1110);
           } else {
             const lines = T.meaning as string[];
             lines.forEach((t, q) => stamp(c, t, 540, 470 + q * 210, 92, q === 2 ? RED : "#0f172a", seg(f, t1 + q * 8, t1 + 6 + q * 8), q % 2 ? 0.04 : -0.04));
-            const kC = seg(f, cu(1, 0.6) - 2, cu(1, 0.6) + 8);
+            const kC = seg(f, cu(2, 0.6) - 2, cu(2, 0.6) + 8);
             if (kC > 0) chip(c, T.meaningSub, 540, 1180, "#0f172a", "#fde68a", kC, fit(c, T.meaningSub, 900, 46, 900));
           }
         } else if (P === "big") {
@@ -243,7 +245,7 @@ const StLoan: React.FC<SP> = ({ s }) => {
           }
           if (k1 > 0) {
             (T.bigChips as string[]).forEach((t, q) => chip(c, t, 540, 820 + q * 120, q === 0 ? "#fee2e2" : "#ffedd5", "#7f1d1d", seg(f, cu(1, 0.2) + q * 6, cu(1, 0.2) + q * 6 + 6), fit(c, t, 800, 50, 800)));
-            c.save(); c.globalAlpha = clamp(k1 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.bigSrc, 860, 32, 700), 700); c.fillStyle = "#475569"; c.fillText(T.bigSrc, 540, 1110); c.restore();
+            c.save(); c.globalAlpha = clamp(k1 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.bigSrc, 860, 36, 700), 700); c.fillStyle = "#475569"; c.fillText(T.bigSrc, 540, 1110); c.restore();
           }
         } else if (P === "rule") {
           const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, cu(1, 0.1) - 2, cu(1, 0.1) + 8), k2 = seg(f, cu(1, 0.5), cu(1, 0.5) + 8);
@@ -253,10 +255,10 @@ const StLoan: React.FC<SP> = ({ s }) => {
             card(c, 70, 680, 940, 420, "#dcfce7", k2, 0.008);
             c.textAlign = "center"; c.font = SANS(fit(c, T.rule2, 860, 66, 900), 900); c.fillStyle = "#14532d"; c.fillText(T.rule2, 470, 140);
             c.font = SANS(46, 800); c.fillStyle = "#166534"; wrap(c, T.rule3, 860).slice(0, 2).forEach((t, q) => c.fillText(t, 470, 226 + q * 58));
-            c.font = SANS(fit(c, T.ruleSrc, 860, 30, 700), 700); c.fillStyle = "#475569"; c.fillText(T.ruleSrc, 470, 370);
+            c.font = SANS(fit(c, T.ruleSrc, 880, 34, 700), 700); c.fillStyle = "#475569"; c.fillText(T.ruleSrc, 470, 372);
             c.restore();
           }
-          chip(c, T.builder, 540, 1230, "#0f172a", "#93c5fd", seg(f, cu(1, 0.8), cu(1, 0.8) + 8), fit(c, T.builder, 900, 44, 800));
+          chip(c, T.builder, 540, 1230, "#0f172a", "#93c5fd", seg(f, cu(1, 0.8), cu(1, 0.8) + 8), fit(c, T.builder, 900, 50, 800));
         }
         c.textAlign = "left";
       }} />

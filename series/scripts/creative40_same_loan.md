@@ -108,3 +108,19 @@ different ways before it sees real people.
 | 8 | narr | big | Big models too: [1] a 2024 Nature study found harsher AI judgments for the same words in a different style of English. | పేరున్న చాట్‌బాట్లలో కూడా ఇలాంటిదే కనిపించింది. [1] రెండేళ్ళ క్రితం నేచర్ జర్నల్ లో ఒక స్టడీ: అమెరికాలో కొందరు మాట్లాడే ఇంగ్లీష్ లో రాస్తే, తీర్పు కఠినంగా వచ్చింది. |
 | 9 | narr | rule | Here it said medium, not no. [1] But if a bank says no, ask for the reason in writing. RBI rules say they must give it. | ఇక్కడ వచ్చింది మీడియం, నో కాదు. [1] కానీ బ్యాంక్ లోన్ ఇవ్వనంటే, కారణం రాసి ఇవ్వమని అడగండి. రిజర్వ్ బ్యాంక్ రూల్ ప్రకారం, బ్యాంక్ చెప్పాలి. |
 | 10 | ai | loop | Credit risk: [1] medium. | రిస్క్: [1] మీడియం. |
+
+## Render review (human-viewer, EN) and what changed
+- Both: the hook sold "good English wins" and 0:37 took it back -> line 7 asks first: "So is it just good English? Two
+  more letters we wrote: two, and zero. The words moved the answer, not the money." The fixes (0:24-0:33) piled up
+  numbers -> one beat: "Told to ignore grammar: one in ten. Even the AI's own polished letter: one in ten."; the plain list
+  stays on the card as "medium every time: the facts alone" (Priya: the stable path, not a failed fix).
+- Both (sound): a real silence before the tags flip (0.6 s, the bed drops) and before "He never missed one" (two takes, a
+  0.6 s beat); FALSE bigger; every stamp thud gets a mid/high snap so phone speakers carry it; the middle quieter and the
+  ruling louder (the quarters ran flat, -16.3 to -16.6 dB).
+- Factual: the Nature card said "lower-paid jobs" -> "lower-prestige jobs" (the paper's word); "a different style of
+  English" -> "a US dialect of English" (voice, card, Telugu already named America); the court chip says "made-up court
+  cases".
+- Scope (both asked): the voice keeps "if a bank says no" (the RBI rule we confirmed is for commercial banks); the
+  caption adds: with a loan app, ask which bank or NBFC is lending and ask them. Builder line bigger: "Builders: score
+  the facts, not the wording".
+- Readability: the three letters show their opening words; small footers and the fix sub-lines bigger.
