@@ -1,0 +1,1205 @@
+{
+ "id": "uc03v1",
+ "look": "classic",
+ "topic": "",
+ "banner": "How AI meeting notes work",
+ "musicVol": [
+  0.2,
+  0.42
+ ],
+ "title": "₹14.50 a Bag (UC03: how AI meeting notes work)",
+ "handle": "@ai_maastaaru",
+ "label": "UC03",
+ "fps": 30,
+ "musicDrops": [
+  [
+   407,
+   440
+  ],
+  [
+   705,
+   735
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   593,
+   1.6
+  ],
+  [
+   593,
+   879,
+   1.7
+  ],
+  [
+   880,
+   1126,
+   1.8
+  ],
+  [
+   1126,
+   1396,
+   2.2
+  ],
+  [
+   1126,
+   1396,
+   2.0,
+   1
+  ]
+ ],
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1396,
+ "music": "reel/uc03v1/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_notes03",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "steps",
+      "prop": "steps",
+      "n": 2
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "THE CALL",
+     "leftVal": "₹1,450 A BAG",
+     "rightLab": "THE AI NOTES",
+     "rightVal": "₹14.50 A BAG",
+     "stake": "40 BAGS: ₹58,000 → ₹580",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stepsHead": "HOW AI NOTES ARE MADE",
+     "stepsSub": "our test · a small free AI on our computer · 10 runs",
+     "steps": [
+      [
+       "EARS",
+       "the call → text",
+       "14 .50 rupees a bag, I can deliver..."
+      ],
+      [
+       "WHO SAID WHAT",
+       "names on the lines (added by us)",
+       "Ravi: ...   Suresh: ..."
+      ],
+      [
+       "NOTES",
+       "the summary + who does what",
+       "14.50 rupees per bag · total 580 rupees"
+      ]
+     ],
+     "circleX0": 285,
+     "circleX2": 285,
+     "copied": "7/10 notes: ₹14.50 a bag · 5/10: total ₹580",
+     "namesHead": "WHO KEEPS THE EMPTY SACKS READY?",
+     "namesSub": "the real answer: Ravi · 10 runs each",
+     "noNames": "NO NAMES ON WHO SAID WHAT",
+     "noNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Suresh: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "withNames": "WITH NAMES",
+     "withNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Ravi: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "noNamesStat": "6/10 said Suresh",
+     "withNamesStat": "10/10 said Ravi",
+     "fullHead": "SAY IT IN FULL",
+     "fullSub": "the same call, the amount said in full",
+     "full1Head": "THE CALL SAID",
+     "full1Rows": [
+      "\"one thousand four hundred",
+      "and fifty rupees a bag\""
+     ],
+     "full2Head": "THE EARS WROTE: 1,450 rupees a bag",
+     "full2Rows": [
+      "notes with the right price: 7/10",
+      "notes with a wrong price: 0/10"
+     ],
+     "rule1": "SAY EVERY AMOUNT IN FULL",
+     "rule2": "CHECK THE NOTES BEFORE YOU FORWARD",
+     "builder": "app makers: a \"rupees\" hint took the $ away, but 8/10 notes still wrote 14.50"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "₹14.50 a bag",
+     "title": "₹14.50 a bag",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 593,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/uc03v1/line_01.wav",
+     "from": 10,
+     "frames": 216,
+     "words": [
+      {
+       "w": "₹1,450",
+       "from": 14,
+       "to": 33
+      },
+      {
+       "w": "a",
+       "from": 33,
+       "to": 38
+      },
+      {
+       "w": "bag,",
+       "from": 38,
+       "to": 51
+      },
+      {
+       "w": "I",
+       "from": 51,
+       "to": 57
+      },
+      {
+       "w": "said!",
+       "from": 57,
+       "to": 80
+      },
+      {
+       "w": "The",
+       "from": 80,
+       "to": 101
+      },
+      {
+       "w": "AI",
+       "from": 101,
+       "to": 109
+      },
+      {
+       "w": "notes",
+       "from": 109,
+       "to": 129
+      },
+      {
+       "w": "say",
+       "from": 129,
+       "to": 140
+      },
+      {
+       "w": "₹14.50!",
+       "from": 140,
+       "to": 176
+      },
+      {
+       "w": "40",
+       "from": 176,
+       "to": 184
+      },
+      {
+       "w": "bags",
+       "from": 184,
+       "to": 198
+      },
+      {
+       "w": "for",
+       "from": 198,
+       "to": 208
+      },
+      {
+       "w": "₹580?!",
+       "from": 208,
+       "to": 226
+      }
+     ],
+     "cues": {
+      "1": 76
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/uc03v1/line_02.wav",
+     "from": 233,
+     "frames": 353,
+     "words": [
+      {
+       "w": "Notes",
+       "from": 234,
+       "to": 241
+      },
+      {
+       "w": "take",
+       "from": 241,
+       "to": 248
+      },
+      {
+       "w": "3",
+       "from": 248,
+       "to": 251
+      },
+      {
+       "w": "steps:",
+       "from": 251,
+       "to": 264
+      },
+      {
+       "w": "ears",
+       "from": 264,
+       "to": 285
+      },
+      {
+       "w": "turn",
+       "from": 285,
+       "to": 291
+      },
+      {
+       "w": "the",
+       "from": 291,
+       "to": 296
+      },
+      {
+       "w": "call",
+       "from": 296,
+       "to": 303
+      },
+      {
+       "w": "into",
+       "from": 303,
+       "to": 309
+      },
+      {
+       "w": "text,",
+       "from": 309,
+       "to": 317
+      },
+      {
+       "w": "names",
+       "from": 317,
+       "to": 337
+      },
+      {
+       "w": "show",
+       "from": 337,
+       "to": 343
+      },
+      {
+       "w": "who",
+       "from": 343,
+       "to": 348
+      },
+      {
+       "w": "said",
+       "from": 348,
+       "to": 355
+      },
+      {
+       "w": "what,",
+       "from": 355,
+       "to": 363
+      },
+      {
+       "w": "then",
+       "from": 363,
+       "to": 369
+      },
+      {
+       "w": "I",
+       "from": 369,
+       "to": 372
+      },
+      {
+       "w": "write",
+       "from": 372,
+       "to": 387
+      },
+      {
+       "w": "the",
+       "from": 387,
+       "to": 393
+      },
+      {
+       "w": "notes.",
+       "from": 393,
+       "to": 402
+      },
+      {
+       "w": "We",
+       "from": 431,
+       "to": 436
+      },
+      {
+       "w": "ran",
+       "from": 436,
+       "to": 443
+      },
+      {
+       "w": "it",
+       "from": 443,
+       "to": 449
+      },
+      {
+       "w": "10",
+       "from": 449,
+       "to": 454
+      },
+      {
+       "w": "times:",
+       "from": 454,
+       "to": 478
+      },
+      {
+       "w": "the",
+       "from": 478,
+       "to": 485
+      },
+      {
+       "w": "ears",
+       "from": 485,
+       "to": 498
+      },
+      {
+       "w": "wrote",
+       "from": 498,
+       "to": 509
+      },
+      {
+       "w": "14.50,",
+       "from": 509,
+       "to": 521
+      },
+      {
+       "w": "and",
+       "from": 521,
+       "to": 536
+      },
+      {
+       "w": "7",
+       "from": 536,
+       "to": 539
+      },
+      {
+       "w": "of",
+       "from": 539,
+       "to": 545
+      },
+      {
+       "w": "10",
+       "from": 545,
+       "to": 550
+      },
+      {
+       "w": "notes",
+       "from": 550,
+       "to": 561
+      },
+      {
+       "w": "copied",
+       "from": 561,
+       "to": 574
+      },
+      {
+       "w": "it.",
+       "from": 574,
+       "to": 581
+      }
+     ],
+     "cues": {
+      "1": 282,
+      "2": 320,
+      "3": 364,
+      "4": 431
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_notes03",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "sacks",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "names",
+      "prop": "names",
+      "n": 4
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "THE CALL",
+     "leftVal": "₹1,450 A BAG",
+     "rightLab": "THE AI NOTES",
+     "rightVal": "₹14.50 A BAG",
+     "stake": "40 BAGS: ₹58,000 → ₹580",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stepsHead": "HOW AI NOTES ARE MADE",
+     "stepsSub": "our test · a small free AI on our computer · 10 runs",
+     "steps": [
+      [
+       "EARS",
+       "the call → text",
+       "14 .50 rupees a bag, I can deliver..."
+      ],
+      [
+       "WHO SAID WHAT",
+       "names on the lines (added by us)",
+       "Ravi: ...   Suresh: ..."
+      ],
+      [
+       "NOTES",
+       "the summary + who does what",
+       "14.50 rupees per bag · total 580 rupees"
+      ]
+     ],
+     "circleX0": 285,
+     "circleX2": 285,
+     "copied": "7/10 notes: ₹14.50 a bag · 5/10: total ₹580",
+     "namesHead": "WHO KEEPS THE EMPTY SACKS READY?",
+     "namesSub": "the real answer: Ravi · 10 runs each",
+     "noNames": "NO NAMES ON WHO SAID WHAT",
+     "noNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Suresh: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "withNames": "WITH NAMES",
+     "withNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Ravi: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "noNamesStat": "6/10 said Suresh",
+     "withNamesStat": "10/10 said Ravi",
+     "fullHead": "SAY IT IN FULL",
+     "fullSub": "the same call, the amount said in full",
+     "full1Head": "THE CALL SAID",
+     "full1Rows": [
+      "\"one thousand four hundred",
+      "and fifty rupees a bag\""
+     ],
+     "full2Head": "THE EARS WROTE: 1,450 rupees a bag",
+     "full2Rows": [
+      "notes with the right price: 7/10",
+      "notes with a wrong price: 0/10"
+     ],
+     "rule1": "SAY EVERY AMOUNT IN FULL",
+     "rule2": "CHECK THE NOTES BEFORE YOU FORWARD",
+     "builder": "app makers: a \"rupees\" hint took the $ away, but 8/10 notes still wrote 14.50"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "Who does what",
+     "title": "Who does what",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 593,
+   "frames": 286,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/uc03v1/line_03.wav",
+     "from": 0,
+     "frames": 37,
+     "words": [
+      {
+       "w": "And",
+       "from": 1,
+       "to": 7
+      },
+      {
+       "w": "the",
+       "from": 7,
+       "to": 14
+      },
+      {
+       "w": "empty",
+       "from": 14,
+       "to": 24
+      },
+      {
+       "w": "sacks?",
+       "from": 24,
+       "to": 36
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/uc03v1/line_04.wav",
+     "from": 43,
+     "frames": 222,
+     "words": [
+      {
+       "w": "With",
+       "from": 43,
+       "to": 51
+      },
+      {
+       "w": "no",
+       "from": 51,
+       "to": 56
+      },
+      {
+       "w": "names,",
+       "from": 56,
+       "to": 66
+      },
+      {
+       "w": "6",
+       "from": 66,
+       "to": 79
+      },
+      {
+       "w": "of",
+       "from": 79,
+       "to": 84
+      },
+      {
+       "w": "10",
+       "from": 84,
+       "to": 88
+      },
+      {
+       "w": "notes",
+       "from": 88,
+       "to": 97
+      },
+      {
+       "w": "gave",
+       "from": 97,
+       "to": 105
+      },
+      {
+       "w": "your",
+       "from": 105,
+       "to": 113
+      },
+      {
+       "w": "job",
+       "from": 113,
+       "to": 119
+      },
+      {
+       "w": "to",
+       "from": 119,
+       "to": 123
+      },
+      {
+       "w": "Suresh.",
+       "from": 123,
+       "to": 135
+      },
+      {
+       "w": "With",
+       "from": 135,
+       "to": 150
+      },
+      {
+       "w": "names,",
+       "from": 150,
+       "to": 160
+      },
+      {
+       "w": "10",
+       "from": 160,
+       "to": 173
+      },
+      {
+       "w": "of",
+       "from": 173,
+       "to": 178
+      },
+      {
+       "w": "10",
+       "from": 178,
+       "to": 183
+      },
+      {
+       "w": "got",
+       "from": 183,
+       "to": 189
+      },
+      {
+       "w": "it",
+       "from": 189,
+       "to": 193
+      },
+      {
+       "w": "right.",
+       "from": 193,
+       "to": 213
+      },
+      {
+       "w": "Names",
+       "from": 213,
+       "to": 222
+      },
+      {
+       "w": "fix",
+       "from": 222,
+       "to": 228
+      },
+      {
+       "w": "who,",
+       "from": 228,
+       "to": 236
+      },
+      {
+       "w": "not",
+       "from": 236,
+       "to": 249
+      },
+      {
+       "w": "money.",
+       "from": 249,
+       "to": 260
+      }
+     ],
+     "cues": {
+      "1": 136
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_notes03",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "how",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "full",
+      "prop": "full",
+      "n": 6
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "THE CALL",
+     "leftVal": "₹1,450 A BAG",
+     "rightLab": "THE AI NOTES",
+     "rightVal": "₹14.50 A BAG",
+     "stake": "40 BAGS: ₹58,000 → ₹580",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stepsHead": "HOW AI NOTES ARE MADE",
+     "stepsSub": "our test · a small free AI on our computer · 10 runs",
+     "steps": [
+      [
+       "EARS",
+       "the call → text",
+       "14 .50 rupees a bag, I can deliver..."
+      ],
+      [
+       "WHO SAID WHAT",
+       "names on the lines (added by us)",
+       "Ravi: ...   Suresh: ..."
+      ],
+      [
+       "NOTES",
+       "the summary + who does what",
+       "14.50 rupees per bag · total 580 rupees"
+      ]
+     ],
+     "circleX0": 285,
+     "circleX2": 285,
+     "copied": "7/10 notes: ₹14.50 a bag · 5/10: total ₹580",
+     "namesHead": "WHO KEEPS THE EMPTY SACKS READY?",
+     "namesSub": "the real answer: Ravi · 10 runs each",
+     "noNames": "NO NAMES ON WHO SAID WHAT",
+     "noNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Suresh: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "withNames": "WITH NAMES",
+     "withNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Ravi: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "noNamesStat": "6/10 said Suresh",
+     "withNamesStat": "10/10 said Ravi",
+     "fullHead": "SAY IT IN FULL",
+     "fullSub": "the same call, the amount said in full",
+     "full1Head": "THE CALL SAID",
+     "full1Rows": [
+      "\"one thousand four hundred",
+      "and fifty rupees a bag\""
+     ],
+     "full2Head": "THE EARS WROTE: 1,450 rupees a bag",
+     "full2Rows": [
+      "notes with the right price: 7/10",
+      "notes with a wrong price: 0/10"
+     ],
+     "rule1": "SAY EVERY AMOUNT IN FULL",
+     "rule2": "CHECK THE NOTES BEFORE YOU FORWARD",
+     "builder": "app makers: a \"rupees\" hint took the $ away, but 8/10 notes still wrote 14.50"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "Say it in full",
+     "title": "Say it in full",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 880,
+   "frames": 246,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/uc03v1/line_05.wav",
+     "from": 0,
+     "frames": 44,
+     "words": [
+      {
+       "w": "So",
+       "from": 1,
+       "to": 5
+      },
+      {
+       "w": "how",
+       "from": 5,
+       "to": 11
+      },
+      {
+       "w": "do",
+       "from": 11,
+       "to": 15
+      },
+      {
+       "w": "I",
+       "from": 15,
+       "to": 18
+      },
+      {
+       "w": "say",
+       "from": 18,
+       "to": 28
+      },
+      {
+       "w": "prices?",
+       "from": 28,
+       "to": 40
+      }
+     ],
+     "cues": {}
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/uc03v1/line_06.wav",
+     "from": 50,
+     "frames": 189,
+     "words": [
+      {
+       "w": "In",
+       "from": 50,
+       "to": 54
+      },
+      {
+       "w": "full:",
+       "from": 54,
+       "to": 65
+      },
+      {
+       "w": "\"one",
+       "from": 65,
+       "to": 79
+      },
+      {
+       "w": "thousand",
+       "from": 79,
+       "to": 90
+      },
+      {
+       "w": "four",
+       "from": 90,
+       "to": 97
+      },
+      {
+       "w": "hundred",
+       "from": 97,
+       "to": 107
+      },
+      {
+       "w": "and",
+       "from": 107,
+       "to": 112
+      },
+      {
+       "w": "fifty",
+       "from": 112,
+       "to": 119
+      },
+      {
+       "w": "rupees\".",
+       "from": 119,
+       "to": 130
+      },
+      {
+       "w": "Then",
+       "from": 130,
+       "to": 148
+      },
+      {
+       "w": "the",
+       "from": 148,
+       "to": 153
+      },
+      {
+       "w": "ears",
+       "from": 153,
+       "to": 159
+      },
+      {
+       "w": "wrote",
+       "from": 159,
+       "to": 166
+      },
+      {
+       "w": "it",
+       "from": 166,
+       "to": 170
+      },
+      {
+       "w": "right,",
+       "from": 170,
+       "to": 188
+      },
+      {
+       "w": "and",
+       "from": 188,
+       "to": 193
+      },
+      {
+       "w": "not",
+       "from": 193,
+       "to": 198
+      },
+      {
+       "w": "one",
+       "from": 198,
+       "to": 203
+      },
+      {
+       "w": "note",
+       "from": 203,
+       "to": 209
+      },
+      {
+       "w": "got",
+       "from": 209,
+       "to": 214
+      },
+      {
+       "w": "the",
+       "from": 214,
+       "to": 219
+      },
+      {
+       "w": "price",
+       "from": 219,
+       "to": 226
+      },
+      {
+       "w": "wrong.",
+       "from": 226,
+       "to": 235
+      }
+     ],
+     "cues": {
+      "1": 129
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_notes03",
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "rule",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "ai",
+      "prop": "loop",
+      "n": 8
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "THE CALL",
+     "leftVal": "₹1,450 A BAG",
+     "rightLab": "THE AI NOTES",
+     "rightVal": "₹14.50 A BAG",
+     "stake": "40 BAGS: ₹58,000 → ₹580",
+     "story": "Ravi and the shop are made up · our test is real",
+     "stepsHead": "HOW AI NOTES ARE MADE",
+     "stepsSub": "our test · a small free AI on our computer · 10 runs",
+     "steps": [
+      [
+       "EARS",
+       "the call → text",
+       "14 .50 rupees a bag, I can deliver..."
+      ],
+      [
+       "WHO SAID WHAT",
+       "names on the lines (added by us)",
+       "Ravi: ...   Suresh: ..."
+      ],
+      [
+       "NOTES",
+       "the summary + who does what",
+       "14.50 rupees per bag · total 580 rupees"
+      ]
+     ],
+     "circleX0": 285,
+     "circleX2": 285,
+     "copied": "7/10 notes: ₹14.50 a bag · 5/10: total ₹580",
+     "namesHead": "WHO KEEPS THE EMPTY SACKS READY?",
+     "namesSub": "the real answer: Ravi · 10 runs each",
+     "noNames": "NO NAMES ON WHO SAID WHAT",
+     "noNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Suresh: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "withNames": "WITH NAMES",
+     "withNamesLines": [
+      "Suresh: deliver 40 bags",
+      "Ravi: send ₹14,000",
+      "Ravi: keep 3 sacks ready",
+      "Ravi: pay the balance"
+     ],
+     "noNamesStat": "6/10 said Suresh",
+     "withNamesStat": "10/10 said Ravi",
+     "fullHead": "SAY IT IN FULL",
+     "fullSub": "the same call, the amount said in full",
+     "full1Head": "THE CALL SAID",
+     "full1Rows": [
+      "\"one thousand four hundred",
+      "and fifty rupees a bag\""
+     ],
+     "full2Head": "THE EARS WROTE: 1,450 rupees a bag",
+     "full2Rows": [
+      "notes with the right price: 7/10",
+      "notes with a wrong price: 0/10"
+     ],
+     "rule1": "SAY EVERY AMOUNT IN FULL",
+     "rule2": "CHECK THE NOTES BEFORE YOU FORWARD",
+     "builder": "app makers: a \"rupees\" hint took the $ away, but 8/10 notes still wrote 14.50"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "Check before you forward",
+     "title": "Check before you forward",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1126,
+   "frames": 270,
+   "lines": [
+    {
+     "who": "ravi",
+     "name": "Ravi anna",
+     "color": "#FBBF24",
+     "sub": null,
+     "audio": "reel/uc03v1/line_07.wav",
+     "from": 9,
+     "frames": 113,
+     "words": [
+      {
+       "w": "Say",
+       "from": 10,
+       "to": 14
+      },
+      {
+       "w": "every",
+       "from": 14,
+       "to": 21
+      },
+      {
+       "w": "amount",
+       "from": 21,
+       "to": 29
+      },
+      {
+       "w": "in",
+       "from": 29,
+       "to": 33
+      },
+      {
+       "w": "full,",
+       "from": 33,
+       "to": 39
+      },
+      {
+       "w": "and",
+       "from": 39,
+       "to": 48
+      },
+      {
+       "w": "check",
+       "from": 48,
+       "to": 67
+      },
+      {
+       "w": "the",
+       "from": 67,
+       "to": 75
+      },
+      {
+       "w": "notes",
+       "from": 75,
+       "to": 82
+      },
+      {
+       "w": "before",
+       "from": 82,
+       "to": 90
+      },
+      {
+       "w": "you",
+       "from": 90,
+       "to": 95
+      },
+      {
+       "w": "forward",
+       "from": 95,
+       "to": 107
+      },
+      {
+       "w": "them!",
+       "from": 107,
+       "to": 114
+      }
+     ],
+     "cues": {
+      "1": 39
+     }
+    },
+    {
+     "who": "ai",
+     "name": "Shop AI",
+     "color": "#67E8F9",
+     "sub": null,
+     "audio": "reel/uc03v1/line_08.wav",
+     "from": 137,
+     "frames": 104,
+     "words": [
+      {
+       "w": "Order",
+       "from": 137,
+       "to": 151
+      },
+      {
+       "w": "written:",
+       "from": 151,
+       "to": 179
+      },
+      {
+       "w": "40",
+       "from": 179,
+       "to": 197
+      },
+      {
+       "w": "bags,",
+       "from": 197,
+       "to": 210
+      },
+      {
+       "w": "₹14.50",
+       "from": 210,
+       "to": 226
+      },
+      {
+       "w": "each.",
+       "from": 226,
+       "to": 240
+      }
+     ],
+     "cues": {
+      "1": 197
+     }
+    }
+   ]
+  }
+ ]
+}
