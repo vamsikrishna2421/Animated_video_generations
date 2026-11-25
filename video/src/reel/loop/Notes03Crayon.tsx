@@ -172,7 +172,6 @@ const StNotes: React.FC<SP> = ({ s }) => {
           if (b.prop === "rule") {
             stamp(c, T.rule1, W / 2, 330, "#2563eb", seg(f, ln.from + 2, ln.from + 10), 72, -0.05);
             stamp(c, T.rule2, W / 2, 490, RED, seg(f, cu(1, 0.35) - 2, cu(1, 0.35) + 6), 56, 0.03);
-            chip(c, T.builder, W / 2, 640, "#1e293b", "#f8fafc", seg(f, cu(1, 0.6), cu(1, 0.6) + 8), fit(c, T.builder, W - 120, 36, 800));
           }
           if (b.prop === "hook" && !loopOn) chip(c, T.story, W / 2, 1380, "rgba(15,23,42,0.88)", "#f8fafc", seg(f, cu(1, 0.9), cu(1, 0.9) + 8), fit(c, T.story, W - 140, 36, 800));
         }
