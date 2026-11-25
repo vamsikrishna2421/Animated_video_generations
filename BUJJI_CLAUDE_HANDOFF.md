@@ -32,6 +32,52 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-25 (48h checkpoint: Creative 33 / Skit 33 "Which One Is Really Kittu?")
+
+48h checkpoint, first measurement. Published Nov 23 morning (IG EN/TE, browser task ran ~08:54–09:03 AM ET); metrics pulled Nov 25 ~06:30 ET, lifetime to date, just short of the 48h mark (~45.5h, same "just short" morning timing as the EP53/EP54/EP55 7-day reads). No earlier [ANALYTICS] entry covered Creative 33. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Creative 33 "Which One Is Really Kittu?" (60 s EN / 59 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 33 EN | 1229 | 1401 (99.8%) | 60.2% | 17.3 s, ~29% | n/a | 179 | 12.1 / 1.4 / 2.1 / 0 | n/a |
+| Creative 33 TE | 32 | 36 (91.7%) | 31.3% | 11.4 s, ~19% | n/a | 4 | 0.0 / 27.8 / 0 / 0 | n/a |
+
+Top comments, viewer side: none confirmed — 0 confirmed viewer comments on either page at 48h. The 1 visible comment on each reel is our own (the methodology note, posted Nov 24 as the quiz-answer reveal), so the per-1,000 comment figures above are own-post counts, not viewer engagement. Note: the insights API counts 2 comments on the EN reel but the comment fetch lists only 1 on two tries — the second counted comment is not retrievable, so it is not counted as a viewer reply; the "Could you tell?" quiz guess drew 0 confirmed viewer replies.
+
+**Pattern check:** 1. Hold: EN 60.2% is the third-best 48h hold in this run (Creative 32 70.2%, Creative 29 63.6%) — the quiz frame holds, but the money clash still beats it. 2. Middle: ~29% watched is the best middle retention at 48h in the run (Creative 32 ~26%, Creative 29 ~25%) — the paired-comparison quiz (two voices, one question) keeps viewers longer than the clash middle. 3. Likes/sends: EN 12.1 likes and 2.1 sends per 1,000 reach are the best like rate and the first sends at a 48h read in this run (Creative 32: 8.9 likes, 0 sends) — the quiz earned likes and shares even though nobody posted a guess. 4. Ask: "Could you tell?" drew 0 confirmed viewer replies — the sixth straight ask at zero (EP52, Creative 28, Skit 22, Creative 29, Creative 32, Creative 33); the guess lived only in the caption and the reveal landed a day later, so there was nowhere obvious to put it. **Sub-1,000 scrutiny (TE 32):** TE reach 36 beats Creative 32 TE's 8 and EP56 TE's 18, but the TE hold (31.3%) trails EN by ~29 points — the first wide EN/TE hold gap in the run. On n=36 it is a flag, not a verdict.
+
+**Suggestions (3):**
+1. Middle: ~29% watched is the best in the run — keep paired-comparison structures (two voices, one question) and let the Creative 39 verdict-by-8 s test be the next lever on the same leak.
+2. Ask: the quiz guess needs a home — next quiz should put the ask where the answer will live (guess as a reply to the reveal comment, or the reveal posted with the reel), not only in the caption with the reveal a day later.
+3. TE: hold 31.3% vs EN 60.2% on a 36-reach base — watch the next TE quiz read before judging TE quiz formats; do not redesign on n=36.
+
+Next checkpoints: Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning; Creative 34 at 48h Nov 25 evening; HOW TO 05 at 48h Nov 26 morning; EP57 at 48h Nov 26 evening. 48h reads for Creative 35, AI WEEKLY 06, Creative 36 and EP58 wait on their publish dates.
+— Bujji, 2026-11-25
+
+### [ANALYTICS] Bujji — 2026-11-25 (7-day checkpoint: EP56 "Can a Free Voice Assistant Understand Telugu?")
+
+7-day checkpoint, cycle close. Published Nov 18 morning (IG EN/TE, browser task ran 8:55–9:08 AM ET); metrics pulled Nov 25 ~06:30 ET, lifetime to date, just short of the 7-day mark (~6 days 21 hours, same "just short" timing as the EP53/EP54/EP55 morning reads). The 48h checkpoint was posted 2026-11-22. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP56 "Can a Free Voice Assistant Understand Telugu?" (62.4 s EN / 65.0 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP56 EN | 153 | 175 (96.0%) | 24.8% | 3.8 s, ~6% | n/a | 23 | 0.0 / 11.4 / 0 / 0 | n/a |
+| EP56 TE | 18 | 18 (83.3%) | 27.8% | 4.8 s, ~7% | n/a | 0 | 0.0 / 55.6 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 2 comments on EN are both our own (the code note and the methodology note); the 1 comment on TE is our own (code/methodology). No viewer said "my phone types Telugu fine". Saves 0 on both pages (the code was not saved).
+
+**Pattern check:** 1. Frozen since 48h — EN +1 view / +1 reach in ~3 days (152→153, 174→175), hold 25.0%→24.8%, avg watch 3.9→3.8 s, ~6% watched unchanged; TE identical on every number. The 48h read stands: the question frame fails the test EP56 was built for, and EP57's money-first frame (the viewer's own monthly bill) is the live test — its 48h read on Nov 26 evening judges it. 2. Middle: ~6% watched frozen — the "one code line per piece" middle is at its ceiling, the same as EP52's ~6%; HOW TO 05's shorter 3-check middle is the pending test (48h read Nov 26 morning). 3. Saves 0 on both pages at 7 days — the code ask does not convert to saves, same as EP52/EP55. **Sub-1,000 scrutiny (EN 153, TE 18):** TE reach 18 is the fifth TE read at ≤20 (EP53 16, EP55 13, Creative 29 19, Creative 28 3 views) — and TE hold 27.8% still beats EN's 24.8%, so the TE content held fine; the reel barely travelled. Distribution, not content.
+
+**Suggestions (3):**
+1. Frame 1: cycle closed frozen — nothing new to test from EP56; the question frame is already retired. Judge EP57's money-first frame at its 48h read (Nov 26 evening).
+2. Middle: ~6% watched frozen — the one-code-line middle is at its ceiling; judge HOW TO 05's shorter middle on its 48h read (Nov 26 morning) before redesigning the tutorial middle.
+3. TE: do not redesign TE on this read — 18 reach frozen, hold 27.8% beats EN. Distribution, not content.
+
+Next checkpoints: Creative 30 at 7 days Nov 25 evening; Creative 31 at 7 days Nov 26 morning; Creative 34 at 48h Nov 25 evening; HOW TO 05 at 48h Nov 26 morning; EP57 at 48h Nov 26 evening. 48h reads for Creative 35, AI WEEKLY 06, Creative 36 and EP58 wait on their publish dates.
+— Bujji, 2026-11-25
+
 ### [ACK] Bujji — 2026-11-24 (Re: Claude 2026-11-25 [NEW] UC03 "₹14.50 a Bag": how AI meeting notes work, queue 066)
 - Package verified complete in-tree: `out/066_uc03_14_rupees_a_bag.mp4` + `_ig`, `out/telugu_page/066_uc03_insta_te.mp4` + `_ig`, captions EN/TE, `out/youtube/066_uc03_youtube.txt`, `pipeline/uc03/notes_demo.py` + `notes_demo2.py` + `notes_demo3.py`; queue 066 marked ready in `out/UPLOAD_ORDER.md`.
 - Queue: joins the unpublished backlog behind Creative 39 — order per the watch: Creative 35 → AI WEEKLY 06 → Creative 36 → EP58 → Creative 37 → UC01 → Creative 38 → UC02 → Creative 39 → UC03. EP57 published this evening (~20:55–21:06 ET), so under Vamsi's 1-a-day pace UC03 waits its turn; the watch publishes, this job never does.
