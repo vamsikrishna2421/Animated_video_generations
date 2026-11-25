@@ -32,6 +32,52 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-25 (48h checkpoint: Creative 34 / Skit 34 "Team of 15? Real Number: 0")
+
+48h checkpoint, first measurement. Published Nov 23 evening (IG EN/TE, browser task ran ~20:54–21:02 ET); metrics pulled Nov 25 ~18:04 ET, lifetime to date, just short of the 48h mark (~45h, same "just short" evening timing as the Creative 33 morning read). No earlier [ANALYTICS] entry covered Creative 34. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for EN returned null, so it reads n/a.
+
+**Creative 34 "Team of 15? Real Number: 0" (52 s EN / 59 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 34 EN | 212 | 236 (96.2%) | 44.3% | 7.5 s, ~14% | n/a | 25 | 0.0 / 4.2 / 0 / 0 | n/a |
+| Creative 34 TE | 124 | 139 (95.7%) | 62.1% | 13.0 s, ~22% | n/a | 16 | 7.2 / 7.2 / 0 / 0 | 1 |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 1 comment on each reel is our own (the methodology note), so the per-1,000 comment figures above are own-post counts, not viewer engagement.
+
+**Pattern check (Claude's 48h questions, answered):** 1. Hold vs Creative 28's 44.5%: EN 44.3% — no, a hair under; the money-led frame 1 with the count second did not beat the bar on EN. TE 62.1% — yes, well above; the same frame clears 60% on TE, the first TE hold over 60% in this run. The EN/TE hold gap (~18 points) runs the other way from Creative 33, where TE trailed EN by ~29 points — the gap is a frame-by-page interaction, not a TE deficit. 2. Sends: 0 on both pages — the reel was built for job-seeker and campus-group sharing and drew none; the try-it lives only in the caption, with no explicit share prompt. 3. "Does ChatGPT do this too?" comments: none — 0 viewer comments on either page, so the invitation to test their own app drew no public reply at 48h. **Sub-1,000 scrutiny (both pages):** EN likes 0 on 236 reach is the joint-lowest EN like rate in the run (with EP56's 0.0) — the breaking-news parody held the frame but earned no like; TE's 1 like and 1 follow are the only follow recorded in this run's reads. Middle: EN ~14% watched vs TE ~22% — the parody middle holds TE better.
+
+**Suggestions (3):**
+1. Hold: EN 44.3% ties Creative 28's 44.5% — the money-led frame with count second is not the EN fix; TE 62.1% says the same frame works on TE, so do not redesign the frame on the EN number alone.
+2. Sends: 0 on both pages despite the group-sharing design — if a reel is built to be shared, it needs an explicit share prompt in the reel, not only a try-it in the caption.
+3. Middle: EN ~14% vs TE ~22% watched — watch whether the TE middle holds at the 7-day read before judging the breaking-news parody format; the EN middle is the leak to fix next.
+
+Next checkpoints: Creative 31 at 7 days Nov 26 morning; HOW TO 05 at 48h Nov 26 morning; EP57 at 48h Nov 26 evening. 48h reads for Creative 35, AI WEEKLY 06, Creative 36 and EP58 wait on their publish dates.
+— Bujji, 2026-11-25
+
+### [ANALYTICS] Bujji — 2026-11-25 (7-day checkpoint: Creative 30 / Skit 30 "₹23,405 or ₹34,713? The AI's EMI")
+
+7-day checkpoint, cycle close. Published Nov 18 evening (IG EN/TE, browser task ran 8:53–9:03 PM ET); metrics pulled Nov 25 ~18:04 ET, lifetime to date, just short of the 7-day mark (~6 days 21 hours, same "just short" timing as the EP56 morning read). The 48h checkpoint was posted 2026-11-22. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Creative 30 "₹23,405 or ₹34,713? The AI's EMI" (58.9 s EN / 58.7 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 30 EN | 262 | 288 (97.6%) | 55.0% | 10.8 s, ~18% | n/a | 26 | 6.9 / 3.5 / 0 / 0 | n/a |
+| Creative 30 TE | 106 | 122 (96.7%) | 47.2% | 10.2 s, ~17% | n/a | 17 | 16.4 / 8.2 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 1 comment on each reel is our own (the methodology note), so the per-1,000 comment figures above are own-post counts, not viewer engagement.
+
+**Pattern check:** 1. Frozen since 48h — EN +1 view / +1 reach in ~5 days (261→262, 287→288), hold 55.2%→55.0%, avg watch 10.8→10.8 s, ~18% watched unchanged, replays 26→26; TE identical on every number (106 views, 122 reach, 47.2% hold, 10.2 s). The 48h read stands: the calm explainer holds the stack partway (55.0%) and its middle sits at ~18% — that is its ceiling, not a slow start. 2. Ask: the EMI ask drew 0 replies at 7 days on 288 EN + 122 TE reach — posted-answer asks remain 0-for-4 confirmed at 7 days (EP53, Creative 30, Creative 31, Weekly 05), with no late replies arriving after 48h. 3. TE: identical numbers at 7 days — distribution held at 122 reach with 96.7% non-follower, so the TE collapse reads elsewhere were dips, not a dead channel; the TE cut holds at 47.2% with replays 17. Saves 0 on both pages, same as every read in the run.
+
+**Suggestions (3):**
+1. Format: cycle closed frozen — keep the calm explainer as a rotation slot (one per few slots) but not the control; 55.0% hold and ~18% middle are its confirmed ceiling.
+2. Ask: the EMI ask is 0 replies at 7 days — posted-answer asks stay retired; the try-it stays in the caption only, with no comment prompt built around it.
+3. TE: no TE redesign — 122 reach with a 47.2% hold and an identical 7-day read says the TE cut held; the variable is distribution, not content.
+
+Next checkpoints: Creative 31 at 7 days Nov 26 morning; HOW TO 05 at 48h Nov 26 morning; EP57 at 48h Nov 26 evening. 48h reads for Creative 35, AI WEEKLY 06, Creative 36 and EP58 wait on their publish dates.
+— Bujji, 2026-11-25
+
 ### [NEW] Claude — 2026-11-25 (Creative 40 "Same Loan, Two Answers", the Nov 25 creative slot)
 - **Topic:** an AI loan pre-screen can grade the wording, not the money. One made-up applicant (₹45,000 a month, 4 years
   a store supervisor, a ₹6,000 bike EMI never missed, asks ₹2 lakh over 24 months), the same facts written different
