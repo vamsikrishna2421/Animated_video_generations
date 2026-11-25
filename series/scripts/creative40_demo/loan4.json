@@ -1,0 +1,128 @@
+{
+ "letters": {
+  "letter2": "Respected Sir, I request a personal loan of Rs. 2 lakh for my sister's marriage, which I will repay in 24 monthly instalments. I have been working as a store supervisor for the past 4 years with a monthly salary of Rs. 45,000. I am currently paying a bike loan EMI of Rs. 6,000 and have not missed a single payment. Kindly consider my request. Thanking you.",
+  "letter3": "To the Loan Officer,\nSubject: Application for a personal loan of Rs. 2,00,000\n\nSir/Madam,\nI wish to apply for a personal loan for my sister's wedding. The details are as follows:\n1. Loan amount: Rs. 2,00,000\n2. Repayment period: 24 months\n3. Occupation: Store supervisor, employed for 4 years\n4. Monthly salary: Rs. 45,000\n5. Existing loan: two-wheeler loan, EMI Rs. 6,000 per month, all payments made on time\n\nI request you to kindly process my application.\nYours faithfully"
+ },
+ "rows": [
+  {
+   "setup": "letter2",
+   "seed": 1,
+   "rating": "LOW",
+   "reply": "RATING: LOW  \nREASON: The applicant has a stable employment history, no past delinquency on loans, and an adequate income to cover the proposed loan."
+  },
+  {
+   "setup": "letter2",
+   "seed": 2,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a stable employment with a reasonable income but is already stretched with a bike loan EMI, which could indicate potential strain on his financial capacity."
+  },
+  {
+   "setup": "letter2",
+   "seed": 3,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a stable job but is already负担一个额外的EMI，这可能会影响其还款能力。"
+  },
+  {
+   "setup": "letter2",
+   "seed": 4,
+   "rating": "MEDIUM",
+   "reply": "**Credit Risk: MEDIUM**\n\n**Reason:** The applicant has a stable job but is taking on a significant additional loan amount, which may strain their current financial situation."
+  },
+  {
+   "setup": "letter2",
+   "seed": 5,
+   "rating": "LOW",
+   "reply": "Credit Risk: LOW  \nReason: The applicant has a stable employment history and is currently fulfilling the obligations of an existing loan without default."
+  },
+  {
+   "setup": "letter2",
+   "seed": 6,
+   "rating": "MEDIUM",
+   "reply": "Risk Rating: MEDIUM\n\nReason: The applicant has a stable job and income but is taking on a significant loan amount with existing EMI obligations."
+  },
+  {
+   "setup": "letter2",
+   "seed": 7,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a stable employment with a reasonable salary, but the addition of a personal loan could strain their financial capacity, especially given their existing bike loan."
+  },
+  {
+   "setup": "letter2",
+   "seed": 8,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a stable employment history but is already stretched with a bike loan EMI, which could indicate financial strain."
+  },
+  {
+   "setup": "letter2",
+   "seed": 9,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM  \nReason: The applicant has a stable employment with a reasonable salary, but the additional EMI on top of the proposed loan may strain his financial capacity."
+  },
+  {
+   "setup": "letter2",
+   "seed": 10,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a stable employment history but is already stretched with a bike loan EMI, which could indicate potential strain on their finances."
+  },
+  {
+   "setup": "letter3",
+   "seed": 1,
+   "rating": "MEDIUM",
+   "reply": "Risk Rating: MEDIUM\n\nReason: While the applicant has a stable employment and no history of late payments, the loan amount is relatively large compared to their monthly salary, which may strain their financial capacity."
+  },
+  {
+   "setup": "letter3",
+   "seed": 2,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a stable job but the proposed loan amount is significant relative to their monthly salary, and they already have an existing EMI obligation."
+  },
+  {
+   "setup": "letter3",
+   "seed": 3,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a relatively high EMI burden and is applying for a substantial loan amount, which may strain their financial capacity."
+  },
+  {
+   "setup": "letter3",
+   "seed": 4,
+   "rating": "MEDIUM",
+   "reply": "**Credit Risk: MEDIUM**\n\n**Reason:** The applicant has a stable occupation but the proposed loan amount is quite high relative to their monthly income, which could strain their financial situation."
+  },
+  {
+   "setup": "letter3",
+   "seed": 5,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: While the applicant has a stable employment and no past defaults, the loan amount is substantial relative to their monthly income, which could strain their financial situation."
+  },
+  {
+   "setup": "letter3",
+   "seed": 6,
+   "rating": "MEDIUM",
+   "reply": "**Credit Risk: MEDIUM**\n\n**Reason:** The applicant has a significant loan amount relative to their monthly salary, and while they have no delinquent payments on their existing loan, the high EMI payment might strain their financial situation."
+  },
+  {
+   "setup": "letter3",
+   "seed": 7,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a relatively high loan-to-income ratio and is taking on additional debt for a non-essential purpose, which could strain their financial stability."
+  },
+  {
+   "setup": "letter3",
+   "seed": 8,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM  \nReason: While the applicant has a steady employment and no past default, the loan amount is significant relative to their monthly salary, which may strain their financial capacity."
+  },
+  {
+   "setup": "letter3",
+   "seed": 9,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM  \nReason: The applicant has a significant portion of their income tied up in EMIs and is applying for an additional loan, which could strain their financial situation."
+  },
+  {
+   "setup": "letter3",
+   "seed": 10,
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a relatively high monthly EMI and the loan amount is substantial, which could strain their financial situation."
+  }
+ ]
+}

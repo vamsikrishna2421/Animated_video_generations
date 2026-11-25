@@ -28,7 +28,8 @@ LETTERS = {
                 "45,000\n5. Existing loan: two-wheeler loan, EMI Rs. 6,000 per month, all payments made on time\n\nI request "
                 "you to kindly process my application.\nYours faithfully"),
 }
-HAND = ""   # filled in by hand after reading all 20 replies
+HAND = {"letter2": "LOW 2/10 (seeds 1, 5), MEDIUM 8/10; no HIGH; seed 3 drifts into Chinese mid-reason",   # by hand, Nov 25
+        "letter3": "LOW 0/10, MEDIUM 10/10; no HIGH; no false facts in either letter's replies"}
 
 
 def main():
