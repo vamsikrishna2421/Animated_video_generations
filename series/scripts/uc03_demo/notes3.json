@@ -1,0 +1,318 @@
+{
+ "turns_full": [
+  [
+   "Ravi",
+   "Hello Suresh garu, Ravi from the shop. I need forty bags of sona masoori rice for next week."
+  ],
+  [
+   "Suresh",
+   "Forty bags, fine. One thousand four hundred and fifty rupees a bag. I can deliver on Friday morning."
+  ],
+  [
+   "Ravi",
+   "One thousand four hundred and fifty is okay. I'll send fourteen thousand rupees as advance by Thursday."
+  ],
+  [
+   "Suresh",
+   "Good. And I'll take care of the transport, five hundred rupees, don't worry about that."
+  ],
+  [
+   "Ravi",
+   "Thank you. Please send the bill by Wednesday, I want to check it first."
+  ],
+  [
+   "Suresh",
+   "I'll send it. Also, keep three empty sacks ready, I'll take them back."
+  ],
+  [
+   "Ravi",
+   "Okay, I'll keep them ready. And the balance, I'll pay on delivery."
+  ],
+  [
+   "Suresh",
+   "Done. Friday morning, then."
+  ]
+ ],
+ "ears": {
+  "rupees": "Hello, Suresh Garu, Ravi from the shop. I need 40 bags of Sona Massory Rice for next week. 40 bags, fine. 14 .50 rupees a bag I can deliver on Friday morning. 14 .50 is OK. I'll send 14 ,000 rupees as advance by Thursday. Good, and I'll take care of the transport. 500 rupees, don't worry about that. Thank you. Please send the bill by Wednesday. I want to check it first. I'll send it. Also, keep three empty sacks ready. I'll take them back. OK, I'll keep them ready. And the balance, I'll pay on delivery. Done Friday morning, then.",
+  "hint": "Hello Suresh Garu, Ravi from the shop. I need forty bags of sona massory rice for next week. Forty bags fine, fourteen fifty a bag. I can deliver on Friday morning. Fourteen fifty is okay. I'll send fourteen thousand as advance by Thursday. Good, and I'll take care of the transport. Five hundred rupees. Don't worry about that. Thank you. Please send the bill by Wednesday. I want to check it first. I'll send it. Also keep three empty sacks ready. I'll take them back. Okay, I'll keep them ready. And the balance, I'll pay on delivery. Done Friday morning then.",
+  "full": "Hello, Suresh Garu, Ravi from the shop. I need 40 bags of sona massory rice for next week. 40 bags, fine, 1 ,450 rupees a bag I can deliver on Friday morning. 1 ,450 is okay. I'll send 14 ,000 rupees as advance by Thursday. Good, and I'll take care of the transport. 500 rupees, don't worry about that. Thank you. Please send the bill by Wednesday. I want to check it first. I'll send it. Also, keep three empty sacks ready. I'll take them back. Okay, I'll keep them ready. And the balance, I'll pay on delivery. Done Friday morning then."
+ },
+ "rows": [
+  {
+   "setup": "rupees",
+   "seed": 1,
+   "reply": "2-line summary:\nRavi ordered 40 bags of Sona Massory Rice for delivery on Friday morning, with an advance payment and transport arrangements made.\n\nAction Items:\nSuresh: Deliver 40 bags of Sona Massory Rice (40 bags, 14.50 rupees per bag, total 580 rupees, by Friday)\nRavi: Send 14,000 rupees as advance payment (by Thursday)\nRavi: Check and send bill (by Wednesday)\nSuresh: Keep three empty sacks ready for pickup (by Friday)\nRavi: Pay remaining balance on delivery (Friday morning)",
+   "per_bag": [
+    "14.50 rupees"
+   ],
+   "total": [
+    "580"
+   ]
+  },
+  {
+   "setup": "rupees",
+   "seed": 2,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona Massory Rice from Suresh for delivery on Friday morning. Payment details and additional tasks were discussed to ensure smooth transaction.\n\n**Action Items:**\n- Ravi: Send advance payment of 14,000 rupees by Thursday (14,000 rupees, Thursday)\n- Suresh: Deliver 40 bags of rice on Friday morning (0, Friday Morning)\n- Ravi: Check and send the bill by Wednesday (amount not specified, Wednesday)\n- Suresh: Keep three empty sacks ready for pickup (0, Wednesday)\n- Ravi: Pay the balance upon delivery (amount not specified, Friday Morning)",
+   "per_bag": [],
+   "total": []
+  },
+  {
+   "setup": "rupees",
+   "seed": 3,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona Massory Rice for delivery on Friday morning. Suresh will send the bill by Wednesday and Ravi will pay the balance upon delivery.\n\n**Action Items:**\n- **Suresh:** Send bill (14,000 rupees) by Wednesday\n- **Ravi:** Send 14,000 rupees as advance by Thursday\n- **Ravi:** Take care of transport and payment on delivery (500 rupees)\n- **Suresh:** Keep three empty sacks ready for Ravi to take back",
+   "per_bag": [],
+   "total": []
+  },
+  {
+   "setup": "rupees",
+   "seed": 4,
+   "reply": "2-line Summary: Ravi ordered 40 bags of Sona Massory Rice for delivery on Friday, with an advance payment and balance to be settled upon delivery.\n\nAction Items:\nSuresh: Deliver 40 bags of Sona Massory Rice (14.50 rupees per bag) by Friday morning (amount: 580 rupees, date: Friday)\nRavi: Send 14,000 rupees as advance by Thursday (amount: 14,000 rupees, date: Thursday)\nSuresh: Take care of the transport and keep three empty sacks ready for return (amount: 500 rupees, date: Friday)\nRavi: Check the bill sent by Wednesday and pay the balance upon delivery (date: Friday)",
+   "per_bag": [
+    "14.50 rupees"
+   ],
+   "total": []
+  },
+  {
+   "setup": "rupees",
+   "seed": 5,
+   "reply": "**2-line summary:**\nRavi orders 40 bags of Sona Massory Rice for delivery on Friday with an advance payment and transport cost. Ravi will check the bill before final payment.\n\n**Action Items:**\nSuresh: Deliver 40 bags of Sona Massory Rice (14.50 rupees per bag, total 580 rupees) by Friday morning.\nRavi: Send 14,000 rupees as advance by Thursday.\nRavi: Pay the remaining balance on delivery (amount to be confirmed).\nSuresh: Send the bill by Wednesday for Ravi's review.\nRavi: Keep three empty sacks ready to return.\nRavi: Confirm and pay transport cost of 500 rupees.",
+   "per_bag": [
+    "14.50 rupees"
+   ],
+   "total": [
+    "580"
+   ]
+  },
+  {
+   "setup": "rupees",
+   "seed": 6,
+   "reply": "2-line summary: Suresh agreed to supply 40 bags of Sona Massory Rice for delivery on Friday, with an advance payment and final balance upon delivery.\n\nAction items:\nSuresh: Deliver 40 bags of Sona Massory Rice (14.50 rupees per bag, total 580 rupees) by Friday morning\nRavi: Send 14,000 rupees as advance payment by Thursday\nRavi: Send bill for delivery to Suresh by Wednesday for verification\nSuresh: Keep three empty sacks ready to be taken back after delivery\nRavi: Pay the balance upon delivery on Friday",
+   "per_bag": [
+    "14.50 rupees"
+   ],
+   "total": [
+    "580"
+   ]
+  },
+  {
+   "setup": "rupees",
+   "seed": 7,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona Massory Rice for delivery on Friday, with an advance payment and transport costs arranged.\n\n**Action Items:**\n- Ravi: Send 14,000 rupees as advance by Thursday (14,000 rupees, Thursday)\n- Suresh: Deliver 40 bags of rice by Friday morning (N/A, Friday)\n- Suresh: Send bill by Wednesday for verification (N/A, Wednesday)\n- Ravi: Keep three empty sacks ready to be taken back after delivery (N/A, Friday)\n- Ravi: Pay the balance on delivery (N/A, Friday)",
+   "per_bag": [],
+   "total": []
+  },
+  {
+   "setup": "rupees",
+   "seed": 8,
+   "reply": "**2-line Summary:**\nSuresh Garu agreed to supply 40 bags of Sona Massory Rice at 14.50 rupees per bag, with delivery on Friday morning and payment terms outlined.\n\n**Action Items:**\n- Ravi: Send 14,000 rupees as advance by Thursday (14,000 rupees, Thursday)\n- Suresh: Deliver 40 bags of rice by Friday morning (N/A, Friday)\n- Suresh: Send bill for the order by Wednesday (N/A, Wednesday)\n- Ravi: Keep three empty sacks ready to be taken back after delivery (N/A, Friday)",
+   "per_bag": [
+    "14.50 rupees"
+   ],
+   "total": []
+  },
+  {
+   "setup": "rupees",
+   "seed": 9,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona Massory Rice at 14.50 rupees per bag, with a delivery on Friday morning and an advance payment by Thursday.\n\n**Action Items:**\nSuresh: Deliver 40 bags of Sona Massory Rice (14.50 rupees/bag, amount 580 rupees, date Friday)  \nRavi: Send 14,000 rupees as advance by Thursday (amount 14,000 rupees, date Thursday)  \nSuresh: Take care of transport costs (amount 500 rupees)  \nSuresh: Send bill by Wednesday (date Wednesday)  \nRavi: Check the bill before final payment (date Before Friday)  \nSuresh: Keep three empty sacks ready for pickup after delivery (date Friday)  \nRavi: Pay balance on delivery (date Friday)",
+   "per_bag": [
+    "14.50 rupees",
+    "14.50 rupees"
+   ],
+   "total": []
+  },
+  {
+   "setup": "rupees",
+   "seed": 10,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona Massory Rice for delivery on Friday morning at a rate of 14.50 rupees per bag, with an advance payment and transport costs to be settled.\n\n**Action Items:**\n- Ravi: Send 14,000 rupees as advance by Thursday (14,000 rupees, Thursday)\n- Suresh: Deliver 40 bags of rice on Friday morning (no amount specified, Friday)\n- Suresh: Send bill by Wednesday for Ravi to check (bill amount, Wednesday)\n- Ravi: Keep three empty sacks ready for pickup (no amount specified, ready by Friday)\n- Ravi: Pay the balance on delivery (balance amount, Friday)",
+   "per_bag": [
+    "14.50 rupees"
+   ],
+   "total": []
+  },
+  {
+   "setup": "hint",
+   "seed": 1,
+   "reply": "### Meeting Notes Summary\nRavi and Suresh discussed the delivery of 40 bags of sona massory rice, with a price of ₹14.50 per bag, to be delivered on Friday morning.\n\n### Action Items\n- Ravi: Send advance payment of ₹14,000 by Thursday (₹14,000, Thu)\n- Suresh: Arrange transport and send bill by Wednesday (₹500, Wed)\n- Suresh: Keep three empty sacks ready for pickup (nil, Wed)\n- Ravi: Pay the balance on delivery (nil, Fri)",
+   "per_bag": [
+    "₹ 14.50"
+   ],
+   "total": []
+  },
+  {
+   "setup": "hint",
+   "seed": 2,
+   "reply": "**Meeting Notes:**\n\n- **2-line Summary:** Ravi ordered 40 bags of sona massory rice for delivery on Friday morning at 14.50 INR per bag, with 14,000 INR to be paid as advance by Thursday and the remaining balance upon delivery.\n- **Action Items:**\n  - Suresh: Deliver 40 bags of sona massory rice (1,450 x 40 = 58,000 INR) on Friday morning (3/25/2023)\n  - Ravi: Send 14,000 INR as advance by Thursday (3/23/2023)\n  - Suresh: Keep three empty sacks ready to be taken back after delivery\n  - Ravi: Check and send the bill by Wednesday (3/22/2023)\n  - Suresh: Collect payment of remaining balance on delivery (3/25/2023)",
+   "per_bag": [],
+   "total": []
+  },
+  {
+   "setup": "hint",
+   "seed": 3,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona Massory rice at 14.50 per bag to be delivered on Friday morning with an advance payment and transport arrangements made.\n\n**Action Items:**\n- Ravi: Send advance payment (14,000 rupees) by Thursday\n- Suresh: Arrange for transport (500 rupees)\n- Suresh: Keep three empty sacks ready to take back\n- Ravi: Pay the balance on delivery\n- Suresh: Send bill by Wednesday for checking",
+   "per_bag": [
+    "14.50"
+   ],
+   "total": []
+  },
+  {
+   "setup": "hint",
+   "seed": 4,
+   "reply": "2-line Summary: Ravi ordered 40 bags of Sona massory rice at 14.50 per bag, with an advance payment and transport arrangements to be handled by the supplier.\n\nAction Items:\nSuresh: Deliver 40 bags of Sona massory rice (14.50 per bag) on Friday morning (amount: 580 rupees)\nRavi: Send 14,000 rupees as advance payment by Thursday (amount: 14,000 rupees)\nSuresh: Provide a bill for the order by Wednesday (amount: N/A)\nRavi: Keep three empty sacks ready to be taken back after delivery (N/A)",
+   "per_bag": [
+    "14.50",
+    "14.50"
+   ],
+   "total": []
+  },
+  {
+   "setup": "hint",
+   "seed": 5,
+   "reply": "**2-line summary:**\nRavi ordered 40 bags of Sona massory rice for delivery on Friday at a price of ₹14.5 per bag, with an advance payment and balance to be settled on delivery.\n\n**Action Items:**\nSuresh: Deliver 40 bags of Sona massory rice (₹14.5 per bag) by Friday morning.\nRavi: Send ₹14,000 as advance by Thursday (₹350 per bag).\nSuresh: Keep three empty sacks ready for collection on delivery day.\nRavi: Check and confirm the bill sent by Wednesday.\nSuresh: Settle the balance payment on delivery.",
+   "per_bag": [
+    "₹ 14.5",
+    "₹ 14.5",
+    "₹ 350"
+   ],
+   "total": []
+  },
+  {
+   "setup": "hint",
+   "seed": 6,
+   "reply": "2-line summary: Ravi ordered 40 bags of Sona Massory rice at ₹1450 per bag, to be delivered by Friday morning with an advance payment and balance on delivery.\n\nAction Items:\nRavi: Pay ₹14,000 as advance by Thursday (₹14,000, Thursday)\nSuresh: Send the bill for 40 bags of rice by Wednesday (Bill, Wednesday)\nSuresh: Keep three empty sacks ready to be taken back after delivery (Empty sacks, Friday morning)",
+   "per_bag": [
+    "₹ 1450"
+   ],
+   "total": [
+    "₹ 1450"
+   ]
+  },
+  {
+   "setup": "hint",
+   "seed": 7,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona massory rice at 14.50 per bag, to be delivered by Friday morning with payment on delivery and an advance of 14,000 rupees to be sent by Thursday.\n\n**Action Items:**\n- Ravi: Send 14,000 as advance by Thursday (14,000, Thu)\n- Suresh: Deliver 40 bags of rice by Friday morning (40 bags, Fri M)\n- Suresh: Send bill for verification by Wednesday (bill, Wed)\n- Ravi: Keep three empty sacks ready to be picked up after delivery (sacks, Fri M)\n- Ravi: Pay balance on delivery on Friday morning (balance, Fri M)",
+   "per_bag": [
+    "14.50"
+   ],
+   "total": []
+  },
+  {
+   "setup": "hint",
+   "seed": 8,
+   "reply": "**2-line Summary:**\nRavi ordered forty bags of Sona massory rice at fourteen fifty per bag, to be delivered by Friday morning. Ravi will send an advance payment of fourteen thousand rupees by Thursday and keep three empty sacks ready for pickup.\n\n**Action Items:**\n- Ravi: Send advance payment of 14,000 rupees by Thursday (14,000, Thu)\n- Suresh: Deliver forty bags of Sona massory rice on Friday morning (14.50/bag, Fri morn)\n- Suresh: Keep three empty sacks ready for pickup (500, Thu)\n- Ravi: Pay the balance on delivery (Fri morn)",
+   "per_bag": [
+    "14.50"
+   ],
+   "total": []
+  },
+  {
+   "setup": "hint",
+   "seed": 9,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona massory rice at 14.50 per bag, to be delivered by Friday morning with an advance payment and balance on delivery.\n\n**Action Items:**\nSuresh: Deliver 40 bags of Sona massory rice (14.50 per bag) by Friday morning (3000 rupees).\nRavi: Send 14000 rupees as advance by Thursday (14000 rupees, Thursday).\nRavi: Keep three empty sacks ready to be taken back (500 rupees).\nSuresh: Send the bill by Wednesday for Ravi's review (amount, date).",
+   "per_bag": [
+    "14.50",
+    "14.50"
+   ],
+   "total": []
+  },
+  {
+   "setup": "hint",
+   "seed": 10,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona Massory rice for delivery on Friday morning at 14.50 per bag, with an advance payment and balance to be settled on delivery.\n\n**Action Items:**\n- Ravi: Send 14,000 as advance by Thursday (14,000, Thu)\n- Suresh: Deliver 40 bags of rice on Friday morning (Free, Fri)\n- Suresh: Send bill for verification by Wednesday (Free, Wed)\n- Suresh: Keep three empty sacks ready to be taken back (500, Free)",
+   "per_bag": [
+    "14.50"
+   ],
+   "total": []
+  },
+  {
+   "setup": "full",
+   "seed": 1,
+   "reply": "2-line summary:\nRavi ordered 40 bags of Sona massory rice for next week at 1,450 rupees per bag. Payment details and delivery logistics were confirmed.\n\nAction Items:\nSuresh: Collect advance payment (14,000 rupees) by Thursday\nRavi: Send bill for confirmation by Wednesday\nRavi: Pay balance on delivery (Friday morning)\nSuresh: Deliver 40 bags of rice (Friday morning)\nSuresh: Keep three empty sacks ready for pickup (Friday morning)",
+   "per_bag": [
+    "1450 rupees"
+   ],
+   "total": []
+  },
+  {
+   "setup": "full",
+   "seed": 2,
+   "reply": "**Meeting Notes:**\n\n- **2-line Summary:** Ravi ordered 40 bags of sona massory rice for delivery on Friday morning at a rate of 1,450 rupees per bag. Suresh will deliver the rice and take back three empty sacks.\n  \n- **Action Items:**\n  - Suresh: Deliver 40 bags of sona massory rice (1,450 rupees per bag, 14,000 rupees total) by Friday morning\n  - Ravi: Send 14,000 rupees as advance payment by Thursday\n  - Suresh: Take back three empty sacks after delivery\n  - Suresh: Send bill for the rice by Wednesday for Ravi to check\n  - Ravi: Pay remaining balance on delivery on Friday morning",
+   "per_bag": [
+    "1450 rupees",
+    "1450 rupees"
+   ],
+   "total": []
+  },
+  {
+   "setup": "full",
+   "seed": 3,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona masory rice for delivery on Friday morning, with an advance payment and transport costs to be settled later.\n\n**Action Items:**\nSuresh: Deliver 40 bags of Sona masory rice (1,450 rupees per bag, total 58,000 rupees) by Friday morning.\nRavi: Send 14,000 rupees as advance payment by Thursday.\nSuresh: Take care of the transport and charge 500 rupees.\nSuresh: Send the bill by Wednesday for Ravi to check.\nRavi: Keep three empty sacks ready to be taken back after delivery.\nRavi: Pay the remaining balance upon delivery on Friday morning.",
+   "per_bag": [
+    "1450 rupees"
+   ],
+   "total": [
+    "58000"
+   ]
+  },
+  {
+   "setup": "full",
+   "seed": 4,
+   "reply": "2-line Summary: Ravi ordered 40 bags of Sona massory rice for delivery on Friday, with an advance payment and additional costs for transport.\n\nAction Items:\nSuresh: Deliver 40 bags of Sona massory rice (1,450 rupees per bag) by Friday morning (14,000 rupees total, 1,450 rupees per bag)\nRavi: Send 14,000 rupees as advance payment by Thursday (amount 14,000 rupees, date Thursday)\nSuresh: Take care of transport costs (500 rupees)\nRavi: Check and send bill by Wednesday (date Wednesday)\nRavi: Ensure balance is paid on delivery (amount as per final invoice, date Friday morning)",
+   "per_bag": [
+    "1450 rupees",
+    "1450 rupees"
+   ],
+   "total": [
+    "1450"
+   ]
+  },
+  {
+   "setup": "full",
+   "seed": 5,
+   "reply": "**2-line summary:**\nRavi ordered 40 bags of Sona massory rice for delivery on Friday morning. He agreed to pay 1,450 rupees per bag with a 14,000 rupee advance by Thursday and the remaining balance at delivery.\n\n**Action Items:**\nSuresh: Deliver 40 bags of Sona massory rice (14,000 rupees, Friday morning)\nRavi: Send 14,000 rupees as advance by Thursday (14,000 rupees, Thursday)\nRavi: Send bill for verification by Wednesday (bill, Wednesday)\nSuresh: Keep three empty sacks ready to be taken back (empty sacks, Friday morning)\nRavi: Pay the remaining balance on delivery (balance, Friday morning)",
+   "per_bag": [
+    "1450 rupees"
+   ],
+   "total": []
+  },
+  {
+   "setup": "full",
+   "seed": 6,
+   "reply": "2-line summary: Suresh will deliver 40 bags of sona massory rice by Friday morning, with Ravi sending an advance payment and handling transport.\n\nAction items:\nSuresh: Deliver 40 bags of sona massory rice (1,450 rupees per bag, total 58,000 rupees) (amount, date)\nRavi: Send 14,000 rupees as advance payment by Thursday (amount, date)\nSuresh: Handle transport for delivery (date)\nRavi: Check and confirm the bill sent by Wednesday (date)\nSuresh: Keep three empty sacks ready to be taken back (date)",
+   "per_bag": [
+    "1450 rupees"
+   ],
+   "total": [
+    "58000"
+   ]
+  },
+  {
+   "setup": "full",
+   "seed": 7,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona massory rice for delivery on Friday, with an advance payment and transport details arranged. Suresh confirmed the order and provided terms for payment.\n\n**Action Items:**\n- Ravi: Send 14,000 rupees as advance by Thursday (14,000 rupees, Thursday)\n- Suresh: Deliver 40 bags of rice on Friday morning (nil, Friday)\n- Suresh: Keep three empty sacks ready for pickup after delivery (nil, Friday)\n- Ravi: Pay the balance upon delivery (nil, Friday)",
+   "per_bag": [],
+   "total": []
+  },
+  {
+   "setup": "full",
+   "seed": 8,
+   "reply": "**2-line Summary:**\nSuresh and Ravi agreed on the purchase of 40 bags of Sona Massory rice for delivery on Friday morning. Payment details include an advance of 14,000 rupees by Thursday and a final payment at delivery.\n\n**Action Items:**\n- Ravi: Send 14,000 rupees as advance by Thursday (14,000 rupees, Thursday)\n- Suresh: Deliver 40 bags of Sona Massory rice on Friday morning (N/A, Friday)\n- Suresh: Send bill by Wednesday for verification (N/A, Wednesday)\n- Ravi: Keep three empty sacks ready to be taken back (N/A, Friday)\n- Suresh: Pay balance at delivery on Friday morning (N/A, Friday)",
+   "per_bag": [],
+   "total": []
+  },
+  {
+   "setup": "full",
+   "seed": 9,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona massory rice from Suresh for delivery on Friday morning. Payment details include an advance of 14,000 rupees to be sent by Thursday, with the balance paid upon delivery.\n\n**Action Items:**\n- Ravi: Send 14,000 rupees as advance by Thursday (14,000 rupees, Thursday)\n- Suresh: Deliver 40 bags of Sona massory rice on Friday morning (no amount specified, Friday)\n- Suresh: Send bill by Wednesday for Ravi's review (no amount specified, Wednesday)\n- Ravi: Check the bill and keep three empty sacks ready to be taken back after delivery (no amount specified, anytime before delivery)\n- Ravi: Pay the balance upon delivery (no amount specified, Friday)",
+   "per_bag": [],
+   "total": []
+  },
+  {
+   "setup": "full",
+   "seed": 10,
+   "reply": "**2-line Summary:**\nSuresh agreed to deliver 40 bags of sona massory rice for 1,450 rupees each by Friday morning. Ravi will send an advance payment of 14,000 rupees and keep three empty sacks ready for pickup.\n\n**Action Items:**\nRavi: Send 14,000 rupees as advance by Thursday (14,000 rupees, Thu)\nSuresh: Deliver 40 bags of sona massory rice on Friday morning (1,450 rupees each, Fri morn)\nSuresh: Keep three empty sacks ready for pickup (N/A, anytime before Fri morn)\nRavi: Check the bill and send confirmation by Wednesday (N/A, Wed)",
+   "per_bag": [],
+   "total": []
+  }
+ ]
+}

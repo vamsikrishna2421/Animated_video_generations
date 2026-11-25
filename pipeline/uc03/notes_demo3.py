@@ -25,7 +25,13 @@ import notes_demo2 as n2  # noqa: E402
 TURNS_FULL = list(n.TURNS)
 TURNS_FULL[1] = ("Suresh", "Forty bags, fine. One thousand four hundred and fifty rupees a bag. I can deliver on Friday morning.")
 TURNS_FULL[2] = ("Ravi", "One thousand four hundred and fifty is okay. I'll send fourteen thousand rupees as advance by Thursday.")
-HAND = None   # filled in by hand after reading all 30 replies
+HAND = {   # by hand, after reading all 30 replies (Nov 25)
+    "rupees": "7/10 give 14.50 rupees a bag (seeds 1,4,5,6,8,9,10), 5/10 total the order at 580 rupees (1,4,5,6,9); 3 give no price",
+    "hint": "8/10 read 'fourteen fifty' as 14.50 a bag (1,3,4,5,7,8,9,10; seed 2 says 14.50 INR in the summary and 1,450 x 40 in an "
+            "action line); 1/10 (seed 6) gives Rs 1450: the hint took the dollar sign away, not the mistake",
+    "full": "speech-to-text wrote '1,450 rupees a bag'; 7/10 notes give Rs 1,450 a bag (1-6, 10), 2 total Rs 58,000; 3 give no "
+            "price; 0/10 wrong",
+}
 
 
 def money(reply):
