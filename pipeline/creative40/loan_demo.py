@@ -41,7 +41,13 @@ FIX = (" Judge only the facts: income, existing EMIs, repayment history, the amo
        "grammar, writing style and language.")
 ASK = ("Here is an applicant's message. Rate the credit risk as LOW, MEDIUM or HIGH, then give a one-line reason.\n\n"
        "Applicant: {m}")
-HAND = None   # filled in by hand after reading all 40 replies
+HAND = {   # by hand, after reading all 40 replies (Nov 25)
+    "formal": "LOW 5/10 (seeds 4,5,6,8,10), MEDIUM 5/10; no HIGH",
+    "simple": "MEDIUM 10/10 ('already stretched', 'high debt service ratio' for a Rs 6,000 EMI on Rs 45,000); no LOW",
+    "tenglish": "MEDIUM 10/10; seed 3 says 'a history of missing payments' and seed 5 'a relatively short work history' (4 years): "
+                "both false",
+    "simple_fix": "the builder's fix: LOW 1/10 (seed 4), MEDIUM 9/10",
+}
 
 
 def rating(reply):

@@ -1,0 +1,75 @@
+{
+ "rewrite": "Rewrite this loan request as a polite, formal letter in English. Keep every fact exactly; add nothing.\n\n{m}",
+ "rows": [
+  {
+   "setup": "rewritten",
+   "seed": 1,
+   "letter": "Dear Sir,\n\nI am writing to request a loan of 2 lakh rupees for my sister's marriage. I assure you that I will repay this amount over a period of 24 months.\n\nCurrently, I hold the position of store supervisor with four years of experience and earn a monthly salary of 45,000 rupees. Additionally, I am already repaying a bike EMI of 6,000 rupees per month and have never missed any payment.\n\nI kindly request that you consider my application for this loan.\n\nThank you for your time and consideration.\n\nSincerely,\n[Your Name]",
+   "rating": "LOW",
+   "reply": "RATING: LOW  \nREASON: The applicant has a stable job with a reasonable income, no history of missed payments, and a manageable existing EMI."
+  },
+  {
+   "setup": "rewritten",
+   "seed": 2,
+   "letter": "Dear Sir,\n\nI am writing to request a loan of 2 lakh rupees for my sister's marriage. I assure you that I will repay this amount over a period of 24 months.\n\nCurrently, I hold the position of Store Supervisor with four years of experience and earn a monthly salary of 45,000 rupees. Additionally, I am already making monthly EMIs on my bike loan in the amount of 6,000 rupees, and I have never missed any payment.\n\nI kindly request your consideration for this loan request.\n\nThank you for your time and attention.\n\nSincerely,\n[Your Name]",
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has an existing loan EMI and is requesting a significant amount for a non-essential expense, which may strain their financial situation."
+  },
+  {
+   "setup": "rewritten",
+   "seed": 3,
+   "letter": "Dear Sir,\n\nI am writing to request a loan of 2 lakh rupees for my sister's marriage. I assure you that I will repay this amount over a period of 24 months.\n\nCurrently, I hold the position of store supervisor with four years of experience and earn a monthly salary of 45,000 rupees. Additionally, I have been making regular payments of 6,000 rupees for my bike EMIs without any defaults.\n\nI request that you consider my application favorably.\n\nThank you for your attention to this matter.\n\nSincerely,\n[Your Name]",
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a stable job and income but no other financial information to assess long-term repayment capability, and the loan amount is relatively high compared to current monthly expenses."
+  },
+  {
+   "setup": "rewritten",
+   "seed": 4,
+   "letter": "[Your Name]  \n[Your Address]  \n[City, State, Pincode]  \n[Email Address]  \n[Phone Number]  \n\nDate: [Today's Date]\n\n[Bank/Financial Institution's Name]  \n[Bank/Financial Institution's Address]  \n[City, State, Pincode]\n\nSubject: Loan Request for Sister’s Marriage\n\nDear Sir/Madam,\n\nI hope this letter finds you well. I am writing to request a loan of 2 lakh rupees for my sister’s marriage. I assure you that I will repay the loan over a period of 24 months.\n\nCurrently, I hold the position of Store Supervisor and have been in this role for four years. My monthly salary is INR 45,000. Additionally, I am currently making",
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant's income is relatively low and the loan amount represents a significant portion of their monthly salary, which may pose repayment risk."
+  },
+  {
+   "setup": "rewritten",
+   "seed": 5,
+   "letter": "Dear Sir,\n\nI am writing to request a loan of Rs. 2 lakh for my sister's marriage. I assure you that I will repay the loan over a period of 24 months.\n\nCurrently, I hold the position of Store Supervisor with four years of experience and my monthly salary is Rs. 45,000. Additionally, I am already making EMIs on my bike loan in the amount of Rs. 6,000 per month and have never missed any payment.\n\nI request that you consider my application favorably.\n\nThank you for your time and consideration.\n\nSincerely,\n[Your Name]",
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant is already burdened with a bike loan EMI and is requesting a significant loan amount, which may strain their financial capacity."
+  },
+  {
+   "setup": "rewritten",
+   "seed": 6,
+   "letter": "[Your Name]\n[Your Address]\n[City, State, ZIP Code]\n[Email Address]\n[Phone Number]\n\n[Date]\n\n[Bank/Financial Institution's Name]\nAttention: Loan Officer\n[Bank Address]\n[City, State, ZIP Code]\n\nSubject: Loan Request for Sister’s Marriage\n\nDear Sir/Madam,\n\nI hope this letter finds you well.\n\nI am writing to request a loan of Rs. 2 lakh for my sister’s marriage. I assure you that I will repay the amount over a period of 24 months.\n\nCurrently, I work as a Store Supervisor with four years of experience and earn a monthly salary of Rs. 45,000. Additionally, I have an ongoing bike EMI of Rs. 6,000 per month",
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a stable job with a reasonable salary, but the additional EMI on a bike could strain cash flow during the loan repayment period."
+  },
+  {
+   "setup": "rewritten",
+   "seed": 7,
+   "letter": "Dear Sir,\n\nI am writing to request a loan of 2 lakh rupees for my sister's marriage. I assure you that I will repay this amount over 24 months.\n\nCurrently, I hold the position of Store Supervisor and have been in this role for four years. My monthly salary is 45,000 rupees. Additionally, I am already making monthly EMIs of 6,000 rupees for my bike, and I have never missed a single EMI.\n\nI would be grateful if you could consider granting me this loan.\n\nThank you for your time and consideration.\n\nSincerely,\n[Your Name]",
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant is already stretched with a significant EMI for his bike and may find it challenging to manage an additional loan repayment."
+  },
+  {
+   "setup": "rewritten",
+   "seed": 8,
+   "letter": "Dear Sir,\n\nI am writing to request a loan of Rs. 2 lakh for my sister's marriage. I assure you that I will repay this amount over a period of 24 months.\n\nCurrently, I hold the position of Store Supervisor with four years of experience, and my monthly salary is Rs. 45,000. Additionally, I am already paying an EMI of Rs. 6,000 for my bike, and I have never missed any payment.\n\nI kindly request you to consider my application for this loan.\n\nThank you for your time and consideration.\n\nSincerely,\n[Your Name]",
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a stable job and no history of missed payments, but the loan amount is substantial relative to their monthly income."
+  },
+  {
+   "setup": "rewritten",
+   "seed": 9,
+   "letter": "Dear Sir,\n\nI am writing to request a loan of 2 lakhs for my sister's marriage. I assure you that I will repay this amount over 24 months.\n\nCurrently, I hold the position of store supervisor and have been in this role for four years. My monthly salary is INR 45,000. Additionally, I am currently paying a bike EMI of INR 6,000 per month, and I have never missed any payment.\n\nI would appreciate your consideration for this request.\n\nThank you for your time and attention.\n\nSincerely,\n[Your Name]",
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant has a stable employment but a high EMI payment relative to their income, which could strain their financial situation."
+  },
+  {
+   "setup": "rewritten",
+   "seed": 10,
+   "letter": "Dear Sir,\n\nI am writing to request a loan of Rs. 2 lakh for my sister's marriage. I assure you that I will repay this amount over a period of 24 months.\n\nCurrently, I work as a store supervisor with four years of experience and my monthly salary is Rs. 45,000. Additionally, I have been consistently paying an EMI of Rs. 6,000 for my bike, and I have never missed any payment.\n\nI kindly request you to consider my application for this loan.\n\nThank you for your consideration.\n\nSincerely,\n[Your Name]",
+   "rating": "MEDIUM",
+   "reply": "Credit Risk: MEDIUM\n\nReason: The applicant's current monthly salary is sufficient to cover the proposed loan EMI, but they have only four years of work experience and no other financial information provided."
+  }
+ ]
+}

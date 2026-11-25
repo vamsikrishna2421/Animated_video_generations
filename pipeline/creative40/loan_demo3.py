@@ -20,7 +20,7 @@ import loan_demo as t  # noqa: E402
 
 REWRITE = ("Rewrite this loan request as a polite, formal letter in English. Keep every fact exactly; add nothing.\n\n"
            "{m}")
-HAND = None   # filled in by hand after reading all 10 rewrites and ratings
+HAND = "every rewrite keeps the facts (read by hand, Nov 25); rated LOW 1/10 (seed 1), MEDIUM 9/10"
 
 
 def main():

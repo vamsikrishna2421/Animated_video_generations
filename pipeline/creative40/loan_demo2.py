@@ -20,7 +20,7 @@ import loan_demo as t  # noqa: E402
 
 LIST = ("Salary: 45000 per month\nJob: store supervisor, 4 years\nBike EMI: 6000 per month, never missed\n"
         "Loan: 2 lakh, 24 months\nFor: sister's wedding")
-HAND = None   # filled in by hand after reading all 10 replies
+HAND = "list: MEDIUM 10/10, LOW 0/10 (Nov 25, read by hand)"
 
 
 def main():
