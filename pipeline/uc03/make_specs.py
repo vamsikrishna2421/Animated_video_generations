@@ -18,12 +18,12 @@ LINES = {
         "సమ్మరీకి మూడు పనులు: [1] చెవులు, కాల్ ని టెక్స్ట్ గా రాస్తాయి. [2] తర్వాత, ఎవరు ఏమన్నారో పేర్లు పెడతాం. [3] చివరగా, నేను సమ్మరీ రాస్తా. | [4] చెవులు, ఫోర్టీన్ పాయింట్ ఫైవ్ జీరో అని రాశాయి. పది సార్లు చేస్తే, ఏడు సమ్మరీలు అదే రాశాయి."),
     3: ("ravi", "ravi", "sacks", "And who keeps Suresh's empty sacks ready?", "మరి సురేష్ ఖాళీ బస్తాలు, ఎవరు రెడీ పెట్టాలి?"),
     4: ("ai", "names", "names", "With no names, six of ten notes gave your job to Suresh. [1] With names, ten of ten got it right. Names fix who, not money.",
-        "పేర్లు లేకపోతే, పదిలో ఆరు సమ్మరీలు, సురేష్ అని రాశాయి. [1] పేర్లు పెడితే, పదికి పది మీరే. పేర్లు, ఎవరో సరిచేశాయి. ధర మాత్రం అలాగే తప్పు."),
+        "పేర్లు లేకపోతే, పదిలో ఆరు సమ్మరీలు, సురేష్ అని రాశాయి. [1] పేర్లు పెడితే, పదికి పది మీరే. పని ఎవరిదో, పేర్లు సరిచేశాయి. ధర మాత్రం అలాగే తప్పు."),
     5: ("ravi", "ravi", "how", "So how do I say prices?", "మరి ధరలు ఎలా చెప్పాలి?"),
     6: ("ai", "full", "full", "In full: one thousand four hundred and fifty rupees. | [1] Then the ears wrote it right. Seven notes right, none wrong.",
-        "పూర్తిగా: వెయ్యి నాలుగు వందల యాభై రూపాయలు. | [1] అప్పుడు చెవులు సరిగ్గా రాశాయి. ఏడు సమ్మరీలు సరిగ్గా, ఒక్కటీ తప్పు లేదు."),
+        "పూర్తిగా: వెయ్యి, నాలుగు వందల యాభై రూపాయలు. | [1] అప్పుడు చెవులు సరిగ్గా రాశాయి. ఏడు సమ్మరీలు సరిగ్గా. తప్పు, ఒక్కటీ లేదు."),
     7: ("ravi", "ravi", "rule", "Say every amount in full, [1] and check the notes before you forward them!",
-        "ప్రతి ధర పూర్తిగా చెప్పండి, [1] సమ్మరీ పంపే ముందు చెక్ చేసుకోండి!"),
+        "ప్రతి ధర పూర్తిగా చెప్పండి. | [1] సమ్మరీ పంపే ముందు, చెక్ చేసుకోండి!"),
     8: ("ai", "ai", "loop", "Next call, noted: forty bags, [1] fourteen rupees fifty each.", "తర్వాతి కాల్: నలభై బస్తాలు, [1] ఒక్కోటి పధ్నాలుగు రూపాయల యాభై పైసలు."),
 }
 SHOW = {1: "₹1,450 a bag, I said! The AI notes say ₹14.50! 40 bags for ₹580?!",
@@ -35,10 +35,10 @@ SHOW_TE = {
     1: "I said fourteen fifty a bag! In the summary: ₹14 and 50 paise! 40 bags, ₹580?!",
     2: "A summary has 3 jobs: the ears write the call as text. Then we add names for who said what. Last, I write the summary. <pause 0.6> The ears wrote 14.50. In 10 runs, 7 summaries wrote the same.",
     3: "So who keeps Suresh's empty sacks ready?",
-    4: "With no names, 6 of 10 summaries wrote Suresh. With names, 10 of 10: you. The names fixed who. The price stayed wrong.",
+    4: "With no names, 6 of 10 summaries wrote Suresh. With names, 10 of 10: you. Names fixed whose job it is. The price stayed wrong.",
     5: "So how should I say prices?",
     6: "In full: \"one thousand four hundred and fifty rupees\". <pause 0.6> Then the ears wrote it right. 7 summaries right, none wrong.",
-    7: "Say every price in full, and check the summary before you send it!",
+    7: "Say every price in full. <pause 0.6> Check the summary before you send it!",
     8: "Next call: 40 bags, ₹14.50 each.",
 }
 TEMPO_EN = {"ravi": 1.08, "ai": 1.08}

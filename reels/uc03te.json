@@ -278,8 +278,8 @@
     {
      "who": "ai",
      "file": "04_ai.wav",
-     "text": "పేర్లు లేకపోతే, పదిలో ఆరు సమ్మరీలు, సురేష్ అని రాశాయి. [1] పేర్లు పెడితే, పదికి పది మీరే. పేర్లు, ఎవరో సరిచేశాయి. ధర మాత్రం అలాగే తప్పు.",
-     "show": "With no names, 6 of 10 summaries wrote Suresh. With names, 10 of 10: you. The names fixed who. The price stayed wrong.",
+     "text": "పేర్లు లేకపోతే, పదిలో ఆరు సమ్మరీలు, సురేష్ అని రాశాయి. [1] పేర్లు పెడితే, పదికి పది మీరే. పని ఎవరిదో, పేర్లు సరిచేశాయి. ధర మాత్రం అలాగే తప్పు.",
+     "show": "With no names, 6 of 10 summaries wrote Suresh. With names, 10 of 10: you. Names fixed whose job it is. The price stayed wrong.",
      "maxgap": 0.25,
      "gap": 0.16,
      "tempo": 1.12,
@@ -405,15 +405,15 @@
     {
      "who": "ai",
      "file": "06_ai.wav",
-     "text": "పూర్తిగా: వెయ్యి నాలుగు వందల యాభై రూపాయలు. <pause 0.6> [1] అప్పుడు చెవులు సరిగ్గా రాశాయి. ఏడు సమ్మరీలు సరిగ్గా, ఒక్కటీ తప్పు లేదు.",
+     "text": "పూర్తిగా: వెయ్యి, నాలుగు వందల యాభై రూపాయలు. <pause 0.6> [1] అప్పుడు చెవులు సరిగ్గా రాశాయి. ఏడు సమ్మరీలు సరిగ్గా. తప్పు, ఒక్కటీ లేదు.",
      "show": "In full: \"one thousand four hundred and fifty rupees\". <pause 0.6> Then the ears wrote it right. 7 summaries right, none wrong.",
      "maxgap": 0.25,
      "gap": 0.16,
      "tempo": 1.12,
      "gain_db": -1.0,
-     "tts": "పూర్తిగా: వెయ్యి నాలుగు వందల యాభై రూపాయలు.",
+     "tts": "పూర్తిగా: వెయ్యి, నాలుగు వందల యాభై రూపాయలు.",
      "file2": "06b_ai.wav",
-     "tts2": "అప్పుడు చెవులు సరిగ్గా రాశాయి. ఏడు సమ్మరీలు సరిగ్గా, ఒక్కటీ తప్పు లేదు.",
+     "tts2": "అప్పుడు చెవులు సరిగ్గా రాశాయి. ఏడు సమ్మరీలు సరిగ్గా. తప్పు, ఒక్కటీ లేదు.",
      "pause": 0.6
     }
    ]
@@ -522,12 +522,16 @@
     {
      "who": "ravi",
      "file": "07_ravi.wav",
-     "text": "ప్రతి ధర పూర్తిగా చెప్పండి, [1] సమ్మరీ పంపే ముందు చెక్ చేసుకోండి!",
-     "show": "Say every price in full, and check the summary before you send it!",
+     "text": "ప్రతి ధర పూర్తిగా చెప్పండి. <pause 0.6> [1] సమ్మరీ పంపే ముందు, చెక్ చేసుకోండి!",
+     "show": "Say every price in full. <pause 0.6> Check the summary before you send it!",
      "maxgap": 0.25,
      "gap": 0.4,
      "tempo": 1.1,
-     "gain_db": 0.5
+     "gain_db": 0.5,
+     "tts": "ప్రతి ధర పూర్తిగా చెప్పండి.",
+     "file2": "07b_ravi.wav",
+     "tts2": "సమ్మరీ పంపే ముందు, చెక్ చేసుకోండి!",
+     "pause": 0.6
     },
     {
      "who": "ai",

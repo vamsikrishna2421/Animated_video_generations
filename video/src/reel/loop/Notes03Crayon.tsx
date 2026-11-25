@@ -71,9 +71,9 @@ const notes = (c: Ctx, x: number, y: number, w: number, h: number, title: string
   c.fillStyle = "#fffbea"; rrect(c, x, y, w, h, 20); c.fill(); c.strokeStyle = "#a16207"; c.lineWidth = 3; rrect(c, x, y, w, h, 20); c.stroke();
   c.textAlign = "left"; c.font = SANS(fit(c, title, w - 40, 34, 900), 900); c.fillStyle = "#713f12"; c.fillText(title, x + 20, y + 50);
   lines.forEach((t, q) => {
-    const yy = y + 110 + q * 58;
-    if (q === mark) { c.fillStyle = markCol; rrect(c, x + 12, yy - 40, w - 24, 54, 10); c.fill(); }
-    c.font = SANS(fit(c, t, w - 50, 40, 800), 800); c.fillStyle = q === mark ? "#fff" : INK; c.fillText(t, x + 24, yy);
+    const yy = y + 120 + q * 76;
+    if (q === mark) { c.fillStyle = markCol; rrect(c, x + 12, yy - 48, w - 24, 66, 10); c.fill(); }
+    c.font = SANS(fit(c, t, w - 44, 48, 900), 900); c.fillStyle = q === mark ? "#fff" : INK; c.fillText(t, x + 22, yy);
   });
   c.restore();
 };
@@ -122,7 +122,7 @@ const StNotes: React.FC<SP> = ({ s }) => {
             c.fillStyle = "#1e3a8a"; c.beginPath(); c.arc(110, y + 40, 40, 0, 7); c.fill();
             c.font = SANS(48, 900); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(String(q + 1), 110, y + 57);
             c.textAlign = "left"; c.font = SANS(46, 900); c.fillStyle = "#f8fafc"; c.fillText(lab, 170, y + 36);
-            c.font = SANS(fit(c, sub, W - 240, 32, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(sub, 170, y + 80);
+            c.font = SANS(fit(c, sub, W - 240, 38, 700), 700); c.fillStyle = "#cbd5e1"; c.fillText(sub, 170, y + 82);
             c.fillStyle = "#f8fafc"; rrect(c, 170, y + 100, W - 230, 120, 16); c.fill();
             c.font = SANS(fit(c, body, W - 280, 42, 800), 800); c.fillStyle = INK; c.fillText(body, 192, y + 175);
             if (q !== 1 && kMiss > 0) {   // the dollars, circled, on the ears and on the notes
@@ -133,11 +133,11 @@ const StNotes: React.FC<SP> = ({ s }) => {
           chip(c, T.copied, W / 2, 1300, RED, "#fff", seg(f, cu(4, 0.7) - 2, cu(4, 0.7) + 6), fit(c, T.copied, W - 120, 44, 900));
         } else if (b.shot === "names") {
           dark(c, W, H, T.namesHead, [T.namesSub]);
-          notes(c, 40, 440, 490, 560, T.noNames, T.noNamesLines, 2, RED, seg(f, ln.from + 2, ln.from + 10));
-          notes(c, 550, 440, 490, 560, T.withNames, T.withNamesLines, 2, GREEN, seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 6));
-          chip(c, T.noNamesStat, 285, 1090, "#7f1d1d", "#fff", seg(f, ln.from + 10, ln.from + 18), 46);
-          chip(c, T.withNamesStat, 795, 1090, "#14532d", "#fff", seg(f, cu(1, 0.3) + 6, cu(1, 0.3) + 14), 46);
-          chip(c, "names fix who, not money", W / 2, 1220, "#fde68a", INK, seg(f, cu(1, 0.75) - 2, cu(1, 0.75) + 6), 50);
+          notes(c, 30, 440, 500, 600, T.noNames, T.noNamesLines, 2, RED, seg(f, ln.from + 2, ln.from + 10));
+          notes(c, 550, 440, 500, 600, T.withNames, T.withNamesLines, 2, GREEN, seg(f, cu(1, 0.3) - 4, cu(1, 0.3) + 6));
+          chip(c, T.noNamesStat, 280, 1130, "#7f1d1d", "#fff", seg(f, ln.from + 10, ln.from + 18), 46);
+          chip(c, T.withNamesStat, 800, 1130, "#14532d", "#fff", seg(f, cu(1, 0.3) + 6, cu(1, 0.3) + 14), 46);
+          chip(c, "names fix who, not money", W / 2, 1260, "#fde68a", INK, seg(f, cu(1, 0.75) - 2, cu(1, 0.75) + 6), 50);
         } else if (b.shot === "full") {
           dark(c, W, H, T.fullHead, [T.fullSub]);
           const card = (y: number, head: string, rows: string[], k: number) => {
@@ -171,7 +171,7 @@ const StNotes: React.FC<SP> = ({ s }) => {
             chip(c, T.stake, W / 2, 486, RED, "#fff", b.prop === "hook" && !loopOn ? seg(f, cu(1, 0.5) - 2, cu(1, 0.5) + 6) : 1, 44);
           }
           if (b.prop === "rule") {
-            stamp(c, T.rule1, W / 2, 340, "#2563eb", seg(f, ln.from + 2, ln.from + 10), 80, -0.03);
+            stamp(c, T.rule1, W / 2, 340, "#2563eb", seg(f, ln.from + 2, ln.from + 10), 74, -0.02);
             stamp(c, T.rule2, W / 2, 510, RED, seg(f, cu(1, 0.35) - 2, cu(1, 0.35) + 6), 66, 0.02);
           }
           if (b.prop === "loop" && !loopOn) chip(c, "NEXT CALL...", W / 2, 300, "#1e293b", "#fde68a", seg(f, ln.from, ln.from + 8), 56);

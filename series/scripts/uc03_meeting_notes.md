@@ -93,3 +93,8 @@ forward them."
   oh, and in ten runs, seven notes copied it"; the names card showed money the test got wrong → no amounts on it; "names
   added by us: the best case" on it. Sound: less music in the gaps (it pumped ~6 dB over the voice), no dead-silence
   drop at 0:14, a beat before the payoff, more lift in the middle.
+
+## Telugu word check (human-viewer, after the fixes) and what changed
+- Clean of swear and embarrassing sounds. "వెయ్యి" got lost (heard "450") → "వెయ్యి," with a pause; the rule ran
+  "chep-mari" → a beat after "చెప్పండి"; "పేర్లు, ఎవరో సరిచేశాయి" read as "somebody fixed it" → "పని ఎవరిదో, పేర్లు
+  సరిచేశాయి"; the note cards ~1.3x bigger. The call in our test was in English; the caption says so.
