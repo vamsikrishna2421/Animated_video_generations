@@ -54,19 +54,21 @@ def kokoro():
 
 
 MUST = {"en": {1: [("credit",), ("risk",), ("low",), ("medium",)],
-               2: [("same",), ("salary",), ("loan",), ("never",), ("emi", "emis", "e")], 3: [("letter",), ("five", "5"), ("zero", "0"), ("medium",)],
+               2: [("same",), ("salary",), ("loan",), ("never",), ("emi", "emis", "e")], 3: [("letter",), ("five", "5"), ("phone",), ("chat",), ("zero", "0")],
                4: [("real",), ("applicant",), ("screener",), ("small",), ("free",), ("computer",), ("ten", "10")],
                5: [("telugu",), ("english",), ("zero", "0"), ("history",), ("missing",), ("payments", "payment"), ("never",)],
-               6: [("ignore",), ("grammar",), ("one", "1"), ("list",), ("zero", "0"), ("polished",), ("letter",)],
+               6: [("ignore",), ("grammar",), ("one", "1"), ("list",), ("facts", "fact"), ("zero", "0"), ("polished",), ("letter",)],
+               7: [("letters", "letter"), ("two", "2"), ("zero", "0"), ("english",), ("words",), ("answer",), ("fix",)],
                8: [("nature",), ("judgments", "judgements", "judgment"), ("english",)],
                9: [("medium",), ("bank",), ("reason",), ("writing",), ("rbi", "r"), ("must",)],
                10: [("credit",), ("risk",), ("medium",)]},
         "te": {}}   # Telugu: full reads by hand (chunk by chunk)
 JUDGE_TEXT = {2: "Same salary. Same loan. Never missed an EMI. Guess which one got low.",
-              3: "The letter: 5 in 10. Typed like a phone chat: 0. Medium, every time.",
+              3: "The letter: five in ten. Typed like a phone chat: zero.",
               4: "Not a real applicant. The screener: a small free AI on our computer, 10 tries each.",
               5: "Telugu in English letters: 0 again. Once, it said he had a history of missing payments. He never missed one.",
-              6: "Told to ignore grammar and language: 1 in 10. The facts as a plain list: 0. The AI's own polished letter: 1 in 10.",
+              6: "Told to ignore grammar: one in ten. A plain list of the facts: zero. The AI's own polished letter: one in ten.",
+              7: "Two more letters we wrote: two, and zero. So it's not good English. The words moved the answer, and you can't fix that.",
               8: "Big models too: a 2024 Nature study found harsher AI judgments for the same words in a different style of English."}
 
 TELUGU = re.compile(r"[ఀ-౿]")

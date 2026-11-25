@@ -76,3 +76,35 @@ rise into the ruling; the stamp again on the loop.
 Caption try-it (no comment ask): "Write the same request twice, once as a formal letter and once the way you'd text it.
 Ask an AI to rate both. Same facts, same answer?" Builder note: test your screener with the same facts written
 different ways before it sees real people.
+
+## Script review (human-viewer, v1) and what changed
+- Both: the guess is obvious and the countdown is padding -> no countdown; the answer lands at ~8 s (the EN cut: 8.3 s),
+  and "Medium, every time" moved to the tag. The 5/10 letter vs the AI-polished letter's 1/10 left "so what do I write?"
+  -> tested (`loan_demo4.py`, committed before it ran): two more formal letters written by hand, same facts: LOW 2/10 and
+  0/10. So it is not good English: the words moved the answer. New line 7 says so, over the three letter cards (5, 2,
+  0), and "you can't fix that". "Grading your English" is gone.
+- Priya: the plain list (0/10) is in line 6 now; "convicted" -> "more 'guilty' verdicts ... in test cases"; "dialect" ->
+  "a different style of English"; medium is not a rejection -> "Here it said medium, not no. But if a bank says no, ask
+  for the reason in writing." The RBI line now rests on the current rule: RBI (Commercial Banks - Responsible Business
+  Conduct) Directions, 2025, para 331 (updated Oct 1, 2026): "the bank shall convey in writing, the main reason(s) ...
+  led to rejection of the loan applications" for all loans, credit cards too -> "RBI rules say they must give it" (banks
+  only; we could not confirm the same rule for NBFC apps, so the video says "a bank"). Builder line on the ruling card.
+- Sandeep (Telugu): "వాయిదా" -> "ఈఎంఐ"; "ఈ మనిషిని మేమే తయారు చేశాం" -> "ఈ అప్లికెంట్ నిజం కాదు, వివరాలన్నీ మేమే రాశాం";
+  "పేరున్న చాట్‌బాట్లు కూడా ఇంతే" -> "...లో కూడా ఇలాంటిదే కనిపించింది" and the English named ("అమెరికాలో కొందరు మాట్లాడే
+  ఇంగ్లీష్"); "రాతపూర్వకంగా" -> "కారణం రాసి ఇవ్వమని అడగండి"; "ఏది?" -> "ఊహించండి". ("పెద్ద" and a spoken "AI" stay out:
+  our Telugu rules.)
+- Length: the first English cut ran 66.4 s -> tempo 1.12, lines 3, 6 and 7 shortened: 58.5 s.
+
+## Script v2 (as voiced; the specs in pipeline/creative40/make_specs.py)
+| # | who | beat | EN | TE |
+|---|---|---|---|---|
+| 1 | ai | hook | Credit risk: low. [1] Credit risk: medium. | రిస్క్: తక్కువ. [1] రిస్క్: మీడియం. |
+| 2 | narr | question | Same salary. Same loan. Never missed an EMI. [1] Guess which one got low. | అదే జీతం. అదే లోన్. ఒక్క ఈఎంఐ కూడా మిస్ కాలేదు. [1] తక్కువ రిస్క్ ఎవరికి వచ్చిందో, ఊహించండి. |
+| 3 | narr | reveal | [1] The letter: five in ten. [2] Typed like a phone chat: zero. | [1] లెటర్ కి: పదిలో ఐదు. [2] ఫోన్ లో చాట్ లా టైప్ చేస్తే: సున్నా. |
+| 4 | narr | method | Not a real applicant. [1] The screener: a small free AI on our computer, ten tries each. | ఈ అప్లికెంట్ నిజం కాదు, వివరాలన్నీ మేమే రాశాం. [1] చెక్ చేసింది, మా కంప్యూటర్ లోని ఒక చిన్న ఫ్రీ చాట్‌బాట్. ఒక్కో మెసేజ్, పది సార్లు. |
+| 5 | narr | telugu | Telugu in English letters: zero again. [1] Once, it said he had a history of missing payments. [2] He never missed one. | తెలుగుని ఇంగ్లీష్ అక్షరాల్లో రాస్తే: మళ్ళీ సున్నా. [1] ఒకసారి, ఇతను ఈఎంఐలు మిస్ చేశాడు అని చెప్పింది. [2] ఒక్కటి కూడా మిస్ చేయలేదు. |
+| 6 | narr | fixes | Told to ignore grammar: one in ten. [1] A plain list of the facts: zero. [2] The AI's own polished letter: one in ten. | గ్రామర్ పట్టించుకోవద్దు అని చెప్పాం: పదిలో ఒకటి. [1] వివరాలు లిస్ట్ గా రాస్తే: సున్నా. [2] చాట్‌బాట్ తోనే లెటర్ రాయించాం: పదిలో ఒకటి. |
+| 7 | narr | meaning | Two more letters we wrote: two, and zero. [1] So it's not good English. The words moved the answer, and you can't fix that. | మేము రాసిన ఇంకో రెండు లెటర్లు: పదిలో రెండు, సున్నా. [1] అంటే, విషయం మంచి ఇంగ్లీష్ కాదు. పదాలు మారితే, జవాబు మారింది. అది మీ చేతిలో లేదు. |
+| 8 | narr | big | Big models too: [1] a 2024 Nature study found harsher AI judgments for the same words in a different style of English. | పేరున్న చాట్‌బాట్లలో కూడా ఇలాంటిదే కనిపించింది. [1] రెండేళ్ళ క్రితం నేచర్ జర్నల్ లో ఒక స్టడీ: అమెరికాలో కొందరు మాట్లాడే ఇంగ్లీష్ లో రాస్తే, తీర్పు కఠినంగా వచ్చింది. |
+| 9 | narr | rule | Here it said medium, not no. [1] But if a bank says no, ask for the reason in writing. RBI rules say they must give it. | ఇక్కడ వచ్చింది మీడియం, నో కాదు. [1] కానీ బ్యాంక్ లోన్ ఇవ్వనంటే, కారణం రాసి ఇవ్వమని అడగండి. రిజర్వ్ బ్యాంక్ రూల్ ప్రకారం, బ్యాంక్ చెప్పాలి. |
+| 10 | ai | loop | Credit risk: [1] medium. | రిస్క్: [1] మీడియం. |

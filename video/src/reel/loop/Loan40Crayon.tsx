@@ -59,7 +59,7 @@ const chatPhone = (c: Ctx, text: string, x: number, y: number, w: number, h: num
   c.fillStyle = "rgba(0,0,0,0.3)"; rrect(c, 8, 10, w, h, 40); c.fill();
   c.fillStyle = "#0b0f17"; rrect(c, 0, 0, w, h, 40); c.fill();
   c.fillStyle = "#e7ddd3"; rrect(c, 16, 60, w - 32, h - 80, 26); c.fill();
-  c.font = SANS(28, 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(tagT, 26, 42);
+  c.font = SANS(fit(c, tagT, w - 52, 28, 900), 900); c.fillStyle = "#fde68a"; c.textAlign = "left"; c.fillText(tagT, 26, 42);
   c.font = SANS(32, 700); const lines = wrap(c, text, w - 110).slice(0, Math.floor((h - 150) / 42));
   c.fillStyle = "#dcf8c6"; rrect(c, 40, 90, w - 70, lines.length * 42 + 40, 22); c.fill();
   c.fillStyle = INK; lines.forEach((t, q) => c.fillText(t, 60, 138 + q * 42));
@@ -105,8 +105,8 @@ const frame1 = (c: Ctx, T: Record<string, any>, kTag: number) => {
   band(c, T.band);
   letter(c, T, 70, 330, 450, 560, -0.025, T.exA);
   chatPhone(c, T.msgB, 570, 330, 440, 560, 0.025, T.exB);
-  c.save(); c.strokeStyle = RED; c.lineWidth = 6; c.beginPath(); c.moveTo(295, 346); c.quadraticCurveTo(540, 430, 790, 346); c.stroke(); c.restore();
-  pin(c, 540, 398, "#facc15");
+  c.save(); c.strokeStyle = RED; c.lineWidth = 6; c.beginPath(); c.moveTo(295, 346); c.quadraticCurveTo(540, 300, 790, 346); c.stroke(); c.restore();
+  pin(c, 540, 323, "#facc15");
   verdictTag(c, 295, 1000, 420, T.tagA, T.tagAsub, GREEN, kTag);
   verdictTag(c, 790, 1000, 420, T.tagB, T.tagBsub, RED, kTag);
 };
@@ -133,7 +133,7 @@ const StLoan: React.FC<SP> = ({ s }) => {
     if (b.prop === "method") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.25} />);
     if (b.prop === "telugu") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.25} />, <Sfx key={k("x")} at={cue(i, 1, 0.3)} src="reel/sfx_glitch.wav" vol={0.25} />, <Sfx key={k("h")} at={cue(i, 2, 0.2)} src="reel/sfx_boom.wav" vol={te ? 0.55 : 0.65} />, <Sfx key={k("st")} at={cue(i, 2, 0.2)} src={STAMP} vol={0.85} />);
     if (b.prop === "fixes") [0, 1, 2, 3].forEach((q) => { const t = q === 0 ? at + 4 : cue(i, q, 0.3); if (q > 0 && !(l.cues && l.cues[String(q)] !== undefined)) return; sfx.push(<Sfx key={k("p" + q)} at={t} src="audio/sfx_pop.wav" vol={0.25} />, <Sfx key={k("z" + q)} at={t + 10} src="reel/sfx_buzz.wav" vol={0.18} />); });
-    if (b.prop === "meaning") sfx.push(<Sfx key={k("h")} at={at + 2} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />);
+    if (b.prop === "meaning") { [0, 1, 2].forEach((q) => sfx.push(<Sfx key={k("s" + q)} at={at + 10 + q * 10} src={STAMP} vol={0.4} />)); sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.1)} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />); }
     if (b.prop === "big") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.3} />, <Sfx key={k("c")} at={cue(i, 1, 0.3)} src="audio/sfx_chime.wav" vol={0.22} />);
     if (b.prop === "rule") sfx.push(<Sfx key={k("h")} at={cue(i, 1, 0.1)} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />, <Sfx key={k("st")} at={cue(i, 1, 0.1)} src={STAMP} vol={0.6} />, <Sfx key={k("ok")} at={cue(i, 1, 0.7)} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("st")} at={slam} src={STAMP} vol={0.7} />); }
@@ -152,8 +152,8 @@ const StLoan: React.FC<SP> = ({ s }) => {
         if (P === "hook" || P === "loop") {
           frame1(c, T, 0); clash(c, T);
           if (P === "hook" && !loopOn) {   // the screener's two verdicts stamp in on the voice
-            stamp(c, T.v1, 300, 760, 70, GREEN, seg(f, 2, 8), -0.1, 400);
-            stamp(c, T.v2, 790, 760, 70, AMBER, seg(f, cu(1, 0.5), cu(1, 0.5) + 6), 0.08, 400);
+            stamp(c, T.v1, 540, 560, 76, GREEN, seg(f, 2, 8), -0.08, 400);
+            stamp(c, T.v2, 540, 720, 76, AMBER, seg(f, cu(1, 0.5), cu(1, 0.5) + 6), 0.06, 400);
           }
         } else if (P === "question") {
           frame1(c, T, 0); clash(c, T);
@@ -195,7 +195,7 @@ const StLoan: React.FC<SP> = ({ s }) => {
             });
             c.restore();
           }
-          stamp(c, T.falseT, 760, 1010, 96, RED, k2, -0.12, 520);
+          stamp(c, T.falseT, 830, 770, 88, RED, k2, -0.12, 360);
           chip(c, T.record, 540, 1262, "#14532d", "#f0fdf4", k2, fit(c, T.record, 900, 48, 900));
         } else if (P === "fixes") {
           band(c, T.band);
@@ -213,11 +213,24 @@ const StLoan: React.FC<SP> = ({ s }) => {
           });
           c.textAlign = "center"; c.font = SANS(fit(c, T.fixFoot, 940, 34, 800), 800); c.fillStyle = "#1c1917"; c.fillText(T.fixFoot, 540, 1330);
         } else if (P === "meaning") {
-          band(c, T.band);
-          const lines = T.meaning as string[];
-          lines.forEach((t, q) => stamp(c, t, 540, 470 + q * 210, 92, q === 2 ? RED : "#0f172a", seg(f, ln.from + 2 + q * 8, ln.from + 8 + q * 8), q % 2 ? 0.04 : -0.04));
-          const kC = seg(f, cu(1, 0.1) - 2, cu(1, 0.1) + 8);
-          if (kC > 0) chip(c, T.meaningSub, 540, 1180, "#0f172a", "#fde68a", kC, fit(c, T.meaningSub, 900, 46, 900));
+          band(c, T.lettersHead);
+          const t1 = cu(1, 0.1);
+          if (f < t1) {   // the three formal letters we wrote, each with its count (the script review: was it that one letter?)
+            (T.letters as [string, number][]).forEach(([name, n], q) => {
+              const k = seg(f, ln.from + 2 + q * 10, ln.from + 10 + q * 10); if (k <= 0) return;
+              card(c, 70 + q * 320, 360, 300, 420, "#fffdf5", k, (q - 1) * 0.03);
+              c.textAlign = "center"; c.font = SANS(34, 900); c.fillStyle = "#92400e"; c.fillText(name, 150, 70);
+              c.strokeStyle = "#cbd5e1"; c.lineWidth = 3; for (let z = 0; z < 6; z++) { c.beginPath(); c.moveTo(30, 120 + z * 40); c.lineTo(270, 120 + z * 40); c.stroke(); }
+              c.restore();
+              verdictTag(c, 220 + q * 320, 900, 280, `LOW ${n}/10`, "same facts", n >= 5 ? GREEN : n > 0 ? AMBER : RED, seg(f, ln.from + 8 + q * 10, ln.from + 18 + q * 10));
+            });
+            c.textAlign = "center"; c.font = SANS(fit(c, T.which2, 940, 44, 900), 900); c.fillStyle = "#1c1917"; c.fillText(T.which2, 540, 1110);
+          } else {
+            const lines = T.meaning as string[];
+            lines.forEach((t, q) => stamp(c, t, 540, 470 + q * 210, 92, q === 2 ? RED : "#0f172a", seg(f, t1 + q * 8, t1 + 6 + q * 8), q % 2 ? 0.04 : -0.04));
+            const kC = seg(f, cu(1, 0.6) - 2, cu(1, 0.6) + 8);
+            if (kC > 0) chip(c, T.meaningSub, 540, 1180, "#0f172a", "#fde68a", kC, fit(c, T.meaningSub, 900, 46, 900));
+          }
         } else if (P === "big") {
           const k0 = seg(f, ln.from + 2, ln.from + 12), k1 = seg(f, cu(1, 0.2) - 2, cu(1, 0.2) + 8);
           band(c, T.bigBand);
@@ -229,7 +242,7 @@ const StLoan: React.FC<SP> = ({ s }) => {
             c.restore();
           }
           if (k1 > 0) {
-            (T.bigChips as string[]).forEach((t, q) => chip(c, t, 540, 820 + q * 110, q === 0 ? "#fee2e2" : "#ffedd5", "#7f1d1d", seg(f, cu(1, 0.2) + q * 6, cu(1, 0.2) + q * 6 + 6), fit(c, t, 820, 42, 800)));
+            (T.bigChips as string[]).forEach((t, q) => chip(c, t, 540, 820 + q * 120, q === 0 ? "#fee2e2" : "#ffedd5", "#7f1d1d", seg(f, cu(1, 0.2) + q * 6, cu(1, 0.2) + q * 6 + 6), fit(c, t, 800, 50, 800)));
             c.save(); c.globalAlpha = clamp(k1 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.bigSrc, 860, 32, 700), 700); c.fillStyle = "#475569"; c.fillText(T.bigSrc, 540, 1110); c.restore();
           }
         } else if (P === "rule") {
@@ -239,11 +252,11 @@ const StLoan: React.FC<SP> = ({ s }) => {
           if (k2 > 0) {
             card(c, 70, 680, 940, 420, "#dcfce7", k2, 0.008);
             c.textAlign = "center"; c.font = SANS(fit(c, T.rule2, 860, 66, 900), 900); c.fillStyle = "#14532d"; c.fillText(T.rule2, 470, 140);
-            c.font = SANS(fit(c, T.rule3, 860, 44, 800), 800); c.fillStyle = "#166534"; wrap(c, T.rule3, 860).slice(0, 2).forEach((t, q) => c.fillText(t, 470, 226 + q * 56));
+            c.font = SANS(46, 800); c.fillStyle = "#166534"; wrap(c, T.rule3, 860).slice(0, 2).forEach((t, q) => c.fillText(t, 470, 226 + q * 58));
             c.font = SANS(fit(c, T.ruleSrc, 860, 30, 700), 700); c.fillStyle = "#475569"; c.fillText(T.ruleSrc, 470, 370);
             c.restore();
           }
-          chip(c, T.builder, 540, 1230, "#0f172a", "#93c5fd", seg(f, cu(1, 0.8), cu(1, 0.8) + 8), fit(c, T.builder, 940, 38, 800));
+          chip(c, T.builder, 540, 1230, "#0f172a", "#93c5fd", seg(f, cu(1, 0.8), cu(1, 0.8) + 8), fit(c, T.builder, 900, 44, 800));
         }
         c.textAlign = "left";
       }} />

@@ -47,7 +47,7 @@
  "hideTimer": true,
  "tempo": 1.0,
  "captionTop": 1390,
- "endPad": 0.5,
+ "endPad": 0.3,
  "scenes": [
   {
    "id": "s_a",
@@ -126,21 +126,37 @@
       "DIFFERENT WORDS",
       "DIFFERENT ANSWER"
      ],
-     "meaningSub": "MEANING_SUB",
+     "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
+     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
+     "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
+     "letters": [
+      [
+       "LETTER 1",
+       5
+      ],
+      [
+       "LETTER 2",
+       2
+      ],
+      [
+       "LETTER 3",
+       0
+      ]
+     ],
      "bigBand": "NOT JUST OUR SMALL AI",
      "bigHead": "NATURE · AUG 2024",
      "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
      "bigChips": [
-      "picked 'guilty' more often in test cases: 69% vs 62%",
+      "more 'guilty' verdicts: 69% vs 62%",
       "matched to lower-paid jobs"
      ],
-     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
+     "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
      "here": "HERE: 'MEDIUM', NOT 'NO'",
      "rule1": "REJECTED? ASK WHY, IN WRITING",
      "rule2": "BANKS MUST TELL YOU",
      "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
      "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-     "builder": "Building a screener? Test the same facts written different ways."
+     "builder": "Builders: test the same facts, worded differently"
     },
     "tagSide": {
      "ai": "right",
@@ -160,7 +176,7 @@
      "show": "Credit risk: low. Credit risk: medium.",
      "maxgap": 0.3,
      "gap": 0.2,
-     "tempo": 1.0,
+     "tempo": 1.12,
      "gain_db": -1.0
     },
     {
@@ -170,7 +186,7 @@
      "show": "Same salary. Same loan. Never missed an EMI. Guess which one got 'low'.",
      "maxgap": 0.3,
      "gap": 0.2,
-     "tempo": 1.05,
+     "tempo": 1.12,
      "gain_db": 0.0
     }
    ]
@@ -181,7 +197,13 @@
    "tail": 0.1,
    "boost": 1.8,
    "lift": 0.6,
-   "drop_pre": 0.25,
+   "drop_pre": [
+    [
+     0,
+     0.35,
+     0.35
+    ]
+   ],
    "data": {
     "beats": [
      {
@@ -254,21 +276,37 @@
       "DIFFERENT WORDS",
       "DIFFERENT ANSWER"
      ],
-     "meaningSub": "MEANING_SUB",
+     "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
+     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
+     "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
+     "letters": [
+      [
+       "LETTER 1",
+       5
+      ],
+      [
+       "LETTER 2",
+       2
+      ],
+      [
+       "LETTER 3",
+       0
+      ]
+     ],
      "bigBand": "NOT JUST OUR SMALL AI",
      "bigHead": "NATURE · AUG 2024",
      "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
      "bigChips": [
-      "picked 'guilty' more often in test cases: 69% vs 62%",
+      "more 'guilty' verdicts: 69% vs 62%",
       "matched to lower-paid jobs"
      ],
-     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
+     "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
      "here": "HERE: 'MEDIUM', NOT 'NO'",
      "rule1": "REJECTED? ASK WHY, IN WRITING",
      "rule2": "BANKS MUST TELL YOU",
      "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
      "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-     "builder": "Building a screener? Test the same facts written different ways."
+     "builder": "Builders: test the same facts, worded differently"
     },
     "tagSide": {
      "ai": "right",
@@ -284,11 +322,11 @@
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "[1] The letter: five in ten. [2] Typed like a phone chat: zero. Medium, every time.",
-     "show": "The letter: 5 in 10. Typed like a phone chat: 0. Medium, every time.",
+     "text": "[1] The letter: five in ten. [2] Typed like a phone chat: zero.",
+     "show": "The letter: 5 in 10. Typed like a phone chat: 0.",
      "maxgap": 0.3,
      "gap": 0.2,
-     "tempo": 1.05,
+     "tempo": 1.12,
      "gain_db": 0.0
     },
     {
@@ -298,7 +336,7 @@
      "show": "Not a real applicant. The screener: a small free AI on our computer, ten tries each.",
      "maxgap": 0.3,
      "gap": 0.2,
-     "tempo": 1.05,
+     "tempo": 1.12,
      "gain_db": 0.0
     }
    ]
@@ -388,21 +426,37 @@
       "DIFFERENT WORDS",
       "DIFFERENT ANSWER"
      ],
-     "meaningSub": "MEANING_SUB",
+     "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
+     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
+     "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
+     "letters": [
+      [
+       "LETTER 1",
+       5
+      ],
+      [
+       "LETTER 2",
+       2
+      ],
+      [
+       "LETTER 3",
+       0
+      ]
+     ],
      "bigBand": "NOT JUST OUR SMALL AI",
      "bigHead": "NATURE · AUG 2024",
      "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
      "bigChips": [
-      "picked 'guilty' more often in test cases: 69% vs 62%",
+      "more 'guilty' verdicts: 69% vs 62%",
       "matched to lower-paid jobs"
      ],
-     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
+     "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
      "here": "HERE: 'MEDIUM', NOT 'NO'",
      "rule1": "REJECTED? ASK WHY, IN WRITING",
      "rule2": "BANKS MUST TELL YOU",
      "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
      "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-     "builder": "Building a screener? Test the same facts written different ways."
+     "builder": "Builders: test the same facts, worded differently"
     },
     "tagSide": {
      "ai": "right",
@@ -422,17 +476,17 @@
      "show": "Telugu in English letters: 0 again. Once, it said he had \"a history of missing payments.\" He never missed one.",
      "maxgap": 0.3,
      "gap": 0.2,
-     "tempo": 1.05,
+     "tempo": 1.12,
      "gain_db": 0.0
     },
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "Told to ignore grammar and language: one in ten. [1] The facts as a plain list: zero. [2] The AI's own polished letter: one in ten.",
-     "show": "Told to ignore grammar and language: 1 in 10. The facts as a plain list: 0. The AI's own polished letter: 1 in 10.",
+     "text": "Told to ignore grammar: one in ten. [1] A plain list of the facts: zero. [2] The AI's own polished letter: one in ten.",
+     "show": "Told to ignore grammar: 1 in 10. A plain list of the facts: 0. The AI's own polished letter: 1 in 10.",
      "maxgap": 0.3,
      "gap": 0.2,
-     "tempo": 1.05,
+     "tempo": 1.12,
      "gain_db": 0.0
     }
    ]
@@ -515,21 +569,37 @@
       "DIFFERENT WORDS",
       "DIFFERENT ANSWER"
      ],
-     "meaningSub": "MEANING_SUB",
+     "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
+     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
+     "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
+     "letters": [
+      [
+       "LETTER 1",
+       5
+      ],
+      [
+       "LETTER 2",
+       2
+      ],
+      [
+       "LETTER 3",
+       0
+      ]
+     ],
      "bigBand": "NOT JUST OUR SMALL AI",
      "bigHead": "NATURE · AUG 2024",
      "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
      "bigChips": [
-      "picked 'guilty' more often in test cases: 69% vs 62%",
+      "more 'guilty' verdicts: 69% vs 62%",
       "matched to lower-paid jobs"
      ],
-     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
+     "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
      "here": "HERE: 'MEDIUM', NOT 'NO'",
      "rule1": "REJECTED? ASK WHY, IN WRITING",
      "rule2": "BANKS MUST TELL YOU",
      "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
      "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-     "builder": "Building a screener? Test the same facts written different ways."
+     "builder": "Builders: test the same facts, worded differently"
     },
     "tagSide": {
      "ai": "right",
@@ -545,11 +615,11 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "MEANING_EN",
-     "show": "MEANING_EN",
+     "text": "Two more letters we wrote: two, and zero. [1] So it's not good English. The words moved the answer, and you can't fix that.",
+     "show": "Two more letters we wrote: 2, and 0. So it's not good English. The words moved the answer, and you can't fix that.",
      "maxgap": 0.3,
      "gap": 0.2,
-     "tempo": 1.05,
+     "tempo": 1.12,
      "gain_db": 0.0
     },
     {
@@ -559,7 +629,7 @@
      "show": "Big models too: a 2024 Nature study found harsher AI judgments for the same words in a different style of English.",
      "maxgap": 0.3,
      "gap": 0.2,
-     "tempo": 1.05,
+     "tempo": 1.12,
      "gain_db": 0.0
     }
    ]
@@ -638,21 +708,37 @@
       "DIFFERENT WORDS",
       "DIFFERENT ANSWER"
      ],
-     "meaningSub": "MEANING_SUB",
+     "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
+     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
+     "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
+     "letters": [
+      [
+       "LETTER 1",
+       5
+      ],
+      [
+       "LETTER 2",
+       2
+      ],
+      [
+       "LETTER 3",
+       0
+      ]
+     ],
      "bigBand": "NOT JUST OUR SMALL AI",
      "bigHead": "NATURE · AUG 2024",
      "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
      "bigChips": [
-      "picked 'guilty' more often in test cases: 69% vs 62%",
+      "more 'guilty' verdicts: 69% vs 62%",
       "matched to lower-paid jobs"
      ],
-     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
+     "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
      "here": "HERE: 'MEDIUM', NOT 'NO'",
      "rule1": "REJECTED? ASK WHY, IN WRITING",
      "rule2": "BANKS MUST TELL YOU",
      "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
      "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-     "builder": "Building a screener? Test the same facts written different ways."
+     "builder": "Builders: test the same facts, worded differently"
     },
     "tagSide": {
      "ai": "right",
@@ -672,7 +758,7 @@
      "show": "Here it said medium, not no. But if a bank says no, ask for the reason in writing. RBI rules say they must give it.",
      "maxgap": 0.3,
      "gap": 0.7,
-     "tempo": 1.05,
+     "tempo": 1.12,
      "gain_db": 0.0
     }
    ]
@@ -753,21 +839,37 @@
       "DIFFERENT WORDS",
       "DIFFERENT ANSWER"
      ],
-     "meaningSub": "MEANING_SUB",
+     "meaningSub": "YOU CAN'T FIX IT FROM YOUR SIDE",
+     "lettersHead": "3 FORMAL LETTERS WE WROTE · SAME FACTS",
+     "which2": "'LOW RISK' OUT OF 10 TRIES EACH",
+     "letters": [
+      [
+       "LETTER 1",
+       5
+      ],
+      [
+       "LETTER 2",
+       2
+      ],
+      [
+       "LETTER 3",
+       0
+      ]
+     ],
      "bigBand": "NOT JUST OUR SMALL AI",
      "bigHead": "NATURE · AUG 2024",
      "bigTitle": "Same words, a different style of English: harsher judgments from AI models",
      "bigChips": [
-      "picked 'guilty' more often in test cases: 69% vs 62%",
+      "more 'guilty' verdicts: 69% vs 62%",
       "matched to lower-paid jobs"
      ],
-     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
+     "bigSrc": "in test cases · Hofmann et al. · race was never mentioned to the models",
      "here": "HERE: 'MEDIUM', NOT 'NO'",
      "rule1": "REJECTED? ASK WHY, IN WRITING",
      "rule2": "BANKS MUST TELL YOU",
      "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",
      "ruleSrc": "RBI · Commercial Banks Responsible Business Conduct Directions, 2025, para 331",
-     "builder": "Building a screener? Test the same facts written different ways."
+     "builder": "Builders: test the same facts, worded differently"
     },
     "tagSide": {
      "ai": "right",
@@ -787,7 +889,7 @@
      "show": "Credit risk: medium.",
      "maxgap": 0.3,
      "gap": 0.0,
-     "tempo": 1.0,
+     "tempo": 1.12,
      "gain_db": -1.0
     }
    ]
