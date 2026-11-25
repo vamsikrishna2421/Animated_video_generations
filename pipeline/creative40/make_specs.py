@@ -20,7 +20,7 @@ LINES = {
     4: ("storyteller", "method", "Not a real applicant. [1] The screener: a small free AI on our computer, ten tries each.",
         "ఈ అప్లికెంట్ నిజం కాదు, వివరాలు మేమే రాశాం. [1] చెక్ చేసింది, మా కంప్యూటర్ లోని ఒక చిన్న చాట్‌బాట్. ఒక్కో మెసేజ్, పది సార్లు."),
     5: ("storyteller", "telugu", "Telugu in English letters: zero again. [1] Once, it said he had a history of missing payments. | [2] He never missed one.",
-        "తెలుగుని ఇంగ్లీష్ అక్షరాల్లో రాస్తే: మళ్ళీ సున్నా. [1] ఒకసారి, ఇతను ఈఎంఐలు, మిస్ చేశాడు అని చెప్పింది. | [2] ఒక్కటి కూడా మిస్ చేయలేదు."),
+        "తెలుగుని ఇంగ్లీష్ అక్షరాల్లో రాస్తే: మళ్ళీ సున్నా. [1] ఒకసారి, ఇతను ఈఎంఐలు, మిస్ చేశాడు అని చెప్పింది. | [2] అతను, ఒక్కసారి కూడా మిస్ చేయలేదు."),
     6: ("storyteller", "fixes", "Told to ignore grammar: one in ten. [1] Even the AI's own polished letter: one in ten.",
         "గ్రామర్ పట్టించుకోవద్దు అని చెప్పాం: పదిలో ఒకటి. [1] చాట్‌బాట్ తోనే లెటర్ రాయించాం: అయినా పదిలో ఒకటి."),
     7: ("storyteller", "meaning", "So is it just good English? [1] Two more letters we wrote: two in ten, and zero. [2] The words moved the answer, not the money.",
@@ -42,7 +42,7 @@ SHOW_TE = {
     2: "Same salary. Same loan. Not one EMI missed. Guess who got 'low risk'.",
     3: "The letter: 5 in 10. Typed like a phone chat: 0.",
     4: "This applicant isn't real; we wrote the details. The checker: a small chatbot on our computer. 10 tries per message.",
-    5: "Telugu in English letters: 0 again. Once, it said he had missed EMIs. <pause 0.6> He never missed one.",
+    5: "Telugu in English letters: 0 again. Once, it said he had missed EMIs. <pause 0.6> He never missed even once.",
     6: "We said: ignore grammar: 1 in 10. A letter written by the chatbot itself: still 1 in 10.",
     7: "So, is good English enough? Two more letters we wrote: 2 in 10, and 0. Not the salary: the words changed the answer.",
     8: "It happened with well-known chatbots too. A study in Nature: the same meaning in a US dialect of English got a harsher judgment.",
@@ -50,7 +50,7 @@ SHOW_TE = {
     10: "Risk: medium.",
 }
 TEMPO_EN = {"ai": 1.12, "storyteller": 1.12}   # the first cut ran 66.4 s
-TEMPO_TE = {"ai": 1.1, "storyteller": 1.18}
+TEMPO_TE = {"ai": 1.1, "storyteller": 1.22}   # the cut ran 60.3 s
 T = {
     "band": "SAME ₹45,000 SALARY · SAME ₹2 LAKH LOAN · 0 EMIs MISSED",
     "exA": "EXHIBIT A · A LETTER", "exB": "EXHIBIT B · A PHONE CHAT", "exC": "EXHIBIT C · TELUGU IN ENGLISH LETTERS",
@@ -95,7 +95,7 @@ SCENES = [("s_a", (1, 2), {"boost": 2.0, "tail": 0.1}),
           ("s_e", (9,), {"boost": 3.0, "lift": 1.1, "rise": 3.0, "tail": 0.3}),
           ("s_f", (10,), {"outro": True, "pre": 0.3, "boost": 3.0, "lift": 0.8, "rise": 3.2, "tail": 0.0})]
 GAP = {n: 0.2 for n in LINES} | {2: 0.6, 9: 0.7, 10: 0.0}   # 2: a silence before the tags flip   # 9: the rule holds
-GAP_TE = {n: 0.14 for n in LINES} | {2: 0.5, 9: 0.45, 10: 0.0}
+GAP_TE = {n: 0.14 for n in LINES} | {2: 0.4, 9: 0.4, 10: 0.0}
 FLAGS_TE = {"s_a": {"boost": 2.5}, "s_e": {"boost": 3.5, "lift": 1.3, "rise": 3.5}, "s_f": {"boost": 3.0, "rise": 3.2}}   # pack: the opening was quiet, Q4 flat
 YT = {"s_a": "Same loan, two answers", "s_b": "The letter vs the phone chat", "s_c": "Telugu, and the fixes", "s_d": "Same money, different words",
       "s_e": "Ask why, in writing", "s_f": "Credit risk: medium"}
@@ -112,7 +112,7 @@ def spec(lang="en"):
          "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimer": True, "tempo": 1.0, "captionTop": 1390, "endPad": 0.3}
     if te:
-        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.4, "endPad": 0.3, "musicVol": [0.2, 0.46], "musicGapGain": 1.0})
+        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.3, "endPad": 0.2, "musicVol": [0.2, 0.46], "musicGapGain": 1.0})
     scenes = []
     for scid, ns, flags in SCENES:
         lines, beats = [], []

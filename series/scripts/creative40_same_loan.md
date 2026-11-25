@@ -139,3 +139,4 @@ different ways before it sees real people.
   pushed into the RBI line; Telugu pronunciation: "ఈఎంఐలు, మిస్ చేశాడు" (ran together), "జీతం కాదు. పదాలే, జవాబుని
   మార్చాయి." (mushy), "పేరున్న చాట్‌బాట్లలో కూడా, ఇలాంటిదే జరిగింది." (sounded cut off).
 - English: the beat before "He never missed one" 0.6 -> 0.8 s. Caption: what a worse risk label can mean at a real lender.
+- Telugu 5b: "ఒక్కటి" came out as "agarti" in two voicings -> "అతను, ఒక్కసారి కూడా మిస్ చేయలేదు" (read clean); tempo 1.22 and shorter lead-in, end pad and gaps (the cut ran 60.3 s).
