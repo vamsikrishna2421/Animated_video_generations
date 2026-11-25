@@ -140,3 +140,10 @@ different ways before it sees real people.
   మార్చాయి." (mushy), "పేరున్న చాట్‌బాట్లలో కూడా, ఇలాంటిదే జరిగింది." (sounded cut off).
 - English: the beat before "He never missed one" 0.6 -> 0.8 s. Caption: what a worse risk label can mean at a real lender.
 - Telugu 5b: "ఒక్కటి" came out as "agarti" in two voicings -> "అతను, ఒక్కసారి కూడా మిస్ చేయలేదు" (read clean); tempo 1.22 and shorter lead-in, end pad and gaps (the cut ran 60.3 s).
+
+## Render review 3 (human-viewer, final check) and what changed
+- English: READY (the Nature wording, "two in ten", the builder row and the 0.7 s beat all landed; the pause the pack put
+  after "a" sits after "too" in the take, checked with word timings).
+- Telugu: the board went near-empty for a few frames under "He never missed even once" (the first fix card faded in
+  after the cut) -> the first card is up at the cut; 5b read clean by chunk ("అతను, ఒక్కసారి కూడా మిస్ చేయలేదు"); no
+  repeated words in line 8 by chunk read. Final: EN 60.0 s, TE 59.6 s.
