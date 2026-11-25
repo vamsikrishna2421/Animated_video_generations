@@ -1,0 +1,353 @@
+{
+ "turns": [
+  [
+   "Ravi",
+   "Hello Suresh garu, Ravi from the shop. I need forty bags of sona masoori rice for next week."
+  ],
+  [
+   "Suresh",
+   "Forty bags, fine. Fourteen fifty a bag. I can deliver on Friday morning."
+  ],
+  [
+   "Ravi",
+   "Fourteen fifty is okay. I'll send fourteen thousand as advance by Thursday."
+  ],
+  [
+   "Suresh",
+   "Good. And I'll take care of the transport, five hundred rupees, don't worry about that."
+  ],
+  [
+   "Ravi",
+   "Thank you. Please send the bill by Wednesday, I want to check it first."
+  ],
+  [
+   "Suresh",
+   "I'll send it. Also, keep three empty sacks ready, I'll take them back."
+  ],
+  [
+   "Ravi",
+   "Okay, I'll keep them ready. And the balance, I'll pay on delivery."
+  ],
+  [
+   "Suresh",
+   "Done. Friday morning, then."
+  ]
+ ],
+ "spans": [
+  [
+   "Ravi",
+   0.0,
+   7.12
+  ],
+  [
+   "Suresh",
+   7.47,
+   12.79
+  ],
+  [
+   "Ravi",
+   13.14,
+   18.8
+  ],
+  [
+   "Suresh",
+   19.15,
+   24.3
+  ],
+  [
+   "Ravi",
+   24.65,
+   29.18
+  ],
+  [
+   "Suresh",
+   29.53,
+   34.44
+  ],
+  [
+   "Ravi",
+   34.79,
+   39.15
+  ],
+  [
+   "Suresh",
+   39.5,
+   41.91
+  ]
+ ],
+ "ears_secs": 11.1,
+ "texts": {
+  "plain": "Hello, Suresh Garu, Ravi from the shop. I need 40 bags of sona massori rice for next week. 40 bags, fine, $14 .50 a bag. I can deliver on Friday morning. $14 .50 is OK. I'll send $14 ,000 as advance by Thursday. Good, and I'll take care of the transport. 500 rupees, don't worry about that. Thank you. Please send the bill by Wednesday. I want to check it first. I'll send it. Also, keep three empty sacks ready. I'll take them back. OK, I'll keep them ready. And the balance, I'll pay on delivery. Done Friday morning then.",
+  "speakers": "Ravi: Hello, Suresh Garu, Ravi from the shop. I need 40 bags of sona massori rice for next week.\nSuresh: 40 bags, fine, $14 .50 a bag. I can deliver on Friday morning.\nRavi: $14 .50 is OK. I'll send $14 ,000 as advance by Thursday.\nSuresh: Good, and I'll take care of the transport. 500 rupees, don't worry about that.\nRavi: Thank you. Please send the bill by Wednesday. I want to check it first.\nSuresh: I'll send it. Also, keep three empty sacks ready. I'll take them back.\nRavi: OK, I'll keep them ready. And the balance, I'll pay on delivery.\nSuresh: Done Friday morning then."
+ },
+ "items": {
+  "deliver 40 bags Friday": "Suresh",
+  "advance Rs 14,000 by Thursday": "Ravi",
+  "transport Rs 500": "Suresh",
+  "send the bill by Wednesday": "Suresh",
+  "keep 3 empty sacks": "Ravi",
+  "pay the balance on delivery": "Ravi"
+ },
+ "rows": [
+  {
+   "setup": "plain",
+   "seed": 1,
+   "reply": "Meeting Notes:\n2-line summary: Ravi ordered 40 bags of Sona Masuri rice for delivery on Friday, with payment details and additional tasks agreed upon.\n\nAction Items:\nOwner: Arrange delivery of 40 bags of Sona Masuri rice ($14.50 per bag) by Friday morning (amount: $580, date: Friday)\nOwner: Send $14,000 advance by Thursday\nOwner: Take care of transport (amount: 500 rupees, date: N/A)\nOwner: Send bill for the order by Wednesday\nOwner: Keep three empty sacks ready for pickup (date: Friday)\nOwner: Pay remaining balance on delivery (date: Friday)",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "missing",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "plain",
+   "seed": 2,
+   "reply": "**Meeting Notes:**\n\n- **2-line Summary:** Ravi ordered 40 bags of Sona Masuri rice for delivery on Friday morning at $14.50 per bag, with an advance payment and transport details discussed.\n  \n- **Action Items:**\n  - Owner: Confirm rice order (40 bags, $14.50 each) (Amount: $580, Date: Thursday)\n  - Owner: Send bill for confirmation by Wednesday (Date: Wednesday)\n  - Owner: Prepare three empty sacks for collection (Date: Friday morning)\n  - Owner: Collect balance on delivery (Date: Friday morning)",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "wrong",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "plain",
+   "seed": 3,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of sona masoori rice for delivery on Friday morning. Payment terms include an advance of $14,000 by Thursday and the balance upon delivery.\n\n**Action Items:**\n- Owner: Arrange delivery of 40 bags of sona masoori rice ($14.50 each) (Amount: $580, Date: Friday)\n- Owner: Send $14,000 as advance by Thursday\n- Owner: Take care of transport and pay 500 rupees (Date: Before delivery day)\n- Owner: Prepare three empty sacks to be taken back after delivery\n- Owner: Send bill for the order by Wednesday",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "right"
+   }
+  },
+  {
+   "setup": "plain",
+   "seed": 4,
+   "reply": "2-line summary: Ravi ordered 40 bags of sona masuri rice for delivery on Friday morning with an advance payment and a final payment upon delivery.\n\nAction items:\nOwner: Confirm delivery date (Friday morning)\nOwner: Send bill by Wednesday\nOwner: Prepare three empty sacks for return (immediate)\nOwner: Receive $14,000 as advance payment by Thursday\nOwner: Arrange transport (immediate)",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "plain",
+   "seed": 5,
+   "reply": "**2-line summary:**\nRavi orders 40 bags of sona masuri rice for delivery on Friday morning and agrees to pay $14,500 with a $14,000 advance by Thursday.\n\n**Action Items:**\n- Owner: Arrange delivery of 40 bags of sona masuri rice ($14.50 per bag) (Friday)\n- Owner: Send bill for the order by Wednesday (Thursday)\n- Owner: Collect three empty sacks after delivery on Friday (Friday)\n- Owner: Pay remaining balance on delivery (Friday)",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "plain",
+   "seed": 6,
+   "reply": "### Meeting Notes\n\n- **2-line Summary**: Ravi from the shop ordered 40 bags of sona masuri rice for delivery on Friday morning. Suresh agreed to deliver and will send a bill by Wednesday, with payment terms specified.\n\n- **Action Items**:\n  - Owner: Confirm rice order (40 bags @ $14.50 each) (Amount: $580, Date: Thursday)\n  - Owner: Send bill for the order by Wednesday (Date: Wednesday)\n  - Owner: Arrange transport and collect 500 rupees as payment (Date: Thursday)\n  - Owner: Deliver rice on Friday morning (Date: Friday)\n  - Owner: Keep three empty sacks ready for pickup (Date: Friday)",
+   "owners": {
+    "deliver 40 bags Friday": "unclear",
+    "advance Rs 14,000 by Thursday": "missing",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "unclear",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "plain",
+   "seed": 7,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona Masuri rice for delivery next Friday. They agreed on a price and payment terms, including an advance by Thursday.\n\n**Action Items:**\n- Owner: Confirm delivery date (Friday morning)\n- Owner: Send $14,000 as advance by Thursday\n- Owner: Arrange transport (500 rupees)\n- Owner: Send bill for verification by Wednesday\n- Owner: Keep three empty sacks ready for pickup\n- Owner: Pay balance on delivery (Friday morning)",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "plain",
+   "seed": 8,
+   "reply": "**2-line Summary:**\nRavi from the shop ordered 40 bags of Sona Masuri rice for delivery on Friday morning. Payment details and additional requirements were discussed.\n\n**Action Items:**\n- Owner: Order 40 bags of Sona Masuri rice ($14.50 per bag, total $580)\n- Owner: Send $14,000 as advance by Thursday\n- Owner: Deliver the rice on Friday morning\n- Owner: Send a bill by Wednesday for Ravi to check\n- Owner: Keep three empty sacks ready for pickup\n- Owner: Pay the balance on delivery",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "missing",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "wrong",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "plain",
+   "seed": 9,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona Masuri rice at $14.50 per bag for delivery on Friday morning and agreed to pay an advance, transport costs, and balance on delivery.\n\n**Action Items:**\n- Owner: Arrange delivery of 40 bags of Sona Masuri rice ($14.50/bag) (40 bags, $580, Friday)\n- Owner: Send $14,000 as advance payment by Thursday\n- Owner: Handle transport and pay 500 rupees (Thursday)\n- Owner: Prepare three empty sacks for return (Thursday)\n- Owner: Pay balance on delivery (Friday)",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "wrong",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "right"
+   }
+  },
+  {
+   "setup": "plain",
+   "seed": 10,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of sona masuri rice for delivery on Friday morning. Payment details and additional requirements were discussed.\n\n**Action Items:**\n- Owner: Order 40 bags of sona masuri rice (580 USD, by Thursday)\n- Owner: Send $14,000 as advance payment by Thursday\n- Owner: Arrange transport (not specified amount, by Friday morning)\n- Owner: Send bill for verification by Wednesday\n- Owner: Keep three empty sacks ready for pickup after delivery (by Friday morning)\n- Owner: Pay remaining balance on delivery (Friday morning)",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "missing",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "speakers",
+   "seed": 1,
+   "reply": "Meeting Notes:\n2-line summary: Ravi ordered 40 bags of Sona Masuri rice for delivery on Friday morning, with an advance payment and transport costs arranged.\n\nAction Items:\nOwner: Order confirmation (14000, Thursday)\nOwner: Prepare bill check (Wednesday)\nOwner: Set aside three empty sacks (Wednesday)\nOwner: Arrange balance payment (Friday Morning)",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "wrong",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "speakers",
+   "seed": 2,
+   "reply": "**Meeting Notes:**\n\n- **2-line Summary:** Ravi ordered 40 bags of Sona Masoori rice for delivery on Friday morning at $14.50 per bag. Payment details and additional tasks were discussed.\n\n- **Action Items:**\n  - Owner (Ravi): Send $14,000 as advance by Thursday.\n  - Owner (Suresh): Deliver 40 bags of Sona Masoori rice on Friday morning.\n  - Owner (Suresh): Send bill by Wednesday for verification.\n  - Owner (Ravi): Keep three empty sacks ready for pickup.\n  - Owner (Ravi): Pay the balance upon delivery.",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "right",
+    "keep 3 empty sacks": "right",
+    "pay the balance on delivery": "right"
+   }
+  },
+  {
+   "setup": "speakers",
+   "seed": 3,
+   "reply": "**Meeting Notes:**\n\n- **2-line Summary:** Ravi ordered 40 bags of sona masuri rice for delivery on Friday morning at $14.50 per bag, with an advance payment and return of empty sacks.\n  \n- **Action Items:**\n  - Owner: Arrange payment of $14,000 as advance by Thursday (amount: $14,000, date: Thursday)\n  - Owner: Prepare three empty sacks for collection on delivery day (date: Friday morning)\n  - Owner: Check the bill sent by Suresh before final payment (date: Wednesday)",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "right",
+    "keep 3 empty sacks": "right",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "speakers",
+   "seed": 4,
+   "reply": "2-line summary: Ravi ordered 40 bags of sona masuri rice for delivery on Friday and arranged payment details with Suresh.\n\nAction items:\nOwner: Order 40 bags of sona masuri rice ($14.50/bag, $14,000 total)\nOwner: Send $14,000 advance by Thursday\nOwner: Prepare three empty sacks for collection on delivery day\nOwner: Review and confirm the bill sent by Wednesday",
+   "owners": {
+    "deliver 40 bags Friday": "unclear",
+    "advance Rs 14,000 by Thursday": "missing",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "speakers",
+   "seed": 5,
+   "reply": "**Meeting Notes:**\n\n- **2-line Summary:** Ravi ordered 40 bags of sona masuri rice for delivery on Friday morning. Payment details and logistics were discussed.\n  \n- **Action Items:**\n  - Owner (Ravi): Send $14,000 as advance by Thursday\n  - Owner (Suresh): Deliver 40 bags of sona masuri rice on Friday morning\n  - Owner (Suresh): Send bill by Wednesday for verification\n  - Owner (Ravi): Keep three empty sacks ready to be taken back\n  - Owner (Ravi): Pay balance on delivery",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "right",
+    "keep 3 empty sacks": "right",
+    "pay the balance on delivery": "right"
+   }
+  },
+  {
+   "setup": "speakers",
+   "seed": 6,
+   "reply": "Meeting Notes:\n- Ravi orders 40 bags of sona masoori rice for delivery on Friday morning at $14.50 per bag.\n- Advance payment and final settlement details agreed upon.\n\nAction Items:\n- Owner: Send $14,000 advance by Thursday (amount, date)\n- Owner: Keep three empty sacks ready for pickup (date)\n- Owner: Pay balance on delivery (date)",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "missing",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "speakers",
+   "seed": 7,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of sona masoori rice for delivery on Friday, with an advance payment and return of empty sacks.\n\n**Action Items:**\n- Owner: Pay $14,000 as advance by Thursday\n- Owner: Send three empty sacks ready by Wednesday\n- Owner: Verify the bill sent by Wednesday\n- Owner: Pay balance upon delivery on Friday",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "right",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "speakers",
+   "seed": 8,
+   "reply": "**2-line Summary:**\nRavi orders 40 bags of sona masoori rice for delivery on Friday and agrees to pay $14,500 in advance.\n\n**Action Items:**\n- Owner (Suresh): Send bill by Wednesday (amount: $14,500)\n- Owner (Suresh): Deliver 40 bags of rice on Friday morning (amount: 40 bags, date: Friday)\n- Owner (Ravi): Pay balance on delivery (date: Friday)\n- Owner (Ravi): Send $14,000 as advance by Thursday\n- Owner (Ravi): Keep three empty sacks ready for pickup (date: Wednesday)",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "right",
+    "keep 3 empty sacks": "right",
+    "pay the balance on delivery": "right"
+   }
+  },
+  {
+   "setup": "speakers",
+   "seed": 9,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of Sona Masuri rice from Suresh for delivery on Friday morning. Payment details and additional tasks were discussed.\n\n**Action Items:**\n- Owner: Arrange payment ($14,000 by Thursday)\n- Owner: Send bill check request (by Wednesday)\n- Owner: Prepare three empty sacks (by Friday)\n- Owner: Pay balance upon delivery (Friday)",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "missing",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "missing",
+    "pay the balance on delivery": "missing"
+   }
+  },
+  {
+   "setup": "speakers",
+   "seed": 10,
+   "reply": "**2-line Summary:**\nRavi ordered 40 bags of sona masuri rice for delivery on Friday morning at $14.50 per bag, with an advance payment and return of empty sacks.\n\n**Action Items:**\n- Owner: Arrange advance payment of $14,000 by Thursday\n- Owner: Prepare three empty sacks to be returned by Suresh\n- Owner: Verify the bill sent by Wednesday",
+   "owners": {
+    "deliver 40 bags Friday": "wrong",
+    "advance Rs 14,000 by Thursday": "right",
+    "transport Rs 500": "missing",
+    "send the bill by Wednesday": "missing",
+    "keep 3 empty sacks": "wrong",
+    "pay the balance on delivery": "missing"
+   }
+  }
+ ]
+}

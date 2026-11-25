@@ -33,7 +33,14 @@ HINT = ("A shop call in India. Prices are in Indian rupees: fourteen fifty means
 ASK2 = ("Here is the transcript of a phone call. Write the meeting notes: a 2-line summary, then the action items, one "
         "per line, each starting with the name of the person who will do it, like 'Ravi: task (amount, date)' or "
         "'Suresh: task (amount, date)'.\n\nTranscript:\n{t}")
-HAND = None   # filled in by hand after reading all 20 replies
+HAND = {   # by hand, after reading all 20 replies (Nov 25); the automatic 'deliver' score is unreliable (it matched
+    # the 'Ravi ordered 40 bags' summary line), so the two items that flip are counted by hand:
+    "ears_rupees": "'fourteen fifty rupees a bag' -> '14 .50 rupees a bag' (still wrong by 100x); 'fourteen thousand rupees' -> '14 ,000 rupees'",
+    "ears_hint": "with the hint: 'fourteen fifty a bag', 'fourteen thousand' written as words, no dollar sign",
+    "sacks (Ravi keeps 3 empty sacks ready)": "plain 6/10 give it to Suresh, 3/10 Ravi, 1 drops it; speakers 10/10 Ravi",
+    "transport (Suresh pays Rs 500)": "plain 2/10 give it to Ravi, 2/10 Suresh, 6/10 drop it; speakers: 2/10 Suresh, 2/10 add it to Ravi's balance, 6/10 drop it",
+    "price": "plain 7/10 write $14.50 a bag (on the same dollar transcript)",
+}
 
 
 def transcribe(path, prompt=None):

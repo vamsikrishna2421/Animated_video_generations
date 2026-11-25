@@ -51,7 +51,13 @@ ITEMS = {
 SYSTEM = "You write meeting notes for a small shop."
 ASK = ("Here is the transcript of a phone call. Write the meeting notes: a 2-line summary, then the action items, one "
        "per line, as 'Owner: task (amount, date)'.\n\nTranscript:\n{t}")
-HAND = None   # filled in by hand after reading all 20 replies
+HAND = {   # by hand, after reading all 20 replies (Nov 25)
+    "ears": "speech-to-text wrote 'fourteen fifty a bag' as '$14 .50 a bag' and 'fourteen thousand' as '$14 ,000' "
+            "(everything else right: forty bags, Friday, five hundred rupees, three sacks, Wednesday)",
+    "plain": "7/10 notes give the price as $14.50 a bag and 7/10 the order as $580 (40 x $14.50) instead of Rs 58,000; "
+             "most write the literal word 'Owner:' (our format), so who-does-what is unclear: see notes_demo2.py",
+    "speakers": "5/10 give $14.50 a bag; 3/10 name an owner on every line (all right), the rest write 'Owner:'",
+}
 
 
 def record():
