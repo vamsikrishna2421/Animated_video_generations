@@ -77,7 +77,7 @@ T = {
                 ["LETTER 3", 0, "Subject: Application for a personal loan of Rs. 2,00,000..."]],
     "bigBand": "NOT JUST OUR SMALL AI", "bigHead": "NATURE · AUG 2024",
     "bigTitle": "Same words, written in a US dialect of English: harsher judgments from AI models",
-    "bigChips": ["matched to lower-prestige jobs", "made-up court cases: more 'guilty', 69% vs 62%"],
+    "bigChips": ["matched to lower-prestige jobs", "made-up trials: more 'guilty' (69% vs 62%)"],
     "bigSrc": "Hofmann et al. · race was never mentioned to the models",
     "here": "HERE: 'MEDIUM', NOT 'NO'", "rule1": "REJECTED? ASK WHY, IN WRITING",
     "rule2": "BANKS MUST TELL YOU", "rule3": "the main reasons for a rejected loan, in writing: all loans, credit cards too",

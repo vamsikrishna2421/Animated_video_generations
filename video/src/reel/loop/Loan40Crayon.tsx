@@ -221,8 +221,8 @@ const StLoan: React.FC<SP> = ({ s }) => {
               const k = seg(f, ln.from + 2 + q * 10, ln.from + 10 + q * 10); if (k <= 0) return;
               card(c, 70 + q * 320, 360, 300, 420, "#fffdf5", k, (q - 1) * 0.03);
               c.textAlign = "center"; c.font = SANS(34, 900); c.fillStyle = "#92400e"; c.fillText(name, 150, 70);
-              c.font = SERIF(30); c.fillStyle = "#1f2937"; c.textAlign = "left";
-              wrap(c, (T.letters as [string, number, string][])[q][2], 250).slice(0, 7).forEach((tt, z) => c.fillText(tt, 26, 126 + z * 40));
+              c.font = SERIF(36); c.fillStyle = "#1f2937"; c.textAlign = "left";
+              wrap(c, (T.letters as [string, number, string][])[q][2], 254).slice(0, 6).forEach((tt, z) => c.fillText(tt, 24, 130 + z * 46));
               c.restore();
               verdictTag(c, 220 + q * 320, 900, 280, `LOW ${n}/10`, "same facts", n >= 5 ? GREEN : n > 0 ? AMBER : RED, q === 0 ? 1 : seg(f, tf + (q - 1) * 14, tf + (q - 1) * 14 + 10));
             });
