@@ -84,3 +84,8 @@ see how close it gets."
 - Telugu: "told short, it guessed long" was said twice (lines 5 and 6) -> line 5 ends "పదికి పది, నూట యాభై దాటాయి."; the
   bed ~16 dB under the voice -> louder, with a bigger lift into the rule. The chunk reads of 0-30 s were checked by us
   (Whisper's whole-file pass failed there).
+
+## Final check
+- Both viewers: READY. The one Telugu listen they asked for (~41 s, the whole-file pass heard "తక్కువైతే" twice) was checked
+  against the chunk read of the pinned take: "ఎక్కువైతే చివరి లైన్ తీసేయండి" comes as its own piece after a pause, then
+  "తక్కువైతే ఒక లైన్ మీరే రాయండి". Final: EN 50.6 s, TE 48.6 s.
