@@ -24,7 +24,7 @@ LINES = {   # n: (prop, English, Telugu)
     6: ("why", "It writes in tokens, not words: those hundred and two words were a hundred and twenty-four tokens. [1] Told it was short, it just guessed long.",
         "ఇది వర్డ్స్ లో కాదు, టోకెన్లలో రాస్తుంది: ఆ నూట రెండు వర్డ్స్, నూట ఇరవై నాలుగు టోకెన్లు. [1] తక్కువ అన్నాం, అందుకే ఊహించి ఎక్కువ రాసింది."),
     7: ("rule", "Any word limit, a form, an essay, a post: [1] paste it into Google Docs or Word, check the count, and fix the last lines yourself.",
-        "ఫామ్ అయినా, వ్యాసం అయినా, పోస్ట్ అయినా: [1] డాక్స్ లో గానీ, వర్డ్ లో గానీ పేస్ట్ చేసి, వర్డ్స్ ఎన్నో చూడండి. ఎక్కువైతే చివరి లైన్ తీసేయండి, తక్కువైతే ఒక లైన్ మీరే రాయండి."),
+        "ఫారం అయినా, వ్యాసం అయినా, పోస్ట్ అయినా: [1] డాక్స్ లో గానీ, వర్డ్ లో గానీ పేస్ట్ చేసి, వర్డ్స్ ఎన్నో చూడండి. ఎక్కువైతే చివరి లైన్ తీసేయండి, తక్కువైతే ఒక లైన్ మీరే రాయండి."),
     8: ("loop", "Asked for a hundred and fifty. [1] Got a hundred and two.", "నూట యాభై అడిగాం. [1] వచ్చింది, నూట రెండు."),
 }
 SHOW = {1: "Asked for 150 words. A free AI wrote 102.", 2: "One small model on our laptop, 10 tries: 102 to 128. Short, every time.",
