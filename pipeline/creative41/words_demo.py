@@ -26,7 +26,11 @@ ASK = {
     "count": f"Write a 150-word answer for a Class 8 exam: {Q} Count your words and make sure the answer is exactly 150 words.",
     "sentences": f"Write an answer for a Class 8 exam in 10 sentences of about 15 words each: {Q}",
 }
-HAND = {}   # filled in by hand after reading the replies
+HAND = {   # by hand, Nov 26: every reply is an on-topic answer; none states a word count
+    "plain": "102, 121, 110, 128, 112, 120, 127, 113, 127, 122 words: 0/10 within 135-165, all short (mean 118)",
+    "count": "119, 123, 125, 126, 140, 104, 130, 107, 125, 146: 2/10 within (140, 146), none says how many words it wrote",
+    "sentences": "85, 67, 81, 101, 62, 71, 72, 90, 74, 8 words; 10 sentences in 8/10 (one 9, one a single 8-word sentence): the sentences came out about half the asked length",
+}
 
 
 def words(t):

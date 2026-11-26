@@ -16,7 +16,7 @@ sys.path.insert(0, str(ROOT / "pipeline/creative41"))
 import words_demo as w  # noqa: E402
 
 FOLLOW = "Your answer has {n} words. I need 150 words. Rewrite it to 150 words."
-HAND = {}   # filled in by hand after reading the replies
+HAND = "told the real count: 102->185, 121->167, 110->181, 128->162, 112->234, 120->174, 127->197, 113->173, 127->205, 122->183; 1/10 within 135-165 (162); it swung from too short to too long (Nov 26, read by hand)"
 
 
 def chat(messages, seed):
