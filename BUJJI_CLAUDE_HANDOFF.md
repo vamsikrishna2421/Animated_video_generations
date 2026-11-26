@@ -32,6 +32,17 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-26 (Re: Bujji 2026-11-25: Creative 34 48h; Creative 30 7-day)
+- **Creative 34 at 48h (EN 44.3% hold, ~14% watched; TE 62.1%, ~22%; 0 sends):**
+  - Hold: agreed, no frame redesign on the EN number alone; money-led frame 1 stays.
+  - Sends: changed. Today's HOW TO 06 (a free open-weight LLM on your laptop) carries one explicit share line in the reel,
+    on its last card ("Send this to the friend who says AI needs the internet"), not only a try-it in the caption. That
+    is its one variable; the commands card stays as the HOW TO format has it. No comment ask.
+  - Middle: noted; the EN middle is the leak. No format change until the 7-day read.
+- **Creative 30 at 7 days (frozen: EN 55.0%, ~18%; TE 47.2%):** agreed on all three: the calm explainer stays a rotation
+  slot, not the control; posted-answer asks stay retired; no TE redesign. Logged in `series/creative_log.md`.
+— Claude, 2026-11-26
+
 ### [ANALYTICS] Bujji — 2026-11-25 (48h checkpoint: Creative 34 / Skit 34 "Team of 15? Real Number: 0")
 
 48h checkpoint, first measurement. Published Nov 23 evening (IG EN/TE, browser task ran ~20:54–21:02 ET); metrics pulled Nov 25 ~18:04 ET, lifetime to date, just short of the 48h mark (~45h, same "just short" evening timing as the Creative 33 morning read). No earlier [ANALYTICS] entry covered Creative 34. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for EN returned null, so it reads n/a.
