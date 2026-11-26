@@ -1,0 +1,792 @@
+{
+ "id": "creative41te",
+ "title": "Asked for 150 Words (Creative 41) (Telugu audio)",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.3,
+ "music": "lofi",
+ "names": {
+  "storyteller": ""
+ },
+ "musicVol": [
+  0.2,
+  0.46
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 1.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1390,
+ "endPad": 0.2,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_words41",
+   "tail": 0.1,
+   "boost": 2.6,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "storyteller",
+      "prop": "tries",
+      "n": 2
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "q": "Why should we save water?",
+     "qLimit": "(150 words)",
+     "answer": "Water conservation is essential for several reasons. Firstly, water is a finite resource, and its availability is decreasing due to population growth, climate change, and pollution...",
+     "counter": "102 WORDS",
+     "leftLab": "ASKED",
+     "leftVal": "150 WORDS",
+     "rightLab": "A FREE AI WROTE",
+     "rightVal": "102",
+     "plain": [
+      102,
+      121,
+      110,
+      128,
+      112,
+      120,
+      127,
+      113,
+      127,
+      122
+     ],
+     "count": [
+      119,
+      123,
+      125,
+      126,
+      140,
+      104,
+      130,
+      107,
+      125,
+      146
+     ],
+     "feedback": [
+      185,
+      167,
+      181,
+      162,
+      234,
+      174,
+      197,
+      173,
+      205,
+      183
+     ],
+     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "band": "135-165 = within 15",
+     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
+     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
+     "choices": [
+      "SPOT ON?",
+      "STILL SHORT?",
+      "OR..."
+     ],
+     "reveal": "185",
+     "reveal2": "234",
+     "overNote": "9 of 10 went over",
+     "tokens": [
+      "Water",
+      " conservation",
+      " is",
+      " essential",
+      " for",
+      " several",
+      " reasons",
+      ".",
+      " Firstly",
+      ",",
+      " water",
+      " is",
+      " a",
+      " finite"
+     ],
+     "tokLine": "12 WORDS = 14 TOKENS",
+     "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
+     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
+     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
+     "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
+     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
+     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule4": "FIX THE LAST LINES YOURSELF"
+    },
+    "yt": {
+     "chapter": "Asked 150, got 102",
+     "title": "Asked 150, got 102",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "నూట యాభై వర్డ్స్ అడిగాం. [1] ఒక ఫ్రీ చాట్‌బాట్ రాసింది, నూట రెండు.",
+     "show": "We asked for 150 words. A free chatbot wrote 102.",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "మా లాప్‌టాప్ లోని చిన్న మోడల్, పది సార్లు: [1] నూట రెండు నుంచి, నూట ఇరవై ఎనిమిది. ప్రతిసారీ, తక్కువే.",
+     "show": "A small model on our laptop, 10 times: 102 to 128. Short, every time.",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_words41",
+   "tail": 0.1,
+   "boost": 1.4,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "count",
+      "n": 3
+     },
+     {
+      "who": "storyteller",
+      "prop": "question",
+      "n": 4
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "q": "Why should we save water?",
+     "qLimit": "(150 words)",
+     "answer": "Water conservation is essential for several reasons. Firstly, water is a finite resource, and its availability is decreasing due to population growth, climate change, and pollution...",
+     "counter": "102 WORDS",
+     "leftLab": "ASKED",
+     "leftVal": "150 WORDS",
+     "rightLab": "A FREE AI WROTE",
+     "rightVal": "102",
+     "plain": [
+      102,
+      121,
+      110,
+      128,
+      112,
+      120,
+      127,
+      113,
+      127,
+      122
+     ],
+     "count": [
+      119,
+      123,
+      125,
+      126,
+      140,
+      104,
+      130,
+      107,
+      125,
+      146
+     ],
+     "feedback": [
+      185,
+      167,
+      181,
+      162,
+      234,
+      174,
+      197,
+      173,
+      205,
+      183
+     ],
+     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "band": "135-165 = within 15",
+     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
+     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
+     "choices": [
+      "SPOT ON?",
+      "STILL SHORT?",
+      "OR..."
+     ],
+     "reveal": "185",
+     "reveal2": "234",
+     "overNote": "9 of 10 went over",
+     "tokens": [
+      "Water",
+      " conservation",
+      " is",
+      " essential",
+      " for",
+      " several",
+      " reasons",
+      ".",
+      " Firstly",
+      ",",
+      " water",
+      " is",
+      " a",
+      " finite"
+     ],
+     "tokLine": "12 WORDS = 14 TOKENS",
+     "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
+     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
+     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
+     "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
+     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
+     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule4": "FIX THE LAST LINES YOURSELF"
+    },
+    "yt": {
+     "chapter": "Tell it the count?",
+     "title": "Tell it the count?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "వర్డ్స్ లెక్కపెట్టమని చెప్పాం: [1] పదిలో రెండు మాత్రమే, దగ్గరికి వచ్చాయి.",
+     "show": "We told it to count its words: only 2 of 10 came close.",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2
+    },
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "అసలు లెక్క చెబితే సరిపోతుంది కదా? చెప్పాం. <pause 0.6> [1] సరిగ్గా వచ్చిందా? ఇంకా తక్కువా? లేక...",
+     "show": "Just tell it the real count, right? We did. <pause 0.6> Spot on? Still short? Or...",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2,
+     "tts": "అసలు లెక్క చెబితే సరిపోతుంది కదా? చెప్పాం.",
+     "file2": "04b_storyteller.wav",
+     "tts2": "సరిగ్గా వచ్చిందా? ఇంకా తక్కువా? లేక...",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_words41",
+   "tail": 0.15,
+   "boost": 2.2,
+   "lift": 0.8,
+   "drop_pre": [
+    [
+     0,
+     0.6,
+     0.6
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "reveal",
+      "n": 5
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "q": "Why should we save water?",
+     "qLimit": "(150 words)",
+     "answer": "Water conservation is essential for several reasons. Firstly, water is a finite resource, and its availability is decreasing due to population growth, climate change, and pollution...",
+     "counter": "102 WORDS",
+     "leftLab": "ASKED",
+     "leftVal": "150 WORDS",
+     "rightLab": "A FREE AI WROTE",
+     "rightVal": "102",
+     "plain": [
+      102,
+      121,
+      110,
+      128,
+      112,
+      120,
+      127,
+      113,
+      127,
+      122
+     ],
+     "count": [
+      119,
+      123,
+      125,
+      126,
+      140,
+      104,
+      130,
+      107,
+      125,
+      146
+     ],
+     "feedback": [
+      185,
+      167,
+      181,
+      162,
+      234,
+      174,
+      197,
+      173,
+      205,
+      183
+     ],
+     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "band": "135-165 = within 15",
+     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
+     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
+     "choices": [
+      "SPOT ON?",
+      "STILL SHORT?",
+      "OR..."
+     ],
+     "reveal": "185",
+     "reveal2": "234",
+     "overNote": "9 of 10 went over",
+     "tokens": [
+      "Water",
+      " conservation",
+      " is",
+      " essential",
+      " for",
+      " several",
+      " reasons",
+      ".",
+      " Firstly",
+      ",",
+      " water",
+      " is",
+      " a",
+      " finite"
+     ],
+     "tokLine": "12 WORDS = 14 TOKENS",
+     "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
+     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
+     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
+     "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
+     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
+     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule4": "FIX THE LAST LINES YOURSELF"
+    },
+    "yt": {
+     "chapter": "185, 234",
+     "title": "185, 234",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "[1] నూట ఎనభై ఐదు! ముప్పై ఐదు ఎక్కువ. [2] ఒకసారి, రెండొందల ముప్పై నాలుగు. తక్కువైందన్నామని, ఏకంగా ఎక్కువ రాసేసింది!",
+     "show": "185! 35 too many. Once, 234. Told it was short, it wrote far too much!",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_words41",
+   "tail": 0.1,
+   "boost": 1.4,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "why",
+      "n": 6
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "q": "Why should we save water?",
+     "qLimit": "(150 words)",
+     "answer": "Water conservation is essential for several reasons. Firstly, water is a finite resource, and its availability is decreasing due to population growth, climate change, and pollution...",
+     "counter": "102 WORDS",
+     "leftLab": "ASKED",
+     "leftVal": "150 WORDS",
+     "rightLab": "A FREE AI WROTE",
+     "rightVal": "102",
+     "plain": [
+      102,
+      121,
+      110,
+      128,
+      112,
+      120,
+      127,
+      113,
+      127,
+      122
+     ],
+     "count": [
+      119,
+      123,
+      125,
+      126,
+      140,
+      104,
+      130,
+      107,
+      125,
+      146
+     ],
+     "feedback": [
+      185,
+      167,
+      181,
+      162,
+      234,
+      174,
+      197,
+      173,
+      205,
+      183
+     ],
+     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "band": "135-165 = within 15",
+     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
+     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
+     "choices": [
+      "SPOT ON?",
+      "STILL SHORT?",
+      "OR..."
+     ],
+     "reveal": "185",
+     "reveal2": "234",
+     "overNote": "9 of 10 went over",
+     "tokens": [
+      "Water",
+      " conservation",
+      " is",
+      " essential",
+      " for",
+      " several",
+      " reasons",
+      ".",
+      " Firstly",
+      ",",
+      " water",
+      " is",
+      " a",
+      " finite"
+     ],
+     "tokLine": "12 WORDS = 14 TOKENS",
+     "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
+     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
+     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
+     "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
+     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
+     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule4": "FIX THE LAST LINES YOURSELF"
+    },
+    "yt": {
+     "chapter": "Tokens, not words",
+     "title": "Tokens, not words",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "ఇది వర్డ్స్ లో కాదు, టోకెన్లలో రాస్తుంది: ఆ నూట రెండు వర్డ్స్, నూట ఇరవై నాలుగు టోకెన్లు. [1] తక్కువ అన్నాం, అందుకే ఊహించి ఎక్కువ రాసింది.",
+     "show": "It writes in tokens, not words: those 102 words were 124 tokens. We said short, so it guessed long.",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_words41",
+   "tail": 0.4,
+   "boost": 4.0,
+   "lift": 1.2,
+   "rise": 3.8,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "rule",
+      "n": 7
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "q": "Why should we save water?",
+     "qLimit": "(150 words)",
+     "answer": "Water conservation is essential for several reasons. Firstly, water is a finite resource, and its availability is decreasing due to population growth, climate change, and pollution...",
+     "counter": "102 WORDS",
+     "leftLab": "ASKED",
+     "leftVal": "150 WORDS",
+     "rightLab": "A FREE AI WROTE",
+     "rightVal": "102",
+     "plain": [
+      102,
+      121,
+      110,
+      128,
+      112,
+      120,
+      127,
+      113,
+      127,
+      122
+     ],
+     "count": [
+      119,
+      123,
+      125,
+      126,
+      140,
+      104,
+      130,
+      107,
+      125,
+      146
+     ],
+     "feedback": [
+      185,
+      167,
+      181,
+      162,
+      234,
+      174,
+      197,
+      173,
+      205,
+      183
+     ],
+     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "band": "135-165 = within 15",
+     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
+     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
+     "choices": [
+      "SPOT ON?",
+      "STILL SHORT?",
+      "OR..."
+     ],
+     "reveal": "185",
+     "reveal2": "234",
+     "overNote": "9 of 10 went over",
+     "tokens": [
+      "Water",
+      " conservation",
+      " is",
+      " essential",
+      " for",
+      " several",
+      " reasons",
+      ".",
+      " Firstly",
+      ",",
+      " water",
+      " is",
+      " a",
+      " finite"
+     ],
+     "tokLine": "12 WORDS = 14 TOKENS",
+     "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
+     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
+     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
+     "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
+     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
+     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule4": "FIX THE LAST LINES YOURSELF"
+    },
+    "yt": {
+     "chapter": "Check the count yourself",
+     "title": "Check the count yourself",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "ఫామ్ అయినా, వ్యాసం అయినా, పోస్ట్ అయినా: [1] డాక్స్ లో గానీ, వర్డ్ లో గానీ పేస్ట్ చేసి, వర్డ్స్ ఎన్నో చూడండి. ఎక్కువైతే చివరి లైన్ తీసేయండి, తక్కువైతే ఒక లైన్ మీరే రాయండి.",
+     "show": "A form, an essay, a post: paste it into Docs or Word and see how many words. Too many? Cut the last line. Too few? Write a line yourself.",
+     "maxgap": 0.22,
+     "gap": 0.5,
+     "tempo": 1.2
+    }
+   ]
+  },
+  {
+   "id": "s_f",
+   "type": "sk_words41",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 3.2,
+   "lift": 0.8,
+   "rise": 3.4,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "loop",
+      "n": 8
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "q": "Why should we save water?",
+     "qLimit": "(150 words)",
+     "answer": "Water conservation is essential for several reasons. Firstly, water is a finite resource, and its availability is decreasing due to population growth, climate change, and pollution...",
+     "counter": "102 WORDS",
+     "leftLab": "ASKED",
+     "leftVal": "150 WORDS",
+     "rightLab": "A FREE AI WROTE",
+     "rightVal": "102",
+     "plain": [
+      102,
+      121,
+      110,
+      128,
+      112,
+      120,
+      127,
+      113,
+      127,
+      122
+     ],
+     "count": [
+      119,
+      123,
+      125,
+      126,
+      140,
+      104,
+      130,
+      107,
+      125,
+      146
+     ],
+     "feedback": [
+      185,
+      167,
+      181,
+      162,
+      234,
+      174,
+      197,
+      173,
+      205,
+      183
+     ],
+     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "band": "135-165 = within 15",
+     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
+     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
+     "choices": [
+      "SPOT ON?",
+      "STILL SHORT?",
+      "OR..."
+     ],
+     "reveal": "185",
+     "reveal2": "234",
+     "overNote": "9 of 10 went over",
+     "tokens": [
+      "Water",
+      " conservation",
+      " is",
+      " essential",
+      " for",
+      " several",
+      " reasons",
+      ".",
+      " Firstly",
+      ",",
+      " water",
+      " is",
+      " a",
+      " finite"
+     ],
+     "tokLine": "12 WORDS = 14 TOKENS",
+     "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
+     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
+     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
+     "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
+     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
+     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule4": "FIX THE LAST LINES YOURSELF"
+    },
+    "yt": {
+     "chapter": "150 vs 102",
+     "title": "150 vs 102",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "నూట యాభై అడిగాం. [1] వచ్చింది, నూట రెండు.",
+     "show": "We asked for 150. We got 102.",
+     "maxgap": 0.22,
+     "gap": 0.0,
+     "tempo": 1.2
+    }
+   ]
+  }
+ ]
+}

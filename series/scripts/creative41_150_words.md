@@ -57,3 +57,18 @@ and a silence before the reveal, then a hit and a rising counter tick; a whoosh 
 a riser and the hit back to frame 1.
 Caption try-it (no comment ask): "Ask your AI app for exactly 150 words on anything, paste it into a word counter, and
 see how close it gets."
+
+## Script review (human-viewer, v1) and what changed
+- Both: the reveal (185, then 234, right after "we told it the count") is the reel; "THE AI" and "never" overclaimed from
+  one small model -> "A FREE AI WROTE: 102", "one small model on our laptop", no "never"; the tokens line -> our own
+  numbers ("those 102 words were 124 tokens") and "told it was short, it just guessed long" (why it overshot); the vague
+  "word counter" -> "paste it into Google Docs or Word, check the count" (Google: Tools > Word count; Microsoft: the status
+  bar; both read on their own help pages).
+- Priya: "Class 8 exam" read as a homework-cheat tip -> the notebook shows only "Why should we save water? (150 words)" and
+  the rule is "any word limit: a form, an essay, a post" (the real prompt, with "Class 8 exam", is in the pinned comment);
+  "came close" -> "within 15" with the 135-165 band on screen; "too long" -> "nine of ten went over" (162 was inside).
+- Sandeep: the guess -> "You'd just tell it the real count, right? We did. Spot on? Still short? Or..." with a beat; one
+  pop set, a bigger hit on 234.
+- Telugu (Sandeep): నూట ఎనభై ఐదు could be heard as నూట యాభై ఐదు (155) -> "నూట ఎనభై ఐదు! ముప్పై ఐదు ఎక్కువ."; "రెండొందల";
+  "తక్కువైందన్నామని, ఏకంగా ఎక్కువ రాసేసింది!"; "కలపండి" (mix) -> "తక్కువైతే ఒక లైన్ మీరే రాయండి"; no "కౌంట్" (a clipped
+  vowel could be heard as an English swear word) and no "గూగుల్" (heard as "Gokul" before): "డాక్స్ లో గానీ, వర్డ్ లో గానీ".
