@@ -420,7 +420,7 @@
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "స్టెప్ వన్: మ్యాక్ లో టెర్మినల్, విండోస్ లో పవర్‌షెల్ ఓపెన్ చేసి, [1] లామా అఫీషియల్ పేజీలో ఉన్న, ఇన్‌స్టాల్ లైన్ పేస్ట్ చేసుకోండి.",
+     "text": "ఒకటో స్టెప్: మ్యాక్ లో టెర్మినల్, విండోస్ లో పవర్‌షెల్ ఓపెన్ చేసి, [1] లామా అఫీషియల్ పేజీలో ఉన్న, ఇన్‌స్టాల్ లైన్ పేస్ట్ చేసుకోండి.",
      "show": "Step one: open Terminal on a Mac, PowerShell on Windows, and paste the install line from llama's official page.",
      "maxgap": 0.22,
      "gap": 0.14,
@@ -429,8 +429,8 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "స్టెప్ టూ: ఈ లైన్ పేస్ట్ చేస్తే, క్వెన్ అనే ఫ్రీ మోడల్ వస్తుంది. [1] డౌన్‌లోడ్ ఒక్కసారే. తర్వాత, మూడు సెకన్లలో ఓపెన్.",
-     "show": "Step two: paste this line and a free model called Qwen comes. The download is only once. After that, it opens in 3 seconds.",
+     "text": "రెండో స్టెప్: ఈ లైన్ పేస్ట్ చేస్తే, ఒక ఫ్రీ మోడల్ వస్తుంది. [1] డౌన్‌లోడ్ ఒక్కసారే. తర్వాత, మూడు సెకన్లలో ఓపెన్.",
+     "show": "Step two: paste this line and a free model (Qwen) comes. The download is only once. After that, it opens in 3 seconds.",
      "maxgap": 0.22,
      "gap": 0.14,
      "tempo": 1.2
@@ -621,7 +621,7 @@
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "స్టెప్ త్రీ: మీ ప్రశ్న అడగండి. [1] లేదా లామా సర్వ్ అని టైప్ చేసి, అది చూపించే అడ్రస్, బ్రౌజర్ లో ఓపెన్ చేసుకోండి.",
+     "text": "మూడో స్టెప్: మీ ప్రశ్న అడగండి. [1] లేదా లామా సర్వ్ అని టైప్ చేసి, అది చూపించే అడ్రస్, బ్రౌజర్ లో ఓపెన్ చేసుకోండి.",
      "show": "Step three: ask your question. Or type llama serve, and open the address it shows in your browser.",
      "maxgap": 0.22,
      "gap": 0.14,
@@ -810,8 +810,8 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "దీనికి మూడు గిగాబైట్ల ఖాళీ మెమరీ కావాలి; ఎనిమిది గిగాబైట్ల లాప్‌టాప్ సరిపోతుంది. [1] కమాండ్ చివర, డాష్ డాష్ ఆఫ్‌లైన్ అని టైప్ చేస్తే, ఇంటర్నెట్ కి వెళ్ళదు.",
-     "show": "It needs 3 GB of free memory; an 8 GB laptop is enough. Type --offline at the end of the command, and it won't go online.",
+     "text": "దీనికి మూడు గిగాబైట్ల ఖాళీ మెమరీ కావాలి; ఎనిమిది గిగాబైట్ల లాప్‌టాప్ సరిపోతుంది. [1] లైన్ చివర, డాష్ డాష్ ఆఫ్‌లైన్ అని టైప్ చేస్తే, ఇంటర్నెట్ కి వెళ్ళదు.",
+     "show": "It needs 3 GB of free memory; an 8 GB laptop is enough. Type --offline at the end of the line, and it won't go online.",
      "maxgap": 0.22,
      "gap": 0.14,
      "tempo": 1.2

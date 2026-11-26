@@ -96,3 +96,8 @@ Caption: every command, links, needs, licences, the ChatGPT Plus price with sour
 | 7 | needs | It needs about three gigabytes of free memory. Most eight-gigabyte laptops are fine. [1] Add dash dash offline, and it never goes online. | దీనికి మూడు గిగాబైట్ల ఖాళీ మెమరీ కావాలి; ఎనిమిది గిగాబైట్ల లాప్‌టాప్ సరిపోతుంది. [1] కమాండ్ చివర, డాష్ డాష్ ఆఫ్‌లైన్ అని టైప్ చేస్తే, ఇంటర్నెట్ కి వెళ్ళదు. |
 | 8 | save | Save this. [1] And send it to the friend who pastes office data into ChatGPT. | ఇది సేవ్ చేసుకోండి. [1] ఆఫీస్ డేటా, చాట్‌జీపీటీ లో పేస్ట్ చేసే ఫ్రెండ్ కి, ఇది పంపండి. |
 | 9 | loop | Wi-Fi off, [1] and it still answers. | వైఫై ఆఫ్, [1] అయినా జవాబు ఇస్తుంది. |
+
+## Telugu voicing (chunk reads) and what changed
+- "స్టెప్ వన్ / టూ" mumbled at the start of the takes -> "ఒకటో / రెండో / మూడో స్టెప్" (as HOW TO 05's "ఒకటో చెక్").
+- "క్వెన్" came out as "kyon" (Hindi "why") -> the Telugu voice says "ఒక ఫ్రీ మోడల్"; Qwen stays on screen.
+- "కమాండ్ చివర" came out as "kamaai" (earnings) -> "లైన్ చివర". No word heard as a swear word.
