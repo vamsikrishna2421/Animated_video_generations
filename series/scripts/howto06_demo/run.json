@@ -1,0 +1,78 @@
+{
+ "model": "Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+ "machine": "4 CPU cores, no graphics card",
+ "cpu": "model name\t: Intel(R) Xeon(R) Processor @ 2.10GHz",
+ "llama_version": "version: 1.1.0-dev (build 1, commit 9c003a9)\nbuilt with GNU 13.3.0 for Linux x86_64",
+ "first_start_s": 42.1,
+ "first_start_wall_s": 42.1,
+ "answers": {
+  "leave": {
+   "question": "Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+   "reply": "Dear Manager,\nI am sorry to inform you that I have a fever today and will be back to work tomorrow.\nThank you for your understanding.",
+   "wall_s": 2.04,
+   "tokens": 30,
+   "tok_per_s": 17.5132511901462,
+   "prompt_tok_per_s": 131.9202041069398,
+   "words": 26,
+   "words_per_s": 15.7
+  },
+  "emi": {
+   "question": "Explain what a loan EMI is, in 3 simple lines, for a college student.",
+   "reply": "An EMI stands for Equated Monthly Installment, which is the monthly payment made towards a loan. It includes the principal amount borrowed and the interest charged. For a college student, EMI helps in managing financial obligations, especially for loans like student loans or personal loans.",
+   "wall_s": 3.48,
+   "tokens": 56,
+   "tok_per_s": 16.643099029767846,
+   "prompt_tok_per_s": 153.2350994189325,
+   "words": 45,
+   "words_per_s": 13.6
+  },
+  "maths": {
+   "question": "What is 23 multiplied by 47? Give only the number.",
+   "reply": "1081",
+   "wall_s": 0.32,
+   "tokens": 5,
+   "tok_per_s": 22.56992444717791,
+   "prompt_tok_per_s": 159.6072142460839,
+   "words": 1,
+   "words_per_s": 5.6
+  },
+  "telugu": {
+   "question": "Introduce yourself in Telugu, in 2 short lines.",
+   "reply": "మేము ప్రశ్నాలను మరింత పరిశోధించుకోవాలు. మేము క్రమం మేములో మొదటం మేము ప్రశ్నాలను మరింత పరిశోధించుకోవాలు.",
+   "wall_s": 9.16,
+   "tokens": 160,
+   "tok_per_s": 17.646943266409245,
+   "prompt_tok_per_s": 124.13621881077502,
+   "words": 12,
+   "words_per_s": 1.3
+  }
+ },
+ "peak_ram_mb": 2826,
+ "second_start_s": 3.0,
+ "model_files": {
+  "models--Qwen--Qwen2.5-1.5B-Instruct-GGUF/snapshots/91cad51170dc346986eccefdc2dd33a9da36ead9/qwen2.5-1.5b-instruct-q4_k_m.gguf": 1117320736
+ },
+ "ctx4096": {
+  "peak_ram_mb": 2095,
+  "tok_per_s": 16.9,
+  "note": "llama serve ... --offline -c 4096, the EMI question"
+ },
+ "cli_offline": {
+  "command": "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+  "generation_tok_per_s": 18.5,
+  "prompt_tok_per_s": 183.8
+ },
+ "web_ui": {
+  "command": "llama serve -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+  "default_port": 9931,
+  "answer_tok_per_s": 15.2,
+  "screenshot": "ui_answer.png"
+ },
+ "build": {
+  "configure_s": 4,
+  "library_s": 77,
+  "app_s": 141,
+  "commit": "9c003a9 (2026-11-25)",
+  "how": "cmake -B build && cmake --build build --config Release -j 4 --target llama-app"
+ }
+}

@@ -27,7 +27,12 @@ QUESTIONS = {
     "maths": "What is 23 multiplied by 47? Give only the number.",
     "telugu": "Introduce yourself in Telugu, in 2 short lines.",
 }
-HAND = {}   # filled in by hand after reading the replies
+HAND = {   # by hand, Nov 26
+    "leave": "good: a polite 3-line message, the facts kept",
+    "emi": "right: Equated Monthly Installment, principal plus interest; fine for a student",
+    "maths": "right: 1081",
+    "telugu": "useless: grammatical-looking Telugu that means nothing ('we should research questions more'), repeated; it does not introduce itself",
+}
 
 
 def up(timeout):

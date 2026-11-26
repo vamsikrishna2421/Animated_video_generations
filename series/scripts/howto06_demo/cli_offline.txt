@@ -1,0 +1,35 @@
+
+
+Loading model... |-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/-\|/ 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b1-9c003a9
+model      : Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M
+ftype      : Q4_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.
+I'm terribly sorry, but I have a fever and will be back to work tomorrow. I hope to contribute to our team's success.
+
+[ Prompt: 183.8 t/s | Generation: 18.5 t/s ]
+
+> ///exit
+
+
+Exiting...
