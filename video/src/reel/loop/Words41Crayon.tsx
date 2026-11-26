@@ -58,8 +58,8 @@ const block = (c: Ctx, x: number, y: number, w: number, small: string, big: stri
   c.restore();
 };
 // bars against the 150 line and the 135-165 band
-const bars = (c: Ctx, T: Record<string, any>, vals: number[], k: number, hl: (v: number) => boolean, y0 = 1200, label = "") => {
-  const x0 = 90, w = 900, top = 330, scale = (v: number) => y0 - (v / 250) * (y0 - top);
+const bars = (c: Ctx, T: Record<string, any>, vals: number[], k: number, hl: (v: number) => boolean, y0 = 1200, label = "", top = 330) => {
+  const x0 = 90, w = 900, scale = (v: number) => y0 - (v / 250) * (y0 - top);
   c.fillStyle = "rgba(22,163,74,0.14)"; c.fillRect(x0, scale(165), w, scale(135) - scale(165));
   c.setLineDash([16, 12]); c.strokeStyle = BLUE; c.lineWidth = 5; c.beginPath(); c.moveTo(x0, scale(150)); c.lineTo(x0 + w, scale(150)); c.stroke(); c.setLineDash([]);
   c.textAlign = "right"; c.font = SANS(34, 900); c.fillStyle = BLUE; c.fillText("150", x0 - 8, scale(150) + 12);
@@ -127,14 +127,15 @@ const StWords: React.FC<SP> = ({ s }) => {
         } else if (P === "reveal") {
           const t1 = cu(1, 0.05), t2 = cu(2, 0.05);
           const roll = clamp((f - t1) / 16), v = Math.round(102 + (185 - 102) * easeOut(roll));
-          c.textAlign = "center"; c.font = SANS(64, 900); c.fillStyle = INK; c.fillText("ASKED 150 · TOLD \"YOU WROTE 102\"", 540, 330);
-          c.font = SANS(300, 900); c.fillStyle = f >= t1 ? RED : "#94a3b8"; c.fillText(f >= t1 ? String(v) : "102", 540, 640);
+          const head = "ASKED 150 · TOLD \"YOU WROTE 102\"";   // stills: it ran off both edges
+          c.textAlign = "center"; c.font = SANS(fit(c, head, 960, 56, 900), 900); c.fillStyle = INK; c.fillText(head, 540, 320);
+          c.font = SANS(260, 900); c.fillStyle = f >= t1 ? RED : "#94a3b8"; c.fillText(f >= t1 ? String(v) : "102", 400, 590);
           if (f >= t2 - 2) {
             const k2 = seg(f, t2 - 2, t2 + 6);
-            c.save(); c.globalAlpha = clamp(k2 * 3); c.translate(800, 760); c.rotate(-0.08); c.scale(1.4 - 0.4 * easeOut(k2), 1.4 - 0.4 * easeOut(k2));
+            c.save(); c.globalAlpha = clamp(k2 * 3); c.translate(830, 500); c.rotate(-0.08); c.scale(1.4 - 0.4 * easeOut(k2), 1.4 - 0.4 * easeOut(k2));
             c.fillStyle = "#fff"; rrect(c, -170, -90, 340, 150, 20); c.fill(); c.strokeStyle = RED; c.lineWidth = 10; rrect(c, -170, -90, 340, 150, 20); c.stroke();
             c.font = SANS(110, 900); c.fillStyle = RED; c.fillText(T.reveal2, 0, 30); c.restore();
-            bars(c, T, T.feedback, seg(f, t2 + 8, t2 + 38), (x) => x >= 135 && x <= 165, 1250, T.overNote);
+            bars(c, T, T.feedback, seg(f, t2 + 8, t2 + 38), (x) => x >= 135 && x <= 165, 1210, T.overNote, 700);   // stills: bars under the numbers, not over them
           }
         } else if (P === "why") {
           const k0 = seg(f, ln.from + 2, ln.from + 30);

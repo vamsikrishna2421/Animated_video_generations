@@ -1,0 +1,1446 @@
+{
+ "id": "creative41te",
+ "look": "classic",
+ "topic": "",
+ "banner": "",
+ "musicVol": [
+  0.2,
+  0.46
+ ],
+ "title": "Asked for 150 Words (Creative 41) (Telugu audio)",
+ "handle": "@ai_maastaaru_telugu",
+ "label": "",
+ "fps": 30,
+ "musicDrops": [
+  [
+   557,
+   575
+  ]
+ ],
+ "musicBoosts": [
+  [
+   0,
+   307,
+   2.6
+  ],
+  [
+   307,
+   593,
+   1.4
+  ],
+  [
+   593,
+   818,
+   2.2
+  ],
+  [
+   818,
+   1045,
+   1.4
+  ],
+  [
+   1045,
+   1370,
+   4.0
+  ],
+  [
+   1370,
+   1454,
+   3.2
+  ],
+  [
+   1045,
+   1370,
+   3.8,
+   1
+  ],
+  [
+   1370,
+   1454,
+   3.4,
+   1
+  ]
+ ],
+ "hideTimer": true,
+ "musicDuckRamp": 9,
+ "totalFrames": 1454,
+ "music": "reel/creative41te/score.wav",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_words41",
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "storyteller",
+      "prop": "tries",
+      "n": 2
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "q": "Why should we save water?",
+     "qLimit": "(150 words)",
+     "answer": "Water conservation is essential for several reasons. Firstly, water is a finite resource, and its availability is decreasing due to population growth, climate change, and pollution...",
+     "counter": "102 WORDS",
+     "leftLab": "ASKED",
+     "leftVal": "150 WORDS",
+     "rightLab": "A FREE AI WROTE",
+     "rightVal": "102",
+     "plain": [
+      102,
+      121,
+      110,
+      128,
+      112,
+      120,
+      127,
+      113,
+      127,
+      122
+     ],
+     "count": [
+      119,
+      123,
+      125,
+      126,
+      140,
+      104,
+      130,
+      107,
+      125,
+      146
+     ],
+     "feedback": [
+      185,
+      167,
+      181,
+      162,
+      234,
+      174,
+      197,
+      173,
+      205,
+      183
+     ],
+     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "band": "135-165 = within 15",
+     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
+     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
+     "choices": [
+      "SPOT ON?",
+      "STILL SHORT?",
+      "OR..."
+     ],
+     "reveal": "185",
+     "reveal2": "234",
+     "overNote": "9 of 10 went over",
+     "tokens": [
+      "Water",
+      " conservation",
+      " is",
+      " essential",
+      " for",
+      " several",
+      " reasons",
+      ".",
+      " Firstly",
+      ",",
+      " water",
+      " is",
+      " a",
+      " finite"
+     ],
+     "tokLine": "12 WORDS = 14 TOKENS",
+     "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
+     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
+     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
+     "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
+     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
+     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule4": "FIX THE LAST LINES YOURSELF"
+    },
+    "yt": {
+     "chapter": "Asked 150, got 102",
+     "title": "Asked 150, got 102",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 0,
+   "frames": 307,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative41te/line_01.wav",
+     "from": 9,
+     "frames": 106,
+     "words": [
+      {
+       "w": "We",
+       "from": 10,
+       "to": 15
+      },
+      {
+       "w": "asked",
+       "from": 15,
+       "to": 25
+      },
+      {
+       "w": "for",
+       "from": 25,
+       "to": 32
+      },
+      {
+       "w": "150",
+       "from": 32,
+       "to": 39
+      },
+      {
+       "w": "words.",
+       "from": 39,
+       "to": 58
+      },
+      {
+       "w": "A",
+       "from": 58,
+       "to": 61
+      },
+      {
+       "w": "free",
+       "from": 61,
+       "to": 76
+      },
+      {
+       "w": "chatbot",
+       "from": 76,
+       "to": 90
+      },
+      {
+       "w": "wrote",
+       "from": 90,
+       "to": 106
+      },
+      {
+       "w": "102.",
+       "from": 106,
+       "to": 115
+      }
+     ],
+     "cues": {
+      "1": 44
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative41te/line_02.wav",
+     "from": 120,
+     "frames": 171,
+     "words": [
+      {
+       "w": "A",
+       "from": 120,
+       "to": 124
+      },
+      {
+       "w": "small",
+       "from": 124,
+       "to": 136
+      },
+      {
+       "w": "model",
+       "from": 136,
+       "to": 148
+      },
+      {
+       "w": "on",
+       "from": 148,
+       "to": 154
+      },
+      {
+       "w": "our",
+       "from": 154,
+       "to": 162
+      },
+      {
+       "w": "laptop,",
+       "from": 162,
+       "to": 190
+      },
+      {
+       "w": "10",
+       "from": 190,
+       "to": 196
+      },
+      {
+       "w": "times:",
+       "from": 196,
+       "to": 210
+      },
+      {
+       "w": "102",
+       "from": 210,
+       "to": 225
+      },
+      {
+       "w": "to",
+       "from": 225,
+       "to": 231
+      },
+      {
+       "w": "128.",
+       "from": 231,
+       "to": 241
+      },
+      {
+       "w": "Short,",
+       "from": 241,
+       "to": 260
+      },
+      {
+       "w": "every",
+       "from": 260,
+       "to": 279
+      },
+      {
+       "w": "time.",
+       "from": 279,
+       "to": 291
+      }
+     ],
+     "cues": {
+      "1": 194
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_words41",
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "count",
+      "n": 3
+     },
+     {
+      "who": "storyteller",
+      "prop": "question",
+      "n": 4
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "q": "Why should we save water?",
+     "qLimit": "(150 words)",
+     "answer": "Water conservation is essential for several reasons. Firstly, water is a finite resource, and its availability is decreasing due to population growth, climate change, and pollution...",
+     "counter": "102 WORDS",
+     "leftLab": "ASKED",
+     "leftVal": "150 WORDS",
+     "rightLab": "A FREE AI WROTE",
+     "rightVal": "102",
+     "plain": [
+      102,
+      121,
+      110,
+      128,
+      112,
+      120,
+      127,
+      113,
+      127,
+      122
+     ],
+     "count": [
+      119,
+      123,
+      125,
+      126,
+      140,
+      104,
+      130,
+      107,
+      125,
+      146
+     ],
+     "feedback": [
+      185,
+      167,
+      181,
+      162,
+      234,
+      174,
+      197,
+      173,
+      205,
+      183
+     ],
+     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "band": "135-165 = within 15",
+     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
+     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
+     "choices": [
+      "SPOT ON?",
+      "STILL SHORT?",
+      "OR..."
+     ],
+     "reveal": "185",
+     "reveal2": "234",
+     "overNote": "9 of 10 went over",
+     "tokens": [
+      "Water",
+      " conservation",
+      " is",
+      " essential",
+      " for",
+      " several",
+      " reasons",
+      ".",
+      " Firstly",
+      ",",
+      " water",
+      " is",
+      " a",
+      " finite"
+     ],
+     "tokLine": "12 WORDS = 14 TOKENS",
+     "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
+     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
+     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
+     "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
+     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
+     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule4": "FIX THE LAST LINES YOURSELF"
+    },
+    "yt": {
+     "chapter": "Tell it the count?",
+     "title": "Tell it the count?",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 307,
+   "frames": 286,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative41te/line_03.wav",
+     "from": 0,
+     "frames": 111,
+     "words": [
+      {
+       "w": "We",
+       "from": 1,
+       "to": 5
+      },
+      {
+       "w": "told",
+       "from": 5,
+       "to": 19
+      },
+      {
+       "w": "it",
+       "from": 19,
+       "to": 24
+      },
+      {
+       "w": "to",
+       "from": 24,
+       "to": 28
+      },
+      {
+       "w": "count",
+       "from": 28,
+       "to": 38
+      },
+      {
+       "w": "its",
+       "from": 38,
+       "to": 52
+      },
+      {
+       "w": "words:",
+       "from": 52,
+       "to": 63
+      },
+      {
+       "w": "only",
+       "from": 63,
+       "to": 71
+      },
+      {
+       "w": "2",
+       "from": 71,
+       "to": 74
+      },
+      {
+       "w": "of",
+       "from": 74,
+       "to": 87
+      },
+      {
+       "w": "10",
+       "from": 87,
+       "to": 92
+      },
+      {
+       "w": "came",
+       "from": 92,
+       "to": 100
+      },
+      {
+       "w": "close.",
+       "from": 100,
+       "to": 111
+      }
+     ],
+     "cues": {
+      "1": 53
+     }
+    },
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative41te/line_04.wav",
+     "from": 115,
+     "frames": 160,
+     "words": [
+      {
+       "w": "Just",
+       "from": 115,
+       "to": 122
+      },
+      {
+       "w": "tell",
+       "from": 122,
+       "to": 129
+      },
+      {
+       "w": "it",
+       "from": 129,
+       "to": 133
+      },
+      {
+       "w": "the",
+       "from": 133,
+       "to": 139
+      },
+      {
+       "w": "real",
+       "from": 139,
+       "to": 145
+      },
+      {
+       "w": "count,",
+       "from": 145,
+       "to": 155
+      },
+      {
+       "w": "right?",
+       "from": 155,
+       "to": 173
+      },
+      {
+       "w": "We",
+       "from": 173,
+       "to": 177
+      },
+      {
+       "w": "did.",
+       "from": 177,
+       "to": 184
+      },
+      {
+       "w": "Spot",
+       "from": 205,
+       "to": 215
+      },
+      {
+       "w": "on?",
+       "from": 215,
+       "to": 223
+      },
+      {
+       "w": "Still",
+       "from": 223,
+       "to": 242
+      },
+      {
+       "w": "short?",
+       "from": 242,
+       "to": 263
+      },
+      {
+       "w": "Or...",
+       "from": 263,
+       "to": 275
+      }
+     ],
+     "cues": {
+      "1": 205
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_words41",
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "reveal",
+      "n": 5
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "q": "Why should we save water?",
+     "qLimit": "(150 words)",
+     "answer": "Water conservation is essential for several reasons. Firstly, water is a finite resource, and its availability is decreasing due to population growth, climate change, and pollution...",
+     "counter": "102 WORDS",
+     "leftLab": "ASKED",
+     "leftVal": "150 WORDS",
+     "rightLab": "A FREE AI WROTE",
+     "rightVal": "102",
+     "plain": [
+      102,
+      121,
+      110,
+      128,
+      112,
+      120,
+      127,
+      113,
+      127,
+      122
+     ],
+     "count": [
+      119,
+      123,
+      125,
+      126,
+      140,
+      104,
+      130,
+      107,
+      125,
+      146
+     ],
+     "feedback": [
+      185,
+      167,
+      181,
+      162,
+      234,
+      174,
+      197,
+      173,
+      205,
+      183
+     ],
+     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "band": "135-165 = within 15",
+     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
+     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
+     "choices": [
+      "SPOT ON?",
+      "STILL SHORT?",
+      "OR..."
+     ],
+     "reveal": "185",
+     "reveal2": "234",
+     "overNote": "9 of 10 went over",
+     "tokens": [
+      "Water",
+      " conservation",
+      " is",
+      " essential",
+      " for",
+      " several",
+      " reasons",
+      ".",
+      " Firstly",
+      ",",
+      " water",
+      " is",
+      " a",
+      " finite"
+     ],
+     "tokLine": "12 WORDS = 14 TOKENS",
+     "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
+     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
+     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
+     "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
+     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
+     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule4": "FIX THE LAST LINES YOURSELF"
+    },
+    "yt": {
+     "chapter": "185, 234",
+     "title": "185, 234",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 593,
+   "frames": 225,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative41te/line_05.wav",
+     "from": 0,
+     "frames": 202,
+     "words": [
+      {
+       "w": "185!",
+       "from": 1,
+       "to": 12
+      },
+      {
+       "w": "35",
+       "from": 12,
+       "to": 20
+      },
+      {
+       "w": "too",
+       "from": 20,
+       "to": 29
+      },
+      {
+       "w": "many.",
+       "from": 29,
+       "to": 50
+      },
+      {
+       "w": "Once,",
+       "from": 50,
+       "to": 64
+      },
+      {
+       "w": "234.",
+       "from": 64,
+       "to": 82
+      },
+      {
+       "w": "Told",
+       "from": 82,
+       "to": 98
+      },
+      {
+       "w": "it",
+       "from": 98,
+       "to": 105
+      },
+      {
+       "w": "was",
+       "from": 105,
+       "to": 119
+      },
+      {
+       "w": "short,",
+       "from": 119,
+       "to": 141
+      },
+      {
+       "w": "it",
+       "from": 141,
+       "to": 148
+      },
+      {
+       "w": "wrote",
+       "from": 148,
+       "to": 169
+      },
+      {
+       "w": "far",
+       "from": 169,
+       "to": 178
+      },
+      {
+       "w": "too",
+       "from": 178,
+       "to": 188
+      },
+      {
+       "w": "much!",
+       "from": 188,
+       "to": 202
+      }
+     ],
+     "cues": {
+      "1": 1,
+      "2": 59
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_words41",
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "why",
+      "n": 6
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "q": "Why should we save water?",
+     "qLimit": "(150 words)",
+     "answer": "Water conservation is essential for several reasons. Firstly, water is a finite resource, and its availability is decreasing due to population growth, climate change, and pollution...",
+     "counter": "102 WORDS",
+     "leftLab": "ASKED",
+     "leftVal": "150 WORDS",
+     "rightLab": "A FREE AI WROTE",
+     "rightVal": "102",
+     "plain": [
+      102,
+      121,
+      110,
+      128,
+      112,
+      120,
+      127,
+      113,
+      127,
+      122
+     ],
+     "count": [
+      119,
+      123,
+      125,
+      126,
+      140,
+      104,
+      130,
+      107,
+      125,
+      146
+     ],
+     "feedback": [
+      185,
+      167,
+      181,
+      162,
+      234,
+      174,
+      197,
+      173,
+      205,
+      183
+     ],
+     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "band": "135-165 = within 15",
+     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
+     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
+     "choices": [
+      "SPOT ON?",
+      "STILL SHORT?",
+      "OR..."
+     ],
+     "reveal": "185",
+     "reveal2": "234",
+     "overNote": "9 of 10 went over",
+     "tokens": [
+      "Water",
+      " conservation",
+      " is",
+      " essential",
+      " for",
+      " several",
+      " reasons",
+      ".",
+      " Firstly",
+      ",",
+      " water",
+      " is",
+      " a",
+      " finite"
+     ],
+     "tokLine": "12 WORDS = 14 TOKENS",
+     "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
+     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
+     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
+     "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
+     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
+     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule4": "FIX THE LAST LINES YOURSELF"
+    },
+    "yt": {
+     "chapter": "Tokens, not words",
+     "title": "Tokens, not words",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 818,
+   "frames": 227,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative41te/line_06.wav",
+     "from": 0,
+     "frames": 220,
+     "words": [
+      {
+       "w": "It",
+       "from": 1,
+       "to": 6
+      },
+      {
+       "w": "writes",
+       "from": 6,
+       "to": 19
+      },
+      {
+       "w": "in",
+       "from": 19,
+       "to": 25
+      },
+      {
+       "w": "tokens,",
+       "from": 25,
+       "to": 45
+      },
+      {
+       "w": "not",
+       "from": 45,
+       "to": 53
+      },
+      {
+       "w": "words:",
+       "from": 53,
+       "to": 72
+      },
+      {
+       "w": "those",
+       "from": 72,
+       "to": 83
+      },
+      {
+       "w": "102",
+       "from": 83,
+       "to": 90
+      },
+      {
+       "w": "words",
+       "from": 90,
+       "to": 108
+      },
+      {
+       "w": "were",
+       "from": 108,
+       "to": 117
+      },
+      {
+       "w": "124",
+       "from": 117,
+       "to": 124
+      },
+      {
+       "w": "tokens.",
+       "from": 124,
+       "to": 139
+      },
+      {
+       "w": "We",
+       "from": 139,
+       "to": 155
+      },
+      {
+       "w": "said",
+       "from": 155,
+       "to": 164
+      },
+      {
+       "w": "short,",
+       "from": 164,
+       "to": 183
+      },
+      {
+       "w": "so",
+       "from": 183,
+       "to": 189
+      },
+      {
+       "w": "it",
+       "from": 189,
+       "to": 194
+      },
+      {
+       "w": "guessed",
+       "from": 194,
+       "to": 209
+      },
+      {
+       "w": "long.",
+       "from": 209,
+       "to": 220
+      }
+     ],
+     "cues": {
+      "1": 142
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_words41",
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "rule",
+      "n": 7
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "q": "Why should we save water?",
+     "qLimit": "(150 words)",
+     "answer": "Water conservation is essential for several reasons. Firstly, water is a finite resource, and its availability is decreasing due to population growth, climate change, and pollution...",
+     "counter": "102 WORDS",
+     "leftLab": "ASKED",
+     "leftVal": "150 WORDS",
+     "rightLab": "A FREE AI WROTE",
+     "rightVal": "102",
+     "plain": [
+      102,
+      121,
+      110,
+      128,
+      112,
+      120,
+      127,
+      113,
+      127,
+      122
+     ],
+     "count": [
+      119,
+      123,
+      125,
+      126,
+      140,
+      104,
+      130,
+      107,
+      125,
+      146
+     ],
+     "feedback": [
+      185,
+      167,
+      181,
+      162,
+      234,
+      174,
+      197,
+      173,
+      205,
+      183
+     ],
+     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "band": "135-165 = within 15",
+     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
+     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
+     "choices": [
+      "SPOT ON?",
+      "STILL SHORT?",
+      "OR..."
+     ],
+     "reveal": "185",
+     "reveal2": "234",
+     "overNote": "9 of 10 went over",
+     "tokens": [
+      "Water",
+      " conservation",
+      " is",
+      " essential",
+      " for",
+      " several",
+      " reasons",
+      ".",
+      " Firstly",
+      ",",
+      " water",
+      " is",
+      " a",
+      " finite"
+     ],
+     "tokLine": "12 WORDS = 14 TOKENS",
+     "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
+     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
+     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
+     "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
+     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
+     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule4": "FIX THE LAST LINES YOURSELF"
+    },
+    "yt": {
+     "chapter": "Check the count yourself",
+     "title": "Check the count yourself",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1045,
+   "frames": 325,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative41te/line_07.wav",
+     "from": 0,
+     "frames": 291,
+     "words": [
+      {
+       "w": "A",
+       "from": 7,
+       "to": 10
+      },
+      {
+       "w": "form,",
+       "from": 10,
+       "to": 19
+      },
+      {
+       "w": "an",
+       "from": 19,
+       "to": 23
+      },
+      {
+       "w": "essay,",
+       "from": 23,
+       "to": 34
+      },
+      {
+       "w": "a",
+       "from": 34,
+       "to": 37
+      },
+      {
+       "w": "post:",
+       "from": 37,
+       "to": 52
+      },
+      {
+       "w": "paste",
+       "from": 52,
+       "to": 65
+      },
+      {
+       "w": "it",
+       "from": 65,
+       "to": 81
+      },
+      {
+       "w": "into",
+       "from": 81,
+       "to": 89
+      },
+      {
+       "w": "Docs",
+       "from": 89,
+       "to": 100
+      },
+      {
+       "w": "or",
+       "from": 100,
+       "to": 105
+      },
+      {
+       "w": "Word",
+       "from": 105,
+       "to": 112
+      },
+      {
+       "w": "and",
+       "from": 112,
+       "to": 123
+      },
+      {
+       "w": "see",
+       "from": 123,
+       "to": 137
+      },
+      {
+       "w": "how",
+       "from": 137,
+       "to": 147
+      },
+      {
+       "w": "many",
+       "from": 147,
+       "to": 155
+      },
+      {
+       "w": "words.",
+       "from": 155,
+       "to": 173
+      },
+      {
+       "w": "Too",
+       "from": 173,
+       "to": 182
+      },
+      {
+       "w": "many?",
+       "from": 182,
+       "to": 199
+      },
+      {
+       "w": "Cut",
+       "from": 199,
+       "to": 205
+      },
+      {
+       "w": "the",
+       "from": 205,
+       "to": 211
+      },
+      {
+       "w": "last",
+       "from": 211,
+       "to": 219
+      },
+      {
+       "w": "line.",
+       "from": 219,
+       "to": 234
+      },
+      {
+       "w": "Too",
+       "from": 234,
+       "to": 243
+      },
+      {
+       "w": "few?",
+       "from": 243,
+       "to": 256
+      },
+      {
+       "w": "Write",
+       "from": 256,
+       "to": 265
+      },
+      {
+       "w": "a",
+       "from": 265,
+       "to": 268
+      },
+      {
+       "w": "line",
+       "from": 268,
+       "to": 275
+      },
+      {
+       "w": "yourself.",
+       "from": 275,
+       "to": 290
+      }
+     ],
+     "cues": {
+      "1": 74
+     }
+    }
+   ]
+  },
+  {
+   "id": "s_f",
+   "type": "sk_words41",
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "loop",
+      "n": 8
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "q": "Why should we save water?",
+     "qLimit": "(150 words)",
+     "answer": "Water conservation is essential for several reasons. Firstly, water is a finite resource, and its availability is decreasing due to population growth, climate change, and pollution...",
+     "counter": "102 WORDS",
+     "leftLab": "ASKED",
+     "leftVal": "150 WORDS",
+     "rightLab": "A FREE AI WROTE",
+     "rightVal": "102",
+     "plain": [
+      102,
+      121,
+      110,
+      128,
+      112,
+      120,
+      127,
+      113,
+      127,
+      122
+     ],
+     "count": [
+      119,
+      123,
+      125,
+      126,
+      140,
+      104,
+      130,
+      107,
+      125,
+      146
+     ],
+     "feedback": [
+      185,
+      167,
+      181,
+      162,
+      234,
+      174,
+      197,
+      173,
+      205,
+      183
+     ],
+     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "band": "135-165 = within 15",
+     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
+     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
+     "choices": [
+      "SPOT ON?",
+      "STILL SHORT?",
+      "OR..."
+     ],
+     "reveal": "185",
+     "reveal2": "234",
+     "overNote": "9 of 10 went over",
+     "tokens": [
+      "Water",
+      " conservation",
+      " is",
+      " essential",
+      " for",
+      " several",
+      " reasons",
+      ".",
+      " Firstly",
+      ",",
+      " water",
+      " is",
+      " a",
+      " finite"
+     ],
+     "tokLine": "12 WORDS = 14 TOKENS",
+     "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
+     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
+     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
+     "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
+     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
+     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule4": "FIX THE LAST LINES YOURSELF"
+    },
+    "yt": {
+     "chapter": "150 vs 102",
+     "title": "150 vs 102",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu",
+    "captionMode": "phrase",
+    "hardCuts": true
+   },
+   "from": 1370,
+   "frames": 84,
+   "lines": [
+    {
+     "who": "storyteller",
+     "name": "",
+     "color": "#FDE68A",
+     "sub": null,
+     "audio": "reel/creative41te/line_08.wav",
+     "from": 9,
+     "frames": 69,
+     "words": [
+      {
+       "w": "We",
+       "from": 10,
+       "to": 15
+      },
+      {
+       "w": "asked",
+       "from": 15,
+       "to": 27
+      },
+      {
+       "w": "for",
+       "from": 27,
+       "to": 34
+      },
+      {
+       "w": "150.",
+       "from": 34,
+       "to": 51
+      },
+      {
+       "w": "We",
+       "from": 51,
+       "to": 61
+      },
+      {
+       "w": "got",
+       "from": 61,
+       "to": 68
+      },
+      {
+       "w": "102.",
+       "from": 68,
+       "to": 78
+      }
+     ],
+     "cues": {
+      "1": 35
+     }
+    }
+   ]
+  }
+ ]
+}
