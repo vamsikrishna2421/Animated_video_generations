@@ -101,3 +101,19 @@ Caption: every command, links, needs, licences, the ChatGPT Plus price with sour
 - "స్టెప్ వన్ / టూ" mumbled at the start of the takes -> "ఒకటో / రెండో / మూడో స్టెప్" (as HOW TO 05's "ఒకటో చెక్").
 - "క్వెన్" came out as "kyon" (Hindi "why") -> the Telugu voice says "ఒక ఫ్రీ మోడల్"; Qwen stays on screen.
 - "కమాండ్ చివర" came out as "kamaai" (earnings) -> "లైన్ చివర". No word heard as a swear word.
+
+## Render review (human-viewer, EN + TE) and what changed
+- Both: the commands broke mid-word on screen ("Q4_K" / "_M", "--offl" / "ine") -> terminal lines wrap at spaces and a
+  flag never ends a line. The browser address was tiny -> a big chip "OPEN 127.0.0.1:9931 (the address it prints)";
+  a "TYPE YOUR QUESTION AFTER >" marker on the terminal.
+- Both: "Not for Telugu" had no picture or pause -> two takes with a 0.6 s beat, the TELUGU ✗ tile lands on the cue with a
+  buzz and a hit, the bed drops before it.
+- Labels to match the run: "on this laptop" -> "4 CPU cores · no GPU"; "Wi-Fi off" -> "--offline"; "ours took 42 s
+  (a fast connection)". Frame 1 no longer sits still: the Wi-Fi-off sign starts big and the letter types out against
+  a 2.0 s timer. The save card is up at the cut.
+- Sound: a louder hit in second 1, a quieter middle, a bigger lift into the save card (both versions).
+- Telugu: "వైఫై ఆఫ్" unclear -> "ఇంటర్నెట్ లేకపోయినా"; the negations that could be swallowed and flip the claim
+  ("అక్కర్లేదు", "వెళ్ళవు", "వెళ్ళదు") -> positive lines ("మీ లాప్‌టాప్ లోనే ఉంటాయి", "ఇంటర్నెట్ లేకుండానే పని చేస్తుంది");
+  "పదిహేను పదాలు" -> "పదిహేను మాటలు"; the caption starts with "No internet".
+- Caption (Sandeep, Priya): admin rights (the Mac/Linux script installs into the home folder), Ollama / LM Studio named,
+  what a 7B model needs.

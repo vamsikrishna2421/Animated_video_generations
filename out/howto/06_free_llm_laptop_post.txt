@@ -13,6 +13,7 @@ What you need: a laptop with about 3 GB of free memory (most 8 GB laptops are fi
    Mac / Linux, open Terminal and paste: curl -LsSf https://llama.app/install.sh | sh
    Windows, open PowerShell and paste: irm https://llama.app/install.ps1 | iex
    (Other ways on the same page: llama.app, Docker, ready-made downloads, or build it yourself.)
+   The Mac / Linux script installs into your home folder (~/.local/bin), no admin rights needed (we read the script; we did not run it here). Other free apps that do the same job: Ollama, LM Studio.
 2. GET A MODEL AND CHAT: llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M
    The first time it downloads Qwen2.5 1.5B (1.12 GB, Apache 2.0 licence). After that it opens in about 3 seconds.
    Add --offline at the end and it uses the downloaded copy only, with no internet.
@@ -20,6 +21,7 @@ What you need: a laptop with about 3 GB of free memory (most 8 GB laptops are fi
 
 Our run (a basic 4-core computer, no graphics card, Linux; we built llama.cpp from source, about 4 minutes): the first start with the download took 42 s on our connection, about 3 s after that; about 15 words a second (17 tokens a second); 2.1-2.8 GB of memory.
 Good for drafts: a leave letter in 2 seconds, and 23 x 47 = 1081, right. Not for Telugu: asked to introduce itself in Telugu, it wrote meaningless lines. For Telugu, use the bigger online apps.
+Want a smarter one? Bigger models need more: the 7B version of the same model is a 4.68 GB file (the one this page uses for its tests), so it wants a laptop with 16 GB.
 
 Why bother when ChatGPT has a free tier? Privacy: office notes, salary slips, a client's file never leave your laptop (see HOW TO 04, what never to paste into an AI chat). For comparison, ChatGPT Plus costs ₹1,999 a month in India.
 

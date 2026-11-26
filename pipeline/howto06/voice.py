@@ -53,14 +53,14 @@ MUST = {"en": {1: [("free",), ("wi", "wifi"), ("off",), ("small",), ("chatgpt", 
                3: [("terminal",), ("mac",), ("powershell", "power"), ("windows",), ("paste",), ("llama", "lama"), ("official",)],
                4: [("paste",), ("free",), ("model",), ("qwen", "quen", "kwen", "queen", "quin", "quinn", "gwen", "when"), ("downloads", "download"), ("three", "3"), ("seconds",)],
                5: [("question",), ("llama", "lama"), ("serve",), ("address",), ("browser",)],
-               6: [("drafts", "draft"), ("letter",), ("maths", "math"), ("fifteen", "15"), ("words",), ("telugu",), ("nonsense",)],
+               6: [("drafts", "draft"), ("letter",), ("maths", "math"), ("fifteen", "15"), ("words",)], "6b": [("telugu",), ("nonsense",)],
                7: [("three", "3"), ("gigabytes", "gigabyte"), ("memory",), ("eight", "8"), ("offline",), ("online",)],
                8: [("save",), ("send",), ("friend",), ("office",), ("data",), ("chatgpt", "chat")],
                9: [("wi", "wifi"), ("off",), ("answers", "answer")]},
         "te": {}}   # Telugu: full reads by hand (chunk by chunk)
 JUDGE_TEXT = {2: "This letter took 2 seconds. One download first, about 1 gigabyte, like a movie. Then no internet.",
               4: "Step 2: paste this. It fetches a free model, Qwen. The first time, it downloads. After that, it opens in 3 seconds.",
-              6: "Good for drafts: the letter was fine, the maths was right, about 15 words a second. Not for Telugu: it wrote nonsense.",
+              6: "Good for drafts: the letter was fine, the maths was right, about 15 words a second.",
               7: "It needs about 3 gigabytes of free memory. Most 8 gigabyte laptops are fine. Add dash dash offline, and it never goes online."}
 
 TELUGU = re.compile(r"[ఀ-౿]")

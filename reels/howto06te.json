@@ -70,14 +70,14 @@
     ],
     "captionTop": 1390,
     "t": {
-     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "lapTitle": "llama · Qwen2.5 1.5B · 4 CPU cores · no GPU",
      "letter": [
       "Dear Manager,",
       "I am sorry to inform you that I have a fever today",
       "and will be back to work tomorrow.",
       "Thank you for your understanding."
      ],
-     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "letterStats": "30 tokens · 2.0 s · --offline",
      "leftLab": "INTERNET",
      "leftVal": "OFF",
      "rightLab": "THE AI'S REPLY",
@@ -127,7 +127,7 @@
      "firstVal": "DOWNLOAD 1.12 GB",
      "after": "EVERY TIME AFTER",
      "afterVal": "OPENS IN 3 s",
-     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s (a fast connection)",
      "cliTitle": "Terminal: llama cli",
      "cliRows": [
       [
@@ -159,7 +159,8 @@
       "and will return to work tomorrow."
      ],
      "webStats": "36 tokens · 2.4 s · 15.20 t/s",
-     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "speed": "OR IN YOUR BROWSER: OPEN 127.0.0.1:9931 (the address it prints)",
+     "typeHere": "TYPE YOUR QUESTION AFTER >",
      "tiles": [
       [
        "GOOD FOR DRAFTS",
@@ -226,8 +227,8 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "వైఫై ఆఫ్ లో కూడా జవాబు ఇచ్చే, ఒక ఫ్రీ చాట్‌బాట్. [1] ఇది చిన్నది, చాట్‌జీపీటీ కాదు. కానీ మీ మాటలు, మీ లాప్‌టాప్ దాటి బయటికి వెళ్ళవు.",
-     "show": "A free chatbot that answers even with the Wi-Fi off. It's small, it's not ChatGPT. But your words never leave your laptop.",
+     "text": "ఇంటర్నెట్ లేకపోయినా జవాబు ఇచ్చే, ఒక ఫ్రీ చాట్‌బాట్. [1] ఇది చిన్నది, చాట్‌జీపీటీ కాదు. కానీ మీ మాటలు, మీ లాప్‌టాప్ లోనే ఉంటాయి.",
+     "show": "No internet, and a free chatbot still answers. It's small, it's not ChatGPT. But your words stay on your laptop.",
      "maxgap": 0.22,
      "gap": 0.14,
      "tempo": 1.2
@@ -235,8 +236,8 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "ఈ లెటర్, రెండు సెకన్లలో వచ్చింది. [1] ముందు ఒక్కసారి, ఒక సినిమా అంత, ఒక గిగాబైట్ డౌన్‌లోడ్. తర్వాత, ఇంటర్నెట్ అక్కర్లేదు.",
-     "show": "This letter came in 2 seconds. First, once, a 1 GB download, like a movie. After that, no internet needed.",
+     "text": "ఈ లెటర్, రెండు సెకన్లలో వచ్చింది. [1] ముందు ఒక్కసారి, ఒక సినిమా అంత, ఒక గిగాబైట్ డౌన్‌లోడ్. తర్వాత, ఇంటర్నెట్ లేకుండానే పని చేస్తుంది.",
+     "show": "This letter came in 2 seconds. First, once, a 1 GB download, like a movie. After that, it works without internet.",
      "maxgap": 0.22,
      "gap": 0.14,
      "tempo": 1.2
@@ -247,7 +248,7 @@
    "id": "s_b",
    "type": "sk_llm06",
    "tail": 0.1,
-   "boost": 1.6,
+   "boost": 1.3,
    "lift": 0.6,
    "data": {
     "beats": [
@@ -264,14 +265,14 @@
     ],
     "captionTop": 1390,
     "t": {
-     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "lapTitle": "llama · Qwen2.5 1.5B · 4 CPU cores · no GPU",
      "letter": [
       "Dear Manager,",
       "I am sorry to inform you that I have a fever today",
       "and will be back to work tomorrow.",
       "Thank you for your understanding."
      ],
-     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "letterStats": "30 tokens · 2.0 s · --offline",
      "leftLab": "INTERNET",
      "leftVal": "OFF",
      "rightLab": "THE AI'S REPLY",
@@ -321,7 +322,7 @@
      "firstVal": "DOWNLOAD 1.12 GB",
      "after": "EVERY TIME AFTER",
      "afterVal": "OPENS IN 3 s",
-     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s (a fast connection)",
      "cliTitle": "Terminal: llama cli",
      "cliRows": [
       [
@@ -353,7 +354,8 @@
       "and will return to work tomorrow."
      ],
      "webStats": "36 tokens · 2.4 s · 15.20 t/s",
-     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "speed": "OR IN YOUR BROWSER: OPEN 127.0.0.1:9931 (the address it prints)",
+     "typeHere": "TYPE YOUR QUESTION AFTER >",
      "tiles": [
       [
        "GOOD FOR DRAFTS",
@@ -441,13 +443,13 @@
    "id": "s_c",
    "type": "sk_llm06",
    "tail": 0.1,
-   "boost": 1.6,
+   "boost": 1.3,
    "lift": 0.6,
    "drop_at": [
     [
      1,
      "1",
-     0.35
+     0.5
     ]
    ],
    "data": {
@@ -465,14 +467,14 @@
     ],
     "captionTop": 1390,
     "t": {
-     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "lapTitle": "llama · Qwen2.5 1.5B · 4 CPU cores · no GPU",
      "letter": [
       "Dear Manager,",
       "I am sorry to inform you that I have a fever today",
       "and will be back to work tomorrow.",
       "Thank you for your understanding."
      ],
-     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "letterStats": "30 tokens · 2.0 s · --offline",
      "leftLab": "INTERNET",
      "leftVal": "OFF",
      "rightLab": "THE AI'S REPLY",
@@ -522,7 +524,7 @@
      "firstVal": "DOWNLOAD 1.12 GB",
      "after": "EVERY TIME AFTER",
      "afterVal": "OPENS IN 3 s",
-     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s (a fast connection)",
      "cliTitle": "Terminal: llama cli",
      "cliRows": [
       [
@@ -554,7 +556,8 @@
       "and will return to work tomorrow."
      ],
      "webStats": "36 tokens · 2.4 s · 15.20 t/s",
-     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "speed": "OR IN YOUR BROWSER: OPEN 127.0.0.1:9931 (the address it prints)",
+     "typeHere": "TYPE YOUR QUESTION AFTER >",
      "tiles": [
       [
        "GOOD FOR DRAFTS",
@@ -630,11 +633,15 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "డ్రాఫ్ట్‌లకి బాగుంది: లెటర్ బాగుంది, లెక్క సరిగ్గా చేసింది, సెకనుకి దాదాపు పదిహేను పదాలు. [1] కానీ తెలుగులో అడిగితే, అర్థం లేని మాటలు.",
-     "show": "Good for drafts: the letter was good, the maths was right, about 15 words a second. But ask in Telugu, and it's meaningless words.",
+     "text": "డ్రాఫ్ట్‌లకి బాగుంది: లెటర్ బాగుంది, లెక్క సరిగ్గా చేసింది, సెకనుకి దాదాపు పదిహేను మాటలు. <pause 0.6> [1] కానీ తెలుగులో అడిగితే, అర్థం లేని మాటలు.",
+     "show": "Good for drafts: the letter was good, the maths was right, about 15 words a second. <pause 0.6> But ask in Telugu, and it's meaningless words.",
      "maxgap": 0.22,
      "gap": 0.14,
-     "tempo": 1.2
+     "tempo": 1.2,
+     "tts": "డ్రాఫ్ట్‌లకి బాగుంది: లెటర్ బాగుంది, లెక్క సరిగ్గా చేసింది, సెకనుకి దాదాపు పదిహేను మాటలు.",
+     "file2": "06b_storyteller.wav",
+     "tts2": "కానీ తెలుగులో అడిగితే, అర్థం లేని మాటలు.",
+     "pause": 0.6
     }
    ]
   },
@@ -654,14 +661,14 @@
     ],
     "captionTop": 1390,
     "t": {
-     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "lapTitle": "llama · Qwen2.5 1.5B · 4 CPU cores · no GPU",
      "letter": [
       "Dear Manager,",
       "I am sorry to inform you that I have a fever today",
       "and will be back to work tomorrow.",
       "Thank you for your understanding."
      ],
-     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "letterStats": "30 tokens · 2.0 s · --offline",
      "leftLab": "INTERNET",
      "leftVal": "OFF",
      "rightLab": "THE AI'S REPLY",
@@ -711,7 +718,7 @@
      "firstVal": "DOWNLOAD 1.12 GB",
      "after": "EVERY TIME AFTER",
      "afterVal": "OPENS IN 3 s",
-     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s (a fast connection)",
      "cliTitle": "Terminal: llama cli",
      "cliRows": [
       [
@@ -743,7 +750,8 @@
       "and will return to work tomorrow."
      ],
      "webStats": "36 tokens · 2.4 s · 15.20 t/s",
-     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "speed": "OR IN YOUR BROWSER: OPEN 127.0.0.1:9931 (the address it prints)",
+     "typeHere": "TYPE YOUR QUESTION AFTER >",
      "tiles": [
       [
        "GOOD FOR DRAFTS",
@@ -810,8 +818,8 @@
     {
      "who": "storyteller",
      "file": "07_storyteller.wav",
-     "text": "దీనికి మూడు గిగాబైట్ల ఖాళీ మెమరీ కావాలి; ఎనిమిది గిగాబైట్ల లాప్‌టాప్ సరిపోతుంది. [1] లైన్ చివర, డాష్ డాష్ ఆఫ్‌లైన్ అని టైప్ చేస్తే, ఇంటర్నెట్ కి వెళ్ళదు.",
-     "show": "It needs 3 GB of free memory; an 8 GB laptop is enough. Type --offline at the end of the line, and it won't go online.",
+     "text": "దీనికి మూడు గిగాబైట్ల ఖాళీ మెమరీ కావాలి; ఎనిమిది గిగాబైట్ల లాప్‌టాప్ సరిపోతుంది. [1] లైన్ చివర, డాష్ డాష్ ఆఫ్‌లైన్ అని టైప్ చేస్తే, ఇంటర్నెట్ లేకుండానే పని చేస్తుంది.",
+     "show": "It needs 3 GB of free memory; an 8 GB laptop is enough. Type --offline at the end of the line, and it works without internet.",
      "maxgap": 0.22,
      "gap": 0.14,
      "tempo": 1.2
@@ -822,9 +830,9 @@
    "id": "s_e",
    "type": "sk_llm06",
    "tail": 0.4,
-   "boost": 3.4,
-   "lift": 1.1,
-   "rise": 3.4,
+   "boost": 4.0,
+   "lift": 1.3,
+   "rise": 3.8,
    "data": {
     "beats": [
      {
@@ -835,14 +843,14 @@
     ],
     "captionTop": 1390,
     "t": {
-     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "lapTitle": "llama · Qwen2.5 1.5B · 4 CPU cores · no GPU",
      "letter": [
       "Dear Manager,",
       "I am sorry to inform you that I have a fever today",
       "and will be back to work tomorrow.",
       "Thank you for your understanding."
      ],
-     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "letterStats": "30 tokens · 2.0 s · --offline",
      "leftLab": "INTERNET",
      "leftVal": "OFF",
      "rightLab": "THE AI'S REPLY",
@@ -892,7 +900,7 @@
      "firstVal": "DOWNLOAD 1.12 GB",
      "after": "EVERY TIME AFTER",
      "afterVal": "OPENS IN 3 s",
-     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s (a fast connection)",
      "cliTitle": "Terminal: llama cli",
      "cliRows": [
       [
@@ -924,7 +932,8 @@
       "and will return to work tomorrow."
      ],
      "webStats": "36 tokens · 2.4 s · 15.20 t/s",
-     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "speed": "OR IN YOUR BROWSER: OPEN 127.0.0.1:9931 (the address it prints)",
+     "typeHere": "TYPE YOUR QUESTION AFTER >",
      "tiles": [
       [
        "GOOD FOR DRAFTS",
@@ -1005,9 +1014,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 3.0,
+   "boost": 3.6,
    "lift": 0.8,
-   "rise": 3.2,
+   "rise": 3.6,
    "data": {
     "beats": [
      {
@@ -1018,14 +1027,14 @@
     ],
     "captionTop": 1390,
     "t": {
-     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "lapTitle": "llama · Qwen2.5 1.5B · 4 CPU cores · no GPU",
      "letter": [
       "Dear Manager,",
       "I am sorry to inform you that I have a fever today",
       "and will be back to work tomorrow.",
       "Thank you for your understanding."
      ],
-     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "letterStats": "30 tokens · 2.0 s · --offline",
      "leftLab": "INTERNET",
      "leftVal": "OFF",
      "rightLab": "THE AI'S REPLY",
@@ -1075,7 +1084,7 @@
      "firstVal": "DOWNLOAD 1.12 GB",
      "after": "EVERY TIME AFTER",
      "afterVal": "OPENS IN 3 s",
-     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s (a fast connection)",
      "cliTitle": "Terminal: llama cli",
      "cliRows": [
       [
@@ -1107,7 +1116,8 @@
       "and will return to work tomorrow."
      ],
      "webStats": "36 tokens · 2.4 s · 15.20 t/s",
-     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "speed": "OR IN YOUR BROWSER: OPEN 127.0.0.1:9931 (the address it prints)",
+     "typeHere": "TYPE YOUR QUESTION AFTER >",
      "tiles": [
       [
        "GOOD FOR DRAFTS",
@@ -1174,8 +1184,8 @@
     {
      "who": "storyteller",
      "file": "09_storyteller.wav",
-     "text": "వైఫై ఆఫ్, [1] అయినా జవాబు ఇస్తుంది.",
-     "show": "Wi-Fi off, and it still answers.",
+     "text": "ఇంటర్నెట్ లేకపోయినా, [1] జవాబు ఇస్తుంది.",
+     "show": "No internet, and it still answers.",
      "maxgap": 0.22,
      "gap": 0.0,
      "tempo": 1.2

@@ -54,8 +54,15 @@ const term = (c: Ctx, r: { x: number; y: number; w: number; h: number }, title: 
   c.font = SANS(24, 700); c.fillStyle = "#94a3b8"; c.textAlign = "left"; c.fillText(title, r.x + 130, r.y + 36);
   c.font = MONO(size); let y = r.y + 54 + size * 1.4;
   const cols = Math.floor((r.w - 40) / (size * 0.6));
-  rows.forEach(([t, col]) => {
-    const parts: string[] = []; let s = t; while (s.length > cols) { parts.push(s.slice(0, cols)); s = s.slice(cols); } parts.push(s);
+  rows.forEach(([t, col]) => {   // render review: commands broke mid-word ("Q4_K" / "_M"); wrap at spaces, a flag starts a line
+    const parts: string[] = []; let cur = "";
+    t.split(" ").forEach((w, wi, all) => {
+      const next = cur ? cur + " " + w : w;
+      const flagEnd = w.startsWith("-") && wi + 1 < all.length && (next + " " + all[wi + 1]).length > cols;
+      if ((next.length > cols || flagEnd) && cur) { parts.push(cur); cur = w; } else cur = next;
+      while (cur.length > cols) { parts.push(cur.slice(0, cols)); cur = cur.slice(cols); }
+    });
+    if (cur) parts.push(cur);
     parts.forEach((pp) => { if (y > r.y + r.h - 10) return; c.fillStyle = col; c.fillText(pp, r.x + 20, y); y += size * 1.35; });
   });
   c.restore();
@@ -100,12 +107,12 @@ const StLlm: React.FC<SP> = ({ s }) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
     if (i > 0 && beats[i - 1].prop !== b.prop && b.prop !== "loop") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 8)} src="audio/sfx_whoosh.wav" vol={0.22} />);
-    if (b.prop === "hook") sfx.push(<Sfx key={k("c")} at={1} src="audio/sfx_chaching.wav" vol={0.5} />, <Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={0.8} />, <Sfx key={k("o")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.35} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("c")} at={1} src="audio/sfx_snap.wav" vol={0.6} />, <Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={1.0} />, <Sfx key={k("o")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.35} />);
     if (b.prop === "result") sfx.push(<Sfx key={k("d")} at={at + 6} src="audio/sfx_chime.wav" vol={0.3} />);
     if (["install", "model", "chat"].includes(b.prop)) [0, 4, 8, 12, 16, 20, 24, 28].forEach((d2) => sfx.push(<Sfx key={k("t" + d2)} at={at + 6 + d2} src="audio/sfx_tick.wav" vol={0.16} />));
     if (b.prop === "model") sfx.push(<Sfx key={k("dl")} at={cue(i, 1, 0.2)} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("ok")} at={cue(i, 1, 0.6)} src="audio/sfx_success.wav" vol={0.25} />);
     if (b.prop === "chat") sfx.push(<Sfx key={k("d")} at={cue(i, 1, 0.1)} src="audio/sfx_chime.wav" vol={0.25} />);
-    if (b.prop === "honest") sfx.push(<Sfx key={k("p1")} at={at + 6} src="audio/sfx_pop.wav" vol={0.25} />, <Sfx key={k("p2")} at={at + 16} src="audio/sfx_pop.wav" vol={0.25} />, <Sfx key={k("x")} at={cue(i, 1, 0.3)} src="reel/sfx_buzz.wav" vol={0.32} />);
+    if (b.prop === "honest") sfx.push(<Sfx key={k("p1")} at={at + 6} src="audio/sfx_pop.wav" vol={0.25} />, <Sfx key={k("p2")} at={at + 16} src="audio/sfx_pop.wav" vol={0.25} />, <Sfx key={k("x")} at={cue(i, 1, 0.0) + 2} src="reel/sfx_buzz.wav" vol={0.4} />, <Sfx key={k("xh")} at={cue(i, 1, 0.0) + 2} src="reel/sfx_boom.wav" vol={te ? 0.4 : 0.5} />);
     if (b.prop === "needs") sfx.push(<Sfx key={k("p")} at={at + 4} src="audio/sfx_pop.wav" vol={0.25} />, <Sfx key={k("t")} at={cue(i, 1, 0.3)} src="audio/sfx_tick.wav" vol={0.25} />);
     if (b.prop === "save") sfx.push(<Sfx key={k("h")} at={at + 2} src="reel/sfx_boom.wav" vol={te ? 0.45 : 0.55} />, <Sfx key={k("ok")} at={cue(i, 1, 0.3)} src="audio/sfx_success.wav" vol={0.3} />);
     if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("c")} at={slam} src="audio/sfx_chaching.wav" vol={0.45} />); }
@@ -127,8 +134,12 @@ const StLlm: React.FC<SP> = ({ s }) => {
           c.fillStyle = "#f8fafc"; rrect(c, r.x, r.y, r.w, r.h, 10); c.fill();
           c.font = SANS(24, 800); c.fillStyle = "#64748b"; c.fillText(T.lapTitle, r.x + 24, r.y + 40);
           c.fillStyle = INK;
-          (T.letter as string[]).forEach((t, q) => { c.font = SANS(fit(c, t, r.w - 48, 30, 600), 600); c.fillText(t, r.x + 24, r.y + 100 + q * 46); });
-          wifiOff(c, 840, 640, 56);
+          const typing = P === "hook" && !loopOn ? clamp((f - 10) / 60) : 1;   // render review: frame 1 sat still for 3 s
+          const all = (T.letter as string[]).join("\n"), shown = all.slice(0, Math.round(all.length * typing)).split("\n");
+          shown.forEach((t, q) => { c.font = SANS(fit(c, (T.letter as string[])[q], r.w - 48, 30, 600), 600); c.fillText(t, r.x + 24, r.y + 100 + q * 46); });
+          c.font = MONO(30, 700); c.fillStyle = GREEN; c.fillText(`${(2.0 * typing).toFixed(1)} s`, r.x + r.w - 110, r.y + r.h - 24);
+          const big = P === "hook" && !loopOn ? 1 - clamp((f - 4) / 14) : 0;
+          wifiOff(c, 840 - 300 * big, 640 + 140 * big, 56 + 120 * big);
           block(c, 40, 210, 490, T.leftLab, T.leftVal, "#fecaca", "#7f1d1d");
           block(c, 550, 210, 490, T.rightLab, T.rightVal, "#bbf7d0", "#14532d");
           chip(c, T.tag, W / 2, 1110, "#0f172a", "#fde68a", 1, fit(c, T.tag, 940, 40, 800));
@@ -164,11 +175,12 @@ const StLlm: React.FC<SP> = ({ s }) => {
           stepTag(c, T.step3, seg(f, ln.from, ln.from + 6));
           term(c, { x: 40, y: 290, w: 1000, h: 470 }, T.cliTitle, T.cliRows, 26, seg(f, ln.from + 2, ln.from + 8));
           browser(c, { x: 140, y: 690, w: 900, h: 420 }, T, seg(f, cu(1, 0.1) - 6, cu(1, 0.1) + 4));
-          chip(c, T.speed, W / 2, 1160, "#0f172a", "#bbf7d0", seg(f, cu(1, 0.4), cu(1, 0.4) + 8), fit(c, T.speed, 940, 40, 900));
+          chip(c, T.typeHere, 640, 470, "#fde68a", "#0f172a", seg(f, ln.from + 10, ln.from + 18) * (f < cu(1, 0.1) ? 1 : 0), 34);
+          chip(c, T.speed, W / 2, 1160, "#0f172a", "#bbf7d0", seg(f, cu(1, 0.2), cu(1, 0.2) + 8), fit(c, T.speed, 960, 46, 900));
         } else if (P === "honest") {
           const rows = T.tiles as [string, string, boolean][];
           rows.forEach(([head, sub, ok], q) => {
-            const t0 = q < 2 ? ln.from + 4 + q * 10 : cu(1, 0.2);
+            const t0 = q < 2 ? ln.from + 4 + q * 10 : cu(1, 0.0) + 2;
             const k = seg(f, t0 - 2, t0 + 8); if (k <= 0) return;
             const y = 300 + q * 270;
             card(c, 70, y, 940, 240, ok ? "#f0fdf4" : "#fef2f2", k);
@@ -187,7 +199,7 @@ const StLlm: React.FC<SP> = ({ s }) => {
           if (k1 > 0) { const typed = (T.offlineCmd as string).slice(0, Math.round((T.offlineCmd as string).length * clamp((f - cu(1, 0.1)) / 30)));
             term(c, { x: 50, y: 780, w: 980, h: 300 }, T.termTitle, [["$ " + typed, "#e2e8f0"], [f > cu(1, 0.1) + 34 ? T.offlineNote : "", "#86efac"]], 30, k1); }
         } else if (P === "save") {
-          const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, cu(1, 0.1) - 2, cu(1, 0.1) + 8);
+          const k0 = seg(f, ln.from - 10, ln.from), k1 = seg(f, cu(1, 0.1) - 2, cu(1, 0.1) + 8);
           if (k0 > 0) { card(c, 50, 270, 980, 600, "#0b1220", k0); c.textAlign = "left"; c.font = SANS(44, 900); c.fillStyle = "#fde68a"; c.fillText(T.saveHead, 90, 340);
             (T.saveRows as [string, string][]).forEach(([lab, cmd], q) => { c.font = SANS(fit(c, lab, 900, 30, 800), 800); c.fillStyle = "#94a3b8"; c.fillText(lab, 90, 410 + q * 112);
               let fs = 30; c.font = MONO(fs, 700); while (c.measureText(cmd).width > 900 && fs > 18) { fs -= 1; c.font = MONO(fs, 700); }
