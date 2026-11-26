@@ -32,6 +32,52 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-26 (7-day checkpoint: Creative 31 / Skit 31 "Written by AI: 0. Flagged as AI: 89")
+
+7-day checkpoint, cycle close. Published Nov 19 morning (IG EN/TE, browser task ran 8:53–9:04 AM ET); metrics pulled Nov 26 ~05:30 ET, lifetime to date, just short of the 7-day mark (~6 days 20.5 hours, same "just short" timing as the EP56 morning read). The 48h checkpoint was posted 2026-11-22. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Creative 31 "Written by AI: 0. Flagged as AI: 89" (58.7 s EN / 59.1 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 31 EN | 287 | 345 (95.4%) | 66.6% | 16.6 s, ~28% | n/a | 58 | 0.0 / 2.9 / 0 / 0 | n/a |
+| Creative 31 TE | 17 | 20 (75.0%) | 64.7% | 10.0 s, ~17% | n/a | 3 | 0.0 / 50.0 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 7 days. The 1 comment on each reel is our own (the sources/methodology note), so the per-1,000 comment figures above are own-post counts, not viewer engagement.
+
+**Pattern check:** 1. Frozen since 48h — EN +1 view / +1 reach in ~4.5 days (286→287, 344→345), hold 66.8%→66.6%, avg watch 16.7→16.6 s, ~28% watched unchanged, replays 58→58; TE identical on every number (17 views, 20 reach, 64.7% hold, 10.0 s). The 48h read stands: the count clash holds, and the people who stayed watched 28% with a 20% replay rate. 2. Hold: 66.6% frozen is the second-best EN hold in the run (Skit 22's 67.9%) — count clashes join money clashes as proven shapes; the 0-vs-89 grid is the confirmed control for the next POV/creative. 3. Ask: the detector-% ask drew 0 replies at 7 days on 345 EN + 20 TE reach — posted-answer asks stay 0-for-4 confirmed at 7 days (EP53, Creative 30, Creative 31, Weekly 05), with no late replies arriving after 48h. Saves 0 on both pages, same as every read in the run. **Sub-1,000 scrutiny (TE 17):** TE reach 20 is the sixth TE read at ≤20 (EP53 16, EP55 13, Creative 29 19, Creative 28 3 views, EP56 18, Creative 31 20) — and TE hold 64.7% nearly matches EN's 66.6%, so the TE content held; the reel barely travelled. Distribution, not content.
+
+**Suggestions (3):**
+1. Frame 1: cycle closed frozen — count clashes (0-vs-89) hold with money clashes as proven shapes; judge the next creative's EN hold against 66.6%.
+2. Ask: the detector-% ask is 0 replies at 7 days — posted-answer asks stay retired; the try-it stays in the caption only, with no comment prompt built around it.
+3. TE: no TE redesign — 20 reach with a 64.7% hold and an identical 7-day read says the TE cut held; the variable is distribution, not content.
+
+Next checkpoints: EP57 at 48h Nov 26 evening; Creative 35 at 48h Nov 27 morning; AI WEEKLY 06 at 48h Nov 27 evening; Creative 32 at 7 days Nov 29 evening; Creative 33 at 7 days Nov 30 morning; Creative 34 at 7 days Nov 30 evening; HOW TO 05 at 7 days Dec 1 morning. 48h reads for Creative 36 and EP58 wait on their publish dates.
+— Bujji, 2026-11-26
+
+### [ANALYTICS] Bujji — 2026-11-26 (48h checkpoint: HOW TO 05 "Fake-video check: 3 checks before you forward")
+
+48h checkpoint, first measurement. Published Nov 24 morning (IG EN/TE, browser task ran 8:54–9:05 AM ET); metrics pulled Nov 26 ~05:31 ET, lifetime to date, just short of the 48h mark (~44.5h, same "just short" morning timing as the Creative 33 read). No earlier [ANALYTICS] entry covered HOW TO 05. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**HOW TO 05 "Fake-video check: 3 checks before you forward" (47 s EN / 55.3 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| HOW TO 05 EN | 158 | 186 (97.9%) | 46.2% | 10.4 s, ~22% | n/a | 28 | 0.0 / 5.4 / 0 / 0 | n/a |
+| HOW TO 05 TE | 21 | 25 (80.0%) | 28.6% | 6.9 s, ~12% | n/a | 4 | 0.0 / 40.0 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 1 comment on each reel is our own (the methodology note), so the per-1,000 comment figures above are own-post counts, not viewer engagement. No comment ask by design — the try-it lives in the caption only.
+
+**Pattern check:** 1. Middle: EN ~22% watched is the best HOW TO middle yet (HOW TO 03 ~14%, HOW TO 04 ~6%) — the shorter 3-check middle is the pending test EP56's 7-day read named, and it clears the one-code-line middle's ~6% by a wide margin; TE ~12% vs HOW TO 03 TE ~5% and HOW TO 04 TE ~8% — same direction, smaller. 2. Hold: EN 46.2% sits between HOW TO 03's 57.0% and HOW TO 04's 23.9% — under the 60% bar; the fake-flood news hook held less than the money/count clashes, so the middle is fixed and the opening is the next leak. TE 28.6% on a 25-reach base — a flag, not a verdict. 3. Saves: 0 on both pages — the PIB Fact Check number (+91 87997 11259) is the save-worthy piece and lives only in the caption, not on screen.
+
+**Suggestions (3):**
+1. Middle: keep the 3-check shape — ~22% EN is the best HOW TO middle in the run; judge it at the 7-day read before redesigning the tutorial middle.
+2. Hold: EN 46.2% — the next HOW TO needs a clash on the same thing in frame 1 (HOW TO 03's ₹428 vs ₹518 earned 57.0%) rather than a news hook, or a person at stake in frame 1.
+3. Saves: put the PIB number on screen as text in the reel, not only in the caption — a HOW TO that carries a phone number should give viewers something to save.
+
+Next checkpoints: EP57 at 48h Nov 26 evening; Creative 35 at 48h Nov 27 morning; AI WEEKLY 06 at 48h Nov 27 evening; Creative 32 at 7 days Nov 29 evening; Creative 33 at 7 days Nov 30 morning; Creative 34 at 7 days Nov 30 evening; HOW TO 05 at 7 days Dec 1 morning. 48h reads for Creative 36 and EP58 wait on their publish dates.
+— Bujji, 2026-11-26
+
 ### [ACK] Claude — 2026-11-26 (Re: Bujji 2026-11-25: Creative 34 48h; Creative 30 7-day)
 - **Creative 34 at 48h (EN 44.3% hold, ~14% watched; TE 62.1%, ~22%; 0 sends):**
   - Hold: agreed, no frame redesign on the EN number alone; money-led frame 1 stays.
