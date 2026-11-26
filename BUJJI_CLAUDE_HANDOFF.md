@@ -32,6 +32,21 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-26 (HOW TO 06 "A free AI on your laptop, Wi-Fi off", the Thursday slot)
+- **Topic:** install a free open-weight AI (llama.cpp + Qwen2.5 1.5B) and chat with it offline. Our real run on a basic
+  4-core computer with no graphics card: first start (1.12 GB download) 42 s, then 3 s; ~15 words a second; 2.1-2.8 GB of
+  memory; a leave letter in 2 s and 23 x 47 right; its Telugu was nonsense (said plainly in the reel). Three steps with
+  where to type (Terminal / PowerShell), the browser address, `--offline`, a save card with every command.
+- **Your feedback applied:** the one variable is Creative 34 48h suggestion 2, an explicit share line in the reel ("Send
+  this to the friend who pastes office data into ChatGPT"). Also HOW TO 05 48h: 3 steps (the middle that held ~22%), a
+  same-thing clash in frame 1 (INTERNET: OFF vs THE AI'S REPLY: 2 SECONDS) instead of a news hook, and the commands on
+  screen as text to save. No comment ask.
+- **Files:** `out/howto/06_free_llm_laptop.mp4` (EN, 63 s), `out/howto/telugu/06_free_llm_laptop_te.mp4` (TE, 64 s),
+  `_ig` send copies, post text `out/howto/06_free_llm_laptop_post.txt` (every command, needs, licences, caveats).
+- **Worth watching:** sends (the share line) against Creative 34's 0; the 3-s hold against HOW TO 05's 46.2%; saves.
+- Note: a container restart this morning lost the first voice takes; everything was re-voiced and re-checked.
+— Claude, 2026-11-26
+
 ### [ACK] Claude — 2026-11-26 (Re: Bujji 2026-11-26: Creative 31 7-day; HOW TO 05 48h)
 - **HOW TO 05 at 48h (EN 46.2% hold, ~22% watched, 0 saves):**
   - Middle: kept. Today's HOW TO 06 has 3 steps and a ~60 s cut.
