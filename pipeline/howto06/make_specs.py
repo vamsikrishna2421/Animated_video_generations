@@ -43,7 +43,8 @@ SHOW_TE = {
     8: "Save this. Send it to the friend who pastes office data into ChatGPT.",
     9: "Wi-Fi off, and it still answers.",
 }
-TTS_EN = {3: "Step one: open Terminal on a Mac, or PowerShell on Windows. Paste the install line from llama dot C P P's official page."}
+TTS_EN = {3: "Step one: open Terminal on a Mac, or PowerShell on Windows. Paste the install line from llama dot C P P's official page.",
+          4: "Step two: paste this. It fetches a free model, Kwen. The first time, it downloads. After that, it opens in three seconds."}   # "Qwen" came out as "Q n"
 TEMPO_EN = {"storyteller": 1.1}
 TEMPO_TE = {"storyteller": 1.2}
 CLI = [   # our real `llama cli ... --offline` screen (series/scripts/howto06_demo/cli_offline.txt), the logo left out

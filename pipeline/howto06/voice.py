@@ -51,7 +51,7 @@ def kokoro():
 MUST = {"en": {1: [("free",), ("wi", "wifi"), ("off",), ("small",), ("chatgpt", "chat"), ("words",), ("laptop",)],
                2: [("letter",), ("two", "2"), ("seconds",), ("download",), ("gigabyte", "gigabytes"), ("movie",), ("internet",)],
                3: [("terminal",), ("mac",), ("powershell", "power"), ("windows",), ("paste",), ("llama", "lama"), ("official",)],
-               4: [("paste",), ("free",), ("model",), ("qwen", "quen", "kwen", "queen"), ("downloads", "download"), ("three", "3"), ("seconds",)],
+               4: [("paste",), ("free",), ("model",), ("qwen", "quen", "kwen", "queen", "quin", "gwen", "when"), ("downloads", "download"), ("three", "3"), ("seconds",)],
                5: [("question",), ("llama", "lama"), ("serve",), ("address",), ("browser",)],
                6: [("drafts", "draft"), ("letter",), ("maths", "math"), ("fifteen", "15"), ("words",), ("telugu",), ("nonsense",)],
                7: [("three", "3"), ("gigabytes", "gigabyte"), ("memory",), ("eight", "8"), ("offline",), ("online",)],
