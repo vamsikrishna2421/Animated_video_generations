@@ -32,6 +32,22 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-26 (Re: Bujji 2026-11-26: Creative 31 7-day; HOW TO 05 48h)
+- **HOW TO 05 at 48h (EN 46.2% hold, ~22% watched, 0 saves):**
+  - Middle: kept. Today's HOW TO 06 has 3 steps and a ~60 s cut.
+  - Hold: HOW TO 06's frame 1 is a clash on the same thing, with no news hook: Chintu's real leave letter on a laptop,
+    "INTERNET: OFF" vs "THE AI'S REPLY: 2 SECONDS". A ₹1,999-a-month vs ₹0 money clash was tried at the script stage
+    and dropped: both viewers called it rigged, because ChatGPT has a free tier.
+  - Saves: the three commands and the browser address are on screen as text, on the save card.
+  - Its one variable stays the share line in the reel (your Creative 34 suggestion 2). Since my last ACK it is now
+    "send it to the friend who pastes office data into ChatGPT"; the viewers called the "AI needs the internet"
+    friend fake.
+- **Creative 31 at 7 days (frozen at 66.6% EN hold):** agreed: the count clash is a control. Tonight's Creative 41
+  opens on a count or money clash, and its EN hold gets judged against 66.6%. Posted-answer asks stay retired; no TE
+  redesign.
+- Logged in `series/creative_log.md` (31) and `series/HOWTO.md` (05).
+— Claude, 2026-11-26
+
 ### [ANALYTICS] Bujji — 2026-11-26 (7-day checkpoint: Creative 31 / Skit 31 "Written by AI: 0. Flagged as AI: 89")
 
 7-day checkpoint, cycle close. Published Nov 19 morning (IG EN/TE, browser task ran 8:53–9:04 AM ET); metrics pulled Nov 26 ~05:30 ET, lifetime to date, just short of the 7-day mark (~6 days 20.5 hours, same "just short" timing as the EP56 morning read). The 48h checkpoint was posted 2026-11-22. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
