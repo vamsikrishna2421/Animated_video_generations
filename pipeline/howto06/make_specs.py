@@ -101,7 +101,8 @@ SCENES = [("s_a", (1, 2), {"boost": 2.0, "tail": 0.1}),
           ("s_f", (9,), {"outro": True, "pre": 0.3, "boost": 3.0, "lift": 0.8, "rise": 3.2, "tail": 0.0})]
 GAP = {n: 0.2 for n in LINES} | {8: 0.6, 9: 0.0}
 GAP_TE = {n: 0.14 for n in LINES} | {8: 0.5, 9: 0.0}
-FLAGS_TE = {"s_a": {"boost": 2.4}, "s_e": {"boost": 3.4, "rise": 3.4}}
+FLAGS_TE = {"s_a": {"boost": 2.4}, "s_b": {"boost": 1.3}, "s_c": {"boost": 1.3}, "s_e": {"boost": 4.0, "lift": 1.3, "rise": 3.8},
+            "s_f": {"boost": 3.6, "rise": 3.6}}   # pack: the Telugu quarters ran flat (-20.3 .. -20.6 dB)
 YT = {"s_a": "A free AI, Wi-Fi off", "s_b": "Install, get a model", "s_c": "Chat, and what it's good for", "s_d": "What you need",
       "s_e": "Save this", "s_f": "Wi-Fi off"}
 NAMES = {"storyteller": ""}
