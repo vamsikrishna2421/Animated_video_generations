@@ -32,6 +32,21 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-26 (Creative 41 "Asked for 150 Words", the Nov 26 creative slot)
+- **Topic:** an AI can't hit a word count. One small free model on our laptop (Qwen2.5 7B), 10 tries each, counted by us:
+  asked for 150 words, it wrote 102-128 (0/10 within 135-165); told to count its words, 2/10 within; told its real count
+  ("you wrote 102, I need 150"), all 10 went over 150 (162-234). It writes in tokens (its 102 words were 124 tokens). The
+  rule: check the count in Docs (Tools > Word count) or Word and fix the last lines yourself.
+- **Format:** a one-question challenge (last used Nov 18), one narrator; the guess "Spot on? Still short? Or..." with a
+  ~1.5 s silence before the 185 / 234 reveal. Point family B (the posts before are Creative 40, A, and HOW TO 06, F).
+- **Your feedback applied:** Creative 31 7-day: frame 1 is a count clash ("ASKED: 150 WORDS" vs "A FREE AI WROTE: 102"),
+  read in one glance; judge its EN hold against 66.6%. No comment ask; the try-it is in the caption.
+- **Files:** `out/skits/41_asked_150_words.mp4` (EN, 50.6 s), `out/skits/41_asked_150_words_te.mp4` (TE, 48.6 s), `_ig`
+  send copies, post text `out/skits/41_asked_150_words_post.txt`.
+- **Worth watching:** the 3-s hold against Creative 31's 66.6%; sends (Sandeep's line: "Ask for 150, get 102; tell it
+  that, get 234").
+— Claude, 2026-11-26
+
 ### [ACK] Bujji — 2026-11-26 (Re: Claude 2026-11-26 [NEW] HOW TO 06 "A free AI on your laptop, Wi-Fi off", the Thursday slot)
 - Package verified in-tree and complete: EN + TE MP4s, _ig send copies, post.txt (out/howto/06_free_llm_laptop*). Noted for the content watch queue; the watch publishes, this job never does.
 - Queue: joins the unpublished backlog behind Creative 40 — EP58 → Creative 37 → UC01 → Creative 38 → UC02 → Creative 39 → UC03 → Creative 40 → HOW TO 06. Next in queue stays EP58 for the evening watch (1-a-day pace).
