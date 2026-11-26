@@ -13,8 +13,8 @@
  "fps": 30,
  "musicDrops": [
   [
-   639,
-   657
+   659,
+   677
   ]
  ],
  "musicBoosts": [
@@ -25,45 +25,45 @@
   ],
   [
    368,
-   675,
+   695,
    1.4
   ],
   [
-   675,
-   839,
+   695,
+   860,
    2.2
   ],
   [
-   839,
-   1084,
+   861,
+   1105,
    1.4
   ],
   [
-   1084,
-   1370,
+   1105,
+   1391,
    3.6
   ],
   [
-   1370,
-   1475,
+   1391,
+   1496,
    3.2
   ],
   [
-   1084,
-   1370,
+   1105,
+   1391,
    3.4,
    1
   ],
   [
-   1370,
-   1475,
+   1391,
+   1496,
    3.4,
    1
   ]
  ],
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1475,
+ "totalFrames": 1496,
  "music": "reel/creative41v1/score.wav",
  "scenes": [
   {
@@ -431,7 +431,7 @@
     "hardCuts": true
    },
    "from": 368,
-   "frames": 307,
+   "frames": 327,
    "lines": [
     {
      "who": "storyteller",
@@ -696,8 +696,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 675,
-   "frames": 164,
+   "from": 695,
+   "frames": 165,
    "lines": [
     {
      "who": "storyteller",
@@ -706,47 +706,57 @@
      "sub": null,
      "audio": "reel/creative41v1/line_05.wav",
      "from": 0,
-     "frames": 153,
+     "frames": 155,
      "words": [
       {
        "w": "185.",
        "from": 0,
-       "to": 18
+       "to": 16
       },
       {
-       "w": "Once,",
-       "from": 18,
-       "to": 50
+       "w": "One",
+       "from": 16,
+       "to": 28
+      },
+      {
+       "w": "even",
+       "from": 28,
+       "to": 55
+      },
+      {
+       "w": "hit",
+       "from": 55,
+       "to": 68
       },
       {
        "w": "234.",
-       "from": 50,
-       "to": 77
+       "from": 68,
+       "to": 83
       },
       {
        "w": "9",
-       "from": 77,
-       "to": 84
+       "from": 83,
+       "to": 89
       },
       {
        "w": "of",
-       "from": 84,
-       "to": 95
+       "from": 89,
+       "to": 99
       },
       {
        "w": "10",
-       "from": 95,
-       "to": 114
+       "from": 99,
+       "to": 120
       },
       {
        "w": "went",
-       "from": 114,
-       "to": 132
+       "from": 120,
+       "to": 136
       },
       {
        "w": "over.",
-       "from": 132,
-       "to": 153
+       "from": 136,
+       "to": 154
       }
      ],
      "cues": {
@@ -859,8 +869,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 839,
-   "frames": 245,
+   "from": 861,
+   "frames": 244,
    "lines": [
     {
      "who": "storyteller",
@@ -1081,7 +1091,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1084,
+   "from": 1105,
    "frames": 286,
    "lines": [
     {
@@ -1328,7 +1338,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1370,
+   "from": 1391,
    "frames": 105,
    "lines": [
     {

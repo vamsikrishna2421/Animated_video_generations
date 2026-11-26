@@ -19,7 +19,7 @@ LINES = {   # n: (prop, English, Telugu)
         "వర్డ్స్ లెక్కపెట్టమని చెప్పాం: [1] పదిలో రెండు మాత్రమే, దగ్గరికి వచ్చాయి."),
     4: ("question", "You'd just tell it the real count, right? We did. | [1] Spot on? Still short? Or...",
         "అసలు లెక్క చెబితే సరిపోతుంది కదా? చెప్పాం. | [1] సరిగ్గా వచ్చిందా? ఇంకా తక్కువా? లేక..."),
-    5: ("reveal", "[1] A hundred and eighty-five. [2] Once, two hundred and thirty-four. Nine of ten went over.",
+    5: ("reveal", "[1] A hundred and eighty-five. [2] One even hit two hundred and thirty-four. Nine of ten went over.",
         "[1] నూట ఎనభై ఐదు! ముప్పై ఐదు ఎక్కువ. [2] ఒకసారి, రెండొందల ముప్పై నాలుగు. తక్కువైందన్నామని, ఏకంగా ఎక్కువ రాసేసింది!"),
     6: ("why", "It writes in tokens, not words: those hundred and two words were a hundred and twenty-four tokens. [1] Told it was short, it just guessed long.",
         "ఇది వర్డ్స్ లో కాదు, టోకెన్లలో రాస్తుంది: ఆ నూట రెండు వర్డ్స్, నూట ఇరవై నాలుగు టోకెన్లు. [1] తక్కువ అన్నాం, అందుకే ఊహించి ఎక్కువ రాసింది."),
@@ -29,7 +29,7 @@ LINES = {   # n: (prop, English, Telugu)
 }
 SHOW = {1: "Asked for 150 words. A free AI wrote 102.", 2: "One small model on our laptop, 10 tries: 102 to 128. Short, every time.",
         3: "Told to count its words: 2 of 10 landed within 15.", 4: "You'd just tell it the real count, right? We did. <pause 0.6> Spot on? Still short? Or...",
-        5: "185. Once, 234. 9 of 10 went over.",
+        5: "185. One even hit 234. 9 of 10 went over.",
         6: "It writes in tokens, not words: those 102 words were 124 tokens. Told it was short, it just guessed long.",
         8: "Asked for 150. Got 102."}
 SHOW_TE = {
@@ -72,9 +72,9 @@ SCENES = [("s_a", (1, 2), {"boost": 2.6, "tail": 0.1}),
           ("s_d", (6,), {"boost": 1.4, "lift": 0.6, "tail": 0.1}),
           ("s_e", (7,), {"boost": 3.6, "lift": 1.2, "rise": 3.4, "tail": 0.4}),
           ("s_f", (8,), {"outro": True, "pre": 0.3, "boost": 3.2, "lift": 0.8, "rise": 3.4, "tail": 0.0})]
-GAP = {n: 0.2 for n in LINES} | {7: 0.6, 8: 0.0}
-GAP_TE = {n: 0.14 for n in LINES} | {7: 0.5, 8: 0.0}
-FLAGS_TE = {"s_e": {"boost": 4.0, "rise": 3.8}}
+GAP = {n: 0.2 for n in LINES} | {4: 0.8, 7: 0.6, 8: 0.0}   # 4: a silence before the reveal (pack: "Or 185" ran together)
+GAP_TE = {n: 0.14 for n in LINES} | {4: 0.7, 7: 0.5, 8: 0.0}
+FLAGS_TE = {"s_b": {"boost": 1.2}, "s_d": {"boost": 1.2}, "s_e": {"boost": 4.4, "lift": 1.4, "rise": 4.0}, "s_f": {"boost": 3.6, "rise": 3.8}}   # pack: the Telugu quarters ran flat
 YT = {"s_a": "Asked 150, got 102", "s_b": "Tell it the count?", "s_c": "185, 234", "s_d": "Tokens, not words", "s_e": "Check the count yourself",
       "s_f": "150 vs 102"}
 NAMES = {"storyteller": ""}

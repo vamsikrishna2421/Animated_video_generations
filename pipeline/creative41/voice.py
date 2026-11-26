@@ -58,7 +58,7 @@ MUST = {"en": {1: [("fifty", "150"), ("words",), ("free",), ("two", "102")],
                8: [("fifty", "150"), ("two", "102")]},
         "te": {}}   # Telugu: full reads by hand (chunk by chunk)
 JUDGE_TEXT = {1: "Asked for 150 words. A free AI wrote 102.", 2: "One small model on our laptop, 10 tries: 102 to 128. Short, every time.",
-              3: "Told to count its words: 2 of 10 landed within 15.", 5: "185. Once, 234. 9 of 10 went over.",
+              3: "Told to count its words: 2 of 10 landed within 15.", 5: "185. One even hit 234. 9 of 10 went over.",
               6: "It writes in tokens, not words: those 102 words were 124 tokens. Told it was short, it just guessed long.",
               8: "Asked for 150. Got 102."}
 
