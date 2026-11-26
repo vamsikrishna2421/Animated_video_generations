@@ -64,3 +64,35 @@ Sound: a till "ka-ching" and a hit on the ₹1,999 in second 1, a Wi-Fi "off" bl
 download whoosh; a ding on the letter; a drop before "its Telugu was nonsense" and a buzz on the ✗; a lift into the save
 card; a riser and the hit back to frame 1.
 Caption: every command, links, needs, licences, the ChatGPT Plus price with sources, the Telugu caveat, the next HOW TO.
+
+## Script review (human-viewer, v1) and what changed
+- Both: the hook sold "free ChatGPT" but the reel delivers a small offline helper; "₹1,999 vs ₹0" read as rigged
+  (ChatGPT has a free tier) -> no price clash: frame 1 is "INTERNET: OFF" vs "THE AI'S REPLY: 2 SECONDS", and line 1 says
+  "It's small, not ChatGPT. But your words never leave your laptop." The loop line "1,999 or zero" is gone: "Wi-Fi off,
+  and it still answers."
+- Both: the download vs "Wi-Fi off" -> line 2 says "one download first, about one gigabyte, like a movie. Then no
+  internet."; "--offline" in line 7 and on the save card.
+- Both: where to type -> "open Terminal on a Mac, or PowerShell on Windows. Paste..."; the browser way names its
+  address (`llama serve` prints http://127.0.0.1:9931 in this build; checked).
+- Priya (facts): "plain laptop" -> "4 CPU cores, no graphics card" on screen; the install lines are labelled as from the
+  official page, with "we tested on Linux, building from source"; "fifteen words a second" with "(17 tokens a second)"
+  on screen; "good for / not for" in line 6; Qwen named in line 4; "llama.cpp" said in line 3 (Sandeep heard "llama" as
+  Meta's).
+- Share line: "the friend who says AI needs the internet" read as fake -> "send it to the friend who pastes office data
+  into ChatGPT" (ties to HOW TO 04).
+- Telugu (Sandeep): "దాదాపు" dropped; "సొంత పేజీ" -> "అఫీషియల్ పేజీ"; line 4 -> "డౌన్‌లోడ్ ఒక్కసారే. తర్వాత, మూడు
+  సెకన్లలో ఓపెన్."; line 6 -> "కానీ తెలుగులో అడిగితే, అర్థం లేని మాటలు."; line 7 -> "కమాండ్ చివర, డాష్ డాష్ ఆఫ్‌లైన్ అని
+  టైప్ చేస్తే"; "సున్నా" is no longer in the script. ("AI" stays unspoken in Telugu: "చాట్‌బాట్".)
+
+## Script v2 (as voiced; pipeline/howto06/make_specs.py)
+| # | beat | EN | TE |
+|---|---|---|---|
+| 1 | hook | A free AI that answers with the Wi-Fi off. [1] It's small, not ChatGPT. But your words never leave your laptop. | వైఫై ఆఫ్ లో కూడా జవాబు ఇచ్చే, ఒక ఫ్రీ చాట్‌బాట్. [1] ఇది చిన్నది, చాట్‌జీపీటీ కాదు. కానీ మీ మాటలు, మీ లాప్‌టాప్ దాటి బయటికి వెళ్ళవు. |
+| 2 | result | This letter took two seconds. [1] One download first, about one gigabyte, like a movie. Then no internet. | ఈ లెటర్, రెండు సెకన్లలో వచ్చింది. [1] ముందు ఒక్కసారి, ఒక సినిమా అంత, ఒక గిగాబైట్ డౌన్‌లోడ్. తర్వాత, ఇంటర్నెట్ అక్కర్లేదు. |
+| 3 | install | Step one: open Terminal on a Mac, or PowerShell on Windows. [1] Paste the install line from llama.cpp's official page. | స్టెప్ వన్: మ్యాక్ లో టెర్మినల్, విండోస్ లో పవర్‌షెల్ ఓపెన్ చేసి, [1] లామా అఫీషియల్ పేజీలో ఉన్న, ఇన్‌స్టాల్ లైన్ పేస్ట్ చేసుకోండి. |
+| 4 | model | Step two: paste this. It fetches a free model, Qwen. [1] The first time, it downloads. After that, it opens in three seconds. | స్టెప్ టూ: ఈ లైన్ పేస్ట్ చేస్తే, క్వెన్ అనే ఫ్రీ మోడల్ వస్తుంది. [1] డౌన్‌లోడ్ ఒక్కసారే. తర్వాత, మూడు సెకన్లలో ఓపెన్. |
+| 5 | chat | Step three: type your question. [1] Or run llama serve, and open the address it shows in your browser. | స్టెప్ త్రీ: మీ ప్రశ్న అడగండి. [1] లేదా లామా సర్వ్ అని టైప్ చేసి, అది చూపించే అడ్రస్, బ్రౌజర్ లో ఓపెన్ చేసుకోండి. |
+| 6 | honest | Good for drafts: the letter was fine, the maths was right, about fifteen words a second. [1] Not for Telugu: it wrote nonsense. | డ్రాఫ్ట్‌లకి బాగుంది: లెటర్ బాగుంది, లెక్క సరిగ్గా చేసింది, సెకనుకి దాదాపు పదిహేను పదాలు. [1] కానీ తెలుగులో అడిగితే, అర్థం లేని మాటలు. |
+| 7 | needs | It needs about three gigabytes of free memory. Most eight-gigabyte laptops are fine. [1] Add dash dash offline, and it never goes online. | దీనికి మూడు గిగాబైట్ల ఖాళీ మెమరీ కావాలి; ఎనిమిది గిగాబైట్ల లాప్‌టాప్ సరిపోతుంది. [1] కమాండ్ చివర, డాష్ డాష్ ఆఫ్‌లైన్ అని టైప్ చేస్తే, ఇంటర్నెట్ కి వెళ్ళదు. |
+| 8 | save | Save this. [1] And send it to the friend who pastes office data into ChatGPT. | ఇది సేవ్ చేసుకోండి. [1] ఆఫీస్ డేటా, చాట్‌జీపీటీ లో పేస్ట్ చేసే ఫ్రెండ్ కి, ఇది పంపండి. |
+| 9 | loop | Wi-Fi off, [1] and it still answers. | వైఫై ఆఫ్, [1] అయినా జవాబు ఇస్తుంది. |

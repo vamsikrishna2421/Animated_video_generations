@@ -187,9 +187,10 @@ const StLlm: React.FC<SP> = ({ s }) => {
             term(c, { x: 50, y: 780, w: 980, h: 300 }, T.termTitle, [["$ " + typed, "#e2e8f0"], [f > cu(1, 0.1) + 34 ? T.offlineNote : "", "#86efac"]], 30, k1); }
         } else if (P === "save") {
           const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, cu(1, 0.1) - 2, cu(1, 0.1) + 8);
-          if (k0 > 0) { card(c, 50, 280, 980, 560, "#0b1220", k0); c.textAlign = "left"; c.font = SANS(44, 900); c.fillStyle = "#fde68a"; c.fillText(T.saveHead, 90, 350);
-            (T.saveRows as [string, string][]).forEach(([lab, cmd], q) => { c.font = SANS(30, 800); c.fillStyle = "#94a3b8"; c.fillText(lab, 90, 430 + q * 130);
-              c.font = MONO(fit(c, cmd, 900, 28, 700) - 2, 700); c.fillStyle = "#e2e8f0"; c.fillText(cmd, 90, 476 + q * 130); });
+          if (k0 > 0) { card(c, 50, 270, 980, 600, "#0b1220", k0); c.textAlign = "left"; c.font = SANS(44, 900); c.fillStyle = "#fde68a"; c.fillText(T.saveHead, 90, 340);
+            (T.saveRows as [string, string][]).forEach(([lab, cmd], q) => { c.font = SANS(fit(c, lab, 900, 30, 800), 800); c.fillStyle = "#94a3b8"; c.fillText(lab, 90, 410 + q * 112);
+              let fs = 30; c.font = MONO(fs, 700); while (c.measureText(cmd).width > 900 && fs > 18) { fs -= 1; c.font = MONO(fs, 700); }
+              c.fillStyle = "#e2e8f0"; c.fillText(cmd, 90, 452 + q * 112); });
             c.restore(); }
           if (k1 > 0) { card(c, 70, 890, 940, 250, "#dcfce7", k1); c.textAlign = "center"; c.font = SANS(56, 900); c.fillStyle = "#14532d";
             wrap(c, T.share, 860).slice(0, 3).forEach((t, q) => c.fillText(t, 540, 980 + q * 66)); c.restore(); }

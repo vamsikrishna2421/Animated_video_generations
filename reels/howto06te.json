@@ -1,0 +1,1186 @@
+{
+ "id": "howto06te",
+ "title": "HOW TO 06: a free AI on your laptop, Wi-Fi off (Telugu audio)",
+ "label": "HOW TO 06",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.3,
+ "music": "lofi",
+ "names": {
+  "storyteller": ""
+ },
+ "musicVol": [
+  0.2,
+  0.46
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   240,
+   -10,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 1.0,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1390,
+ "endPad": 0.2,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_llm06",
+   "tail": 0.1,
+   "boost": 2.4,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "storyteller",
+      "prop": "result",
+      "n": 2
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "letter": [
+      "Dear Manager,",
+      "I am sorry to inform you that I have a fever today",
+      "and will be back to work tomorrow.",
+      "Thank you for your understanding."
+     ],
+     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "leftLab": "INTERNET",
+     "leftVal": "OFF",
+     "rightLab": "THE AI'S REPLY",
+     "rightVal": "2 SECONDS",
+     "tag": "HOW TO 06 · FREE · SMALL · STAYS ON YOUR LAPTOP",
+     "noNet": "1 GB DOWNLOAD, ONCE · THEN NO INTERNET",
+     "step1": "STEP 1 · INSTALL",
+     "step2": "STEP 2 · GET A MODEL",
+     "step3": "STEP 3 · CHAT",
+     "termTitle": "Terminal (Mac) · PowerShell (Windows)",
+     "installRows": [
+      [
+       "# Mac / Linux: open Terminal, paste:",
+       "#94a3b8"
+      ],
+      [
+       "curl -LsSf https://llama.app/install.sh | sh",
+       "#e2e8f0"
+      ],
+      [
+       "",
+       "#000"
+      ],
+      [
+       "# Windows: open PowerShell, paste:",
+       "#94a3b8"
+      ],
+      [
+       "irm https://llama.app/install.ps1 | iex",
+       "#e2e8f0"
+      ]
+     ],
+     "installHead": "llama.cpp · free · open source (MIT)",
+     "installSub": "the install lines from its official page: github.com/ggml-org/llama.cpp",
+     "installNote": "we tested on Linux, building from source (3.7 min on 4 cores)",
+     "modelRows": [
+      [
+       "$ llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+       "#e2e8f0"
+      ],
+      [
+       "downloading qwen2.5-1.5b-instruct-q4_k_m.gguf ...",
+       "#94a3b8"
+      ]
+     ],
+     "first": "FIRST TIME",
+     "firstVal": "DOWNLOAD 1.12 GB",
+     "after": "EVERY TIME AFTER",
+     "afterVal": "OPENS IN 3 s",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "cliTitle": "Terminal: llama cli",
+     "cliRows": [
+      [
+       "$ llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+       "#e2e8f0"
+      ],
+      [
+       "model      : Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+       "#94a3b8"
+      ],
+      [
+       "> Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+       "#fde68a"
+      ],
+      [
+       "I'm terribly sorry, but I have a fever and will be back to work tomorrow. I hope to contribute to our team's success.",
+       "#e2e8f0"
+      ],
+      [
+       "[ Prompt: 183.8 t/s | Generation: 18.5 t/s ]",
+       "#86efac"
+      ]
+     ],
+     "url": "http://127.0.0.1:9931  (llama serve)",
+     "question": "Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+     "webReply": [
+      "Dear Manager,",
+      "I'm writing to inform you that I have a fever today",
+      "and will return to work tomorrow."
+     ],
+     "webStats": "36 tokens · 2.4 s · 15.20 t/s",
+     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "tiles": [
+      [
+       "GOOD FOR DRAFTS",
+       "the leave letter ✓ · 23 × 47 = 1081 ✓",
+       true
+      ],
+      [
+       "SPEED",
+       "≈15 words a second (17 tokens a second)",
+       true
+      ],
+      [
+       "TELUGU",
+       "మేము ప్రశ్నాలను మరింత పరిశోధించుకోవాలు...",
+       false
+      ]
+     ],
+     "teluguNote": "its Telugu: words that mean nothing, repeated",
+     "needRows": [
+      [
+       "MEMORY",
+       "~3 GB free (most 8 GB laptops OK)"
+      ],
+      [
+       "DISK",
+       "1.2 GB"
+      ],
+      [
+       "NETWORK",
+       "only for the first download"
+      ]
+     ],
+     "offlineCmd": "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+     "offlineNote": "--offline: uses the downloaded copy, no network",
+     "saveHead": "SAVE THIS · 3 STEPS",
+     "saveRows": [
+      [
+       "1 · install, Mac / Linux (Terminal)",
+       "curl -LsSf https://llama.app/install.sh | sh"
+      ],
+      [
+       "1 · install, Windows (PowerShell)",
+       "irm https://llama.app/install.ps1 | iex"
+      ],
+      [
+       "2 · get the model, chat (add --offline later)",
+       "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M"
+      ],
+      [
+       "3 · or the browser: open http://127.0.0.1:9931",
+       "llama serve -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M"
+      ]
+     ],
+     "share": "SEND THIS TO THE FRIEND WHO PASTES OFFICE DATA INTO CHATGPT"
+    },
+    "yt": {
+     "chapter": "A free AI, Wi-Fi off",
+     "title": "A free AI, Wi-Fi off",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "వైఫై ఆఫ్ లో కూడా జవాబు ఇచ్చే, ఒక ఫ్రీ చాట్‌బాట్. [1] ఇది చిన్నది, చాట్‌జీపీటీ కాదు. కానీ మీ మాటలు, మీ లాప్‌టాప్ దాటి బయటికి వెళ్ళవు.",
+     "show": "A free chatbot that answers even with the Wi-Fi off. It's small, it's not ChatGPT. But your words never leave your laptop.",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2
+    },
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "ఈ లెటర్, రెండు సెకన్లలో వచ్చింది. [1] ముందు ఒక్కసారి, ఒక సినిమా అంత, ఒక గిగాబైట్ డౌన్‌లోడ్. తర్వాత, ఇంటర్నెట్ అక్కర్లేదు.",
+     "show": "This letter came in 2 seconds. First, once, a 1 GB download, like a movie. After that, no internet needed.",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_llm06",
+   "tail": 0.1,
+   "boost": 1.6,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "install",
+      "n": 3
+     },
+     {
+      "who": "storyteller",
+      "prop": "model",
+      "n": 4
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "letter": [
+      "Dear Manager,",
+      "I am sorry to inform you that I have a fever today",
+      "and will be back to work tomorrow.",
+      "Thank you for your understanding."
+     ],
+     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "leftLab": "INTERNET",
+     "leftVal": "OFF",
+     "rightLab": "THE AI'S REPLY",
+     "rightVal": "2 SECONDS",
+     "tag": "HOW TO 06 · FREE · SMALL · STAYS ON YOUR LAPTOP",
+     "noNet": "1 GB DOWNLOAD, ONCE · THEN NO INTERNET",
+     "step1": "STEP 1 · INSTALL",
+     "step2": "STEP 2 · GET A MODEL",
+     "step3": "STEP 3 · CHAT",
+     "termTitle": "Terminal (Mac) · PowerShell (Windows)",
+     "installRows": [
+      [
+       "# Mac / Linux: open Terminal, paste:",
+       "#94a3b8"
+      ],
+      [
+       "curl -LsSf https://llama.app/install.sh | sh",
+       "#e2e8f0"
+      ],
+      [
+       "",
+       "#000"
+      ],
+      [
+       "# Windows: open PowerShell, paste:",
+       "#94a3b8"
+      ],
+      [
+       "irm https://llama.app/install.ps1 | iex",
+       "#e2e8f0"
+      ]
+     ],
+     "installHead": "llama.cpp · free · open source (MIT)",
+     "installSub": "the install lines from its official page: github.com/ggml-org/llama.cpp",
+     "installNote": "we tested on Linux, building from source (3.7 min on 4 cores)",
+     "modelRows": [
+      [
+       "$ llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+       "#e2e8f0"
+      ],
+      [
+       "downloading qwen2.5-1.5b-instruct-q4_k_m.gguf ...",
+       "#94a3b8"
+      ]
+     ],
+     "first": "FIRST TIME",
+     "firstVal": "DOWNLOAD 1.12 GB",
+     "after": "EVERY TIME AFTER",
+     "afterVal": "OPENS IN 3 s",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "cliTitle": "Terminal: llama cli",
+     "cliRows": [
+      [
+       "$ llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+       "#e2e8f0"
+      ],
+      [
+       "model      : Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+       "#94a3b8"
+      ],
+      [
+       "> Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+       "#fde68a"
+      ],
+      [
+       "I'm terribly sorry, but I have a fever and will be back to work tomorrow. I hope to contribute to our team's success.",
+       "#e2e8f0"
+      ],
+      [
+       "[ Prompt: 183.8 t/s | Generation: 18.5 t/s ]",
+       "#86efac"
+      ]
+     ],
+     "url": "http://127.0.0.1:9931  (llama serve)",
+     "question": "Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+     "webReply": [
+      "Dear Manager,",
+      "I'm writing to inform you that I have a fever today",
+      "and will return to work tomorrow."
+     ],
+     "webStats": "36 tokens · 2.4 s · 15.20 t/s",
+     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "tiles": [
+      [
+       "GOOD FOR DRAFTS",
+       "the leave letter ✓ · 23 × 47 = 1081 ✓",
+       true
+      ],
+      [
+       "SPEED",
+       "≈15 words a second (17 tokens a second)",
+       true
+      ],
+      [
+       "TELUGU",
+       "మేము ప్రశ్నాలను మరింత పరిశోధించుకోవాలు...",
+       false
+      ]
+     ],
+     "teluguNote": "its Telugu: words that mean nothing, repeated",
+     "needRows": [
+      [
+       "MEMORY",
+       "~3 GB free (most 8 GB laptops OK)"
+      ],
+      [
+       "DISK",
+       "1.2 GB"
+      ],
+      [
+       "NETWORK",
+       "only for the first download"
+      ]
+     ],
+     "offlineCmd": "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+     "offlineNote": "--offline: uses the downloaded copy, no network",
+     "saveHead": "SAVE THIS · 3 STEPS",
+     "saveRows": [
+      [
+       "1 · install, Mac / Linux (Terminal)",
+       "curl -LsSf https://llama.app/install.sh | sh"
+      ],
+      [
+       "1 · install, Windows (PowerShell)",
+       "irm https://llama.app/install.ps1 | iex"
+      ],
+      [
+       "2 · get the model, chat (add --offline later)",
+       "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M"
+      ],
+      [
+       "3 · or the browser: open http://127.0.0.1:9931",
+       "llama serve -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M"
+      ]
+     ],
+     "share": "SEND THIS TO THE FRIEND WHO PASTES OFFICE DATA INTO CHATGPT"
+    },
+    "yt": {
+     "chapter": "Install, get a model",
+     "title": "Install, get a model",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "స్టెప్ వన్: మ్యాక్ లో టెర్మినల్, విండోస్ లో పవర్‌షెల్ ఓపెన్ చేసి, [1] లామా అఫీషియల్ పేజీలో ఉన్న, ఇన్‌స్టాల్ లైన్ పేస్ట్ చేసుకోండి.",
+     "show": "Step one: open Terminal on a Mac, PowerShell on Windows, and paste the install line from llama's official page.",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2
+    },
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "స్టెప్ టూ: ఈ లైన్ పేస్ట్ చేస్తే, క్వెన్ అనే ఫ్రీ మోడల్ వస్తుంది. [1] డౌన్‌లోడ్ ఒక్కసారే. తర్వాత, మూడు సెకన్లలో ఓపెన్.",
+     "show": "Step two: paste this line and a free model called Qwen comes. The download is only once. After that, it opens in 3 seconds.",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_llm06",
+   "tail": 0.1,
+   "boost": 1.6,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     1,
+     "1",
+     0.35
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "chat",
+      "n": 5
+     },
+     {
+      "who": "storyteller",
+      "prop": "honest",
+      "n": 6
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "letter": [
+      "Dear Manager,",
+      "I am sorry to inform you that I have a fever today",
+      "and will be back to work tomorrow.",
+      "Thank you for your understanding."
+     ],
+     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "leftLab": "INTERNET",
+     "leftVal": "OFF",
+     "rightLab": "THE AI'S REPLY",
+     "rightVal": "2 SECONDS",
+     "tag": "HOW TO 06 · FREE · SMALL · STAYS ON YOUR LAPTOP",
+     "noNet": "1 GB DOWNLOAD, ONCE · THEN NO INTERNET",
+     "step1": "STEP 1 · INSTALL",
+     "step2": "STEP 2 · GET A MODEL",
+     "step3": "STEP 3 · CHAT",
+     "termTitle": "Terminal (Mac) · PowerShell (Windows)",
+     "installRows": [
+      [
+       "# Mac / Linux: open Terminal, paste:",
+       "#94a3b8"
+      ],
+      [
+       "curl -LsSf https://llama.app/install.sh | sh",
+       "#e2e8f0"
+      ],
+      [
+       "",
+       "#000"
+      ],
+      [
+       "# Windows: open PowerShell, paste:",
+       "#94a3b8"
+      ],
+      [
+       "irm https://llama.app/install.ps1 | iex",
+       "#e2e8f0"
+      ]
+     ],
+     "installHead": "llama.cpp · free · open source (MIT)",
+     "installSub": "the install lines from its official page: github.com/ggml-org/llama.cpp",
+     "installNote": "we tested on Linux, building from source (3.7 min on 4 cores)",
+     "modelRows": [
+      [
+       "$ llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+       "#e2e8f0"
+      ],
+      [
+       "downloading qwen2.5-1.5b-instruct-q4_k_m.gguf ...",
+       "#94a3b8"
+      ]
+     ],
+     "first": "FIRST TIME",
+     "firstVal": "DOWNLOAD 1.12 GB",
+     "after": "EVERY TIME AFTER",
+     "afterVal": "OPENS IN 3 s",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "cliTitle": "Terminal: llama cli",
+     "cliRows": [
+      [
+       "$ llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+       "#e2e8f0"
+      ],
+      [
+       "model      : Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+       "#94a3b8"
+      ],
+      [
+       "> Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+       "#fde68a"
+      ],
+      [
+       "I'm terribly sorry, but I have a fever and will be back to work tomorrow. I hope to contribute to our team's success.",
+       "#e2e8f0"
+      ],
+      [
+       "[ Prompt: 183.8 t/s | Generation: 18.5 t/s ]",
+       "#86efac"
+      ]
+     ],
+     "url": "http://127.0.0.1:9931  (llama serve)",
+     "question": "Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+     "webReply": [
+      "Dear Manager,",
+      "I'm writing to inform you that I have a fever today",
+      "and will return to work tomorrow."
+     ],
+     "webStats": "36 tokens · 2.4 s · 15.20 t/s",
+     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "tiles": [
+      [
+       "GOOD FOR DRAFTS",
+       "the leave letter ✓ · 23 × 47 = 1081 ✓",
+       true
+      ],
+      [
+       "SPEED",
+       "≈15 words a second (17 tokens a second)",
+       true
+      ],
+      [
+       "TELUGU",
+       "మేము ప్రశ్నాలను మరింత పరిశోధించుకోవాలు...",
+       false
+      ]
+     ],
+     "teluguNote": "its Telugu: words that mean nothing, repeated",
+     "needRows": [
+      [
+       "MEMORY",
+       "~3 GB free (most 8 GB laptops OK)"
+      ],
+      [
+       "DISK",
+       "1.2 GB"
+      ],
+      [
+       "NETWORK",
+       "only for the first download"
+      ]
+     ],
+     "offlineCmd": "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+     "offlineNote": "--offline: uses the downloaded copy, no network",
+     "saveHead": "SAVE THIS · 3 STEPS",
+     "saveRows": [
+      [
+       "1 · install, Mac / Linux (Terminal)",
+       "curl -LsSf https://llama.app/install.sh | sh"
+      ],
+      [
+       "1 · install, Windows (PowerShell)",
+       "irm https://llama.app/install.ps1 | iex"
+      ],
+      [
+       "2 · get the model, chat (add --offline later)",
+       "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M"
+      ],
+      [
+       "3 · or the browser: open http://127.0.0.1:9931",
+       "llama serve -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M"
+      ]
+     ],
+     "share": "SEND THIS TO THE FRIEND WHO PASTES OFFICE DATA INTO CHATGPT"
+    },
+    "yt": {
+     "chapter": "Chat, and what it's good for",
+     "title": "Chat, and what it's good for",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "స్టెప్ త్రీ: మీ ప్రశ్న అడగండి. [1] లేదా లామా సర్వ్ అని టైప్ చేసి, అది చూపించే అడ్రస్, బ్రౌజర్ లో ఓపెన్ చేసుకోండి.",
+     "show": "Step three: ask your question. Or type llama serve, and open the address it shows in your browser.",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2
+    },
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "డ్రాఫ్ట్‌లకి బాగుంది: లెటర్ బాగుంది, లెక్క సరిగ్గా చేసింది, సెకనుకి దాదాపు పదిహేను పదాలు. [1] కానీ తెలుగులో అడిగితే, అర్థం లేని మాటలు.",
+     "show": "Good for drafts: the letter was good, the maths was right, about 15 words a second. But ask in Telugu, and it's meaningless words.",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_llm06",
+   "tail": 0.15,
+   "boost": 1.8,
+   "lift": 0.7,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "needs",
+      "n": 7
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "letter": [
+      "Dear Manager,",
+      "I am sorry to inform you that I have a fever today",
+      "and will be back to work tomorrow.",
+      "Thank you for your understanding."
+     ],
+     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "leftLab": "INTERNET",
+     "leftVal": "OFF",
+     "rightLab": "THE AI'S REPLY",
+     "rightVal": "2 SECONDS",
+     "tag": "HOW TO 06 · FREE · SMALL · STAYS ON YOUR LAPTOP",
+     "noNet": "1 GB DOWNLOAD, ONCE · THEN NO INTERNET",
+     "step1": "STEP 1 · INSTALL",
+     "step2": "STEP 2 · GET A MODEL",
+     "step3": "STEP 3 · CHAT",
+     "termTitle": "Terminal (Mac) · PowerShell (Windows)",
+     "installRows": [
+      [
+       "# Mac / Linux: open Terminal, paste:",
+       "#94a3b8"
+      ],
+      [
+       "curl -LsSf https://llama.app/install.sh | sh",
+       "#e2e8f0"
+      ],
+      [
+       "",
+       "#000"
+      ],
+      [
+       "# Windows: open PowerShell, paste:",
+       "#94a3b8"
+      ],
+      [
+       "irm https://llama.app/install.ps1 | iex",
+       "#e2e8f0"
+      ]
+     ],
+     "installHead": "llama.cpp · free · open source (MIT)",
+     "installSub": "the install lines from its official page: github.com/ggml-org/llama.cpp",
+     "installNote": "we tested on Linux, building from source (3.7 min on 4 cores)",
+     "modelRows": [
+      [
+       "$ llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+       "#e2e8f0"
+      ],
+      [
+       "downloading qwen2.5-1.5b-instruct-q4_k_m.gguf ...",
+       "#94a3b8"
+      ]
+     ],
+     "first": "FIRST TIME",
+     "firstVal": "DOWNLOAD 1.12 GB",
+     "after": "EVERY TIME AFTER",
+     "afterVal": "OPENS IN 3 s",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "cliTitle": "Terminal: llama cli",
+     "cliRows": [
+      [
+       "$ llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+       "#e2e8f0"
+      ],
+      [
+       "model      : Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+       "#94a3b8"
+      ],
+      [
+       "> Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+       "#fde68a"
+      ],
+      [
+       "I'm terribly sorry, but I have a fever and will be back to work tomorrow. I hope to contribute to our team's success.",
+       "#e2e8f0"
+      ],
+      [
+       "[ Prompt: 183.8 t/s | Generation: 18.5 t/s ]",
+       "#86efac"
+      ]
+     ],
+     "url": "http://127.0.0.1:9931  (llama serve)",
+     "question": "Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+     "webReply": [
+      "Dear Manager,",
+      "I'm writing to inform you that I have a fever today",
+      "and will return to work tomorrow."
+     ],
+     "webStats": "36 tokens · 2.4 s · 15.20 t/s",
+     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "tiles": [
+      [
+       "GOOD FOR DRAFTS",
+       "the leave letter ✓ · 23 × 47 = 1081 ✓",
+       true
+      ],
+      [
+       "SPEED",
+       "≈15 words a second (17 tokens a second)",
+       true
+      ],
+      [
+       "TELUGU",
+       "మేము ప్రశ్నాలను మరింత పరిశోధించుకోవాలు...",
+       false
+      ]
+     ],
+     "teluguNote": "its Telugu: words that mean nothing, repeated",
+     "needRows": [
+      [
+       "MEMORY",
+       "~3 GB free (most 8 GB laptops OK)"
+      ],
+      [
+       "DISK",
+       "1.2 GB"
+      ],
+      [
+       "NETWORK",
+       "only for the first download"
+      ]
+     ],
+     "offlineCmd": "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+     "offlineNote": "--offline: uses the downloaded copy, no network",
+     "saveHead": "SAVE THIS · 3 STEPS",
+     "saveRows": [
+      [
+       "1 · install, Mac / Linux (Terminal)",
+       "curl -LsSf https://llama.app/install.sh | sh"
+      ],
+      [
+       "1 · install, Windows (PowerShell)",
+       "irm https://llama.app/install.ps1 | iex"
+      ],
+      [
+       "2 · get the model, chat (add --offline later)",
+       "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M"
+      ],
+      [
+       "3 · or the browser: open http://127.0.0.1:9931",
+       "llama serve -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M"
+      ]
+     ],
+     "share": "SEND THIS TO THE FRIEND WHO PASTES OFFICE DATA INTO CHATGPT"
+    },
+    "yt": {
+     "chapter": "What you need",
+     "title": "What you need",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "దీనికి మూడు గిగాబైట్ల ఖాళీ మెమరీ కావాలి; ఎనిమిది గిగాబైట్ల లాప్‌టాప్ సరిపోతుంది. [1] కమాండ్ చివర, డాష్ డాష్ ఆఫ్‌లైన్ అని టైప్ చేస్తే, ఇంటర్నెట్ కి వెళ్ళదు.",
+     "show": "It needs 3 GB of free memory; an 8 GB laptop is enough. Type --offline at the end of the command, and it won't go online.",
+     "maxgap": 0.22,
+     "gap": 0.14,
+     "tempo": 1.2
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_llm06",
+   "tail": 0.4,
+   "boost": 3.4,
+   "lift": 1.1,
+   "rise": 3.4,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "save",
+      "n": 8
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "letter": [
+      "Dear Manager,",
+      "I am sorry to inform you that I have a fever today",
+      "and will be back to work tomorrow.",
+      "Thank you for your understanding."
+     ],
+     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "leftLab": "INTERNET",
+     "leftVal": "OFF",
+     "rightLab": "THE AI'S REPLY",
+     "rightVal": "2 SECONDS",
+     "tag": "HOW TO 06 · FREE · SMALL · STAYS ON YOUR LAPTOP",
+     "noNet": "1 GB DOWNLOAD, ONCE · THEN NO INTERNET",
+     "step1": "STEP 1 · INSTALL",
+     "step2": "STEP 2 · GET A MODEL",
+     "step3": "STEP 3 · CHAT",
+     "termTitle": "Terminal (Mac) · PowerShell (Windows)",
+     "installRows": [
+      [
+       "# Mac / Linux: open Terminal, paste:",
+       "#94a3b8"
+      ],
+      [
+       "curl -LsSf https://llama.app/install.sh | sh",
+       "#e2e8f0"
+      ],
+      [
+       "",
+       "#000"
+      ],
+      [
+       "# Windows: open PowerShell, paste:",
+       "#94a3b8"
+      ],
+      [
+       "irm https://llama.app/install.ps1 | iex",
+       "#e2e8f0"
+      ]
+     ],
+     "installHead": "llama.cpp · free · open source (MIT)",
+     "installSub": "the install lines from its official page: github.com/ggml-org/llama.cpp",
+     "installNote": "we tested on Linux, building from source (3.7 min on 4 cores)",
+     "modelRows": [
+      [
+       "$ llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+       "#e2e8f0"
+      ],
+      [
+       "downloading qwen2.5-1.5b-instruct-q4_k_m.gguf ...",
+       "#94a3b8"
+      ]
+     ],
+     "first": "FIRST TIME",
+     "firstVal": "DOWNLOAD 1.12 GB",
+     "after": "EVERY TIME AFTER",
+     "afterVal": "OPENS IN 3 s",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "cliTitle": "Terminal: llama cli",
+     "cliRows": [
+      [
+       "$ llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+       "#e2e8f0"
+      ],
+      [
+       "model      : Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+       "#94a3b8"
+      ],
+      [
+       "> Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+       "#fde68a"
+      ],
+      [
+       "I'm terribly sorry, but I have a fever and will be back to work tomorrow. I hope to contribute to our team's success.",
+       "#e2e8f0"
+      ],
+      [
+       "[ Prompt: 183.8 t/s | Generation: 18.5 t/s ]",
+       "#86efac"
+      ]
+     ],
+     "url": "http://127.0.0.1:9931  (llama serve)",
+     "question": "Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+     "webReply": [
+      "Dear Manager,",
+      "I'm writing to inform you that I have a fever today",
+      "and will return to work tomorrow."
+     ],
+     "webStats": "36 tokens · 2.4 s · 15.20 t/s",
+     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "tiles": [
+      [
+       "GOOD FOR DRAFTS",
+       "the leave letter ✓ · 23 × 47 = 1081 ✓",
+       true
+      ],
+      [
+       "SPEED",
+       "≈15 words a second (17 tokens a second)",
+       true
+      ],
+      [
+       "TELUGU",
+       "మేము ప్రశ్నాలను మరింత పరిశోధించుకోవాలు...",
+       false
+      ]
+     ],
+     "teluguNote": "its Telugu: words that mean nothing, repeated",
+     "needRows": [
+      [
+       "MEMORY",
+       "~3 GB free (most 8 GB laptops OK)"
+      ],
+      [
+       "DISK",
+       "1.2 GB"
+      ],
+      [
+       "NETWORK",
+       "only for the first download"
+      ]
+     ],
+     "offlineCmd": "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+     "offlineNote": "--offline: uses the downloaded copy, no network",
+     "saveHead": "SAVE THIS · 3 STEPS",
+     "saveRows": [
+      [
+       "1 · install, Mac / Linux (Terminal)",
+       "curl -LsSf https://llama.app/install.sh | sh"
+      ],
+      [
+       "1 · install, Windows (PowerShell)",
+       "irm https://llama.app/install.ps1 | iex"
+      ],
+      [
+       "2 · get the model, chat (add --offline later)",
+       "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M"
+      ],
+      [
+       "3 · or the browser: open http://127.0.0.1:9931",
+       "llama serve -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M"
+      ]
+     ],
+     "share": "SEND THIS TO THE FRIEND WHO PASTES OFFICE DATA INTO CHATGPT"
+    },
+    "yt": {
+     "chapter": "Save this",
+     "title": "Save this",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "08_storyteller.wav",
+     "text": "ఇది సేవ్ చేసుకోండి. [1] ఆఫీస్ డేటా, చాట్‌జీపీటీ లో పేస్ట్ చేసే ఫ్రెండ్ కి, ఇది పంపండి.",
+     "show": "Save this. Send it to the friend who pastes office data into ChatGPT.",
+     "maxgap": 0.22,
+     "gap": 0.5,
+     "tempo": 1.2
+    }
+   ]
+  },
+  {
+   "id": "s_f",
+   "type": "sk_llm06",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 3.0,
+   "lift": 0.8,
+   "rise": 3.2,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "loop",
+      "n": 9
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "letter": [
+      "Dear Manager,",
+      "I am sorry to inform you that I have a fever today",
+      "and will be back to work tomorrow.",
+      "Thank you for your understanding."
+     ],
+     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "leftLab": "INTERNET",
+     "leftVal": "OFF",
+     "rightLab": "THE AI'S REPLY",
+     "rightVal": "2 SECONDS",
+     "tag": "HOW TO 06 · FREE · SMALL · STAYS ON YOUR LAPTOP",
+     "noNet": "1 GB DOWNLOAD, ONCE · THEN NO INTERNET",
+     "step1": "STEP 1 · INSTALL",
+     "step2": "STEP 2 · GET A MODEL",
+     "step3": "STEP 3 · CHAT",
+     "termTitle": "Terminal (Mac) · PowerShell (Windows)",
+     "installRows": [
+      [
+       "# Mac / Linux: open Terminal, paste:",
+       "#94a3b8"
+      ],
+      [
+       "curl -LsSf https://llama.app/install.sh | sh",
+       "#e2e8f0"
+      ],
+      [
+       "",
+       "#000"
+      ],
+      [
+       "# Windows: open PowerShell, paste:",
+       "#94a3b8"
+      ],
+      [
+       "irm https://llama.app/install.ps1 | iex",
+       "#e2e8f0"
+      ]
+     ],
+     "installHead": "llama.cpp · free · open source (MIT)",
+     "installSub": "the install lines from its official page: github.com/ggml-org/llama.cpp",
+     "installNote": "we tested on Linux, building from source (3.7 min on 4 cores)",
+     "modelRows": [
+      [
+       "$ llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+       "#e2e8f0"
+      ],
+      [
+       "downloading qwen2.5-1.5b-instruct-q4_k_m.gguf ...",
+       "#94a3b8"
+      ]
+     ],
+     "first": "FIRST TIME",
+     "firstVal": "DOWNLOAD 1.12 GB",
+     "after": "EVERY TIME AFTER",
+     "afterVal": "OPENS IN 3 s",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "cliTitle": "Terminal: llama cli",
+     "cliRows": [
+      [
+       "$ llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+       "#e2e8f0"
+      ],
+      [
+       "model      : Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+       "#94a3b8"
+      ],
+      [
+       "> Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+       "#fde68a"
+      ],
+      [
+       "I'm terribly sorry, but I have a fever and will be back to work tomorrow. I hope to contribute to our team's success.",
+       "#e2e8f0"
+      ],
+      [
+       "[ Prompt: 183.8 t/s | Generation: 18.5 t/s ]",
+       "#86efac"
+      ]
+     ],
+     "url": "http://127.0.0.1:9931  (llama serve)",
+     "question": "Write a 2-line leave message to my manager. I have fever today and will be back tomorrow.",
+     "webReply": [
+      "Dear Manager,",
+      "I'm writing to inform you that I have a fever today",
+      "and will return to work tomorrow."
+     ],
+     "webStats": "36 tokens · 2.4 s · 15.20 t/s",
+     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "tiles": [
+      [
+       "GOOD FOR DRAFTS",
+       "the leave letter ✓ · 23 × 47 = 1081 ✓",
+       true
+      ],
+      [
+       "SPEED",
+       "≈15 words a second (17 tokens a second)",
+       true
+      ],
+      [
+       "TELUGU",
+       "మేము ప్రశ్నాలను మరింత పరిశోధించుకోవాలు...",
+       false
+      ]
+     ],
+     "teluguNote": "its Telugu: words that mean nothing, repeated",
+     "needRows": [
+      [
+       "MEMORY",
+       "~3 GB free (most 8 GB laptops OK)"
+      ],
+      [
+       "DISK",
+       "1.2 GB"
+      ],
+      [
+       "NETWORK",
+       "only for the first download"
+      ]
+     ],
+     "offlineCmd": "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M --offline",
+     "offlineNote": "--offline: uses the downloaded copy, no network",
+     "saveHead": "SAVE THIS · 3 STEPS",
+     "saveRows": [
+      [
+       "1 · install, Mac / Linux (Terminal)",
+       "curl -LsSf https://llama.app/install.sh | sh"
+      ],
+      [
+       "1 · install, Windows (PowerShell)",
+       "irm https://llama.app/install.ps1 | iex"
+      ],
+      [
+       "2 · get the model, chat (add --offline later)",
+       "llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M"
+      ],
+      [
+       "3 · or the browser: open http://127.0.0.1:9931",
+       "llama serve -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M"
+      ]
+     ],
+     "share": "SEND THIS TO THE FRIEND WHO PASTES OFFICE DATA INTO CHATGPT"
+    },
+    "yt": {
+     "chapter": "Wi-Fi off",
+     "title": "Wi-Fi off",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "09_storyteller.wav",
+     "text": "వైఫై ఆఫ్, [1] అయినా జవాబు ఇస్తుంది.",
+     "show": "Wi-Fi off, and it still answers.",
+     "maxgap": 0.22,
+     "gap": 0.0,
+     "tempo": 1.2
+    }
+   ]
+  }
+ ]
+}
