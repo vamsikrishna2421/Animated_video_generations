@@ -4,8 +4,8 @@
  "topic": "",
  "banner": "",
  "musicVol": [
-  0.2,
-  0.46
+  0.26,
+  0.52
  ],
  "title": "Asked for 150 Words (Creative 41) (Telugu audio)",
  "handle": "@ai_maastaaru_telugu",
@@ -13,8 +13,8 @@
  "fps": 30,
  "musicDrops": [
   [
-   578,
-   596
+   579,
+   597
   ]
  ],
  "musicBoosts": [
@@ -25,45 +25,45 @@
   ],
   [
    307,
-   614,
+   615,
    1.2
   ],
   [
-   614,
-   839,
+   615,
+   819,
    2.2
   ],
   [
-   839,
-   1066,
+   818,
+   1045,
    1.2
   ],
   [
-   1066,
-   1391,
+   1045,
+   1370,
    4.4
   ],
   [
-   1391,
-   1475,
+   1370,
+   1454,
    3.6
   ],
   [
-   1066,
-   1391,
+   1045,
+   1370,
    4.0,
    1
   ],
   [
-   1391,
-   1475,
+   1370,
+   1454,
    3.8,
    1
   ]
  ],
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1475,
+ "totalFrames": 1454,
  "music": "reel/creative41te/score.wav",
  "scenes": [
   {
@@ -128,7 +128,7 @@
       205,
       183
      ],
-     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "triesChip": "1 small free model on our laptop (Qwen2.5 7B) · 10 tries · counted by us",
      "band": "135-165 = within 15",
      "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
      "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
@@ -139,7 +139,9 @@
      ],
      "reveal": "185",
      "reveal2": "234",
-     "overNote": "9 of 10 went over",
+     "plus": "+35",
+     "overNote": "ALL 10 WENT OVER 150",
+     "revealHead": "TOLD ITS REAL COUNT",
      "tokens": [
       "Water",
       " conservation",
@@ -161,8 +163,11 @@
      "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
      "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
      "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
-     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
-     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule2": "CHECK THE COUNT YOURSELF",
+     "rule3": [
+      "Google Docs: Tools > Word count",
+      "Word: the bar at the bottom"
+     ],
      "rule4": "FIX THE LAST LINES YOURSELF"
     },
     "yt": {
@@ -389,7 +394,7 @@
       205,
       183
      ],
-     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "triesChip": "1 small free model on our laptop (Qwen2.5 7B) · 10 tries · counted by us",
      "band": "135-165 = within 15",
      "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
      "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
@@ -400,7 +405,9 @@
      ],
      "reveal": "185",
      "reveal2": "234",
-     "overNote": "9 of 10 went over",
+     "plus": "+35",
+     "overNote": "ALL 10 WENT OVER 150",
+     "revealHead": "TOLD ITS REAL COUNT",
      "tokens": [
       "Water",
       " conservation",
@@ -422,8 +429,11 @@
      "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
      "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
      "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
-     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
-     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule2": "CHECK THE COUNT YOURSELF",
+     "rule3": [
+      "Google Docs: Tools > Word count",
+      "Word: the bar at the bottom"
+     ],
      "rule4": "FIX THE LAST LINES YOURSELF"
     },
     "yt": {
@@ -436,7 +446,7 @@
     "hardCuts": true
    },
    "from": 307,
-   "frames": 307,
+   "frames": 308,
    "lines": [
     {
      "who": "storyteller",
@@ -660,7 +670,7 @@
       205,
       183
      ],
-     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "triesChip": "1 small free model on our laptop (Qwen2.5 7B) · 10 tries · counted by us",
      "band": "135-165 = within 15",
      "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
      "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
@@ -671,7 +681,9 @@
      ],
      "reveal": "185",
      "reveal2": "234",
-     "overNote": "9 of 10 went over",
+     "plus": "+35",
+     "overNote": "ALL 10 WENT OVER 150",
+     "revealHead": "TOLD ITS REAL COUNT",
      "tokens": [
       "Water",
       " conservation",
@@ -693,8 +705,11 @@
      "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
      "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
      "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
-     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
-     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule2": "CHECK THE COUNT YOURSELF",
+     "rule3": [
+      "Google Docs: Tools > Word count",
+      "Word: the bar at the bottom"
+     ],
      "rule4": "FIX THE LAST LINES YOURSELF"
     },
     "yt": {
@@ -706,8 +721,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 614,
-   "frames": 225,
+   "from": 615,
+   "frames": 204,
    "lines": [
     {
      "who": "storyteller",
@@ -716,82 +731,62 @@
      "sub": null,
      "audio": "reel/creative41te/line_05.wav",
      "from": 0,
-     "frames": 202,
+     "frames": 180,
      "words": [
       {
        "w": "185!",
        "from": 1,
-       "to": 12
+       "to": 15
       },
       {
        "w": "35",
-       "from": 12,
-       "to": 20
+       "from": 15,
+       "to": 24
       },
       {
        "w": "too",
-       "from": 20,
-       "to": 29
+       "from": 24,
+       "to": 41
       },
       {
        "w": "many.",
-       "from": 29,
-       "to": 50
+       "from": 41,
+       "to": 59
       },
       {
        "w": "Once,",
-       "from": 50,
-       "to": 64
-      },
-      {
-       "w": "234.",
-       "from": 64,
+       "from": 59,
        "to": 82
       },
       {
-       "w": "Told",
+       "w": "234.",
        "from": 82,
-       "to": 98
+       "to": 103
       },
       {
-       "w": "it",
-       "from": 98,
-       "to": 105
+       "w": "All",
+       "from": 103,
+       "to": 115
       },
       {
-       "w": "was",
-       "from": 105,
-       "to": 119
+       "w": "10",
+       "from": 115,
+       "to": 124
       },
       {
-       "w": "short,",
-       "from": 119,
-       "to": 141
+       "w": "went",
+       "from": 124,
+       "to": 144
       },
       {
-       "w": "it",
-       "from": 141,
-       "to": 148
+       "w": "over",
+       "from": 144,
+       "to": 162
       },
       {
-       "w": "wrote",
-       "from": 148,
-       "to": 169
-      },
-      {
-       "w": "far",
-       "from": 169,
-       "to": 178
-      },
-      {
-       "w": "too",
-       "from": 178,
-       "to": 188
-      },
-      {
-       "w": "much!",
-       "from": 188,
-       "to": 202
+       "w": "150.",
+       "from": 162,
+       "to": 176
       }
      ],
      "cues": {
@@ -858,7 +853,7 @@
       205,
       183
      ],
-     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "triesChip": "1 small free model on our laptop (Qwen2.5 7B) · 10 tries · counted by us",
      "band": "135-165 = within 15",
      "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
      "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
@@ -869,7 +864,9 @@
      ],
      "reveal": "185",
      "reveal2": "234",
-     "overNote": "9 of 10 went over",
+     "plus": "+35",
+     "overNote": "ALL 10 WENT OVER 150",
+     "revealHead": "TOLD ITS REAL COUNT",
      "tokens": [
       "Water",
       " conservation",
@@ -891,8 +888,11 @@
      "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
      "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
      "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
-     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
-     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule2": "CHECK THE COUNT YOURSELF",
+     "rule3": [
+      "Google Docs: Tools > Word count",
+      "Word: the bar at the bottom"
+     ],
      "rule4": "FIX THE LAST LINES YOURSELF"
     },
     "yt": {
@@ -904,7 +904,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 839,
+   "from": 818,
    "frames": 227,
    "lines": [
     {
@@ -1075,7 +1075,7 @@
       205,
       183
      ],
-     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "triesChip": "1 small free model on our laptop (Qwen2.5 7B) · 10 tries · counted by us",
      "band": "135-165 = within 15",
      "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
      "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
@@ -1086,7 +1086,9 @@
      ],
      "reveal": "185",
      "reveal2": "234",
-     "overNote": "9 of 10 went over",
+     "plus": "+35",
+     "overNote": "ALL 10 WENT OVER 150",
+     "revealHead": "TOLD ITS REAL COUNT",
      "tokens": [
       "Water",
       " conservation",
@@ -1108,8 +1110,11 @@
      "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
      "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
      "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
-     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
-     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule2": "CHECK THE COUNT YOURSELF",
+     "rule3": [
+      "Google Docs: Tools > Word count",
+      "Word: the bar at the bottom"
+     ],
      "rule4": "FIX THE LAST LINES YOURSELF"
     },
     "yt": {
@@ -1121,7 +1126,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1066,
+   "from": 1045,
    "frames": 325,
    "lines": [
     {
@@ -1342,7 +1347,7 @@
       205,
       183
      ],
-     "triesChip": "1 small free model on our laptop · 10 tries · counted by us",
+     "triesChip": "1 small free model on our laptop (Qwen2.5 7B) · 10 tries · counted by us",
      "band": "135-165 = within 15",
      "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
      "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
@@ -1353,7 +1358,9 @@
      ],
      "reveal": "185",
      "reveal2": "234",
-     "overNote": "9 of 10 went over",
+     "plus": "+35",
+     "overNote": "ALL 10 WENT OVER 150",
+     "revealHead": "TOLD ITS REAL COUNT",
      "tokens": [
       "Water",
       " conservation",
@@ -1375,8 +1382,11 @@
      "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
      "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
      "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST",
-     "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
-     "rule3": "Google Docs: Tools > Word count · Word: the status bar",
+     "rule2": "CHECK THE COUNT YOURSELF",
+     "rule3": [
+      "Google Docs: Tools > Word count",
+      "Word: the bar at the bottom"
+     ],
      "rule4": "FIX THE LAST LINES YOURSELF"
     },
     "yt": {
@@ -1388,7 +1398,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1391,
+   "from": 1370,
    "frames": 84,
    "lines": [
     {
