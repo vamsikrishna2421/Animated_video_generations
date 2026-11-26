@@ -52,13 +52,13 @@ MUST = {"en": {1: [("fifty", "150"), ("words",), ("free",), ("two", "102")],
                2: [("small",), ("model",), ("laptop",), ("ten", "10"), ("twenty", "128"), ("short",)],
                3: [("count",), ("words",), ("two", "2"), ("ten", "10"), ("fifteen", "15")],
                4: [("real",), ("count",), ("right",), ("did",)], "4b": [("spot",), ("short",)],
-               5: [("eighty", "185"), ("thirty", "234"), ("nine", "9"), ("over",)],
+               5: [("eighty", "185"), ("thirty", "234"), ("all",), ("over",)],
                6: [("tokens", "token"), ("words",), ("twenty", "124"), ("short",), ("guessed", "guess"), ("long",)],
                7: [("limit",), ("form",), ("essay",), ("post",), ("google",), ("docs",), ("word",), ("count",), ("lines", "line")],
                8: [("fifty", "150"), ("two", "102")]},
         "te": {}}   # Telugu: full reads by hand (chunk by chunk)
 JUDGE_TEXT = {1: "Asked for 150 words. A free AI wrote 102.", 2: "One small model on our laptop, 10 tries: 102 to 128. Short, every time.",
-              3: "Told to count its words: 2 of 10 landed within 15.", 5: "185. One even hit 234. 9 of 10 went over.",
+              3: "Told to count its words: 2 of 10 landed within 15 words.", 5: "185. One even hit 234. All 10 went over.",
               6: "It writes in tokens, not words: those 102 words were 124 tokens. Told it was short, it just guessed long.",
               8: "Asked for 150. Got 102."}
 

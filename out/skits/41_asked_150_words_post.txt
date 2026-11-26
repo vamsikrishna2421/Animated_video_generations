@@ -1,4 +1,4 @@
-CREATIVE 41: "Asked for 150 Words" (a one-question challenge, one narrator: we asked a small free AI for a 150-word answer and counted every reply. 10 tries: 102 to 128 words, short every time; told to count its words, 2 of 10 landed within 15; told its real count ("you wrote 102, I need 150"), 9 of 10 went over: 185, and once 234. It writes in tokens, not words (its 102 words were 124 tokens), so check the count yourself in Docs or Word. English / Telugu, 9:16; also works as a YouTube Short)
+CREATIVE 41: "Asked for 150 Words" (a one-question challenge, one narrator: we asked a small free AI for a 150-word answer and counted every reply. 10 tries: 102 to 128 words, short every time; told to count its words, 2 of 10 landed within 15; told its real count ("you wrote 102, I need 150"), all 10 went over 150: 185, and once 234. It writes in tokens, not words (its 102 words were 124 tokens), so check the count yourself in Docs or Word. English / Telugu, 9:16; also works as a YouTube Short)
 Files: out/skits/41_asked_150_words.mp4 (English page) · out/skits/41_asked_150_words_te.mp4 (Telugu page)
 Send copies: out/skits/41_asked_150_words_ig.mp4 · out/skits/41_asked_150_words_te_ig.mp4
 
@@ -10,11 +10,12 @@ We asked one small free AI on our own laptop for a 150-word answer ("Why should 
 - asked for 150 words: 102 to 128 words, short every time
 - "count your words and make it exactly 150": 2 of 10 within 15 words (140, 146)
 - "10 sentences of about 15 words": 62 to 101 words (it kept the 10 sentences, not the 15 words)
-- told the real count ("Your answer has 102 words. I need 150 words."): 9 of 10 went over, 162 to 234
+- told the real count ("Your answer has 102 words. I need 150 words."): all 10 went over 150, 162 to 234 (9 by more than 15 words)
 
 Why: it writes in tokens, not words. Its 102-word answer was 124 tokens on its own tokenizer, and OpenAI's help page puts 1 token at about three-quarters of a word. It never counts as it goes; told "too short", it guessed long.
 
-Any word limit, a form, an essay, a post: paste it into Google Docs (Tools > Word count) or Word (the status bar), check the count, and fix the last lines yourself. One small model, 10 tries each; your app may do better or worse, so check.
+Any word limit, a form, an essay, a post: paste it into Google Docs (Tools > Word count) or Word (the status bar), check the count, and fix the last lines yourself. One small model (Qwen2.5 7B), 10 tries each; your app may do better or worse, so check.
+Building with an API? Count in code and trim; telling it "you're short" made ours overshoot.
 
 Try it: ask your AI app for exactly 150 words on anything, paste it into a word counter, and see how close it gets.
 
@@ -38,7 +39,7 @@ Description: We asked a small free AI for a 150-word answer 10 times: 102 to 128
 Maa laptop loni oka chinna free AI ni, 150 words answer adigaam ("Why should we save water?"), okko rakamgaa 10 saarlu, prathi javaabu lekkapettaam:
 - 150 words adigithe: 102 nunchi 128. Prathisaari takkuve
 - "words lekkapettu, sariggaa 150": 10 lo 2 maatrame daggariki (140, 146)
-- asalu lekka cheppaam ("nuvvu raasindi 102, 150 kaavaali"): 10 lo 9 ekkuva raasindi, 162 nunchi 234
+- asalu lekka cheppaam ("nuvvu raasindi 102, 150 kaavaali"): 10 ki 10 ekkuva raasindi, 162 nunchi 234
 
 Enduku: idi words lo kaadu, tokens lo raastundi. 102 words = 124 tokens. Takkuva annaam, anduke oohinchi ekkuva raasindi.
 
@@ -53,4 +54,4 @@ Try chesi choodandi: mee AI app ni sariggaa 150 words adigi, word counter lo pas
 #AIinTelugu #TeluguAI #AITips #LearnAI
 
 === PINNED_COMMENT ===
-Ela test chesam (Nov 26, 2026): Qwen2.5-7B-Instruct (4-bit) maa computer lo, prathi saari kotha chat, temperature 0.7, seeds 1-10. Prompt: "Write a 150-word answer for a Class 8 exam: Why should we save water?" Plain: 102-128 words; "count your words, exactly 150": 2/10 within 135-165; asalu lekka cheppaaka: 162-234 (10 lo 9 ekkuva). Anni javaabulu chethito chadivaam. Code: pipeline/creative41/words_demo.py, words_demo2.py.
+Ela test chesam (Nov 26, 2026): Qwen2.5-7B-Instruct (4-bit) maa computer lo, prathi saari kotha chat, temperature 0.7, seeds 1-10. Prompt: "Write a 150-word answer for a Class 8 exam: Why should we save water?" Plain: 102-128 words; "count your words, exactly 150": 2/10 within 135-165; asalu lekka cheppaaka: 162-234 (10 ki 10, 150 daatindi). Anni javaabulu chethito chadivaam. Code: pipeline/creative41/words_demo.py, words_demo2.py.

@@ -109,7 +109,8 @@ const StWords: React.FC<SP> = ({ s }) => {
           block(c, 40, 230, 490, T.leftLab, T.leftVal, "#bfdbfe", "#1e3a8a");
           block(c, 550, 230, 490, T.rightLab, T.rightVal, "#fecaca", "#7f1d1d");
           notebook(c, T, 50, 520, 460, 520);
-          phone(c, T, 560, 490, 460, 760, T.counter, RED);
+          const up = P === "hook" && !loopOn ? Math.round(102 * easeOut(clamp((f - 4) / 40))) : 102;   // review: the hook sat still
+          phone(c, T, 560, 490, 460, 760, `${up} WORDS`, RED);
         } else if (P === "tries") {
           chip(c, T.triesChip, W / 2, 270, "#0f172a", "#f8fafc", seg(f, ln.from, ln.from + 8), fit(c, T.triesChip, 960, 34, 800));
           bars(c, T, T.plain, seg(f, cu(1, 0.1) - 2, cu(1, 0.1) + 30), () => false);
@@ -126,10 +127,11 @@ const StWords: React.FC<SP> = ({ s }) => {
           if (kc > 0) { c.save(); c.globalAlpha = 0.25 + 0.2 * Math.sin(f * 0.4); c.font = SANS(300, 900); c.fillStyle = BLUE; c.textAlign = "center"; c.fillText("?", 540, 1260); c.restore(); }
         } else if (P === "reveal") {
           const t1 = cu(1, 0.05), t2 = cu(2, 0.05);
-          const roll = clamp((f - t1) / 16), v = Math.round(102 + (185 - 102) * easeOut(roll));
-          const head = "ASKED 150 · TOLD \"YOU WROTE 102\"";   // stills: it ran off both edges
+          const roll = clamp((f - t1 + 4) / 8), v = Math.round(102 + (185 - 102) * easeOut(roll));   // review: lands on the word
+          const head = T.revealHead;
           c.textAlign = "center"; c.font = SANS(fit(c, head, 960, 56, 900), 900); c.fillStyle = INK; c.fillText(head, 540, 320);
-          c.font = SANS(260, 900); c.fillStyle = f >= t1 ? RED : "#94a3b8"; c.fillText(f >= t1 ? String(v) : "102", 400, 590);
+          c.font = SANS(260, 900); c.fillStyle = f >= t1 - 4 ? RED : "#94a3b8"; c.fillText(f >= t1 - 4 ? String(v) : "102", 400, 590);
+          if (roll >= 1) chip(c, T.plus, 400, 680, RED, "#fff", seg(f, t1 + 4, t1 + 10), 52);
           if (f >= t2 - 2) {
             const k2 = seg(f, t2 - 2, t2 + 6);
             c.save(); c.globalAlpha = clamp(k2 * 3); c.translate(830, 500); c.rotate(-0.08); c.scale(1.4 - 0.4 * easeOut(k2), 1.4 - 0.4 * easeOut(k2));
@@ -153,13 +155,13 @@ const StWords: React.FC<SP> = ({ s }) => {
           c.font = SANS(fit(c, T.tokSrc, 960, 26, 700), 700); c.fillStyle = "#475569"; c.textAlign = "center"; if (f > ln.from + 30) c.fillText(T.tokSrc, 540, 900);
           chip(c, T.guessLong, 540, 1080, RED, "#fff", seg(f, cu(1, 0.1) - 2, cu(1, 0.1) + 6), fit(c, T.guessLong, 960, 56, 900));
         } else if (P === "rule") {
-          const k0 = seg(f, ln.from - 6, ln.from + 4), k1 = seg(f, cu(1, 0.1) - 2, cu(1, 0.1) + 8);
+          const k0 = seg(f, ln.from - 6, ln.from + 4), k1 = seg(f, ln.from - 2, ln.from + 8);   // review: the card sat empty while the rule was said
           chip(c, T.rule1, 540, 290, "#0f172a", "#fde68a", k0, fit(c, T.rule1, 960, 44, 900));
           if (k1 > 0) {
             c.save(); c.globalAlpha = clamp(k1 * 3); c.translate(0, (1 - easeOut(clamp(k1 * 1.5))) * 40);
             c.fillStyle = "#dcfce7"; rrect(c, 60, 400, 960, 640, 30); c.fill(); c.strokeStyle = GREEN; c.lineWidth = 6; rrect(c, 60, 400, 960, 640, 30); c.stroke();
             c.textAlign = "center"; c.font = SANS(64, 900); c.fillStyle = "#14532d"; wrap(c, T.rule2, 860).slice(0, 3).forEach((t, q) => c.fillText(t, 540, 510 + q * 76));
-            c.font = SANS(fit(c, T.rule3, 880, 36, 800), 800); c.fillStyle = "#166534"; c.fillText(T.rule3, 540, 760);
+            (T.rule3 as string[]).forEach((t, q) => { c.font = SANS(fit(c, t, 880, 52, 900), 900); c.fillStyle = "#166534"; c.fillText(t, 540, 650 + q * 80); });   // review: unreadable at 36 px
             c.font = SANS(fit(c, T.rule4, 880, 60, 900), 900); c.fillStyle = "#14532d"; c.fillText(T.rule4, 540, 900);
             c.restore();
           }

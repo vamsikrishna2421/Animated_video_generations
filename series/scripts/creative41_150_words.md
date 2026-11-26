@@ -72,3 +72,15 @@ see how close it gets."
 - Telugu (Sandeep): నూట ఎనభై ఐదు could be heard as నూట యాభై ఐదు (155) -> "నూట ఎనభై ఐదు! ముప్పై ఐదు ఎక్కువ."; "రెండొందల";
   "తక్కువైందన్నామని, ఏకంగా ఎక్కువ రాసేసింది!"; "కలపండి" (mix) -> "తక్కువైతే ఒక లైన్ మీరే రాయండి"; no "కౌంట్" (a clipped
   vowel could be heard as an English swear word) and no "గూగుల్" (heard as "Gokul" before): "డాక్స్ లో గానీ, వర్డ్ లో గానీ".
+
+## Render review (human-viewer, EN + TE) and what changed
+- Both (factual): "nine of ten went over" contradicted the chart (162 is over 150; it was only inside our 135-165 band)
+  -> "All ten went over" (voice, chart label "ALL 10 WENT OVER 150", caption, README, log).
+- Both: the how-to line was unreadable and the rule card sat empty while the rule was said -> the card is up on "any word
+  limit"; "Google Docs: Tools > Word count" and "Word: the bar at the bottom" at 52 px.
+- English: "within fifteen" -> "within fifteen words"; the hook's counter counts up to 102; the 185 counter lands on the
+  word with a "+35"; the reveal header says "TOLD ITS REAL COUNT" (234 came from the 112-word try, not the 102 one); a
+  ~1 s silence before the reveal; the model named on the tries chip (Qwen2.5 7B); a builder line in the caption.
+- Telugu: "told short, it guessed long" was said twice (lines 5 and 6) -> line 5 ends "పదికి పది, నూట యాభై దాటాయి."; the
+  bed ~16 dB under the voice -> louder, with a bigger lift into the rule. The chunk reads of 0-30 s were checked by us
+  (Whisper's whole-file pass failed there).

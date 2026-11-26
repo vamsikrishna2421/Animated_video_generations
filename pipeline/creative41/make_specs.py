@@ -15,12 +15,12 @@ LINES = {   # n: (prop, English, Telugu)
         "నూట యాభై వర్డ్స్ అడిగాం. [1] ఒక ఫ్రీ చాట్‌బాట్ రాసింది, నూట రెండు."),
     2: ("tries", "One small model on our laptop, ten tries: [1] a hundred and two to a hundred and twenty-eight. Short, every time.",
         "మా లాప్‌టాప్ లోని చిన్న మోడల్, పది సార్లు: [1] నూట రెండు నుంచి, నూట ఇరవై ఎనిమిది. ప్రతిసారీ, తక్కువే."),
-    3: ("count", "Told to count its words: [1] two of ten landed within fifteen.",
+    3: ("count", "Told to count its words: [1] two of ten landed within fifteen words.",
         "వర్డ్స్ లెక్కపెట్టమని చెప్పాం: [1] పదిలో రెండు మాత్రమే, దగ్గరికి వచ్చాయి."),
     4: ("question", "You'd just tell it the real count, right? We did. | [1] Spot on? Still short? Or...",
         "అసలు లెక్క చెబితే సరిపోతుంది కదా? చెప్పాం. | [1] సరిగ్గా వచ్చిందా? ఇంకా తక్కువా? లేక..."),
-    5: ("reveal", "[1] A hundred and eighty-five. [2] One even hit two hundred and thirty-four. Nine of ten went over.",
-        "[1] నూట ఎనభై ఐదు! ముప్పై ఐదు ఎక్కువ. [2] ఒకసారి, రెండొందల ముప్పై నాలుగు. తక్కువైందన్నామని, ఏకంగా ఎక్కువ రాసేసింది!"),
+    5: ("reveal", "[1] A hundred and eighty-five. [2] One even hit two hundred and thirty-four. All ten went over.",
+        "[1] నూట ఎనభై ఐదు! ముప్పై ఐదు ఎక్కువ. [2] ఒకసారి, రెండొందల ముప్పై నాలుగు. పదికి పది, నూట యాభై దాటాయి."),
     6: ("why", "It writes in tokens, not words: those hundred and two words were a hundred and twenty-four tokens. [1] Told it was short, it just guessed long.",
         "ఇది వర్డ్స్ లో కాదు, టోకెన్లలో రాస్తుంది: ఆ నూట రెండు వర్డ్స్, నూట ఇరవై నాలుగు టోకెన్లు. [1] తక్కువ అన్నాం, అందుకే ఊహించి ఎక్కువ రాసింది."),
     7: ("rule", "Any word limit, a form, an essay, a post: [1] paste it into Google Docs or Word, check the count, and fix the last lines yourself.",
@@ -28,8 +28,8 @@ LINES = {   # n: (prop, English, Telugu)
     8: ("loop", "Asked for a hundred and fifty. [1] Got a hundred and two.", "నూట యాభై అడిగాం. [1] వచ్చింది, నూట రెండు."),
 }
 SHOW = {1: "Asked for 150 words. A free AI wrote 102.", 2: "One small model on our laptop, 10 tries: 102 to 128. Short, every time.",
-        3: "Told to count its words: 2 of 10 landed within 15.", 4: "You'd just tell it the real count, right? We did. <pause 0.6> Spot on? Still short? Or...",
-        5: "185. One even hit 234. 9 of 10 went over.",
+        3: "Told to count its words: 2 of 10 landed within 15 words.", 4: "You'd just tell it the real count, right? We did. <pause 0.6> Spot on? Still short? Or...",
+        5: "185. One even hit 234. All 10 went over.",
         6: "It writes in tokens, not words: those 102 words were 124 tokens. Told it was short, it just guessed long.",
         8: "Asked for 150. Got 102."}
 SHOW_TE = {
@@ -37,7 +37,7 @@ SHOW_TE = {
     2: "A small model on our laptop, 10 times: 102 to 128. Short, every time.",
     3: "We told it to count its words: only 2 of 10 came close.",
     4: "Just tell it the real count, right? We did. <pause 0.6> Spot on? Still short? Or...",
-    5: "185! 35 too many. Once, 234. Told it was short, it wrote far too much!",
+    5: "185! 35 too many. Once, 234. All 10 went over 150.",
     6: "It writes in tokens, not words: those 102 words were 124 tokens. We said short, so it guessed long.",
     7: "A form, an essay, a post: paste it into Docs or Word and see how many words. Too many? Cut the last line. Too few? Write a line yourself.",
     8: "We asked for 150. We got 102.",
@@ -51,17 +51,17 @@ T = {
     "leftLab": "ASKED", "leftVal": "150 WORDS", "rightLab": "A FREE AI WROTE", "rightVal": "102",
     "plain": [102, 121, 110, 128, 112, 120, 127, 113, 127, 122], "count": [119, 123, 125, 126, 140, 104, 130, 107, 125, 146],
     "feedback": [185, 167, 181, 162, 234, 174, 197, 173, 205, 183],
-    "triesChip": "1 small free model on our laptop · 10 tries · counted by us", "band": "135-165 = within 15",
+    "triesChip": "1 small free model on our laptop (Qwen2.5 7B) · 10 tries · counted by us", "band": "135-165 = within 15",
     "countNote": "\"Count your words and make sure the answer is exactly 150 words.\"",
     "follow": "Your answer has 102 words. I need 150 words. Rewrite it to 150 words.",
     "choices": ["SPOT ON?", "STILL SHORT?", "OR..."],
-    "reveal": "185", "reveal2": "234", "overNote": "9 of 10 went over",
+    "reveal": "185", "reveal2": "234", "plus": "+35", "overNote": "ALL 10 WENT OVER 150", "revealHead": "TOLD ITS REAL COUNT",
     "tokens": ["Water", " conservation", " is", " essential", " for", " several", " reasons", ".", " Firstly", ",", " water", " is", " a", " finite"],
     "tokLine": "12 WORDS = 14 TOKENS", "tokTotal": "THE WHOLE ANSWER: 102 WORDS = 124 TOKENS",
     "tokSrc": "Qwen's own tokenizer · OpenAI: \"1 token is approximately three-quarters of a word\"",
     "guessLong": "TOLD \"SHORT\" → IT GUESSED LONG",
-    "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST", "rule2": "PASTE IT INTO DOCS OR WORD, CHECK THE COUNT",
-    "rule3": "Google Docs: Tools > Word count · Word: the status bar", "rule4": "FIX THE LAST LINES YOURSELF",
+    "rule1": "ANY WORD LIMIT: A FORM · AN ESSAY · A POST", "rule2": "CHECK THE COUNT YOURSELF",
+    "rule3": ["Google Docs: Tools > Word count", "Word: the bar at the bottom"], "rule4": "FIX THE LAST LINES YOURSELF",
 }
 # Sound (CLAUDE.md arc): a tick and a hit in second 1 (150 vs 102); soft pops on the first bars only; a ding on the two
 # close ones; three ticks and a silence before the reveal, then a hit on 185 and a bigger one on 234; a whoosh into the
@@ -72,8 +72,8 @@ SCENES = [("s_a", (1, 2), {"boost": 2.6, "tail": 0.1}),
           ("s_d", (6,), {"boost": 1.4, "lift": 0.6, "tail": 0.1}),
           ("s_e", (7,), {"boost": 3.6, "lift": 1.2, "rise": 3.4, "tail": 0.4}),
           ("s_f", (8,), {"outro": True, "pre": 0.3, "boost": 3.2, "lift": 0.8, "rise": 3.4, "tail": 0.0})]
-GAP = {n: 0.2 for n in LINES} | {4: 0.8, 7: 0.6, 8: 0.0}   # 4: a silence before the reveal (pack: "Or 185" ran together)
-GAP_TE = {n: 0.14 for n in LINES} | {4: 0.7, 7: 0.5, 8: 0.0}
+GAP = {n: 0.2 for n in LINES} | {4: 1.1, 7: 0.6, 8: 0.0}   # 4: a silence before the reveal (pack: "Or 185" ran together)
+GAP_TE = {n: 0.14 for n in LINES} | {4: 1.0, 7: 0.5, 8: 0.0}
 FLAGS_TE = {"s_b": {"boost": 1.2}, "s_d": {"boost": 1.2}, "s_e": {"boost": 4.4, "lift": 1.4, "rise": 4.0}, "s_f": {"boost": 3.6, "rise": 3.8}}   # pack: the Telugu quarters ran flat
 YT = {"s_a": "Asked 150, got 102", "s_b": "Tell it the count?", "s_c": "185, 234", "s_d": "Tokens, not words", "s_e": "Check the count yourself",
       "s_f": "150 vs 102"}
@@ -90,7 +90,7 @@ def spec(lang="en"):
          "musicEQ": [[120, -4, 0.7], [240, -10, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.0,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimer": True, "tempo": 1.0, "captionTop": 1390, "endPad": 0.3}
     if te:
-        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.3, "endPad": 0.2, "musicVol": [0.2, 0.46], "musicGapGain": 1.0})
+        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.3, "endPad": 0.2, "musicVol": [0.26, 0.52], "musicGapGain": 1.4})   # review: the Telugu bed sat ~16 dB under
     scenes = []
     for scid, ns, flags in SCENES:
         lines, beats = [], []
