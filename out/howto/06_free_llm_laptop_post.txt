@@ -1,0 +1,67 @@
+HOW TO 06: "A free AI on your laptop, Wi-Fi off" (EN / TE, 9:16; also a YouTube Short)
+Files: out/howto/06_free_llm_laptop.mp4 (English page) · out/howto/telugu/06_free_llm_laptop_te.mp4 (Telugu page)
+Send copies: out/howto/06_free_llm_laptop_ig.mp4 · out/howto/telugu/06_free_llm_laptop_te_ig.mp4
+Post on the day (Thursday HOW TO, not in the serial queue). Frame 1: Chintu's laptop on Ravi anna's counter, Wi-Fi off, a real leave letter on screen: INTERNET: OFF vs THE AI'S REPLY: 2 SECONDS.
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+A free AI that answers with the Wi-Fi off. It's small, it's not ChatGPT, but your words never leave your laptop.
+
+What you need: a laptop with about 3 GB of free memory (most 8 GB laptops are fine), 1.2 GB of disk, and internet once for the download.
+
+1. INSTALL llama.cpp (free, open source, MIT licence), the line from its official page (github.com/ggml-org/llama.cpp):
+   Mac / Linux, open Terminal and paste: curl -LsSf https://llama.app/install.sh | sh
+   Windows, open PowerShell and paste: irm https://llama.app/install.ps1 | iex
+   (Other ways on the same page: llama.app, Docker, ready-made downloads, or build it yourself.)
+2. GET A MODEL AND CHAT: llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M
+   The first time it downloads Qwen2.5 1.5B (1.12 GB, Apache 2.0 licence). After that it opens in about 3 seconds.
+   Add --offline at the end and it uses the downloaded copy only, with no internet.
+3. OR CHAT IN YOUR BROWSER: llama serve -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M, then open the address it prints (ours: http://127.0.0.1:9931).
+
+Our run (a basic 4-core computer, no graphics card, Linux; we built llama.cpp from source, about 4 minutes): the first start with the download took 42 s on our connection, about 3 s after that; about 15 words a second (17 tokens a second); 2.1-2.8 GB of memory.
+Good for drafts: a leave letter in 2 seconds, and 23 x 47 = 1081, right. Not for Telugu: asked to introduce itself in Telugu, it wrote meaningless lines. For Telugu, use the bigger online apps.
+
+Why bother when ChatGPT has a free tier? Privacy: office notes, salary slips, a client's file never leave your laptop (see HOW TO 04, what never to paste into an AI chat). For comparison, ChatGPT Plus costs ₹1,999 a month in India.
+
+Try it: install it tonight, ask it to draft tomorrow's leave letter or a WhatsApp reply, then turn the Wi-Fi off and ask again.
+
+Next HOW TO (Dec 3): make videos with Claude, how this page's reels are made.
+
+#AI #LLM #OfflineAI #Privacy #LearnAI
+
+=== COMMENT PROMPT ===
+(none: from Bujji's reads, the try-it lives in the caption)
+
+=== PINNED_COMMENT ===
+How we tested (Nov 26, 2026): llama.cpp at commit 9c003a9 (Nov 25, 2026, version 1.1.0-dev), built from source with cmake on a 4-core Intel Xeon @ 2.10 GHz with no graphics card (configure 4 s, library 77 s, app 141 s). Model: Qwen/Qwen2.5-1.5B-Instruct-GGUF, Q4_K_M, 1,117,320,736 bytes, Apache 2.0, fetched by llama.cpp with -hf. First start (download + load): 42 s; every start after: 3.0 s. Four questions through llama serve, temperature 0.2, seed 1: 16.6-17.6 tokens a second on the replies; `llama cli --offline`: "Generation: 18.5 t/s"; the browser chat: 36 tokens in 2.4 s. Peak memory 2.8 GB (default 32,768-token context), 2.1 GB with -c 4096. Replies read by hand: leave letter good; EMI explanation right; 23 x 47 = 1081 right; Telugu meaningless and repeated. We did not run the one-line installers here (this machine's rules block piped install scripts); the Mac and Windows lines are from the official README of Nov 26. Code: pipeline/howto06/run_demo.py. Price: ChatGPT Plus ₹1,999 a month incl. GST in India (Croma; Storyboard18; NewsBytes).
+
+=== YOUTUBE SHORTS ===
+Title: A free AI on your laptop that works with the Wi-Fi off (3 steps) #shorts
+Description: Install llama.cpp (free, MIT) with one line from its official page, get the free Qwen2.5 1.5B model with one command (1.12 GB, once), then chat in the terminal or your browser, even offline with --offline. On a basic 4-core computer with no graphics card: about 15 words a second, about 3 GB of memory. Good for drafts; not for Telugu. Commands in the description pinned comment.
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+Wi-Fi off lo kooda javaabu ichche oka free chatbot. Idi chinnadi, ChatGPT kaadu, kaani mee maatalu mee laptop daati bayataki vellavu.
+
+Kaavalsindi: 3 GB khaali memory unna laptop (chaala 8 GB laptops saripotaayi), 1.2 GB disk, download ki okkasaari internet.
+
+1. llama.cpp INSTALL (free, open source, MIT), daani official page lo unna line (github.com/ggml-org/llama.cpp):
+   Mac / Linux: Terminal open chesi paste: curl -LsSf https://llama.app/install.sh | sh
+   Windows: PowerShell open chesi paste: irm https://llama.app/install.ps1 | iex
+2. MODEL + CHAT: llama cli -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M
+   Modati saari Qwen2.5 1.5B download avutundi (1.12 GB, Apache 2.0). Tarvaata 3 seconds lo open. Chivara --offline kalipithe internet ki velladu.
+3. LEDA BROWSER LO: llama serve -hf Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M, adi choopinche address open cheyyandi (maadi: http://127.0.0.1:9931).
+
+Maa test (graphics card leni 4-core computer, Linux): download tho modati start 42 s, tarvaata 3 s; secondki daadaapu 15 padaalu; 2.1-2.8 GB memory.
+Drafts ki baagundi: leave letter 2 seconds lo, 23 x 47 = 1081 correct. Telugu ki kaadu: Telugu lo adigithe artham leni maatalu raasindi. Telugu ki, online lo unna bigger apps vaadandi.
+
+Try chesi choodandi: ee raatri install chesi, repati leave letter draft adagandi, tarvaata Wi-Fi off chesi malli adagandi.
+
+=== COMMENT PROMPT ===
+(none)
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #OfflineAI #Privacy #LearnAI
+
+=== PINNED_COMMENT ===
+Ela test chesam (Nov 26, 2026): llama.cpp commit 9c003a9, source nunchi build (4-core Intel Xeon, graphics card ledu). Model: Qwen2.5-1.5B-Instruct Q4_K_M (1.12 GB, Apache 2.0). Modati start 42 s, tarvaata 3.0 s; 16.6-17.6 tokens/sec; peak memory 2.8 GB (-c 4096 tho 2.1 GB). Javaabulu chethito chadivaam: leave letter baagundi, EMI correct, 23 x 47 = 1081 correct, Telugu artham leni maatalu. One-line installers ikkada run cheyyaledu (ee machine rules piped scripts ni block chestaayi); Mac/Windows lines official README nunchi (Nov 26). Code: pipeline/howto06/run_demo.py.
