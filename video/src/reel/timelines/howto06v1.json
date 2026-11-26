@@ -13,20 +13,20 @@
  "fps": 30,
  "musicDrops": [
   [
-   1258,
-   1292
+   1268,
+   1307
   ]
  ],
  "musicBoosts": [
   [
    0,
    450,
-   2.0
+   2.6
   ],
   [
    450,
    1371,
-   1.6
+   1.3
   ],
   [
    1370,
@@ -35,13 +35,18 @@
   ],
   [
    1636,
+   1800,
+   3.8
+  ],
+  [
+   1800,
    1891,
    3.0
   ],
   [
    1636,
    1800,
-   3.0,
+   3.6,
    1
   ],
   [
@@ -74,14 +79,14 @@
     ],
     "captionTop": 1390,
     "t": {
-     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "lapTitle": "llama · Qwen2.5 1.5B · 4 CPU cores · no GPU",
      "letter": [
       "Dear Manager,",
       "I am sorry to inform you that I have a fever today",
       "and will be back to work tomorrow.",
       "Thank you for your understanding."
      ],
-     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "letterStats": "30 tokens · 2.0 s · --offline",
      "leftLab": "INTERNET",
      "leftVal": "OFF",
      "rightLab": "THE AI'S REPLY",
@@ -131,7 +136,7 @@
      "firstVal": "DOWNLOAD 1.12 GB",
      "after": "EVERY TIME AFTER",
      "afterVal": "OPENS IN 3 s",
-     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s (a fast connection)",
      "cliTitle": "Terminal: llama cli",
      "cliRows": [
       [
@@ -163,7 +168,8 @@
       "and will return to work tomorrow."
      ],
      "webStats": "36 tokens · 2.4 s · 15.20 t/s",
-     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "speed": "OR IN YOUR BROWSER: OPEN 127.0.0.1:9931 (the address it prints)",
+     "typeHere": "TYPE YOUR QUESTION AFTER >",
      "tiles": [
       [
        "GOOD FOR DRAFTS",
@@ -464,14 +470,14 @@
     ],
     "captionTop": 1390,
     "t": {
-     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "lapTitle": "llama · Qwen2.5 1.5B · 4 CPU cores · no GPU",
      "letter": [
       "Dear Manager,",
       "I am sorry to inform you that I have a fever today",
       "and will be back to work tomorrow.",
       "Thank you for your understanding."
      ],
-     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "letterStats": "30 tokens · 2.0 s · --offline",
      "leftLab": "INTERNET",
      "leftVal": "OFF",
      "rightLab": "THE AI'S REPLY",
@@ -521,7 +527,7 @@
      "firstVal": "DOWNLOAD 1.12 GB",
      "after": "EVERY TIME AFTER",
      "afterVal": "OPENS IN 3 s",
-     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s (a fast connection)",
      "cliTitle": "Terminal: llama cli",
      "cliRows": [
       [
@@ -553,7 +559,8 @@
       "and will return to work tomorrow."
      ],
      "webStats": "36 tokens · 2.4 s · 15.20 t/s",
-     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "speed": "OR IN YOUR BROWSER: OPEN 127.0.0.1:9931 (the address it prints)",
+     "typeHere": "TYPE YOUR QUESTION AFTER >",
      "tiles": [
       [
        "GOOD FOR DRAFTS",
@@ -874,14 +881,14 @@
     ],
     "captionTop": 1390,
     "t": {
-     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "lapTitle": "llama · Qwen2.5 1.5B · 4 CPU cores · no GPU",
      "letter": [
       "Dear Manager,",
       "I am sorry to inform you that I have a fever today",
       "and will be back to work tomorrow.",
       "Thank you for your understanding."
      ],
-     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "letterStats": "30 tokens · 2.0 s · --offline",
      "leftLab": "INTERNET",
      "leftVal": "OFF",
      "rightLab": "THE AI'S REPLY",
@@ -931,7 +938,7 @@
      "firstVal": "DOWNLOAD 1.12 GB",
      "after": "EVERY TIME AFTER",
      "afterVal": "OPENS IN 3 s",
-     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s (a fast connection)",
      "cliTitle": "Terminal: llama cli",
      "cliRows": [
       [
@@ -963,7 +970,8 @@
       "and will return to work tomorrow."
      ],
      "webStats": "36 tokens · 2.4 s · 15.20 t/s",
-     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "speed": "OR IN YOUR BROWSER: OPEN 127.0.0.1:9931 (the address it prints)",
+     "typeHere": "TYPE YOUR QUESTION AFTER >",
      "tiles": [
       [
        "GOOD FOR DRAFTS",
@@ -1142,7 +1150,7 @@
      "sub": null,
      "audio": "reel/howto06v1/line_06.wav",
      "from": 172,
-     "frames": 235,
+     "frames": 248,
      "words": [
       {
        "w": "Good",
@@ -1152,56 +1160,56 @@
       {
        "w": "for",
        "from": 179,
-       "to": 185
+       "to": 184
       },
       {
        "w": "drafts:",
-       "from": 185,
-       "to": 212
+       "from": 184,
+       "to": 210
       },
       {
        "w": "the",
-       "from": 212,
-       "to": 217
+       "from": 210,
+       "to": 216
       },
       {
        "w": "letter",
-       "from": 217,
-       "to": 226
+       "from": 216,
+       "to": 229
       },
       {
        "w": "was",
-       "from": 226,
-       "to": 232
+       "from": 229,
+       "to": 235
       },
       {
        "w": "fine,",
-       "from": 232,
-       "to": 247
+       "from": 235,
+       "to": 250
       },
       {
        "w": "the",
-       "from": 247,
-       "to": 252
+       "from": 250,
+       "to": 256
       },
       {
        "w": "maths",
-       "from": 252,
-       "to": 260
+       "from": 256,
+       "to": 268
       },
       {
        "w": "was",
-       "from": 260,
-       "to": 265
+       "from": 268,
+       "to": 274
       },
       {
        "w": "right,",
-       "from": 265,
-       "to": 292
+       "from": 274,
+       "to": 296
       },
       {
        "w": "about",
-       "from": 292,
+       "from": 296,
        "to": 304
       },
       {
@@ -1212,51 +1220,51 @@
       {
        "w": "words",
        "from": 308,
-       "to": 317
+       "to": 316
       },
       {
        "w": "a",
-       "from": 317,
+       "from": 316,
        "to": 319
       },
       {
        "w": "second.",
        "from": 319,
-       "to": 339
+       "to": 329
       },
       {
        "w": "Not",
-       "from": 339,
-       "to": 348
+       "from": 351,
+       "to": 361
       },
       {
        "w": "for",
-       "from": 348,
-       "to": 353
+       "from": 361,
+       "to": 366
       },
       {
        "w": "Telugu:",
-       "from": 353,
-       "to": 373
+       "from": 366,
+       "to": 386
       },
       {
        "w": "it",
-       "from": 373,
-       "to": 377
+       "from": 386,
+       "to": 390
       },
       {
        "w": "wrote",
-       "from": 377,
-       "to": 385
+       "from": 390,
+       "to": 399
       },
       {
        "w": "nonsense.",
-       "from": 385,
-       "to": 399
+       "from": 399,
+       "to": 413
       }
      ],
      "cues": {
-      "1": 341
+      "1": 351
      }
     }
    ]
@@ -1274,14 +1282,14 @@
     ],
     "captionTop": 1390,
     "t": {
-     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "lapTitle": "llama · Qwen2.5 1.5B · 4 CPU cores · no GPU",
      "letter": [
       "Dear Manager,",
       "I am sorry to inform you that I have a fever today",
       "and will be back to work tomorrow.",
       "Thank you for your understanding."
      ],
-     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "letterStats": "30 tokens · 2.0 s · --offline",
      "leftLab": "INTERNET",
      "leftVal": "OFF",
      "rightLab": "THE AI'S REPLY",
@@ -1331,7 +1339,7 @@
      "firstVal": "DOWNLOAD 1.12 GB",
      "after": "EVERY TIME AFTER",
      "afterVal": "OPENS IN 3 s",
-     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s (a fast connection)",
      "cliTitle": "Terminal: llama cli",
      "cliRows": [
       [
@@ -1363,7 +1371,8 @@
       "and will return to work tomorrow."
      ],
      "webStats": "36 tokens · 2.4 s · 15.20 t/s",
-     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "speed": "OR IN YOUR BROWSER: OPEN 127.0.0.1:9931 (the address it prints)",
+     "typeHere": "TYPE YOUR QUESTION AFTER >",
      "tiles": [
       [
        "GOOD FOR DRAFTS",
@@ -1565,14 +1574,14 @@
     ],
     "captionTop": 1390,
     "t": {
-     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "lapTitle": "llama · Qwen2.5 1.5B · 4 CPU cores · no GPU",
      "letter": [
       "Dear Manager,",
       "I am sorry to inform you that I have a fever today",
       "and will be back to work tomorrow.",
       "Thank you for your understanding."
      ],
-     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "letterStats": "30 tokens · 2.0 s · --offline",
      "leftLab": "INTERNET",
      "leftVal": "OFF",
      "rightLab": "THE AI'S REPLY",
@@ -1622,7 +1631,7 @@
      "firstVal": "DOWNLOAD 1.12 GB",
      "after": "EVERY TIME AFTER",
      "afterVal": "OPENS IN 3 s",
-     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s (a fast connection)",
      "cliTitle": "Terminal: llama cli",
      "cliRows": [
       [
@@ -1654,7 +1663,8 @@
       "and will return to work tomorrow."
      ],
      "webStats": "36 tokens · 2.4 s · 15.20 t/s",
-     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "speed": "OR IN YOUR BROWSER: OPEN 127.0.0.1:9931 (the address it prints)",
+     "typeHere": "TYPE YOUR QUESTION AFTER >",
      "tiles": [
       [
        "GOOD FOR DRAFTS",
@@ -1821,14 +1831,14 @@
     ],
     "captionTop": 1390,
     "t": {
-     "lapTitle": "llama · Qwen2.5 1.5B · on this laptop",
+     "lapTitle": "llama · Qwen2.5 1.5B · 4 CPU cores · no GPU",
      "letter": [
       "Dear Manager,",
       "I am sorry to inform you that I have a fever today",
       "and will be back to work tomorrow.",
       "Thank you for your understanding."
      ],
-     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
+     "letterStats": "30 tokens · 2.0 s · --offline",
      "leftLab": "INTERNET",
      "leftVal": "OFF",
      "rightLab": "THE AI'S REPLY",
@@ -1878,7 +1888,7 @@
      "firstVal": "DOWNLOAD 1.12 GB",
      "after": "EVERY TIME AFTER",
      "afterVal": "OPENS IN 3 s",
-     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s to download",
+     "modelLic": "Qwen2.5 1.5B · Apache 2.0 · ours took 42 s (a fast connection)",
      "cliTitle": "Terminal: llama cli",
      "cliRows": [
       [
@@ -1910,7 +1920,8 @@
       "and will return to work tomorrow."
      ],
      "webStats": "36 tokens · 2.4 s · 15.20 t/s",
-     "speed": "OR IN YOUR BROWSER · 4 CPU CORES, NO GRAPHICS CARD",
+     "speed": "OR IN YOUR BROWSER: OPEN 127.0.0.1:9931 (the address it prints)",
+     "typeHere": "TYPE YOUR QUESTION AFTER >",
      "tiles": [
       [
        "GOOD FOR DRAFTS",
