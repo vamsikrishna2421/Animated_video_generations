@@ -59,7 +59,7 @@ T = {
     "letter": ["Dear Manager,", "I am sorry to inform you that I have a fever today", "and will be back to work tomorrow.", "Thank you for your understanding."],
     "letterStats": "30 tokens · 2.0 s · Wi-Fi off",
     "leftLab": "INTERNET", "leftVal": "OFF", "rightLab": "THE AI'S REPLY", "rightVal": "2 SECONDS",
-    "tag": "HOW TO 06 · FREE · SMALL · STAYS ON YOUR LAPTOP",
+    "tag": "FREE · SMALL · STAYS ON YOUR LAPTOP",
     "noNet": "1 GB DOWNLOAD, ONCE · THEN NO INTERNET",
     "step1": "STEP 1 · INSTALL", "step2": "STEP 2 · GET A MODEL", "step3": "STEP 3 · CHAT",
     "termTitle": "Terminal (Mac) · PowerShell (Windows)",

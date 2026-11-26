@@ -30,7 +30,7 @@ const shop = (c: Ctx, W: number, H: number) => {
   const cols = ["#ef4444", "#f59e0b", "#22c55e", "#3b82f6", "#a855f7", "#ec4899"];
   for (let q = 0; q < 3; q++) for (let z = 0; z < 9; z++) { c.fillStyle = cols[(q * 3 + z) % 6]; c.globalAlpha = 0.45; rrect(c, 60 + z * 110, 220 + q * 150, 70, 80, 8); c.fill(); }
   c.globalAlpha = 1;
-  c.fillStyle = "#8b5a2b"; c.fillRect(0, 1180, W, H - 1180); c.fillStyle = "#a16a35"; c.fillRect(0, 1180, W, 30);
+  c.fillStyle = "#8b5a2b"; c.fillRect(0, 1300, W, H - 1300); c.fillStyle = "#a16a35"; c.fillRect(0, 1300, W, 30);
 };
 const wifiOff = (c: Ctx, x: number, y: number, s: number) => {
   c.save(); c.translate(x, y); c.strokeStyle = "#475569"; c.lineWidth = s * 0.09; c.lineCap = "round";
@@ -69,7 +69,7 @@ const block = (c: Ctx, x: number, y: number, w: number, small: string, big: stri
   c.font = SANS(fit(c, big, w - 40, 76, 900), 900); c.fillStyle = col; c.fillText(big, x + w / 2, y + 150);
   c.restore();
 };
-const stepTag = (c: Ctx, t: string, k: number) => { chip(c, t, 200, 200, "#0f172a", "#fde68a", k, 44); };
+const stepTag = (c: Ctx, t: string, k: number) => { chip(c, t, 540, 200, "#0f172a", "#fde68a", k, 44); };   // stills: off the left edge
 const card = (c: Ctx, x: number, y: number, w: number, h: number, bg: string, k: number) => {
   c.save(); c.globalAlpha = clamp(k * 3); c.translate(0, (1 - easeOut(clamp(k * 1.5))) * 40);
   c.fillStyle = "rgba(0,0,0,0.2)"; rrect(c, x + 6, y + 8, w, h, 22); c.fill(); c.fillStyle = bg; rrect(c, x, y, w, h, 22); c.fill();
@@ -121,6 +121,7 @@ const StLlm: React.FC<SP> = ({ s }) => {
         const P = loopOn ? "hook" : b.prop;
         shop(c, W, H);
         c.textAlign = "left";
+        c.save(); c.translate(0, 90);   // stills: the step tags hit the series header; everything sits 90 px lower
         if (P === "hook" || P === "loop") {
           const r = laptop(c, 170, 560, 740, 470);
           c.fillStyle = "#f8fafc"; rrect(c, r.x, r.y, r.w, r.h, 10); c.fill();
@@ -130,7 +131,7 @@ const StLlm: React.FC<SP> = ({ s }) => {
           wifiOff(c, 840, 640, 56);
           block(c, 40, 210, 490, T.leftLab, T.leftVal, "#fecaca", "#7f1d1d");
           block(c, 550, 210, 490, T.rightLab, T.rightVal, "#bbf7d0", "#14532d");
-          chip(c, T.tag, W / 2, 1110, "#0f172a", "#fde68a", 1, 40);
+          chip(c, T.tag, W / 2, 1110, "#0f172a", "#fde68a", 1, fit(c, T.tag, 940, 40, 800));
         } else if (P === "result") {
           const r = laptop(c, 90, 330, 900, 640);
           c.fillStyle = "#f8fafc"; rrect(c, r.x, r.y, r.w, r.h, 10); c.fill();
@@ -181,7 +182,7 @@ const StLlm: React.FC<SP> = ({ s }) => {
         } else if (P === "needs") {
           const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, cu(1, 0.1) - 2, cu(1, 0.1) + 8);
           if (k0 > 0) { card(c, 70, 300, 940, 420, "#fffdf5", k0); c.textAlign = "left";
-            (T.needRows as [string, string][]).forEach(([a, bb], q) => { c.font = SANS(44, 900); c.fillStyle = "#92400e"; c.fillText(a, 110, 390 + q * 110); c.font = SANS(fit(c, bb, 640, 44, 800), 800); c.fillStyle = INK; c.fillText(bb, 330, 390 + q * 110); });
+            (T.needRows as [string, string][]).forEach(([a, bb], q) => { c.font = SANS(44, 900); c.fillStyle = "#92400e"; c.fillText(a, 110, 390 + q * 110); c.font = SANS(fit(c, bb, 600, 44, 800), 800); c.fillStyle = INK; c.fillText(bb, 380, 390 + q * 110); });
             c.restore(); }
           if (k1 > 0) { const typed = (T.offlineCmd as string).slice(0, Math.round((T.offlineCmd as string).length * clamp((f - cu(1, 0.1)) / 30)));
             term(c, { x: 50, y: 780, w: 980, h: 300 }, T.termTitle, [["$ " + typed, "#e2e8f0"], [f > cu(1, 0.1) + 34 ? T.offlineNote : "", "#86efac"]], 30, k1); }
@@ -195,6 +196,7 @@ const StLlm: React.FC<SP> = ({ s }) => {
           if (k1 > 0) { card(c, 70, 890, 940, 250, "#dcfce7", k1); c.textAlign = "center"; c.font = SANS(56, 900); c.fillStyle = "#14532d";
             wrap(c, T.share, 860).slice(0, 3).forEach((t, q) => c.fillText(t, 540, 980 + q * 66)); c.restore(); }
         }
+        c.restore();
         c.textAlign = "left";
       }} />
     </>
