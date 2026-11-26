@@ -24,7 +24,7 @@ LINES = {   # n: (prop, English, Telugu)
     6: ("honest", "Good for drafts: the letter was fine, the maths was right, about fifteen words a second. | [1] Not for Telugu: it wrote nonsense.",
         "డ్రాఫ్ట్‌లకి బాగుంది: లెటర్ బాగుంది, లెక్క సరిగ్గా చేసింది, సెకనుకి దాదాపు పదిహేను మాటలు. | [1] కానీ తెలుగులో అడిగితే, అర్థం లేని మాటలు."),
     7: ("needs", "It needs about three gigabytes of free memory. Most eight-gigabyte laptops are fine. [1] Add dash dash offline, and it never goes online.",
-        "దీనికి మూడు గిగాబైట్ల ఖాళీ మెమరీ కావాలి; ఎనిమిది గిగాబైట్ల లాప్‌టాప్ సరిపోతుంది. [1] లైన్ చివర, డాష్ డాష్ ఆఫ్‌లైన్ అని టైప్ చేస్తే, ఇంటర్నెట్ లేకుండానే పని చేస్తుంది."),
+        "దీనికి మూడు గిగాబైట్ల ఖాళీ మెమరీ కావాలి; ఎనిమిది గిగాబైట్ల లాప్‌టాప్ సరిపోతుంది. | [1] లైన్ చివర, డాష్ డాష్ ఆఫ్‌లైన్ అని టైప్ చేస్తే, ఇంటర్నెట్ లేకుండానే పని చేస్తుంది."),
     8: ("save", "Save this. [1] And send it to the friend who pastes office data into ChatGPT.",
         "ఇది సేవ్ చేసుకోండి. [1] ఆఫీస్ డేటా, చాట్‌జీపీటీ లో పేస్ట్ చేసే ఫ్రెండ్ కి, ఇది పంపండి."),
     9: ("loop", "Wi-Fi off, [1] and it still answers.", "ఇంటర్నెట్ లేకపోయినా, [1] జవాబు ఇస్తుంది."),
@@ -134,7 +134,7 @@ def spec(lang="en"):
                 ln["tts"] = TTS_EN[n]
             if " | " in raw:   # a real beat before "Not for Telugu" (render review)
                 p1, p2 = raw.split(" | ")
-                pz = 0.6
+                pz = 0.6 if n == 6 else 0.3   # 6: the beat before "Not for Telugu"; 7 (Telugu): two takes, Parler babbled one
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_storyteller.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             lines.append(ln)
