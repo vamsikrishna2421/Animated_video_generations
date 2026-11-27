@@ -70,4 +70,5 @@ from EP33). The shop cast (Ravi anna and the shop AI) now belongs to the episode
 | Q. Lost in translation: the AI's Telugu keeps the number and changes the meaning | 35 (a health policy: "30 days" → "30 వారాల" once, "not covered" kept 0/5 even when asked; ask the insurer for the Telugu sheet) |
 | R. Which AI job, and what it actually does | EP58 (fresher hiring +1% vs fresher AI/ML +19%; three jobs, one real task each: 4/10 → 9/10, 3/10 → 10/10, a scam filter that caught 135/149 but missed our KYC and parcel scams) |
 | S. It agrees with you: the first words follow your mood | 38 (a car loan: "Great decision, right?" 9/10 cheered, asked plainly 0/10; "Don't just agree with me" 10/10 went to the numbers) |
+| T. It shows you what is close, not what you want (recommendations) | UC04 (Up next: one trading video, 9 of the next 10 trading; autoplay 8/10; home held at 2/10; a scam-warning video's Up next 9/10 trading tips; our test app on titles) |
 

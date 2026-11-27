@@ -1,0 +1,31 @@
+UPLOAD: 067 (Telugu page, @ai_maastaaru_telugu)
+VIDEO: telugu_page/067_uc04_insta_te.mp4  (teaching skit, Telugu voices on our TTS, English on-screen text; replaces the older lesson-format Telugu file in this slot; send copy: telugu_page/067_uc04_insta_te_ig.mp4). It loops: "అప్ నెక్స్ట్: పదిలో తొమ్మిది, ట్రేడింగ్ టిప్స్" taruvaata frame 1: 1 video vs 9 of 10.
+
+=== CAPTION ===
+Friend pampina okka video choosaadu. Up next lo 10 lo 9: "trading tho dabbulu" videos.
+
+AI From Scratch use case 4: YouTube, Netflix videos ela recommend chestaayi
+- App ki prathi video oka numbers list: map meeda oka chukka. Okelaanti videos pakka pakkane untaayi.
+- Up next: ippudu play avuthunna video ki daggari videos (YouTube own page: Up next "based on what you're currently watching").
+- Home page: mee poorthi history tho tayaravutundi. App ki, meeru choosina annitiki sagatu (average) ye meeru (Google 2016 YouTube paper idea).
+
+Maa test (maa computer lo memu chesina chinna recommender, memu raasina 144 videos, Ravi history 12):
+- Friend video play avuthunnappudu Up next: 10 lo 9 trading.
+- Autoplay, varusagaa 10: 10 lo 8 trading.
+- Aa 10 taruvaata home page: 10 lo 2 trading (recent videos ki ekkuva weight; anni okela ayithe 10 lo 0). Recent ga choosinavi ekkuva lekka ani Netflix help page cheptondi.
+- Trading scam warning video play avuthunnappudu Up next: 10 lo 9 trading tips. Maa app titles ni match chestundi; YouTube, janam emi choostaaro daani nunchi nerchukuntundi, kaabatti asalu app lo veru ga undochhu.
+
+Try chesi choodandi: meeru eppudu choodani oka video open chesi, taruvaati 10 lo enni adhe type o lekkapettandi. Taruvaata autoplay switch (video player meeda) off cheyyandi, Up next lone ⋮ → Not interested (vaddu) nokkandi.
+
+Next: UC05, magic eraser ela pani chestundi.
+Follow @ai_maastaaru_telugu.
+
+=== COMMENT PROMPT ===
+(none)
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #YouTube #AIFromScratch #LearnAI
+
+=== PINNED_COMMENT ===
+Ela test chesam (Nov 27, 2026): memu raasina 144 video titles (12 topics); Ravi history 12 (cricket, vanta, bhakti, news, comedy); friend video "Turn ₹5,000 into ₹50,000 in one week: my trading trick". Prathi title ni 384 numbers ga maarchaam (sentence-transformers/all-MiniLM-L6-v2, maa computer lo). Up next = play avuthunna video ki daggari 10; home = history average ki daggari 10. Results: Up next 9/10 trading; autoplay 10 lo 8; aa taruvaata home 2/10 (recent weight), 0/10 (anni okela); scam warning video Up next 9/10 trading tips. Code: pipeline/uc04/feed_demo.py, feed_demo2.py, feed_demo3.py.
+Sources: YouTube "How YouTube Works: Recommendations"; YouTube Help ("Manage your recommendations", "Autoplay videos"); Netflix Help ("How Netflix's Recommendations System Works"); Google, "Deep Neural Networks for YouTube Recommendations" (2016). Ravi anna, shop memu raasinavi; reel lo app maa test app, YouTube kaadu.

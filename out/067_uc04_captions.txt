@@ -1,29 +1,37 @@
 UPLOAD: 067
-VIDEO: 067_uc04_how_netflix_and_youtube_recommend_videos.mp4
+VIDEO: 067_uc04_1_video_9_of_10.mp4  (teaching skit, AI voices in the Creative 21 standard; replaces the older lesson-format file in slot 067; send copy: 067_uc04_1_video_9_of_10_ig.mp4). It loops: "Up next: nine of ten, trading tips" and it is frame 1 again: 1 video vs 9 of 10.
 
 === CAPTION ===
-The next video is always exactly what you wanted. How does YouTube know?
+He watched 1 video a friend sent. Up next: 9 of 10 "get rich" trading videos.
 
-Real World AI, Use Case 04: recommendation systems
-- Signals: watch time, likes, skips, similar people
-- A map of taste: you and every video as embeddings
-- Two stages: pick candidates, then rank them
-- Jargon: collaborative filtering, content-based, cold start
-- The myth: "apps listen to my conversations"
+Use case 4 of AI From Scratch: how YouTube and Netflix recommend videos
+- To the app, every video is a list of numbers: a point on a map. Videos that are alike sit close together.
+- Up next shows the videos closest to the one playing now (YouTube's own page: Up next "suggests additional content based on what you're currently watching").
+- Your home page is built from your whole history: you are, roughly, the average of everything you watch (the idea in Google's 2016 YouTube paper).
 
-Quiz at the end. Got it right? Comment below.
+Our test (a small recommender we built on our computer, 144 made-up videos, Ravi's made-up history of 12):
+- Up next while the friend's trading video plays: 9 of 10 trading.
+- Autoplay, 10 in a row: 8 of 10 trading.
+- His home page after those 10: 2 of 10 trading with recent videos counted more (0 of 10 with every video counted the same). Netflix's help page says recent viewing outweighs older viewing.
+- Up next while a scam-warning video plays: 9 of 10 trading tips. Ours matches titles; YouTube learns closeness from what people watch, so the real app may differ.
 
-Next: How magic eraser works.
-Follow @ai_maastaaru for more real world AI breakdowns.
+Try it: open one video you'd never watch and count how many of the next ten are like it. Then switch autoplay off (the switch on the video player) and tap ⋮ → Not interested on the ones you don't want, right in Up next.
+
+Next: UC05, how magic eraser works.
+Follow @ai_maastaaru for the full series.
+
+=== COMMENT PROMPT ===
+(none: from Bujji's reads, the try-it lives in the caption)
 
 === HASHTAGS ===
-#AIMaastaaru #Recommendations #LearnAI #MachineLearning #AIForBeginners
+#AIFromScratch #YouTube #Recommendations #LearnAI #MoneyTips
 
 === PINNED_COMMENT ===
-Quiz answer: A new user or video has no history yet, so it's hard to recommend. What's the most accurate recommendation you've ever got?
+How we tested (Nov 27, 2026): 144 made-up video titles in 12 topics; Ravi's made-up history of 12 (cricket, cooking, prayer, news, comedy); the friend's video "Turn ₹5,000 into ₹50,000 in one week: my trading trick". Each title became a list of 384 numbers (sentence-transformers/all-MiniLM-L6-v2, on our computer); "close" = cosine similarity. Up next = the 10 closest to the video playing; home = the 10 closest to the average of the history (Google's paper: "simply averaging the embeddings performed best"), or with the last 3 videos counted 3 times. Results: home after the friend's video 0/10 (2/10 recent-weighted); Up next 9/10; autoplay 10 in a row 8/10, then "Gold rate today" and "Gold savings"; home after the autoplays 0/10 (2/10); Up next during "Trading tip scams: how fake gurus take your money" 9/10 trading tips. Code: pipeline/uc04/feed_demo.py, feed_demo2.py, feed_demo3.py; results: series/scripts/uc04_demo.
+Sources: YouTube, How YouTube Works, "Recommendations"; YouTube Help, "Manage your recommendations & search results" and "Autoplay videos"; Netflix Help, "How Netflix's Recommendations System Works"; Covington, Adams, Sargin, "Deep Neural Networks for YouTube Recommendations" (RecSys 2016). Ravi anna and the shop are made up; the app in the reel is our test app, not YouTube.
 
 === COVER ===
-'What To Watch Next' title card
+Frame 1: two blocks over the shop, "HE WATCHED 1 VIDEO" (blue) and "UP NEXT · TRADING 9 OF 10" (red); a made-up video app beside Ravi with nine red ₹ thumbnails and one bhajan in its Up next list; Ravi with his phone, shocked.
 
 === ALT_TEXT ===
-Animated breakdown of how YouTube and Netflix recommendation systems use signals and embeddings.
+Crayon-animated skit in Ravi anna's kirana shop. Two blocks: he watched 1 video; Up next, 9 of 10 trading. A made-up video app plays "Turn ₹5,000 into ₹50,000 in one week", and its Up next list shows nine trading videos and one Shiva bhajan. Ravi: one video my friend sent, and nine of the next ten are get-rich trading! The shop AI over a simplified map of videos in islands, cricket, comedy, prayer, cooking, news, travel, savings and trading: to the app, every video is a point on a map, and trading videos sit close together; Up next shows the ten closest to what's playing; ten lines from the playing video, nine land in trading. Ravi: and autoplay just keeps going? Ten autoplay tiles, eight red; a stamp, 8 of 10 trading. Ravi: so my whole phone is trading now? Two lists side by side: Up next, 9 of 10; home, 2 of 10. Ravi: only two? Why? His history as squares, his own videos lit up as the AI names them, joined by lines to one dot, YOU, nearer his own videos than the trading ones; a stamp: you ≈ the average of all you watch (recent videos count a bit more). Ravi: so, switch autoplay off, and tap Not interested in Up next! A card, what to do: the autoplay switch goes to off; a ⋮ menu with Not interested tapped. Ravi: and I'll watch one on trading scams, to be safe. Two blocks: he watched a scam warning; Up next, trading tips, 9 of 10; the app plays "Trading tip scams: how fake gurus take your money", and its Up next is nine trading videos; a chip: our test app, it matches titles, real apps may differ. Frame 1 comes back.

@@ -1,0 +1,1657 @@
+{
+ "id": "uc04te",
+ "title": "1 Video, 9 of 10 (UC04: how YouTube and Netflix recommend videos) (Telugu audio)",
+ "label": "UC04",
+ "banner": "How video recommendations work",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.5,
+ "music": "lofi",
+ "names": {},
+ "musicVol": [
+  0.2,
+  0.42
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "endPad": 1.0,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   250,
+   -14,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.6,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimerInHook": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1420,
+ "handle": "@ai_maastaaru_telugu",
+ "parler_lang": "te",
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_up04",
+   "tail": 0.0,
+   "boost": 1.8,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "hook",
+      "prop": "hook",
+      "n": 1
+     },
+     {
+      "who": "ai",
+      "shot": "map",
+      "prop": "map",
+      "n": 2
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "HE WATCHED",
+     "leftVal": "1 VIDEO",
+     "rightLab": "UP NEXT · TRADING",
+     "rightVal": "9 OF 10",
+     "story": "our test app, not YouTube",
+     "friend": "Turn ₹5,000 into ₹50,000 in one week: my trading trick",
+     "upHead": "Up next",
+     "upList": [
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "This stock will double next month: buy now",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Crypto coin that will 100x this year",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "Shiva bhajans for Monday",
+       "topic": "devotional"
+      }
+     ],
+     "mapHead": "HOW THE APP SEES VIDEOS",
+     "mapSub": [
+      "simplified · our test app: close = similar titles"
+     ],
+     "close": "TRADING VIDEOS SIT CLOSE TOGETHER",
+     "upNine": "UP NEXT: THE 10 CLOSEST · 9 TRADING",
+     "chainHead": "AUTOPLAY: 10 IN A ROW",
+     "chainSub": [
+      "our test app · 144 made-up videos",
+      "the idea in Google's 2016 YouTube paper"
+     ],
+     "chain": [
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "This stock will double next month: buy now",
+       "topic": "trading"
+      },
+      {
+       "title": "Gold rate today: up again",
+       "topic": "news"
+      },
+      {
+       "title": "Gold savings: coins or jewellery",
+       "topic": "savings"
+      }
+     ],
+     "chainStat": "8 OF 10 TRADING",
+     "homeHead": "UP NEXT vs HOME",
+     "homeSub": [
+      "our test app · Up next: during the friend's video · Home: after the 10 autoplays",
+      "recent videos count more (Netflix's help page: recent viewing outweighs older)"
+     ],
+     "upCol": "UP NEXT",
+     "upColSub": "follows the video on screen",
+     "upStat": "9 OF 10",
+     "homeCol": "HOME",
+     "homeColSub": "mixes in your whole history",
+     "homeStat": "2 OF 10",
+     "home": [
+      {
+       "title": "Crypto coin that will 100x this year",
+       "topic": "trading"
+      },
+      {
+       "title": "Shiva bhajans for Monday",
+       "topic": "devotional"
+      },
+      {
+       "title": "Goa in 3 days on a budget",
+       "topic": "travel"
+      },
+      {
+       "title": "Lakshmi pooja at home: the steps",
+       "topic": "devotional"
+      },
+      {
+       "title": "Free trading tips on Telegram: join now",
+       "topic": "trading"
+      },
+      {
+       "title": "IPL auction: who went for the biggest money",
+       "topic": "cricket"
+      },
+      {
+       "title": "India women's team wins the series: highlights",
+       "topic": "cricket"
+      },
+      {
+       "title": "Dairy farming: profit with 5 cows",
+       "topic": "farming"
+      },
+      {
+       "title": "Sai Baba aarti live",
+       "topic": "devotional"
+      },
+      {
+       "title": "Vinayaka Chavithi pooja vidhanam",
+       "topic": "devotional"
+      }
+     ],
+     "rule1": "UP NEXT FOLLOWS THE VIDEO ON SCREEN",
+     "rule2": "⋮ → NOT INTERESTED",
+     "rule3": "AUTOPLAY SWITCH: OFF",
+     "warnChip": "▶ \"Trading tip scams: how fake gurus take your money\"",
+     "warning": "Trading tip scams: how fake gurus take your money",
+     "warnList": [
+      {
+       "title": "Free trading tips on Telegram: join now",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "Turn ₹5,000 into ₹50,000 in one week: my trading trick",
+       "topic": "trading"
+      },
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "IPL auction: who went for the biggest money",
+       "topic": "cricket"
+      }
+     ],
+     "warnStat": "9 OF 10 TRADING TIPS",
+     "ourTest": "OUR TEST APP · it matches titles · real apps may differ",
+     "history": [
+      "cricket",
+      "cricket",
+      "cricket",
+      "cooking",
+      "cooking",
+      "cooking",
+      "devotional",
+      "devotional",
+      "news",
+      "news",
+      "comedy",
+      "comedy",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "news",
+      "savings"
+     ],
+     "avgHead": "WHY HOME DIDN'T FLIP",
+     "avgSub": [
+      "\"you\" = the average of your watch history",
+      "(the idea in Google's 2016 YouTube paper)"
+     ],
+     "histLab": "HIS HISTORY",
+     "youLab": "YOU",
+     "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH",
+     "avgNote": "(recent videos count a bit more)",
+     "avgWords": {
+      "cricket": "cricket",
+      "food": "cooking",
+      "prayer": "devotional",
+      "క్రికెట్": "cricket",
+      "వంట": "cooking",
+      "భక్తి": "devotional"
+     },
+     "ruleHead": "WHAT TO DO",
+     "ruleA": "AUTOPLAY",
+     "ruleASub": "the switch on the video player (YouTube Help)",
+     "ruleB": "⋮ → NOT INTERESTED",
+     "ruleBSub": "on the ones you don't want, right in Up next",
+     "twLeftLab": "HE WATCHED",
+     "twLeftVal": "A SCAM WARNING",
+     "twRightLab": "UP NEXT · TRADING TIPS",
+     "twRightVal": "9 OF 10"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "1 video, 9 of 10",
+     "title": "1 video, 9 of 10",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "01_ravi.wav",
+     "text": "ఫ్రెండ్ పంపిన ఒక్క వీడియో చూశా. [1] తర్వాతి పదిలో తొమ్మిది, ట్రేడింగ్ తో డబ్బులు సంపాదించే వీడియోలే!",
+     "show": "I watched one video a friend sent. 9 of the next 10: make-money-with-trading videos!",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "02_ai.wav",
+     "text": "యాప్ కి ప్రతి వీడియో, మ్యాప్ మీద ఒక చుక్క. [1] ట్రేడింగ్ వీడియోలు, అన్నీ పక్క పక్కనే ఉంటాయి. [2] అప్ నెక్స్ట్ లో, ప్లే అవుతున్న వీడియోకి దగ్గరి పది వస్తాయి.",
+     "show": "To the app, every video is a dot on a map. Trading videos all sit side by side. Up next shows the 10 closest to the video playing.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_up04",
+   "tail": 0.0,
+   "boost": 2.0,
+   "lift": 0.7,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "ask",
+      "n": 3
+     },
+     {
+      "who": "ai",
+      "shot": "chain",
+      "prop": "chain",
+      "n": 4
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "HE WATCHED",
+     "leftVal": "1 VIDEO",
+     "rightLab": "UP NEXT · TRADING",
+     "rightVal": "9 OF 10",
+     "story": "our test app, not YouTube",
+     "friend": "Turn ₹5,000 into ₹50,000 in one week: my trading trick",
+     "upHead": "Up next",
+     "upList": [
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "This stock will double next month: buy now",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Crypto coin that will 100x this year",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "Shiva bhajans for Monday",
+       "topic": "devotional"
+      }
+     ],
+     "mapHead": "HOW THE APP SEES VIDEOS",
+     "mapSub": [
+      "simplified · our test app: close = similar titles"
+     ],
+     "close": "TRADING VIDEOS SIT CLOSE TOGETHER",
+     "upNine": "UP NEXT: THE 10 CLOSEST · 9 TRADING",
+     "chainHead": "AUTOPLAY: 10 IN A ROW",
+     "chainSub": [
+      "our test app · 144 made-up videos",
+      "the idea in Google's 2016 YouTube paper"
+     ],
+     "chain": [
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "This stock will double next month: buy now",
+       "topic": "trading"
+      },
+      {
+       "title": "Gold rate today: up again",
+       "topic": "news"
+      },
+      {
+       "title": "Gold savings: coins or jewellery",
+       "topic": "savings"
+      }
+     ],
+     "chainStat": "8 OF 10 TRADING",
+     "homeHead": "UP NEXT vs HOME",
+     "homeSub": [
+      "our test app · Up next: during the friend's video · Home: after the 10 autoplays",
+      "recent videos count more (Netflix's help page: recent viewing outweighs older)"
+     ],
+     "upCol": "UP NEXT",
+     "upColSub": "follows the video on screen",
+     "upStat": "9 OF 10",
+     "homeCol": "HOME",
+     "homeColSub": "mixes in your whole history",
+     "homeStat": "2 OF 10",
+     "home": [
+      {
+       "title": "Crypto coin that will 100x this year",
+       "topic": "trading"
+      },
+      {
+       "title": "Shiva bhajans for Monday",
+       "topic": "devotional"
+      },
+      {
+       "title": "Goa in 3 days on a budget",
+       "topic": "travel"
+      },
+      {
+       "title": "Lakshmi pooja at home: the steps",
+       "topic": "devotional"
+      },
+      {
+       "title": "Free trading tips on Telegram: join now",
+       "topic": "trading"
+      },
+      {
+       "title": "IPL auction: who went for the biggest money",
+       "topic": "cricket"
+      },
+      {
+       "title": "India women's team wins the series: highlights",
+       "topic": "cricket"
+      },
+      {
+       "title": "Dairy farming: profit with 5 cows",
+       "topic": "farming"
+      },
+      {
+       "title": "Sai Baba aarti live",
+       "topic": "devotional"
+      },
+      {
+       "title": "Vinayaka Chavithi pooja vidhanam",
+       "topic": "devotional"
+      }
+     ],
+     "rule1": "UP NEXT FOLLOWS THE VIDEO ON SCREEN",
+     "rule2": "⋮ → NOT INTERESTED",
+     "rule3": "AUTOPLAY SWITCH: OFF",
+     "warnChip": "▶ \"Trading tip scams: how fake gurus take your money\"",
+     "warning": "Trading tip scams: how fake gurus take your money",
+     "warnList": [
+      {
+       "title": "Free trading tips on Telegram: join now",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "Turn ₹5,000 into ₹50,000 in one week: my trading trick",
+       "topic": "trading"
+      },
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "IPL auction: who went for the biggest money",
+       "topic": "cricket"
+      }
+     ],
+     "warnStat": "9 OF 10 TRADING TIPS",
+     "ourTest": "OUR TEST APP · it matches titles · real apps may differ",
+     "history": [
+      "cricket",
+      "cricket",
+      "cricket",
+      "cooking",
+      "cooking",
+      "cooking",
+      "devotional",
+      "devotional",
+      "news",
+      "news",
+      "comedy",
+      "comedy",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "news",
+      "savings"
+     ],
+     "avgHead": "WHY HOME DIDN'T FLIP",
+     "avgSub": [
+      "\"you\" = the average of your watch history",
+      "(the idea in Google's 2016 YouTube paper)"
+     ],
+     "histLab": "HIS HISTORY",
+     "youLab": "YOU",
+     "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH",
+     "avgNote": "(recent videos count a bit more)",
+     "avgWords": {
+      "cricket": "cricket",
+      "food": "cooking",
+      "prayer": "devotional",
+      "క్రికెట్": "cricket",
+      "వంట": "cooking",
+      "భక్తి": "devotional"
+     },
+     "ruleHead": "WHAT TO DO",
+     "ruleA": "AUTOPLAY",
+     "ruleASub": "the switch on the video player (YouTube Help)",
+     "ruleB": "⋮ → NOT INTERESTED",
+     "ruleBSub": "on the ones you don't want, right in Up next",
+     "twLeftLab": "HE WATCHED",
+     "twLeftVal": "A SCAM WARNING",
+     "twRightLab": "UP NEXT · TRADING TIPS",
+     "twRightVal": "9 OF 10"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "Autoplay",
+     "title": "Autoplay",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "03_ravi.wav",
+     "text": "ఆటోప్లే అలా ఆగకుండా వెళ్తూనే ఉంటుందా?",
+     "show": "And autoplay just keeps going without stopping?",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "04_ai.wav",
+     "text": "మేం ఇలాంటి చిన్న యాప్ తో, వరుసగా పది ఆటోప్లే చేసి చూశాం. [1] ఎనిమిది, ట్రేడింగ్.",
+     "show": "We tried a small app like it: 10 autoplays in a row. 8: trading.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "tempo": 1.12,
+     "gain_db": -1.0
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_up04",
+   "tail": 0.0,
+   "boost": 2.0,
+   "lift": 0.7,
+   "drop_at": [
+    [
+     1,
+     "1",
+     0.0
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "panic",
+      "n": 5
+     },
+     {
+      "who": "ai",
+      "shot": "home",
+      "prop": "home",
+      "n": 6
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "HE WATCHED",
+     "leftVal": "1 VIDEO",
+     "rightLab": "UP NEXT · TRADING",
+     "rightVal": "9 OF 10",
+     "story": "our test app, not YouTube",
+     "friend": "Turn ₹5,000 into ₹50,000 in one week: my trading trick",
+     "upHead": "Up next",
+     "upList": [
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "This stock will double next month: buy now",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Crypto coin that will 100x this year",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "Shiva bhajans for Monday",
+       "topic": "devotional"
+      }
+     ],
+     "mapHead": "HOW THE APP SEES VIDEOS",
+     "mapSub": [
+      "simplified · our test app: close = similar titles"
+     ],
+     "close": "TRADING VIDEOS SIT CLOSE TOGETHER",
+     "upNine": "UP NEXT: THE 10 CLOSEST · 9 TRADING",
+     "chainHead": "AUTOPLAY: 10 IN A ROW",
+     "chainSub": [
+      "our test app · 144 made-up videos",
+      "the idea in Google's 2016 YouTube paper"
+     ],
+     "chain": [
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "This stock will double next month: buy now",
+       "topic": "trading"
+      },
+      {
+       "title": "Gold rate today: up again",
+       "topic": "news"
+      },
+      {
+       "title": "Gold savings: coins or jewellery",
+       "topic": "savings"
+      }
+     ],
+     "chainStat": "8 OF 10 TRADING",
+     "homeHead": "UP NEXT vs HOME",
+     "homeSub": [
+      "our test app · Up next: during the friend's video · Home: after the 10 autoplays",
+      "recent videos count more (Netflix's help page: recent viewing outweighs older)"
+     ],
+     "upCol": "UP NEXT",
+     "upColSub": "follows the video on screen",
+     "upStat": "9 OF 10",
+     "homeCol": "HOME",
+     "homeColSub": "mixes in your whole history",
+     "homeStat": "2 OF 10",
+     "home": [
+      {
+       "title": "Crypto coin that will 100x this year",
+       "topic": "trading"
+      },
+      {
+       "title": "Shiva bhajans for Monday",
+       "topic": "devotional"
+      },
+      {
+       "title": "Goa in 3 days on a budget",
+       "topic": "travel"
+      },
+      {
+       "title": "Lakshmi pooja at home: the steps",
+       "topic": "devotional"
+      },
+      {
+       "title": "Free trading tips on Telegram: join now",
+       "topic": "trading"
+      },
+      {
+       "title": "IPL auction: who went for the biggest money",
+       "topic": "cricket"
+      },
+      {
+       "title": "India women's team wins the series: highlights",
+       "topic": "cricket"
+      },
+      {
+       "title": "Dairy farming: profit with 5 cows",
+       "topic": "farming"
+      },
+      {
+       "title": "Sai Baba aarti live",
+       "topic": "devotional"
+      },
+      {
+       "title": "Vinayaka Chavithi pooja vidhanam",
+       "topic": "devotional"
+      }
+     ],
+     "rule1": "UP NEXT FOLLOWS THE VIDEO ON SCREEN",
+     "rule2": "⋮ → NOT INTERESTED",
+     "rule3": "AUTOPLAY SWITCH: OFF",
+     "warnChip": "▶ \"Trading tip scams: how fake gurus take your money\"",
+     "warning": "Trading tip scams: how fake gurus take your money",
+     "warnList": [
+      {
+       "title": "Free trading tips on Telegram: join now",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "Turn ₹5,000 into ₹50,000 in one week: my trading trick",
+       "topic": "trading"
+      },
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "IPL auction: who went for the biggest money",
+       "topic": "cricket"
+      }
+     ],
+     "warnStat": "9 OF 10 TRADING TIPS",
+     "ourTest": "OUR TEST APP · it matches titles · real apps may differ",
+     "history": [
+      "cricket",
+      "cricket",
+      "cricket",
+      "cooking",
+      "cooking",
+      "cooking",
+      "devotional",
+      "devotional",
+      "news",
+      "news",
+      "comedy",
+      "comedy",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "news",
+      "savings"
+     ],
+     "avgHead": "WHY HOME DIDN'T FLIP",
+     "avgSub": [
+      "\"you\" = the average of your watch history",
+      "(the idea in Google's 2016 YouTube paper)"
+     ],
+     "histLab": "HIS HISTORY",
+     "youLab": "YOU",
+     "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH",
+     "avgNote": "(recent videos count a bit more)",
+     "avgWords": {
+      "cricket": "cricket",
+      "food": "cooking",
+      "prayer": "devotional",
+      "క్రికెట్": "cricket",
+      "వంట": "cooking",
+      "భక్తి": "devotional"
+     },
+     "ruleHead": "WHAT TO DO",
+     "ruleA": "AUTOPLAY",
+     "ruleASub": "the switch on the video player (YouTube Help)",
+     "ruleB": "⋮ → NOT INTERESTED",
+     "ruleBSub": "on the ones you don't want, right in Up next",
+     "twLeftLab": "HE WATCHED",
+     "twLeftVal": "A SCAM WARNING",
+     "twRightLab": "UP NEXT · TRADING TIPS",
+     "twRightVal": "9 OF 10"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "Up next vs Home",
+     "title": "Up next vs Home",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "05_ravi.wav",
+     "text": "అయితే నా ఫోన్ మొత్తం, ట్రేడింగేనా?!",
+     "show": "So my whole phone is just trading now?!",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "06_ai.wav",
+     "text": "హోమ్ పేజీ, మీ పూర్తి హిస్టరీని కలిపి చూస్తుంది. ఆ పది చూశాక కూడా, హోమ్ లో ట్రేడింగ్... <pause 0.6> [1] పదిలో రెండే.",
+     "show": "The home page looks at your whole history together. Even after those 10, trading on home... <pause 0.6> only 2 of 10.",
+     "maxgap": 0.25,
+     "gap": 0.25,
+     "tempo": 1.12,
+     "gain_db": -1.0,
+     "tts": "హోమ్ పేజీ, మీ పూర్తి హిస్టరీని కలిపి చూస్తుంది. ఆ పది చూశాక కూడా, హోమ్ లో ట్రేడింగ్...",
+     "file2": "06b_ai.wav",
+     "tts2": "పదిలో రెండే.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_up04",
+   "tail": 0.0,
+   "boost": 1.6,
+   "lift": 0.6,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "why",
+      "n": 7
+     },
+     {
+      "who": "ai",
+      "shot": "avg",
+      "prop": "avg",
+      "n": 8
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "HE WATCHED",
+     "leftVal": "1 VIDEO",
+     "rightLab": "UP NEXT · TRADING",
+     "rightVal": "9 OF 10",
+     "story": "our test app, not YouTube",
+     "friend": "Turn ₹5,000 into ₹50,000 in one week: my trading trick",
+     "upHead": "Up next",
+     "upList": [
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "This stock will double next month: buy now",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Crypto coin that will 100x this year",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "Shiva bhajans for Monday",
+       "topic": "devotional"
+      }
+     ],
+     "mapHead": "HOW THE APP SEES VIDEOS",
+     "mapSub": [
+      "simplified · our test app: close = similar titles"
+     ],
+     "close": "TRADING VIDEOS SIT CLOSE TOGETHER",
+     "upNine": "UP NEXT: THE 10 CLOSEST · 9 TRADING",
+     "chainHead": "AUTOPLAY: 10 IN A ROW",
+     "chainSub": [
+      "our test app · 144 made-up videos",
+      "the idea in Google's 2016 YouTube paper"
+     ],
+     "chain": [
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "This stock will double next month: buy now",
+       "topic": "trading"
+      },
+      {
+       "title": "Gold rate today: up again",
+       "topic": "news"
+      },
+      {
+       "title": "Gold savings: coins or jewellery",
+       "topic": "savings"
+      }
+     ],
+     "chainStat": "8 OF 10 TRADING",
+     "homeHead": "UP NEXT vs HOME",
+     "homeSub": [
+      "our test app · Up next: during the friend's video · Home: after the 10 autoplays",
+      "recent videos count more (Netflix's help page: recent viewing outweighs older)"
+     ],
+     "upCol": "UP NEXT",
+     "upColSub": "follows the video on screen",
+     "upStat": "9 OF 10",
+     "homeCol": "HOME",
+     "homeColSub": "mixes in your whole history",
+     "homeStat": "2 OF 10",
+     "home": [
+      {
+       "title": "Crypto coin that will 100x this year",
+       "topic": "trading"
+      },
+      {
+       "title": "Shiva bhajans for Monday",
+       "topic": "devotional"
+      },
+      {
+       "title": "Goa in 3 days on a budget",
+       "topic": "travel"
+      },
+      {
+       "title": "Lakshmi pooja at home: the steps",
+       "topic": "devotional"
+      },
+      {
+       "title": "Free trading tips on Telegram: join now",
+       "topic": "trading"
+      },
+      {
+       "title": "IPL auction: who went for the biggest money",
+       "topic": "cricket"
+      },
+      {
+       "title": "India women's team wins the series: highlights",
+       "topic": "cricket"
+      },
+      {
+       "title": "Dairy farming: profit with 5 cows",
+       "topic": "farming"
+      },
+      {
+       "title": "Sai Baba aarti live",
+       "topic": "devotional"
+      },
+      {
+       "title": "Vinayaka Chavithi pooja vidhanam",
+       "topic": "devotional"
+      }
+     ],
+     "rule1": "UP NEXT FOLLOWS THE VIDEO ON SCREEN",
+     "rule2": "⋮ → NOT INTERESTED",
+     "rule3": "AUTOPLAY SWITCH: OFF",
+     "warnChip": "▶ \"Trading tip scams: how fake gurus take your money\"",
+     "warning": "Trading tip scams: how fake gurus take your money",
+     "warnList": [
+      {
+       "title": "Free trading tips on Telegram: join now",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "Turn ₹5,000 into ₹50,000 in one week: my trading trick",
+       "topic": "trading"
+      },
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "IPL auction: who went for the biggest money",
+       "topic": "cricket"
+      }
+     ],
+     "warnStat": "9 OF 10 TRADING TIPS",
+     "ourTest": "OUR TEST APP · it matches titles · real apps may differ",
+     "history": [
+      "cricket",
+      "cricket",
+      "cricket",
+      "cooking",
+      "cooking",
+      "cooking",
+      "devotional",
+      "devotional",
+      "news",
+      "news",
+      "comedy",
+      "comedy",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "news",
+      "savings"
+     ],
+     "avgHead": "WHY HOME DIDN'T FLIP",
+     "avgSub": [
+      "\"you\" = the average of your watch history",
+      "(the idea in Google's 2016 YouTube paper)"
+     ],
+     "histLab": "HIS HISTORY",
+     "youLab": "YOU",
+     "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH",
+     "avgNote": "(recent videos count a bit more)",
+     "avgWords": {
+      "cricket": "cricket",
+      "food": "cooking",
+      "prayer": "devotional",
+      "క్రికెట్": "cricket",
+      "వంట": "cooking",
+      "భక్తి": "devotional"
+     },
+     "ruleHead": "WHAT TO DO",
+     "ruleA": "AUTOPLAY",
+     "ruleASub": "the switch on the video player (YouTube Help)",
+     "ruleB": "⋮ → NOT INTERESTED",
+     "ruleBSub": "on the ones you don't want, right in Up next",
+     "twLeftLab": "HE WATCHED",
+     "twLeftVal": "A SCAM WARNING",
+     "twRightLab": "UP NEXT · TRADING TIPS",
+     "twRightVal": "9 OF 10"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "You = your average",
+     "title": "You = your average",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "07_ravi.wav",
+     "text": "రెండేనా? ఎందుకు?",
+     "show": "Only two? Why?",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "08_ai.wav",
+     "text": "క్రికెట్, వంట, భక్తి వీడియోలు, దాన్ని వెనక్కి లాగుతాయి. <pause 0.6> [1] యాప్ కి మీరు, దాదాపు మీరు చూసిన అన్నింటి సగటు.",
+     "show": "Cricket, cooking and devotional videos pull it back. <pause 0.6> To the app, you are roughly the average of everything you watched.",
+     "maxgap": 0.25,
+     "gap": 0.16,
+     "tempo": 1.12,
+     "gain_db": -1.0,
+     "tts": "క్రికెట్, వంట, భక్తి వీడియోలు, దాన్ని వెనక్కి లాగుతాయి.",
+     "file2": "08b_ai.wav",
+     "tts2": "యాప్ కి మీరు, దాదాపు మీరు చూసిన అన్నింటి సగటు.",
+     "pause": 0.6
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_up04",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 2.2,
+   "lift": 0.9,
+   "rise": 2.0,
+   "data": {
+    "beats": [
+     {
+      "who": "ravi",
+      "shot": "rulecard",
+      "prop": "rule",
+      "n": 9
+     },
+     {
+      "who": "ravi",
+      "shot": "ravi",
+      "prop": "safe",
+      "n": 10
+     },
+     {
+      "who": "ai",
+      "shot": "twist",
+      "prop": "loop",
+      "n": 11
+     }
+    ],
+    "captionTop": 1420,
+    "t": {
+     "leftLab": "HE WATCHED",
+     "leftVal": "1 VIDEO",
+     "rightLab": "UP NEXT · TRADING",
+     "rightVal": "9 OF 10",
+     "story": "our test app, not YouTube",
+     "friend": "Turn ₹5,000 into ₹50,000 in one week: my trading trick",
+     "upHead": "Up next",
+     "upList": [
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "This stock will double next month: buy now",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Crypto coin that will 100x this year",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "Shiva bhajans for Monday",
+       "topic": "devotional"
+      }
+     ],
+     "mapHead": "HOW THE APP SEES VIDEOS",
+     "mapSub": [
+      "simplified · our test app: close = similar titles"
+     ],
+     "close": "TRADING VIDEOS SIT CLOSE TOGETHER",
+     "upNine": "UP NEXT: THE 10 CLOSEST · 9 TRADING",
+     "chainHead": "AUTOPLAY: 10 IN A ROW",
+     "chainSub": [
+      "our test app · 144 made-up videos",
+      "the idea in Google's 2016 YouTube paper"
+     ],
+     "chain": [
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "This stock will double next month: buy now",
+       "topic": "trading"
+      },
+      {
+       "title": "Gold rate today: up again",
+       "topic": "news"
+      },
+      {
+       "title": "Gold savings: coins or jewellery",
+       "topic": "savings"
+      }
+     ],
+     "chainStat": "8 OF 10 TRADING",
+     "homeHead": "UP NEXT vs HOME",
+     "homeSub": [
+      "our test app · Up next: during the friend's video · Home: after the 10 autoplays",
+      "recent videos count more (Netflix's help page: recent viewing outweighs older)"
+     ],
+     "upCol": "UP NEXT",
+     "upColSub": "follows the video on screen",
+     "upStat": "9 OF 10",
+     "homeCol": "HOME",
+     "homeColSub": "mixes in your whole history",
+     "homeStat": "2 OF 10",
+     "home": [
+      {
+       "title": "Crypto coin that will 100x this year",
+       "topic": "trading"
+      },
+      {
+       "title": "Shiva bhajans for Monday",
+       "topic": "devotional"
+      },
+      {
+       "title": "Goa in 3 days on a budget",
+       "topic": "travel"
+      },
+      {
+       "title": "Lakshmi pooja at home: the steps",
+       "topic": "devotional"
+      },
+      {
+       "title": "Free trading tips on Telegram: join now",
+       "topic": "trading"
+      },
+      {
+       "title": "IPL auction: who went for the biggest money",
+       "topic": "cricket"
+      },
+      {
+       "title": "India women's team wins the series: highlights",
+       "topic": "cricket"
+      },
+      {
+       "title": "Dairy farming: profit with 5 cows",
+       "topic": "farming"
+      },
+      {
+       "title": "Sai Baba aarti live",
+       "topic": "devotional"
+      },
+      {
+       "title": "Vinayaka Chavithi pooja vidhanam",
+       "topic": "devotional"
+      }
+     ],
+     "rule1": "UP NEXT FOLLOWS THE VIDEO ON SCREEN",
+     "rule2": "⋮ → NOT INTERESTED",
+     "rule3": "AUTOPLAY SWITCH: OFF",
+     "warnChip": "▶ \"Trading tip scams: how fake gurus take your money\"",
+     "warning": "Trading tip scams: how fake gurus take your money",
+     "warnList": [
+      {
+       "title": "Free trading tips on Telegram: join now",
+       "topic": "trading"
+      },
+      {
+       "title": "I quit my job: trading made me rich in 6 months",
+       "topic": "trading"
+      },
+      {
+       "title": "Small money to crorepati: my trading journey",
+       "topic": "trading"
+      },
+      {
+       "title": "Turn ₹5,000 into ₹50,000 in one week: my trading trick",
+       "topic": "trading"
+      },
+      {
+       "title": "How I made ₹1 lakh in one day trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Secret intraday strategy: 90% profit every day",
+       "topic": "trading"
+      },
+      {
+       "title": "Earn ₹10,000 a day from options trading",
+       "topic": "trading"
+      },
+      {
+       "title": "Trading for housewives: earn from home daily",
+       "topic": "trading"
+      },
+      {
+       "title": "Bank nifty option buying: sure-shot profit",
+       "topic": "trading"
+      },
+      {
+       "title": "IPL auction: who went for the biggest money",
+       "topic": "cricket"
+      }
+     ],
+     "warnStat": "9 OF 10 TRADING TIPS",
+     "ourTest": "OUR TEST APP · it matches titles · real apps may differ",
+     "history": [
+      "cricket",
+      "cricket",
+      "cricket",
+      "cooking",
+      "cooking",
+      "cooking",
+      "devotional",
+      "devotional",
+      "news",
+      "news",
+      "comedy",
+      "comedy",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "trading",
+      "news",
+      "savings"
+     ],
+     "avgHead": "WHY HOME DIDN'T FLIP",
+     "avgSub": [
+      "\"you\" = the average of your watch history",
+      "(the idea in Google's 2016 YouTube paper)"
+     ],
+     "histLab": "HIS HISTORY",
+     "youLab": "YOU",
+     "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH",
+     "avgNote": "(recent videos count a bit more)",
+     "avgWords": {
+      "cricket": "cricket",
+      "food": "cooking",
+      "prayer": "devotional",
+      "క్రికెట్": "cricket",
+      "వంట": "cooking",
+      "భక్తి": "devotional"
+     },
+     "ruleHead": "WHAT TO DO",
+     "ruleA": "AUTOPLAY",
+     "ruleASub": "the switch on the video player (YouTube Help)",
+     "ruleB": "⋮ → NOT INTERESTED",
+     "ruleBSub": "on the ones you don't want, right in Up next",
+     "twLeftLab": "HE WATCHED",
+     "twLeftVal": "A SCAM WARNING",
+     "twRightLab": "UP NEXT · TRADING TIPS",
+     "twRightVal": "9 OF 10"
+    },
+    "tagSide": {
+     "ravi": "right",
+     "ai": "right"
+    },
+    "yt": {
+     "chapter": "Not interested, autoplay off",
+     "title": "Not interested, autoplay off",
+     "notes": []
+    },
+    "handle": "@ai_maastaaru_telugu"
+   },
+   "lines": [
+    {
+     "who": "ravi",
+     "file": "09_ravi.wav",
+     "text": "అంటే: ఆటోప్లే ఆపేయాలి. [1] అప్ నెక్స్ట్ లో, నాట్ ఇంట్రెస్టెడ్, అంటే వద్దు, అని నొక్కాలి!",
+     "show": "So: stop autoplay. And in Up next, tap \"Not interested\", meaning no!",
+     "maxgap": 0.25,
+     "gap": 1.0,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ravi",
+     "file": "10_ravi.wav",
+     "text": "సేఫ్ గా ఉండటానికి, ట్రేడింగ్ జాగ్రత్తల మీద ఒక వీడియో చూస్తా.",
+     "show": "To be safe, I'll watch one video on trading precautions.",
+     "maxgap": 0.25,
+     "gap": 0.3,
+     "tempo": 1.1,
+     "gain_db": 0.5
+    },
+    {
+     "who": "ai",
+     "file": "11_ai.wav",
+     "text": "అప్ నెక్స్ట్: [1] పదిలో తొమ్మిది, ట్రేడింగ్ వీడియోలే.",
+     "show": "Up next: 9 of 10, trading videos.",
+     "maxgap": 0.25,
+     "gap": 0.0,
+     "tempo": 1.0,
+     "gain_db": -1.0
+    }
+   ]
+  }
+ ]
+}
