@@ -20,7 +20,7 @@ type Scene = { id: string; data: any; frames: number; lines: Line[] };
 type SP = { s: Scene; cue: (n: number) => number; line: (i: number) => Line };
 type Mood = "happy" | "shock" | "angry" | "calm" | "deadpan" | "worried" | "smug" | "excited";
 type Arms = "rest" | "up" | "phone" | "calc" | "five" | "fiveL" | "pay" | "fold" | "shrug";
-type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan" | "divya" | "shalini" | "naveen" | "kamala" | "sastry" | "pallavi" | "suresh" | "anusha" | "padma" | "ramya";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
+type Who = "arjun" | "sneha" | "nikhil" | "meghana" | "rani" | "vasudha" | "charan" | "harsha" | "sarojini" | "swapna" | "bunny" | "thathayya" | "harish" | "bindu" | "varsha" | "akhil" | "srinivas" | "ramesh" | "keerthi" | "sunny" | "meena" | "rohit" | "kumar" | "sai" | "venkat" | "pinky" | "tarun" | "vijaya" | "mohan" | "divya" | "shalini" | "naveen" | "kamala" | "sastry" | "pallavi" | "suresh" | "anusha" | "padma" | "ramya" | "kiran";   // rani: EP42's customer (FairCrayon.tsx); vasudha, charan: Creative 14 (LinksCrayon.tsx)
 
 const SANS = (s: number, w = 700) => `${w} ${s}px Arial, sans-serif`;
 const MONO = (s: number, w = 600) => `${w} ${s}px "Courier New", monospace`;
@@ -28,6 +28,7 @@ const SERIF = (s: number, w = 700) => `${w} ${s}px Georgia, "Times New Roman", s
 const GREEN = "#15803d", RED = "#dc2626", BLUE = "#2563eb";
 const LOOK: Record<Who, { skin: string; hair: string; top: string }> = {
   arjun: { skin: "#a26d47", hair: "#1c1410", top: "#2563eb" },
+  kiran: { skin: "#9c6a45", hair: "#1c1410", top: "#0f766e" },   // Creative 42 (Itr42Crayon.tsx): 26, first job, a teal tee
   sneha: { skin: "#b07a52", hair: "#120d0a", top: "#be185d" },
   nikhil: { skin: "#8d5a3b", hair: "#1c1410", top: "#15803d" },
   meghana: { skin: "#9c6a45", hair: "#2b1a10", top: "#d97706" },
