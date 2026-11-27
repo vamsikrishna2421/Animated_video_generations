@@ -26,7 +26,7 @@ LINES = {
         "హోమ్ పేజీ, మీ పూర్తి హిస్టరీని కలిపి చూస్తుంది. ఆ పది చూశాక కూడా, హోమ్ లో ట్రేడింగ్... | [1] పదిలో రెండే."),
     7: ("ravi", "ravi", "why", "Only two? Why?", "రెండేనా? ఎందుకు?"),
     8: ("ai", "avg", "avg", "Cricket, food and prayer videos pull it back. | [1] To the app, you're roughly the average of everything you watch.",
-        "క్రికెట్, వంట, భక్తి వీడియోలు, దాన్ని వెనక్కి లాగుతాయి. | [1] యాప్ కి, మీరు చూసిన అన్నింటి దాదాపు సగటే, మీరు."),
+        "క్రికెట్, వంట, భక్తి వీడియోలు, దాన్ని వెనక్కి లాగుతాయి. | [1] యాప్ కి, మీరు చూసిన అన్నింటి దాదాపు యావరేజే, మీరు."),
     9: ("ravi", "rulecard", "rule", "So: switch autoplay off, [1] and tap \"Not interested\" in Up next!",
         "అంటే: ఆటోప్లే ఆపేయాలి. [1] అప్ నెక్స్ట్ లో, నాట్ ఇంట్రెస్టెడ్, అంటే వద్దు, అని నొక్కాలి!"),
     10: ("ravi", "ravi", "safe", "And I'll watch one on trading scams, to be safe.", "ముందు జాగ్రత్తగా, ట్రేడింగ్ స్కామ్ ల గురించి ఒక వీడియో చూస్తా."),
@@ -37,7 +37,7 @@ SHOW = {1: "One video my friend sent, and 9 of the next 10 are get-rich trading!
         4: "We tested a small app like it: 10 autoplays in a row. 8 were trading.",
         6: "Your home page mixes in your whole history. After those 10, home showed... <pause 0.8> 2 of 10.",
         9: "So: switch autoplay off, and tap \"Not interested\" in Up next!",
-        8: "Cricket, food and prayer videos pull it back. <pause 0.6> To the app, you're roughly the average of everything you watch.",
+        8: "Cricket, food and prayer videos pull it back. <pause 0.35> To the app, you're roughly the average of everything you watch.",
         11: "Up next: 9 of 10, trading tips."}
 SHOW_TE = {
     1: "I watched one video a friend sent. 9 of the next 10: make-money-with-trading videos!",
@@ -47,7 +47,7 @@ SHOW_TE = {
     5: "So my whole phone is just trading now?!",
     6: "The home page looks at your whole history together. Even after those 10, trading on home... <pause 0.8> only 2 of 10.",
     7: "Only two? Why?",
-    8: "Cricket, cooking and devotional videos pull it back. <pause 0.6> To the app, you are roughly the average of everything you watched.",
+    8: "Cricket, food and prayer videos pull it back. <pause 0.35> To the app, you're roughly the average of all you watched.",
     9: "So: stop autoplay. And in Up next, tap \"Not interested\", meaning no!",
     10: "To be careful, I'll watch one video about trading scams.",
     11: "Up next: 9 of 10, trading videos.",
@@ -78,7 +78,7 @@ T = {
     "warnStat": "9 OF 10 TRADING TIPS", "ourTest": "OUR TEST APP · it matches titles · real apps may differ",
     "history": [TOPIC.get(h, "trading") for h in HIST],
     "avgHead": "WHY HOME ISN'T ALL TRADING", "avgSub": ["\"you\" = the average of your watch history", "(the idea in Google's 2016 YouTube paper)"],
-    "histLab": "HIS HISTORY", "youLab": "YOU", "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH", "avgNote": "nearer his usual videos · recent ones count a bit more (Netflix's help page)",
+    "histLab": "HIS HISTORY", "youLab": "YOU", "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH", "avgNote": ["his YOU stays near his usual videos", "recent ones count a bit more (Netflix says so for its app)"],
     "avgWords": {"cricket": "cricket", "food": "cooking", "prayer": "devotional", "క్రికెట్": "cricket", "వంట": "cooking", "భక్తి": "devotional"},
     "ruleHead": "WHAT TO DO", "ruleA": "AUTOPLAY", "ruleASub": "the switch on the video player (YouTube Help)",
     "ruleB": "⋮ → NOT INTERESTED", "ruleBSub": "on the ones you don't want, right in Up next",
@@ -101,7 +101,7 @@ FLAGS_TE = {"s_e": {"boost": 2.2, "rise": 2.0}}
 YT = {"s_a": "1 video, 9 of 10", "s_b": "Autoplay", "s_c": "Up next vs Home", "s_d": "You = your average", "s_e": "Not interested, autoplay off"}
 NAMES = {}
 MARK = re.compile(r"\[\d+\]\s*")
-PZ = {6: 0.8}   # render review: a longer drop before "two of ten"
+PZ = {6: 0.8, 8: 0.35}   # 8: the 0.6 s beat read as dead air   # render review: a longer drop before "two of ten"
 
 
 def spec(lang="en"):
@@ -110,7 +110,7 @@ def spec(lang="en"):
     s = {"id": sid, "title": "1 Video, 9 of 10 (UC04: how YouTube and Netflix recommend videos)" + (" (Telugu audio)" if te else ""),
          "label": "UC04", "banner": "How video recommendations work", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.35,
          "music": "lofi", "names": NAMES, "musicVol": [0.2, 0.42], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.0,
-         "captionMode": "phrase", "musicEQ": [[120, -4, 0.7], [200, -10, 0.9], [250, -14, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.45 if not te else 0.3,
+         "captionMode": "phrase", "musicEQ": [[120, -4, 0.7], [200, -10, 0.9], [250, -14, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.8 if not te else 0.3,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1420}
     s["lead"] = 0.55   # render review: the frame-1 hit before the first word

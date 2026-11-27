@@ -263,7 +263,13 @@ const StUp: React.FC<SP> = ({ s }) => {
             c.font = SANS(46, 900); c.fillStyle = INK; c.textAlign = "center"; c.fillText(T.youLab, ax, ay + 16);
           }
           stamp(c, T.avgStat, W / 2, 1250, "#2563eb", seg(f, cu(1, 0.45) - 2, cu(1, 0.45) + 6), 62, -0.03);
-          chip(c, T.avgNote, W / 2, 1345, "#1e293b", "#fde68a", seg(f, cu(1, 0.6), cu(1, 0.6) + 8), 32);
+          const kN = seg(f, cu(1, 0.6), cu(1, 0.6) + 8);
+          if (kN > 0) {   // two lines, inside the margins (final check: one long chip ran off both edges)
+            c.save(); c.globalAlpha = clamp(kN * 3);
+            c.fillStyle = "#1e293b"; rrect(c, 70, 1318, W - 140, 104, 16); c.fill();
+            (T.avgNote as string[]).forEach((ln2, q) => { c.font = SANS(fit(c, ln2, W - 190, 34, 800), 800); c.fillStyle = "#fde68a"; c.textAlign = "center"; c.fillText(ln2, W / 2, 1360 + q * 44); });
+            c.restore();
+          }
         } else if (b.shot === "rulecard") {
           dark(c, W, H, T.ruleHead, []);
           // A: the autoplay switch, ON -> OFF

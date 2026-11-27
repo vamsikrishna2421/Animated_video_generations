@@ -120,7 +120,7 @@ On screen: his history as squares (his own 12 + the friend's video + the 10 auto
 - Telugu, before its render: the transcripts heard "ట్రేడింగ్ టిప్స్" smear into a sound close to an English vulgarity,
   and "మోసాల మీద" run into a sound close to a religious word -> line 11 "పదిలో తొమ్మిది, ట్రేడింగ్ వీడియోలే.", line 10
   "సేఫ్ గా ఉండటానికి, ట్రేడింగ్ జాగ్రత్తల మీద ఒక వీడియో చూస్తా."; line 11 at tempo 1.0 (its take ran fast).
-- Final lengths: EN 49.6 s (UC03 47.8 s), TE 55.7 s (UC03 55.3 s).
+- Lengths after round 1: EN 49.6 s (UC03 47.8 s), TE 55.7 s (UC03 55.3 s).
 
 ## Render review (round 2: English READY, Telugu not yet) and what changed
 - Telugu line 10: "సేఫ్ గా" was heard "సేవగా" (as a service) and the line sounded like a medical video -> "ముందు జాగ్రత్తగా,
@@ -133,3 +133,13 @@ On screen: his history as squares (his own 12 + the friend's video + the 10 auto
 - On screen: "WHY HOME ISN'T ALL TRADING"; the YOU card says "nearer his usual videos · recent ones count a bit more
   (Netflix's help page)" (Priya: 9 of 23 is about 40% trading, home showed 20%); FOOD on both the map and the squares;
   the UP NEXT vs HOME header on one line.
+
+## Final check (human-viewer) and what changed
+- Both: the note under YOU ran off both edges -> two lines inside the margins ("his YOU stays near his usual videos" /
+  "recent ones count a bit more (Netflix says so for its app)"). Line 8's 0.6 s beat between its two takes read as dead
+  air (the bed is ducked inside a line) -> 0.35 s; English bed raised in the gaps (music-only -26.5 dB vs voice -17.7).
+- Telugu: "దాదాపు సగటే" could be heard as "దాదాపు సగం" (almost half) -> "దాదాపు యావరేజే"; the caption "it back." no longer
+  stands alone; line 8's first take re-picked from 3 tries (క్రికెట్ and వంట clean by the piece-by-piece read).
+- Viewers' verdict before these mechanical fixes: English READY after the re-wrap; Telugu READY after the re-wrap, the
+  dead air and the caption. Final: EN 49.2 s, TE 55.2 s; the only silence over 0.5 s in each is the planned drop before
+  "two of ten".
