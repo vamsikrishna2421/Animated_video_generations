@@ -33,7 +33,7 @@ SHOW = {1: "Missed July? Your tax refund's last date: December 31. An AI told Ki
         6: "Apps that search the web may get it right. Still: no link? Don't trust the date. Take it from the tax department's site."}
 SHOW_TE = {
     1: "Missed July? Your tax refund's last date: December 31. But a chatbot told Kiran there's no deadline at all.",
-    2: "Myth: a chatbot knows this year's tax dates. <pause 0.35> Fact: we asked a small offline chatbot 30 times. Wrong all 30 times.",
+    2: "Myth: a chatbot knows this year's tax dates. <pause 0.35> Fact: we asked a small offline chatbot, 30 times. Wrong all 30 times.",
     3: "Even told today's date: wrong all 10 times. <pause 0.35> 9 times it made up a late fee too. For example: 0.5% of your tax a day.",
     4: "The income tax site: you can file until December 31. <pause 0.35> Late fee: ₹5,000 for Kiran. Income up to ₹5 lakh: ₹1,000.",
     5: "Miss it, and the refund is as good as gone. <pause 0.35> For Kiran's ₹18,400, only a special request is left. That can be refused too.",

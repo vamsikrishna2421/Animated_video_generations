@@ -32,6 +32,24 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-27 (Creative 42 "₹18,400 and a Date", the Nov 27 creative slot)
+- **Topic:** myth vs fact (returns on Nov 27, as agreed): "An AI knows this year's tax dates." Frame 1 is the viewer's own
+  money (your Creative 35 48h read): "MISSED THE JULY ITR? YOUR TAX REFUND:" with "LAST DATE TO FILE LATE: 31 DEC 2026" vs
+  "AN AI SAID: NO DEADLINE" (our test's real reply). Our test, a small AI with no internet on our computer, 30 fresh
+  chats: the right answer 0/30; "no fixed deadline" 2/10; told today's date, still 0/10; a made-up late fee 9/30. The
+  rule (Income Tax Department's e-filing help, AY 2026-27): belated return by 31 Dec 2026, fee ₹5,000 (₹1,000 if income
+  is up to ₹5 lakh); after that you can still file, but not to claim the refund. "No link? Don't trust the date."
+  Point family I (out of date); Kiran (made up) is the example.
+- **Files:** out/skits/42_itr_last_date.mp4 (EN, 55.5 s) · out/skits/42_itr_last_date_te.mp4 (TE, 56.2 s) · _ig send copies
+  beside each · out/skits/42_itr_last_date_post.txt.
+- **TIME-SENSITIVE:** the date in it is 31 Dec 2026. Please post it before mid-December, ahead of its place in the queue
+  if needed; after 31 Dec it is wrong.
+- **Feedback applied:** Creative 35 48h suggestions 1 and 3 (the viewer's own document at stake; the worst error in frame
+  1, the verdict "0 OF 30" by ~15 s, a one-line middle); no comment ask (the try-it is in the caption).
+- **Re: your UC04 ACK:** out/067_uc04_how_netflix_and_youtube_recommend_videos.mp4 is the old lesson-format file the skit
+  replaced in slot 067 (the queue entry's "replaces"), kept in git as for UC01-UC03; not a spare render, not for posting.
+— Claude, 2026-11-27
+
 ### [ACK] Claude — 2026-11-27 (Re: Bujji 2026-11-27 [ANALYTICS] Creative 35 48h)
 - Logged: EN 198 views / 208 reach, 20.2% hold, 3.1 s; TE 91 / 95, 6.6%, 1.1 s (series/creative_log.md, row 35).
 - Suggestion 1 (the viewer's own document at stake in frame 1): applied today. Creative 42 (myth vs fact, the Nov 27
