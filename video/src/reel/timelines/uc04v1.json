@@ -13,8 +13,8 @@
  "fps": 30,
  "musicDrops": [
   [
-   767,
-   791
+   781,
+   805
   ]
  ],
  "musicBoosts": [
@@ -25,6 +25,11 @@
   ],
   [
    391,
+   593,
+   2.4
+  ],
+  [
+   593,
    838,
    2.0
   ],
@@ -35,12 +40,12 @@
   ],
   [
    1105,
-   1484,
+   1491,
    2.4
   ],
   [
    1105,
-   1484,
+   1491,
    2.2,
    1
   ]
@@ -48,7 +53,7 @@
  "hideTimerInHook": true,
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1484,
+ "totalFrames": 1491,
  "music": "reel/uc04v1/score.wav",
  "scenes": [
   {
@@ -121,6 +126,7 @@
       }
      ],
      "mapHead": "HOW THE APP SEES VIDEOS",
+     "food": "FOOD",
      "mapSub": [
       "simplified · our test app: close = similar titles"
      ],
@@ -176,8 +182,7 @@
      "chainStat": "8 OF 10 TRADING",
      "homeHead": "UP NEXT vs HOME",
      "homeSub": [
-      "our test app · Up next: during the friend's video · Home: after the 10 autoplays",
-      "recent videos count more (Netflix's help page: recent viewing outweighs older)"
+      "our test app · Home: after the 10 autoplays"
      ],
      "upCol": "UP NEXT",
      "upColSub": "follows the video on screen",
@@ -301,7 +306,7 @@
       "news",
       "savings"
      ],
-     "avgHead": "WHY HOME DIDN'T FLIP",
+     "avgHead": "WHY HOME ISN'T ALL TRADING",
      "avgSub": [
       "\"you\" = the average of your watch history",
       "(the idea in Google's 2016 YouTube paper)"
@@ -309,7 +314,7 @@
      "histLab": "HIS HISTORY",
      "youLab": "YOU",
      "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH",
-     "avgNote": "(recent videos count a bit more)",
+     "avgNote": "nearer his usual videos · recent ones count a bit more (Netflix's help page)",
      "avgWords": {
       "cricket": "cricket",
       "food": "cooking",
@@ -645,6 +650,7 @@
       }
      ],
      "mapHead": "HOW THE APP SEES VIDEOS",
+     "food": "FOOD",
      "mapSub": [
       "simplified · our test app: close = similar titles"
      ],
@@ -700,8 +706,7 @@
      "chainStat": "8 OF 10 TRADING",
      "homeHead": "UP NEXT vs HOME",
      "homeSub": [
-      "our test app · Up next: during the friend's video · Home: after the 10 autoplays",
-      "recent videos count more (Netflix's help page: recent viewing outweighs older)"
+      "our test app · Home: after the 10 autoplays"
      ],
      "upCol": "UP NEXT",
      "upColSub": "follows the video on screen",
@@ -825,7 +830,7 @@
       "news",
       "savings"
      ],
-     "avgHead": "WHY HOME DIDN'T FLIP",
+     "avgHead": "WHY HOME ISN'T ALL TRADING",
      "avgSub": [
       "\"you\" = the average of your watch history",
       "(the idea in Google's 2016 YouTube paper)"
@@ -833,7 +838,7 @@
      "histLab": "HIS HISTORY",
      "youLab": "YOU",
      "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH",
-     "avgNote": "(recent videos count a bit more)",
+     "avgNote": "nearer his usual videos · recent ones count a bit more (Netflix's help page)",
      "avgWords": {
       "cricket": "cricket",
       "food": "cooking",
@@ -1071,6 +1076,7 @@
       }
      ],
      "mapHead": "HOW THE APP SEES VIDEOS",
+     "food": "FOOD",
      "mapSub": [
       "simplified · our test app: close = similar titles"
      ],
@@ -1126,8 +1132,7 @@
      "chainStat": "8 OF 10 TRADING",
      "homeHead": "UP NEXT vs HOME",
      "homeSub": [
-      "our test app · Up next: during the friend's video · Home: after the 10 autoplays",
-      "recent videos count more (Netflix's help page: recent viewing outweighs older)"
+      "our test app · Home: after the 10 autoplays"
      ],
      "upCol": "UP NEXT",
      "upColSub": "follows the video on screen",
@@ -1251,7 +1256,7 @@
       "news",
       "savings"
      ],
-     "avgHead": "WHY HOME DIDN'T FLIP",
+     "avgHead": "WHY HOME ISN'T ALL TRADING",
      "avgSub": [
       "\"you\" = the average of your watch history",
       "(the idea in Google's 2016 YouTube paper)"
@@ -1259,7 +1264,7 @@
      "histLab": "HIS HISTORY",
      "youLab": "YOU",
      "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH",
-     "avgNote": "(recent videos count a bit more)",
+     "avgNote": "nearer his usual videos · recent ones count a bit more (Netflix's help page)",
      "avgWords": {
       "cricket": "cricket",
       "food": "cooking",
@@ -1348,7 +1353,7 @@
      "sub": null,
      "audio": "reel/uc04v1/line_06.wav",
      "from": 64,
-     "frames": 160,
+     "frames": 170,
      "words": [
       {
        "w": "Your",
@@ -1368,71 +1373,71 @@
       {
        "w": "mixes",
        "from": 85,
-       "to": 94
+       "to": 93
       },
       {
        "w": "in",
-       "from": 94,
-       "to": 98
+       "from": 93,
+       "to": 97
       },
       {
        "w": "your",
-       "from": 98,
-       "to": 105
+       "from": 97,
+       "to": 104
       },
       {
        "w": "whole",
-       "from": 105,
-       "to": 113
+       "from": 104,
+       "to": 112
       },
       {
        "w": "history.",
-       "from": 113,
-       "to": 134
+       "from": 112,
+       "to": 124
       },
       {
        "w": "After",
-       "from": 134,
+       "from": 124,
        "to": 142
       },
       {
        "w": "those",
        "from": 142,
-       "to": 151
+       "to": 150
       },
       {
        "w": "10,",
-       "from": 151,
-       "to": 156
+       "from": 150,
+       "to": 155
       },
       {
        "w": "home",
-       "from": 156,
-       "to": 170
+       "from": 155,
+       "to": 169
       },
       {
-       "w": "had...",
-       "from": 170,
-       "to": 180
+       "w": "showed...",
+       "from": 169,
+       "to": 183
       },
       {
        "w": "2",
-       "from": 198,
-       "to": 204
+       "from": 212,
+       "to": 217
       },
       {
        "w": "of",
-       "from": 204,
-       "to": 213
+       "from": 217,
+       "to": 224
       },
       {
        "w": "10.",
-       "from": 213,
-       "to": 224
+       "from": 224,
+       "to": 234
       }
      ],
      "cues": {
-      "1": 198
+      "1": 212
      }
     }
    ]
@@ -1507,6 +1512,7 @@
       }
      ],
      "mapHead": "HOW THE APP SEES VIDEOS",
+     "food": "FOOD",
      "mapSub": [
       "simplified · our test app: close = similar titles"
      ],
@@ -1562,8 +1568,7 @@
      "chainStat": "8 OF 10 TRADING",
      "homeHead": "UP NEXT vs HOME",
      "homeSub": [
-      "our test app · Up next: during the friend's video · Home: after the 10 autoplays",
-      "recent videos count more (Netflix's help page: recent viewing outweighs older)"
+      "our test app · Home: after the 10 autoplays"
      ],
      "upCol": "UP NEXT",
      "upColSub": "follows the video on screen",
@@ -1687,7 +1692,7 @@
       "news",
       "savings"
      ],
-     "avgHead": "WHY HOME DIDN'T FLIP",
+     "avgHead": "WHY HOME ISN'T ALL TRADING",
      "avgSub": [
       "\"you\" = the average of your watch history",
       "(the idea in Google's 2016 YouTube paper)"
@@ -1695,7 +1700,7 @@
      "histLab": "HIS HISTORY",
      "youLab": "YOU",
      "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH",
-     "avgNote": "(recent videos count a bit more)",
+     "avgNote": "nearer his usual videos · recent ones count a bit more (Netflix's help page)",
      "avgWords": {
       "cricket": "cricket",
       "food": "cooking",
@@ -1944,6 +1949,7 @@
       }
      ],
      "mapHead": "HOW THE APP SEES VIDEOS",
+     "food": "FOOD",
      "mapSub": [
       "simplified · our test app: close = similar titles"
      ],
@@ -1999,8 +2005,7 @@
      "chainStat": "8 OF 10 TRADING",
      "homeHead": "UP NEXT vs HOME",
      "homeSub": [
-      "our test app · Up next: during the friend's video · Home: after the 10 autoplays",
-      "recent videos count more (Netflix's help page: recent viewing outweighs older)"
+      "our test app · Home: after the 10 autoplays"
      ],
      "upCol": "UP NEXT",
      "upColSub": "follows the video on screen",
@@ -2124,7 +2129,7 @@
       "news",
       "savings"
      ],
-     "avgHead": "WHY HOME DIDN'T FLIP",
+     "avgHead": "WHY HOME ISN'T ALL TRADING",
      "avgSub": [
       "\"you\" = the average of your watch history",
       "(the idea in Google's 2016 YouTube paper)"
@@ -2132,7 +2137,7 @@
      "histLab": "HIS HISTORY",
      "youLab": "YOU",
      "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH",
-     "avgNote": "(recent videos count a bit more)",
+     "avgNote": "nearer his usual videos · recent ones count a bit more (Netflix's help page)",
      "avgWords": {
       "cricket": "cricket",
       "food": "cooking",
@@ -2165,7 +2170,7 @@
     "hardCuts": true
    },
    "from": 1105,
-   "frames": 379,
+   "frames": 386,
    "lines": [
     {
      "who": "ravi",
@@ -2304,47 +2309,47 @@
      "color": "#67E8F9",
      "sub": null,
      "audio": "reel/uc04v1/line_11.wav",
-     "from": 268,
+     "from": 276,
      "frames": 81,
      "words": [
       {
        "w": "Up",
-       "from": 268,
-       "to": 273
+       "from": 276,
+       "to": 281
       },
       {
        "w": "next:",
-       "from": 273,
-       "to": 294
+       "from": 281,
+       "to": 302
       },
       {
        "w": "9",
-       "from": 294,
-       "to": 298
+       "from": 302,
+       "to": 305
       },
       {
        "w": "of",
-       "from": 298,
-       "to": 303
-      },
-      {
-       "w": "10,",
-       "from": 303,
+       "from": 305,
        "to": 310
       },
       {
-       "w": "trading",
+       "w": "10,",
        "from": 310,
-       "to": 329
+       "to": 317
+      },
+      {
+       "w": "trading",
+       "from": 317,
+       "to": 336
       },
       {
        "w": "tips.",
-       "from": 329,
-       "to": 339
+       "from": 336,
+       "to": 346
       }
      ],
      "cues": {
-      "1": 282
+      "1": 289
      }
     }
    ]

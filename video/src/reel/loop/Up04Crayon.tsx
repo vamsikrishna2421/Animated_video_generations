@@ -118,7 +118,7 @@ const app = (c: Ctx, x: number, y: number, w: number, h: number, playing: string
 };
 // the map (simplified): islands of videos; trading sits together
 const ISLES: [string, string, number, number][] = [
-  ["CRICKET", "cricket", 230, 610], ["COMEDY", "comedy", 560, 580], ["PRAYER", "devotional", 870, 640], ["COOKING", "cooking", 250, 870],
+  ["CRICKET", "cricket", 230, 610], ["COMEDY", "comedy", 560, 580], ["PRAYER", "devotional", 870, 640], ["FOOD", "cooking", 250, 870],
   ["NEWS", "news", 600, 830], ["TRAVEL", "travel", 880, 930], ["SAVINGS", "savings", 790, 1170], ["TRADING", "trading", 360, 1130],
 ];
 const dots = (cx: number, cy: number, seed: number, n = 12, rad = 92) => {

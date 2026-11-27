@@ -22,20 +22,20 @@ LINES = {
     4: ("ai", "chain", "chain", "We tested a small app like it: ten autoplays in a row. [1] Eight were trading.",
         "మేం ఇలాంటి చిన్న యాప్ తో, వరుసగా పది ఆటోప్లే చేసి చూశాం. [1] ఎనిమిది, ట్రేడింగ్."),
     5: ("ravi", "ravi", "panic", "So my whole phone is trading now?!", "అయితే నా ఫోన్ మొత్తం, ట్రేడింగేనా?!"),
-    6: ("ai", "home", "home", "Your home page mixes in your whole history. After those ten, home had... | [1] two of ten.",
+    6: ("ai", "home", "home", "Your home page mixes in your whole history. After those ten, home showed... | [1] two of ten.",
         "హోమ్ పేజీ, మీ పూర్తి హిస్టరీని కలిపి చూస్తుంది. ఆ పది చూశాక కూడా, హోమ్ లో ట్రేడింగ్... | [1] పదిలో రెండే."),
     7: ("ravi", "ravi", "why", "Only two? Why?", "రెండేనా? ఎందుకు?"),
     8: ("ai", "avg", "avg", "Cricket, food and prayer videos pull it back. | [1] To the app, you're roughly the average of everything you watch.",
-        "క్రికెట్, వంట, భక్తి వీడియోలు, దాన్ని వెనక్కి లాగుతాయి. | [1] యాప్ కి మీరు, దాదాపు మీరు చూసిన అన్నింటి సగటు."),
+        "క్రికెట్, వంట, భక్తి వీడియోలు, దాన్ని వెనక్కి లాగుతాయి. | [1] యాప్ కి, మీరు చూసిన అన్నింటి దాదాపు సగటే, మీరు."),
     9: ("ravi", "rulecard", "rule", "So: switch autoplay off, [1] and tap \"Not interested\" in Up next!",
         "అంటే: ఆటోప్లే ఆపేయాలి. [1] అప్ నెక్స్ట్ లో, నాట్ ఇంట్రెస్టెడ్, అంటే వద్దు, అని నొక్కాలి!"),
-    10: ("ravi", "ravi", "safe", "And I'll watch one on trading scams, to be safe.", "సేఫ్ గా ఉండటానికి, ట్రేడింగ్ జాగ్రత్తల మీద ఒక వీడియో చూస్తా."),
+    10: ("ravi", "ravi", "safe", "And I'll watch one on trading scams, to be safe.", "ముందు జాగ్రత్తగా, ట్రేడింగ్ స్కామ్ ల గురించి ఒక వీడియో చూస్తా."),
     11: ("ai", "twist", "loop", "Up next: [1] nine of ten, trading tips.", "అప్ నెక్స్ట్: [1] పదిలో తొమ్మిది, ట్రేడింగ్ వీడియోలే."),
 }
 SHOW = {1: "One video my friend sent, and 9 of the next 10 are get-rich trading!",
         2: "To the app, every video is a point on a map, and trading videos sit close together. Up next shows the 10 closest to what's playing.",
         4: "We tested a small app like it: 10 autoplays in a row. 8 were trading.",
-        6: "Your home page mixes in your whole history. After those 10, home had... <pause 0.6> 2 of 10.",
+        6: "Your home page mixes in your whole history. After those 10, home showed... <pause 0.8> 2 of 10.",
         9: "So: switch autoplay off, and tap \"Not interested\" in Up next!",
         8: "Cricket, food and prayer videos pull it back. <pause 0.6> To the app, you're roughly the average of everything you watch.",
         11: "Up next: 9 of 10, trading tips."}
@@ -45,11 +45,11 @@ SHOW_TE = {
     3: "And autoplay just keeps going without stopping?",
     4: "We tried a small app like it: 10 autoplays in a row. 8: trading.",
     5: "So my whole phone is just trading now?!",
-    6: "The home page looks at your whole history together. Even after those 10, trading on home... <pause 0.6> only 2 of 10.",
+    6: "The home page looks at your whole history together. Even after those 10, trading on home... <pause 0.8> only 2 of 10.",
     7: "Only two? Why?",
     8: "Cricket, cooking and devotional videos pull it back. <pause 0.6> To the app, you are roughly the average of everything you watched.",
     9: "So: stop autoplay. And in Up next, tap \"Not interested\", meaning no!",
-    10: "To be safe, I'll watch one video on trading precautions.",
+    10: "To be careful, I'll watch one video about trading scams.",
     11: "Up next: 9 of 10, trading videos.",
 }
 TEMPO_EN = {"ravi": 1.04, "ai": 1.04}   # UC03 length (47.8 s): the one variable is frame 1
@@ -64,11 +64,11 @@ T = {
     "story": "our test app, not YouTube",
     "friend": FRIEND, "upHead": "Up next",
     "upList": [{"title": x["title"], "topic": x["topic"]} for x in D3["U1"]["up_next"]],
-    "mapHead": "HOW THE APP SEES VIDEOS", "mapSub": ["simplified · our test app: close = similar titles"],
+    "mapHead": "HOW THE APP SEES VIDEOS", "food": "FOOD", "mapSub": ["simplified · our test app: close = similar titles"],
     "close": "TRADING VIDEOS SIT CLOSE TOGETHER", "upNine": "UP NEXT: THE 10 CLOSEST · 9 TRADING",
     "chainHead": "AUTOPLAY: 10 IN A ROW", "chainSub": ["our test app · 144 made-up videos", "the idea in Google's 2016 YouTube paper"],
     "chain": [{"title": x["title"], "topic": x["topic"]} for x in D3["U2"]["played"]], "chainStat": "8 OF 10 TRADING",
-    "homeHead": "UP NEXT vs HOME", "homeSub": ["our test app · Up next: during the friend's video · Home: after the 10 autoplays", "recent videos count more (Netflix's help page: recent viewing outweighs older)"],
+    "homeHead": "UP NEXT vs HOME", "homeSub": ["our test app · Home: after the 10 autoplays"],
     "upCol": "UP NEXT", "upColSub": "follows the video on screen", "upStat": "9 OF 10",
     "homeCol": "HOME", "homeColSub": "mixes in your whole history", "homeStat": "2 OF 10",
     "home": [{"title": x["title"], "topic": x["topic"]} for x in D3["U3"]["home_recent"]],
@@ -77,8 +77,8 @@ T = {
     "warning": D1["warning"], "warnList": [{"title": x["title"], "topic": x["topic"]} for x in D3["U5"]["up_next"]],
     "warnStat": "9 OF 10 TRADING TIPS", "ourTest": "OUR TEST APP · it matches titles · real apps may differ",
     "history": [TOPIC.get(h, "trading") for h in HIST],
-    "avgHead": "WHY HOME DIDN'T FLIP", "avgSub": ["\"you\" = the average of your watch history", "(the idea in Google's 2016 YouTube paper)"],
-    "histLab": "HIS HISTORY", "youLab": "YOU", "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH", "avgNote": "(recent videos count a bit more)",
+    "avgHead": "WHY HOME ISN'T ALL TRADING", "avgSub": ["\"you\" = the average of your watch history", "(the idea in Google's 2016 YouTube paper)"],
+    "histLab": "HIS HISTORY", "youLab": "YOU", "avgStat": "YOU ≈ THE AVERAGE OF ALL YOU WATCH", "avgNote": "nearer his usual videos · recent ones count a bit more (Netflix's help page)",
     "avgWords": {"cricket": "cricket", "food": "cooking", "prayer": "devotional", "క్రికెట్": "cricket", "వంట": "cooking", "భక్తి": "devotional"},
     "ruleHead": "WHAT TO DO", "ruleA": "AUTOPLAY", "ruleASub": "the switch on the video player (YouTube Help)",
     "ruleB": "⋮ → NOT INTERESTED", "ruleBSub": "on the ones you don't want, right in Up next",
@@ -90,17 +90,18 @@ assert sum(v["topic"] == "trading" for v in T["home"]) == 2 and sum(v["topic"] =
 # map, a pop on the trading island, a short tick run on the ten lines and a hit; quiet ticks on the autoplay tiles, a
 # hit and a buzz on "8"; a buzz on Up next's 9, a drop, then a hit on home's 2; a clap and a lift into the rule; a riser
 # on "to be safe", a buzz on the nine tips and the slam back to frame 1.
-SCENES = [("s_a", (1, 2), {"boost": 1.8, "lift": 0.6, "tail": 0.0}),
-          ("s_b", (3, 4), {"boost": 2.0, "lift": 0.7, "tail": 0.0}),
+SCENES = [("s_a", (1, 2), {"boost": 1.8, "lift": 0.9, "tail": 0.0}),
+          ("s_b", (3, 4), {"boost": 2.4, "lift": 0.8, "tail": 0.0}),
           ("s_c", (5, 6), {"boost": 2.0, "lift": 0.7, "drop_at": [[1, "1", 0.0]], "tail": 0.0}),   # the bed out in the beat before home's 2
           ("s_d", (7, 8), {"boost": 1.6, "lift": 0.6, "tail": 0.0}),
           ("s_e", (9, 10, 11), {"outro": True, "pre": 0.3, "boost": 2.4, "lift": 0.9, "rise": 2.2, "tail": 0.0})]
-GAP = {n: 0.22 for n in LINES} | {6: 0.3, 9: 1.1, 10: 0.35, 11: 0.0}   # 9: hold the rule card
-GAP_TE = {n: 0.16 for n in LINES} | {6: 0.25, 9: 1.0, 10: 0.3, 11: 0.0}
+GAP = {n: 0.22 for n in LINES} | {6: 0.3, 9: 1.1, 10: 0.6, 11: 0.0}   # 9: hold the rule card
+GAP_TE = {n: 0.16 for n in LINES} | {6: 0.25, 9: 1.0, 10: 0.55, 11: 0.0}   # 10: a beat before the twist
 FLAGS_TE = {"s_e": {"boost": 2.2, "rise": 2.0}}
 YT = {"s_a": "1 video, 9 of 10", "s_b": "Autoplay", "s_c": "Up next vs Home", "s_d": "You = your average", "s_e": "Not interested, autoplay off"}
 NAMES = {}
 MARK = re.compile(r"\[\d+\]\s*")
+PZ = {6: 0.8}   # render review: a longer drop before "two of ten"
 
 
 def spec(lang="en"):
@@ -109,12 +110,12 @@ def spec(lang="en"):
     s = {"id": sid, "title": "1 Video, 9 of 10 (UC04: how YouTube and Netflix recommend videos)" + (" (Telugu audio)" if te else ""),
          "label": "UC04", "banner": "How video recommendations work", "topic": "", "look": "classic", "gap": 0.16, "lead": 0.35,
          "music": "lofi", "names": NAMES, "musicVol": [0.2, 0.42], "musicDuckRamp": 9, "musicFade": 0.05, "endPad": 1.0,
-         "captionMode": "phrase", "musicEQ": [[120, -4, 0.7], [250, -14, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.25 if not te else 0.6,
+         "captionMode": "phrase", "musicEQ": [[120, -4, 0.7], [200, -10, 0.9], [250, -14, 0.8], [2400, -5, 1.0]], "musicPad": True, "musicGapGain": 0.45 if not te else 0.3,
          "musicEndRamp": [0.9, 3.0], "hardCuts": True, "beatSnap": True, "hideTimerInHook": True, "hideTimer": True,
          "tempo": 1.0, "captionTop": 1420}
     s["lead"] = 0.55   # render review: the frame-1 hit before the first word
     if te:
-        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.5})
+        s.update({"handle": "@ai_maastaaru_telugu", "parler_lang": "te", "lead": 0.5, "musicVol": [0.14, 0.4]})   # review: the bed fought the Telugu voice
     scenes = []
     for scid, ns, flags in SCENES:
         lines, beats = [], []
@@ -127,7 +128,7 @@ def spec(lang="en"):
                   "gain_db": -1.0 if who == "ai" else 0.5}
             if " | " in ln["text"]:
                 p1, p2 = ln["text"].split(" | ")
-                pz = 0.6
+                pz = PZ.get(n, 0.6)
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             lines.append(ln)

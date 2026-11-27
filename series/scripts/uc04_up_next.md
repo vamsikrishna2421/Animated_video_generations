@@ -121,3 +121,15 @@ On screen: his history as squares (his own 12 + the friend's video + the 10 auto
   and "మోసాల మీద" run into a sound close to a religious word -> line 11 "పదిలో తొమ్మిది, ట్రేడింగ్ వీడియోలే.", line 10
   "సేఫ్ గా ఉండటానికి, ట్రేడింగ్ జాగ్రత్తల మీద ఒక వీడియో చూస్తా."; line 11 at tempo 1.0 (its take ran fast).
 - Final lengths: EN 49.6 s (UC03 47.8 s), TE 55.7 s (UC03 55.3 s).
+
+## Render review (round 2: English READY, Telugu not yet) and what changed
+- Telugu line 10: "సేఫ్ గా" was heard "సేవగా" (as a service) and the line sounded like a medical video -> "ముందు జాగ్రత్తగా,
+  ట్రేడింగ్ స్కామ్ ల గురించి ఒక వీడియో చూస్తా." ("మోసాల గురించి" still read as "ముసలో" in one of two reads, so "scam" is
+  said as the loanword; the take picked from 3 tries by piece-by-piece reads). Line 8: "మీరు దాదాపు మీరు" sounded like a
+  stutter -> "యాప్ కి, మీరు చూసిన అన్నింటి దాదాపు సగటే, మీరు.". The Telugu bed sat over the voice -> 0.14 under speech
+  (was 0.2), gaps 0.3 (was 0.6), a deeper 200-250 Hz cut in both languages.
+- Both: a 0.55-0.6 s beat before the twist's "Up next"; the drop before "two of ten" 0.8 s; more lift into the map and
+  the autoplay scene. English "home had" (heard "home head") -> "home showed...".
+- On screen: "WHY HOME ISN'T ALL TRADING"; the YOU card says "nearer his usual videos · recent ones count a bit more
+  (Netflix's help page)" (Priya: 9 of 23 is about 40% trading, home showed 20%); FOOD on both the map and the squares;
+  the UP NEXT vs HOME header on one line.
