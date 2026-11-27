@@ -13,56 +13,56 @@
  "fps": 30,
  "musicDrops": [
   [
-   307,
-   331
+   444,
+   468
   ],
   [
-   1108,
-   1132
+   1071,
+   1087
   ]
  ],
  "musicBoosts": [
   [
    0,
-   205,
+   245,
    2.4
   ],
   [
-   205,
-   778,
-   1.6
+   245,
+   797,
+   2.2
   ],
   [
-   777,
-   1288,
-   1.6
+   798,
+   1350,
+   1.8
   ],
   [
-   1289,
-   1494,
+   1350,
+   1575,
    3.0
   ],
   [
-   1493,
-   1581,
+   1575,
+   1663,
    3.2
   ],
   [
-   1289,
-   1494,
+   1350,
+   1575,
    2.6,
    1
   ],
   [
-   1493,
-   1581,
+   1575,
+   1663,
    3.2,
    1
   ]
  ],
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1581,
+ "totalFrames": 1663,
  "music": "reel/creative42v1/score.wav",
  "scenes": [
   {
@@ -78,15 +78,15 @@
     ],
     "captionTop": 1390,
     "t": {
-     "refund": "KIRAN'S TAX REFUND: ₹18,400",
-     "leftLab": "REAL LAST DATE",
+     "refund": "MISSED THE JULY ITR? YOUR TAX REFUND:",
+     "leftLab": "LAST DATE TO FILE LATE",
      "leftVal": "31 DEC\n2026",
      "rightLab": "AN AI SAID",
      "rightVal": "NO\nDEADLINE",
      "askShort": "I missed July. By when can I file?",
      "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
      "story": "Kiran is made up · our test is real",
-     "myth": "Missed July? An AI will tell you the new last date.",
+     "myth": "An AI knows this year's tax dates.",
      "factLine": "a small AI, no internet, asked 30 times",
      "zero": "0 OF 30",
      "zeroSub": "THE RIGHT ANSWER",
@@ -94,18 +94,18 @@
      "testHead": "OUR TEST · 30 CHATS",
      "tiles": [
       [
-       "TOLD TODAY'S DATE",
-       "'end of September' · '31 October' · no date",
+       "RIGHT ANSWER, EVEN TOLD TODAY'S DATE",
+       "it said 'end of September', '31 October', or no date",
        "0/10"
       ],
       [
-       "ASKED 'I MISSED JULY'",
-       "'There is no fixed deadline'",
+       "SAID 'NO FIXED DEADLINE'",
+       "asked 'I missed July. By when?'",
        "2/10"
       ],
       [
        "A MADE-UP LATE FEE",
-       "'0.5% of the tax a day, up to 25%'",
+       "e.g. '0.5% of the tax a day, up to 25%'",
        "9/30"
       ]
      ],
@@ -129,7 +129,7 @@
      "ruleHead": "WHAT TO DO",
      "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
      "rule1b": "we tested one small AI with no internet",
-     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2": "NO LINK, NO DATE",
      "rule2b": "the date: incometax.gov.in",
      "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
     },
@@ -143,7 +143,7 @@
     "hardCuts": true
    },
    "from": 0,
-   "frames": 205,
+   "frames": 245,
    "lines": [
     {
      "who": "storyteller",
@@ -152,86 +152,91 @@
      "sub": null,
      "audio": "reel/creative42v1/line_01.wav",
      "from": 14,
-     "frames": 176,
+     "frames": 218,
      "words": [
       {
-       "w": "Last",
+       "w": "Missed",
        "from": 14,
-       "to": 22
+       "to": 32
       },
       {
-       "w": "date",
-       "from": 22,
-       "to": 30
+       "w": "July?",
+       "from": 32,
+       "to": 41
       },
       {
-       "w": "for",
-       "from": 30,
-       "to": 37
-      },
-      {
-       "w": "Kiran's",
-       "from": 37,
-       "to": 50
+       "w": "Your",
+       "from": 41,
+       "to": 57
       },
       {
        "w": "tax",
-       "from": 50,
-       "to": 61
+       "from": 57,
+       "to": 68
       },
       {
-       "w": "refund:",
-       "from": 61,
+       "w": "refund's",
+       "from": 68,
        "to": 82
       },
       {
-       "w": "December",
+       "w": "last",
        "from": 82,
-       "to": 97
+       "to": 106
+      },
+      {
+       "w": "date:",
+       "from": 106,
+       "to": 115
+      },
+      {
+       "w": "December",
+       "from": 115,
+       "to": 129
       },
       {
        "w": "31.",
-       "from": 97,
-       "to": 104
+       "from": 129,
+       "to": 152
       },
       {
        "w": "An",
-       "from": 104,
-       "to": 125
+       "from": 152,
+       "to": 157
       },
       {
        "w": "AI",
-       "from": 125,
-       "to": 130
+       "from": 157,
+       "to": 161
       },
       {
        "w": "told",
-       "from": 130,
-       "to": 138
+       "from": 161,
+       "to": 169
       },
       {
-       "w": "him:",
-       "from": 138,
-       "to": 146
+       "w": "Kiran:",
+       "from": 169,
+       "to": 183
       },
       {
        "w": "no",
-       "from": 146,
-       "to": 159
+       "from": 183,
+       "to": 197
       },
       {
        "w": "fixed",
-       "from": 159,
-       "to": 168
+       "from": 197,
+       "to": 216
       },
       {
        "w": "deadline.",
-       "from": 168,
-       "to": 190
+       "from": 216,
+       "to": 231
       }
      ],
      "cues": {
-      "1": 126
+      "1": 158
      }
     }
    ]
@@ -254,15 +259,15 @@
     ],
     "captionTop": 1390,
     "t": {
-     "refund": "KIRAN'S TAX REFUND: ₹18,400",
-     "leftLab": "REAL LAST DATE",
+     "refund": "MISSED THE JULY ITR? YOUR TAX REFUND:",
+     "leftLab": "LAST DATE TO FILE LATE",
      "leftVal": "31 DEC\n2026",
      "rightLab": "AN AI SAID",
      "rightVal": "NO\nDEADLINE",
      "askShort": "I missed July. By when can I file?",
      "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
      "story": "Kiran is made up · our test is real",
-     "myth": "Missed July? An AI will tell you the new last date.",
+     "myth": "An AI knows this year's tax dates.",
      "factLine": "a small AI, no internet, asked 30 times",
      "zero": "0 OF 30",
      "zeroSub": "THE RIGHT ANSWER",
@@ -270,18 +275,18 @@
      "testHead": "OUR TEST · 30 CHATS",
      "tiles": [
       [
-       "TOLD TODAY'S DATE",
-       "'end of September' · '31 October' · no date",
+       "RIGHT ANSWER, EVEN TOLD TODAY'S DATE",
+       "it said 'end of September', '31 October', or no date",
        "0/10"
       ],
       [
-       "ASKED 'I MISSED JULY'",
-       "'There is no fixed deadline'",
+       "SAID 'NO FIXED DEADLINE'",
+       "asked 'I missed July. By when?'",
        "2/10"
       ],
       [
        "A MADE-UP LATE FEE",
-       "'0.5% of the tax a day, up to 25%'",
+       "e.g. '0.5% of the tax a day, up to 25%'",
        "9/30"
       ]
      ],
@@ -305,7 +310,7 @@
      "ruleHead": "WHAT TO DO",
      "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
      "rule1b": "we tested one small AI with no internet",
-     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2": "NO LINK, NO DATE",
      "rule2b": "the date: incometax.gov.in",
      "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
     },
@@ -318,8 +323,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 205,
-   "frames": 573,
+   "from": 245,
+   "frames": 552,
    "lines": [
     {
      "who": "storyteller",
@@ -328,151 +333,132 @@
      "sub": null,
      "audio": "reel/creative42v1/line_02.wav",
      "from": 0,
-     "frames": 298,
+     "frames": 284,
      "words": [
       {
        "w": "Myth:",
        "from": 0,
-       "to": 18
+       "to": 21
       },
       {
-       "w": "missed",
-       "from": 18,
-       "to": 37
-      },
-      {
-       "w": "July?",
-       "from": 37,
-       "to": 54
-      },
-      {
-       "w": "An",
-       "from": 54,
-       "to": 59
+       "w": "an",
+       "from": 21,
+       "to": 26
       },
       {
        "w": "AI",
-       "from": 59,
-       "to": 63
+       "from": 26,
+       "to": 31
       },
       {
-       "w": "will",
-       "from": 63,
-       "to": 70
+       "w": "knows",
+       "from": 31,
+       "to": 41
       },
       {
-       "w": "tell",
-       "from": 70,
-       "to": 77
+       "w": "this",
+       "from": 41,
+       "to": 50
       },
       {
-       "w": "you",
-       "from": 77,
-       "to": 83
+       "w": "year's",
+       "from": 50,
+       "to": 62
       },
       {
-       "w": "the",
-       "from": 83,
-       "to": 89
+       "w": "tax",
+       "from": 62,
+       "to": 69
       },
       {
-       "w": "new",
-       "from": 89,
-       "to": 94
-      },
-      {
-       "w": "last",
-       "from": 94,
-       "to": 106
-      },
-      {
-       "w": "date.",
-       "from": 106,
-       "to": 130
+       "w": "dates.",
+       "from": 69,
+       "to": 96
       },
       {
        "w": "Fact:",
-       "from": 130,
-       "to": 147
+       "from": 96,
+       "to": 115
       },
       {
        "w": "we",
-       "from": 147,
-       "to": 155
+       "from": 115,
+       "to": 120
       },
       {
        "w": "asked",
-       "from": 155,
-       "to": 164
+       "from": 120,
+       "to": 130
       },
       {
        "w": "a",
-       "from": 164,
-       "to": 166
+       "from": 130,
+       "to": 134
       },
       {
        "w": "small",
-       "from": 166,
-       "to": 175
+       "from": 134,
+       "to": 144
       },
       {
        "w": "AI",
-       "from": 175,
-       "to": 179
+       "from": 144,
+       "to": 149
       },
       {
        "w": "with",
-       "from": 179,
-       "to": 186
+       "from": 149,
+       "to": 157
       },
       {
        "w": "no",
-       "from": 186,
-       "to": 191
+       "from": 157,
+       "to": 163
       },
       {
        "w": "internet,",
-       "from": 191,
-       "to": 215
+       "from": 163,
+       "to": 188
       },
       {
        "w": "30",
-       "from": 215,
-       "to": 219
+       "from": 188,
+       "to": 193
       },
       {
        "w": "times.",
-       "from": 219,
-       "to": 243
+       "from": 193,
+       "to": 205
       },
       {
        "w": "The",
-       "from": 243,
-       "to": 249
+       "from": 223,
+       "to": 231
       },
       {
        "w": "right",
-       "from": 249,
-       "to": 258
+       "from": 231,
+       "to": 243
       },
       {
        "w": "answer:",
-       "from": 258,
-       "to": 280
+       "from": 243,
+       "to": 266
       },
       {
        "w": "0",
-       "from": 280,
-       "to": 283
+       "from": 266,
+       "to": 270
       },
       {
        "w": "times.",
-       "from": 283,
-       "to": 292
+       "from": 270,
+       "to": 284
       }
      ],
      "cues": {
-      "1": 126
+      "1": 94,
+      "2": 223
      }
     },
     {
@@ -481,152 +467,147 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative42v1/line_03.wav",
-     "from": 307,
-     "frames": 251,
+     "from": 293,
+     "frames": 239,
      "words": [
       {
        "w": "Even",
-       "from": 307,
-       "to": 315
+       "from": 293,
+       "to": 300
       },
       {
        "w": "told",
-       "from": 315,
-       "to": 322
+       "from": 300,
+       "to": 306
       },
       {
        "w": "today's",
-       "from": 322,
-       "to": 334
+       "from": 306,
+       "to": 321
       },
       {
        "w": "date,",
-       "from": 334,
-       "to": 358
+       "from": 321,
+       "to": 338
       },
       {
        "w": "it",
-       "from": 358,
-       "to": 368
+       "from": 338,
+       "to": 342
       },
       {
        "w": "was",
-       "from": 368,
-       "to": 373
+       "from": 342,
+       "to": 348
       },
       {
        "w": "still",
-       "from": 373,
-       "to": 391
+       "from": 348,
+       "to": 356
       },
       {
        "w": "wrong,",
-       "from": 391,
-       "to": 401
+       "from": 356,
+       "to": 374
+      },
+      {
+       "w": "all",
+       "from": 374,
+       "to": 384
       },
       {
        "w": "10",
-       "from": 401,
-       "to": 405
+       "from": 384,
+       "to": 388
       },
       {
-       "w": "out",
-       "from": 405,
-       "to": 411
-      },
-      {
-       "w": "of",
-       "from": 411,
-       "to": 416
-      },
-      {
-       "w": "10.",
-       "from": 416,
-       "to": 430
+       "w": "times.",
+       "from": 388,
+       "to": 409
       },
       {
        "w": "And",
-       "from": 430,
-       "to": 436
+       "from": 409,
+       "to": 415
       },
       {
        "w": "9",
-       "from": 436,
-       "to": 439
+       "from": 415,
+       "to": 417
       },
       {
        "w": "times,",
-       "from": 439,
-       "to": 449
+       "from": 417,
+       "to": 427
       },
       {
        "w": "it",
-       "from": 449,
-       "to": 463
+       "from": 427,
+       "to": 438
       },
       {
        "w": "made",
-       "from": 463,
-       "to": 470
+       "from": 438,
+       "to": 445
       },
       {
        "w": "up",
-       "from": 470,
-       "to": 474
+       "from": 445,
+       "to": 449
       },
       {
        "w": "a",
-       "from": 474,
-       "to": 477
+       "from": 449,
+       "to": 452
       },
       {
        "w": "late",
-       "from": 477,
-       "to": 491
+       "from": 452,
+       "to": 477
       },
       {
        "w": "fee,",
-       "from": 491,
-       "to": 511
+       "from": 477,
+       "to": 488
       },
       {
        "w": "like",
-       "from": 511,
-       "to": 518
+       "from": 488,
+       "to": 495
       },
       {
        "w": "0.5%",
-       "from": 518,
-       "to": 526
+       "from": 495,
+       "to": 501
       },
       {
        "w": "of",
-       "from": 526,
-       "to": 530
+       "from": 501,
+       "to": 505
       },
       {
        "w": "your",
-       "from": 530,
-       "to": 537
+       "from": 505,
+       "to": 516
       },
       {
        "w": "tax",
-       "from": 537,
-       "to": 547
+       "from": 516,
+       "to": 522
       },
       {
        "w": "a",
-       "from": 547,
-       "to": 550
+       "from": 522,
+       "to": 525
       },
       {
        "w": "day.",
-       "from": 550,
-       "to": 557
+       "from": 525,
+       "to": 531
       }
      ],
      "cues": {
-      "1": 415
+      "1": 391
      }
     }
    ]
@@ -649,15 +630,15 @@
     ],
     "captionTop": 1390,
     "t": {
-     "refund": "KIRAN'S TAX REFUND: ₹18,400",
-     "leftLab": "REAL LAST DATE",
+     "refund": "MISSED THE JULY ITR? YOUR TAX REFUND:",
+     "leftLab": "LAST DATE TO FILE LATE",
      "leftVal": "31 DEC\n2026",
      "rightLab": "AN AI SAID",
      "rightVal": "NO\nDEADLINE",
      "askShort": "I missed July. By when can I file?",
      "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
      "story": "Kiran is made up · our test is real",
-     "myth": "Missed July? An AI will tell you the new last date.",
+     "myth": "An AI knows this year's tax dates.",
      "factLine": "a small AI, no internet, asked 30 times",
      "zero": "0 OF 30",
      "zeroSub": "THE RIGHT ANSWER",
@@ -665,18 +646,18 @@
      "testHead": "OUR TEST · 30 CHATS",
      "tiles": [
       [
-       "TOLD TODAY'S DATE",
-       "'end of September' · '31 October' · no date",
+       "RIGHT ANSWER, EVEN TOLD TODAY'S DATE",
+       "it said 'end of September', '31 October', or no date",
        "0/10"
       ],
       [
-       "ASKED 'I MISSED JULY'",
-       "'There is no fixed deadline'",
+       "SAID 'NO FIXED DEADLINE'",
+       "asked 'I missed July. By when?'",
        "2/10"
       ],
       [
        "A MADE-UP LATE FEE",
-       "'0.5% of the tax a day, up to 25%'",
+       "e.g. '0.5% of the tax a day, up to 25%'",
        "9/30"
       ]
      ],
@@ -700,7 +681,7 @@
      "ruleHead": "WHAT TO DO",
      "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
      "rule1b": "we tested one small AI with no internet",
-     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2": "NO LINK, NO DATE",
      "rule2b": "the date: incometax.gov.in",
      "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
     },
@@ -713,8 +694,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 777,
-   "frames": 511,
+   "from": 798,
+   "frames": 552,
    "lines": [
     {
      "who": "storyteller",
@@ -723,7 +704,7 @@
      "sub": null,
      "audio": "reel/creative42v1/line_04.wav",
      "from": 0,
-     "frames": 260,
+     "frames": 271,
      "words": [
       {
        "w": "The",
@@ -733,106 +714,116 @@
       {
        "w": "tax",
        "from": 7,
-       "to": 17
+       "to": 18
       },
       {
        "w": "department's",
-       "from": 17,
-       "to": 46
+       "from": 18,
+       "to": 41
       },
       {
        "w": "own",
-       "from": 46,
-       "to": 61
+       "from": 41,
+       "to": 48
       },
       {
        "w": "site:",
-       "from": 61,
-       "to": 70
-      },
-      {
-       "w": "file",
-       "from": 70,
-       "to": 82
-      },
-      {
-       "w": "by",
-       "from": 82,
-       "to": 87
-      },
-      {
-       "w": "December",
-       "from": 87,
-       "to": 118
-      },
-      {
-       "w": "31.",
-       "from": 118,
-       "to": 130
-      },
-      {
-       "w": "Late",
-       "from": 130,
-       "to": 146
-      },
-      {
-       "w": "fee:",
-       "from": 146,
-       "to": 154
-      },
-      {
-       "w": "₹1,000",
-       "from": 154,
-       "to": 165
-      },
-      {
-       "w": "for",
-       "from": 165,
-       "to": 175
-      },
-      {
-       "w": "Kiran,",
-       "from": 175,
-       "to": 199
-      },
-      {
-       "w": "₹5,000",
-       "from": 199,
-       "to": 210
-      },
-      {
-       "w": "if",
-       "from": 210,
-       "to": 215
+       "from": 48,
+       "to": 67
       },
       {
        "w": "you",
-       "from": 215,
-       "to": 221
+       "from": 67,
+       "to": 74
+      },
+      {
+       "w": "can",
+       "from": 74,
+       "to": 81
+      },
+      {
+       "w": "file",
+       "from": 81,
+       "to": 89
+      },
+      {
+       "w": "until",
+       "from": 89,
+       "to": 100
+      },
+      {
+       "w": "December",
+       "from": 100,
+       "to": 116
+      },
+      {
+       "w": "31.",
+       "from": 116,
+       "to": 139
+      },
+      {
+       "w": "Late",
+       "from": 139,
+       "to": 156
+      },
+      {
+       "w": "fee:",
+       "from": 156,
+       "to": 165
+      },
+      {
+       "w": "₹1,000",
+       "from": 165,
+       "to": 177
+      },
+      {
+       "w": "for",
+       "from": 177,
+       "to": 184
+      },
+      {
+       "w": "Kiran,",
+       "from": 184,
+       "to": 196
+      },
+      {
+       "w": "₹5,000",
+       "from": 196,
+       "to": 218
+      },
+      {
+       "w": "if",
+       "from": 218,
+       "to": 223
+      },
+      {
+       "w": "you",
+       "from": 223,
+       "to": 230
       },
       {
        "w": "earn",
-       "from": 221,
-       "to": 229
+       "from": 230,
+       "to": 239
       },
       {
        "w": "over",
-       "from": 229,
-       "to": 237
+       "from": 239,
+       "to": 248
       },
       {
        "w": "₹5",
-       "from": 237,
-       "to": 241
+       "from": 248,
+       "to": 253
       },
       {
        "w": "lakh.",
-       "from": 241,
-       "to": 251
+       "from": 253,
+       "to": 263
       }
      ],
      "cues": {
-      "1": 118
+      "1": 114
      }
     },
     {
@@ -841,132 +832,132 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative42v1/line_05.wav",
-     "from": 267,
-     "frames": 220,
+     "from": 289,
+     "frames": 242,
      "words": [
       {
        "w": "After",
-       "from": 268,
-       "to": 275
+       "from": 289,
+       "to": 297
       },
       {
        "w": "that,",
-       "from": 275,
-       "to": 291
+       "from": 297,
+       "to": 311
       },
       {
        "w": "you",
-       "from": 291,
-       "to": 296
+       "from": 311,
+       "to": 316
       },
       {
        "w": "can",
-       "from": 296,
-       "to": 302
+       "from": 316,
+       "to": 322
       },
       {
        "w": "still",
-       "from": 302,
-       "to": 309
-      },
-      {
-       "w": "file,",
-       "from": 309,
-       "to": 317
-      },
-      {
-       "w": "but",
-       "from": 317,
+       "from": 322,
        "to": 330
       },
       {
-       "w": "not",
+       "w": "file,",
        "from": 330,
-       "to": 336
+       "to": 346
+      },
+      {
+       "w": "but",
+       "from": 346,
+       "to": 351
+      },
+      {
+       "w": "not",
+       "from": 351,
+       "to": 357
       },
       {
        "w": "to",
-       "from": 336,
-       "to": 340
+       "from": 357,
+       "to": 361
       },
       {
        "w": "get",
-       "from": 340,
-       "to": 345
+       "from": 361,
+       "to": 366
       },
       {
        "w": "the",
-       "from": 345,
-       "to": 350
+       "from": 366,
+       "to": 372
       },
       {
        "w": "refund.",
-       "from": 350,
-       "to": 371
+       "from": 372,
+       "to": 393
       },
       {
        "w": "Kiran's",
-       "from": 371,
-       "to": 381
+       "from": 393,
+       "to": 404
       },
       {
        "w": "₹18,400",
-       "from": 381,
-       "to": 391
+       "from": 404,
+       "to": 415
       },
       {
        "w": "would",
-       "from": 391,
-       "to": 399
+       "from": 415,
+       "to": 423
       },
       {
        "w": "need",
-       "from": 399,
-       "to": 406
+       "from": 423,
+       "to": 430
       },
       {
        "w": "a",
-       "from": 406,
-       "to": 408
+       "from": 430,
+       "to": 433
       },
       {
        "w": "special",
-       "from": 408,
-       "to": 419
+       "from": 433,
+       "to": 444
       },
       {
        "w": "request,",
-       "from": 419,
-       "to": 434
+       "from": 444,
+       "to": 466
       },
       {
        "w": "and",
-       "from": 434,
-       "to": 458
+       "from": 466,
+       "to": 472
       },
       {
        "w": "it",
-       "from": 458,
-       "to": 462
+       "from": 472,
+       "to": 480
       },
       {
        "w": "can",
-       "from": 462,
-       "to": 467
+       "from": 480,
+       "to": 500
       },
       {
        "w": "be",
-       "from": 467,
-       "to": 471
+       "from": 500,
+       "to": 504
       },
       {
        "w": "refused.",
-       "from": 471,
-       "to": 483
+       "from": 504,
+       "to": 520
       }
      ],
      "cues": {
-      "1": 355
+      "1": 371
      }
     }
    ]
@@ -984,15 +975,15 @@
     ],
     "captionTop": 1390,
     "t": {
-     "refund": "KIRAN'S TAX REFUND: ₹18,400",
-     "leftLab": "REAL LAST DATE",
+     "refund": "MISSED THE JULY ITR? YOUR TAX REFUND:",
+     "leftLab": "LAST DATE TO FILE LATE",
      "leftVal": "31 DEC\n2026",
      "rightLab": "AN AI SAID",
      "rightVal": "NO\nDEADLINE",
      "askShort": "I missed July. By when can I file?",
      "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
      "story": "Kiran is made up · our test is real",
-     "myth": "Missed July? An AI will tell you the new last date.",
+     "myth": "An AI knows this year's tax dates.",
      "factLine": "a small AI, no internet, asked 30 times",
      "zero": "0 OF 30",
      "zeroSub": "THE RIGHT ANSWER",
@@ -1000,18 +991,18 @@
      "testHead": "OUR TEST · 30 CHATS",
      "tiles": [
       [
-       "TOLD TODAY'S DATE",
-       "'end of September' · '31 October' · no date",
+       "RIGHT ANSWER, EVEN TOLD TODAY'S DATE",
+       "it said 'end of September', '31 October', or no date",
        "0/10"
       ],
       [
-       "ASKED 'I MISSED JULY'",
-       "'There is no fixed deadline'",
+       "SAID 'NO FIXED DEADLINE'",
+       "asked 'I missed July. By when?'",
        "2/10"
       ],
       [
        "A MADE-UP LATE FEE",
-       "'0.5% of the tax a day, up to 25%'",
+       "e.g. '0.5% of the tax a day, up to 25%'",
        "9/30"
       ]
      ],
@@ -1035,7 +1026,7 @@
      "ruleHead": "WHAT TO DO",
      "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
      "rule1b": "we tested one small AI with no internet",
-     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2": "NO LINK, NO DATE",
      "rule2b": "the date: incometax.gov.in",
      "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
     },
@@ -1048,8 +1039,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1289,
-   "frames": 205,
+   "from": 1350,
+   "frames": 225,
    "lines": [
     {
      "who": "storyteller",
@@ -1058,126 +1049,116 @@
      "sub": null,
      "audio": "reel/creative42v1/line_06.wav",
      "from": 0,
-     "frames": 178,
+     "frames": 193,
      "words": [
       {
        "w": "Apps",
        "from": 0,
-       "to": 6
+       "to": 7
       },
       {
        "w": "that",
-       "from": 6,
-       "to": 12
+       "from": 7,
+       "to": 13
       },
       {
        "w": "search",
-       "from": 12,
-       "to": 20
+       "from": 13,
+       "to": 22
       },
       {
        "w": "the",
-       "from": 20,
-       "to": 25
+       "from": 22,
+       "to": 28
       },
       {
        "w": "web",
-       "from": 25,
-       "to": 30
+       "from": 28,
+       "to": 33
       },
       {
        "w": "may",
-       "from": 30,
-       "to": 35
+       "from": 33,
+       "to": 44
       },
       {
        "w": "get",
-       "from": 35,
-       "to": 40
+       "from": 44,
+       "to": 49
       },
       {
        "w": "it",
-       "from": 40,
-       "to": 43
+       "from": 49,
+       "to": 53
       },
       {
        "w": "right.",
-       "from": 43,
-       "to": 52
+       "from": 53,
+       "to": 76
       },
       {
-       "w": "Still,",
-       "from": 52,
-       "to": 72
-      },
-      {
-       "w": "ask",
-       "from": 72,
+       "w": "Still:",
+       "from": 76,
        "to": 85
       },
       {
-       "w": "for",
+       "w": "no",
        "from": 85,
-       "to": 90
-      },
-      {
-       "w": "the",
-       "from": 90,
-       "to": 95
+       "to": 97
       },
       {
        "w": "link,",
-       "from": 95,
-       "to": 102
+       "from": 97,
+       "to": 105
       },
       {
-       "w": "and",
-       "from": 102,
-       "to": 116
+       "w": "no",
+       "from": 105,
+       "to": 109
       },
       {
-       "w": "take",
-       "from": 116,
+       "w": "date.",
+       "from": 109,
        "to": 122
       },
       {
-       "w": "the",
+       "w": "Take",
        "from": 122,
-       "to": 126
-      },
-      {
-       "w": "date",
-       "from": 126,
-       "to": 132
-      },
-      {
-       "w": "from",
-       "from": 132,
        "to": 142
       },
       {
-       "w": "the",
+       "w": "it",
        "from": 142,
-       "to": 147
+       "to": 146
       },
       {
-       "w": "tax",
-       "from": 147,
+       "w": "from",
+       "from": 146,
        "to": 152
       },
       {
-       "w": "department's",
+       "w": "the",
        "from": 152,
-       "to": 167
+       "to": 157
+      },
+      {
+       "w": "tax",
+       "from": 157,
+       "to": 162
+      },
+      {
+       "w": "department's",
+       "from": 162,
+       "to": 184
       },
       {
        "w": "site.",
-       "from": 167,
-       "to": 178
+       "from": 184,
+       "to": 192
       }
      ],
      "cues": {
-      "1": 52
+      "1": 76
      }
     }
    ]
@@ -1195,15 +1176,15 @@
     ],
     "captionTop": 1390,
     "t": {
-     "refund": "KIRAN'S TAX REFUND: ₹18,400",
-     "leftLab": "REAL LAST DATE",
+     "refund": "MISSED THE JULY ITR? YOUR TAX REFUND:",
+     "leftLab": "LAST DATE TO FILE LATE",
      "leftVal": "31 DEC\n2026",
      "rightLab": "AN AI SAID",
      "rightVal": "NO\nDEADLINE",
      "askShort": "I missed July. By when can I file?",
      "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
      "story": "Kiran is made up · our test is real",
-     "myth": "Missed July? An AI will tell you the new last date.",
+     "myth": "An AI knows this year's tax dates.",
      "factLine": "a small AI, no internet, asked 30 times",
      "zero": "0 OF 30",
      "zeroSub": "THE RIGHT ANSWER",
@@ -1211,18 +1192,18 @@
      "testHead": "OUR TEST · 30 CHATS",
      "tiles": [
       [
-       "TOLD TODAY'S DATE",
-       "'end of September' · '31 October' · no date",
+       "RIGHT ANSWER, EVEN TOLD TODAY'S DATE",
+       "it said 'end of September', '31 October', or no date",
        "0/10"
       ],
       [
-       "ASKED 'I MISSED JULY'",
-       "'There is no fixed deadline'",
+       "SAID 'NO FIXED DEADLINE'",
+       "asked 'I missed July. By when?'",
        "2/10"
       ],
       [
        "A MADE-UP LATE FEE",
-       "'0.5% of the tax a day, up to 25%'",
+       "e.g. '0.5% of the tax a day, up to 25%'",
        "9/30"
       ]
      ],
@@ -1246,7 +1227,7 @@
      "ruleHead": "WHAT TO DO",
      "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
      "rule1b": "we tested one small AI with no internet",
-     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2": "NO LINK, NO DATE",
      "rule2b": "the date: incometax.gov.in",
      "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
     },
@@ -1259,7 +1240,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1493,
+   "from": 1575,
    "frames": 88,
    "lines": [
     {

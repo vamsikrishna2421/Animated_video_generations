@@ -41,7 +41,7 @@
   ]
  ],
  "musicPad": true,
- "musicGapGain": 0.6,
+ "musicGapGain": 0.25,
  "musicEndRamp": [
   0.9,
   3.0
@@ -68,15 +68,15 @@
     ],
     "captionTop": 1390,
     "t": {
-     "refund": "KIRAN'S TAX REFUND: ₹18,400",
-     "leftLab": "REAL LAST DATE",
+     "refund": "MISSED THE JULY ITR? YOUR TAX REFUND:",
+     "leftLab": "LAST DATE TO FILE LATE",
      "leftVal": "31 DEC\n2026",
      "rightLab": "AN AI SAID",
      "rightVal": "NO\nDEADLINE",
      "askShort": "I missed July. By when can I file?",
      "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
      "story": "Kiran is made up · our test is real",
-     "myth": "Missed July? An AI will tell you the new last date.",
+     "myth": "An AI knows this year's tax dates.",
      "factLine": "a small AI, no internet, asked 30 times",
      "zero": "0 OF 30",
      "zeroSub": "THE RIGHT ANSWER",
@@ -84,18 +84,18 @@
      "testHead": "OUR TEST · 30 CHATS",
      "tiles": [
       [
-       "TOLD TODAY'S DATE",
-       "'end of September' · '31 October' · no date",
+       "RIGHT ANSWER, EVEN TOLD TODAY'S DATE",
+       "it said 'end of September', '31 October', or no date",
        "0/10"
       ],
       [
-       "ASKED 'I MISSED JULY'",
-       "'There is no fixed deadline'",
+       "SAID 'NO FIXED DEADLINE'",
+       "asked 'I missed July. By when?'",
        "2/10"
       ],
       [
        "A MADE-UP LATE FEE",
-       "'0.5% of the tax a day, up to 25%'",
+       "e.g. '0.5% of the tax a day, up to 25%'",
        "9/30"
       ]
      ],
@@ -119,7 +119,7 @@
      "ruleHead": "WHAT TO DO",
      "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
      "rule1b": "we tested one small AI with no internet",
-     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2": "NO LINK, NO DATE",
      "rule2b": "the date: incometax.gov.in",
      "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
     },
@@ -133,8 +133,8 @@
     {
      "who": "storyteller",
      "file": "01_storyteller.wav",
-     "text": "Last date for Kiran's tax refund: December thirty-first. [1] An AI told him: no fixed deadline.",
-     "show": "Last date for Kiran's tax refund: December 31. An AI told him: no fixed deadline.",
+     "text": "Missed July? Your tax refund's last date: December thirty-first. [1] An AI told Kiran: no fixed deadline.",
+     "show": "Missed July? Your tax refund's last date: December 31. An AI told Kiran: no fixed deadline.",
      "maxgap": 0.3,
      "gap": 0.35,
      "tempo": 1.14
@@ -145,12 +145,12 @@
    "id": "s_b",
    "type": "sk_itr42",
    "tail": 0.1,
-   "boost": 1.6,
-   "lift": 0.7,
+   "boost": 2.2,
+   "lift": 0.8,
    "drop_at": [
     [
      0,
-     "1",
+     "2",
      0.0
     ]
    ],
@@ -169,15 +169,15 @@
     ],
     "captionTop": 1390,
     "t": {
-     "refund": "KIRAN'S TAX REFUND: ₹18,400",
-     "leftLab": "REAL LAST DATE",
+     "refund": "MISSED THE JULY ITR? YOUR TAX REFUND:",
+     "leftLab": "LAST DATE TO FILE LATE",
      "leftVal": "31 DEC\n2026",
      "rightLab": "AN AI SAID",
      "rightVal": "NO\nDEADLINE",
      "askShort": "I missed July. By when can I file?",
      "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
      "story": "Kiran is made up · our test is real",
-     "myth": "Missed July? An AI will tell you the new last date.",
+     "myth": "An AI knows this year's tax dates.",
      "factLine": "a small AI, no internet, asked 30 times",
      "zero": "0 OF 30",
      "zeroSub": "THE RIGHT ANSWER",
@@ -185,18 +185,18 @@
      "testHead": "OUR TEST · 30 CHATS",
      "tiles": [
       [
-       "TOLD TODAY'S DATE",
-       "'end of September' · '31 October' · no date",
+       "RIGHT ANSWER, EVEN TOLD TODAY'S DATE",
+       "it said 'end of September', '31 October', or no date",
        "0/10"
       ],
       [
-       "ASKED 'I MISSED JULY'",
-       "'There is no fixed deadline'",
+       "SAID 'NO FIXED DEADLINE'",
+       "asked 'I missed July. By when?'",
        "2/10"
       ],
       [
        "A MADE-UP LATE FEE",
-       "'0.5% of the tax a day, up to 25%'",
+       "e.g. '0.5% of the tax a day, up to 25%'",
        "9/30"
       ]
      ],
@@ -220,7 +220,7 @@
      "ruleHead": "WHAT TO DO",
      "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
      "rule1b": "we tested one small AI with no internet",
-     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2": "NO LINK, NO DATE",
      "rule2b": "the date: incometax.gov.in",
      "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
     },
@@ -234,17 +234,21 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "Myth: missed July? An AI will tell you the new last date. [1] Fact: we asked a small AI with no internet, thirty times. The right answer: zero times.",
-     "show": "Myth: missed July? An AI will tell you the new last date. Fact: we asked a small AI with no internet, 30 times. The right answer: 0 times.",
+     "text": "Myth: an AI knows this year's tax dates. [1] Fact: we asked a small AI with no internet, thirty times. <pause 0.6> [2] The right answer: zero times.",
+     "show": "Myth: an AI knows this year's tax dates. Fact: we asked a small AI with no internet, 30 times. <pause 0.6> The right answer: 0 times.",
      "maxgap": 0.3,
      "gap": 0.3,
-     "tempo": 1.14
+     "tempo": 1.14,
+     "tts": "Myth: an AI knows this year's tax dates. Fact: we asked a small AI with no internet, thirty times.",
+     "file2": "02b_storyteller.wav",
+     "tts2": "The right answer: zero times.",
+     "pause": 0.6
     },
     {
      "who": "storyteller",
      "file": "03_storyteller.wav",
-     "text": "Even told today's date, it was still wrong, ten out of ten. [1] And nine times, it made up a late fee, like half a percent of your tax a day.",
-     "show": "Even told today's date, it was still wrong, 10 out of 10. And 9 times, it made up a late fee, like 0.5% of your tax a day.",
+     "text": "Even told today's date, it was still wrong, all ten times. [1] And nine times, it made up a late fee, like half a percent of your tax a day.",
+     "show": "Even told today's date, it was still wrong, all 10 times. And 9 times, it made up a late fee, like 0.5% of your tax a day.",
      "maxgap": 0.3,
      "gap": 0.25,
      "tempo": 1.14
@@ -255,13 +259,13 @@
    "id": "s_c",
    "type": "sk_itr42",
    "tail": 0.1,
-   "boost": 1.6,
+   "boost": 1.8,
    "lift": 0.6,
-   "drop_at": [
+   "drop_pre": [
     [
      1,
-     "1",
-     0.0
+     0.0,
+     0.55
     ]
    ],
    "data": {
@@ -279,15 +283,15 @@
     ],
     "captionTop": 1390,
     "t": {
-     "refund": "KIRAN'S TAX REFUND: ₹18,400",
-     "leftLab": "REAL LAST DATE",
+     "refund": "MISSED THE JULY ITR? YOUR TAX REFUND:",
+     "leftLab": "LAST DATE TO FILE LATE",
      "leftVal": "31 DEC\n2026",
      "rightLab": "AN AI SAID",
      "rightVal": "NO\nDEADLINE",
      "askShort": "I missed July. By when can I file?",
      "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
      "story": "Kiran is made up · our test is real",
-     "myth": "Missed July? An AI will tell you the new last date.",
+     "myth": "An AI knows this year's tax dates.",
      "factLine": "a small AI, no internet, asked 30 times",
      "zero": "0 OF 30",
      "zeroSub": "THE RIGHT ANSWER",
@@ -295,18 +299,18 @@
      "testHead": "OUR TEST · 30 CHATS",
      "tiles": [
       [
-       "TOLD TODAY'S DATE",
-       "'end of September' · '31 October' · no date",
+       "RIGHT ANSWER, EVEN TOLD TODAY'S DATE",
+       "it said 'end of September', '31 October', or no date",
        "0/10"
       ],
       [
-       "ASKED 'I MISSED JULY'",
-       "'There is no fixed deadline'",
+       "SAID 'NO FIXED DEADLINE'",
+       "asked 'I missed July. By when?'",
        "2/10"
       ],
       [
        "A MADE-UP LATE FEE",
-       "'0.5% of the tax a day, up to 25%'",
+       "e.g. '0.5% of the tax a day, up to 25%'",
        "9/30"
       ]
      ],
@@ -330,7 +334,7 @@
      "ruleHead": "WHAT TO DO",
      "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
      "rule1b": "we tested one small AI with no internet",
-     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2": "NO LINK, NO DATE",
      "rule2b": "the date: incometax.gov.in",
      "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
     },
@@ -344,16 +348,16 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "The tax department's own site: file by December thirty-first. [1] Late fee: one thousand rupees for Kiran, five thousand if you earn over five lakh.",
-     "show": "The tax department's own site: file by December 31. Late fee: ₹1,000 for Kiran, ₹5,000 if you earn over ₹5 lakh.",
+     "text": "The tax department's own site: you can file until December thirty-first. [1] Late fee: one thousand rupees for Kiran, five thousand if you earn over five lakh.",
+     "show": "The tax department's own site: you can file until December 31. Late fee: ₹1,000 for Kiran, ₹5,000 if you earn over ₹5 lakh.",
      "maxgap": 0.3,
-     "gap": 0.25,
+     "gap": 0.6,
      "tempo": 1.14
     },
     {
      "who": "storyteller",
      "file": "05_storyteller.wav",
-     "text": "After that, you can still file, but not to get the refund. [1] Kiran's eighteen thousand would need a special request, and it can be refused.",
+     "text": "After that, you can still file, but not to get the refund. [1] Kiran's eighteen thousand four hundred would need a special request, and it can be refused.",
      "show": "After that, you can still file, but not to get the refund. Kiran's ₹18,400 would need a special request, and it can be refused.",
      "maxgap": 0.3,
      "gap": 0.25,
@@ -378,15 +382,15 @@
     ],
     "captionTop": 1390,
     "t": {
-     "refund": "KIRAN'S TAX REFUND: ₹18,400",
-     "leftLab": "REAL LAST DATE",
+     "refund": "MISSED THE JULY ITR? YOUR TAX REFUND:",
+     "leftLab": "LAST DATE TO FILE LATE",
      "leftVal": "31 DEC\n2026",
      "rightLab": "AN AI SAID",
      "rightVal": "NO\nDEADLINE",
      "askShort": "I missed July. By when can I file?",
      "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
      "story": "Kiran is made up · our test is real",
-     "myth": "Missed July? An AI will tell you the new last date.",
+     "myth": "An AI knows this year's tax dates.",
      "factLine": "a small AI, no internet, asked 30 times",
      "zero": "0 OF 30",
      "zeroSub": "THE RIGHT ANSWER",
@@ -394,18 +398,18 @@
      "testHead": "OUR TEST · 30 CHATS",
      "tiles": [
       [
-       "TOLD TODAY'S DATE",
-       "'end of September' · '31 October' · no date",
+       "RIGHT ANSWER, EVEN TOLD TODAY'S DATE",
+       "it said 'end of September', '31 October', or no date",
        "0/10"
       ],
       [
-       "ASKED 'I MISSED JULY'",
-       "'There is no fixed deadline'",
+       "SAID 'NO FIXED DEADLINE'",
+       "asked 'I missed July. By when?'",
        "2/10"
       ],
       [
        "A MADE-UP LATE FEE",
-       "'0.5% of the tax a day, up to 25%'",
+       "e.g. '0.5% of the tax a day, up to 25%'",
        "9/30"
       ]
      ],
@@ -429,7 +433,7 @@
      "ruleHead": "WHAT TO DO",
      "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
      "rule1b": "we tested one small AI with no internet",
-     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2": "NO LINK, NO DATE",
      "rule2b": "the date: incometax.gov.in",
      "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
     },
@@ -443,8 +447,8 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "Apps that search the web may get it right. [1] Still, ask for the link, and take the date from the tax department's site.",
-     "show": "Apps that search the web may get it right. Still, ask for the link, and take the date from the tax department's site.",
+     "text": "Apps that search the web may get it right. [1] Still: no link, no date. Take it from the tax department's site.",
+     "show": "Apps that search the web may get it right. Still: no link, no date. Take it from the tax department's site.",
      "maxgap": 0.3,
      "gap": 0.5,
      "tempo": 1.14
@@ -470,15 +474,15 @@
     ],
     "captionTop": 1390,
     "t": {
-     "refund": "KIRAN'S TAX REFUND: ₹18,400",
-     "leftLab": "REAL LAST DATE",
+     "refund": "MISSED THE JULY ITR? YOUR TAX REFUND:",
+     "leftLab": "LAST DATE TO FILE LATE",
      "leftVal": "31 DEC\n2026",
      "rightLab": "AN AI SAID",
      "rightVal": "NO\nDEADLINE",
      "askShort": "I missed July. By when can I file?",
      "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
      "story": "Kiran is made up · our test is real",
-     "myth": "Missed July? An AI will tell you the new last date.",
+     "myth": "An AI knows this year's tax dates.",
      "factLine": "a small AI, no internet, asked 30 times",
      "zero": "0 OF 30",
      "zeroSub": "THE RIGHT ANSWER",
@@ -486,18 +490,18 @@
      "testHead": "OUR TEST · 30 CHATS",
      "tiles": [
       [
-       "TOLD TODAY'S DATE",
-       "'end of September' · '31 October' · no date",
+       "RIGHT ANSWER, EVEN TOLD TODAY'S DATE",
+       "it said 'end of September', '31 October', or no date",
        "0/10"
       ],
       [
-       "ASKED 'I MISSED JULY'",
-       "'There is no fixed deadline'",
+       "SAID 'NO FIXED DEADLINE'",
+       "asked 'I missed July. By when?'",
        "2/10"
       ],
       [
        "A MADE-UP LATE FEE",
-       "'0.5% of the tax a day, up to 25%'",
+       "e.g. '0.5% of the tax a day, up to 25%'",
        "9/30"
       ]
      ],
@@ -521,7 +525,7 @@
      "ruleHead": "WHAT TO DO",
      "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
      "rule1b": "we tested one small AI with no internet",
-     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2": "NO LINK, NO DATE",
      "rule2b": "the date: incometax.gov.in",
      "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
     },

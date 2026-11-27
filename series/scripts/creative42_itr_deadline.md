@@ -91,3 +91,25 @@ Line 3 checked against the replies before building: told today's date, the repli
 October, 31 March 2027, 31 December as a "no fee" date, or no date (5), so "dates already gone" overclaimed -> "still
 wrong, ten out of ten"; "half a percent of your tax a day" is one of the invented fees (3 of the 9), so it is said as
 "like".
+
+## Bujji's Creative 35 48h read (arrived mid-build) and what changed
+- Creative 35 (myth vs fact on a made-up policy) held 20.2% EN / 6.6% TE: "the next frame 1 needs the viewer's own document
+  at stake". Frame 1 and line 1 now speak to the viewer: chip "MISSED THE JULY ITR? YOUR TAX REFUND:", line 1 "Missed
+  July? Your tax refund's last date: December thirty-first. [1] An AI told Kiran: no fixed deadline." (TE: "జూలై మిస్
+  అయ్యారా? మీ టాక్స్ రిఫండ్ కి లాస్ట్ డేట్, డిసెంబర్ థర్టీ ఫస్ట్. [1] కిరణ్ కి మాత్రం, ఒక చాట్‌బాట్, డెడ్‌లైన్ అసలు
+  లేదు అని చెప్పింది."). Kiran stays as the example (his ₹18,400 in lines 4-5).
+
+## Render review (round 1) and what changed
+- Telugu: "ముప్పైకి ముప్పై" and "పదికి పది" read as full marks with "తప్పు" blurred to "tab" -> "ముప్పై సార్లూ తప్పే",
+  "పది సార్లూ తప్పే"; "ముప్పై ఒకటో" squashed to "the 30th" -> "డిసెంబర్ థర్టీ ఫస్ట్" (how it is said); "కొత్త" came out
+  near an embarrassing word -> gone (the myth is now "ఈ ఏడాది టాక్స్ డేట్స్, చాట్‌బాట్ కి తెలుసు"); "వెబ్ సెర్చ్" came out
+  "vepsar" -> "ఇంటర్నెట్ లో వెతికే యాప్ లు"; "రిఫండ్" spelling (the Parler takes smeared "రీఫండ్"); "లాస్ట్ డేట్" (no
+  "తేదీ" twice in line 1); "డేట్ ఉంది" at the end.
+- English: "still wrong, ten out of ten" sounded like full marks -> "all ten times"; "file by" slurred to "filed by" ->
+  "you can file until"; "eighteen thousand" vs ₹18,400 on screen -> "eighteen thousand four hundred"; "No link, no date"
+  said aloud; the myth reframed as "An AI knows this year's tax dates" (Priya: the test is about memory).
+- Screen: the tiles say what each count is ("RIGHT ANSWER, EVEN TOLD TODAY'S DATE 0/10", "SAID 'NO FIXED DEADLINE' 2/10",
+  "A MADE-UP LATE FEE, e.g. ... 9/30"); "LAST DATE TO FILE LATE" (Priya: the real last date was 31 July); the
+  "apps may get it right" box grey, not red; "NO LINK, NO DATE" big.
+- Sound: the English bed rose to voice level in gaps -> 9-11 dB under; a drop before "zero times" (line 2 split into two
+  takes) and before the refund line; a clap and a snap on the bass hits (they read as thumps on a phone speaker).

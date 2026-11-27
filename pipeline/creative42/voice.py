@@ -48,18 +48,18 @@ def kokoro():
     return _K[0]
 
 
-MUST = {"en": {1: [("kiran",), ("tax",), ("refund",), ("december",), ("first", "31st", "31"), ("deadline",)],
-               2: [("myth",), ("july",), ("fact",), ("small",), ("internet",), ("thirty", "30"), ("zero", "0")],
+MUST = {"en": {1: [("july",), ("tax",), ("december",), ("first", "31st", "31"), ("kiran",), ("deadline",)],
+               2: [("myth",), ("knows",), ("dates", "date"), ("fact",), ("small",), ("internet",), ("thirty", "30")], "2b": [("right",), ("zero", "0")],
                3: [("today",), ("date",), ("wrong",), ("ten", "10"), ("nine", "9"), ("fee",), ("percent", "%")],
-               4: [("site",), ("december",), ("fee",), ("thousand", "1", "1000"), ("five", "5"), ("lakh", "lac", "lakhs")],
-               5: [("file",), ("refund",), ("eighteen", "18", "18,000"), ("request",), ("refused",)],
+               4: [("site",), ("until",), ("december",), ("fee",), ("thousand", "1", "1000"), ("five", "5"), ("lakh", "lac", "lakhs")],
+               5: [("file",), ("refund",), ("eighteen", "18"), ("four", "400"), ("request",), ("refused",)],
                6: [("search",), ("web",), ("link",), ("date",), ("site",)], 7: [("chatbot", "chat"), ("deadline",)]},
         "te": {}}   # Telugu: full reads by hand (chunk by chunk)
-JUDGE_TEXT = {1: "Last date for Kiran's tax refund: December 31st. An AI told him: no fixed deadline.",
-              2: "Myth: missed July? An AI will tell you the new last date. Fact: we asked a small AI with no internet, 30 times. The right answer: 0 times.",
-              3: "Even told today's date, it was still wrong, 10 out of 10. And 9 times, it made up a late fee, like half a percent of your tax a day.",
-              4: "The tax department's own site: file by December 31st. Late fee: 1,000 rupees for Kiran, 5,000 if you earn over 5 lakh.",
-              5: "After that, you can still file, but not to get the refund. Kiran's 18,000 would need a special request, and it can be refused."}
+JUDGE_TEXT = {1: "Missed July? Your tax refund's last date: December 31st. An AI told Kiran: no fixed deadline.",
+              2: "Myth: an AI knows this year's tax dates. Fact: we asked a small AI with no internet, 30 times.", "2b": "The right answer: 0 times.",
+              3: "Even told today's date, it was still wrong, all 10 times. And 9 times, it made up a late fee, like half a percent of your tax a day.",
+              4: "The tax department's own site: you can file until December 31st. Late fee: 1,000 rupees for Kiran, 5,000 if you earn over 5 lakh.",
+              5: "After that, you can still file, but not to get the refund. Kiran's 18,400 would need a special request, and it can be refused."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False
