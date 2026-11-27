@@ -48,19 +48,18 @@ def kokoro():
     return _K[0]
 
 
-MUST = {"en": {1: [("fifty", "150"), ("words",), ("free",), ("two", "102")],
-               2: [("small",), ("model",), ("laptop",), ("ten", "10"), ("twenty", "128"), ("short",)],
-               3: [("count",), ("words",), ("two", "2"), ("ten", "10"), ("fifteen", "15")],
-               4: [("real",), ("count",), ("right",), ("did",)], "4b": [("spot",), ("short",)],
-               5: [("eighty", "185"), ("thirty", "234"), ("all",), ("over",)],
-               6: [("tokens", "token"), ("words",), ("twenty", "124"), ("short",), ("guessed", "guess"), ("long",)],
-               7: [("limit",), ("form",), ("essay",), ("post",), ("google",), ("docs",), ("word",), ("count",), ("lines", "line")],
-               8: [("fifty", "150"), ("two", "102")]},
+MUST = {"en": {1: [("kiran",), ("tax",), ("refund",), ("december",), ("first", "31st", "31"), ("deadline",)],
+               2: [("myth",), ("july",), ("fact",), ("small",), ("internet",), ("thirty", "30"), ("zero", "0")],
+               3: [("today",), ("date",), ("wrong",), ("ten", "10"), ("nine", "9"), ("fee",), ("percent", "%")],
+               4: [("site",), ("december",), ("fee",), ("thousand", "1", "1000"), ("five", "5"), ("lakh", "lac", "lakhs")],
+               5: [("file",), ("refund",), ("eighteen", "18", "18,000"), ("request",), ("refused",)],
+               6: [("search",), ("web",), ("link",), ("date",), ("site",)], 7: [("chatbot", "chat"), ("deadline",)]},
         "te": {}}   # Telugu: full reads by hand (chunk by chunk)
-JUDGE_TEXT = {1: "Asked for 150 words. A free AI wrote 102.", 2: "One small model on our laptop, 10 tries: 102 to 128. Short, every time.",
-              3: "Told to count its words: 2 of 10 landed within 15 words.", 5: "185. One even hit 234. All 10 went over.",
-              6: "It writes in tokens, not words: those 102 words were 124 tokens. Told it was short, it just guessed long.",
-              8: "Asked for 150. Got 102."}
+JUDGE_TEXT = {1: "Last date for Kiran's tax refund: December 31st. An AI told him: no fixed deadline.",
+              2: "Myth: missed July? An AI will tell you the new last date. Fact: we asked a small AI with no internet, 30 times. The right answer: 0 times.",
+              3: "Even told today's date, it was still wrong, 10 out of 10. And 9 times, it made up a late fee, like half a percent of your tax a day.",
+              4: "The tax department's own site: file by December 31st. Late fee: 1,000 rupees for Kiran, 5,000 if you earn over 5 lakh.",
+              5: "After that, you can still file, but not to get the refund. Kiran's 18,000 would need a special request, and it can be refused."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

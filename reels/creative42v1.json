@@ -1,0 +1,547 @@
+{
+ "id": "creative42v1",
+ "title": "₹18,400 and a Date (Creative 42)",
+ "label": "",
+ "banner": "",
+ "topic": "",
+ "look": "classic",
+ "gap": 0.16,
+ "lead": 0.45,
+ "music": "lofi",
+ "names": {
+  "storyteller": ""
+ },
+ "musicVol": [
+  0.18,
+  0.42
+ ],
+ "musicDuckRamp": 9,
+ "musicFade": 0.05,
+ "captionMode": "phrase",
+ "musicEQ": [
+  [
+   120,
+   -4,
+   0.7
+  ],
+  [
+   200,
+   -10,
+   0.9
+  ],
+  [
+   250,
+   -14,
+   0.8
+  ],
+  [
+   2400,
+   -5,
+   1.0
+  ]
+ ],
+ "musicPad": true,
+ "musicGapGain": 0.6,
+ "musicEndRamp": [
+  0.9,
+  3.0
+ ],
+ "hardCuts": true,
+ "beatSnap": true,
+ "hideTimer": true,
+ "tempo": 1.0,
+ "captionTop": 1390,
+ "endPad": 0.3,
+ "scenes": [
+  {
+   "id": "s_a",
+   "type": "sk_itr42",
+   "tail": 0.1,
+   "boost": 2.4,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "hook",
+      "n": 1
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "refund": "KIRAN'S TAX REFUND: ₹18,400",
+     "leftLab": "REAL LAST DATE",
+     "leftVal": "31 DEC\n2026",
+     "rightLab": "AN AI SAID",
+     "rightVal": "NO\nDEADLINE",
+     "askShort": "I missed July. By when can I file?",
+     "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
+     "story": "Kiran is made up · our test is real",
+     "myth": "Missed July? An AI will tell you the new last date.",
+     "factLine": "a small AI, no internet, asked 30 times",
+     "zero": "0 OF 30",
+     "zeroSub": "THE RIGHT ANSWER",
+     "model": "Qwen2.5 7B on our computer · no web search · every reply read by us",
+     "testHead": "OUR TEST · 30 CHATS",
+     "tiles": [
+      [
+       "TOLD TODAY'S DATE",
+       "'end of September' · '31 October' · no date",
+       "0/10"
+      ],
+      [
+       "ASKED 'I MISSED JULY'",
+       "'There is no fixed deadline'",
+       "2/10"
+      ],
+      [
+       "A MADE-UP LATE FEE",
+       "'0.5% of the tax a day, up to 25%'",
+       "9/30"
+      ]
+     ],
+     "feeChip": "the real fee is a flat ₹1,000 or ₹5,000 (below)",
+     "siteHead": "incometax.gov.in · e-filing help",
+     "siteSub": "income from April 2025 to March 2026",
+     "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
+     "belatedVal": "BY 31 DEC 2026",
+     "feeLab": "LATE FEE",
+     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
+     "fee2": "₹5,000 above ₹5 lakh",
+     "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
+     "afterHead": "KIRAN'S ₹18,400",
+     "p1": "31 JUL",
+     "p1sub": "the usual date: missed",
+     "p2": "31 DEC",
+     "p2sub": "late return: the refund still comes",
+     "p3": "AFTER",
+     "p3sub": "you can still file, but not for a refund",
+     "afterStamp": "A SPECIAL REQUEST · MAY BE REFUSED",
+     "ruleHead": "WHAT TO DO",
+     "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
+     "rule1b": "we tested one small AI with no internet",
+     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2b": "the date: incometax.gov.in",
+     "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
+    },
+    "yt": {
+     "chapter": "₹18,400, 31 Dec",
+     "title": "₹18,400, 31 Dec",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "01_storyteller.wav",
+     "text": "Last date for Kiran's tax refund: December thirty-first. [1] An AI told him: no fixed deadline.",
+     "show": "Last date for Kiran's tax refund: December 31. An AI told him: no fixed deadline.",
+     "maxgap": 0.3,
+     "gap": 0.35,
+     "tempo": 1.14
+    }
+   ]
+  },
+  {
+   "id": "s_b",
+   "type": "sk_itr42",
+   "tail": 0.1,
+   "boost": 1.6,
+   "lift": 0.7,
+   "drop_at": [
+    [
+     0,
+     "1",
+     0.0
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "myth",
+      "n": 2
+     },
+     {
+      "who": "storyteller",
+      "prop": "test",
+      "n": 3
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "refund": "KIRAN'S TAX REFUND: ₹18,400",
+     "leftLab": "REAL LAST DATE",
+     "leftVal": "31 DEC\n2026",
+     "rightLab": "AN AI SAID",
+     "rightVal": "NO\nDEADLINE",
+     "askShort": "I missed July. By when can I file?",
+     "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
+     "story": "Kiran is made up · our test is real",
+     "myth": "Missed July? An AI will tell you the new last date.",
+     "factLine": "a small AI, no internet, asked 30 times",
+     "zero": "0 OF 30",
+     "zeroSub": "THE RIGHT ANSWER",
+     "model": "Qwen2.5 7B on our computer · no web search · every reply read by us",
+     "testHead": "OUR TEST · 30 CHATS",
+     "tiles": [
+      [
+       "TOLD TODAY'S DATE",
+       "'end of September' · '31 October' · no date",
+       "0/10"
+      ],
+      [
+       "ASKED 'I MISSED JULY'",
+       "'There is no fixed deadline'",
+       "2/10"
+      ],
+      [
+       "A MADE-UP LATE FEE",
+       "'0.5% of the tax a day, up to 25%'",
+       "9/30"
+      ]
+     ],
+     "feeChip": "the real fee is a flat ₹1,000 or ₹5,000 (below)",
+     "siteHead": "incometax.gov.in · e-filing help",
+     "siteSub": "income from April 2025 to March 2026",
+     "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
+     "belatedVal": "BY 31 DEC 2026",
+     "feeLab": "LATE FEE",
+     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
+     "fee2": "₹5,000 above ₹5 lakh",
+     "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
+     "afterHead": "KIRAN'S ₹18,400",
+     "p1": "31 JUL",
+     "p1sub": "the usual date: missed",
+     "p2": "31 DEC",
+     "p2sub": "late return: the refund still comes",
+     "p3": "AFTER",
+     "p3sub": "you can still file, but not for a refund",
+     "afterStamp": "A SPECIAL REQUEST · MAY BE REFUSED",
+     "ruleHead": "WHAT TO DO",
+     "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
+     "rule1b": "we tested one small AI with no internet",
+     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2b": "the date: incometax.gov.in",
+     "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
+    },
+    "yt": {
+     "chapter": "0 of 30",
+     "title": "0 of 30",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "02_storyteller.wav",
+     "text": "Myth: missed July? An AI will tell you the new last date. [1] Fact: we asked a small AI with no internet, thirty times. The right answer: zero times.",
+     "show": "Myth: missed July? An AI will tell you the new last date. Fact: we asked a small AI with no internet, 30 times. The right answer: 0 times.",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "tempo": 1.14
+    },
+    {
+     "who": "storyteller",
+     "file": "03_storyteller.wav",
+     "text": "Even told today's date, it was still wrong, ten out of ten. [1] And nine times, it made up a late fee, like half a percent of your tax a day.",
+     "show": "Even told today's date, it was still wrong, 10 out of 10. And 9 times, it made up a late fee, like 0.5% of your tax a day.",
+     "maxgap": 0.3,
+     "gap": 0.25,
+     "tempo": 1.14
+    }
+   ]
+  },
+  {
+   "id": "s_c",
+   "type": "sk_itr42",
+   "tail": 0.1,
+   "boost": 1.6,
+   "lift": 0.6,
+   "drop_at": [
+    [
+     1,
+     "1",
+     0.0
+    ]
+   ],
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "fact",
+      "n": 4
+     },
+     {
+      "who": "storyteller",
+      "prop": "after",
+      "n": 5
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "refund": "KIRAN'S TAX REFUND: ₹18,400",
+     "leftLab": "REAL LAST DATE",
+     "leftVal": "31 DEC\n2026",
+     "rightLab": "AN AI SAID",
+     "rightVal": "NO\nDEADLINE",
+     "askShort": "I missed July. By when can I file?",
+     "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
+     "story": "Kiran is made up · our test is real",
+     "myth": "Missed July? An AI will tell you the new last date.",
+     "factLine": "a small AI, no internet, asked 30 times",
+     "zero": "0 OF 30",
+     "zeroSub": "THE RIGHT ANSWER",
+     "model": "Qwen2.5 7B on our computer · no web search · every reply read by us",
+     "testHead": "OUR TEST · 30 CHATS",
+     "tiles": [
+      [
+       "TOLD TODAY'S DATE",
+       "'end of September' · '31 October' · no date",
+       "0/10"
+      ],
+      [
+       "ASKED 'I MISSED JULY'",
+       "'There is no fixed deadline'",
+       "2/10"
+      ],
+      [
+       "A MADE-UP LATE FEE",
+       "'0.5% of the tax a day, up to 25%'",
+       "9/30"
+      ]
+     ],
+     "feeChip": "the real fee is a flat ₹1,000 or ₹5,000 (below)",
+     "siteHead": "incometax.gov.in · e-filing help",
+     "siteSub": "income from April 2025 to March 2026",
+     "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
+     "belatedVal": "BY 31 DEC 2026",
+     "feeLab": "LATE FEE",
+     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
+     "fee2": "₹5,000 above ₹5 lakh",
+     "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
+     "afterHead": "KIRAN'S ₹18,400",
+     "p1": "31 JUL",
+     "p1sub": "the usual date: missed",
+     "p2": "31 DEC",
+     "p2sub": "late return: the refund still comes",
+     "p3": "AFTER",
+     "p3sub": "you can still file, but not for a refund",
+     "afterStamp": "A SPECIAL REQUEST · MAY BE REFUSED",
+     "ruleHead": "WHAT TO DO",
+     "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
+     "rule1b": "we tested one small AI with no internet",
+     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2b": "the date: incometax.gov.in",
+     "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
+    },
+    "yt": {
+     "chapter": "The real date and fee",
+     "title": "The real date and fee",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "04_storyteller.wav",
+     "text": "The tax department's own site: file by December thirty-first. [1] Late fee: one thousand rupees for Kiran, five thousand if you earn over five lakh.",
+     "show": "The tax department's own site: file by December 31. Late fee: ₹1,000 for Kiran, ₹5,000 if you earn over ₹5 lakh.",
+     "maxgap": 0.3,
+     "gap": 0.25,
+     "tempo": 1.14
+    },
+    {
+     "who": "storyteller",
+     "file": "05_storyteller.wav",
+     "text": "After that, you can still file, but not to get the refund. [1] Kiran's eighteen thousand would need a special request, and it can be refused.",
+     "show": "After that, you can still file, but not to get the refund. Kiran's ₹18,400 would need a special request, and it can be refused.",
+     "maxgap": 0.3,
+     "gap": 0.25,
+     "tempo": 1.14
+    }
+   ]
+  },
+  {
+   "id": "s_d",
+   "type": "sk_itr42",
+   "tail": 0.3,
+   "boost": 3.0,
+   "lift": 1.0,
+   "rise": 2.6,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "rule",
+      "n": 6
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "refund": "KIRAN'S TAX REFUND: ₹18,400",
+     "leftLab": "REAL LAST DATE",
+     "leftVal": "31 DEC\n2026",
+     "rightLab": "AN AI SAID",
+     "rightVal": "NO\nDEADLINE",
+     "askShort": "I missed July. By when can I file?",
+     "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
+     "story": "Kiran is made up · our test is real",
+     "myth": "Missed July? An AI will tell you the new last date.",
+     "factLine": "a small AI, no internet, asked 30 times",
+     "zero": "0 OF 30",
+     "zeroSub": "THE RIGHT ANSWER",
+     "model": "Qwen2.5 7B on our computer · no web search · every reply read by us",
+     "testHead": "OUR TEST · 30 CHATS",
+     "tiles": [
+      [
+       "TOLD TODAY'S DATE",
+       "'end of September' · '31 October' · no date",
+       "0/10"
+      ],
+      [
+       "ASKED 'I MISSED JULY'",
+       "'There is no fixed deadline'",
+       "2/10"
+      ],
+      [
+       "A MADE-UP LATE FEE",
+       "'0.5% of the tax a day, up to 25%'",
+       "9/30"
+      ]
+     ],
+     "feeChip": "the real fee is a flat ₹1,000 or ₹5,000 (below)",
+     "siteHead": "incometax.gov.in · e-filing help",
+     "siteSub": "income from April 2025 to March 2026",
+     "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
+     "belatedVal": "BY 31 DEC 2026",
+     "feeLab": "LATE FEE",
+     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
+     "fee2": "₹5,000 above ₹5 lakh",
+     "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
+     "afterHead": "KIRAN'S ₹18,400",
+     "p1": "31 JUL",
+     "p1sub": "the usual date: missed",
+     "p2": "31 DEC",
+     "p2sub": "late return: the refund still comes",
+     "p3": "AFTER",
+     "p3sub": "you can still file, but not for a refund",
+     "afterStamp": "A SPECIAL REQUEST · MAY BE REFUSED",
+     "ruleHead": "WHAT TO DO",
+     "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
+     "rule1b": "we tested one small AI with no internet",
+     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2b": "the date: incometax.gov.in",
+     "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
+    },
+    "yt": {
+     "chapter": "Ask for the link",
+     "title": "Ask for the link",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "06_storyteller.wav",
+     "text": "Apps that search the web may get it right. [1] Still, ask for the link, and take the date from the tax department's site.",
+     "show": "Apps that search the web may get it right. Still, ask for the link, and take the date from the tax department's site.",
+     "maxgap": 0.3,
+     "gap": 0.5,
+     "tempo": 1.14
+    }
+   ]
+  },
+  {
+   "id": "s_e",
+   "type": "sk_itr42",
+   "tail": 0.0,
+   "outro": true,
+   "pre": 0.3,
+   "boost": 3.2,
+   "lift": 0.8,
+   "rise": 3.2,
+   "data": {
+    "beats": [
+     {
+      "who": "storyteller",
+      "prop": "loop",
+      "n": 7
+     }
+    ],
+    "captionTop": 1390,
+    "t": {
+     "refund": "KIRAN'S TAX REFUND: ₹18,400",
+     "leftLab": "REAL LAST DATE",
+     "leftVal": "31 DEC\n2026",
+     "rightLab": "AN AI SAID",
+     "rightVal": "NO\nDEADLINE",
+     "askShort": "I missed July. By when can I file?",
+     "aiLine": "\"There is no fixed deadline for filing late returns after July 31\"",
+     "story": "Kiran is made up · our test is real",
+     "myth": "Missed July? An AI will tell you the new last date.",
+     "factLine": "a small AI, no internet, asked 30 times",
+     "zero": "0 OF 30",
+     "zeroSub": "THE RIGHT ANSWER",
+     "model": "Qwen2.5 7B on our computer · no web search · every reply read by us",
+     "testHead": "OUR TEST · 30 CHATS",
+     "tiles": [
+      [
+       "TOLD TODAY'S DATE",
+       "'end of September' · '31 October' · no date",
+       "0/10"
+      ],
+      [
+       "ASKED 'I MISSED JULY'",
+       "'There is no fixed deadline'",
+       "2/10"
+      ],
+      [
+       "A MADE-UP LATE FEE",
+       "'0.5% of the tax a day, up to 25%'",
+       "9/30"
+      ]
+     ],
+     "feeChip": "the real fee is a flat ₹1,000 or ₹5,000 (below)",
+     "siteHead": "incometax.gov.in · e-filing help",
+     "siteSub": "income from April 2025 to March 2026",
+     "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
+     "belatedVal": "BY 31 DEC 2026",
+     "feeLab": "LATE FEE",
+     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
+     "fee2": "₹5,000 above ₹5 lakh",
+     "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
+     "afterHead": "KIRAN'S ₹18,400",
+     "p1": "31 JUL",
+     "p1sub": "the usual date: missed",
+     "p2": "31 DEC",
+     "p2sub": "late return: the refund still comes",
+     "p3": "AFTER",
+     "p3sub": "you can still file, but not for a refund",
+     "afterStamp": "A SPECIAL REQUEST · MAY BE REFUSED",
+     "ruleHead": "WHAT TO DO",
+     "rule1": "APPS THAT SEARCH THE WEB MAY GET IT RIGHT",
+     "rule1b": "we tested one small AI with no internet",
+     "rule2": "ASK FOR THE LINK · NO LINK, NO DATE",
+     "rule2b": "the date: incometax.gov.in",
+     "ruleChip": "belated return, income Apr 2025-Mar 2026: by 31 Dec 2026"
+    },
+    "yt": {
+     "chapter": "No deadline?",
+     "title": "No deadline?",
+     "notes": []
+    }
+   },
+   "lines": [
+    {
+     "who": "storyteller",
+     "file": "07_storyteller.wav",
+     "text": "Don't let a chatbot tell you [1] there's no deadline.",
+     "show": "Don't let a chatbot tell you there's no deadline.",
+     "maxgap": 0.3,
+     "gap": 0.0,
+     "tempo": 1.14
+    }
+   ]
+  }
+ ]
+}

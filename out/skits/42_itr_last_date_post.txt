@@ -1,0 +1,60 @@
+CREATIVE 42: "₹18,400 and a Date" (myth vs fact, one narrator: Kiran, made up, has an ₹18,400 income-tax refund and missed July; a small AI with no internet, asked 30 times, never gave the right answer: a belated return by 31 December 2026, late fee ₹1,000 or ₹5,000; twice it said "no fixed deadline", and 9 times it made up a late fee. After 31 December you can still file, but not to claim the refund. English / Telugu, 9:16; also works as a YouTube Short)
+TIME-SENSITIVE: post before mid-December (the date in it is 31 Dec 2026).
+Files: out/skits/42_itr_last_date.mp4 (English page) · out/skits/42_itr_last_date_te.mp4 (Telugu page)
+Send copies: out/skits/42_itr_last_date_ig.mp4 · out/skits/42_itr_last_date_te_ig.mp4
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+Missed the July ITR date? The last date for your tax refund is 31 December 2026. An AI told Kiran there's no deadline.
+
+We asked a small AI with no internet, on our own computer, 30 times (3 ways, 10 fresh chats each), and read every reply:
+- the right answer (belated return by 31 Dec 2026, late fee ₹1,000 or ₹5,000): 0 of 30
+- asked plainly, it answered for financial year 2022-23, 10 of 10
+- "I missed July, by when can I file?": "There is no fixed deadline", 2 of 10
+- told today's date: still wrong, 10 of 10
+- a made-up late fee ("0.5% of the tax a day, up to 25%" and others): 9 of 30
+
+The real rule (Income Tax Department, e-filing help, for income from April 2025 to March 2026): a belated return can be filed until 31 December 2026, with a late fee of ₹1,000 if your total income is up to ₹5 lakh, ₹5,000 above that. After 31 December you can still file an updated return, but it can't claim a refund; a refund then needs a condonation request, which can be refused.
+
+Apps that search the web (ChatGPT, Gemini and others) may get this right; we didn't test them. Ask for the link, and take the date from incometax.gov.in.
+
+Try it: ask your AI app "I missed the July date for my income tax return; by when can I still file?" and see if it gives 31 December 2026 with a link.
+
+#AI #IncomeTax #ITR #TaxRefund #LearnAI
+
+=== COMMENT PROMPT ===
+(none: from Bujji's reads, the try-it lives in the caption)
+
+=== PINNED_COMMENT ===
+How we tested (Nov 27, 2026): Qwen2.5-7B-Instruct (4-bit Q4_K_M, llama.cpp) on our computer, no web search; one fresh chat per run, temperature 0.7, seeds 1-10; three asks: "What is the last date to file a belated income tax return in India this year?", "I missed the July deadline for my income tax return in India. Can I still file it now? By when?", and the same with "Today is 27 November 2026." first. Every reply read by hand: right answer 0/30; FY 2022-23 dates 10/10 (plain); "no fixed deadline" 2/10; with the date, still 0/10 (end of September, 31 October, 31 March 2027, or no date); made-up percentage fees 9/30. Code: pipeline/creative42/itr_demo.py; replies: series/scripts/creative42_demo/itr.json.
+Source: Income Tax Department, e-filing help, "Income Tax Returns" FAQ for AY 2026-27 (belated return "on or before 31st December 2026"; fee ₹1,000 / ₹5,000; an updated return cannot increase a refund). Kiran and his ₹18,400 are made up. Not tax advice for your case: check incometax.gov.in or a tax professional.
+
+=== YOUTUBE SHORTS ===
+Title: Missed the July ITR date? Your refund's last date is 31 December (an AI said "no deadline") #shorts
+Description: We asked a small AI with no internet 30 times when you can still file a late income tax return. The right answer (31 Dec 2026, fee ₹1,000 or ₹5,000) came 0 times; twice it said there's no deadline. After 31 December you can still file, but not to claim your refund. Take the date from incometax.gov.in.
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+July lo ITR miss ayyaaraa? Mee tax refund ki last date: 31 December 2026. Kiran ki oka chatbot "deadline ledu" ani cheppindi.
+
+Internet leni oka chinna AI ni, maa computer lo, 30 saarlu adigaam (3 rakaalugaa, okkokati 10 kotha chats), prathi javaabu chadivaam:
+- sari aina javaabu (31 Dec 2026 lopu belated return, late fee ₹1,000 leda ₹5,000): 30 lo 0
+- "July miss ayyaanu, eppativaraku file cheyochhu?": "fixed deadline ledu", 10 lo 2
+- eeroju date cheppinaa: 10 ki 10 thappe
+- thane tayaaru chesina late fee ("rojuki tax lo 0.5%" laantivi): 30 lo 9
+
+Asalu rule (Income Tax Department e-filing help; April 2025 - March 2026 income): belated return 31 December 2026 varaku. Late fee: aadaayam ₹5 lakh lopu ayithe ₹1,000, painaa ₹5,000. 31 December daatithe updated return file cheyochhu, kaani daanito refund raadu; appudu condonation request okkate, adi reject kaavachhu.
+
+Web search chese apps sarigaa cheppochhu; memu vaatini test cheyyaledu. Link adagandi, date incometax.gov.in nunche teesukondi.
+
+Try chesi choodandi: mee AI app ni "July ITR date miss ayyaanu, eppativaraku file cheyochhu?" ani adigi, 31 December 2026 tho paatu link istundo choodandi.
+
+=== COMMENT PROMPT ===
+(none)
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #IncomeTax #ITR #LearnAI
+
+=== PINNED_COMMENT ===
+Ela test chesam (Nov 27, 2026): Qwen2.5-7B-Instruct (4-bit) maa computer lo, web search ledu; prathi saari kotha chat, temperature 0.7, seeds 1-10; moodu prasnalu (pina English pin lo unnaayi). Results: sari aina javaabu 0/30; "no fixed deadline" 2/10; date cheppinaa 0/10; thane tayaaru chesina fees 9/30. Code: pipeline/creative42/itr_demo.py.
+Source: Income Tax Department e-filing help, AY 2026-27 FAQ. Kiran, ₹18,400 memu raasinavi. Mee case ki tax advice kaadu: incometax.gov.in leda tax professional ni adagandi.

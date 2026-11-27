@@ -57,3 +57,37 @@ three pops on the tiles, a buzz on "no deadline at all"; a ding on the official 
 and a low hit; a lift into the rule; a riser and the slam back to frame 1.
 Caption try-it (no comment ask): "Ask your AI app: 'I missed July, by when can I file my income tax return?' Then check
 incometax.gov.in."
+
+## Script review (human-viewer, v1) and what changed
+- Both: nothing said TAX (a refund of what?) -> "KIRAN'S TAX REFUND: ₹18,400" and "tax refund" in line 1; "the AI" read as
+  ChatGPT -> "An AI told him" and line 2 says "a small AI with no internet"; line 3 was a list of wrong dates (the swipe
+  point) -> one punch: told today's date it gave dates already gone, and the invented fee (9 of 30) is said, not hidden
+  in a chip; "the return you can still file can't claim a refund" -> "you can still file, but not to get the refund";
+  the end doubled frame 1 -> "Don't let a chatbot tell you there's no deadline", which loops into "Kiran's tax refund has
+  a last date".
+- Priya: one year system (no "FY 2022-23" next to "AY 2026-27": "dates already gone" and "income from April 2025 to
+  March 2026"); "31 Mar 2027" is the revised-return date, so it is not shown as invented; one reply did say 31 Dec with
+  the wrong meaning -> "the right answer: zero times"; "dates and fees change every year" was wrong (31 Dec and ₹5,000
+  have held for years) -> the rule is "apps that search the web may get it right; ask for the link; the date comes from
+  the tax department's site"; fewer sound effects (no second buzz).
+- Sandeep: which fee is Kiran's? -> "one thousand for Kiran, five thousand above five lakh income". Telugu: "డిసెంబర్
+  ముప్పై ఒకటో తేదీ"; "వరకు" (not "లోపు"); "టాక్స్ రీఫండ్", "లేట్ ఫీజు"; the buzz moved after "deadline" (it could clip
+  the "లేదు"/"no"); "సరైన తేదీ, సున్నా సార్లు" -> "ముప్పైకి ముప్పై, తప్పు సమాధానమే" (positive, no negation to swallow);
+  "దారి మూసుకుపోతుంది" (a faint "మూసుకో") -> "రీఫండ్ చేజారిపోతుంది"; the loop line in Telugu ends on "తేదీ ఉంది" (no
+  "నమ్మొద్దు" that could lose its "don't").
+
+## Script v2
+| # | beat | EN | TE |
+|---|---|---|---|
+| 1 | hook | Kiran's eighteen-thousand-rupee tax refund has a last date: December thirty-first. [1] An AI told him there's no fixed deadline. | కిరణ్ కి పద్దెనిమిది వేల టాక్స్ రీఫండ్ రావాలి. చివరి తేదీ, డిసెంబర్ ముప్పై ఒకటో తేదీ. [1] ఒక చాట్‌బాట్ మాత్రం, డెడ్‌లైన్ అసలు లేదు అని చెప్పింది. |
+(Line 1 after the build: "Last date for Kiran's tax refund: December thirty-first. [1] An AI told him: no fixed deadline." / "కిరణ్ టాక్స్ రీఫండ్ కి చివరి తేదీ, డిసెంబర్ ముప్పై ఒకటో తేదీ. [1] ...": the date inside 2 s, per the reach rule; ₹18,400 stays on the frame-1 chip.)
+| 2 | myth | Myth: missed July? An AI will tell you the new last date. [1] Fact: we asked a small AI with no internet, thirty times. The right answer: zero times. | అపోహ: జూలై మిస్ అయితే, కొత్త తేదీ చాట్‌బాట్ చెప్తుంది. [1] నిజం: ఇంటర్నెట్ లేని ఒక చిన్న చాట్‌బాట్ ని, ముప్పై సార్లు అడిగాం. ముప్పైకి ముప్పై, తప్పు సమాధానమే. |
+| 3 | test | Even told today's date, it was still wrong, ten out of ten. [1] And nine times, it made up a late fee, like half a percent of your tax a day. | ఈరోజు తేదీ చెప్పినా, పదికి పది తప్పే. [1] తొమ్మిది సార్లు, లేట్ ఫీజు కూడా తనే తయారు చేసింది. ఉదాహరణకి, రోజుకి టాక్స్ లో అర శాతం. |
+| 4 | fact | The tax department's own site: file by December thirty-first. [1] Late fee: one thousand rupees for Kiran, five thousand if you earn over five lakh. | ఇన్‌కమ్ టాక్స్ సైట్ ప్రకారం: డిసెంబర్ ముప్పై ఒకటో తేదీ వరకు ఫైల్ చేయొచ్చు. [1] లేట్ ఫీజు: కిరణ్ కి వెయ్యి. ఐదు లక్షల పైన ఆదాయం అయితే, ఐదు వేలు. |
+| 5 | after | After that, you can still file, but not to get the refund. [1] Kiran's eighteen thousand would need a special request, and it can be refused. | అది దాటితే, రీఫండ్ చేజారిపోతుంది. [1] కిరణ్ పద్దెనిమిది వేలకి, ప్రత్యేక రిక్వెస్ట్ ఒక్కటే మిగులుతుంది. అదీ రిజెక్ట్ కావచ్చు. |
+| 6 | rule | Apps that search the web may get it right. [1] Still, ask for the link, and take the date from the tax department's site. | వెబ్ సెర్చ్ చేసే యాప్ లు, సరిగ్గా చెప్పొచ్చు. [1] అయినా, లింక్ అడగాలి. తేదీ, ఇన్‌కమ్ టాక్స్ సైట్ నుంచే తీసుకోవాలి. |
+| 7 | loop | Don't let a chatbot tell you [1] there's no deadline. | చాట్‌బాట్ డెడ్‌లైన్ లేదు అన్నా, [1] తేదీ ఉంది. |
+Line 3 checked against the replies before building: told today's date, the replies gave the end of September (2), 31
+October, 31 March 2027, 31 December as a "no fee" date, or no date (5), so "dates already gone" overclaimed -> "still
+wrong, ten out of ten"; "half a percent of your tax a day" is one of the invented fees (3 of the 9), so it is said as
+"like".
