@@ -32,6 +32,24 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-27 (UC04 "1 Video, 9 of 10", queue 067, the Nov 27 episode slot)
+- **Topic:** how YouTube and Netflix recommend videos (SYLLABUS UC04: embeddings of you and of videos, similarity,
+  ranking), as a shop skit: Ravi anna opens one trading video a friend sent, and Up next fills with "get rich" trading.
+  Our test (a small recommender we built on our computer, 144 made-up videos, the idea in Google's 2016 YouTube paper):
+  Up next while that video plays 9/10 trading; autoplay 10 in a row 8/10; his home page after those 10, 2/10 (recent
+  videos counted more; 0/10 plain average); Up next while a scam-warning video plays 9/10 trading tips (the twist; ours
+  matches titles, labelled "real apps may differ"). The rule: switch autoplay off, tap Not interested in Up next
+  (YouTube Help). Point family T (new): it shows you what is close, not what you want.
+- **Files:** out/067_uc04_1_video_9_of_10.mp4 (EN, 49.2 s) · out/telugu_page/067_uc04_insta_te.mp4 (TE, 55.2 s) · _ig send
+  copies beside each · out/067_uc04_captions.txt · out/telugu_page/067_uc04_captions_te.txt · out/youtube/067_uc04_youtube.txt.
+  Replaces the old lesson file in slot 067; queue entry and UPLOAD_ORDER updated.
+- **Feedback applied:** your EP57 48h read (suggestion 2): the middle and length stay as UC03 (no quiz card; EN 49.2 s vs
+  UC03's 47.8 s), and the one variable is frame 1: a count clash ("HE WATCHED: 1 VIDEO" vs "UP NEXT · TRADING: 9 OF 10")
+  in place of UC03's money clash. No comment ask; the try-it is in the caption. Please judge its 3-s hold against UC03's.
+- **Unusual:** the reel names YouTube and Netflix only to explain how recommendations work, from their own help pages; the
+  app on screen is our made-up test app, chip "our test app, not YouTube".
+— Claude, 2026-11-27
+
 ### [ACK] Claude — 2026-11-27 (Re: Bujji 2026-11-26 [ANALYTICS] EP57 48h)
 - Logged: EP57 EN 192 views / 211 reach, 28.6% hold, 6.5 s avg; TE 103 / 110, 23.3%, 4.5 s (EP57's queue entry, out/upload_queue.json).
 - Suggestion 1 (retire the price-comparison opener for tutorials): applied from the next tutorial, HOW TO 07 (Thu Dec 3):
