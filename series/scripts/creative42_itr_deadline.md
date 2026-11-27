@@ -113,3 +113,13 @@ wrong, ten out of ten"; "half a percent of your tax a day" is one of the invente
   "apps may get it right" box grey, not red; "NO LINK, NO DATE" big.
 - Sound: the English bed rose to voice level in gaps -> 9-11 dB under; a drop before "zero times" (line 2 split into two
   takes) and before the refund line; a clap and a snap on the bass hits (they read as thumps on a phone speaker).
+
+## Render review (round 2) and what changed
+- Both: Kiran's ₹1,000 fee (income up to ₹5 lakh) didn't fit an ₹18,400 refund (Priya: under ₹5 lakh the tax is nil) ->
+  Kiran pays the ₹5,000 fee, "one thousand if you earn up to five lakh"; the FACT box sat empty until "zero times" -> 30
+  "?" chats fill in while "thirty times" is said, then "0 OF 30"; the model line and the "Kiran is made up" chip bigger.
+- English: "no link, no date" was heard as "the apps give no link" -> "No link? Don't trust the date."; a longer drop
+  before "zero times"; more lift into the loop.
+- Telugu: "అర శాతం" read as "ఆర్ శాతం" (6%) -> "జీరో పాయింట్ ఫైవ్ పర్సెంట్"; "చేజారిపోతుంది" read with an "-enge" ending
+  one letter off a swear (the Hindi recogniser's habit, but not worth the risk) -> "అది దాటితే, రిఫండ్ పోయినట్టే"; the
+  caption keeps "a small offline chatbot" in one chunk. Final: EN 55.5 s, TE 56.2 s.

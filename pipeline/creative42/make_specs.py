@@ -16,27 +16,27 @@ LINES = {   # n: (prop, English, Telugu)
     2: ("myth", "Myth: an AI knows this year's tax dates. [1] Fact: we asked a small AI with no internet, thirty times. | [2] The right answer: zero times.",
         "అపోహ: ఈ ఏడాది టాక్స్ డేట్స్, చాట్‌బాట్ కి తెలుసు. | [1] నిజం: ఇంటర్నెట్ లేని ఒక చిన్న చాట్‌బాట్ ని, ముప్పై సార్లు అడిగాం. [2] ముప్పై సార్లూ తప్పే."),
     3: ("test", "Even told today's date, it was still wrong, all ten times. [1] And nine times, it made up a late fee, like half a percent of your tax a day.",
-        "ఈరోజు తేదీ చెప్పినా, పది సార్లూ తప్పే. | [1] తొమ్మిది సార్లు, లేట్ ఫీజు కూడా తనే తయారు చేసింది. ఉదాహరణకి, రోజుకి టాక్స్ లో అర శాతం."),
-    4: ("fact", "The tax department's own site: you can file until December thirty-first. [1] Late fee: one thousand rupees for Kiran, five thousand if you earn over five lakh.",
-        "ఇన్‌కమ్ టాక్స్ సైట్ ప్రకారం: డిసెంబర్ థర్టీ ఫస్ట్ వరకు ఫైల్ చేయొచ్చు. | [1] లేట్ ఫీజు: కిరణ్ కి వెయ్యి. ఐదు లక్షల పైన ఆదాయం అయితే, ఐదు వేలు."),
+        "ఈరోజు తేదీ చెప్పినా, పది సార్లూ తప్పే. | [1] తొమ్మిది సార్లు, లేట్ ఫీజు కూడా తనే తయారు చేసింది. ఉదాహరణకి, రోజుకి టాక్స్ లో జీరో పాయింట్ ఫైవ్ పర్సెంట్."),
+    4: ("fact", "The tax department's own site: you can file until December thirty-first. [1] Late fee: five thousand rupees for Kiran, one thousand if you earn up to five lakh.",
+        "ఇన్‌కమ్ టాక్స్ సైట్ ప్రకారం: డిసెంబర్ థర్టీ ఫస్ట్ వరకు ఫైల్ చేయొచ్చు. | [1] లేట్ ఫీజు: కిరణ్ కి ఐదు వేలు. ఐదు లక్షల వరకు ఆదాయం అయితే, వెయ్యి."),
     5: ("after", "After that, you can still file, but not to get the refund. [1] Kiran's eighteen thousand four hundred would need a special request, and it can be refused.",
-        "అది దాటితే, రిఫండ్ చేజారిపోతుంది. | [1] కిరణ్ పద్దెనిమిది వేల నాలుగు వందలకి, ప్రత్యేక రిక్వెస్ట్ ఒక్కటే మిగులుతుంది. అదీ రిజెక్ట్ కావచ్చు."),
-    6: ("rule", "Apps that search the web may get it right. [1] Still: no link, no date. Take it from the tax department's site.",
+        "అది దాటితే, రిఫండ్ పోయినట్టే. | [1] కిరణ్ పద్దెనిమిది వేల నాలుగు వందలకి, ప్రత్యేక రిక్వెస్ట్ ఒక్కటే మిగులుతుంది. అదీ రిజెక్ట్ కావచ్చు."),
+    6: ("rule", "Apps that search the web may get it right. [1] Still: no link? Don't trust the date. Take it from the tax department's site.",
         "ఇంటర్నెట్ లో వెతికే యాప్ లు, సరిగ్గా చెప్పొచ్చు. [1] అయినా, లింక్ అడగాలి. డేట్, ఇన్‌కమ్ టాక్స్ సైట్ నుంచే తీసుకోవాలి."),
     7: ("loop", "Don't let a chatbot tell you [1] there's no deadline.", "చాట్‌బాట్ డెడ్‌లైన్ లేదు అన్నా, [1] డేట్ ఉంది."),
 }
 SHOW = {1: "Missed July? Your tax refund's last date: December 31. An AI told Kiran: no fixed deadline.",
         2: "Myth: an AI knows this year's tax dates. Fact: we asked a small AI with no internet, 30 times. <pause 0.6> The right answer: 0 times.",
         3: "Even told today's date, it was still wrong, all 10 times. And 9 times, it made up a late fee, like 0.5% of your tax a day.",
-        4: "The tax department's own site: you can file until December 31. Late fee: ₹1,000 for Kiran, ₹5,000 if you earn over ₹5 lakh.",
+        4: "The tax department's own site: you can file until December 31. Late fee: ₹5,000 for Kiran, ₹1,000 if you earn up to ₹5 lakh.",
         5: "After that, you can still file, but not to get the refund. Kiran's ₹18,400 would need a special request, and it can be refused.",
-        6: "Apps that search the web may get it right. Still: no link, no date. Take it from the tax department's site."}
+        6: "Apps that search the web may get it right. Still: no link? Don't trust the date. Take it from the tax department's site."}
 SHOW_TE = {
     1: "Missed July? Your tax refund's last date: December 31. But a chatbot told Kiran there's no deadline at all.",
-    2: "Myth: a chatbot knows this year's tax dates. <pause 0.35> Fact: we asked a small chatbot with no internet, 30 times. Wrong all 30 times.",
+    2: "Myth: a chatbot knows this year's tax dates. <pause 0.35> Fact: we asked a small offline chatbot 30 times. Wrong all 30 times.",
     3: "Even told today's date: wrong all 10 times. <pause 0.35> 9 times it made up a late fee too. For example: 0.5% of your tax a day.",
-    4: "The income tax site: you can file until December 31. <pause 0.35> Late fee: ₹1,000 for Kiran. Income over ₹5 lakh: ₹5,000.",
-    5: "Miss it, and the refund slips away. <pause 0.35> For Kiran's ₹18,400, only a special request is left. That can be refused too.",
+    4: "The income tax site: you can file until December 31. <pause 0.35> Late fee: ₹5,000 for Kiran. Income up to ₹5 lakh: ₹1,000.",
+    5: "Miss it, and the refund is as good as gone. <pause 0.35> For Kiran's ₹18,400, only a special request is left. That can be refused too.",
     6: "Apps that search the internet may get it right. Still, ask for the link. Take the date from the income tax site.",
     7: "Even if a chatbot says no deadline, there is a date.",
 }
@@ -58,7 +58,7 @@ T = {
     "feeChip": "the real fee is a flat ₹1,000 or ₹5,000 (below)",
     "siteHead": "incometax.gov.in · e-filing help", "siteSub": "income from April 2025 to March 2026",
     "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:", "belatedVal": "BY 31 DEC 2026",
-    "feeLab": "LATE FEE", "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)", "fee2": "₹5,000 above ₹5 lakh",
+    "feeLab": "LATE FEE", "fee1": "₹5,000 (Kiran)", "fee2": "₹1,000 if total income is up to ₹5 lakh",
     "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
     "afterHead": "KIRAN'S ₹18,400", "p1": "31 JUL", "p1sub": "the usual date: missed",
     "p2": "31 DEC", "p2sub": "late return: the refund still comes", "p3": "AFTER", "p3sub": "you can still file, but not for a refund",
@@ -73,8 +73,8 @@ T = {
 SCENES = [("s_a", (1,), {"boost": 2.4, "tail": 0.1}),
           ("s_b", (2, 3), {"boost": 2.2, "lift": 0.8, "drop_at": [[0, "2", 0.0]], "tail": 0.1}),   # the bed out before "zero times"
           ("s_c", (4, 5), {"boost": 1.8, "lift": 0.6, "drop_pre": [[1, 0.0, 0.55]], "tail": 0.1}),   # and before the refund line
-          ("s_d", (6,), {"boost": 3.0, "lift": 1.0, "rise": 2.6, "tail": 0.3}),
-          ("s_e", (7,), {"outro": True, "pre": 0.3, "boost": 3.2, "lift": 0.8, "rise": 3.2, "tail": 0.0})]
+          ("s_d", (6,), {"boost": 3.4, "lift": 1.1, "rise": 3.0, "tail": 0.3}),
+          ("s_e", (7,), {"outro": True, "pre": 0.3, "boost": 4.0, "lift": 1.0, "rise": 3.8, "tail": 0.0})]   # review: lift into the loop
 GAP = {n: 0.25 for n in LINES} | {1: 0.35, 2: 0.3, 4: 0.6, 6: 0.5, 7: 0.0}
 GAP_TE = {n: 0.18 for n in LINES} | {1: 0.3, 4: 0.55, 6: 0.45, 7: 0.0}
 FLAGS_TE = {}
@@ -105,7 +105,7 @@ def spec(lang="en"):
                   "tempo": TEMPO_TE["storyteller"] if te else TEMPO_EN["storyteller"]}
             if " | " in raw:   # Telugu lines 2-5 (Parler babbled on the long line 2) and English line 2: two takes
                 p1, p2 = raw.split(" | ")
-                pz = 0.35 if te else 0.6
+                pz = 0.35 if te else 0.75   # English line 2: a longer drop before "zero times"
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_storyteller.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             lines.append(ln)

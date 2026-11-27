@@ -97,7 +97,7 @@ const StItr: React.FC<SP> = ({ s }) => {
           sofa(c);
           person(c, "kiran" as BillWho, [270, 1060], 0.8, f >= cu(1, 0.2) || full ? "shock" : "calm", "phone", false, r);
           phoneCard(c, T);
-          if (P === "hook" && !loopOn) chip(c, T.story, W / 2, 1300, "#1e293b", "#f8fafc", seg(f, cu(1, 0.8), cu(1, 0.8) + 8), 34);
+          if (P === "hook" && !loopOn) chip(c, T.story, W / 2, 1300, "#1e293b", "#f8fafc", seg(f, cu(1, 0.6), cu(1, 0.6) + 8), 42);
         } else if (P === "myth") {
           c.textAlign = "center";
           const k0 = seg(f, ln.from, ln.from + 8), kx = seg(f, cu(1, 0.05) - 6, cu(1, 0.05) + 2);
@@ -112,9 +112,17 @@ const StItr: React.FC<SP> = ({ s }) => {
             c.font = SANS(56, 900); c.fillStyle = "#bbf7d0"; c.fillText("FACT", W / 2, 680);
             c.font = SANS(fit(c, T.factLine, W - 200, 46, 900), 900); c.fillStyle = "#fff"; c.fillText(T.factLine, W / 2, 760);
             const kn = seg(f, cu(2, 0.1) - 2, cu(2, 0.1) + 6);
+            const kd = seg(f, cu(1, 0.3), cu(2, 0.1) - 10);   // the 30 chats fill in while "thirty times" is said
+            for (let q = 0; q < 30; q++) {
+              const kq = clamp(kd * 30 - q); if (kq <= 0) continue;
+              const x = 175 + (q % 10) * 81, y = 850 + Math.floor(q / 10) * 66;
+              c.save(); c.globalAlpha = clamp(kq * 3) * (1 - kn);
+              c.fillStyle = "#e2e8f0"; rrect(c, x - 28, y - 22, 56, 44, 12); c.fill();
+              c.fillStyle = "#14532d"; c.font = SANS(26, 900); c.fillText("?", x, y + 10); c.restore();
+            }
             if (kn > 0) { const z = 1.4 - 0.4 * easeOut(kn); c.save(); c.translate(W / 2, 960); c.scale(z, z); c.font = SANS(220, 900); c.fillStyle = "#fca5a5"; c.fillText(T.zero, 0, 70); c.restore(); }
             c.font = SANS(fit(c, T.zeroSub, W - 200, 38, 800), 800); c.fillStyle = "#bbf7d0"; c.globalAlpha = clamp(kf * 3) * clamp(kn * 3); c.fillText(T.zeroSub, W / 2, 1130);
-            c.font = SANS(fit(c, T.model, W - 200, 30, 700), 700); c.fillStyle = "#86efac"; c.fillText(T.model, W / 2, 1190); c.restore();
+            c.font = SANS(fit(c, T.model, W - 180, 36, 800), 800); c.fillStyle = "#bbf7d0"; c.fillText(T.model, W / 2, 1195); c.restore();
           }
         } else if (P === "test") {
           c.textAlign = "center"; c.font = SANS(52, 900); c.fillStyle = "#0c4a6e"; c.fillText(T.testHead, W / 2, 340);

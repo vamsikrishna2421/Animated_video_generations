@@ -17,8 +17,8 @@
    510
   ],
   [
-   1065,
-   1081
+   1115,
+   1131
   ]
  ],
  "musicBoosts": [
@@ -29,40 +29,40 @@
   ],
   [
    268,
-   818,
+   859,
    2.2
   ],
   [
-   818,
-   1329,
+   859,
+   1370,
    1.8
   ],
   [
-   1330,
-   1556,
-   3.0
+   1370,
+   1596,
+   3.4
   ],
   [
-   1555,
-   1643,
-   3.2
+   1596,
+   1684,
+   4.0
   ],
   [
-   1330,
-   1556,
-   2.6,
+   1370,
+   1596,
+   3.0,
    1
   ],
   [
-   1555,
-   1643,
-   3.2,
+   1596,
+   1684,
+   3.8,
    1
   ]
  ],
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1643,
+ "totalFrames": 1684,
  "music": "reel/creative42te/score.wav",
  "scenes": [
   {
@@ -115,8 +115,8 @@
      "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
      "belatedVal": "BY 31 DEC 2026",
      "feeLab": "LATE FEE",
-     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
-     "fee2": "₹5,000 above ₹5 lakh",
+     "fee1": "₹5,000 (Kiran)",
+     "fee2": "₹1,000 if total income is up to ₹5 lakh",
      "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
      "afterHead": "KIRAN'S ₹18,400",
      "p1": "31 JUL",
@@ -311,8 +311,8 @@
      "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
      "belatedVal": "BY 31 DEC 2026",
      "feeLab": "LATE FEE",
-     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
-     "fee2": "₹5,000 above ₹5 lakh",
+     "fee1": "₹5,000 (Kiran)",
+     "fee2": "₹1,000 if total income is up to ₹5 lakh",
      "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
      "afterHead": "KIRAN'S ₹18,400",
      "p1": "31 JUL",
@@ -339,7 +339,7 @@
     "hardCuts": true
    },
    "from": 268,
-   "frames": 550,
+   "frames": 591,
    "lines": [
     {
      "who": "storyteller",
@@ -393,76 +393,66 @@
       {
        "w": "Fact:",
        "from": 114,
-       "to": 132
+       "to": 133
       },
       {
        "w": "we",
-       "from": 132,
-       "to": 137
+       "from": 133,
+       "to": 139
       },
       {
        "w": "asked",
-       "from": 137,
-       "to": 147
-      },
-      {
-       "w": "a",
-       "from": 147,
+       "from": 139,
        "to": 150
       },
       {
-       "w": "small",
+       "w": "a",
        "from": 150,
-       "to": 167
+       "to": 154
+      },
+      {
+       "w": "small",
+       "from": 154,
+       "to": 173
+      },
+      {
+       "w": "offline",
+       "from": 173,
+       "to": 188
       },
       {
        "w": "chatbot",
-       "from": 167,
-       "to": 181
-      },
-      {
-       "w": "with",
-       "from": 181,
-       "to": 189
-      },
-      {
-       "w": "no",
-       "from": 189,
-       "to": 194
-      },
-      {
-       "w": "internet,",
-       "from": 194,
-       "to": 218
+       "from": 188,
+       "to": 211
       },
       {
        "w": "30",
-       "from": 218,
-       "to": 223
+       "from": 211,
+       "to": 216
       },
       {
        "w": "times.",
-       "from": 223,
-       "to": 234
+       "from": 216,
+       "to": 229
       },
       {
        "w": "Wrong",
-       "from": 234,
-       "to": 251
+       "from": 229,
+       "to": 247
       },
       {
        "w": "all",
-       "from": 251,
-       "to": 257
+       "from": 247,
+       "to": 255
       },
       {
        "w": "30",
-       "from": 257,
-       "to": 262
+       "from": 255,
+       "to": 260
       },
       {
        "w": "times.",
-       "from": 262,
+       "from": 260,
        "to": 274
       }
      ],
@@ -478,7 +468,7 @@
      "sub": null,
      "audio": "reel/creative42te/line_03.wav",
      "from": 279,
-     "frames": 250,
+     "frames": 300,
      "words": [
       {
        "w": "Even",
@@ -522,92 +512,92 @@
       },
       {
        "w": "9",
-       "from": 368,
-       "to": 371
+       "from": 375,
+       "to": 379
       },
       {
        "w": "times",
-       "from": 371,
-       "to": 383
+       "from": 379,
+       "to": 391
       },
       {
        "w": "it",
-       "from": 383,
-       "to": 388
+       "from": 391,
+       "to": 405
       },
       {
        "w": "made",
-       "from": 388,
-       "to": 410
-      },
-      {
-       "w": "up",
-       "from": 410,
-       "to": 415
-      },
-      {
-       "w": "a",
-       "from": 415,
+       "from": 405,
        "to": 419
       },
       {
-       "w": "late",
+       "w": "up",
        "from": 419,
-       "to": 428
-      },
-      {
-       "w": "fee",
-       "from": 428,
-       "to": 436
-      },
-      {
-       "w": "too.",
-       "from": 436,
-       "to": 445
-      },
-      {
-       "w": "For",
-       "from": 445,
-       "to": 460
-      },
-      {
-       "w": "example:",
-       "from": 460,
-       "to": 484
-      },
-      {
-       "w": "0.5%",
-       "from": 484,
-       "to": 493
-      },
-      {
-       "w": "of",
-       "from": 493,
-       "to": 499
-      },
-      {
-       "w": "your",
-       "from": 499,
-       "to": 508
-      },
-      {
-       "w": "tax",
-       "from": 508,
-       "to": 516
+       "to": 425
       },
       {
        "w": "a",
-       "from": 516,
-       "to": 519
+       "from": 425,
+       "to": 429
+      },
+      {
+       "w": "late",
+       "from": 429,
+       "to": 439
+      },
+      {
+       "w": "fee",
+       "from": 439,
+       "to": 448
+      },
+      {
+       "w": "too.",
+       "from": 448,
+       "to": 458
+      },
+      {
+       "w": "For",
+       "from": 458,
+       "to": 473
+      },
+      {
+       "w": "example:",
+       "from": 473,
+       "to": 498
+      },
+      {
+       "w": "0.5%",
+       "from": 498,
+       "to": 515
+      },
+      {
+       "w": "of",
+       "from": 515,
+       "to": 521
+      },
+      {
+       "w": "your",
+       "from": 521,
+       "to": 538
+      },
+      {
+       "w": "tax",
+       "from": 538,
+       "to": 546
+      },
+      {
+       "w": "a",
+       "from": 546,
+       "to": 550
       },
       {
        "w": "day.",
-       "from": 519,
-       "to": 529
+       "from": 550,
+       "to": 574
       }
      ],
      "cues": {
-      "1": 368
+      "1": 375
      }
     }
    ]
@@ -667,8 +657,8 @@
      "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
      "belatedVal": "BY 31 DEC 2026",
      "feeLab": "LATE FEE",
-     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
-     "fee2": "₹5,000 above ₹5 lakh",
+     "fee1": "₹5,000 (Kiran)",
+     "fee2": "₹1,000 if total income is up to ₹5 lakh",
      "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
      "afterHead": "KIRAN'S ₹18,400",
      "p1": "31 JUL",
@@ -694,7 +684,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 818,
+   "from": 859,
    "frames": 511,
    "lines": [
     {
@@ -704,7 +694,7 @@
      "sub": null,
      "audio": "reel/creative42te/line_04.wav",
      "from": 0,
-     "frames": 246,
+     "frames": 256,
      "words": [
       {
        "w": "The",
@@ -758,57 +748,62 @@
       },
       {
        "w": "Late",
-       "from": 130,
-       "to": 142
+       "from": 132,
+       "to": 144
       },
       {
        "w": "fee:",
-       "from": 142,
-       "to": 157
+       "from": 144,
+       "to": 160
       },
       {
-       "w": "₹1,000",
-       "from": 157,
-       "to": 168
+       "w": "₹5,000",
+       "from": 160,
+       "to": 172
       },
       {
        "w": "for",
-       "from": 168,
-       "to": 181
+       "from": 172,
+       "to": 178
       },
       {
        "w": "Kiran.",
-       "from": 181,
-       "to": 192
+       "from": 178,
+       "to": 196
       },
       {
        "w": "Income",
-       "from": 192,
-       "to": 203
+       "from": 196,
+       "to": 211
       },
       {
-       "w": "over",
-       "from": 203,
-       "to": 212
+       "w": "up",
+       "from": 211,
+       "to": 223
+      },
+      {
+       "w": "to",
+       "from": 223,
+       "to": 227
       },
       {
        "w": "₹5",
-       "from": 212,
-       "to": 217
+       "from": 227,
+       "to": 232
       },
       {
        "w": "lakh:",
-       "from": 217,
-       "to": 233
+       "from": 232,
+       "to": 242
       },
       {
-       "w": "₹5,000.",
-       "from": 233,
-       "to": 246
+       "w": "₹1,000.",
+       "from": 242,
+       "to": 255
       }
      ],
      "cues": {
-      "1": 130
+      "1": 132
      }
     },
     {
@@ -817,117 +812,132 @@
      "color": "#FDE68A",
      "sub": null,
      "audio": "reel/creative42te/line_05.wav",
-     "from": 263,
-     "frames": 235,
+     "from": 272,
+     "frames": 229,
      "words": [
       {
        "w": "Miss",
-       "from": 263,
-       "to": 270
+       "from": 273,
+       "to": 278
       },
       {
        "w": "it,",
-       "from": 270,
-       "to": 276
+       "from": 278,
+       "to": 283
       },
       {
        "w": "and",
-       "from": 276,
-       "to": 281
+       "from": 283,
+       "to": 287
       },
       {
        "w": "the",
-       "from": 281,
-       "to": 294
+       "from": 287,
+       "to": 291
       },
       {
        "w": "refund",
-       "from": 294,
-       "to": 304
-      },
-      {
-       "w": "slips",
-       "from": 304,
-       "to": 312
-      },
-      {
-       "w": "away.",
-       "from": 312,
-       "to": 320
-      },
-      {
-       "w": "For",
-       "from": 336,
-       "to": 344
-      },
-      {
-       "w": "Kiran's",
-       "from": 344,
-       "to": 358
-      },
-      {
-       "w": "₹18,400,",
-       "from": 358,
-       "to": 375
-      },
-      {
-       "w": "only",
-       "from": 375,
-       "to": 384
-      },
-      {
-       "w": "a",
-       "from": 384,
-       "to": 388
-      },
-      {
-       "w": "special",
-       "from": 388,
-       "to": 409
-      },
-      {
-       "w": "request",
-       "from": 409,
-       "to": 424
+       "from": 291,
+       "to": 306
       },
       {
        "w": "is",
-       "from": 424,
-       "to": 429
+       "from": 306,
+       "to": 309
+      },
+      {
+       "w": "as",
+       "from": 309,
+       "to": 312
+      },
+      {
+       "w": "good",
+       "from": 312,
+       "to": 318
+      },
+      {
+       "w": "as",
+       "from": 318,
+       "to": 321
+      },
+      {
+       "w": "gone.",
+       "from": 321,
+       "to": 328
+      },
+      {
+       "w": "For",
+       "from": 340,
+       "to": 347
+      },
+      {
+       "w": "Kiran's",
+       "from": 347,
+       "to": 362
+      },
+      {
+       "w": "₹18,400,",
+       "from": 362,
+       "to": 378
+      },
+      {
+       "w": "only",
+       "from": 378,
+       "to": 388
+      },
+      {
+       "w": "a",
+       "from": 388,
+       "to": 391
+      },
+      {
+       "w": "special",
+       "from": 391,
+       "to": 412
+      },
+      {
+       "w": "request",
+       "from": 412,
+       "to": 427
+      },
+      {
+       "w": "is",
+       "from": 427,
+       "to": 433
       },
       {
        "w": "left.",
-       "from": 429,
-       "to": 446
+       "from": 433,
+       "to": 449
       },
       {
        "w": "That",
-       "from": 446,
-       "to": 455
+       "from": 449,
+       "to": 458
       },
       {
        "w": "can",
-       "from": 455,
-       "to": 468
+       "from": 458,
+       "to": 472
       },
       {
        "w": "be",
-       "from": 468,
-       "to": 474
+       "from": 472,
+       "to": 477
       },
       {
        "w": "refused",
-       "from": 474,
-       "to": 488
+       "from": 477,
+       "to": 492
       },
       {
        "w": "too.",
-       "from": 488,
-       "to": 498
+       "from": 492,
+       "to": 501
       }
      ],
      "cues": {
-      "1": 336
+      "1": 340
      }
     }
    ]
@@ -982,8 +992,8 @@
      "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
      "belatedVal": "BY 31 DEC 2026",
      "feeLab": "LATE FEE",
-     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
-     "fee2": "₹5,000 above ₹5 lakh",
+     "fee1": "₹5,000 (Kiran)",
+     "fee2": "₹1,000 if total income is up to ₹5 lakh",
      "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
      "afterHead": "KIRAN'S ₹18,400",
      "p1": "31 JUL",
@@ -1009,7 +1019,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1330,
+   "from": 1370,
    "frames": 226,
    "lines": [
     {
@@ -1188,8 +1198,8 @@
      "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
      "belatedVal": "BY 31 DEC 2026",
      "feeLab": "LATE FEE",
-     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
-     "fee2": "₹5,000 above ₹5 lakh",
+     "fee1": "₹5,000 (Kiran)",
+     "fee2": "₹1,000 if total income is up to ₹5 lakh",
      "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
      "afterHead": "KIRAN'S ₹18,400",
      "p1": "31 JUL",
@@ -1215,7 +1225,7 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1555,
+   "from": 1596,
    "frames": 88,
    "lines": [
     {

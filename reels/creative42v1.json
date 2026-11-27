@@ -105,8 +105,8 @@
      "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
      "belatedVal": "BY 31 DEC 2026",
      "feeLab": "LATE FEE",
-     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
-     "fee2": "₹5,000 above ₹5 lakh",
+     "fee1": "₹5,000 (Kiran)",
+     "fee2": "₹1,000 if total income is up to ₹5 lakh",
      "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
      "afterHead": "KIRAN'S ₹18,400",
      "p1": "31 JUL",
@@ -206,8 +206,8 @@
      "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
      "belatedVal": "BY 31 DEC 2026",
      "feeLab": "LATE FEE",
-     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
-     "fee2": "₹5,000 above ₹5 lakh",
+     "fee1": "₹5,000 (Kiran)",
+     "fee2": "₹1,000 if total income is up to ₹5 lakh",
      "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
      "afterHead": "KIRAN'S ₹18,400",
      "p1": "31 JUL",
@@ -234,7 +234,7 @@
     {
      "who": "storyteller",
      "file": "02_storyteller.wav",
-     "text": "Myth: an AI knows this year's tax dates. [1] Fact: we asked a small AI with no internet, thirty times. <pause 0.6> [2] The right answer: zero times.",
+     "text": "Myth: an AI knows this year's tax dates. [1] Fact: we asked a small AI with no internet, thirty times. <pause 0.75> [2] The right answer: zero times.",
      "show": "Myth: an AI knows this year's tax dates. Fact: we asked a small AI with no internet, 30 times. <pause 0.6> The right answer: 0 times.",
      "maxgap": 0.3,
      "gap": 0.3,
@@ -242,7 +242,7 @@
      "tts": "Myth: an AI knows this year's tax dates. Fact: we asked a small AI with no internet, thirty times.",
      "file2": "02b_storyteller.wav",
      "tts2": "The right answer: zero times.",
-     "pause": 0.6
+     "pause": 0.75
     },
     {
      "who": "storyteller",
@@ -320,8 +320,8 @@
      "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
      "belatedVal": "BY 31 DEC 2026",
      "feeLab": "LATE FEE",
-     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
-     "fee2": "₹5,000 above ₹5 lakh",
+     "fee1": "₹5,000 (Kiran)",
+     "fee2": "₹1,000 if total income is up to ₹5 lakh",
      "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
      "afterHead": "KIRAN'S ₹18,400",
      "p1": "31 JUL",
@@ -348,8 +348,8 @@
     {
      "who": "storyteller",
      "file": "04_storyteller.wav",
-     "text": "The tax department's own site: you can file until December thirty-first. [1] Late fee: one thousand rupees for Kiran, five thousand if you earn over five lakh.",
-     "show": "The tax department's own site: you can file until December 31. Late fee: ₹1,000 for Kiran, ₹5,000 if you earn over ₹5 lakh.",
+     "text": "The tax department's own site: you can file until December thirty-first. [1] Late fee: five thousand rupees for Kiran, one thousand if you earn up to five lakh.",
+     "show": "The tax department's own site: you can file until December 31. Late fee: ₹5,000 for Kiran, ₹1,000 if you earn up to ₹5 lakh.",
      "maxgap": 0.3,
      "gap": 0.6,
      "tempo": 1.14
@@ -369,9 +369,9 @@
    "id": "s_d",
    "type": "sk_itr42",
    "tail": 0.3,
-   "boost": 3.0,
-   "lift": 1.0,
-   "rise": 2.6,
+   "boost": 3.4,
+   "lift": 1.1,
+   "rise": 3.0,
    "data": {
     "beats": [
      {
@@ -419,8 +419,8 @@
      "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
      "belatedVal": "BY 31 DEC 2026",
      "feeLab": "LATE FEE",
-     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
-     "fee2": "₹5,000 above ₹5 lakh",
+     "fee1": "₹5,000 (Kiran)",
+     "fee2": "₹1,000 if total income is up to ₹5 lakh",
      "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
      "afterHead": "KIRAN'S ₹18,400",
      "p1": "31 JUL",
@@ -447,8 +447,8 @@
     {
      "who": "storyteller",
      "file": "06_storyteller.wav",
-     "text": "Apps that search the web may get it right. [1] Still: no link, no date. Take it from the tax department's site.",
-     "show": "Apps that search the web may get it right. Still: no link, no date. Take it from the tax department's site.",
+     "text": "Apps that search the web may get it right. [1] Still: no link? Don't trust the date. Take it from the tax department's site.",
+     "show": "Apps that search the web may get it right. Still: no link? Don't trust the date. Take it from the tax department's site.",
      "maxgap": 0.3,
      "gap": 0.5,
      "tempo": 1.14
@@ -461,9 +461,9 @@
    "tail": 0.0,
    "outro": true,
    "pre": 0.3,
-   "boost": 3.2,
-   "lift": 0.8,
-   "rise": 3.2,
+   "boost": 4.0,
+   "lift": 1.0,
+   "rise": 3.8,
    "data": {
     "beats": [
      {
@@ -511,8 +511,8 @@
      "belatedLab": "MISSED JULY 31? A LATE (BELATED) RETURN:",
      "belatedVal": "BY 31 DEC 2026",
      "feeLab": "LATE FEE",
-     "fee1": "₹1,000 if income is up to ₹5 lakh (Kiran)",
-     "fee2": "₹5,000 above ₹5 lakh",
+     "fee1": "₹5,000 (Kiran)",
+     "fee2": "₹1,000 if total income is up to ₹5 lakh",
      "siteSrc": "Income Tax Department, e-filing help: Income Tax Returns FAQ (AY 2026-27)",
      "afterHead": "KIRAN'S ₹18,400",
      "p1": "31 JUL",
