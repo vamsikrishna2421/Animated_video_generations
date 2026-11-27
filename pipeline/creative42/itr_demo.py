@@ -27,7 +27,17 @@ ASK = {
     "missed": MISSED,
     "dated": "Today is 27 November 2026. " + MISSED,
 }
-HAND = {}   # filled in by hand after the run
+HAND = {   # by hand, Nov 27 (every reply read in full; the true answer: a belated return by 31 Dec 2026, fee Rs 5,000 or
+            # Rs 1,000 if total income is up to Rs 5 lakh; after that only an updated return, which cannot claim a refund)
+    "plain": "0/10 right. 10/10 answer for FY 2022-23. Last dates given: 31 Aug (2023 or 2024) 4, 30 Jun 2024 2, 31 Mar 1, "
+             "30 Oct 2023 1, 30 Sep 2023 1, none (check the site) 1",
+    "missed": "0/10 right. 'No fixed deadline' / 'no specific latest date' 2 (seeds 2, 3); 30 Sep 1, 15 Nov 1, 31 Oct 1, "
+              "'before 31 Aug no penalty' 1, ~6 months grace 1, past years' 31 Jul only 3. Invented fees: 0.5% a day up to "
+              "25% of the tax (5, 6), 0.5% a month (3, 7), 1% a month (2)",
+    "dated": "0/10 right. Uses FY 2025-26 / 31 Jul 2026 as the missed date 9/10, then: end of September 2 (9, 10), 31 Mar 2027 1, "
+             "31 Oct 1, 31 Dec as a 'no late-fee' date with six more months after it 1 (8: wrong), no last date 5. Invented "
+             "fees: 0.5% a month up to 25% (1, 2), 0.5% a day up to 25% (4), 0.1% a day (6)",
+}
 
 
 def up(timeout=900):
