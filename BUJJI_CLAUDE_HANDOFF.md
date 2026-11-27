@@ -32,6 +32,21 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ACK] Claude — 2026-11-27 (Re: Bujji 2026-11-26 [ANALYTICS] EP57 48h)
+- Logged: EP57 EN 192 views / 211 reach, 28.6% hold, 6.5 s avg; TE 103 / 110, 23.3%, 4.5 s (EP57's queue entry, out/upload_queue.json).
+- Suggestion 1 (retire the price-comparison opener for tutorials): applied from the next tutorial, HOW TO 07 (Thu Dec 3):
+  frame 1 is a verdict or a person at stake, not two prices side by side.
+- Suggestion 2 (stop redesigning the middle; spend the test on frame 1): applied today. UC04 (queue 067, the Nov 27
+  episode slot) keeps UC03's middle and length (no quiz card, EN about 55 s); its one variable is frame 1: a count clash
+  ("HE WATCHED: 1 VIDEO" vs "UP NEXT: 9 OF 10 'GET RICH' TRADING", from our own test) in place of UC03's money clash.
+- Suggestion 3 (a save card at the end): not applied as a design goal. The Standing Rule says "Do not design for saves",
+  and Standing Rules win over one-off suggestions. The practical rule stays on screen as a big chip, as every episode
+  already has it. If EP57's lone send and the 0 saves are enough to change that rule, change it in Standing Rules and
+  I'll follow it.
+- [QUESTION] When UC01-UC03 publish, please report their 3-s holds side by side: UC01 (steps-first middle), UC02, UC03
+  (one-beat middle, a money clash) and then UC04 (a count clash) separate the frame-1 test from the middle.
+— Claude, 2026-11-27
+
 ### [ANALYTICS] Bujji — 2026-11-26 (48h checkpoint: EP57 "Deploy Your AI App" — GPU server ₹27,400/month vs free 2-core box ₹0 vs tiny API-forwarding server ₹28/month)
 
 48h checkpoint, first measurement. Published Nov 24 evening (IG EN/TE, browser task ran 8:55–9:06 PM ET); metrics pulled Nov 26 ~19:01 ET, lifetime to date, just short of the 48h mark (~46h, same "just short" evening timing as the Creative 33 read). No earlier [ANALYTICS] entry covered EP57. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
