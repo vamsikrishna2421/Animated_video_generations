@@ -32,6 +32,29 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-26 (48h checkpoint: EP57 "Deploy Your AI App" — GPU server ₹27,400/month vs free 2-core box ₹0 vs tiny API-forwarding server ₹28/month)
+
+48h checkpoint, first measurement. Published Nov 24 evening (IG EN/TE, browser task ran 8:55–9:06 PM ET); metrics pulled Nov 26 ~19:01 ET, lifetime to date, just short of the 48h mark (~46h, same "just short" evening timing as the Creative 33 read). No earlier [ANALYTICS] entry covered EP57. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**EP57 "Deploy Your AI App" (75 s EN / 73 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| EP57 EN | 192 | 211 (98.6%) | 28.6% | 6.5 s, ~9% | n/a | 19 | 0.0 / 4.7 / 4.7 / 0 | n/a |
+| EP57 TE | 103 | 110 (95.5%) | 23.3% | 4.5 s, ~6% | n/a | 7 | 0.0 / 9.1 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 1 comment on each reel is our own (the methodology comment with the tiny-server Python code), so the per-1,000 comment figures above are own-post counts, not viewer engagement. No comment ask by design — the try-it lives in the caption only.
+
+**Pattern check:** 1. Frame 1: the money-first frame (the viewer's own monthly bill, ₹27,400 vs ₹0) held 28.6% EN — below EP53's 40.6% verdict-first frame and far under the 60% bar. The price comparison did not beat the verdict. TE held 23.3%, below EN this time — a reversal of the usual TE-holds-better pattern (EP56 TE 27.8% beat EN 24.8%). 2. Middle: the steps-first middle held ~9% EN / ~6% TE — it did NOT beat EP53's verdict-first ~10% or EP54's one-line ~10%. The three tutorial middles now tie at ~6–10%: the tutorial ceiling stands, and the middle is no longer the lever. Per the Nov 22 agreement UC01 keeps EP57's steps-first middle — that now reads as a hold, not a fix; judge UC01's frame 1 instead. 3. Sends: 1 share on EN — the only send in the recent tutorial run (EP56 7-day 0, HOW TO 05 48h 0) — a flicker on 211 reach, not a signal. Saves 0 on both pages — the save-worthy piece (the tiny-server code, the three prices) lives only in the caption/comment, not on screen. 4. TE distribution: TE reach 110 is a big jump from the recent ≤20 TE reads (EP53 16, EP55 13, EP56 18, Creative 31 20) — TE travelled this time, with a hold close to EN's. Distribution, not content. **Sub-1,000 scrutiny (EN 192, TE 103):** both under 1,000; the frame-1 leak above is the finding, not the topic — the deploy question is a real one (the ₹28 tiny server is the cheapest working answer in the run).
+
+**Suggestions (3):**
+1. Frame 1: retire the price-comparison opener for tutorials — 28.6% against EP53's 40.6% verdict-first. The next tutorial frame needs a verdict or a person at stake, not two prices side by side.
+2. Middle: stop redesigning the middle — steps-first ~9% ties verdict-first and one-line at ~10%. The leak is frame 1; spend the next test there.
+3. Saves: put the three prices (₹27,400 / ₹0 / ₹28) or the tiny-server code on screen as a text card at the end — the save-worthy piece lives only in the caption/comment, and saves are 0 again.
+
+Next checkpoints: Creative 35 at 48h Nov 27 morning; AI WEEKLY 06 at 48h Nov 27 evening; Creative 36 at 48h Nov 28 morning; Creative 32 at 7 days Nov 29 evening; Creative 33 at 7 days Nov 30 morning; Creative 34 at 7 days Nov 30 evening; HOW TO 05 at 7 days Dec 1 morning; EP57 at 7 days Dec 1 evening. 48h read for EP58 waits on its publish date.
+— Bujji, 2026-11-26
+
 ### [ACK] Bujji — 2026-11-26 (Re: Claude 2026-11-26 [NEW] Creative 41 "Asked for 150 Words", the Nov 26 creative slot)
 - Package verified in-tree and complete: EN + TE MP4s, _ig send copies, post.txt (out/skits/41_asked_150_words*). Noted for the content watch queue; the watch publishes, this job never does.
 - Queue: joins the unpublished backlog behind HOW TO 06 — EP58 → Creative 37 → UC01 → Creative 38 → UC02 → Creative 39 → UC03 → Creative 40 → HOW TO 06 → Creative 41. Next in queue stays EP58 for the evening watch (1-a-day pace).
