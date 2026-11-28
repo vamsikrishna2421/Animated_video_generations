@@ -133,11 +133,11 @@
      "fixResSub": "it gave 25% every time · marks 1 to 7",
      "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
      "ruleHead": "AI CHECKING HOMEWORK?",
-     "rule1": "GIVE IT THE ANSWER KEY FIRST",
-     "rule1b": "the book's answer, pasted in",
-     "rule2": "CHECK THE FINAL NUMBER",
-     "rule2b": "yourself: 25% or 20%?",
-     "ruleChip": "profit % = profit ÷ cost price × 100",
+     "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
+     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule2": "NO KEY? CHECK THE FINAL NUMBER",
+     "rule2b": "yourself: profit ÷ cost price × 100",
+     "ruleChip": "SOLVECHIP",
      "next": "NEXT: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
@@ -153,7 +153,7 @@
      "text": "Twenty percent. Wrong answer. [1] The AI judge? Ten out of ten!",
      "show": "20%. Wrong answer. The AI judge? 10 out of 10!",
      "maxgap": 0.3,
-     "gap": 0.35,
+     "gap": 0.3,
      "tempo": 1.08
     }
    ]
@@ -172,13 +172,13 @@
       "n": 2
      },
      {
-      "who": "host",
-      "prop": "answer",
+      "who": "ai",
+      "prop": "judge",
       "n": 3
      },
      {
-      "who": "ai",
-      "prop": "judge",
+      "who": "host",
+      "prop": "answer",
       "n": 4
      }
     ],
@@ -248,11 +248,11 @@
      "fixResSub": "it gave 25% every time · marks 1 to 7",
      "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
      "ruleHead": "AI CHECKING HOMEWORK?",
-     "rule1": "GIVE IT THE ANSWER KEY FIRST",
-     "rule1b": "the book's answer, pasted in",
-     "rule2": "CHECK THE FINAL NUMBER",
-     "rule2b": "yourself: 25% or 20%?",
-     "ruleChip": "profit % = profit ÷ cost price × 100",
+     "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
+     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule2": "NO KEY? CHECK THE FINAL NUMBER",
+     "rule2b": "yourself: profit ÷ cost price × 100",
+     "ruleChip": "SOLVECHIP",
      "next": "NEXT: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
@@ -268,26 +268,26 @@
      "text": "Homework Star, live! [1] A pen, bought for forty, sold for fifty. Profit percent?",
      "show": "Homework Star, live! A pen, bought for ₹40, sold for ₹50. Profit %?",
      "maxgap": 0.3,
-     "gap": 0.25,
-     "tempo": 1.08
-    },
-    {
-     "who": "host",
-     "file": "03_host.wav",
-     "text": "Chintu's wrong rule: [1] profit is always on the selling price. [2] Twenty percent!",
-     "show": "Chintu's wrong rule: \"profit is always on the selling price.\" 20%!",
-     "maxgap": 0.3,
-     "gap": 0.3,
-     "tempo": 1.08
+     "gap": 0.2,
+     "tempo": 1.16
     },
     {
      "who": "ai",
-     "file": "04_ai.wav",
+     "file": "03_ai.wav",
      "text": "Your child's answer is correct and well-explained. [1] Ten out of ten.",
      "show": "\"Your child's answer is correct and well-explained.\" 10 out of 10.",
      "maxgap": 0.3,
-     "gap": 0.45,
+     "gap": 0.35,
      "tempo": 1.05
+    },
+    {
+     "who": "host",
+     "file": "04_host.wav",
+     "text": "His wrong rule: [1] profit is always on the selling price. [2] Twenty percent!",
+     "show": "His wrong rule: \"profit is always on the selling price.\" 20%!",
+     "maxgap": 0.3,
+     "gap": 0.3,
+     "tempo": 1.08
     }
    ]
   },
@@ -395,11 +395,11 @@
      "fixResSub": "it gave 25% every time · marks 1 to 7",
      "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
      "ruleHead": "AI CHECKING HOMEWORK?",
-     "rule1": "GIVE IT THE ANSWER KEY FIRST",
-     "rule1b": "the book's answer, pasted in",
-     "rule2": "CHECK THE FINAL NUMBER",
-     "rule2b": "yourself: 25% or 20%?",
-     "ruleChip": "profit % = profit ÷ cost price × 100",
+     "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
+     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule2": "NO KEY? CHECK THE FINAL NUMBER",
+     "rule2b": "yourself: profit ÷ cost price × 100",
+     "ruleChip": "SOLVECHIP",
      "next": "NEXT: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
@@ -524,11 +524,11 @@
      "fixResSub": "it gave 25% every time · marks 1 to 7",
      "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
      "ruleHead": "AI CHECKING HOMEWORK?",
-     "rule1": "GIVE IT THE ANSWER KEY FIRST",
-     "rule1b": "the book's answer, pasted in",
-     "rule2": "CHECK THE FINAL NUMBER",
-     "rule2b": "yourself: 25% or 20%?",
-     "ruleChip": "profit % = profit ÷ cost price × 100",
+     "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
+     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule2": "NO KEY? CHECK THE FINAL NUMBER",
+     "rule2b": "yourself: profit ÷ cost price × 100",
+     "ruleChip": "SOLVECHIP",
      "next": "NEXT: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
@@ -550,8 +550,8 @@
     {
      "who": "host",
      "file": "09_host.wav",
-     "text": "RULE [1] RULE",
-     "show": "RULE RULE",
+     "text": "Checking homework with AI? Paste the book's answer in first. [1] No answer key? Check the final number yourself.",
+     "show": "Checking homework with AI? Paste the book's answer in first. No answer key? Check the final number yourself.",
      "maxgap": 0.3,
      "gap": 0.25,
      "tempo": 1.08
@@ -641,11 +641,11 @@
      "fixResSub": "it gave 25% every time · marks 1 to 7",
      "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
      "ruleHead": "AI CHECKING HOMEWORK?",
-     "rule1": "GIVE IT THE ANSWER KEY FIRST",
-     "rule1b": "the book's answer, pasted in",
-     "rule2": "CHECK THE FINAL NUMBER",
-     "rule2b": "yourself: 25% or 20%?",
-     "ruleChip": "profit % = profit ÷ cost price × 100",
+     "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
+     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule2": "NO KEY? CHECK THE FINAL NUMBER",
+     "rule2b": "yourself: profit ÷ cost price × 100",
+     "ruleChip": "SOLVECHIP",
      "next": "NEXT: YOUR CHILD'S HOMEWORK"
     },
     "yt": {

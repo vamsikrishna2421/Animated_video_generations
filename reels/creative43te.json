@@ -135,11 +135,11 @@
      "fixResSub": "it gave 25% every time · marks 1 to 7",
      "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
      "ruleHead": "AI CHECKING HOMEWORK?",
-     "rule1": "GIVE IT THE ANSWER KEY FIRST",
-     "rule1b": "the book's answer, pasted in",
-     "rule2": "CHECK THE FINAL NUMBER",
-     "rule2b": "yourself: 25% or 20%?",
-     "ruleChip": "profit % = profit ÷ cost price × 100",
+     "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
+     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule2": "NO KEY? CHECK THE FINAL NUMBER",
+     "rule2b": "yourself: profit ÷ cost price × 100",
+     "ruleChip": "SOLVECHIP",
      "next": "NEXT: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
@@ -175,13 +175,13 @@
       "n": 2
      },
      {
-      "who": "host",
-      "prop": "answer",
+      "who": "ai",
+      "prop": "judge",
       "n": 3
      },
      {
-      "who": "ai",
-      "prop": "judge",
+      "who": "host",
+      "prop": "answer",
       "n": 4
      }
     ],
@@ -251,11 +251,11 @@
      "fixResSub": "it gave 25% every time · marks 1 to 7",
      "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
      "ruleHead": "AI CHECKING HOMEWORK?",
-     "rule1": "GIVE IT THE ANSWER KEY FIRST",
-     "rule1b": "the book's answer, pasted in",
-     "rule2": "CHECK THE FINAL NUMBER",
-     "rule2b": "yourself: 25% or 20%?",
-     "ruleChip": "profit % = profit ÷ cost price × 100",
+     "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
+     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule2": "NO KEY? CHECK THE FINAL NUMBER",
+     "rule2b": "yourself: profit ÷ cost price × 100",
+     "ruleChip": "SOLVECHIP",
      "next": "NEXT: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
@@ -280,22 +280,22 @@
      "pause": 0.35
     },
     {
-     "who": "host",
-     "file": "03_host.wav",
-     "text": "చింటూ రాసిన తప్పు రూల్: [1] లాభం శాతం, ఎప్పుడూ అమ్మిన ధర మీదే. [2] ట్వంటీ పర్సెంట్!",
-     "show": "Chintu's wrong rule: profit % always on the selling price. 20%!",
-     "maxgap": 0.22,
-     "gap": 0.18,
-     "tempo": 1.12
-    },
-    {
      "who": "ai",
-     "file": "04_ai.wav",
+     "file": "03_ai.wav",
      "text": "ఆన్సర్ కరెక్ట్, చక్కగా వివరించారు. [1] టెన్ ఔట్ ఆఫ్ టెన్.",
      "show": "\"The answer is correct, well explained.\" 10 out of 10.",
      "maxgap": 0.22,
-     "gap": 0.4,
+     "gap": 0.35,
      "tempo": 1.08
+    },
+    {
+     "who": "host",
+     "file": "04_host.wav",
+     "text": "కానీ చింటూ రాసిన తప్పు రూల్: [1] లాభం శాతం, ఎప్పుడూ అమ్మిన ధర మీదే. [2] ట్వంటీ పర్సెంట్!",
+     "show": "But Chintu's wrong rule: profit % always on the selling price. 20%!",
+     "maxgap": 0.22,
+     "gap": 0.18,
+     "tempo": 1.12
     }
    ]
   },
@@ -403,11 +403,11 @@
      "fixResSub": "it gave 25% every time · marks 1 to 7",
      "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
      "ruleHead": "AI CHECKING HOMEWORK?",
-     "rule1": "GIVE IT THE ANSWER KEY FIRST",
-     "rule1b": "the book's answer, pasted in",
-     "rule2": "CHECK THE FINAL NUMBER",
-     "rule2b": "yourself: 25% or 20%?",
-     "ruleChip": "profit % = profit ÷ cost price × 100",
+     "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
+     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule2": "NO KEY? CHECK THE FINAL NUMBER",
+     "rule2b": "yourself: profit ÷ cost price × 100",
+     "ruleChip": "SOLVECHIP",
      "next": "NEXT: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
@@ -537,11 +537,11 @@
      "fixResSub": "it gave 25% every time · marks 1 to 7",
      "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
      "ruleHead": "AI CHECKING HOMEWORK?",
-     "rule1": "GIVE IT THE ANSWER KEY FIRST",
-     "rule1b": "the book's answer, pasted in",
-     "rule2": "CHECK THE FINAL NUMBER",
-     "rule2b": "yourself: 25% or 20%?",
-     "ruleChip": "profit % = profit ÷ cost price × 100",
+     "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
+     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule2": "NO KEY? CHECK THE FINAL NUMBER",
+     "rule2b": "yourself: profit ÷ cost price × 100",
+     "ruleChip": "SOLVECHIP",
      "next": "NEXT: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
@@ -564,11 +564,15 @@
     {
      "who": "host",
      "file": "09_host.wav",
-     "text": "RULE [1] RULE",
-     "show": "RULE RULE",
+     "text": "చాట్‌బాట్ తో హోమ్‌వర్క్ చెక్ చేయిస్తున్నారా? ముందు, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇవ్వాలి. <pause 0.35> [1] ఆన్సర్ కీ లేకపోతే, ఫైనల్ నంబర్, మనమే చూడాలి.",
+     "show": "Checking homework with a chatbot? First give it the answer from the book too. No answer key? Check the final number yourself.",
      "maxgap": 0.22,
      "gap": 0.18,
-     "tempo": 1.12
+     "tempo": 1.12,
+     "tts": "చాట్‌బాట్ తో హోమ్‌వర్క్ చెక్ చేయిస్తున్నారా? ముందు, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇవ్వాలి.",
+     "file2": "09b_host.wav",
+     "tts2": "ఆన్సర్ కీ లేకపోతే, ఫైనల్ నంబర్, మనమే చూడాలి.",
+     "pause": 0.35
     }
    ]
   },
@@ -655,11 +659,11 @@
      "fixResSub": "it gave 25% every time · marks 1 to 7",
      "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
      "ruleHead": "AI CHECKING HOMEWORK?",
-     "rule1": "GIVE IT THE ANSWER KEY FIRST",
-     "rule1b": "the book's answer, pasted in",
-     "rule2": "CHECK THE FINAL NUMBER",
-     "rule2b": "yourself: 25% or 20%?",
-     "ruleChip": "profit % = profit ÷ cost price × 100",
+     "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
+     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule2": "NO KEY? CHECK THE FINAL NUMBER",
+     "rule2b": "yourself: profit ÷ cost price × 100",
+     "ruleChip": "SOLVECHIP",
      "next": "NEXT: YOUR CHILD'S HOMEWORK"
     },
     "yt": {

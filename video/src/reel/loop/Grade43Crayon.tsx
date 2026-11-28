@@ -162,11 +162,11 @@ const StGrade: React.FC<SP> = ({ s }) => {
           block(c, 40, 280, 490, 300, T.leftLab, T.leftVal, "#7f1d1d", "#fecaca", 1);
           c.save(); if (k10 > 0 && k10 < 1) c.translate(Math.sin(k10 * 40) * 14 * (1 - k10), 0);
           block(c, 550, 280, 490, 300, T.rightLab, T.rightVal, "#14532d", "#bbf7d0", 1); c.restore();
-          person(c, "chintu" as BillWho, [270, 1080], 0.72, k10 > 0.5 ? "happy" : "excited", "up", false, r);
-          sheet(c, 70, 640, 400, T.hookRows, 9, -1, 1, T.hookBig, 1);
+          person(c, "chintu" as BillWho, [270, 1200], 0.6, k10 > 0.5 ? "happy" : "excited", "up", false, r);
+          sheet(c, 70, 600, 400, T.hookRows, 9, -1, 1, T.hookBig, 1);
           judge(c, f, boil, true, true);
           paddle(c, 950, 760, T.ten, 1);
-          stamp(c, T.wrongStamp, 270, 960, 56, RED, 1, -0.12);
+          stamp(c, T.wrongStamp, 300, 1030, 42, RED, 1, -0.08);
           if (k10 >= 1) confetti(c, W, f, loopOn ? endL + HOLD : cu(1, 0.5));
         } else if (P === "intro") {
           neon(c, W, T.show, f); live(c, W, f);
@@ -186,8 +186,9 @@ const StGrade: React.FC<SP> = ({ s }) => {
         } else if (P === "judge") {
           neon(c, W, T.show, f);
           const k10 = seg(f, cu(1, 0.6) - 4, cu(1, 0.6) + 6);
-          person(c, "chintu" as BillWho, [250, 1080], 0.72, k10 > 0 ? "happy" : "worried", k10 > 0 ? "up" : "rest", false, r);
+          person(c, "chintu" as BillWho, [270, 1200], 0.6, k10 > 0 ? "happy" : "worried", "up", false, r);
           judge(c, f, boil, k10 > 0, k10 > 0);
+          sheet(c, 70, 640, 400, T.hookRows, 9, -1, 1, T.hookBig, 1);   // his sheet on screen while the judge reads (the verdict comes before the rule now)
           bubble(c, 90, 420, W - 180, T.aiSays, seg(f, ln.from + 2, ln.from + 10), "#f8fafc", INK, 44);
           c.save(); c.globalAlpha = clamp(seg(f, ln.from + 2, ln.from + 10) * 3); c.font = SANS(fit(c, T.aiSrc, W - 200, 28, 700), 700); c.fillStyle = "#c4b5fd"; c.textAlign = "center"; c.fillText(T.aiSrc, W / 2, 400); c.restore();
           paddle(c, 950, 760, T.ten, k10);
@@ -197,14 +198,12 @@ const StGrade: React.FC<SP> = ({ s }) => {
           neon(c, W, T.show, f);
           const k1 = seg(f, cu(1, 0.1) - 4, cu(1, 0.1) + 6), k2 = seg(f, cu(2, 0.4) - 4, cu(2, 0.4) + 6);
           person(c, "chintu" as BillWho, [250, 1080], 0.72, k2 > 0 ? "shock" : "worried", "rest", false, r);
-          judge(c, f, boil, true, k2 <= 0);
-          paddle(c, 950, 760, T.ten, 1, k2 > 0 ? "#94a3b8" : GOLD);
-          card(c, 70, 400, W - 140, 400, seg(f, ln.from, ln.from + 8), "#fca5a5");
+          judge(c, f, boil, false, false);
+          card(c, 70, 400, W - 140, 470, seg(f, ln.from, ln.from + 8), "#fca5a5");
           c.save(); c.globalAlpha = clamp(seg(f, ln.from, ln.from + 8) * 3); c.textAlign = "center"; c.font = SANS(40, 900); c.fillStyle = "#fca5a5"; c.fillText(T.revLab, W / 2, 470); c.restore();
           if (k1 > 0) { c.save(); c.globalAlpha = clamp(k1 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.rev1, W - 200, 70, 900), 900); c.fillStyle = "#fff"; c.fillText(T.rev1, W / 2, 590); c.restore(); }
-          if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.rev2, W - 200, 130, 900), 900); c.fillStyle = GREEN; c.fillText(T.rev2, W / 2, 750); c.restore(); }
-          if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.revNote, W - 200, 32, 700), 700); c.fillStyle = "#e2e8f0"; c.fillText(T.revNote, W / 2, 780 - 10 + 0); c.restore(); }
-          stamp(c, T.wrongStamp, 300, 900, 60, RED, k2, -0.1);
+          if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.rev2, W - 200, 130, 900), 900); c.fillStyle = GREEN; c.fillText(T.rev2, W / 2, 740); c.restore(); }
+          if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.revNote, W - 200, 32, 700), 700); c.fillStyle = "#e2e8f0"; c.fillText(T.revNote, W / 2, 830); c.restore(); }
         } else if (P === "test") {
           c.textAlign = "center"; c.font = SANS(52, 900); c.fillStyle = "#fdf4ff"; c.fillText(T.testHead, W / 2, 330);
           c.font = SANS(fit(c, T.model, W - 100, 30, 800), 800); c.fillStyle = "#c4b5fd"; c.fillText(T.model, W / 2, 380);
@@ -249,10 +248,10 @@ const StGrade: React.FC<SP> = ({ s }) => {
             chip(c, T.ruleChip, W / 2, 1110, "#1e293b", "#f8fafc", k1, fit(c, T.ruleChip, W - 140, 32, 800)); }
         } else if (P === "loop") {
           neon(c, W, T.show, f); live(c, W, f);
-          person(c, "chintu" as BillWho, [270, 1080], 0.72, "excited", "five", false, r);
+          person(c, "chintu" as BillWho, [270, 1200], 0.6, "excited", "up", false, r);
           judge(c, f, boil, false, false);
           chip(c, T.next, W / 2, 520, "#a21caf", "#fff", seg(f, ln.from + 2, ln.from + 10), 48);
-          sheet(c, 70, 640, 400, T.hookRows, seg(f, cu(1, 0.0) - 6, cu(1, 0.0) + 4) * 9, -1, seg(f, ln.from + 4, ln.from + 12), T.hookBig, seg(f, cu(1, 0.0), cu(1, 0.0) + 6));
+          sheet(c, 70, 600, 400, T.hookRows, seg(f, cu(1, 0.0) - 6, cu(1, 0.0) + 4) * 9, -1, seg(f, ln.from + 4, ln.from + 12), T.hookBig, seg(f, cu(1, 0.0), cu(1, 0.0) + 6));
         }
         if (!onStage) {   // the cards' scenes keep the stage dim behind them
           c.save(); c.globalAlpha = 0.0; c.restore();

@@ -15,10 +15,10 @@ LINES = {   # n: (prop, who, English, Telugu); v2 after the script review
         "ట్వంటీ పర్సెంట్. తప్పు ఆన్సర్. [1] చాట్‌బాట్ జడ్జి మాత్రం, టెన్ ఔట్ ఆఫ్ టెన్!"),
     2: ("intro", "host", "Homework Star, live! [1] A pen, bought for forty, sold for fifty. Profit percent?",
         "హోమ్‌వర్క్ స్టార్, లైవ్! | [1] ఒక పెన్ను, నలభైకి కొని, యాభైకి అమ్మాడు. లాభం ఎంత పర్సెంట్?"),
-    3: ("answer", "host", "Chintu's wrong rule: [1] profit is always on the selling price. [2] Twenty percent!",
-        "చింటూ రాసిన తప్పు రూల్: [1] లాభం శాతం, ఎప్పుడూ అమ్మిన ధర మీదే. [2] ట్వంటీ పర్సెంట్!"),
-    4: ("judge", "ai", "Your child's answer is correct and well-explained. [1] Ten out of ten.",
+    3: ("judge", "ai", "Your child's answer is correct and well-explained. [1] Ten out of ten.",
         "ఆన్సర్ కరెక్ట్, చక్కగా వివరించారు. [1] టెన్ ఔట్ ఆఫ్ టెన్."),
+    4: ("answer", "host", "His wrong rule: [1] profit is always on the selling price. [2] Twenty percent!",
+        "కానీ చింటూ రాసిన తప్పు రూల్: [1] లాభం శాతం, ఎప్పుడూ అమ్మిన ధర మీదే. [2] ట్వంటీ పర్సెంట్!"),
     5: ("reveal", "host", "Check it: [1] in school, profit percent is on the cost. Ten on forty. [2] Twenty-five percent.",
         "లెక్క చూద్దాం: [1] స్కూల్ లో లాభం శాతం, కొన్న ధర మీదే. నలభై మీద పది. [2] ట్వంటీ ఫైవ్ పర్సెంట్."),
     6: ("test", "host", "We asked a small free AI on our computer, ten times. [1] Ten out of ten, four times. The rest, eight or nine. [2] Not once did it say wrong.",
@@ -27,30 +27,34 @@ LINES = {   # n: (prop, who, English, Telugu); v2 after the script review
         "సైన్స్ లో తప్పు కారణాన్ని మాత్రం, పట్టుకుంది. [1] ఈ లెక్కలో రూల్ ని, ఒక్కసారి కూడా పట్టుకోలేదు."),
     8: ("fix", "host", "Then we pasted in the book's answer. [1] All ten times: wrong, it's twenty-five.",
         "తర్వాత, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇచ్చాం. [1] పది సార్లూ: తప్పు, ట్వంటీ ఫైవ్ అని చెప్పింది."),
-    9: ("rule", "host", "RULE [1] RULE", "RULE [1] RULE"),
+    9: ("rule", "host", "Checking homework with AI? Paste the book's answer in first. [1] No answer key? Check the final number yourself.",
+        "చాట్‌బాట్ తో హోమ్‌వర్క్ చెక్ చేయిస్తున్నారా? ముందు, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇవ్వాలి. | [1] ఆన్సర్ కీ లేకపోతే, ఫైనల్ నంబర్, మనమే చూడాలి."),
     10: ("loop", "host", "Next contestant: [1] your child's homework.", "నెక్స్ట్ కంటెస్టెంట్: [1] మన పిల్లల హోమ్‌వర్క్."),
 }
 SHOW = {1: "20%. Wrong answer. The AI judge? 10 out of 10!",
         2: "Homework Star, live! A pen, bought for ₹40, sold for ₹50. Profit %?",
-        3: "Chintu's wrong rule: \"profit is always on the selling price.\" 20%!",
-        4: "\"Your child's answer is correct and well-explained.\" 10 out of 10.",
+        3: "\"Your child's answer is correct and well-explained.\" 10 out of 10.",
+        4: "His wrong rule: \"profit is always on the selling price.\" 20%!",
         5: "Check it: in school, profit % is on the cost. ₹10 on ₹40. 25%.",
         6: "We asked a small free AI on our computer, 10 times. 10 out of 10, four times. The rest, 8 or 9. Not once did it say \"wrong\".",
         7: "It did catch a wrong science reason. This maths rule, it never caught.",
         8: "Then we pasted in the book's answer. All 10 times: wrong, it's 25.",
+        9: "Checking homework with AI? Paste the book's answer in first. No answer key? Check the final number yourself.",
         10: "Next contestant: your child's homework."}
 SHOW_TE = {
     1: "20%. Wrong answer. But the chatbot judge: 10 out of 10!",
     2: "Homework Star, live! A pen, bought for ₹40, sold for ₹50. Profit: how many %?",
-    3: "Chintu's wrong rule: profit % always on the selling price. 20%!",
-    4: "\"The answer is correct, well explained.\" 10 out of 10.",
+    3: "\"The answer is correct, well explained.\" 10 out of 10.",
+    4: "But Chintu's wrong rule: profit % always on the selling price. 20%!",
     5: "Let's check: in school, profit % is on the cost price. ₹10 on ₹40. 25%.",
     6: "We asked a small free chatbot on our computer, 10 times. 10 out of 10 four times, the rest 8 and 9. The word \"wrong\": not even once.",
     7: "A wrong science reason, it did catch. This maths rule, not even once.",
     8: "Then we also gave it the answer from the book. All 10 times it said: wrong, 25.",
+    9: "Checking homework with a chatbot? First give it the answer from the book too. No answer key? Check the final number yourself.",
     10: "Next contestant: our children's homework.",
 }
 TEMPO_EN = {"host": 1.08, "ai": 1.05}
+LINE_TEMPO_EN = {2: 1.16}   # the question line, so the judge's verdict starts by ~10.5 s
 TEMPO_TE = {"host": 1.12, "ai": 1.08}
 T = {
     "leftLab": "CHINTU'S ANSWER", "leftVal": "20%\nWRONG", "rightLab": "A FREE AI'S MARKS", "rightVal": "10/10",
@@ -71,8 +75,8 @@ T = {
     "fixAsk": "\"The correct answer is: 25% (profit ₹10 on the cost price of ₹40). Give marks for the correct final answer, not for length.\"",
     "fixResLab": "THE WRONG ANSWER (20%), NOW", "fixRes": "WRONG: 10 OF 10", "fixResSub": "it gave 25% every time · marks 1 to 7",
     "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
-    "ruleHead": "AI CHECKING HOMEWORK?", "rule1": "GIVE IT THE ANSWER KEY FIRST", "rule1b": "the book's answer, pasted in",
-    "rule2": "CHECK THE FINAL NUMBER", "rule2b": "yourself: 25% or 20%?", "ruleChip": "profit % = profit ÷ cost price × 100",
+    "ruleHead": "AI CHECKING HOMEWORK?", "rule1": "PASTE THE BOOK'S ANSWER IN FIRST", "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+    "rule2": "NO KEY? CHECK THE FINAL NUMBER", "rule2b": "yourself: profit ÷ cost price × 100", "ruleChip": "SOLVECHIP",
     "next": "NEXT: YOUR CHILD'S HOMEWORK",
 }
 # Sound (CLAUDE.md arc): a hit, a ta-da and applause on frame 1; applause into the show; ticks as the sheet writes, a
@@ -83,8 +87,8 @@ SCENES = [("s_a", (1,), {"boost": 2.4, "tail": 0.1}),
           ("s_c", (5, 6, 7), {"boost": 1.8, "lift": 0.6, "drop_pre": [[0, 0.0, 0.5]], "drop_at": [[0, "2", 0.0]], "tail": 0.1}),   # the applause cut on "Check it", silence before "twenty-five"
           ("s_d", (8, 9), {"boost": 3.0, "lift": 1.0, "rise": 3.0, "tail": 0.3}),
           ("s_e", (10,), {"outro": True, "pre": 0.3, "boost": 4.0, "lift": 1.0, "rise": 3.8, "tail": 0.0})]
-GAP = {n: 0.25 for n in LINES} | {1: 0.35, 3: 0.3, 4: 0.45, 5: 0.4, 7: 0.4, 10: 0.0}
-GAP_TE = {n: 0.18 for n in LINES} | {1: 0.3, 4: 0.4, 5: 0.35, 7: 0.35, 10: 0.0}
+GAP = {n: 0.25 for n in LINES} | {1: 0.3, 2: 0.2, 3: 0.35, 4: 0.3, 5: 0.4, 7: 0.4, 10: 0.0}
+GAP_TE = {n: 0.18 for n in LINES} | {1: 0.3, 3: 0.35, 5: 0.35, 7: 0.35, 10: 0.0}
 FLAGS_TE = {}
 YT = {"s_a": "20% wrong, 10/10", "s_b": "Homework Star", "s_c": "Our test", "s_d": "Give it the key", "s_e": "Next contestant"}
 NAMES = {"host": "", "ai": ""}
@@ -110,7 +114,7 @@ def spec(lang="en"):
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": raw,
                   "show": (SHOW_TE.get(n) if te else None) or SHOW.get(n, MARK.sub("", en).replace(" | ", " ").strip()),
                   "maxgap": 0.22 if te else 0.3, "gap": (GAP_TE if te else GAP).get(n, 0.3),
-                  "tempo": (TEMPO_TE if te else TEMPO_EN)[who]}
+                  "tempo": (TEMPO_TE[who] if te else LINE_TEMPO_EN.get(n, TEMPO_EN[who]))}
             if " | " in raw:   # long Telugu lines: two takes (Parler babbles on long lines)
                 p1, p2 = raw.split(" | ")
                 pz = 0.35 if te else 0.6
