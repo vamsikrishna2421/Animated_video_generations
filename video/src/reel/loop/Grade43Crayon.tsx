@@ -172,7 +172,7 @@ const StGrade: React.FC<SP> = ({ s }) => {
           sheet(c, 70, 680, 400, T.hookRows, 9, -1, 1, T.hookBig, 1, 30);
           judge(c, f, boil, true, true);
           paddle(c, 950, 760, T.ten, 1);
-          stamp(c, T.wrongStamp, 400, 720, 40, RED, 1, 0.12);
+          stamp(c, T.wrongStamp, 590, 880, 46, RED, 1, -0.12);
           if (k10 >= 1) confetti(c, W, f, loopOn ? endL + HOLD : cu(1, 0.5));
         } else if (P === "intro") {
           neon(c, W, T.show, f); live(c, W, f);
