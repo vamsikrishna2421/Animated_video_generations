@@ -534,7 +534,7 @@ const Outro: React.FC<{ seg: Seg; stories: Seg[]; handle: string; recap?: string
   return (
     <AbsoluteFill>
       <Backdrop accent={B.violet} />
-      {f < followAt && (
+      {f < followAt && !seg.ask && (   // AI WEEKLY 07 render review: the recap under the takeaway card was ~10 lines in 3 s
         <div style={{ position: "absolute", top: 240, left: 60, right: 60 }}>
           <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 30, letterSpacing: 6, color: B.cyan, marginBottom: 26 }}>{recap ?? `THIS WEEK IN ${stories.length} STORIES`}</div>
           {stories.map((s, i) => {

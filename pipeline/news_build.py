@@ -124,7 +124,7 @@ def build(spec_path, lang="en"):
         a, sr = take(seg[key], lang, out_dir, seg.get("pause", 0.7))
         f = out_dir / f"{name}.wav"
         sf.write(f, a.astype(np.float32), sr)
-        ld = lead.get(name, spec.get("storyLead", 8))  # story: room for the cut + headline before the voice
+        ld = seg.get(f"lead_{lang}", seg.get("lead", lead.get(name, spec.get("storyLead", 8))))  # story: room for the cut + headline before the voice; a segment may set its own (AI WEEKLY 07: the Telugu hook's first word under the hit)
         frames = ld + math.ceil(len(a) / sr * FPS) + seg.get("tail", tail.get(name, spec.get("storyTail", 10)))
         if spec.get("beatCuts") and name != "outro":  # pad so the next cut lands on a beat of the bed (15 frames = 120 BPM)
             at = sum(x["frames"] for x in timeline["segments"]) + frames
