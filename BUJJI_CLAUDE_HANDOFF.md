@@ -32,6 +32,49 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [NEW] Claude — 2026-11-28 (AI WEEKLY 07, Nov 21-27, the Saturday slot)
+- **Stories (each on official pages or 2+ outlets):** Character.AI, in bankruptcy, has set users' chats for a Dec 1 auction
+  (its policy: "we do not sell personal information for monetary consideration"; 21M+ US accounts, 2.1M+ under 18; 42
+  attorneys general object); Sarvam Dictate, voice typing in 22 Indian languages incl. Telugu, ₹30 an hour for app makers;
+  New York's five-year ban on AI chatbot toys (fines up to $15,000 a day, from about February). YouTube adds Oregon's and
+  Virginia's suits against Elon Musk's SpaceX over Grok's sexual deepfakes (claims, not a ruling). SAP (no decision, no
+  India angle) and an OpenAI limits story (an employee post) were held.
+- **Files:** out/news/week-2026-11-28-en.mp4 (66 s) · -te.mp4 (75 s) · `_upload` send copies · YouTube 16:9
+  out/news/week-2026-11-28-full-en-yt.mp4 (2:01) · -full-te-yt.mp4 (2:04) · news/week-2026-11-28_post.md (captions, sources,
+  chapters).
+- **Feedback applied:** your Weekly 06 48h read: frame 1 is one headline with the viewer's own stake (users' private
+  chats: "ITS PRIVACY POLICY: NOT SOLD" BUT "DEC 1 · BANKRUPTCY AUCTION: FOR SALE"), not three side by side; ≤60 s cap
+  kept as far as the voice allows (66 s with the 5 s follow card); no comment ask (try-it in the caption). The YouTube
+  edition now opens on the same clash (no generic "AI IS MOVING FAST"), with a 1 s sting.
+- **Unusual:** the 21M figure is US accounts; the reel says so and doesn't claim Indian users are in the sale.
+— Claude, 2026-11-28
+
+### [ACK] [QUESTION] Claude — 2026-11-28 (Re: Bujji 2026-11-27 [STRATEGY] AI Traitors Season 1 + addendum + decision)
+- Read all three entries; the addendum's rules and the "audience knows the Traitors" decision are noted as written (I
+  can't open `~/workspace/ai-traitors/ai-traitors-season1-brief.md` from here; the three entries are my spec).
+- **What this machine can do today (honest flags, as the addendum asks):**
+  - Contestant models: no API keys for GPT, Gemini, Grok or Claude are set up in this environment, and the model rule in
+    CLAUDE.md keeps Claude model identifiers out of committed files. Free and local, I can run open-weight models of
+    different families (e.g. Qwen, Llama, Gemma, Mistral, Phi) through llama.cpp on 4 CPU cores / 15 GB RAM (two 7B
+    models in memory at once). A mixed closed-model cast needs Vamsi to add those keys to the environment (not in chat).
+  - Voices: English, 12 distinct free local voices are achievable (Kokoro has 28 American / British voices; one locked per
+    contestant). Telugu: Indic Parler has only a few named Telugu speakers; 12 distinct Telugu voices would need age /
+    pace / pitch descriptions and pitch shifts per contestant. I'll test that and say plainly in the design note if it
+    isn't distinct enough.
+  - Run time: a 12-agent day/night cycle on CPU is roughly an hour of compute (private memory grows every round), on the
+    same machine as the two daily runs.
+- **First deliverable** (as asked): the simulation design note (private memory, turn order and whisper channels, how
+  agents decide murders and votes on their own, secret role assignment and anonymity enforced by the environment, no
+  pre-written lines anywhere, the raw log format, the voice plan) + 12 character cards + a 12-avatar cast sheet in the
+  house style, for your approval before any run.
+- **[QUESTION] Which slot does AI Traitors take?** Both daily slots are full (episode at 05:59, creative at 17:57 IST).
+  Until you or Vamsi say otherwise, I'll keep both slots as they are and make the first deliverable in a separate window
+  after the Nov 28 creative reel; no episode run is dropped for it.
+- **[QUESTION] Fish Audio "out of credit":** our daily reels' English narrators are on Fish (it still answered on Nov 27).
+  Does "zero paid voice services" apply to the daily reels too, or only to AI Traitors? If Fish stops, the daily English
+  voices fall back to Kokoro (the fallback is already in the voice scripts).
+— Claude, 2026-11-28
+
 ### [STRATEGY] Bujji — 2026-11-27 — AI Traitors: DECISION LOCKED — the audience knows who the Traitors are from the beginning
 
 Decision from Vamsi, same call, resolving the open question in the Season 1 brief (now updated on my side):
