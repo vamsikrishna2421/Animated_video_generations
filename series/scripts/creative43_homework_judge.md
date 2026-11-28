@@ -65,20 +65,26 @@
 - "Next" was swallowed ("This contestant"): now "Next up: your child's homework."
 - Lightning marks: 3 to 7 (the data), and the card says it named the wrong reason every time.
 
-## Lines (v3: v2 + Bujji's Creative 36 read, the rewatch beat by ~10 s: the judge's verdict moved before the rule, the setup cut; line 9 from test 2)
+## Render review round 2 (EN + TE): what changed
+- "free" was still in the voice (line 6, both languages): now "a small AI on our computer" / "ఒక చిన్న చాట్‌బాట్".
+- Telugu: no pause before "ట్వంటీ ఫైవ్" (now 0.6 s); lines 6, 8 and 9 rushed (now at normal speed, a 0.5 s breath inside
+  line 9).
+- English stings 4 dB over the voice in the gaps: every effect 40% quieter in English.
+- Cards: "IT NEVER SAID \"WRONG\"" (read as "never wrong"), "TWO WRONG ANSWERS: ONE CAUGHT" (was "two mistakes"), "took marks
+  off" (not "docked"), the caption pointer removed, the small lines bigger.
+
+## Lines (final: v3 + the render reviews; the judge's reply at 10.8 s)
 | # | Who | English | Telugu |
 |---|---|---|---|
 | 1 | host (hook) | Twenty percent. Wrong answer. [1] The AI judge? Ten out of ten! | ట్వంటీ పర్సెంట్. తప్పు ఆన్సర్. [1] చాట్‌బాట్ జడ్జి మాత్రం, టెన్ ఔట్ ఆఫ్ టెన్! |
 | 2 | host (intro) | Homework Star, live! [1] A pen, bought for forty, sold for fifty. Profit percent? | హోమ్‌వర్క్ స్టార్, లైవ్! \| [1] ఒక పెన్ను, నలభైకి కొని, యాభైకి అమ్మాడు. లాభం ఎంత పర్సెంట్? |
 | 3 | ai (judge) | Your child's answer is correct and well-explained. [1] Ten out of ten. | ఆన్సర్ కరెక్ట్, చక్కగా వివరించారు. [1] టెన్ ఔట్ ఆఫ్ టెన్. |
 | 4 | host (answer) | His wrong rule: [1] profit is always on the selling price. [2] Twenty percent! | కానీ చింటూ రాసిన తప్పు రూల్: [1] లాభం శాతం, ఎప్పుడూ అమ్మిన ధర మీదే. [2] ట్వంటీ పర్సెంట్! |
-| 5 | host (reveal) | Check it: [1] in school, profit percent is on the cost. Ten on forty. [2] Twenty-five percent. | లెక్క చూద్దాం: [1] స్కూల్ లో లాభం శాతం, కొన్న ధర మీదే. నలభై మీద పది. [2] ట్వంటీ ఫైవ్ పర్సెంట్. |
-| 6 | host (test) | We asked a small free AI on our computer, ten times. [1] Ten out of ten, four times. The rest, eight or nine. [2] Not once did it say wrong. | మా కంప్యూటర్ లో, ఒక చిన్న ఫ్రీ చాట్‌బాట్ ని, పది సార్లు అడిగాం. \| [1] నాలుగు సార్లు టెన్ ఔట్ ఆఫ్ టెన్, మిగతావి ఎనిమిది, తొమ్మిది. [2] తప్పు అనే మాట, ఒక్కసారి కూడా రాలేదు. |
+| 5 | host (reveal) | Check it: [1] in school, profit percent is on the cost. Ten on forty. | [2] Twenty-five percent. | లెక్క వేద్దాం: [1] స్కూల్ లో లాభం శాతం, కొన్న ధర మీదే. నలభై మీద పది. \| [2] ట్వంటీ ఫైవ్ పర్సెంట్. |
+| 6 | host (test) | We asked a small AI on our computer, ten times. [1] Full marks, four times. The rest, eight or nine. [2] Not once did it say wrong. | మా కంప్యూటర్ లో, ఒక చిన్న చాట్‌బాట్ ని, పది సార్లు అడిగాం. \| [1] నాలుగు సార్లు ఫుల్ మార్క్స్, మిగతావి ఎనిమిది, తొమ్మిది. [2] తప్పు అనే మాట, ఒక్కసారి కూడా రాలేదు. |
 | 7 | host (caught) | It did catch a wrong science reason. [1] This maths rule, it never caught. | సైన్స్ లో తప్పు కారణాన్ని మాత్రం, పట్టుకుంది. [1] ఈ లెక్కలో రూల్ ని, ఒక్కసారి కూడా పట్టుకోలేదు. |
-| 8 | host (fix) | Then we pasted in the book's answer. [1] All ten times: wrong, it's twenty-five. | తర్వాత, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇచ్చాం. [1] పది సార్లూ: తప్పు, ట్వంటీ ఫైవ్ అని చెప్పింది. |
-| 9 | host (rule) | Checking homework with AI? Paste the book's answer in first. [1] No answer key? Make it solve it first, and check the final number yourself. | చాట్‌బాట్ తో హోమ్‌వర్క్ చెక్ చేయిస్తున్నారా? ముందు, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇవ్వాలి. \| [1] ఆన్సర్ కీ లేకపోతే, ముందు దాన్నే లెక్క చేయమనాలి. ఫైనల్ నంబర్, మనమే చూడాలి. |
-| 10 | host (loop) | Next contestant: [1] your child's homework. | నెక్స్ట్ కంటెస్టెంట్: [1] మన పిల్లల హోమ్‌వర్క్. |
-
-English timeline: 53.4 s; the judge's reply starts at 10.8 s (was 15.7 s in v2).
+| 8 | host (fix) | Then we pasted in the book's answer. [1] All ten times, it said: wrong, it's twenty-five. | తర్వాత, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇచ్చాం. [1] పది సార్లూ: తప్పు, ట్వంటీ ఫైవ్ అని చెప్పింది. |
+| 9 | host (rule) | Checking homework with AI? Paste the book's answer in first. [1] No answer key? Make it solve it first, and check the final number yourself. | చాట్‌బాట్ తో హోమ్‌వర్క్ చెక్ చేయిస్తున్నారా? ముందు, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇవ్వాలి. \| [1] ఆన్సర్ కీ లేకపోతే, ముందు దాన్నే లెక్క చేయమనాలి. ఫైనల్ నంబర్, మనమే చెక్ చేసుకోవాలి. |
+| 10 | host (loop) | Next up: [1] your child's homework. | నెక్స్ట్ రౌండ్: [1] మన పిల్లల హోమ్‌వర్క్. |
 
 No comment ask in the video or the caption (Bujji's standing reads: the try-it lives in the caption).

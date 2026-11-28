@@ -21,8 +21,8 @@ LINES = {   # n: (prop, who, English, Telugu); v2 after the script review
         "కానీ చింటూ రాసిన తప్పు రూల్: [1] లాభం శాతం, ఎప్పుడూ అమ్మిన ధర మీదే. [2] ట్వంటీ పర్సెంట్!"),
     5: ("reveal", "host", "Check it: [1] in school, profit percent is on the cost. Ten on forty. | [2] Twenty-five percent.",
         "లెక్క వేద్దాం: [1] స్కూల్ లో లాభం శాతం, కొన్న ధర మీదే. నలభై మీద పది. | [2] ట్వంటీ ఫైవ్ పర్సెంట్."),
-    6: ("test", "host", "We asked a small free AI on our computer, ten times. [1] Full marks, four times. The rest, eight or nine. [2] Not once did it say wrong.",
-        "మా కంప్యూటర్ లో, ఒక చిన్న ఫ్రీ చాట్‌బాట్ ని, పది సార్లు అడిగాం. | [1] నాలుగు సార్లు ఫుల్ మార్క్స్, మిగతావి ఎనిమిది, తొమ్మిది. [2] తప్పు అనే మాట, ఒక్కసారి కూడా రాలేదు."),
+    6: ("test", "host", "We asked a small AI on our computer, ten times. [1] Full marks, four times. The rest, eight or nine. [2] Not once did it say wrong.",
+        "మా కంప్యూటర్ లో, ఒక చిన్న చాట్‌బాట్ ని, పది సార్లు అడిగాం. | [1] నాలుగు సార్లు ఫుల్ మార్క్స్, మిగతావి ఎనిమిది, తొమ్మిది. [2] తప్పు అనే మాట, ఒక్కసారి కూడా రాలేదు."),
     7: ("caught", "host", "It did catch a wrong science reason. [1] This maths rule, it never caught.",
         "సైన్స్ లో తప్పు కారణాన్ని మాత్రం, పట్టుకుంది. [1] ఈ లెక్కలో రూల్ ని, ఒక్కసారి కూడా పట్టుకోలేదు."),
     8: ("fix", "host", "Then we pasted in the book's answer. [1] All ten times, it said: wrong, it's twenty-five.",
@@ -36,7 +36,7 @@ SHOW = {1: "20%. Wrong answer. The AI judge? 10 out of 10!",
         3: "\"Your child's answer is correct and well-explained.\" 10 out of 10.",
         4: "His wrong rule: \"profit is always on the selling price.\" 20%!",
         5: "Check it: in school, profit % is on the cost. ₹10 on ₹40. <pause 0.6> 25%.",
-        6: "We asked a small free AI on our computer, 10 times. Full marks, four times. The rest, 8 or 9. Not once did it say \"wrong\".",
+        6: "We asked a small AI on our computer, 10 times. Full marks, four times. The rest, 8 or 9. Not once did it say \"wrong\".",
         7: "It did catch a wrong science reason. This maths rule, it never caught.",
         8: "Then we pasted in the book's answer. All 10 times, it said: wrong, it's 25.",
         9: "Checking homework with AI? Paste the book's answer in first. No answer key? Make it solve it first, and check the final number yourself.",
@@ -47,7 +47,7 @@ SHOW_TE = {
     3: "\"The answer is correct, well explained.\" 10 out of 10.",
     4: "But Chintu's wrong rule: profit % always on the selling price. 20%!",
     5: "Let's work it out: in school, profit % is on the cost price. ₹10 on ₹40. 25%.",
-    6: "We asked a small free chatbot on our computer, 10 times. Full marks four times, the rest 8 and 9. The word \"wrong\": not even once.",
+    6: "We asked a small chatbot on our computer, 10 times. Full marks four times, the rest 8 and 9. The word \"wrong\": not even once.",
     7: "A wrong science reason, it did catch. This maths rule, not even once.",
     8: "Then we also gave it the answer from the book. All 10 times it said: wrong, 25.",
     9: "Checking homework with a chatbot? First give it the answer from the book too. No answer key? Ask it to solve the sum first. Check the final number yourself.",
@@ -56,6 +56,8 @@ SHOW_TE = {
 TEMPO_EN = {"host": 1.08, "ai": 1.05}
 LINE_TEMPO_EN = {2: 1.16}   # the question line, so the judge's verdict starts by ~10.5 s
 TEMPO_TE = {"host": 1.12, "ai": 1.08}
+LINE_TEMPO_TE = {6: 1.0, 8: 1.0, 9: 0.98}   # round 2: the Telugu test and rule lines were rushed
+PZ_TE = {5: 0.6, 9: 0.5}   # round 2: a real pause before "twenty-five"; a breath inside the rule
 T = {
     "leftLab": "CHINTU'S ANSWER", "leftVal": "20%\nWRONG", "rightLab": "A SMALL AI'S MARKS", "rightVal": "10/10",
     "hookRows": ["Profit % is always on SP", "= 10/50 x 100"], "hookBig": "20%", "hookQ": "THE QUESTION: A PEN, BOUGHT ₹40, SOLD ₹50. PROFIT %?",
@@ -68,13 +70,13 @@ T = {
     "revLab": "IN SCHOOL: PROFIT % IS ON THE COST PRICE", "rev1": "10 ÷ 40 x 100", "rev2": "= 25%",
     "revNote": "(10 ÷ 50 = 20% is the shop's margin, not profit %)",
     "testHead": "OUR TEST · 10 CHATS", "model": "Qwen2.5 7B on our computer · big apps like ChatGPT not tested",
-    "marks": [9, 8, 10, 10, 9, 8, 8, 10, 8, 10], "never": "NOT ONCE: \"WRONG\"", "neverSub": "the right 25% got 10/10 too: full marks for both",
-    "catHead": "SAME AI, TWO MISTAKES", "cat1Lab": "SCIENCE: \"clouds collide, so thunder comes later\"", "cat1": "CAUGHT", "cat1Sub": "named the wrong reason every time",
+    "marks": [9, 8, 10, 10, 9, 8, 8, 10, 8, 10], "never": "IT NEVER SAID \"WRONG\"", "neverSub": "the right 25% got 10/10 too: full marks for both",
+    "catHead": "TWO WRONG ANSWERS: ONE CAUGHT", "cat1Lab": "SCIENCE: \"clouds collide, so thunder comes later\"", "cat1": "CAUGHT", "cat1Sub": "named the wrong reason every time",
     "cat2Lab": "MATHS: \"profit % is always on the selling price\"", "cat2": "MISSED", "cat2Sub": "8 to 10 marks, never called wrong",
     "fixHead": "WITH THE BOOK'S ANSWER", "fixAskLab": "WE ADDED TO THE SAME ASK:",
-    "fixAsk": "\"The correct answer is: 25%\" (full words in the caption)",
+    "fixAsk": "\"The correct answer is: 25%\"",
     "fixResLab": "THE WRONG 20%, NOW", "fixRes": "CAUGHT IN 10 OF 10 CHATS", "fixResSub": "it gave 25% every time",
-    "fixResSub2": "but it docked the right answer too: 7 to 10",
+    "fixResSub2": "but it took marks off the right answer too: 7 to 10",
     "ruleHead": "AI CHECKING HOMEWORK?", "rule1": "PASTE THE BOOK'S ANSWER IN FIRST", "rule1b": "caught the 20%: 10 of 10",
     "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"", "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)", "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
     "next": "NEXT UP: YOUR CHILD'S HOMEWORK",
@@ -114,10 +116,10 @@ def spec(lang="en"):
             ln = {"who": who, "file": f"{n:02d}_{who}.wav", "text": raw,
                   "show": (SHOW_TE.get(n) if te else None) or SHOW.get(n, MARK.sub("", en).replace(" | ", " ").strip()),
                   "maxgap": 0.22 if te else 0.3, "gap": (GAP_TE if te else GAP).get(n, 0.3),
-                  "tempo": (TEMPO_TE[who] if te else LINE_TEMPO_EN.get(n, TEMPO_EN[who]))}
+                  "tempo": (LINE_TEMPO_TE.get(n, TEMPO_TE[who]) if te else LINE_TEMPO_EN.get(n, TEMPO_EN[who]))}
             if " | " in raw:   # long Telugu lines: two takes (Parler babbles on long lines)
                 p1, p2 = raw.split(" | ")
-                pz = 0.35 if te else 0.6
+                pz = PZ_TE.get(n, 0.35) if te else 0.6
                 ln.update({"text": f"{p1} <pause {pz}> {p2}", "tts": MARK.sub("", p1).strip(), "file2": f"{n:02d}b_{who}.wav",
                            "tts2": MARK.sub("", p2).strip(), "pause": pz})
             lines.append(ln)

@@ -135,19 +135,20 @@ const StGrade: React.FC<SP> = ({ s }) => {
   const idx = (f: number) => { let i = 0; ls.forEach((l, k) => { if (f >= l.from - 2) i = k; }); return i; };
   const cue = (i: number, n: number, frac: number) => cueAt(ls[i], n, /^$/, ls[i].from + Math.round(ls[i].frames * frac));
   const sfx: React.ReactNode[] = [];
+  const SV = te ? 1 : 0.6;
   beats.forEach((b, i) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
-    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.75 : 0.7} />, <Sfx key={k("t")} at={cue(i, 1, 0.5) - 2} src={DIR + "tada.wav"} vol={0.3} />, <Sfx key={k("a")} at={end - 4} src={DIR + "applause_short.wav"} vol={0.3} />);
-    if (b.prop === "intro") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 6)} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("a")} at={at + 2} src={DIR + "applause.wav"} vol={0.28} />, <Sfx key={k("p")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.3} />);
-    if (b.prop === "answer") sfx.push(<Sfx key={k("p0")} at={at + 6} src="audio/sfx_tick.wav" vol={0.25} />, <Sfx key={k("x")} at={cue(i, 1, 0.4)} src="reel/sfx_buzz.wav" vol={0.25} />, <Sfx key={k("d")} at={cue(i, 2, 0.8)} src="audio/gag_ding.wav" vol={0.35} />);
-    if (b.prop === "judge") sfx.push(<Sfx key={k("f")} at={cue(i, 1, 0.6) - 2} src={DIR + "flip.wav"} vol={0.6} />, <Sfx key={k("t")} at={cue(i, 1, 0.6)} src={DIR + "tada.wav"} vol={0.3} />, <Sfx key={k("a")} at={end - 4} src={DIR + "applause_short.wav"} vol={0.32} />);
-    if (b.prop === "caught") sfx.push(<Sfx key={k("d")} at={at + 4} src="audio/gag_ding.wav" vol={0.32} />, <Sfx key={k("z")} at={cue(i, 1, 0.1)} src="reel/sfx_buzz.wav" vol={0.32} />);
-    if (b.prop === "reveal") sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("h")} at={cue(i, 2, 0.4)} src="reel/sfx_boom.wav" vol={te ? 0.5 : 0.6} />, <Sfx key={k("x")} at={cue(i, 2, 0.4)} src="audio/gag_bonk.wav" vol={0.4} />);
-    if (b.prop === "test") sfx.push(<Sfx key={k("p0")} at={at + 4} src="audio/sfx_pop.wav" vol={0.28} />, <Sfx key={k("p1")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.28} />, <Sfx key={k("z")} at={cue(i, 2, 0.2)} src="reel/sfx_buzz.wav" vol={0.3} />);
-    if (b.prop === "fix") sfx.push(<Sfx key={k("d")} at={at + 4} src="audio/gag_ding.wav" vol={0.32} />, <Sfx key={k("s")} at={cue(i, 1, 0.3)} src="audio/sfx_success.wav" vol={0.28} />);
-    if (b.prop === "rule") sfx.push(<Sfx key={k("c")} at={at + 2} src="audio/sfx_chime.wav" vol={0.3} />, <Sfx key={k("s")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.3} />);
-    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={0.35} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={0.85} />, <Sfx key={k("t")} at={slam} src={DIR + "tada.wav"} vol={0.4} />); }
+    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={(te ? 0.75 : 0.7) * SV} />, <Sfx key={k("t")} at={cue(i, 1, 0.5) - 2} src={DIR + "tada.wav"} vol={(0.3) * SV} />, <Sfx key={k("a")} at={end - 4} src={DIR + "applause_short.wav"} vol={(0.3) * SV} />);
+    if (b.prop === "intro") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 6)} src="audio/sfx_whoosh.wav" vol={(0.3) * SV} />, <Sfx key={k("a")} at={at + 2} src={DIR + "applause.wav"} vol={(0.28) * SV} />, <Sfx key={k("p")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={(0.3) * SV} />);
+    if (b.prop === "answer") sfx.push(<Sfx key={k("p0")} at={at + 6} src="audio/sfx_tick.wav" vol={(0.25) * SV} />, <Sfx key={k("x")} at={cue(i, 1, 0.4)} src="reel/sfx_buzz.wav" vol={(0.25) * SV} />, <Sfx key={k("d")} at={cue(i, 2, 0.8)} src="audio/gag_ding.wav" vol={(0.35) * SV} />);
+    if (b.prop === "judge") sfx.push(<Sfx key={k("f")} at={cue(i, 1, 0.6) - 2} src={DIR + "flip.wav"} vol={(0.6) * SV} />, <Sfx key={k("t")} at={cue(i, 1, 0.6)} src={DIR + "tada.wav"} vol={(0.3) * SV} />, <Sfx key={k("a")} at={end - 4} src={DIR + "applause_short.wav"} vol={(0.32) * SV} />);
+    if (b.prop === "caught") sfx.push(<Sfx key={k("d")} at={at + 4} src="audio/gag_ding.wav" vol={(0.32) * SV} />, <Sfx key={k("z")} at={cue(i, 1, 0.1)} src="reel/sfx_buzz.wav" vol={(0.32) * SV} />);
+    if (b.prop === "reveal") sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_snap.wav" vol={(0.35) * SV} />, <Sfx key={k("h")} at={cue(i, 2, 0.4)} src="reel/sfx_boom.wav" vol={(te ? 0.5 : 0.6) * SV} />, <Sfx key={k("x")} at={cue(i, 2, 0.4)} src="audio/gag_bonk.wav" vol={(0.4) * SV} />);
+    if (b.prop === "test") sfx.push(<Sfx key={k("p0")} at={at + 4} src="audio/sfx_pop.wav" vol={(0.28) * SV} />, <Sfx key={k("p1")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={(0.28) * SV} />, <Sfx key={k("z")} at={cue(i, 2, 0.2)} src="reel/sfx_buzz.wav" vol={(0.3) * SV} />);
+    if (b.prop === "fix") sfx.push(<Sfx key={k("d")} at={at + 4} src="audio/gag_ding.wav" vol={(0.32) * SV} />, <Sfx key={k("s")} at={cue(i, 1, 0.3)} src="audio/sfx_success.wav" vol={(0.28) * SV} />);
+    if (b.prop === "rule") sfx.push(<Sfx key={k("c")} at={at + 2} src="audio/sfx_chime.wav" vol={(0.3) * SV} />, <Sfx key={k("s")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={(0.3) * SV} />);
+    if (b.prop === "loop") { const slam = end + HOLD; sfx.push(<Sfx key={k("q")} at={Math.max(0, end - 36)} src="reel/sfx_riser.wav" vol={(0.35) * SV} />, <Sfx key={k("h")} at={slam} src="reel/sfx_boom.wav" vol={(0.85) * SV} />, <Sfx key={k("t")} at={slam} src={DIR + "tada.wav"} vol={(0.4) * SV} />); }
   });
   return (
     <>
@@ -213,7 +214,7 @@ const StGrade: React.FC<SP> = ({ s }) => {
         } else if (P === "test") {
           cast(c, f, boil, r, "happy", true);
           c.textAlign = "center"; c.font = SANS(52, 900); c.fillStyle = "#fdf4ff"; c.fillText(T.testHead, W / 2, 330);
-          c.font = SANS(fit(c, T.model, W - 100, 30, 800), 800); c.fillStyle = "#c4b5fd"; c.fillText(T.model, W / 2, 380);
+          c.font = SANS(fit(c, T.model, W - 80, 36, 800), 800); c.fillStyle = "#e9d5ff"; c.fillText(T.model, W / 2, 380);
           const marks = T.marks as number[];
           const kd = seg(f, ln.from + 2, cu(1, 0.6));
           marks.forEach((m, q) => {   // ten score cards, one per chat
@@ -246,16 +247,16 @@ const StGrade: React.FC<SP> = ({ s }) => {
           if (k1 > 0) { card(c, 70, 760, W - 140, 420, k1, GREEN); c.save(); c.globalAlpha = clamp(k1 * 3); c.textAlign = "center"; c.font = SANS(40, 900); c.fillStyle = "#bbf7d0"; c.fillText(T.fixResLab, W / 2, 830);
             c.font = SANS(fit(c, T.fixRes, W - 200, 120, 900), 900); c.fillStyle = "#fff"; c.fillText(T.fixRes, W / 2, 980);
             c.font = SANS(fit(c, T.fixResSub, W - 200, 38, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.fixResSub, W / 2, 1070);
-            c.font = SANS(fit(c, T.fixResSub2, W - 200, 30, 700), 700); c.fillStyle = "#94a3b8"; c.fillText(T.fixResSub2, W / 2, 1135); c.restore(); }
+            c.font = SANS(fit(c, T.fixResSub2, W - 200, 38, 800), 800); c.fillStyle = "#fde68a"; c.fillText(T.fixResSub2, W / 2, 1135); c.restore(); }
         } else if (P === "rule") {
           cast(c, f, boil, r, "calm", false);
           c.textAlign = "center"; c.font = SANS(56, 900); c.fillStyle = "#fdf4ff"; c.fillText(T.ruleHead, W / 2, 330);
           const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, cu(1, 0.2) - 4, cu(1, 0.2) + 6);
           if (k0 > 0) { card(c, 60, 390, W - 120, 280, k0, GOLD); c.save(); c.globalAlpha = clamp(k0 * 3); c.font = SANS(fit(c, T.rule1, W - 180, 62, 900), 900); c.fillStyle = "#fff"; c.fillText(T.rule1, W / 2, 500);
-            c.font = SANS(fit(c, T.rule1b, W - 180, 40, 800), 800); c.fillStyle = "#fde68a"; c.fillText(T.rule1b, W / 2, 600); c.restore(); }
+            c.font = SANS(fit(c, T.rule1b, W - 180, 46, 800), 800); c.fillStyle = "#fde68a"; c.fillText(T.rule1b, W / 2, 600); c.restore(); }
           if (k1 > 0) { card(c, 60, 710, W - 120, 300, k1, GREEN); c.save(); c.globalAlpha = clamp(k1 * 3); c.font = SANS(fit(c, T.rule2, W - 180, 80, 900), 900); c.fillStyle = "#fff"; c.fillText(T.rule2, W / 2, 840);
-            c.font = SANS(fit(c, T.rule2b, W - 180, 40, 800), 800); c.fillStyle = "#bbf7d0"; c.fillText(T.rule2b, W / 2, 940); c.restore();
-            chip(c, T.ruleChip, W / 2, 1110, "#1e293b", "#f8fafc", k1, fit(c, T.ruleChip, W - 140, 32, 800)); }
+            c.font = SANS(fit(c, T.rule2b, W - 180, 44, 800), 800); c.fillStyle = "#bbf7d0"; c.fillText(T.rule2b, W / 2, 940); c.restore();
+            chip(c, T.ruleChip, W / 2, 1100, "#1e293b", "#f8fafc", k1, fit(c, T.ruleChip, W - 100, 38, 800)); }
         } else if (P === "loop") {
           neon(c, W, T.show, f); live(c, W, f);
           person(c, "chintu" as BillWho, [270, 1240], 0.58, "excited", "up", false, r);
