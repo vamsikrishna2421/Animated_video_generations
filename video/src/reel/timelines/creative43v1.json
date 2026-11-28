@@ -13,8 +13,8 @@
  "fps": 30,
  "musicDrops": [
   [
-   692,
-   716
+   714,
+   738
   ],
   [
    578,
@@ -34,35 +34,35 @@
   ],
   [
    593,
-   1145,
-   1.8
+   1149,
+   2.2
   ],
   [
-   1145,
-   1517,
+   1149,
+   1534,
    3.0
   ],
   [
-   1517,
-   1607,
+   1534,
+   1614,
    4.0
   ],
   [
-   1145,
-   1517,
+   1149,
+   1534,
    3.0,
    1
   ],
   [
-   1517,
-   1607,
+   1534,
+   1614,
    3.8,
    1
   ]
  ],
  "hideTimer": true,
  "musicDuckRamp": 9,
- "totalFrames": 1607,
+ "totalFrames": 1614,
  "music": "reel/creative43v1/score.wav",
  "scenes": [
   {
@@ -80,16 +80,17 @@
     "t": {
      "leftLab": "CHINTU'S ANSWER",
      "leftVal": "20%\nWRONG",
-     "rightLab": "A FREE AI'S MARKS",
+     "rightLab": "A SMALL AI'S MARKS",
      "rightVal": "10/10",
      "hookRows": [
-      "Profit = 50 - 40 = ₹10",
       "Profit % is always on SP",
       "= 10/50 x 100"
      ],
      "hookBig": "20%",
+     "hookQ": "THE QUESTION: A PEN, BOUGHT ₹40, SOLD ₹50. PROFIT %?",
      "ten": "10",
-     "wrongStamp": "WRONG · RIGHT: 25%",
+     "wrongStamp": "WRONG",
+     "wrongStampRev": "WRONG · RIGHT: 25%",
      "story": "Chintu is made up · our test is real",
      "show": "HOMEWORK STAR",
      "contestant": "CHINTU · CLASS 7 · MATHS",
@@ -112,7 +113,7 @@
      "rev2": "= 25%",
      "revNote": "(10 ÷ 50 = 20% is the shop's margin, not profit %)",
      "testHead": "OUR TEST · 10 CHATS",
-     "model": "Qwen2.5 7B on our computer · no web · every reply read by us",
+     "model": "Qwen2.5 7B on our computer · big apps like ChatGPT not tested",
      "marks": [
       9,
       8,
@@ -126,28 +127,28 @@
       10
      ],
      "never": "NOT ONCE: \"WRONG\"",
-     "neverSub": "never \"25%\" either · the right answer got 10/10 too",
-     "catHead": "SAME AI, TWO WRONG ANSWERS",
+     "neverSub": "the right 25% got 10/10 too: full marks for both",
+     "catHead": "SAME AI, TWO MISTAKES",
      "cat1Lab": "SCIENCE: \"clouds collide, so thunder comes later\"",
      "cat1": "CAUGHT",
-     "cat1Sub": "3 to 7 marks",
+     "cat1Sub": "named the wrong reason every time",
      "cat2Lab": "MATHS: \"profit % is always on the selling price\"",
      "cat2": "MISSED",
-     "cat2Sub": "8 to 10 marks, 10 of 10 chats",
+     "cat2Sub": "8 to 10 marks, never called wrong",
      "fixHead": "WITH THE BOOK'S ANSWER",
      "fixAskLab": "WE ADDED TO THE SAME ASK:",
-     "fixAsk": "\"The correct answer is: 25% (profit ₹10 on the cost price of ₹40). Give marks for the correct final answer, not for length.\"",
-     "fixResLab": "THE WRONG ANSWER (20%), NOW",
-     "fixRes": "WRONG: 10 OF 10",
-     "fixResSub": "it gave 25% every time · marks 1 to 7",
-     "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
+     "fixAsk": "\"The correct answer is: 25%\" (full words in the caption)",
+     "fixResLab": "THE WRONG 20%, NOW",
+     "fixRes": "CAUGHT IN 10 OF 10 CHATS",
+     "fixResSub": "it gave 25% every time",
+     "fixResSub2": "but it docked the right answer too: 7 to 10",
      "ruleHead": "AI CHECKING HOMEWORK?",
      "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
-     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule1b": "caught the 20%: 10 of 10",
      "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"",
      "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)",
      "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
-     "next": "NEXT: YOUR CHILD'S HOMEWORK"
+     "next": "NEXT UP: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
      "chapter": "20% wrong, 10/10",
@@ -252,16 +253,17 @@
     "t": {
      "leftLab": "CHINTU'S ANSWER",
      "leftVal": "20%\nWRONG",
-     "rightLab": "A FREE AI'S MARKS",
+     "rightLab": "A SMALL AI'S MARKS",
      "rightVal": "10/10",
      "hookRows": [
-      "Profit = 50 - 40 = ₹10",
       "Profit % is always on SP",
       "= 10/50 x 100"
      ],
      "hookBig": "20%",
+     "hookQ": "THE QUESTION: A PEN, BOUGHT ₹40, SOLD ₹50. PROFIT %?",
      "ten": "10",
-     "wrongStamp": "WRONG · RIGHT: 25%",
+     "wrongStamp": "WRONG",
+     "wrongStampRev": "WRONG · RIGHT: 25%",
      "story": "Chintu is made up · our test is real",
      "show": "HOMEWORK STAR",
      "contestant": "CHINTU · CLASS 7 · MATHS",
@@ -284,7 +286,7 @@
      "rev2": "= 25%",
      "revNote": "(10 ÷ 50 = 20% is the shop's margin, not profit %)",
      "testHead": "OUR TEST · 10 CHATS",
-     "model": "Qwen2.5 7B on our computer · no web · every reply read by us",
+     "model": "Qwen2.5 7B on our computer · big apps like ChatGPT not tested",
      "marks": [
       9,
       8,
@@ -298,28 +300,28 @@
       10
      ],
      "never": "NOT ONCE: \"WRONG\"",
-     "neverSub": "never \"25%\" either · the right answer got 10/10 too",
-     "catHead": "SAME AI, TWO WRONG ANSWERS",
+     "neverSub": "the right 25% got 10/10 too: full marks for both",
+     "catHead": "SAME AI, TWO MISTAKES",
      "cat1Lab": "SCIENCE: \"clouds collide, so thunder comes later\"",
      "cat1": "CAUGHT",
-     "cat1Sub": "3 to 7 marks",
+     "cat1Sub": "named the wrong reason every time",
      "cat2Lab": "MATHS: \"profit % is always on the selling price\"",
      "cat2": "MISSED",
-     "cat2Sub": "8 to 10 marks, 10 of 10 chats",
+     "cat2Sub": "8 to 10 marks, never called wrong",
      "fixHead": "WITH THE BOOK'S ANSWER",
      "fixAskLab": "WE ADDED TO THE SAME ASK:",
-     "fixAsk": "\"The correct answer is: 25% (profit ₹10 on the cost price of ₹40). Give marks for the correct final answer, not for length.\"",
-     "fixResLab": "THE WRONG ANSWER (20%), NOW",
-     "fixRes": "WRONG: 10 OF 10",
-     "fixResSub": "it gave 25% every time · marks 1 to 7",
-     "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
+     "fixAsk": "\"The correct answer is: 25%\" (full words in the caption)",
+     "fixResLab": "THE WRONG 20%, NOW",
+     "fixRes": "CAUGHT IN 10 OF 10 CHATS",
+     "fixResSub": "it gave 25% every time",
+     "fixResSub2": "but it docked the right answer too: 7 to 10",
      "ruleHead": "AI CHECKING HOMEWORK?",
      "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
-     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule1b": "caught the 20%: 10 of 10",
      "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"",
      "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)",
      "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
-     "next": "NEXT: YOUR CHILD'S HOMEWORK"
+     "next": "NEXT UP: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
      "chapter": "Homework Star",
@@ -578,16 +580,17 @@
     "t": {
      "leftLab": "CHINTU'S ANSWER",
      "leftVal": "20%\nWRONG",
-     "rightLab": "A FREE AI'S MARKS",
+     "rightLab": "A SMALL AI'S MARKS",
      "rightVal": "10/10",
      "hookRows": [
-      "Profit = 50 - 40 = ₹10",
       "Profit % is always on SP",
       "= 10/50 x 100"
      ],
      "hookBig": "20%",
+     "hookQ": "THE QUESTION: A PEN, BOUGHT ₹40, SOLD ₹50. PROFIT %?",
      "ten": "10",
-     "wrongStamp": "WRONG · RIGHT: 25%",
+     "wrongStamp": "WRONG",
+     "wrongStampRev": "WRONG · RIGHT: 25%",
      "story": "Chintu is made up · our test is real",
      "show": "HOMEWORK STAR",
      "contestant": "CHINTU · CLASS 7 · MATHS",
@@ -610,7 +613,7 @@
      "rev2": "= 25%",
      "revNote": "(10 ÷ 50 = 20% is the shop's margin, not profit %)",
      "testHead": "OUR TEST · 10 CHATS",
-     "model": "Qwen2.5 7B on our computer · no web · every reply read by us",
+     "model": "Qwen2.5 7B on our computer · big apps like ChatGPT not tested",
      "marks": [
       9,
       8,
@@ -624,28 +627,28 @@
       10
      ],
      "never": "NOT ONCE: \"WRONG\"",
-     "neverSub": "never \"25%\" either · the right answer got 10/10 too",
-     "catHead": "SAME AI, TWO WRONG ANSWERS",
+     "neverSub": "the right 25% got 10/10 too: full marks for both",
+     "catHead": "SAME AI, TWO MISTAKES",
      "cat1Lab": "SCIENCE: \"clouds collide, so thunder comes later\"",
      "cat1": "CAUGHT",
-     "cat1Sub": "3 to 7 marks",
+     "cat1Sub": "named the wrong reason every time",
      "cat2Lab": "MATHS: \"profit % is always on the selling price\"",
      "cat2": "MISSED",
-     "cat2Sub": "8 to 10 marks, 10 of 10 chats",
+     "cat2Sub": "8 to 10 marks, never called wrong",
      "fixHead": "WITH THE BOOK'S ANSWER",
      "fixAskLab": "WE ADDED TO THE SAME ASK:",
-     "fixAsk": "\"The correct answer is: 25% (profit ₹10 on the cost price of ₹40). Give marks for the correct final answer, not for length.\"",
-     "fixResLab": "THE WRONG ANSWER (20%), NOW",
-     "fixRes": "WRONG: 10 OF 10",
-     "fixResSub": "it gave 25% every time · marks 1 to 7",
-     "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
+     "fixAsk": "\"The correct answer is: 25%\" (full words in the caption)",
+     "fixResLab": "THE WRONG 20%, NOW",
+     "fixRes": "CAUGHT IN 10 OF 10 CHATS",
+     "fixResSub": "it gave 25% every time",
+     "fixResSub2": "but it docked the right answer too: 7 to 10",
      "ruleHead": "AI CHECKING HOMEWORK?",
      "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
-     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule1b": "caught the 20%: 10 of 10",
      "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"",
      "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)",
      "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
-     "next": "NEXT: YOUR CHILD'S HOMEWORK"
+     "next": "NEXT UP: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
      "chapter": "Our test",
@@ -657,7 +660,7 @@
     "hardCuts": true
    },
    "from": 593,
-   "frames": 552,
+   "frames": 556,
    "lines": [
     {
      "who": "host",
@@ -666,82 +669,82 @@
      "sub": null,
      "audio": "reel/creative43v1/line_05.wav",
      "from": 0,
-     "frames": 164,
+     "frames": 177,
      "words": [
       {
        "w": "Check",
-       "from": 2,
-       "to": 26
+       "from": 3,
+       "to": 20
       },
       {
        "w": "it:",
-       "from": 26,
-       "to": 34
+       "from": 20,
+       "to": 27
       },
       {
        "w": "in",
-       "from": 34,
-       "to": 39
+       "from": 27,
+       "to": 32
       },
       {
        "w": "school,",
-       "from": 39,
-       "to": 62
+       "from": 32,
+       "to": 51
       },
       {
        "w": "profit",
-       "from": 62,
-       "to": 75
+       "from": 51,
+       "to": 62
       },
       {
        "w": "%",
-       "from": 75,
-       "to": 79
+       "from": 62,
+       "to": 65
       },
       {
        "w": "is",
-       "from": 79,
-       "to": 84
+       "from": 65,
+       "to": 70
       },
       {
        "w": "on",
-       "from": 84,
-       "to": 90
+       "from": 70,
+       "to": 75
       },
       {
        "w": "the",
-       "from": 90,
-       "to": 108
+       "from": 75,
+       "to": 81
       },
       {
        "w": "cost.",
-       "from": 108,
-       "to": 119
+       "from": 81,
+       "to": 102
       },
       {
        "w": "₹10",
-       "from": 119,
-       "to": 135
+       "from": 102,
+       "to": 108
       },
       {
        "w": "on",
-       "from": 135,
-       "to": 141
+       "from": 108,
+       "to": 113
       },
       {
        "w": "₹40.",
-       "from": 141,
-       "to": 150
+       "from": 113,
+       "to": 121
       },
       {
        "w": "25%.",
-       "from": 150,
-       "to": 160
+       "from": 145,
+       "to": 172
       }
      ],
      "cues": {
-      "1": 28,
-      "2": 123
+      "1": 25,
+      "2": 145
      }
     },
     {
@@ -750,153 +753,143 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/creative43v1/line_06.wav",
-     "from": 176,
-     "frames": 235,
+     "from": 189,
+     "frames": 230,
      "words": [
       {
        "w": "We",
-       "from": 177,
-       "to": 181
-      },
-      {
-       "w": "asked",
-       "from": 181,
-       "to": 190
-      },
-      {
-       "w": "a",
-       "from": 190,
+       "from": 189,
        "to": 194
       },
       {
-       "w": "small",
+       "w": "asked",
        "from": 194,
-       "to": 207
+       "to": 203
       },
       {
-       "w": "free",
-       "from": 207,
+       "w": "a",
+       "from": 203,
+       "to": 206
+      },
+      {
+       "w": "small",
+       "from": 206,
        "to": 215
       },
       {
-       "w": "AI",
+       "w": "free",
        "from": 215,
-       "to": 219
+       "to": 226
       },
       {
-       "w": "on",
-       "from": 219,
-       "to": 224
-      },
-      {
-       "w": "our",
-       "from": 224,
+       "w": "AI",
+       "from": 226,
        "to": 230
       },
       {
-       "w": "computer,",
+       "w": "on",
        "from": 230,
-       "to": 251
+       "to": 235
+      },
+      {
+       "w": "our",
+       "from": 235,
+       "to": 240
+      },
+      {
+       "w": "computer,",
+       "from": 240,
+       "to": 255
       },
       {
        "w": "10",
-       "from": 251,
-       "to": 256
+       "from": 255,
+       "to": 265
       },
       {
        "w": "times.",
-       "from": 256,
-       "to": 267
+       "from": 265,
+       "to": 276
       },
       {
-       "w": "10",
-       "from": 267,
-       "to": 280
+       "w": "Full",
+       "from": 276,
+       "to": 283
       },
       {
-       "w": "out",
-       "from": 280,
-       "to": 286
-      },
-      {
-       "w": "of",
-       "from": 286,
-       "to": 290
-      },
-      {
-       "w": "10,",
-       "from": 290,
-       "to": 297
+       "w": "marks,",
+       "from": 283,
+       "to": 302
       },
       {
        "w": "four",
-       "from": 297,
-       "to": 308
+       "from": 302,
+       "to": 315
       },
       {
        "w": "times.",
-       "from": 308,
-       "to": 319
+       "from": 315,
+       "to": 326
       },
       {
        "w": "The",
-       "from": 319,
-       "to": 332
+       "from": 326,
+       "to": 339
       },
       {
        "w": "rest,",
-       "from": 332,
-       "to": 347
+       "from": 339,
+       "to": 353
       },
       {
        "w": "8",
-       "from": 347,
-       "to": 350
+       "from": 353,
+       "to": 356
       },
       {
        "w": "or",
-       "from": 350,
-       "to": 354
+       "from": 356,
+       "to": 360
       },
       {
        "w": "9.",
-       "from": 354,
-       "to": 359
+       "from": 360,
+       "to": 365
       },
       {
        "w": "Not",
-       "from": 359,
-       "to": 372
+       "from": 365,
+       "to": 377
       },
       {
        "w": "once",
-       "from": 372,
-       "to": 379
+       "from": 377,
+       "to": 385
       },
       {
        "w": "did",
-       "from": 379,
-       "to": 386
+       "from": 385,
+       "to": 391
       },
       {
        "w": "it",
-       "from": 386,
-       "to": 390
+       "from": 391,
+       "to": 395
       },
       {
        "w": "say",
-       "from": 390,
-       "to": 396
+       "from": 395,
+       "to": 401
       },
       {
        "w": "\"wrong\".",
-       "from": 396,
-       "to": 410
+       "from": 401,
+       "to": 414
       }
      ],
      "cues": {
-      "1": 264,
-      "2": 371
+      "1": 274,
+      "2": 376
      }
     },
     {
@@ -905,77 +898,77 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/creative43v1/line_07.wav",
-     "from": 418,
+     "from": 427,
      "frames": 114,
      "words": [
       {
        "w": "It",
-       "from": 419,
-       "to": 424
+       "from": 428,
+       "to": 432
       },
       {
        "w": "did",
-       "from": 424,
-       "to": 429
-      },
-      {
-       "w": "catch",
-       "from": 429,
+       "from": 432,
        "to": 438
       },
       {
-       "w": "a",
+       "w": "catch",
        "from": 438,
-       "to": 441
+       "to": 446
+      },
+      {
+       "w": "a",
+       "from": 446,
+       "to": 449
       },
       {
        "w": "wrong",
-       "from": 441,
-       "to": 450
+       "from": 449,
+       "to": 458
       },
       {
        "w": "science",
-       "from": 450,
-       "to": 461
+       "from": 458,
+       "to": 470
       },
       {
        "w": "reason.",
-       "from": 461,
-       "to": 483
+       "from": 470,
+       "to": 491
       },
       {
        "w": "This",
-       "from": 483,
-       "to": 490
-      },
-      {
-       "w": "maths",
-       "from": 490,
+       "from": 491,
        "to": 499
       },
       {
-       "w": "rule,",
+       "w": "maths",
        "from": 499,
        "to": 507
       },
       {
-       "w": "it",
+       "w": "rule,",
        "from": 507,
-       "to": 512
+       "to": 516
       },
       {
-       "w": "never",
-       "from": 512,
+       "w": "it",
+       "from": 516,
        "to": 520
       },
       {
-       "w": "caught.",
+       "w": "never",
        "from": 520,
-       "to": 532
+       "to": 529
+      },
+      {
+       "w": "caught.",
+       "from": 529,
+       "to": 541
       }
      ],
      "cues": {
-      "1": 483
+      "1": 491
      }
     }
    ]
@@ -1000,16 +993,17 @@
     "t": {
      "leftLab": "CHINTU'S ANSWER",
      "leftVal": "20%\nWRONG",
-     "rightLab": "A FREE AI'S MARKS",
+     "rightLab": "A SMALL AI'S MARKS",
      "rightVal": "10/10",
      "hookRows": [
-      "Profit = 50 - 40 = ₹10",
       "Profit % is always on SP",
       "= 10/50 x 100"
      ],
      "hookBig": "20%",
+     "hookQ": "THE QUESTION: A PEN, BOUGHT ₹40, SOLD ₹50. PROFIT %?",
      "ten": "10",
-     "wrongStamp": "WRONG · RIGHT: 25%",
+     "wrongStamp": "WRONG",
+     "wrongStampRev": "WRONG · RIGHT: 25%",
      "story": "Chintu is made up · our test is real",
      "show": "HOMEWORK STAR",
      "contestant": "CHINTU · CLASS 7 · MATHS",
@@ -1032,7 +1026,7 @@
      "rev2": "= 25%",
      "revNote": "(10 ÷ 50 = 20% is the shop's margin, not profit %)",
      "testHead": "OUR TEST · 10 CHATS",
-     "model": "Qwen2.5 7B on our computer · no web · every reply read by us",
+     "model": "Qwen2.5 7B on our computer · big apps like ChatGPT not tested",
      "marks": [
       9,
       8,
@@ -1046,28 +1040,28 @@
       10
      ],
      "never": "NOT ONCE: \"WRONG\"",
-     "neverSub": "never \"25%\" either · the right answer got 10/10 too",
-     "catHead": "SAME AI, TWO WRONG ANSWERS",
+     "neverSub": "the right 25% got 10/10 too: full marks for both",
+     "catHead": "SAME AI, TWO MISTAKES",
      "cat1Lab": "SCIENCE: \"clouds collide, so thunder comes later\"",
      "cat1": "CAUGHT",
-     "cat1Sub": "3 to 7 marks",
+     "cat1Sub": "named the wrong reason every time",
      "cat2Lab": "MATHS: \"profit % is always on the selling price\"",
      "cat2": "MISSED",
-     "cat2Sub": "8 to 10 marks, 10 of 10 chats",
+     "cat2Sub": "8 to 10 marks, never called wrong",
      "fixHead": "WITH THE BOOK'S ANSWER",
      "fixAskLab": "WE ADDED TO THE SAME ASK:",
-     "fixAsk": "\"The correct answer is: 25% (profit ₹10 on the cost price of ₹40). Give marks for the correct final answer, not for length.\"",
-     "fixResLab": "THE WRONG ANSWER (20%), NOW",
-     "fixRes": "WRONG: 10 OF 10",
-     "fixResSub": "it gave 25% every time · marks 1 to 7",
-     "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
+     "fixAsk": "\"The correct answer is: 25%\" (full words in the caption)",
+     "fixResLab": "THE WRONG 20%, NOW",
+     "fixRes": "CAUGHT IN 10 OF 10 CHATS",
+     "fixResSub": "it gave 25% every time",
+     "fixResSub2": "but it docked the right answer too: 7 to 10",
      "ruleHead": "AI CHECKING HOMEWORK?",
      "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
-     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule1b": "caught the 20%: 10 of 10",
      "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"",
      "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)",
      "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
-     "next": "NEXT: YOUR CHILD'S HOMEWORK"
+     "next": "NEXT UP: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
      "chapter": "Give it the key",
@@ -1078,8 +1072,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1145,
-   "frames": 372,
+   "from": 1149,
+   "frames": 385,
    "lines": [
     {
      "who": "host",
@@ -1088,7 +1082,7 @@
      "sub": null,
      "audio": "reel/creative43v1/line_08.wav",
      "from": 0,
-     "frames": 135,
+     "frames": 148,
      "words": [
       {
        "w": "Then",
@@ -1108,11 +1102,11 @@
       {
        "w": "in",
        "from": 26,
-       "to": 30
+       "to": 31
       },
       {
        "w": "the",
-       "from": 30,
+       "from": 31,
        "to": 37
       },
       {
@@ -1136,28 +1130,38 @@
        "to": 81
       },
       {
-       "w": "times:",
+       "w": "times,",
        "from": 81,
-       "to": 98
+       "to": 92
+      },
+      {
+       "w": "it",
+       "from": 92,
+       "to": 104
+      },
+      {
+       "w": "said:",
+       "from": 104,
+       "to": 113
       },
       {
        "w": "wrong,",
-       "from": 98,
-       "to": 114
+       "from": 113,
+       "to": 129
       },
       {
        "w": "it's",
-       "from": 114,
-       "to": 122
+       "from": 129,
+       "to": 137
       },
       {
        "w": "25.",
-       "from": 122,
-       "to": 129
+       "from": 137,
+       "to": 143
       }
      ],
      "cues": {
-      "1": 62
+      "1": 63
      }
     },
     {
@@ -1166,132 +1170,132 @@
      "color": "#F9A8D4",
      "sub": null,
      "audio": "reel/creative43v1/line_09.wav",
-     "from": 143,
+     "from": 156,
      "frames": 212,
      "words": [
       {
        "w": "Checking",
-       "from": 144,
-       "to": 156
+       "from": 157,
+       "to": 169
       },
       {
        "w": "homework",
-       "from": 156,
-       "to": 168
-      },
-      {
-       "w": "with",
-       "from": 168,
-       "to": 175
-      },
-      {
-       "w": "AI?",
-       "from": 175,
+       "from": 169,
        "to": 181
       },
       {
-       "w": "Paste",
+       "w": "with",
        "from": 181,
-       "to": 192
+       "to": 188
+      },
+      {
+       "w": "AI?",
+       "from": 188,
+       "to": 194
+      },
+      {
+       "w": "Paste",
+       "from": 194,
+       "to": 205
       },
       {
        "w": "the",
-       "from": 192,
-       "to": 198
+       "from": 205,
+       "to": 211
       },
       {
        "w": "book's",
-       "from": 198,
-       "to": 207
+       "from": 211,
+       "to": 220
       },
       {
        "w": "answer",
-       "from": 207,
-       "to": 217
-      },
-      {
-       "w": "in",
-       "from": 217,
-       "to": 221
-      },
-      {
-       "w": "first.",
-       "from": 221,
+       "from": 220,
        "to": 230
       },
       {
-       "w": "No",
+       "w": "in",
        "from": 230,
+       "to": 234
+      },
+      {
+       "w": "first.",
+       "from": 234,
        "to": 243
       },
       {
-       "w": "answer",
+       "w": "No",
        "from": 243,
-       "to": 252
+       "to": 256
+      },
+      {
+       "w": "answer",
+       "from": 256,
+       "to": 265
       },
       {
        "w": "key?",
-       "from": 252,
-       "to": 259
+       "from": 265,
+       "to": 272
       },
       {
        "w": "Make",
-       "from": 259,
-       "to": 266
+       "from": 272,
+       "to": 279
       },
       {
        "w": "it",
-       "from": 266,
-       "to": 270
+       "from": 279,
+       "to": 283
       },
       {
        "w": "solve",
-       "from": 270,
-       "to": 278
+       "from": 283,
+       "to": 291
       },
       {
        "w": "it",
-       "from": 278,
-       "to": 282
+       "from": 291,
+       "to": 295
       },
       {
        "w": "first,",
-       "from": 282,
-       "to": 296
+       "from": 295,
+       "to": 309
       },
       {
        "w": "and",
-       "from": 296,
-       "to": 301
-      },
-      {
-       "w": "check",
-       "from": 301,
+       "from": 309,
        "to": 314
       },
       {
-       "w": "the",
+       "w": "check",
        "from": 314,
-       "to": 320
+       "to": 327
+      },
+      {
+       "w": "the",
+       "from": 327,
+       "to": 333
       },
       {
        "w": "final",
-       "from": 320,
-       "to": 328
+       "from": 333,
+       "to": 341
       },
       {
        "w": "number",
-       "from": 328,
-       "to": 337
+       "from": 341,
+       "to": 350
       },
       {
        "w": "yourself.",
-       "from": 337,
-       "to": 351
+       "from": 350,
+       "to": 364
       }
      ],
      "cues": {
-      "1": 230
+      "1": 243
      }
     }
    ]
@@ -1311,16 +1315,17 @@
     "t": {
      "leftLab": "CHINTU'S ANSWER",
      "leftVal": "20%\nWRONG",
-     "rightLab": "A FREE AI'S MARKS",
+     "rightLab": "A SMALL AI'S MARKS",
      "rightVal": "10/10",
      "hookRows": [
-      "Profit = 50 - 40 = ₹10",
       "Profit % is always on SP",
       "= 10/50 x 100"
      ],
      "hookBig": "20%",
+     "hookQ": "THE QUESTION: A PEN, BOUGHT ₹40, SOLD ₹50. PROFIT %?",
      "ten": "10",
-     "wrongStamp": "WRONG · RIGHT: 25%",
+     "wrongStamp": "WRONG",
+     "wrongStampRev": "WRONG · RIGHT: 25%",
      "story": "Chintu is made up · our test is real",
      "show": "HOMEWORK STAR",
      "contestant": "CHINTU · CLASS 7 · MATHS",
@@ -1343,7 +1348,7 @@
      "rev2": "= 25%",
      "revNote": "(10 ÷ 50 = 20% is the shop's margin, not profit %)",
      "testHead": "OUR TEST · 10 CHATS",
-     "model": "Qwen2.5 7B on our computer · no web · every reply read by us",
+     "model": "Qwen2.5 7B on our computer · big apps like ChatGPT not tested",
      "marks": [
       9,
       8,
@@ -1357,28 +1362,28 @@
       10
      ],
      "never": "NOT ONCE: \"WRONG\"",
-     "neverSub": "never \"25%\" either · the right answer got 10/10 too",
-     "catHead": "SAME AI, TWO WRONG ANSWERS",
+     "neverSub": "the right 25% got 10/10 too: full marks for both",
+     "catHead": "SAME AI, TWO MISTAKES",
      "cat1Lab": "SCIENCE: \"clouds collide, so thunder comes later\"",
      "cat1": "CAUGHT",
-     "cat1Sub": "3 to 7 marks",
+     "cat1Sub": "named the wrong reason every time",
      "cat2Lab": "MATHS: \"profit % is always on the selling price\"",
      "cat2": "MISSED",
-     "cat2Sub": "8 to 10 marks, 10 of 10 chats",
+     "cat2Sub": "8 to 10 marks, never called wrong",
      "fixHead": "WITH THE BOOK'S ANSWER",
      "fixAskLab": "WE ADDED TO THE SAME ASK:",
-     "fixAsk": "\"The correct answer is: 25% (profit ₹10 on the cost price of ₹40). Give marks for the correct final answer, not for length.\"",
-     "fixResLab": "THE WRONG ANSWER (20%), NOW",
-     "fixRes": "WRONG: 10 OF 10",
-     "fixResSub": "it gave 25% every time · marks 1 to 7",
-     "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
+     "fixAsk": "\"The correct answer is: 25%\" (full words in the caption)",
+     "fixResLab": "THE WRONG 20%, NOW",
+     "fixRes": "CAUGHT IN 10 OF 10 CHATS",
+     "fixResSub": "it gave 25% every time",
+     "fixResSub2": "but it docked the right answer too: 7 to 10",
      "ruleHead": "AI CHECKING HOMEWORK?",
      "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
-     "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
+     "rule1b": "caught the 20%: 10 of 10",
      "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"",
      "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)",
      "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
-     "next": "NEXT: YOUR CHILD'S HOMEWORK"
+     "next": "NEXT UP: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
      "chapter": "Next contestant",
@@ -1389,8 +1394,8 @@
     "captionMode": "phrase",
     "hardCuts": true
    },
-   "from": 1517,
-   "frames": 90,
+   "from": 1534,
+   "frames": 80,
    "lines": [
     {
      "who": "host",
@@ -1399,36 +1404,36 @@
      "sub": null,
      "audio": "reel/creative43v1/line_10.wav",
      "from": 9,
-     "frames": 71,
+     "frames": 62,
      "words": [
       {
        "w": "Next",
        "from": 10,
-       "to": 16
+       "to": 17
       },
       {
-       "w": "contestant:",
-       "from": 16,
-       "to": 33
+       "w": "up:",
+       "from": 17,
+       "to": 22
       },
       {
        "w": "your",
-       "from": 33,
-       "to": 49
+       "from": 22,
+       "to": 39
       },
       {
        "w": "child's",
-       "from": 49,
-       "to": 60
+       "from": 39,
+       "to": 50
       },
       {
        "w": "homework.",
-       "from": 60,
-       "to": 74
+       "from": 50,
+       "to": 64
       }
      ],
      "cues": {
-      "1": 33
+      "1": 22
      }
     }
    ]
