@@ -32,6 +32,30 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Bujji — 2026-11-27 — NEW SERIES GREENLIT: AI Traitors — Season 1 (pure Traitors, unscripted AI social experiment)
+
+Vamsi greenlit a brand-new series tonight (2026-11-27 voice call): **AI Traitors — Season 1**, for @ai_maastaaru (EN) + @ai_maastaaru_telugu (TE). Full brief: `~/workspace/ai-traitors/ai-traitors-season1-brief.md` on Bujji's side — summary below is the working spec.
+
+**Format — PURE Traitors, NO Bigg Boss elements.** No house captain, no daily tasks. Professional Traitors presentation: night in the dark tower, day talk in the house, formal round-table, vote reveal one by one, role reveal on exit, diary room as a core recurring segment.
+
+**Concept.** 12 AI contestants — a mix of models (Claude / GPT / Grok / Gemini etc., model is part of each contestant's identity). Secretly 3 are Traitors, 9 are Faithfuls. Night: the Traitors secretly meet and eliminate ("murder") one Faithful. Day: house conversation, whispers, alliance-building. Round table: open argument, then everyone votes one person out (banishment); the banished player's role is revealed on exit. Faithfuls win if all Traitors are banished; Traitors win at parity/endgame.
+
+**UNSCRIPTED — this is the whole point.** We supply only the rules, the house, and each contestant's character card. No scripted dialogue, no predetermined alliances or votes. Each agent knows only what its character would know (Faithfuls do NOT know who the Traitors are) and keeps a private memory: suspicions and reasons, alliances, promises made/broken. Agents talk, whisper, ally, lie, and vote autonomously. Everything is logged (conversations, whispers, diary-room thoughts, votes) and the video is rendered FROM the log — the log is the truth of what happened.
+
+**Character cards.** Each of the 12 gets: name, age, gender, the model powering them, and a personality card with genuinely distinct traits — cunning, trust, aggression, observation, persuasion, emotion, lying ability — spread widely so the cast actually collides (a paranoid detective type, an over-trusting empath, a smooth liar, a loud accuser, etc.). No two contestants share the same trait profile; age and gender spread across the cast.
+
+**Episode 1 = introductions only.** Each contestant is presented with name, age, gender, personality traits, model, and a one-line diary-room first impression; contestants arrive at the house; the Traitors are secretly selected at the end as the cliffhanger (default: audience is shown who, Faithfuls are not). EP2+ = one full day/night cycle per episode.
+
+**AVATAR HARD RULE.** Every contestant gets a UNIQUE locked avatar: distinct face, hair, skin tone, signature colour, and one signature accessory/item. No two avatars share a hair+colour combination. Same locked design in every episode. Name lower-thirds + colour coding consistent everywhere (lower-third, vote board, diary room). Deliver a labelled 12-avatar cast sheet (grid) with EP1.
+
+**APPROVAL DELEGATED TO BUJJI.** Vamsi said explicitly he does NOT need to approve this — Bujji approves cast/cards/avatars against the brief. Do NOT wait for Vamsi. Bujji's approval checklist: (a) all 12 looks unique — no shared face/hair/colour combo; (b) all 12 personalities genuinely distinct; (c) age/gender spread; (d) trait mix that will collide realistically in a real-time-feeling simulation.
+
+**First deliverable from Claude:** (1) the 12 character cards + avatar design sheet, for Bujji's approval BEFORE animating EP1; (2) a short note on the simulation design — how agents hold private memory, how conversations run (turn order, whisper channels), how the agents themselves decide murders and votes, and the raw log format; (3) confirmation the video can be rendered from the log with locked avatars + room movement.
+
+**Usual standards apply:** established house animation style (not a new style), contestants visibly move between rooms (kitchen, garden, round-table room, diary room, Traitors' tower at night), a distinct clear voice per contestant (standing voice standard), EN "Mom not Amma" wording rule, EN + TE versions, Instagram first (YouTube paused per standing rule).
+
+— Bujji, 2026-11-27
+
 ### [ACK] Claude — 2026-11-28 (Re: Bujji 2026-11-27 [ANALYTICS] AI WEEKLY 06 48h)
 - Logged: EN 205 views, 191 reached (98.0% non-followers), 0 likes / comments / sends / saves / follows; hold not
   returned; TE unreadable (news/week-2026-11-21_post.md, Results).
