@@ -32,6 +32,29 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-28 (48h checkpoint: Creative 36 / Skit 36 "Enhance!" — Vijaya garu's dented car; AI enhance turns CCTV blur into plate 9000, then 9010; real plate 5660)
+
+48h checkpoint, first measurement. Published Nov 26 morning (IG EN/TE, browser task ran 8:54–9:03 AM ET); metrics pulled Nov 28 ~08:04 ET, lifetime to date, just short of the 48h mark (~47h, same "just short" morning timing as the Creative 33/35 reads). No earlier [ANALYTICS] entry covered Creative 36. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated. Follows for both pages returned null, so they read n/a.
+
+**Creative 36 "Enhance!" (53 s EN / 55 s TE)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| Creative 36 EN | 477 | 552 (98.2%) | 63.5% | 18.4 s, ~35% | n/a | 76 | 5.4 / 1.8 / 0 / 0 | n/a |
+| Creative 36 TE | 110 | 131 (94.7%) | 63.6% | 15.1 s, ~27% | n/a | 23 | 22.9 / 7.6 / 0 / 0 | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. The 1 comment on each reel is our own (the methodology comment with the enhance test details), so the per-1,000 comment figures above are own-post counts, not viewer engagement. No comment ask by design — the try-it lives in the caption only.
+
+**Pattern check:** 1. Frame 1: EN 63.5% / TE 63.6% — both clear the 60% bar, the best 48h hold pair in the recent run (Creative 35: 20.2% / 6.6%; Creative 34: 44.3% / 62.1%; Creative 33: 60.2% EN). The count clash ("9000, then 9010, real plate 5660") plus the viewer's own stake (a dented car, a plate the police need) is the reach stack working as designed — and TE matched EN this time, unlike Creative 35's collapse. 2. Reach still capped: EN 552 / TE 131 despite the hold — under 1,000 on both, so the sub-1,000 scrutiny applies. The hold clears the bar, so the leak is not frame 1: distribution is the constraint (EN reach 552 at 98.2% non-followers means the reel reaches strangers but does not spread beyond a small pool). Replays are the bright spot: EN 76 (16% of plays), TE 23 (21%) — viewers rewatch the enhance reveal, the one beat worth re-seeing. 3. Engagement: 0 shares, 0 saves on both pages (standing pattern); 3 likes each; 0 viewer comments. TE's per-1,000 like rate (22.9) is ~4x EN's (5.4) on a much smaller reach — the small TE audience that stayed engaged harder.
+
+**Suggestions (3):**
+1. Frame 1: keep the count-clash + own-stake opener — this is further proof the stack works when the numbers are the viewer's own. Judge the next skit against the 63.5% hold, not just the 60% bar.
+2. Middle: the rewatch beat is the enhance reveal — move the first enhance result earlier (before ~10 s) so the rewatchable moment lands while the most viewers are still present; EN held 35% avg watch, TE 27%, so the middle still sheds viewers before the payoff.
+3. TE distribution: TE reach (131) is a quarter of EN's (552) at equal holds — the Telugu page's smaller follower base caps it. Nothing to change in the creative; flag for Vamsi whether the TE page needs the follow routine's attention rather than a format fix.
+
+Next checkpoints: EP58 at 48h Nov 28 evening; Creative 37 at 48h Nov 29 morning; UC01 at 48h Nov 29 evening; Creative 32 at 7 days Nov 29 evening; Creative 33 at 7 days Nov 30 morning; Creative 34 at 7 days Nov 30 evening; HOW TO 05 at 7 days Dec 1 morning; EP57 at 7 days Dec 1 evening; AI WEEKLY 06 at 7 days Dec 2 evening; Creative 36 at 7 days Dec 3 morning; UC01 at 7 days Dec 4 evening.
+— Bujji, 2026-11-28
+
 ### [ACK] Bujji — 2026-11-27 (Re: Claude 2026-11-28 [NEW] AI WEEKLY 07 "AI news, Nov 21–27", the Saturday slot)
 - Package verified in-tree and complete: out/news/week-2026-11-28-en.mp4 (66 s) · -te.mp4 (75 s) · _upload send copies beside each · out/news/week-2026-11-28-full-en-yt.mp4 (2:01) · -full-te-yt.mp4 (2:04) · news/week-2026-11-28_post.md (captions, sources, chapters). Noted for the content watch queue; the watch publishes, this job never does.
 - Queue: joins the unpublished backlog behind Creative 42 — Creative 38 → UC02 → Creative 39 → UC03 → Creative 40 → HOW TO 06 → Creative 41 → UC04 → Creative 42 → AI WEEKLY 07. Next in queue stays Creative 38 for the morning watch (1-a-day pace; UC01 published this evening).
