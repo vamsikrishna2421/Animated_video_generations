@@ -25,7 +25,8 @@ LINES = {   # n: (prop, who, English, Telugu); v2 after the script review
         "మా కంప్యూటర్ లో, ఒక చిన్న ఫ్రీ చాట్‌బాట్ ని, పది సార్లు అడిగాం. | [1] నాలుగు సార్లు టెన్ ఔట్ ఆఫ్ టెన్, మిగతావి ఎనిమిది, తొమ్మిది. [2] తప్పు అనే మాట, ఒక్కసారి కూడా రాలేదు."),
     7: ("caught", "host", "It did catch a wrong science reason. [1] This maths rule, it never caught.",
         "సైన్స్ లో తప్పు కారణాన్ని మాత్రం, పట్టుకుంది. [1] ఈ లెక్కలో రూల్ ని, ఒక్కసారి కూడా పట్టుకోలేదు."),
-    8: ("fix", "host", "FIX [1] FIX", "FIX [1] FIX"),
+    8: ("fix", "host", "Then we pasted in the book's answer. [1] All ten times: wrong, it's twenty-five.",
+        "తర్వాత, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇచ్చాం. [1] పది సార్లూ: తప్పు, ట్వంటీ ఫైవ్ అని చెప్పింది."),
     9: ("rule", "host", "RULE [1] RULE", "RULE [1] RULE"),
     10: ("loop", "host", "Next contestant: [1] your child's homework.", "నెక్స్ట్ కంటెస్టెంట్: [1] మన పిల్లల హోమ్‌వర్క్."),
 }
@@ -36,6 +37,7 @@ SHOW = {1: "20%. Wrong answer. The AI judge? 10 out of 10!",
         5: "Check it: in school, profit % is on the cost. ₹10 on ₹40. 25%.",
         6: "We asked a small free AI on our computer, 10 times. 10 out of 10, four times. The rest, 8 or 9. Not once did it say \"wrong\".",
         7: "It did catch a wrong science reason. This maths rule, it never caught.",
+        8: "Then we pasted in the book's answer. All 10 times: wrong, it's 25.",
         10: "Next contestant: your child's homework."}
 SHOW_TE = {
     1: "20%. Wrong answer. But the chatbot judge: 10 out of 10!",
@@ -45,6 +47,7 @@ SHOW_TE = {
     5: "Let's check: in school, profit % is on the cost price. ₹10 on ₹40. 25%.",
     6: "We asked a small free chatbot on our computer, 10 times. 10 out of 10 four times, the rest 8 and 9. The word \"wrong\": not even once.",
     7: "A wrong science reason, it did catch. This maths rule, not even once.",
+    8: "Then we also gave it the answer from the book. All 10 times it said: wrong, 25.",
     10: "Next contestant: our children's homework.",
 }
 TEMPO_EN = {"host": 1.08, "ai": 1.05}
@@ -64,7 +67,10 @@ T = {
     "marks": [9, 8, 10, 10, 9, 8, 8, 10, 8, 10], "never": "NOT ONCE: \"WRONG\"", "neverSub": "never \"25%\" either · the right answer got 10/10 too",
     "catHead": "SAME AI, TWO WRONG ANSWERS", "cat1Lab": "SCIENCE: \"clouds collide, so thunder comes later\"", "cat1": "CAUGHT", "cat1Sub": "3 to 7 marks",
     "cat2Lab": "MATHS: \"profit % is always on the selling price\"", "cat2": "MISSED", "cat2Sub": "8 to 10 marks, 10 of 10 chats",
-    "fixHead": "WITH THE ANSWER KEY", "fixAskLab": "WE ADDED:", "fixAsk": "FIX", "fixResLab": "THE WRONG ANSWER", "fixRes": "FIX", "fixResSub": "FIX",
+    "fixHead": "WITH THE BOOK'S ANSWER", "fixAskLab": "WE ADDED TO THE SAME ASK:",
+    "fixAsk": "\"The correct answer is: 25% (profit ₹10 on the cost price of ₹40). Give marks for the correct final answer, not for length.\"",
+    "fixResLab": "THE WRONG ANSWER (20%), NOW", "fixRes": "WRONG: 10 OF 10", "fixResSub": "it gave 25% every time · marks 1 to 7",
+    "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
     "ruleHead": "AI CHECKING HOMEWORK?", "rule1": "GIVE IT THE ANSWER KEY FIRST", "rule1b": "the book's answer, pasted in",
     "rule2": "CHECK THE FINAL NUMBER", "rule2b": "yourself: 25% or 20%?", "ruleChip": "profit % = profit ÷ cost price × 100",
     "next": "NEXT: YOUR CHILD'S HOMEWORK",

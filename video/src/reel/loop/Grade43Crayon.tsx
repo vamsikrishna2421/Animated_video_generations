@@ -237,7 +237,8 @@ const StGrade: React.FC<SP> = ({ s }) => {
           c.font = SANS(36, 800); c.fillStyle = "#fff"; wrap(c, T.fixAsk, W - 240).slice(0, 4).forEach((t, q) => c.fillText(t, 110, 510 + q * 48)); c.restore();
           if (k1 > 0) { card(c, 70, 760, W - 140, 420, k1, GREEN); c.save(); c.globalAlpha = clamp(k1 * 3); c.textAlign = "center"; c.font = SANS(40, 900); c.fillStyle = "#bbf7d0"; c.fillText(T.fixResLab, W / 2, 830);
             c.font = SANS(fit(c, T.fixRes, W - 200, 120, 900), 900); c.fillStyle = "#fff"; c.fillText(T.fixRes, W / 2, 980);
-            c.font = SANS(fit(c, T.fixResSub, W - 200, 38, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.fixResSub, W / 2, 1080); c.restore(); }
+            c.font = SANS(fit(c, T.fixResSub, W - 200, 38, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.fixResSub, W / 2, 1070);
+            c.font = SANS(fit(c, T.fixResSub2, W - 200, 30, 700), 700); c.fillStyle = "#94a3b8"; c.fillText(T.fixResSub2, W / 2, 1135); c.restore(); }
         } else if (P === "rule") {
           c.textAlign = "center"; c.font = SANS(56, 900); c.fillStyle = "#fdf4ff"; c.fillText(T.ruleHead, W / 2, 330);
           const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, cu(1, 0.2) - 4, cu(1, 0.2) + 6);

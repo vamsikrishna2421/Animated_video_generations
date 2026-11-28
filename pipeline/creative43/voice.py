@@ -60,7 +60,7 @@ MUST = {"en": {1: [("twenty", "20"), ("percent", "20"), ("wrong",), ("judge",), 
                5: [("check",), ("school",), ("profit",), ("cost",), ("ten", "10"), ("forty", "40"), ("twenty", "25"), ("five", "25")],
                6: [("small",), ("free",), ("computer",), ("ten", "10"), ("four", "4"), ("rest",), ("eight", "8"), ("nine", "9"), ("once",), ("wrong",)],
                7: [("catch",), ("wrong",), ("science",), ("maths", "math"), ("rule",), ("never",), ("caught",)],
-               8: [], 9: [], 10: [("next",), ("contestant",), ("child", "child's"), ("homework",)]},
+               8: [("pasted",), ("book", "book's"), ("answer",), ("ten", "10"), ("wrong",), ("twenty", "25"), ("five", "25")], 9: [], 10: [("next",), ("contestant",), ("child", "child's"), ("homework",)]},
         "te": {}}   # Telugu: full reads by hand (chunk by chunk)
 JUDGE_TEXT = {1: "20%. Wrong answer. The AI judge? 10 out of 10!",
               2: "Welcome to Homework Star! Chintu, class 7. A pen, bought for 40 rupees, sold for 50. Profit percent?",
@@ -69,6 +69,7 @@ JUDGE_TEXT = {1: "20%. Wrong answer. The AI judge? 10 out of 10!",
               5: "Check it: in school, profit percent is on the cost. 10 on 40. 25%.",
               6: "We asked a small free AI on our computer, 10 times. 10 out of 10, 4 times. The rest, 8 or 9. Not once did it say wrong.",
               7: "It did catch a wrong science reason. This maths rule, it never caught.",
+              8: "Then we pasted in the book's answer. All 10 times: wrong, it's 25.",
               10: "Next contestant: your child's homework."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
