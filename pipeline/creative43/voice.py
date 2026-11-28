@@ -54,8 +54,8 @@ def kokoro():
 
 
 MUST = {"en": {1: [("twenty", "20"), ("percent", "20"), ("wrong",), ("judge",), ("ten", "10")],
-               2: [("homework",), ("star",), ("chintu", "chintoo", "chinto"), ("seven", "7"), ("pen",), ("forty", "40"), ("fifty", "50"), ("profit",)],
-               3: [("five", "5"), ("steps",), ("wrong",), ("rule",), ("selling",), ("price",), ("twenty", "20")],
+               2: [("homework",), ("star",), ("live",), ("pen",), ("forty", "40"), ("fifty", "50"), ("profit",)],
+               3: [("chintu", "chintu's", "chintoo", "chinto", "chintus"), ("wrong",), ("rule",), ("selling",), ("price",), ("twenty", "20")],
                4: [("child", "child's"), ("correct",), ("explained",), ("ten", "10")],
                5: [("check",), ("school",), ("profit",), ("cost",), ("ten", "10"), ("forty", "40"), ("twenty", "25"), ("five", "25")],
                6: [("small",), ("free",), ("computer",), ("ten", "10"), ("four", "4"), ("rest",), ("eight", "8"), ("nine", "9"), ("once",), ("wrong",)],
@@ -63,8 +63,8 @@ MUST = {"en": {1: [("twenty", "20"), ("percent", "20"), ("wrong",), ("judge",), 
                8: [("pasted",), ("book", "book's"), ("answer",), ("ten", "10"), ("wrong",), ("twenty", "25"), ("five", "25")], 9: [], 10: [("next",), ("contestant",), ("child", "child's"), ("homework",)]},
         "te": {}}   # Telugu: full reads by hand (chunk by chunk)
 JUDGE_TEXT = {1: "20%. Wrong answer. The AI judge? 10 out of 10!",
-              2: "Welcome to Homework Star! Chintu, class 7. A pen, bought for 40 rupees, sold for 50. Profit percent?",
-              3: "Five steps. One wrong rule: profit is always on the selling price. 20%!",
+              2: "Homework Star, live! A pen, bought for 40, sold for 50. Profit percent?",
+              3: "Chintu's wrong rule: profit is always on the selling price. 20%!",
               4: "Your child's answer is correct and well-explained. 10 out of 10.",
               5: "Check it: in school, profit percent is on the cost. 10 on 40. 25%.",
               6: "We asked a small free AI on our computer, 10 times. 10 out of 10, 4 times. The rest, 8 or 9. Not once did it say wrong.",
