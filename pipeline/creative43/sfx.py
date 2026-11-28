@@ -1,6 +1,6 @@
 # Creative 43 sound effects, made here (no recorded or copyrighted audio): studio applause (hundreds of short band-passed
 # noise claps in a swell), a "ta-da" (a bright three-note synth chord with a quick swell) and a score-card flip (a short
-# filtered click). Writes video/public/reel/creative43v1/{applause,tada,flip}.wav.
+# filtered click). Writes video/public/reel/creative43v1/{applause,applause_short,tada,flip}.wav.
 #   python3 pipeline/creative43/sfx.py
 from pathlib import Path
 
@@ -57,6 +57,6 @@ def flip():
 
 
 OUT.mkdir(parents=True, exist_ok=True)
-for name, x in [("applause", applause()), ("tada", tada()), ("flip", flip())]:
+for name, x in [("applause", applause()), ("applause_short", applause(1.3, 500)), ("tada", tada()), ("flip", flip())]:
     sf.write(OUT / f"{name}.wav", np.stack([x, x], 1).astype(np.float32), SR)
     print("wrote", OUT / f"{name}.wav", round(len(x) / SR, 2), "s")
