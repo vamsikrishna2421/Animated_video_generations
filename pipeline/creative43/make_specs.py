@@ -29,7 +29,7 @@ LINES = {   # n: (prop, who, English, Telugu); v2 after the script review
         "తర్వాత, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇచ్చాం. [1] పది సార్లూ: తప్పు, ట్వంటీ ఫైవ్ అని చెప్పింది."),
     9: ("rule", "host", "Checking homework with AI? Paste the book's answer in first. [1] No answer key? Make it solve it first, and check the final number yourself.",
         "చాట్‌బాట్ తో హోమ్‌వర్క్ చెక్ చేయిస్తున్నారా? ముందు, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇవ్వాలి. | [1] ఆన్సర్ కీ లేకపోతే, ముందు దాన్నే లెక్క చేయమనాలి. ఫైనల్ నంబర్, మనమే చెక్ చేసుకోవాలి."),
-    10: ("loop", "host", "Next contestant: [1] your child's homework.", "నెక్స్ట్ కంటెస్టెంట్: [1] మన పిల్లల హోమ్‌వర్క్."),
+    10: ("loop", "host", "Next contestant: [1] your child's homework.", "నెక్స్ట్ రౌండ్: [1] మన పిల్లల హోమ్‌వర్క్."),
 }
 SHOW = {1: "20%. Wrong answer. The AI judge? 10 out of 10!",
         2: "Homework Star, live! A pen, bought for ₹40, sold for ₹50. Profit %?",
@@ -51,7 +51,7 @@ SHOW_TE = {
     7: "A wrong science reason, it did catch. This maths rule, not even once.",
     8: "Then we also gave it the answer from the book. All 10 times it said: wrong, 25.",
     9: "Checking homework with a chatbot? First give it the answer from the book too. No answer key? Ask it to solve the sum first. Check the final number yourself.",
-    10: "Next contestant: our children's homework.",
+    10: "Next round: our children's homework.",
 }
 TEMPO_EN = {"host": 1.08, "ai": 1.05}
 LINE_TEMPO_EN = {2: 1.16}   # the question line, so the judge's verdict starts by ~10.5 s
