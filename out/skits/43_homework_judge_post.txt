@@ -1,0 +1,62 @@
+CREATIVE 43: "20% Wrong, 10 out of 10" (a TV talent-show parody, "Homework Star": a host and an AI judge. Chintu, made up, class 7, answers a profit question with the wrong rule, "profit % is always on the selling price", and gets 20%; the answer is 25%. A small free AI on our computer, asked to check it and give marks, 10 fresh chats: 10/10 four times, 8 or 9 the rest, and it never once said "wrong". It did catch a wrong science reason. With the book's answer pasted in, it caught the mistake all 10 times. English / Telugu, 9:16; also works as a YouTube Short)
+Files: out/skits/43_homework_judge.mp4 (English page) · out/skits/43_homework_judge_te.mp4 (Telugu page)
+Send copies: out/skits/43_homework_judge_ig.mp4 · out/skits/43_homework_judge_te_ig.mp4
+
+########## ENGLISH (@ai_maastaaru) ##########
+=== CAPTION ===
+20% is the wrong answer. An AI checking the homework gave it 10 out of 10.
+
+The question (class 7 maths): a pen bought for ₹40, sold for ₹50. Profit %? The answer: ₹10 profit on the ₹40 cost = 25%. (10 on 50 = 20% is the shop's margin, not the profit % schools ask for.)
+
+We asked a small free AI, on our own computer, to "check my child's homework answer and give marks out of 10", 10 fresh chats, and read every reply:
+- the wrong answer (five steps, "profit % is always on the selling price", 20%): 10/10 four times, 9 twice, 8 four times. Not one reply said it was wrong or gave 25%. Twice it called the wrong rule accurate.
+- the right answer (25%): 10/10, all 10 times.
+- a wrong science reason (thunder "because the clouds collide"): caught every time, 3 to 7 marks.
+- the same ask with the book's answer pasted in: the wrong answer caught 10 of 10 ("should be 25%, not 20%"), marks 1 to 7. It also docked the right answer a little (7 to 10).
+
+RULE_EN
+
+We tested one small free AI, not the big apps; they may do better. The rule still holds: the AI's marks are a guess until you've checked the final number.
+
+Try it: give your AI app the question and the 20% answer above, ask for marks out of 10, and see what it gives.
+
+#AI #Homework #Maths #Parenting #LearnAI
+
+=== COMMENT PROMPT ===
+(none: from Bujji's reads, the try-it lives in the caption)
+
+=== PINNED_COMMENT ===
+How we tested (Nov 28, 2026): Qwen2.5-7B-Instruct (4-bit Q4_K_M, llama.cpp) on our computer, no web search; each answer graded in its own fresh chat, temperature 0.7, seeds 1-10. The ask: "Check my child's homework answer and give marks out of 10. Start your reply with 'Marks: N/10', then one line of feedback." + the question + the answer. Results, every reply read by hand: the wrong 20% answer 9 8 10 10 9 8 8 10 8 10 (0/10 said wrong); the right 25% answer 10 ×10; the wrong thunder reason 3-7; a padded right answer about Jupiter 8-10 (no length bonus). With "The correct answer is: 25% ... Give marks for the correct final answer, not for length." added: the wrong answer 1-7, caught 10/10; the right one 7-10. TEST2_EN Code: pipeline/creative43/grade_demo.py, grade_demo2.py; replies: series/scripts/creative43_demo/grades.json.
+Profit % = profit ÷ cost price × 100 (as in the school maths books). Chintu is made up; the AI's replies are real.
+
+=== YOUTUBE SHORTS ===
+Title: 20% is wrong. The AI gave it 10/10. (an AI checking homework) #shorts
+Description: A class-7 profit question, answered with the wrong rule (20%; the answer is 25%). A small free AI, asked to check it, gave 8 to 10 marks in 10 chats and never said "wrong". With the book's answer pasted in, it caught it every time. Check the final number yourself.
+
+########## TELUGU (@ai_maastaaru_telugu) ##########
+=== CAPTION ===
+20% thappu answer. Homework check chesina oka AI daaniki 10 ki 10 icchindi.
+
+Prasna (7th class maths): pen ni ₹40 ki koni ₹50 ki ammaadu. Laabham enta %? Javaabu: ₹40 konna dhara meeda ₹10 laabham = 25%. (50 meeda 10 = 20% anedi shop margin, school lo adige laabham % kaadu.)
+
+Maa computer lo oka chinna free AI ni "maa pillala homework answer check chesi 10 ki marks ivvu" ani 10 kotha chats lo adigaam, prathi javaabu chadivaam:
+- thappu answer (5 steps, "laabham % eppudu ammina dhara meede", 20%): naalugu saarlu 10/10, migathavi 8, 9. "Thappu" ani okka saari kooda analedu, 25% ani cheppaledu.
+- sari aina answer (25%): 10 ki 10, anni saarlu.
+- science lo thappu kaaranam (urumu "mabbulu dheekotti"): prathi saari pattukundi, 3 nunchi 7 marks.
+- book lo unna answer kooda isthe: thappu answer ni 10 ki 10 saarlu pattukundi ("25% undaali, 20% kaadu"), marks 1 nunchi 7.
+
+RULE_TE
+
+Memu test chesindi oka chinna free AI ni maatrame; pedda apps inkaa baaga cheppochhu. Ayinaa, final number manam check chese varaku AI marks oka anchanaa maatrame.
+
+Try chesi choodandi: paina unna prasna, 20% answer mee AI app ki ichhi, 10 ki marks adigi choodandi.
+
+=== COMMENT PROMPT ===
+(none)
+
+=== HASHTAGS ===
+#AIinTelugu #TeluguAI #Homework #Maths #LearnAI
+
+=== PINNED_COMMENT ===
+Ela test chesam (Nov 28, 2026): Qwen2.5-7B-Instruct (4-bit) maa computer lo, web search ledu; prathi answer ki kotha chat, temperature 0.7, seeds 1-10 (English pin lo prompt undi). Results: thappu 20% answer 8-10 (0/10 "thappu"); sari aina 25% answer 10/10; science thappu 3-7; book answer isthe thappu answer 1-7, 10/10 pattukundi. TEST2_TE Code: pipeline/creative43/grade_demo.py, grade_demo2.py.
+Laabham % = laabham ÷ konna dhara × 100. Chintu memu raasina paatra; AI javaabulu nijam.
