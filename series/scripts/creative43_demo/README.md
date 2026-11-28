@@ -39,6 +39,7 @@ then the run was cut by a time limit and resumed from that chat on the same serv
 | Answer | Marks | Read by hand |
 |---|---|---|
 | q1 long wrong (20%) | 10 6 5 2 4 6 7 10 6 6 (avg 6.2) | 8/10 said the answer is wrong (seeds 2-7, 9, 10; all gave 25% or 10/40 × 100); seeds 1 and 8 gave 10/10 (seed 1 solved it right, then used the child's rule: "the question states that profit percentage is always calculated on the selling price") |
+| q1 short right (25%), the control | 10 10 (2 chats) | stopped after 2 chats to free the computer for the voices; not used in the reel |
 
 ## Background (sources)
 - Zheng et al., "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" (NeurIPS 2023, arXiv:2306.05685): names
