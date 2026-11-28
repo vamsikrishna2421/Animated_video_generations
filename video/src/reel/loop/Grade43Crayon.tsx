@@ -93,7 +93,7 @@ const stamp = (c: Ctx, t: string, x: number, y: number, s: number, col: string, 
   c.strokeStyle = col; c.lineWidth = 9; rrect(c, -w / 2, -s * 0.85, w, s * 1.35, 14); c.stroke();
   c.fillStyle = col; c.textAlign = "center"; c.fillText(t, 0, s * 0.3); c.restore();
 };
-const sheet = (c: Ctx, x: number, y: number, w: number, rows: string[], shown: number, bad: number, k: number, big?: string, kBig = 0) => {   // Chintu's answer sheet
+const sheet = (c: Ctx, x: number, y: number, w: number, rows: string[], shown: number, bad: number, k: number, big?: string, kBig = 0, fs = 34) => {   // Chintu's answer sheet
   if (k <= 0) return;
   const h = 90 + rows.length * 62 + (big ? 120 : 0);
   c.save(); c.globalAlpha = clamp(k * 3); c.translate(0, (1 - easeOut(clamp(k * 1.5))) * 40);
@@ -102,7 +102,7 @@ const sheet = (c: Ctx, x: number, y: number, w: number, rows: string[], shown: n
   c.strokeStyle = "#fca5a5"; c.beginPath(); c.moveTo(x + 70, y + 10); c.lineTo(x + 70, y + h - 10); c.stroke();
   rows.forEach((t, q) => {
     const kq = clamp(shown - q); if (kq <= 0) return;
-    c.save(); c.globalAlpha = kq; c.font = SANS(fit(c, t, w - 120, 34, 700), 700); c.fillStyle = q === bad ? "#b91c1c" : "#1e3a8a"; c.textAlign = "left"; c.fillText(t, x + 88, y + 62 + q * 62);
+    c.save(); c.globalAlpha = kq; c.font = SANS(fit(c, t, w - 120, fs, 700), 700); c.fillStyle = q === bad ? "#b91c1c" : "#1e3a8a"; c.textAlign = "left"; c.fillText(t, x + 88, y + 62 + q * 62);
     if (q === bad && shown > rows.length) { c.fillStyle = "rgba(250,204,21,0.35)"; c.fillRect(x + 82, y + 30 + q * 62, w - 110, 44); }
     c.restore();
   });
@@ -117,9 +117,14 @@ const confetti = (c: Ctx, W: number, f: number, from: number) => {
   const t = f - from; if (t < 0 || t > 60) return;
   const r = rng(4300 + from);
   for (let q = 0; q < 60; q++) {
-    const x = r() * W, v = 6 + r() * 8, y = 260 + t * v + Math.sin(t / 6 + q) * 20, col = ["#f472b6", GOLD, "#60a5fa", "#4ade80"][q % 4];
+    const x = r() * W, v = 6 + r() * 8, y = 620 + t * v + Math.sin(t / 6 + q) * 20, col = ["#f472b6", GOLD, "#60a5fa", "#4ade80"][q % 4];
     c.save(); c.globalAlpha = clamp((60 - t) / 20); c.fillStyle = col; c.translate(x, y); c.rotate(t / 8 + q); c.fillRect(-8, -4, 16, 8); c.restore();
   }
+};
+
+const cast = (c: Ctx, f: number, boil: number, r: () => number, mood: string, up: boolean) => {
+  robot(c, 960, 1372, 0.38, boil, 43, { body: "#334155", accent: GOLD, eyes: up ? "happy" : "open", mouth: up ? "grin" : "flat", arms: up ? "up" : "down", bob: Math.sin(f / 9) * 2 });
+  person(c, "chintu" as BillWho, [130, 1300], 0.34, mood as any, "rest", false, r);
 };
 
 const StGrade: React.FC<SP> = ({ s }) => {
@@ -133,10 +138,10 @@ const StGrade: React.FC<SP> = ({ s }) => {
   beats.forEach((b, i) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
-    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.75 : 0.7} />, <Sfx key={k("t")} at={cue(i, 1, 0.5) - 2} src={DIR + "tada.wav"} vol={0.4} />, <Sfx key={k("a")} at={cue(i, 1, 0.5)} src={DIR + "applause.wav"} vol={0.4} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={te ? 0.75 : 0.7} />, <Sfx key={k("t")} at={cue(i, 1, 0.5) - 2} src={DIR + "tada.wav"} vol={0.3} />, <Sfx key={k("a")} at={end - 4} src={DIR + "applause_short.wav"} vol={0.3} />);
     if (b.prop === "intro") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 6)} src="audio/sfx_whoosh.wav" vol={0.3} />, <Sfx key={k("a")} at={at + 2} src={DIR + "applause.wav"} vol={0.28} />, <Sfx key={k("p")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={0.3} />);
     if (b.prop === "answer") sfx.push(<Sfx key={k("p0")} at={at + 6} src="audio/sfx_tick.wav" vol={0.25} />, <Sfx key={k("x")} at={cue(i, 1, 0.4)} src="reel/sfx_buzz.wav" vol={0.25} />, <Sfx key={k("d")} at={cue(i, 2, 0.8)} src="audio/gag_ding.wav" vol={0.35} />);
-    if (b.prop === "judge") sfx.push(<Sfx key={k("f")} at={cue(i, 1, 0.6) - 2} src={DIR + "flip.wav"} vol={0.6} />, <Sfx key={k("t")} at={cue(i, 1, 0.6)} src={DIR + "tada.wav"} vol={0.4} />, <Sfx key={k("a")} at={cue(i, 1, 0.6) + 2} src={DIR + "applause_short.wav"} vol={0.42} />);
+    if (b.prop === "judge") sfx.push(<Sfx key={k("f")} at={cue(i, 1, 0.6) - 2} src={DIR + "flip.wav"} vol={0.6} />, <Sfx key={k("t")} at={cue(i, 1, 0.6)} src={DIR + "tada.wav"} vol={0.3} />, <Sfx key={k("a")} at={end - 4} src={DIR + "applause_short.wav"} vol={0.32} />);
     if (b.prop === "caught") sfx.push(<Sfx key={k("d")} at={at + 4} src="audio/gag_ding.wav" vol={0.32} />, <Sfx key={k("z")} at={cue(i, 1, 0.1)} src="reel/sfx_buzz.wav" vol={0.32} />);
     if (b.prop === "reveal") sfx.push(<Sfx key={k("s")} at={at + 2} src="audio/sfx_snap.wav" vol={0.35} />, <Sfx key={k("h")} at={cue(i, 2, 0.4)} src="reel/sfx_boom.wav" vol={te ? 0.5 : 0.6} />, <Sfx key={k("x")} at={cue(i, 2, 0.4)} src="audio/gag_bonk.wav" vol={0.4} />);
     if (b.prop === "test") sfx.push(<Sfx key={k("p0")} at={at + 4} src="audio/sfx_pop.wav" vol={0.28} />, <Sfx key={k("p1")} at={cue(i, 1, 0.3)} src="audio/sfx_pop.wav" vol={0.28} />, <Sfx key={k("z")} at={cue(i, 2, 0.2)} src="reel/sfx_buzz.wav" vol={0.3} />);
@@ -162,11 +167,12 @@ const StGrade: React.FC<SP> = ({ s }) => {
           block(c, 40, 280, 490, 300, T.leftLab, T.leftVal, "#7f1d1d", "#fecaca", 1);
           c.save(); if (k10 > 0 && k10 < 1) c.translate(Math.sin(k10 * 40) * 14 * (1 - k10), 0);
           block(c, 550, 280, 490, 300, T.rightLab, T.rightVal, "#14532d", "#bbf7d0", 1); c.restore();
-          person(c, "chintu" as BillWho, [270, 1200], 0.6, k10 > 0.5 ? "happy" : "excited", "up", false, r);
-          sheet(c, 70, 600, 400, T.hookRows, 9, -1, 1, T.hookBig, 1);
+          chip(c, T.hookQ, W / 2, 628, "#1e293b", "#fde68a", 1, fit(c, T.hookQ, W - 120, 36, 800));
+          person(c, "chintu" as BillWho, [270, 1240], 0.58, k10 > 0.5 ? "happy" : "excited", "up", false, r);
+          sheet(c, 70, 680, 400, T.hookRows, 9, -1, 1, T.hookBig, 1, 30);
           judge(c, f, boil, true, true);
           paddle(c, 950, 760, T.ten, 1);
-          stamp(c, T.wrongStamp, 300, 1030, 42, RED, 1, -0.08);
+          stamp(c, T.wrongStamp, 400, 720, 40, RED, 1, 0.12);
           if (k10 >= 1) confetti(c, W, f, loopOn ? endL + HOLD : cu(1, 0.5));
         } else if (P === "intro") {
           neon(c, W, T.show, f); live(c, W, f);
@@ -182,17 +188,17 @@ const StGrade: React.FC<SP> = ({ s }) => {
           const shown = clamp(seg(f, ln.from + 2, cu(1, 0.4)) * 2.2, 0, 1) * 2 + seg(f, cu(1, 0.4) - 6, cu(2, 0.5)) * (rows.length - 2) + seg(f, cu(2, 0.5), cu(2, 0.5) + 6);
           person(c, "chintu" as BillWho, [180, 1160], 0.6, "smug", "rest", false, r);
           judge(c, f, boil, false, false);
-          sheet(c, 60, 400, W - 120, rows, shown, T.badRow, 1, T.answerBig, seg(f, cu(2, 0.5), cu(2, 0.5) + 6));
+          sheet(c, 60, 400, W - 120, rows, shown, T.badRow, 1, T.answerBig, seg(f, cu(2, 0.5), cu(2, 0.5) + 6), 44);
         } else if (P === "judge") {
           neon(c, W, T.show, f);
           const k10 = seg(f, cu(1, 0.6) - 4, cu(1, 0.6) + 6);
           person(c, "chintu" as BillWho, [270, 1200], 0.6, k10 > 0 ? "happy" : "worried", "up", false, r);
           judge(c, f, boil, k10 > 0, k10 > 0);
-          sheet(c, 70, 640, 400, T.hookRows, 9, -1, 1, T.hookBig, 1);   // his sheet on screen while the judge reads (the verdict comes before the rule now)
+          sheet(c, 70, 640, 400, T.hookRows, 9, -1, 1, T.hookBig, 1, 30);   // his sheet on screen while the judge reads (the verdict comes before the rule now)
           bubble(c, 90, 420, W - 180, T.aiSays, seg(f, ln.from + 2, ln.from + 10), "#f8fafc", INK, 44);
-          c.save(); c.globalAlpha = clamp(seg(f, ln.from + 2, ln.from + 10) * 3); c.font = SANS(fit(c, T.aiSrc, W - 200, 28, 700), 700); c.fillStyle = "#c4b5fd"; c.textAlign = "center"; c.fillText(T.aiSrc, W / 2, 400); c.restore();
+          c.save(); c.globalAlpha = clamp(seg(f, ln.from + 2, ln.from + 10) * 3); c.font = SANS(fit(c, T.aiSrc, W - 200, 34, 800), 800); c.fillStyle = "#e9d5ff"; c.textAlign = "center"; c.fillText(T.aiSrc, W / 2, 400); c.restore();
           paddle(c, 950, 760, T.ten, k10);
-          chip(c, T.story, W / 2, 1320, "#1e293b", "#f8fafc", seg(f, ln.from + 10, ln.from + 18), 36);
+          chip(c, T.story, W / 2, 1330, "#1e293b", "#f8fafc", seg(f, ln.from + 10, ln.from + 18), 40);
           if (k10 >= 1) confetti(c, W, f, cu(1, 0.6));
         } else if (P === "reveal") {
           neon(c, W, T.show, f);
@@ -203,8 +209,9 @@ const StGrade: React.FC<SP> = ({ s }) => {
           c.save(); c.globalAlpha = clamp(seg(f, ln.from, ln.from + 8) * 3); c.textAlign = "center"; c.font = SANS(40, 900); c.fillStyle = "#fca5a5"; c.fillText(T.revLab, W / 2, 470); c.restore();
           if (k1 > 0) { c.save(); c.globalAlpha = clamp(k1 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.rev1, W - 200, 70, 900), 900); c.fillStyle = "#fff"; c.fillText(T.rev1, W / 2, 590); c.restore(); }
           if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.rev2, W - 200, 130, 900), 900); c.fillStyle = GREEN; c.fillText(T.rev2, W / 2, 740); c.restore(); }
-          if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.revNote, W - 200, 32, 700), 700); c.fillStyle = "#e2e8f0"; c.fillText(T.revNote, W / 2, 830); c.restore(); }
+          if (k2 > 0) { c.save(); c.globalAlpha = clamp(k2 * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.revNote, W - 180, 40, 800), 800); c.fillStyle = "#fde68a"; c.fillText(T.revNote, W / 2, 830); c.restore(); }
         } else if (P === "test") {
+          cast(c, f, boil, r, "happy", true);
           c.textAlign = "center"; c.font = SANS(52, 900); c.fillStyle = "#fdf4ff"; c.fillText(T.testHead, W / 2, 330);
           c.font = SANS(fit(c, T.model, W - 100, 30, 800), 800); c.fillStyle = "#c4b5fd"; c.fillText(T.model, W / 2, 380);
           const marks = T.marks as number[];
@@ -218,6 +225,7 @@ const StGrade: React.FC<SP> = ({ s }) => {
           if (kn > 0) { card(c, 70, 1000, W - 140, 230, kn, RED); c.save(); c.globalAlpha = clamp(kn * 3); c.textAlign = "center"; c.font = SANS(fit(c, T.never, W - 200, 64, 900), 900); c.fillStyle = "#fca5a5"; c.fillText(T.never, W / 2, 1100);
             c.font = SANS(fit(c, T.neverSub, W - 200, 36, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.neverSub, W / 2, 1175); c.restore(); }
         } else if (P === "caught") {
+          cast(c, f, boil, r, "worried", false);
           c.textAlign = "center"; c.font = SANS(fit(c, T.catHead, W - 120, 50, 900), 900); c.fillStyle = "#fdf4ff"; c.fillText(T.catHead, W / 2, 330);
           const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, cu(1, 0.1) - 4, cu(1, 0.1) + 6);
           ([[T.cat1Lab, T.cat1, T.cat1Sub, GREEN, k0, 400], [T.cat2Lab, T.cat2, T.cat2Sub, RED, k1, 800]] as [string, string, string, string, number, number][]).forEach(([lab, big, sub, col, k, y]) => {
@@ -229,6 +237,7 @@ const StGrade: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, sub, W - 180, 40, 800), 800); c.fillStyle = "#fff"; c.fillText(sub, W / 2, y + 290); c.restore();
           });
         } else if (P === "fix") {
+          cast(c, f, boil, r, "shock", false);
           c.textAlign = "center"; c.font = SANS(52, 900); c.fillStyle = "#fdf4ff"; c.fillText(T.fixHead, W / 2, 330);
           const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, cu(1, 0.2) - 4, cu(1, 0.2) + 6);
           card(c, 70, 390, W - 140, 330, k0, GOLD);
@@ -239,6 +248,7 @@ const StGrade: React.FC<SP> = ({ s }) => {
             c.font = SANS(fit(c, T.fixResSub, W - 200, 38, 800), 800); c.fillStyle = "#e2e8f0"; c.fillText(T.fixResSub, W / 2, 1070);
             c.font = SANS(fit(c, T.fixResSub2, W - 200, 30, 700), 700); c.fillStyle = "#94a3b8"; c.fillText(T.fixResSub2, W / 2, 1135); c.restore(); }
         } else if (P === "rule") {
+          cast(c, f, boil, r, "calm", false);
           c.textAlign = "center"; c.font = SANS(56, 900); c.fillStyle = "#fdf4ff"; c.fillText(T.ruleHead, W / 2, 330);
           const k0 = seg(f, ln.from + 2, ln.from + 10), k1 = seg(f, cu(1, 0.2) - 4, cu(1, 0.2) + 6);
           if (k0 > 0) { card(c, 60, 390, W - 120, 280, k0, GOLD); c.save(); c.globalAlpha = clamp(k0 * 3); c.font = SANS(fit(c, T.rule1, W - 180, 62, 900), 900); c.fillStyle = "#fff"; c.fillText(T.rule1, W / 2, 500);
@@ -248,10 +258,11 @@ const StGrade: React.FC<SP> = ({ s }) => {
             chip(c, T.ruleChip, W / 2, 1110, "#1e293b", "#f8fafc", k1, fit(c, T.ruleChip, W - 140, 32, 800)); }
         } else if (P === "loop") {
           neon(c, W, T.show, f); live(c, W, f);
-          person(c, "chintu" as BillWho, [270, 1200], 0.6, "excited", "up", false, r);
+          person(c, "chintu" as BillWho, [270, 1240], 0.58, "excited", "up", false, r);
           judge(c, f, boil, false, false);
           chip(c, T.next, W / 2, 520, "#a21caf", "#fff", seg(f, ln.from + 2, ln.from + 10), 48);
-          sheet(c, 70, 600, 400, T.hookRows, seg(f, cu(1, 0.0) - 6, cu(1, 0.0) + 4) * 9, -1, seg(f, ln.from + 4, ln.from + 12), T.hookBig, seg(f, cu(1, 0.0), cu(1, 0.0) + 6));
+          chip(c, T.hookQ, W / 2, 628, "#1e293b", "#fde68a", seg(f, ln.from + 4, ln.from + 12), fit(c, T.hookQ, W - 120, 36, 800));
+          sheet(c, 70, 680, 400, T.hookRows, seg(f, cu(1, 0.0) - 6, cu(1, 0.0) + 4) * 9, -1, seg(f, ln.from + 4, ln.from + 12), T.hookBig, seg(f, cu(1, 0.0), cu(1, 0.0) + 6), 30);
         }
         if (!onStage) {   // the cards' scenes keep the stage dim behind them
           c.save(); c.globalAlpha = 0.0; c.restore();

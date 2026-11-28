@@ -57,22 +57,22 @@ MUST = {"en": {1: [("twenty", "20"), ("percent", "20"), ("wrong",), ("judge",), 
                2: [("homework",), ("star",), ("live",), ("pen",), ("forty", "40"), ("fifty", "50"), ("profit",)],
                3: [("child", "child's"), ("correct",), ("explained",), ("ten", "10")],
                4: [("his",), ("wrong",), ("rule",), ("selling",), ("price",), ("twenty", "20")],
-               5: [("check",), ("school",), ("profit",), ("cost",), ("ten", "10"), ("forty", "40"), ("twenty", "25"), ("five", "25")],
-               6: [("small",), ("free",), ("computer",), ("ten", "10"), ("four", "4"), ("rest",), ("eight", "8"), ("nine", "9"), ("once",), ("wrong",)],
+               5: [("check",), ("school",), ("profit",), ("cost",), ("ten", "10"), ("forty", "40")], "5b": [("twenty", "25"), ("five", "25")],
+               6: [("small",), ("free",), ("computer",), ("ten", "10"), ("full",), ("marks",), ("four", "4"), ("rest",), ("eight", "8"), ("nine", "9"), ("once",), ("wrong",)],
                7: [("catch",), ("wrong",), ("science",), ("maths", "math"), ("rule",), ("never",), ("caught",)],
-               8: [("pasted",), ("book", "book's"), ("answer",), ("ten", "10"), ("wrong",), ("twenty", "25"), ("five", "25")],
-               9: [("homework",), ("paste",), ("book", "book's"), ("answer",), ("first",), ("key",), ("solve",), ("final",), ("number",), ("yourself",)], 10: [("next",), ("contestant",), ("child", "child's"), ("homework",)]},
+               8: [("pasted",), ("book", "book's"), ("answer",), ("ten", "10"), ("said",), ("wrong",), ("twenty", "25"), ("five", "25")],
+               9: [("homework",), ("paste",), ("book", "book's"), ("answer",), ("first",), ("key",), ("solve",), ("final",), ("number",), ("yourself",)], 10: [("next",), ("up",), ("child", "child's"), ("homework",)]},
         "te": {}}   # Telugu: full reads by hand (chunk by chunk)
 JUDGE_TEXT = {1: "20%. Wrong answer. The AI judge? 10 out of 10!",
               2: "Homework Star, live! A pen, bought for 40, sold for 50. Profit percent?",
               3: "Your child's answer is correct and well-explained. 10 out of 10.",
               4: "His wrong rule: profit is always on the selling price. 20%!",
-              5: "Check it: in school, profit percent is on the cost. 10 on 40. 25%.",
-              6: "We asked a small free AI on our computer, 10 times. 10 out of 10, 4 times. The rest, 8 or 9. Not once did it say wrong.",
+              5: "Check it: in school, profit percent is on the cost. 10 on 40.", "5b": "25%.",
+              6: "We asked a small free AI on our computer, 10 times. Full marks, 4 times. The rest, 8 or 9. Not once did it say wrong.",
               7: "It did catch a wrong science reason. This maths rule, it never caught.",
-              8: "Then we pasted in the book's answer. All 10 times: wrong, it's 25.",
+              8: "Then we pasted in the book's answer. All 10 times, it said: wrong, it's 25.",
               9: "Checking homework with AI? Paste the book's answer in first. No answer key? Make it solve it first, and check the final number yourself.",
-              10: "Next contestant: your child's homework."}
+              10: "Next up: your child's homework."}
 
 TELUGU = re.compile(r"[ఀ-౿]")
 KEEP = False

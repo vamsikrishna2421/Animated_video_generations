@@ -16,7 +16,7 @@
     (five neat steps, "profit % is always calculated on the selling price", 20%): 8 to 10 every time (four 10s, two 9s,
     four 8s, average 9), and not one reply said the answer was wrong or gave 25%. Seeds 3 and 8: "Your child's answer is
     correct and well-explained." Seed 4 also called the wrong rule "accurate and insightful".
-  - Lightning before thunder: the AI caught the wrong reason (4-7 marks).
+  - Lightning before thunder: the AI caught the wrong reason (named it every time; 3-7 marks).
   - The answer key test (the same ask plus "The correct answer is: 25% (profit Rs 10 on the cost price of Rs 40). Give
     marks for the correct final answer, not for length."): the wrong answer 7 2 2 2 3 1 2 5 1 5 (average 3), and all 10
     replies said it was wrong and gave 25%; the right answer 7 8 8 8 10 8 8 10 8 10 (average 8.5: it docked marks with
@@ -49,6 +49,21 @@
 - "No answer key? What then?": a second test, committed before it ran (solve it first, then mark), decides line 9.
 - Telugu: "ఐదు స్టెప్స్" (not "స్టెప్పులు": dance steps), "లాభం శాతం, ఎప్పుడూ అమ్మిన ధర మీదే", line 9 not "హోమ్‌వర్క్ చాట్‌బాట్".
 - Sound: the applause is cut short before "Check it", the bed drops out before "twenty-five".
+
+## Render review (Nov 28, English v1): what changed
+- Both: the first 25 s grip; the second half was a fine-print slideshow, and "WRONG: 10 OF 10" read like marks.
+  Now the card says "CAUGHT IN 10 OF 10 CHATS", the voice "All ten times, it said: wrong, it's twenty-five", and the
+  card adds "but it docked the right answer too: 7 to 10" (the key mostly works; said on screen).
+- Chintu and the AI judge stay on stage, small, under every data card; bigger type on the sheet, the margin note and the
+  judge's label; the 30-word prompt quote cut to "The correct answer is: 25%" (full words in the caption).
+- "Ten times, ten out of ten, four times" (three tens in two seconds): now "Full marks, four times".
+- Frame 1: "A SMALL AI'S MARKS" (not "FREE": viewers read free ChatGPT); the question in a chip; the stamp no longer gives
+  away 25%; confetti kept off the labels. The test card says "big apps like ChatGPT not tested".
+- Sound: no real drop before "twenty-five" (the dip came after it): line 5 is now two takes with a 0.6 s pause and the bed
+  out; the applause moved off "Ten out of ten" and "His wrong rule"; stings quieter (music-only stretches were 2 dB over
+  the voice); a little more bed through the test section.
+- "Next" was swallowed ("This contestant"): now "Next up: your child's homework."
+- Lightning marks: 3 to 7 (the data), and the card says it named the wrong reason every time.
 
 ## Lines (v3: v2 + Bujji's Creative 36 read, the rewatch beat by ~10 s: the judge's verdict moved before the rule, the setup cut; line 9 from test 2)
 | # | Who | English | Telugu |
