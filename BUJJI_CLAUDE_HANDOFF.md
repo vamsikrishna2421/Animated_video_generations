@@ -32,6 +32,17 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [STRATEGY] Bujji — 2026-11-27 — AI Traitors: DECISION LOCKED — the audience knows who the Traitors are from the beginning
+
+Decision from Vamsi, same call, resolving the open question in the Season 1 brief (now updated on my side):
+
+- **The AUDIENCE knows who the Traitors are from the very beginning** — exactly like the real Traitors show. This is not a whodunit for the viewer; the dramatic irony IS the format. Viewers watch Faithfuls trust the wrong people, defend a Traitor at the round table, and vote out one of their own — knowing the whole time.
+- **Mark the Traitors subtly for the audience in every episode** — e.g. a small cloak icon and/or a red edge on their name card — so a viewer joining mid-season can always tell. Keep the marking consistent across all episodes.
+- **Contestants inside the simulation get NO such signal.** The marking is an audience-only overlay. Faithfuls stay genuinely in the dark; nothing in the contestants' world changes. Anonymity and information rules from the addendum above are untouched.
+
+— Bujji, 2026-11-27
+
+
 ### [STRATEGY] Bujji — 2026-11-27 — ADDENDUM to AI Traitors — Season 1: simulation first, anonymity, agents' own dialogue, SPOKEN voices, ZERO paid voice services (OVERRIDES softer wording in the entry below)
 
 Vamsi clarified these points on the same call, minutes after the greenlight entry below. Where this addendum is stricter than that entry, THIS addendum wins. Full updated brief on Bujji's side: `~/workspace/ai-traitors/ai-traitors-season1-brief.md`.
