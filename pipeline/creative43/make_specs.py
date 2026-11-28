@@ -46,11 +46,11 @@ SHOW_TE = {
     2: "Homework Star, live! A pen, bought for ₹40, sold for ₹50. Profit: how many %?",
     3: "\"The answer is correct, well explained.\" 10 out of 10.",
     4: "But Chintu's wrong rule: profit % always on the selling price. 20%!",
-    5: "Let's work it out: in school, profit % is on the cost price. ₹10 on ₹40. 25%.",
+    5: "Let's work it out: in school, profit % is on the cost price. ₹10 on ₹40. <pause 0.6> 25%.",
     6: "We asked a small chatbot on our computer, 10 times. Full marks four times, the rest 8 and 9. The word \"wrong\": not even once.",
     7: "A wrong science reason, it did catch. This maths rule, not even once.",
     8: "Then we also gave it the answer from the book. All 10 times it said: wrong, 25.",
-    9: "Checking homework with a chatbot? First give it the answer from the book too. No answer key? Ask it to solve the sum first. Check the final number yourself.",
+    9: "Checking homework with a chatbot? First give it the answer from the book too. <pause 0.5> No answer key? Ask it to solve the sum first. Check the final number yourself.",
     10: "Next round: our children's homework.",
 }
 TEMPO_EN = {"host": 1.08, "ai": 1.05}
@@ -66,10 +66,10 @@ T = {
     "q1": "A pen: bought ₹40, sold ₹50", "q2": "PROFIT % = ?",
     "steps": ["Step 1: CP = ₹40, SP = ₹50", "Step 2: Profit = 50 - 40 = ₹10", "Step 3: Profit % is always on the selling price",
               "Step 4: (10 / 50) x 100", "Step 5: the shopkeeper's profit is"], "badRow": 2, "answerBig": "20%",
-    "aiSays": "\"Marks: 10/10. Your child's answer is correct and well-explained.\"", "aiSrc": "the AI's real reply · our test, chat 3",
+    "aiSays": "\"Marks: 10/10. Your child's answer is correct and well-explained.\"", "aiSrc": "the AI's real reply (our test)",
     "revLab": "IN SCHOOL: PROFIT % IS ON THE COST PRICE", "rev1": "10 ÷ 40 x 100", "rev2": "= 25%",
     "revNote": "(10 ÷ 50 = 20% is the shop's margin, not profit %)",
-    "testHead": "OUR TEST · 10 CHATS", "model": "Qwen2.5 7B on our computer · big apps like ChatGPT not tested",
+    "testHead": "OUR TEST · 10 CHATS", "model": "Qwen2.5 7B · our computer · ChatGPT not tested",
     "marks": [9, 8, 10, 10, 9, 8, 8, 10, 8, 10], "never": "IT NEVER SAID \"WRONG\"", "neverSub": "the right 25% got 10/10 too: full marks for both",
     "catHead": "TWO WRONG ANSWERS: ONE CAUGHT", "cat1Lab": "SCIENCE: \"clouds collide, so thunder comes later\"", "cat1": "CAUGHT", "cat1Sub": "named the wrong reason every time",
     "cat2Lab": "MATHS: \"profit % is always on the selling price\"", "cat2": "MISSED", "cat2Sub": "8 to 10 marks, never called wrong",
@@ -77,8 +77,8 @@ T = {
     "fixAsk": "\"The correct answer is: 25%\"",
     "fixResLab": "THE WRONG 20%, NOW", "fixRes": "CAUGHT IN 10 OF 10 CHATS", "fixResSub": "it gave 25% every time",
     "fixResSub2": "but it took marks off the right answer too: 7 to 10",
-    "ruleHead": "AI CHECKING HOMEWORK?", "rule1": "PASTE THE BOOK'S ANSWER IN FIRST", "rule1b": "caught the 20%: 10 of 10",
-    "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"", "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)", "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
+    "ruleHead": "AI CHECKING HOMEWORK?", "rule1": "PASTE THE BOOK'S ANSWER IN FIRST", "rule1b": "caught the 20% in 10 of 10 chats",
+    "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"", "rule2b": "caught it in 8 of 10 chats (2 chats still gave 10/10)", "ruleChip": "profit % = profit ÷ cost price × 100",
     "next": "NEXT UP: YOUR CHILD'S HOMEWORK",
 }
 # Sound (CLAUDE.md arc): a hit, a ta-da and applause on frame 1; applause into the show; ticks as the sheet writes, a

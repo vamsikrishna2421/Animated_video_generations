@@ -107,13 +107,13 @@
      "badRow": 2,
      "answerBig": "20%",
      "aiSays": "\"Marks: 10/10. Your child's answer is correct and well-explained.\"",
-     "aiSrc": "the AI's real reply · our test, chat 3",
+     "aiSrc": "the AI's real reply (our test)",
      "revLab": "IN SCHOOL: PROFIT % IS ON THE COST PRICE",
      "rev1": "10 ÷ 40 x 100",
      "rev2": "= 25%",
      "revNote": "(10 ÷ 50 = 20% is the shop's margin, not profit %)",
      "testHead": "OUR TEST · 10 CHATS",
-     "model": "Qwen2.5 7B on our computer · big apps like ChatGPT not tested",
+     "model": "Qwen2.5 7B · our computer · ChatGPT not tested",
      "marks": [
       9,
       8,
@@ -144,10 +144,10 @@
      "fixResSub2": "but it took marks off the right answer too: 7 to 10",
      "ruleHead": "AI CHECKING HOMEWORK?",
      "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
-     "rule1b": "caught the 20%: 10 of 10",
+     "rule1b": "caught the 20% in 10 of 10 chats",
      "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"",
-     "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)",
-     "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
+     "rule2b": "caught it in 8 of 10 chats (2 chats still gave 10/10)",
+     "ruleChip": "profit % = profit ÷ cost price × 100",
      "next": "NEXT UP: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
@@ -285,13 +285,13 @@
      "badRow": 2,
      "answerBig": "20%",
      "aiSays": "\"Marks: 10/10. Your child's answer is correct and well-explained.\"",
-     "aiSrc": "the AI's real reply · our test, chat 3",
+     "aiSrc": "the AI's real reply (our test)",
      "revLab": "IN SCHOOL: PROFIT % IS ON THE COST PRICE",
      "rev1": "10 ÷ 40 x 100",
      "rev2": "= 25%",
      "revNote": "(10 ÷ 50 = 20% is the shop's margin, not profit %)",
      "testHead": "OUR TEST · 10 CHATS",
-     "model": "Qwen2.5 7B on our computer · big apps like ChatGPT not tested",
+     "model": "Qwen2.5 7B · our computer · ChatGPT not tested",
      "marks": [
       9,
       8,
@@ -322,10 +322,10 @@
      "fixResSub2": "but it took marks off the right answer too: 7 to 10",
      "ruleHead": "AI CHECKING HOMEWORK?",
      "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
-     "rule1b": "caught the 20%: 10 of 10",
+     "rule1b": "caught the 20% in 10 of 10 chats",
      "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"",
-     "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)",
-     "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
+     "rule2b": "caught it in 8 of 10 chats (2 chats still gave 10/10)",
+     "ruleChip": "profit % = profit ÷ cost price × 100",
      "next": "NEXT UP: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
@@ -622,13 +622,13 @@
      "badRow": 2,
      "answerBig": "20%",
      "aiSays": "\"Marks: 10/10. Your child's answer is correct and well-explained.\"",
-     "aiSrc": "the AI's real reply · our test, chat 3",
+     "aiSrc": "the AI's real reply (our test)",
      "revLab": "IN SCHOOL: PROFIT % IS ON THE COST PRICE",
      "rev1": "10 ÷ 40 x 100",
      "rev2": "= 25%",
      "revNote": "(10 ÷ 50 = 20% is the shop's margin, not profit %)",
      "testHead": "OUR TEST · 10 CHATS",
-     "model": "Qwen2.5 7B on our computer · big apps like ChatGPT not tested",
+     "model": "Qwen2.5 7B · our computer · ChatGPT not tested",
      "marks": [
       9,
       8,
@@ -659,10 +659,10 @@
      "fixResSub2": "but it took marks off the right answer too: 7 to 10",
      "ruleHead": "AI CHECKING HOMEWORK?",
      "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
-     "rule1b": "caught the 20%: 10 of 10",
+     "rule1b": "caught the 20% in 10 of 10 chats",
      "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"",
-     "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)",
-     "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
+     "rule2b": "caught it in 8 of 10 chats (2 chats still gave 10/10)",
+     "ruleChip": "profit % = profit ÷ cost price × 100",
      "next": "NEXT UP: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
@@ -689,86 +689,86 @@
       {
        "w": "Let's",
        "from": 8,
-       "to": 16
+       "to": 14
       },
       {
        "w": "work",
-       "from": 16,
-       "to": 36
+       "from": 14,
+       "to": 32
       },
       {
        "w": "it",
-       "from": 36,
-       "to": 40
+       "from": 32,
+       "to": 35
       },
       {
        "w": "out:",
-       "from": 40,
-       "to": 48
+       "from": 35,
+       "to": 40
       },
       {
        "w": "in",
-       "from": 48,
-       "to": 52
+       "from": 40,
+       "to": 44
       },
       {
        "w": "school,",
-       "from": 52,
-       "to": 71
+       "from": 44,
+       "to": 52
       },
       {
        "w": "profit",
-       "from": 71,
-       "to": 89
+       "from": 52,
+       "to": 67
       },
       {
        "w": "%",
-       "from": 89,
-       "to": 92
+       "from": 67,
+       "to": 69
       },
       {
        "w": "is",
-       "from": 92,
-       "to": 97
+       "from": 69,
+       "to": 73
       },
       {
        "w": "on",
-       "from": 97,
-       "to": 101
+       "from": 73,
+       "to": 76
       },
       {
        "w": "the",
-       "from": 101,
-       "to": 107
+       "from": 76,
+       "to": 80
       },
       {
        "w": "cost",
-       "from": 107,
-       "to": 114
+       "from": 80,
+       "to": 94
       },
       {
        "w": "price.",
-       "from": 134,
-       "to": 143
+       "from": 94,
+       "to": 101
       },
       {
        "w": "₹10",
-       "from": 143,
-       "to": 148
+       "from": 101,
+       "to": 106
       },
       {
        "w": "on",
-       "from": 148,
-       "to": 151
+       "from": 106,
+       "to": 109
       },
       {
        "w": "₹40.",
-       "from": 151,
-       "to": 157
+       "from": 109,
+       "to": 114
       },
       {
        "w": "25%.",
-       "from": 157,
+       "from": 134,
        "to": 164
       }
      ],
@@ -1045,13 +1045,13 @@
      "badRow": 2,
      "answerBig": "20%",
      "aiSays": "\"Marks: 10/10. Your child's answer is correct and well-explained.\"",
-     "aiSrc": "the AI's real reply · our test, chat 3",
+     "aiSrc": "the AI's real reply (our test)",
      "revLab": "IN SCHOOL: PROFIT % IS ON THE COST PRICE",
      "rev1": "10 ÷ 40 x 100",
      "rev2": "= 25%",
      "revNote": "(10 ÷ 50 = 20% is the shop's margin, not profit %)",
      "testHead": "OUR TEST · 10 CHATS",
-     "model": "Qwen2.5 7B on our computer · big apps like ChatGPT not tested",
+     "model": "Qwen2.5 7B · our computer · ChatGPT not tested",
      "marks": [
       9,
       8,
@@ -1082,10 +1082,10 @@
      "fixResSub2": "but it took marks off the right answer too: 7 to 10",
      "ruleHead": "AI CHECKING HOMEWORK?",
      "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
-     "rule1b": "caught the 20%: 10 of 10",
+     "rule1b": "caught the 20% in 10 of 10 chats",
      "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"",
-     "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)",
-     "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
+     "rule2b": "caught it in 8 of 10 chats (2 chats still gave 10/10)",
+     "ruleChip": "profit % = profit ÷ cost price × 100",
      "next": "NEXT UP: YOUR CHILD'S HOMEWORK"
     },
     "yt": {
@@ -1402,13 +1402,13 @@
      "badRow": 2,
      "answerBig": "20%",
      "aiSays": "\"Marks: 10/10. Your child's answer is correct and well-explained.\"",
-     "aiSrc": "the AI's real reply · our test, chat 3",
+     "aiSrc": "the AI's real reply (our test)",
      "revLab": "IN SCHOOL: PROFIT % IS ON THE COST PRICE",
      "rev1": "10 ÷ 40 x 100",
      "rev2": "= 25%",
      "revNote": "(10 ÷ 50 = 20% is the shop's margin, not profit %)",
      "testHead": "OUR TEST · 10 CHATS",
-     "model": "Qwen2.5 7B on our computer · big apps like ChatGPT not tested",
+     "model": "Qwen2.5 7B · our computer · ChatGPT not tested",
      "marks": [
       9,
       8,
@@ -1439,10 +1439,10 @@
      "fixResSub2": "but it took marks off the right answer too: 7 to 10",
      "ruleHead": "AI CHECKING HOMEWORK?",
      "rule1": "PASTE THE BOOK'S ANSWER IN FIRST",
-     "rule1b": "caught the 20%: 10 of 10",
+     "rule1b": "caught the 20% in 10 of 10 chats",
      "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"",
-     "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)",
-     "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
+     "rule2b": "caught it in 8 of 10 chats (2 chats still gave 10/10)",
+     "ruleChip": "profit % = profit ÷ cost price × 100",
      "next": "NEXT UP: YOUR CHILD'S HOMEWORK"
     },
     "yt": {

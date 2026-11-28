@@ -73,6 +73,14 @@
 - Cards: "IT NEVER SAID \"WRONG\"" (read as "never wrong"), "TWO WRONG ANSWERS: ONE CAUGHT" (was "two mistakes"), "took marks
   off" (not "docked"), the caption pointer removed, the small lines bigger.
 
+## Final check (Nov 28): English READY, Telugu READY
+- Both: "8 of 10" next to "10/10" on the rule card read like marks again: now "in 8 of 10 chats" / "in 10 of 10 chats".
+- Telugu: the captions now pause with the voice before "25%" and inside the rule; line 6 checked by ear-read (no "ఫ్రీ"),
+  line 9's takes read clean piece by piece (the recogniser's repeats are its own).
+- English: the hook's applause slightly louder in the 4.6-5.5 s gap; the smallest lines shortened so they render bigger.
+- The loud "music-only" stretches in English are the frame-1 hit and the riser into the last line (by design); between
+  lines the bed sits 15-34 dB under the voice.
+
 ## Lines (final: v3 + the render reviews; the judge's reply at 10.8 s)
 | # | Who | English | Telugu |
 |---|---|---|---|

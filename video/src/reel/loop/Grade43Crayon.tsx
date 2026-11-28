@@ -139,7 +139,7 @@ const StGrade: React.FC<SP> = ({ s }) => {
   beats.forEach((b, i) => {
     const l = ls[i]; if (!l) return;
     const at = l.from, k = (key: string) => `${key}${i}`, end = l.from + l.frames;
-    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={(te ? 0.75 : 0.7) * SV} />, <Sfx key={k("t")} at={cue(i, 1, 0.5) - 2} src={DIR + "tada.wav"} vol={(0.3) * SV} />, <Sfx key={k("a")} at={end - 4} src={DIR + "applause_short.wav"} vol={(0.3) * SV} />);
+    if (b.prop === "hook") sfx.push(<Sfx key={k("b")} at={1} src="reel/sfx_boom.wav" vol={(te ? 0.75 : 0.7) * SV} />, <Sfx key={k("t")} at={cue(i, 1, 0.5) - 2} src={DIR + "tada.wav"} vol={(0.3) * SV} />, <Sfx key={k("a")} at={end - 4} src={DIR + "applause_short.wav"} vol={te ? 0.3 : 0.32} />);
     if (b.prop === "intro") sfx.push(<Sfx key={k("w")} at={Math.max(0, at - 6)} src="audio/sfx_whoosh.wav" vol={(0.3) * SV} />, <Sfx key={k("a")} at={at + 2} src={DIR + "applause.wav"} vol={(0.28) * SV} />, <Sfx key={k("p")} at={cue(i, 1, 0.4)} src="audio/sfx_pop.wav" vol={(0.3) * SV} />);
     if (b.prop === "answer") sfx.push(<Sfx key={k("p0")} at={at + 6} src="audio/sfx_tick.wav" vol={(0.25) * SV} />, <Sfx key={k("x")} at={cue(i, 1, 0.4)} src="reel/sfx_buzz.wav" vol={(0.25) * SV} />, <Sfx key={k("d")} at={cue(i, 2, 0.8)} src="audio/gag_ding.wav" vol={(0.35) * SV} />);
     if (b.prop === "judge") sfx.push(<Sfx key={k("f")} at={cue(i, 1, 0.6) - 2} src={DIR + "flip.wav"} vol={(0.6) * SV} />, <Sfx key={k("t")} at={cue(i, 1, 0.6)} src={DIR + "tada.wav"} vol={(0.3) * SV} />, <Sfx key={k("a")} at={end - 4} src={DIR + "applause_short.wav"} vol={(0.32) * SV} />);
