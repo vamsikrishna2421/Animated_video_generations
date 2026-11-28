@@ -81,17 +81,17 @@
     "Users' chats",
     "set for auction"
    ],
-   "dek": "Minnesota & California attorneys general · Nov 23-24 · TechCrunch",
+   "dek": "A coalition led by Minnesota & California AGs · Nov 23-24 · TechCrunch",
    "chapter": "Character.AI's users' chats go to auction",
-   "text": "Its December 1 sale includes the chats of 21 million US accounts, 2.1 million of them under 18. 42 US attorneys general want it stopped. Or at least, kids' chats kept out.",
+   "text": "Its December 1 sale includes the chats of 21 million US accounts, 2.1 million of them under 18. 42 US attorneys general want the sale stopped. Or at least, kids' chats kept out.",
    "tts": [
     "Its December first sale includes the chats of twenty-one million U S accounts, two point one million of them under eighteen.",
-    "Forty-two U S attorneys general want it stopped.",
+    "Forty-two U S attorneys general want the sale stopped.",
     "Or at least, kids' chats kept out."
    ],
    "tts_te": [
     "డిసెంబర్ ఫస్ట్ న అమ్మకం: అమెరికాలో రెండు కోట్ల పది లక్షల అకౌంట్ల చాట్స్; వాటిలో, పదిలో ఒకటి పద్దెనిమిదేళ్ల లోపు పిల్లలది.",
-    "నలభై రెండు మంది ప్రభుత్వ లాయర్లు, అమ్మకం ఆపమని కోర్టుకి వెళ్ళారు.",
+    "నలభై రెండు మంది అటార్నీ జనరల్స్, అంటే టాప్ ప్రభుత్వ లాయర్లు, అమ్మకం ఆపమని కోర్టుకి వెళ్ళారు.",
     "కనీసం, పిల్లల చాట్స్ వదిలేయమని."
    ],
    "pause": 0.6,
@@ -103,8 +103,8 @@
      "cue_te": "డిసెంబర్"
     },
     {
-     "k": "US ACCOUNTS IN THE SALE",
-     "v": "21M · 2.1M under 18",
+     "k": "US ACCOUNTS IN THE SALE · 2.1M UNDER 18",
+     "v": "21 million",
      "cue": "21",
      "cue_te": "కోట్ల",
      "drop": true
@@ -155,16 +155,10 @@
      "cue_te": "డిక్టేట్"
     },
     {
-     "k": "FOR APP MAKERS",
+     "k": "FOR APP MAKERS · DEMO: INDUS.SARVAM.AI",
      "v": "₹0.50/min = ₹30/hour",
      "cue": "30",
      "cue_te": "ముప్పై"
-    },
-    {
-     "k": "TRY THE DEMO",
-     "v": "indus.sarvam.ai",
-     "cue": "hour.",
-     "cue_te": "ఆడియోకి"
     }
    ],
    "points": [
@@ -192,7 +186,7 @@
    ],
    "tts_te": [
     "చివరగా: న్యూయార్క్, చాట్‌బాట్ ఉన్న టాయ్స్ ని, ఐదేళ్ల పాటు బ్యాన్ చేస్తోంది; దాదాపు ఫిబ్రవరి నుంచి.",
-    "ఫైన్: రోజుకి పదిహేను వేల డాలర్ల వరకు, అంటే లక్షల్లో.",
+    "ఫైన్: రోజుకి పదిహేను వేల డాలర్ల వరకు, అంటే దాదాపు పదమూడు లక్షల రూపాయల వరకు.",
     "కొనే ముందు, అది ఇంటర్నెట్ కి కనెక్ట్ అవుతుందో, చూసుకోండి."
    ],
    "pause": 1.7,
@@ -201,15 +195,14 @@
      "k": "NEW YORK · SIGNED NOV 24",
      "v": "5-year ban, from Feb",
      "cue": "ban",
-     "cue_te": "బ్యాన్"
+     "cue_te": "న్యూయార్క్,"
     },
     {
      "k": "THE FINE",
      "v": "Up to $15,000 a day",
      "part": 2,
      "drop": true,
-     "hush": true,
-     "big": true
+     "hush": true
     },
     {
      "k": "BEFORE YOU BUY",

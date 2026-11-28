@@ -11,7 +11,8 @@ import type { NewsTimeline } from "./NewsReel";
 // orbit, warp), brand sting, then one chapter per story with a visual panel, key points, captions and sources.
 type Seg = NewsTimeline["segments"][number] & { chapter?: string; points?: string[] };
 export const STING = 90, SUB_LEN = 110;
-export const ytDuration = (tl: NewsTimeline) => tl.frames + STING;
+const stingOf = (tl: NewsTimeline) => (tl as NewsTimeline & { stingFrames?: number }).stingFrames ?? STING;   // AI WEEKLY 07 review: the 3 s sting before the news, cut per edition
+export const ytDuration = (tl: NewsTimeline) => tl.frames + stingOf(tl);
 const A = (f: string) => staticFile(`brand/audio/brand_${f}.wav`);
 let PHRASE = false;
 const Caps: React.FC<{ words: NewsTimeline["segments"][number]["words"]; bottom: number; size: number; max: number }> = ({ words, bottom, size, max }) =>
@@ -104,13 +105,29 @@ const ColdOpen: React.FC<{ seg: Seg; tl: NewsTimeline }> = ({ seg, tl }) => {
   return (
     <AbsoluteFill style={{ background: "#03040A" }}>
       <Field speed={speed} />
-      {f < p1 && (
+      {seg.clash && f < p2 && (   // AI WEEKLY 07 review: open on the week's clash, not a generic "AI IS MOVING FAST"
+        <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 34, padding: "0 120px" }}>
+          {seg.clashTitle && <div style={{ fontFamily: F.inter, fontWeight: 800, fontSize: 64, color: B.white, textAlign: "center", opacity: prog(f, 0, 8) }}>{seg.clashTitle}</div>}
+          <div style={{ display: "flex", gap: 30, alignItems: "stretch", width: "100%" }}>
+            {seg.clash.map((b, i) => (
+              <React.Fragment key={i}>
+                {i === 1 && seg.clashJoin ? <div style={{ alignSelf: "center", fontFamily: F.inter, fontWeight: 800, fontSize: 52, color: B.white }}>{seg.clashJoin}</div> : null}
+                <div style={{ flex: 1, border: `6px solid ${b.c ?? B.cyan}`, borderRadius: 28, padding: "28px 24px", background: "#0b1020", textAlign: "center", opacity: prog(f, 2 + i * 6, 10 + i * 6) }}>
+                  <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 30, letterSpacing: 4, color: "#cbd5e1" }}>{b.k}</div>
+                  <div style={{ fontFamily: F.inter, fontWeight: 900, fontSize: 120, lineHeight: 1.05, color: b.c ?? B.white, marginTop: 10 }}>{b.v}</div>
+                </div>
+              </React.Fragment>
+            ))}
+          </div>
+        </AbsoluteFill>
+      )}
+      {!seg.clash && f < p1 && (
         <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 10 }}>
           <Glitch text="AI IS MOVING" at={4} size={70} spacing={2} />
           <Glitch text="FAST" at={14} size={260} spacing={-6} />
         </AbsoluteFill>
       )}
-      {f >= p1 && f < p2 && <Orbit labs={tl.labs ?? ["OPENAI", "GOOGLE", "ANTHROPIC", "META", "NVIDIA", "XAI", "TYPESAFE", "FERMION"]} at={p1} />}
+      {!seg.clash && f >= p1 && f < p2 && <Orbit labs={tl.labs ?? ["OPENAI", "GOOGLE", "ANTHROPIC", "META", "NVIDIA", "XAI", "TYPESAFE", "FERMION"]} at={p1} />}
       {f >= p2 && (
         <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 24 }}>
           <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 34, letterSpacing: 14, color: B.rose, opacity: prog(f, p2 + 6, p2 + 14) }}>{tl.kicker ?? "THIS WEEK IN AI"}</div>
@@ -216,7 +233,11 @@ const Outro: React.FC<{ seg: Seg; stories: Seg[]; name: string; recap?: string }
   return (
     <AbsoluteFill style={{ background: "#03040A" }}>
       <Field speed={0.3} />
-      {f < subAt ? (
+      {f < subAt && seg.ask ? (   // AI WEEKLY 07 review: the takeaway card, not four recap chips
+        <div style={{ position: "absolute", top: 170, left: 160, right: 160, background: "#0b1020", border: `6px solid ${B.amber}`, borderRadius: 34, padding: "44px 40px", textAlign: "center", opacity: prog(f, 2, 12) }}>
+          {seg.ask.map((t, i) => <div key={i} style={{ fontFamily: F.inter, fontWeight: 800, fontSize: i === seg.ask!.length - 1 ? 84 : 60, lineHeight: 1.15, color: i === seg.ask!.length - 1 ? B.amber : B.white, marginTop: i === seg.ask!.length - 1 ? 16 : 0 }}>{t}</div>)}
+        </div>
+      ) : f < subAt ? (
         <div style={{ position: "absolute", top: 110, left: 110, right: 110 }}>
           <div style={{ fontFamily: F.mono, fontWeight: 700, fontSize: 28, letterSpacing: 8, color: B.cyan, marginBottom: 34 }}>{recap ?? `THE WEEK IN ${stories.length} STORIES`}</div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "22px 34px" }}>
@@ -245,7 +266,8 @@ export const NewsYT: React.FC<{ tl: NewsTimeline; handle?: string }> = ({ tl, ha
   const segs = tl.segments as Seg[];
   const stories = segs.filter((s) => s.name.startsWith("story"));
   let at = 0;
-  const starts = segs.map((s, i) => { const a = at; at += s.frames + (i === 0 ? STING : 0); return a; });
+  const STG = stingOf(tl);
+  const starts = segs.map((s, i) => { const a = at; at += s.frames + (i === 0 ? STG : 0); return a; });
   const total = at;
   const subAbs = starts[starts.length - 1] + segs[segs.length - 1].frames - SUB_LEN;
   const lastSeg = segs[segs.length - 1];
@@ -262,7 +284,7 @@ export const NewsYT: React.FC<{ tl: NewsTimeline; handle?: string }> = ({ tl, ha
           <Sequence from={s.lead} layout="none"><Audio src={staticFile(s.audio)} /></Sequence>
         </Sequence>
       ))}
-      <Sequence from={segs[0].frames} durationInFrames={STING}><LogoSting dark tagline="AI, explained simply." /></Sequence>
+      <Sequence from={segs[0].frames} durationInFrames={STG}><LogoSting dark tagline="AI, explained simply." /></Sequence>
       {/* chapter progress */}
       {f > starts[1] && f < subAbs && (
         <div style={{ position: "absolute", left: 90, right: 90, bottom: 18, height: 4, display: "flex", gap: 6 }}>
