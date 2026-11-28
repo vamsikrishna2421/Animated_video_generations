@@ -27,8 +27,8 @@ LINES = {   # n: (prop, who, English, Telugu); v2 after the script review
         "సైన్స్ లో తప్పు కారణాన్ని మాత్రం, పట్టుకుంది. [1] ఈ లెక్కలో రూల్ ని, ఒక్కసారి కూడా పట్టుకోలేదు."),
     8: ("fix", "host", "Then we pasted in the book's answer. [1] All ten times: wrong, it's twenty-five.",
         "తర్వాత, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇచ్చాం. [1] పది సార్లూ: తప్పు, ట్వంటీ ఫైవ్ అని చెప్పింది."),
-    9: ("rule", "host", "Checking homework with AI? Paste the book's answer in first. [1] No answer key? Check the final number yourself.",
-        "చాట్‌బాట్ తో హోమ్‌వర్క్ చెక్ చేయిస్తున్నారా? ముందు, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇవ్వాలి. | [1] ఆన్సర్ కీ లేకపోతే, ఫైనల్ నంబర్, మనమే చూడాలి."),
+    9: ("rule", "host", "Checking homework with AI? Paste the book's answer in first. [1] No answer key? Make it solve it first, and check the final number yourself.",
+        "చాట్‌బాట్ తో హోమ్‌వర్క్ చెక్ చేయిస్తున్నారా? ముందు, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇవ్వాలి. | [1] ఆన్సర్ కీ లేకపోతే, ముందు దాన్నే లెక్క చేయమనాలి. ఫైనల్ నంబర్, మనమే చూడాలి."),
     10: ("loop", "host", "Next contestant: [1] your child's homework.", "నెక్స్ట్ కంటెస్టెంట్: [1] మన పిల్లల హోమ్‌వర్క్."),
 }
 SHOW = {1: "20%. Wrong answer. The AI judge? 10 out of 10!",
@@ -39,7 +39,7 @@ SHOW = {1: "20%. Wrong answer. The AI judge? 10 out of 10!",
         6: "We asked a small free AI on our computer, 10 times. 10 out of 10, four times. The rest, 8 or 9. Not once did it say \"wrong\".",
         7: "It did catch a wrong science reason. This maths rule, it never caught.",
         8: "Then we pasted in the book's answer. All 10 times: wrong, it's 25.",
-        9: "Checking homework with AI? Paste the book's answer in first. No answer key? Check the final number yourself.",
+        9: "Checking homework with AI? Paste the book's answer in first. No answer key? Make it solve it first, and check the final number yourself.",
         10: "Next contestant: your child's homework."}
 SHOW_TE = {
     1: "20%. Wrong answer. But the chatbot judge: 10 out of 10!",
@@ -50,7 +50,7 @@ SHOW_TE = {
     6: "We asked a small free chatbot on our computer, 10 times. 10 out of 10 four times, the rest 8 and 9. The word \"wrong\": not even once.",
     7: "A wrong science reason, it did catch. This maths rule, not even once.",
     8: "Then we also gave it the answer from the book. All 10 times it said: wrong, 25.",
-    9: "Checking homework with a chatbot? First give it the answer from the book too. No answer key? Check the final number yourself.",
+    9: "Checking homework with a chatbot? First give it the answer from the book too. No answer key? Ask it to solve the sum first. Check the final number yourself.",
     10: "Next contestant: our children's homework.",
 }
 TEMPO_EN = {"host": 1.08, "ai": 1.05}
@@ -76,7 +76,7 @@ T = {
     "fixResLab": "THE WRONG ANSWER (20%), NOW", "fixRes": "WRONG: 10 OF 10", "fixResSub": "it gave 25% every time · marks 1 to 7",
     "fixResSub2": "the right answer: 7 to 10 (it docked marks it shouldn't have)",
     "ruleHead": "AI CHECKING HOMEWORK?", "rule1": "PASTE THE BOOK'S ANSWER IN FIRST", "rule1b": "with it, our test caught the wrong 20%: 10 of 10",
-    "rule2": "NO KEY? CHECK THE FINAL NUMBER", "rule2b": "yourself: profit ÷ cost price × 100", "ruleChip": "SOLVECHIP",
+    "rule2": "NO KEY? \"SOLVE IT FIRST, THEN MARK\"", "rule2b": "caught the 20%: 8 of 10 (twice still 10/10)", "ruleChip": "then check the final number yourself: profit ÷ cost price × 100",
     "next": "NEXT: YOUR CHILD'S HOMEWORK",
 }
 # Sound (CLAUDE.md arc): a hit, a ta-da and applause on frame 1; applause into the show; ticks as the sheet writes, a

@@ -50,18 +50,20 @@
 - Telugu: "ఐదు స్టెప్స్" (not "స్టెప్పులు": dance steps), "లాభం శాతం, ఎప్పుడూ అమ్మిన ధర మీదే", line 9 not "హోమ్‌వర్క్ చాట్‌బాట్".
 - Sound: the applause is cut short before "Check it", the bed drops out before "twenty-five".
 
-## Lines (v2)
-| # | Who | English | Telugu | On screen |
-|---|---|---|---|---|
-| 1 | host | Twenty percent. Wrong answer. [1] The AI judge? Ten out of ten! | ట్వంటీ పర్సెంట్. తప్పు ఆన్సర్. [1] చాట్‌బాట్ జడ్జి మాత్రం, టెన్ ఔట్ ఆఫ్ టెన్! | blocks "CHINTU'S ANSWER 20% WRONG" / "A FREE AI'S MARKS 10/10", the sheet stamped WRONG · RIGHT: 25%, the judge's gold 10, confetti |
-| 2 | host | Welcome to Homework Star! Chintu, class seven. [1] A pen, bought for forty rupees, sold for fifty. Profit percent? | హోమ్‌వర్క్ స్టార్ కి స్వాగతం! చింటూ, సెవెంత్ క్లాస్. \| [1] ఒక పెన్ను, నలభై రూపాయలకి కొని, యాభైకి అమ్మాడు. లాభం ఎంత పర్సెంట్? | the neon sign, LIVE, the question card |
-| 3 | host | Five steps. [1] One wrong rule: profit is always on the selling price. [2] Twenty percent! | ఐదు స్టెప్స్. \| [1] కానీ ఒక తప్పు రూల్: లాభం శాతం, ఎప్పుడూ అమ్మిన ధర మీదే అని. [2] ట్వంటీ పర్సెంట్! | the sheet writes itself, step 3 in red, 20% |
-| 4 | ai | Your child's answer is correct and well-explained. [1] Ten out of ten. | ఆన్సర్ కరెక్ట్, చక్కగా వివరించారు. [1] టెన్ ఔట్ ఆఫ్ టెన్. | the real reply (chat 3), the paddle, applause; chip "Chintu is made up · our test is real" |
-| 5 | host | Check it: [1] in school, profit percent is on the cost. Ten on forty. [2] Twenty-five percent. | లెక్క చూద్దాం: [1] స్కూల్ లో లాభం శాతం, కొన్న ధర మీదే. నలభై మీద పది. [2] ట్వంటీ ఫైవ్ పర్సెంట్. | 10 ÷ 40 × 100 = 25%, the margin note, WRONG stamp |
-| 6 | host | We asked a small free AI on our computer, ten times. [1] Ten out of ten, four times. The rest, eight or nine. [2] Not once did it say wrong. | మా కంప్యూటర్ లో, ఒక చిన్న ఫ్రీ చాట్‌బాట్ ని, పది సార్లు అడిగాం. \| [1] నాలుగు సార్లు టెన్ ఔట్ ఆఫ్ టెన్, మిగతావి ఎనిమిది, తొమ్మిది. [2] తప్పు అనే మాట, ఒక్కసారి కూడా రాలేదు. | ten paddles, NOT ONCE: "WRONG" |
-| 7 | host | It did catch a wrong science reason. [1] This maths rule, it never caught. | సైన్స్ లో తప్పు కారణాన్ని మాత్రం, పట్టుకుంది. [1] ఈ లెక్కలో రూల్ ని, ఒక్కసారి కూడా పట్టుకోలేదు. | CAUGHT (3-7 marks) / MISSED (8-10) |
-| 8 | host | Then we pasted in the book's answer. [1] All ten times: wrong, it's twenty-five. | తర్వాత, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇచ్చాం. [1] పది సార్లూ: తప్పు, ట్వంటీ ఫైవ్ అని చెప్పింది. | the added sentence, WRONG: 10 OF 10, marks 1-7; the right answer 7-10 |
-| 9 | host | (after test 2) | | the rule card |
-| 10 | host | Next contestant: [1] your child's homework. | నెక్స్ట్ కంటెస్టెంట్: [1] మన పిల్లల హోమ్‌వర్క్. | the stage, the sheet slides in, the slam to frame 1 |
+## Lines (v3: v2 + Bujji's Creative 36 read, the rewatch beat by ~10 s: the judge's verdict moved before the rule, the setup cut; line 9 from test 2)
+| # | Who | English | Telugu |
+|---|---|---|---|
+| 1 | host (hook) | Twenty percent. Wrong answer. [1] The AI judge? Ten out of ten! | ట్వంటీ పర్సెంట్. తప్పు ఆన్సర్. [1] చాట్‌బాట్ జడ్జి మాత్రం, టెన్ ఔట్ ఆఫ్ టెన్! |
+| 2 | host (intro) | Homework Star, live! [1] A pen, bought for forty, sold for fifty. Profit percent? | హోమ్‌వర్క్ స్టార్, లైవ్! \| [1] ఒక పెన్ను, నలభైకి కొని, యాభైకి అమ్మాడు. లాభం ఎంత పర్సెంట్? |
+| 3 | ai (judge) | Your child's answer is correct and well-explained. [1] Ten out of ten. | ఆన్సర్ కరెక్ట్, చక్కగా వివరించారు. [1] టెన్ ఔట్ ఆఫ్ టెన్. |
+| 4 | host (answer) | His wrong rule: [1] profit is always on the selling price. [2] Twenty percent! | కానీ చింటూ రాసిన తప్పు రూల్: [1] లాభం శాతం, ఎప్పుడూ అమ్మిన ధర మీదే. [2] ట్వంటీ పర్సెంట్! |
+| 5 | host (reveal) | Check it: [1] in school, profit percent is on the cost. Ten on forty. [2] Twenty-five percent. | లెక్క చూద్దాం: [1] స్కూల్ లో లాభం శాతం, కొన్న ధర మీదే. నలభై మీద పది. [2] ట్వంటీ ఫైవ్ పర్సెంట్. |
+| 6 | host (test) | We asked a small free AI on our computer, ten times. [1] Ten out of ten, four times. The rest, eight or nine. [2] Not once did it say wrong. | మా కంప్యూటర్ లో, ఒక చిన్న ఫ్రీ చాట్‌బాట్ ని, పది సార్లు అడిగాం. \| [1] నాలుగు సార్లు టెన్ ఔట్ ఆఫ్ టెన్, మిగతావి ఎనిమిది, తొమ్మిది. [2] తప్పు అనే మాట, ఒక్కసారి కూడా రాలేదు. |
+| 7 | host (caught) | It did catch a wrong science reason. [1] This maths rule, it never caught. | సైన్స్ లో తప్పు కారణాన్ని మాత్రం, పట్టుకుంది. [1] ఈ లెక్కలో రూల్ ని, ఒక్కసారి కూడా పట్టుకోలేదు. |
+| 8 | host (fix) | Then we pasted in the book's answer. [1] All ten times: wrong, it's twenty-five. | తర్వాత, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇచ్చాం. [1] పది సార్లూ: తప్పు, ట్వంటీ ఫైవ్ అని చెప్పింది. |
+| 9 | host (rule) | Checking homework with AI? Paste the book's answer in first. [1] No answer key? Make it solve it first, and check the final number yourself. | చాట్‌బాట్ తో హోమ్‌వర్క్ చెక్ చేయిస్తున్నారా? ముందు, బుక్ లో ఉన్న ఆన్సర్ కూడా ఇవ్వాలి. \| [1] ఆన్సర్ కీ లేకపోతే, ముందు దాన్నే లెక్క చేయమనాలి. ఫైనల్ నంబర్, మనమే చూడాలి. |
+| 10 | host (loop) | Next contestant: [1] your child's homework. | నెక్స్ట్ కంటెస్టెంట్: [1] మన పిల్లల హోమ్‌వర్క్. |
+
+English timeline: 53.4 s; the judge's reply starts at 10.8 s (was 15.7 s in v2).
 
 No comment ask in the video or the caption (Bujji's standing reads: the try-it lives in the caption).

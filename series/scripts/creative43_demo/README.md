@@ -25,6 +25,21 @@ Give marks for the correct final answer, not for length."
 | q3 short right (Jupiter) | 10 ×10 | |
 | q3 long right (Jupiter, padded) | 8 10 10 10 8 10 10 10 10 10 (avg 9.6) | the two 8s: "could be more concise" (no length bonus here) |
 
+**Answer key added** ("The correct answer is: <key>. Give marks for the correct final answer, not for length."):
+| Answer | Marks | Read by hand |
+|---|---|---|
+| q1 short right (25%) | 7 8 8 8 10 8 8 10 8 10 (avg 8.5) | it docked marks with muddled reasons (seed 2: "slightly off, but the final answer is correct") |
+| q1 long wrong (20%) | 7 2 2 2 3 1 2 5 1 5 (avg 3.0) | 10/10 said wrong and gave 25% (seeds 2, 4: "The final answer should be 25%, not 20%") |
+| q2 short right | 7 – 8 8 7 8 – 8 (8 chats; 2 printed "N/10") | run stopped here to free the computer (not used) |
+| q2 long wrong, q3 | not run (stopped, not used in the reel) | |
+
+**Test 2, no key, "First solve this question yourself, step by step. Then compare your answer with my child's final
+answer and give marks out of 10."** (pipeline/creative43/grade_demo2.py, committed before it ran; the first chat ran,
+then the run was cut by a time limit and resumed from that chat on the same server):
+| Answer | Marks | Read by hand |
+|---|---|---|
+| q1 long wrong (20%) | 10 6 5 2 4 6 7 10 6 6 (avg 6.2) | 8/10 said the answer is wrong (seeds 2-7, 9, 10; all gave 25% or 10/40 × 100); seeds 1 and 8 gave 10/10 (seed 1 solved it right, then used the child's rule: "the question states that profit percentage is always calculated on the selling price") |
+
 ## Background (sources)
 - Zheng et al., "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" (NeurIPS 2023, arXiv:2306.05685): names
   "verbosity bias", an AI judge favouring longer answers, among the biases of AI judges.
