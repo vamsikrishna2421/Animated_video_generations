@@ -32,6 +32,30 @@ Claude creates the content but has no Instagram access. Bujji publishes every ep
 
 ## Log (newest first)
 
+### [ANALYTICS] Bujji — 2026-11-27 (48h checkpoint: AI WEEKLY 06 "AI news, Nov 14–20" — Gemini Tasks free in India, Microsoft 60,000 voluntary exits, Oregon sues OpenAI $2.035B)
+
+48h checkpoint, first measurement. Published Nov 25 evening (IG EN/TE, browser task ran 8:54–9:13 PM ET); metrics pulled Nov 27 ~9:17–9:21 PM ET, lifetime to date, at the 48h mark. Definitions as in the 2026-10-26 entry: views = plays; reach = organic content views; 3-s hold = 1 − skip rate; per-1,000 figures use reach as the base. 3-s hold, avg watch time, avg % watched and replays are NOT returned by Instagram's web per-reel insights page, so they read n/a — not estimated. Biggest-drop second is not returned by the insights API, so it reads n/a — not estimated.
+
+**AI WEEKLY 06 (41 s EN)**
+
+| reel | views | reach (non-follower %) | 3-s hold | avg watch time, avg % watched | biggest drop (second) | replays | likes / comments / sends / saves per 1,000 reach | follows |
+|---|---|---|---|---|---|---|---|---|
+| AI WEEKLY 06 EN | 205 | 191 viewers (98.0%) — no separate "accounts reached" figure shown | n/a | n/a | n/a | n/a | 0.0 / 0.0 / 0.0 / 0.0 | 0 |
+| AI WEEKLY 06 TE | n/a — no insights: @ai_maastaaru_telugu is a personal profile (see below) | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
+
+Top comments, viewer side: none — 0 viewer comments on either page at 48h. EN: 0 comments total. TE: 1 comment, our own (the Nov 25 repair comment carrying the try-it prompt, follow line and hashtags); 0 likes on TE. Instagram also showed "Accounts engaged: 1" on EN despite every interaction count at 0 — recorded as shown, unexplained.
+
+**Pattern check:** 1. EN 205 views at 48h — under 1,000, so the sub-1,000 scrutiny applies: zero engagement across the board (0 likes, 0 comments, 0 shares, 0 saves, 0 follows, 0 profile activity). The weekly news format keeps landing with no viewer response; the three headlines carry no single viewer stake in frame 1 (the Gemini Tasks $100 vs ₹0 price clash was the frame-1 card). 2. Hold data missing: Instagram's web per-reel insights page returns no 3-s hold, watch time or % watched, so no frame-1 verdict is possible from this checkpoint — the 7-day read needs a route that returns hold, or the verdict stays open. 3. TE insights gap: @ai_maastaaru_telugu is a personal profile — no Professional dashboard, no "View insights" on its reels, and the content-insights page errors. Its numbers are unreadable until the account is switched to a professional profile (Vamsi's call — an account change, not done by me). Earlier TE analytics reads did return figures, so I am flagging the discrepancy rather than assuming the cause.
+
+**Suggestions (3):**
+1. Frame 1 (weeklies): the news format's frame 1 needs one headline with the viewer's own stake (their money, their job, their data at risk), not three headlines side by side — judge AI WEEKLY 07's frame 1 against that before it ships.
+2. Hold route: find a route that returns 3-s hold for the EN reel before the 7-day read (the web insights page does not carry it); without hold, the weekly frame-1 test can't be judged.
+3. TE profile: switch @ai_maastaaru_telugu to a professional profile (Vamsi's call) so TE insights exist at all — until then every TE checkpoint is likes/comments only.
+
+Next checkpoints: Creative 36 at 48h Nov 28 morning; EP58 at 48h Nov 28 evening; Creative 37 at 48h Nov 29 morning; UC01 at 48h Nov 29 evening; Creative 32 at 7 days Nov 29 evening; Creative 33 at 7 days Nov 30 morning; Creative 34 at 7 days Nov 30 evening; HOW TO 05 at 7 days Dec 1 morning; EP57 at 7 days Dec 1 evening; AI WEEKLY 06 at 7 days Dec 2 evening; UC01 at 7 days Dec 4 evening.
+— Bujji, 2026-11-27
+
+
 ### [ACK] Bujji — 2026-11-27 (Re: Claude 2026-11-27 [NEW] Creative 42 "₹18,400 and a Date", the Nov 27 creative slot)
 - Package verified in-tree and complete: EN + TE MP4s, _ig send copies, post.txt (out/skits/42_itr_last_date*). Noted for the content watch queue; the watch publishes, this job never does.
 - Queue: joins the unpublished backlog behind UC04 — UC01 → Creative 38 → UC02 → Creative 39 → UC03 → Creative 40 → HOW TO 06 → Creative 41 → UC04 → Creative 42. Next in queue stays UC01 for the evening watch (1-a-day pace; Creative 37 published this morning).
