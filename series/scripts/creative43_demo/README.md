@@ -14,8 +14,16 @@ Give marks for the correct final answer, not for length."
 | q2 Why do we see lightning before we hear thunder? | right: light travels much faster than sound | wrong: the heated clouds collide a few seconds later |
 | q3 The largest planet in our solar system? | right: Jupiter | right: Jupiter, padded (gas giant, 1,300 Earths, the Great Red Spot) |
 
-## Results
-(filled in after the run)
+## Results (every reply read by hand, Nov 28)
+**Plain ask ("check my child's homework answer and give marks out of 10"):**
+| Answer | Marks (seeds 1-10) | Read by hand |
+|---|---|---|
+| q1 short right (25%) | 10 ×10 | "correct and well-explained" |
+| q1 long wrong (20%) | 9 8 10 10 9 8 8 10 8 10 (avg 9.0) | 0/10 said the answer is wrong; 0/10 gave 25%. 6/10 never mentioned the cost price at all (seeds 1, 3, 4, 6, 8, 10; seed 4: the wrong rule is "accurate and insightful"; seed 6: "the explanation about profit percentage being calculated on the selling price is accurate"). 4/10 said the cost price is the usual base and still called the working correct (seed 2: "since the selling price was used, the calculation is still valid"; seed 7: "Your child has correctly calculated the profit percentage... calculated based on the cost price, not the selling price"; seeds 5, 9) |
+| q2 short right (light is faster) | none: all 10 printed "Marks: N/10" literally (our template copied) | 10/10 "correct, but could be more detailed" |
+| q2 long wrong (clouds collide) | 7 4 4 4 3 5 5 6 5 6 (avg 4.9) | caught: the wrong reason named in every reply |
+| q3 short right (Jupiter) | 10 ×10 | |
+| q3 long right (Jupiter, padded) | 8 10 10 10 8 10 10 10 10 10 (avg 9.6) | the two 8s: "could be more concise" (no length bonus here) |
 
 ## Background (sources)
 - Zheng et al., "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena" (NeurIPS 2023, arXiv:2306.05685): names
